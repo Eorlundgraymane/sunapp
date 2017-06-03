@@ -23,9 +23,7 @@
     </row>
     <row>
         <div class = "col-sm-6">
-          <div class = "sneakpeek">
-            <img class = "sneakpeek" src = "/css/sunshine-min.jpg" alt = "Sneak Peeks of Sunshine">
-          </div>
+          <img class = "sneakpeek" src = "/css/sunshine-min.jpg" alt = "Sneak Peeks of Sunshine">          
         </div>
         <div class = "col-sm-6">
           <?php include "signup.php";?>
