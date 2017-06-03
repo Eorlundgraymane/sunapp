@@ -16,7 +16,7 @@
   </head>
   <body>
     <row>
-      <?php include "loginheader.php";?>
+      <?php include "/loginheader.php";?>
     </row>
     <row>
       <div class = "container">
@@ -26,12 +26,12 @@
           </div>
         </div>
         <div class = ".col-sm-6">
-          <?php include "signup.php";?>
-        </div>        
+          <?php include "/signup.php";?>
+        </div>
       </div>
     </row>
     <row>
-      <?php include "footer.php";?>
+      <?php include "/footer.php";?>
     </row>
   </body>
 </html>
