@@ -28,3 +28,8 @@
   font-weight:bolder;
   font-style: italic;
 }
+#mainfiller
+{
+  background-image: url('/css/sunshine-min.jpg');
+  filter: blur(2px);
+}

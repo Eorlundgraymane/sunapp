@@ -21,12 +21,9 @@
         </div>
       </row>
       <row>
-          <div class = "col-sm-6">
-            <img class = "sneakpeek" src = "/css/sunshine-min.jpg" alt = "Sneak Peeks of Sunshine">
-          </div>
-          <div class = "col-sm-6">
-            <?php include "signup.php";?>
-          </div>
+        <div class = "col-sm-12" id = "mainfiller">
+          <?php include "signup.php";?>
+        </div>
       </row>
       <row>
         <?php include "footer.php";?>
