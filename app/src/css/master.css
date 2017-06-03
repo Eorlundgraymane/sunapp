@@ -2,10 +2,6 @@
 {
   background-image: url('sunshine-min.jpg');
 }
-#signup
-{
-  z-index: 999999999999;
-}
 #banner
 {
   position: fixed;
