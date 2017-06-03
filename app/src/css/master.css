@@ -3,6 +3,7 @@
 }
 .regpane
 {
+  position: absolute;
   top: 50%;
 }
 #signup {
