@@ -20,7 +20,7 @@
           <?php include "loginheader.php";?>
         </div>
       </row>
-      <row>
+      <row class = "maincontent">
         <div class = "col-sm-6">
         </div>
         <div class = "col-sm-6">
