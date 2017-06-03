@@ -4,7 +4,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
 }
 #sitename
 {
@@ -27,7 +26,6 @@
   color: white;
   font-weight: bolder;
   font-style: italic;
-  z-index: 9999;
 }
 .maincontent
 {
