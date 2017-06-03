@@ -21,11 +21,12 @@
         </div>
       </row>
       <row >
-        <div class = "col-sm-12" id = "mainfiller"></div>
-      </row>
-      <row>
-        <div class = "col-sm-12">
-          <?php include "signup.php";?>
+        <div class = "col-sm-12" id = "mainfiller">
+          <row>
+            <div class = "col-sm-12">
+              <?php include "signup.php";?>
+            </div>
+          </row>
         </div>
       </row>
       <row>
