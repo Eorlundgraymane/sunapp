@@ -37,7 +37,7 @@
 #mainfiller
 {
   background-image: url('/css/sunshine-min.jpg');
-  width: 1280px;
-  height: 720px;
+  width: auto;
+  height: auto;
   filter: blur(2px;);
 }
