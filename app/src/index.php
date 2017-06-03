@@ -24,7 +24,7 @@
       <div class = "container">
         <div class = "col-sm-6">
           <div class = "sneakpeek">
-            <img src = "/css/sunshine-min.jpg" alt = "Sneak Peeks of Sunshine">
+            <img class = "sneakpeek" src = "/css/sunshine-min.jpg" alt = "Sneak Peeks of Sunshine">
           </div>
         </div>
         <div class = "col-sm-6">
