@@ -21,7 +21,8 @@
         </div>
       </row>
       <row>
-        <div class = "maincontent col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <img class = "img-responsive" src = "/css/sunshine-min.jpg" alt = "Sunshine.JPG">
         </div>
         <div class = "signup col-lg-6 col-md-6 col-sm-6 col-xs-6">
           <?php include "signup.php";?>
