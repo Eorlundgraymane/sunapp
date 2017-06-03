@@ -15,7 +15,23 @@
     <title>Sunshine | Welcome</title>
   </head>
   <body>
-    <?php include "header.php";?>
-    <?php //include "footer.php";?>
+    <row>
+      <?php include "loginheader.php";?>
+    </row>
+    <row>
+      <div class = "container">
+        <div class = ".col-sm-6">
+          <div class = "sneakpeek">
+            <img src = "/css/sunshine-min.jpg" alt = "Sneak Peeks of Sunshine">
+          </div>
+        </div>
+        <div class = ".col-sm-6">
+          <?php include "signup.php";?>
+        </div>        
+      </div>
+    </row>
+    <row>
+      <?php include "footer.php";?>
+    </row>
   </body>
 </html>
