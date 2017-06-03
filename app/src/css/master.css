@@ -1,4 +1,4 @@
-.col-sm-12
+#sitename,.footer
 {
   background-image: url('sunshine-min.jpg');
 }
@@ -30,6 +30,8 @@
 }
 #mainfiller
 {
+  width: 1280px;
+  height: 720px;
   background-image: url('/css/sunshine-min.jpg');
   background-size: cover;
   filter: blur(2px;);
