@@ -17,6 +17,11 @@
     <body class = "container">
       <row>
           <?php include "loginheader.php";?>
+        </div>
+      </row>
+      <row>
+        <div class = "col-sm-12" id = "mainfiller">
+        </div>
       </row>
       <row>
         <div class = "col-sm-6"></div>
