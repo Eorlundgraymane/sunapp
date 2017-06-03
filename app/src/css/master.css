@@ -32,7 +32,6 @@
 {
   content: "";
   position: fixed;
-  left: 0;
   right: 0;
   z-index: -1;
 
@@ -50,7 +49,6 @@
 .#mainfiller
 {
   position: fixed;
-  left: 0;
   right: 0;
   z-index: 0;
   margin-left: 20px;
