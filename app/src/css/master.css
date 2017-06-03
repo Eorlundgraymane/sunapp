@@ -2,8 +2,6 @@
 {
   background-image: url('/css/sunshine-min.jpg');
   position: absolute;
-  top: 0;
-  left: 0;
 }
 #sitename
 {
@@ -15,7 +13,6 @@
 {
   position: fixed;
   bottom: 0;
-  left: 0;
   background-image: url('/css/sunshine-min.jpg');
   color: white;
   font-weight: bolder;
