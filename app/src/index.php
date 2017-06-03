@@ -20,8 +20,8 @@
           <?php include "loginheader.php";?>
         </div>
       </row>
-      <row class = "maincontent">
-        <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <row>
+        <div class = " maincontent col-lg-6 col-md-6 col-sm-6 col-xs-6">
         </div>
         <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6">
           <?php include "signup.php";?>
