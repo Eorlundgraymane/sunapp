@@ -14,24 +14,24 @@
     <meta name = "viewport" content = "width=device-width,initial-scale=1">
     <title>Sunshine | Welcome</title>
   </head>
-  <body>
-    <div class = "container">
-    <row>
-      <div class = "col-sm-12">
-        <?php include "loginheader.php";?>
-      </div>
-    </row>
-    <row>
-        <div class = "col-sm-6">
-          <img class = "sneakpeek" src = "/css/sunshine-min.jpg" alt = "Sneak Peeks of Sunshine">          
+  <div class = "container">
+    <body>
+      <row>
+        <div class = "col-sm-12">
+          <?php include "loginheader.php";?>
         </div>
-        <div class = "col-sm-6">
-          <?php include "signup.php";?>
-        </div>
-    </row>
-    <row>
-      <?php include "footer.php";?>
-    </row>
-    </div>
-  </body>
+      </row>
+      <row>
+          <div class = "col-sm-6">
+            <img class = "sneakpeek" src = "/css/sunshine-min.jpg" alt = "Sneak Peeks of Sunshine">
+          </div>
+          <div class = "col-sm-6">
+            <?php include "signup.php";?>
+          </div>
+      </row>
+      <row>
+        <?php include "footer.php";?>
+      </row>
+    </body>
+  </div>
 </html>
