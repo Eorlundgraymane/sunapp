@@ -14,7 +14,7 @@
     <meta name = "viewport" content = "width=device-width,initial-scale=1">
     <title>Sunshine | Welcome</title>
   </head>
-    <body clas = "container">
+    <body class = "container">
       <row>
         <div class = "col-sm-12">
           <?php include "loginheader.php";?>
