@@ -1,7 +1,7 @@
 #sitebanner
 {
   background-image: url('/css/sunshine-min.jpg');
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -13,7 +13,7 @@
 }
 #loginform
 {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 5px;
 }
