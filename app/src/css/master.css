@@ -36,7 +36,7 @@ input,button,select {
 }
 #loginform
 {
-  position: relative;
+  position: absolute;
   right: 0;
 }
 #sitename {
