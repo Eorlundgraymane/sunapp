@@ -1,9 +1,10 @@
 .container::before
 {
-  blur(2px);
+  filter: blur(2px);
 }
 .container
 {
+  width: 100%;
   background-image: url('/css/sunshine-min.jpg');
 }
 #sitebanner
