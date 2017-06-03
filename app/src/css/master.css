@@ -23,4 +23,8 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  text-align: justify;
+  color: white;
+  font-weight:bolder;
+  font-style: italic;
 }
