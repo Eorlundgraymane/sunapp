@@ -1,4 +1,4 @@
-'<!DOCTYPE html>
+<!DOCTYPE html>
 <row id = "banner">
   <div class = "col-sm-6" id = "sitename">
       Sunshine
