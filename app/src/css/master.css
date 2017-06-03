@@ -4,15 +4,15 @@
 .regpane
 {
   position: absolute;
-  top: 50%;
+  top: 25%;
 }
 #signup {
   position: absolute;
-  right: 5%;
+  right: 10%;
   display: block;
   animation-name: signupscroll;
   animation-duration: 2s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in();
   animation-iteration-count: 1;
 }
 @keyframes signupscroll {
@@ -20,12 +20,12 @@
     right: -10%;
     opacity: 0;
   }
-  85%{
+  75%{
     right: -10%;
     opacity: 0;
   }
   100%{
-    right: 5%;
+    right: 10%;
     opacity: 1;
   }
 }
