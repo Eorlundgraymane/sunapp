@@ -20,8 +20,8 @@
           <?php include "loginheader.php";?>
         </div>
       </row>
-      <row id = "mainfiller">
-        <div class = "col-sm-12"></div>
+      <row >
+        <div class = "col-sm-12" id = "mainfiller"></div>
       </row>
       <row>
         <div class = "col-sm-12">
