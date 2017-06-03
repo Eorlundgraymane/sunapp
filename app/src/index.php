@@ -14,17 +14,23 @@
     <meta name = "viewport" content = "width=device-width,initial-scale=1">
     <title>Sunshine | Welcome</title>
   </head>
-    <body class = "container">
+    <body class = "outer-container">
       <row>
         <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "sitebanner">
           <?php include "loginheader.php";?>
         </div>
       </row>
       <row>
-        <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        </div>
-        <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6">
-          <?php include "signup.php";?>
+        <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class = "container">
+            <row>
+              <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              </div>
+              <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <?php include "signup.php";?>
+              </div>
+            </row>
+          </div>
         </div>
       </row>
       <row>
