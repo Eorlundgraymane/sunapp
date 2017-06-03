@@ -141,8 +141,8 @@
     <option value = "1999">1999</option>
   </select><br>
   <!--<input type = "date" name = "dob" id = "dob"><br><br> Rendered Obsolete-->
-  <input type = "password" name = "password"><br>
-  <input type = "password" name = "confpass"><br>
+  <input type = "password" name = "password" placeholder="Password"><br>
+  <input type = "password" name = "confpass" placeholder="Retype Password"><br>
   <button type = "submit" name = "signup">Sign Up</button>
   <a href = "/">Already received OTP</a>
 </form>
