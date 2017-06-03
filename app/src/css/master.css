@@ -1,17 +1,9 @@
 .outer-container {
   background-image: url('sunshine-min.jpg');
 }
-#signup::before
-{
-  right: -50%;
-  transition-property: all;
-  transition-duration: 1s;
-  transition-delay: 2s;
-  transition-timing-function: ease-in;
-}
-#signup::after {
+#signup {
   position: absolute;
-  right: 5%;
+  right: 70px;
   display: block;
 }
 input,button,select {
