@@ -18,3 +18,8 @@
   color: white;
   font-family: sans-serif;
 }
+.footer
+{
+  position: fixed;
+  bottom: 0;
+}
