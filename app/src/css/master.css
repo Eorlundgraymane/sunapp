@@ -1,4 +1,4 @@
-#content:before
+.content:before
 {
   content: "";
   position: relative;
@@ -9,7 +9,7 @@
   height: 720px;
   filter: blur(2px);
 }
-#content
+.content
 {
   position: relative;
   left: 0;
