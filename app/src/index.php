@@ -22,11 +22,9 @@
       </row>
       <row >
         <div class = "col-sm-12" id = "mainfiller">
-          <row>
-            <div class = "col-sm-12">
+            <div>
               <?php include "signup.php";?>
-            </div>
-          </row>
+            </div>          
         </div>
       </row>
       <row>
