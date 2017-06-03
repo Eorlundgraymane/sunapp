@@ -1,9 +1,5 @@
 #sitebanner
 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   background-image: url('/css/sunshine-min.jpg');
 }
 #sitename
@@ -12,24 +8,8 @@
   color: white;
   font-weight: 900;
 }
-#loginform
-{
-  position: fixed;
-  right: 0;
-  top: 5px;
-}
-#signup
-{
-  position: relative;
-  right: 0;
-  top: 50px;
-}
 #sitefooter
 {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-image: url('/css/sunshine-min.jpg');
   color: white;
   font-weight: bolder;
