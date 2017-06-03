@@ -22,7 +22,7 @@
   }
   75%{
     right: -10%;
-    opacity: 0;
+    opacity: 1;
   }
   100%{
     right: 10%;
