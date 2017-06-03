@@ -11,6 +11,10 @@
   color: white;
   font-weight: 900;
 }
+#loginspace
+{
+  right: 0;
+}
 #sitefooter
 {
   position: fixed;
