@@ -8,11 +8,11 @@
   right: 5%;
   display: block;
 }
-input,button
+input,button,select
 {
   padding: 5px;
   text-indent: 2px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 #sitename
 {
