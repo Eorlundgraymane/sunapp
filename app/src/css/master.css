@@ -4,17 +4,13 @@
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
 }
 #sitename
 {
   font-size: 30px;
   color: white;
   font-weight: 900;
-}
-#loginspace
-{
-  position: inherit;
-  right: 0;
 }
 #sitefooter
 {
