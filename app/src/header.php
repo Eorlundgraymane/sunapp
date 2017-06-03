@@ -11,6 +11,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div class = ".col-sm-12"><div class = "page-header">Sunshine</div></div>
+    <div class = "col-sm-12"><div class = "page-header">Sunshine</div></div>
   </body>
 </html>
