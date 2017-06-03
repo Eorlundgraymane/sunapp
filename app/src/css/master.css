@@ -1,6 +1,16 @@
-#sitebanner,#sitefooter
+#sitebanner
 {
   background-image: url('/css/sunshine-min.jpg');
+  font-size: 30px;
+  color: white;
+  font-weight: 900;
+}
+#sitefooter
+{
+  background-image: url('/css/sunshine-min.jpg');
+  color: white;
+  font-weight: bolder;
+  font-style: italic;
 }
 .maincontent
 {
