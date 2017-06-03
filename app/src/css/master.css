@@ -4,7 +4,9 @@
 }
 #signup
 {
+  position: absolute;
   right: 25%;
+  display: block;
 }
 input,button
 {
