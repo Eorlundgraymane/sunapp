@@ -10,6 +10,10 @@
 #banner
 {
   z-index: 999;
+  position: fixed;
+  top: 0;
+  padding: 0;
+  border: 0;
 }
 #loginform
 {
