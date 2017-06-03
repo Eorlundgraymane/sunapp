@@ -2,7 +2,7 @@
 {
   z-index: 0;
 }
-.content:before
+#content:before
 {
   content: "";
   position: fixed;
@@ -15,7 +15,7 @@
   height: 800px;
   filter: blur(2px);
 }
-.content
+#content
 {
   position: fixed;
   left: 0;

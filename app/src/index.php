@@ -21,7 +21,7 @@
         </div>
       </row>
       <row>
-        <div class = "content signup col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "content">
           <?php include "signup.php";?>
         </div>
       </row>
