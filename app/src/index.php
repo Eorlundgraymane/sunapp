@@ -15,13 +15,13 @@
     <title>Sunshine | Welcome</title>
   </head>
   <body>
+    <div class = "container">
     <row>
       <div class = "col-sm-12">
         <?php include "loginheader.php";?>
       </div>
     </row>
     <row>
-      <div class = "container">
         <div class = "col-sm-6">
           <div class = "sneakpeek">
             <img class = "sneakpeek" src = "/css/sunshine-min.jpg" alt = "Sneak Peeks of Sunshine">
@@ -30,10 +30,10 @@
         <div class = "col-sm-6">
           <?php include "signup.php";?>
         </div>
-      </div>
     </row>
     <row>
       <?php include "footer.php";?>
     </row>
+    </div>
   </body>
 </html>
