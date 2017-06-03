@@ -1,3 +1,7 @@
+.container::before
+{
+  blur(2px);
+}
 .container
 {
   background-image: url('/css/sunshine-min.jpg');
