@@ -5,12 +5,12 @@
 #signup
 {
   position: absolute;
-  right: 25%;
+  right: 5%;
   display: block;
 }
 input,button
 {
-  padding: 2px;
+  padding: 5px;
   text-indent: 2px;
   border-radius: 5px;
 }
