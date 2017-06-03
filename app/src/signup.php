@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<p><form name = "signup" id = "signup">
+<form name = "signup" id = "signup">
   <input type = "text" name = "fname" placeholder="First Name"><br>
   <input type = "text" name = "lname" placeholder="Last Name"><br>
   <input type = "text" name = "email" placeholder="Email ID"><br>
@@ -147,4 +147,3 @@
   <button type = "submit" name = "signup">Sign Up</button>
 </form>
 <a href = "/">Already received OTP</a>
-</p>
