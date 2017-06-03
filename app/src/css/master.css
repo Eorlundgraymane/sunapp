@@ -1,10 +1,13 @@
 .outer-container {
   background-image: url('sunshine-min.jpg');
 }
+.regpane
+{
+  top: 50%;
+}
 #signup {
   position: absolute;
   right: 5%;
-  top: 50%;
   display: block;
   animation-name: signupscroll;
   animation-duration: 2s;
