@@ -7,7 +7,7 @@
   display: block;
   animation-name: signupscroll;
   animation-duration: 2s;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
 }
 @keyframes signupscroll {
@@ -15,7 +15,7 @@
     right: -100px;
     opacity: 0;
   }
-  75%{
+  85%{
     right: -100px;
     opacity: 0;
   }
