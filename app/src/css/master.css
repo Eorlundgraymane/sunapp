@@ -1,12 +1,12 @@
-.container::before
+.maincontent
 {
-  filter: blur(2px);
-}
-.container
-{
-  filter: blur(2px);
   width: 100%;
   background-image: url('/css/sunshine-min.jpg');
+  background-size: cover;
+}
+.signup
+{
+  display: inline;
 }
 #sitebanner
 {
@@ -24,9 +24,4 @@
   color: white;
   font-weight: bolder;
   font-style: italic;
-}
-.maincontent
-{
-  background-image: url('/css/sunshine-min.jpg');
-  background-size: cover;
 }
