@@ -1,14 +1,18 @@
 .outer-container {
   background-image: url('sunshine-min.jpg');
 }
+#signup::before
+{
+  right: -50%;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 2s;
+  transition-timing-function: ease-in;
+}
 #signup {
   position: absolute;
   right: 5%;
   display: block;
-  animation-name: slideUp;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
 }
 input,button,select {
   padding: 5px;
@@ -27,40 +31,4 @@ input,button,select {
   color: white;
   font-weight: bolder;
   font-style: italic;
-}
-@keyframes fadeSlideLeftIn {
-  0%{
-    left: 0;
-    opacity: 0;
-  }
-  75%{
-    left: 0;
-    opacity: 0;
-  }
-  100%{
-    left: inherit;
-    opacity: 1;
-  }
-}
-@keyframes fadeIn{
-  0%{
-    opacity: 0;
-  }
-  75%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-}
-}
-@@keyframes slideUp {
-  0%{
-    bottom: -500px;
-  }
-  75%{
-    bottom: -500px;
-  }
-  100%{
-    bottom: inherit;
-  }
 }
