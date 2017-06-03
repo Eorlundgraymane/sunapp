@@ -1,14 +1,9 @@
-.content:before
-{
-  content: "";
-  display: inline-block;
+.content
+{  
   background-image: url('/css/sunshine-min.jpg');
   width: 1280px;
   height: 720px;
   filter: blur(2px);
-}
-.content
-{
 }
 #signup
 {

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <form name = "signup" id = "signup">
   <input type = "text" name = "fname" placeholder="First Name"><br>
   <input type = "text" name = "lname" placeholder="Last Name"><br>
