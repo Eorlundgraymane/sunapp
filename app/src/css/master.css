@@ -2,9 +2,15 @@
 {
   background-image: url('sunshine-min.jpg');
 }
-#sitebanner
+#signup
 {
-  background-image: url('/css/sunshine-min.jpg');
+  right: 25%;
+}
+input,button
+{
+  padding: 2px;
+  text-indent: 2px;
+  border-radius: 5px;
 }
 #sitename
 {
@@ -14,7 +20,9 @@
 }
 #sitefooter
 {
-  background-image: url('/css/sunshine-min.jpg');
+  position: fixed;
+  bottom: 0;
+  text-align: center;
   color: white;
   font-weight: bolder;
   font-style: italic;
