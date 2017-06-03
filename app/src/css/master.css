@@ -3,8 +3,6 @@
   content: "";
   position: relative;
   left: 0;
-  right: 0;
-  z-index: -1;
   display: block;
   background-image: url('/css/sunshine-min.jpg');
   width: 1280px;
@@ -15,8 +13,6 @@
 {
   position: relative;
   left: 0;
-  right: 0;
-  z-index: 0;
 }
 #signup
 {
