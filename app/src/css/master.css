@@ -3,7 +3,7 @@
 }
 #signup {
   position: absolute;
-  right: 70px;
+  right: 5%;
   display: block;
   animation-name: signupscroll;
   animation-duration: 2s;
@@ -12,15 +12,15 @@
 }
 @keyframes signupscroll {
   0%{
-    right: -100px;
+    right: -10%;
     opacity: 0;
   }
   85%{
-    right: -100px;
+    right: -10%;
     opacity: 0;
   }
   100%{
-    right: 70px;
+    right: 5%;
     opacity: 1;
   }
 }
