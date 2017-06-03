@@ -4,9 +4,13 @@
   font-size: 30px;
   color: white;
   font-weight: 900;
+  position: fixed;
+  top: 0;
 }
 #sitefooter
 {
+  position: fixed;
+  bottom: 0;
   background-image: url('/css/sunshine-min.jpg');
   color: white;
   font-weight: bolder;

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <row>
-  <div class = "col-sm-6" id = "sitename">
+  <div class = "col-lg-6" id = "sitename">
       Sunshine
   </div>
-  <div class = "col-sm-6" id = "loginspace">
+  <div class = "col-lg-6" id = "loginspace">
     <form name = "loginform" id = "loginform">
       <input type = "text" name = "primarykey" id = "primarykey" placeholder="Email or Mobile">
       <input type = "password" name = "password" id = "password" placeholder="Password">

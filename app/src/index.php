@@ -16,19 +16,19 @@
   </head>
     <body class = "container">
       <row>
-        <div class = "col-sm-12" id = "sitebanner">
+        <div class = "col-lg-12" id = "sitebanner">
           <?php include "loginheader.php";?>
         </div>
       </row>
       <row class = "maincontent">
-        <div class = "col-sm-6">
+        <div class = "col-lg-6">
         </div>
-        <div class = "col-sm-6">
+        <div class = "col-lg-6">
           <?php include "signup.php";?>
         </div>
       </row>
       <row>
-        <div class = "col-sm-12">
+        <div class = "col-lg-12">
           <?php include "footer.php";?>
         </div>
       </row>
