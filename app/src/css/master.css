@@ -30,6 +30,15 @@ input,button,select {
   border-radius: 15px;
   margin: 3px;
 }
+#sitebanner
+{
+  margin-top: 10px;
+}
+#loginform
+{
+  position: relative;
+  right: 0;
+}
 #sitename {
   font-size: 30px;
   color: white;
