@@ -1,8 +1,6 @@
 .content:before
 {
   content: "";
-  position: relative;
-  left: 0;
   display: block;
   background-image: url('/css/sunshine-min.jpg');
   width: 1280px;
@@ -10,9 +8,7 @@
   filter: blur(2px);
 }
 .content
-{
-  position: relative;
-  left: 0;
+{  
 }
 #signup
 {
