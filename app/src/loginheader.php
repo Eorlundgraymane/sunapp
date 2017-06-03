@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<row id = "banner">
+<row>
   <div class = "col-sm-6" id = "sitename">
       Sunshine
   </div>
