@@ -1,31 +1,66 @@
-.outer-container
-{
+.outer-container {
   background-image: url('sunshine-min.jpg');
 }
-#signup
-{
+#signup {
   position: absolute;
   right: 5%;
   display: block;
+  animation-name: slideUp;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
 }
-input,button,select
-{
+input,button,select {
   padding: 5px;
   text-indent: 2px;
   border-radius: 20px;
 }
-#sitename
-{
+#sitename {
   font-size: 30px;
   color: white;
   font-weight: 900;
 }
-#sitefooter
-{
+#sitefooter {
   position: fixed;
   bottom: 0;
   text-align: center;
   color: white;
   font-weight: bolder;
   font-style: italic;
+}
+@keyframes fadeSlideLeftIn {
+  0%{
+    left: 0;
+    opacity: 0;
+  }
+  75%{
+    left: 0;
+    opacity: 0;
+  }
+  100%{
+    left: inherit;
+    opacity: 1;
+  }
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+}
+}
+@@keyframes slideUp {
+  0%{
+    bottom: -500px;
+  }
+  75%{
+    bottom: -500px;
+  }
+  100%{
+    bottom: inherit;
+  }
 }
