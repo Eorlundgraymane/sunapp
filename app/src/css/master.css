@@ -1,11 +1,14 @@
 #sitebanner
 {
   background-image: url('/css/sunshine-min.jpg');
+  position: fixed;
+  top: 0;
+}
+#sitename
+{
   font-size: 30px;
   color: white;
   font-weight: 900;
-  position: fixed;
-  top: 0;
 }
 #sitefooter
 {
