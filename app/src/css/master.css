@@ -7,13 +7,9 @@
   max-width: 100%;
   max-height: 100%;
 }
-.loginspace
+#loginspace
 {
   float: right;
-}
-.loginform
-{
-  right: 0px;
 }
 #sitename
 {
