@@ -33,7 +33,7 @@
   content:"";
   position: fixed;
   right: 0;
-  z-index: -1;
+  z-index: 0;
 
   display: block;
   background-image: url('/css/sunshine-min.jpg');
