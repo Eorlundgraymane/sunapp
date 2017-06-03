@@ -28,29 +28,7 @@
   font-weight:bolder;
   font-style: italic;
 }
-#content:before
-{
-  content:"";
-  position: fixed;
-  right: 0;
-  z-index: 0;
-
-  display: block;
-  background-image: url('/css/sunshine-min.jpg');
-  width: 1366px;
-  height: 768px;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-}
-
 .#content
 {
-  position: fixed;
-  right: 0;
-  z-index: 0;
-  margin-left: 20px;
-  margin-right: 20px;
+  background-image: url('/css/sunshine-min.jpg');
 }
