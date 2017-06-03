@@ -1,5 +1,6 @@
 #sitebanner
 {
+  width: 100%;
   background-image: url('/css/sunshine-min.jpg');
 }
 #sitename
@@ -16,6 +17,7 @@
 }
 #sitefooter
 {
+  width: 100%;
   background-image: url('/css/sunshine-min.jpg');
   color: white;
   font-weight: bolder;
