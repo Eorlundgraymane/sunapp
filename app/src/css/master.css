@@ -9,7 +9,7 @@
   transition-delay: 2s;
   transition-timing-function: ease-in;
 }
-#signup {
+#signup::after {
   position: absolute;
   right: 5%;
   display: block;
