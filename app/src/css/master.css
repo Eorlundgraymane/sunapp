@@ -1,4 +1,26 @@
-  #sitebanner
+.content:before
+{
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url('/css/sunshine-min.jpg');
+  width: 1200px;
+  height: 800px;
+  filter: blur(2px);
+}
+.content
+{
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#sitebanner
 {
   background-image: url('/css/sunshine-min.jpg');
 }
