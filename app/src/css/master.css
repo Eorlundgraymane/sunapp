@@ -4,6 +4,7 @@
 #signup {
   position: absolute;
   right: 5%;
+  top: 50%;
   display: block;
   animation-name: signupscroll;
   animation-duration: 2s;
