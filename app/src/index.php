@@ -16,16 +16,18 @@
   </head>
   <body>
     <row>
-      <?php include "loginheader.php";?>
+      <div class = "col-sm-12">
+        <?php include "loginheader.php";?>
+      </div>
     </row>
     <row>
       <div class = "container">
-        <div class = ".col-sm-6">
+        <div class = "col-sm-6">
           <div class = "sneakpeek">
             <img src = "/css/sunshine-min.jpg" alt = "Sneak Peeks of Sunshine">
           </div>
         </div>
-        <div class = ".col-sm-6">
+        <div class = "col-sm-6">
           <?php include "signup.php";?>
         </div>
       </div>
