@@ -31,4 +31,5 @@
 #mainfiller
 {
   background-image: url('/css/sunshine-min.jpg');
+  background-size: cover;
 }
