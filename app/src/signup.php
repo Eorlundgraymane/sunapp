@@ -145,5 +145,5 @@
   <input type = "password" name = "password"><br>
   <input type = "password" name = "confpass"><br>
   <button type = "submit" name = "signup">Sign Up</button>
+  <a href = "/">Already received OTP</a>
 </form>
-<a href = "/">Already received OTP</a>
