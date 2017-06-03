@@ -1,4 +1,8 @@
-#sitebanner
+.img-responsive
+{
+    width: 100%;
+}
+  #sitebanner
 {
   background-image: url('/css/sunshine-min.jpg');
 }
