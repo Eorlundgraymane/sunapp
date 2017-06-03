@@ -1,6 +1,9 @@
 #sitebanner
 {
-  max-width: 1960px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-image: url('/css/sunshine-min.jpg');
 }
 #sitename
@@ -17,7 +20,10 @@
 }
 #sitefooter
 {
-  max-width: 1960px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-image: url('/css/sunshine-min.jpg');
   color: white;
   font-weight: bolder;
