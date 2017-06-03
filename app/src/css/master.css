@@ -1,7 +1,7 @@
 #sitebanner
 {
   background-image: url('/css/sunshine-min.jpg');
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
 }
@@ -13,7 +13,7 @@
 }
 #sitefooter
 {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   background-image: url('/css/sunshine-min.jpg');
