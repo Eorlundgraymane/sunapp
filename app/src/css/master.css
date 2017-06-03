@@ -4,6 +4,7 @@
 }
 .container
 {
+  filter: blur(2px);
   width: 100%;
   background-image: url('/css/sunshine-min.jpg');
 }
