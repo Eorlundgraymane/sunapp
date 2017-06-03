@@ -17,7 +17,7 @@
 }
 @keyframes signupscroll {
   0%{
-    right: -100%;
+    right: -30%;
     opacity: 0;
   }
   100%{
