@@ -16,21 +16,21 @@
   </head>
     <body class = "container">
       <row>
+        <div class = "col-sm-12" id = "sitebanner">
           <?php include "loginheader.php";?>
         </div>
       </row>
       <row>
-        <div class = "col-sm-12" id = "mainfiller">
+        <div class = "col-sm-6">
         </div>
-      </row>
-      <row>
-        <div class = "col-sm-6"></div>
-        <div class = "col-sm-6" id = "signup">
+        <div class = "col-sm-6">
           <?php include "signup.php";?>
         </div>
       </row>
       <row>
-        <?php include "footer.php";?>
+        <div class = "col-sm-12">
+          <?php include "footer.php";?>
+        </div>
       </row>
     </body>
 </html>
