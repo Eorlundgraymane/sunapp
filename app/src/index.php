@@ -14,8 +14,7 @@
     <meta name = "viewport" content = "width=device-width,initial-scale=1">
     <title>Sunshine | Welcome</title>
   </head>
-  <div class = "container">
-    <body>
+    <body clas = "container">
       <row>
         <div class = "col-sm-12">
           <?php include "loginheader.php";?>
@@ -33,5 +32,4 @@
         <?php include "footer.php";?>
       </row>
     </body>
-  </div>
 </html>
