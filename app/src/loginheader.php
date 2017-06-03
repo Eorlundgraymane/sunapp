@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<div class = "container" id = "banner">
 <row>
   <div class = "col-sm-6" id = "sitename">
       Sunshine
@@ -11,3 +12,4 @@
     </form>
   </div>
 </row>
+</div>

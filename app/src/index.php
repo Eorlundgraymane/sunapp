@@ -16,7 +16,6 @@
   </head>
     <body class = "container">
       <row>
-        <div id = "banner" class = "col-sm-12">
           <?php include "loginheader.php";?>
         </div>
       </row>
