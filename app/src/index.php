@@ -21,10 +21,12 @@
         </div>
       </row>
       <row>
-        <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <img class = "img-responsive" src = "/css/sunshine-min.jpg" alt = "Sunshine.JPG">
         </div>
-        <div class = "signup col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      </row>
+      <row>
+        <div class = "signup col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <?php include "signup.php";?>
         </div>
       </row>
