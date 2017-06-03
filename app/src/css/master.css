@@ -10,7 +10,7 @@
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
 }
-@@keyframes signupscroll {
+@keyframes signupscroll {
   0%{
     right: -100px;
     opacity: 0;
