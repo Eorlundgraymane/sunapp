@@ -13,7 +13,7 @@
 }
 #loginspace
 {
-  position: relative;
+  position: inherit;
   right: 0;
 }
 #sitefooter
