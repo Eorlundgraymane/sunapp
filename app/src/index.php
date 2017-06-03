@@ -20,11 +20,14 @@
           <?php include "loginheader.php";?>
         </div>
       </row>
-      <row >
+      <row>
         <div class = "col-sm-12" id = "mainfiller">
-            <div>
-              <?php include "signup.php";?>
-            </div>          
+        </div>
+      </row>
+      <row>
+        <div class = "col-sm-6"></div>
+        <div class = "col-sm-6" id = "signup">
+          <?php include "signup.php";?>
         </div>
       </row>
       <row>

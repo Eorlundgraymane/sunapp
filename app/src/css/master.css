@@ -2,6 +2,10 @@
 {
   background-image: url('sunshine-min.jpg');
 }
+#signup
+{
+  z-index: 999999999999;
+}
 #banner
 {
   width: 100%;
@@ -33,7 +37,7 @@
   font-style: italic;
 }
 #mainfiller
-{  
+{
   background-image: url('/css/sunshine-min.jpg');
   background-size: cover;
   filter: blur(2px;);
