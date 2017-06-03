@@ -2,6 +2,10 @@
 {
   background-image: url('sunshine-min.jpg');
 }
+#banner
+{
+  width: 100%;
+}
 .sneakpeek
 {
   max-width: 100%;
