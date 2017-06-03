@@ -2,8 +2,11 @@
 {
   background-image: url('sunshine-min.jpg');
 }
-
+.sneakpeek
+{
+  height: 75%;
+}
 .loginform
 {
-  float:right;
+  right: 50px;
 }
