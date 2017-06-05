@@ -1,3 +1,5 @@
+var admintoken = "Bearer xayto0lj1t0d7zz2ykfqimsv08bo6hze";
+
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
   var signupdiv =  document.getElementById('signupdiv');
@@ -14,13 +16,47 @@ function otpoverlayslideup(){
   signupdiv.style.opacity = "1";
 }
 
+function otpverify(){
+  xhr = new XMLHttpRequest();
+  var url  = "http://auth.vcap.me/mobile/comfirm";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.setRequestHeader("Authentication",admintoken);
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json.message));
+      alert(JSON.stringify(json.message));
+    }
+  }
+  var otp = document.getElementById('otp').value;
+  var mobile = document.getElementById('mobile').value;
+  var data = JSON.stringify({"mobile":mobile,"otp":otp});
+  xhr.send(data);
+}
+function resendotp(){
+  xhr = new XMLHttpRequest();
+  var url  = "http://auth.vcap.me/mobile/resend-otp";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.setRequestHeader("Authentication",admintoken);
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+      alert(JSON.stringify(json.message));
+    }
+  }
+  var remobile = document.getElementById('mobile').value;
+  var data = JSON.stringify({"mobile":remobile});
+  xhr.send(data);
+}
 function popalert() {
-
 xhr = new XMLHttpRequest();
 var url  = "http://auth.vcap.me/signup";
 xhr.open("POST",url,true);
 xhr.setRequestHeader("Content-type","application/json");
-xhr.setRequestHeader("Authentication","Bearer xayto0lj1t0d7zz2ykfqimsv08bo6hze");
+xhr.setRequestHeader("Authentication",admintoken);
 xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
