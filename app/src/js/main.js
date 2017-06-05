@@ -18,7 +18,7 @@ function otpoverlayslideup(){
 
 function otpverify(){
   xhr = new XMLHttpRequest();
-  var url  = "http://auth.washtub66.hasura-app.io/mobile/confirm";
+  var url  = "https://auth.washtub66.hasura-app.io/mobile/confirm";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.setRequestHeader("Authentication",admintoken);
@@ -40,7 +40,7 @@ function otpverify(){
 
 function otpresend() {
   xhr = new XMLHttpRequest();
-  var url  = "http://auth.washtub66.hasura-app.io/mobile/resend-otp";
+  var url  = "https://auth.washtub66.hasura-app.io/mobile/resend-otp";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.setRequestHeader("Authentication",admintoken);
@@ -62,7 +62,7 @@ function otpresend() {
 
 function popalert() {
 xhr = new XMLHttpRequest();
-var url  = "http://auth.washtub66.hasura-app.io/signup";
+var url  = "https://auth.washtub66.hasura-app.io/signup";
 xhr.open("POST",url,true);
 xhr.setRequestHeader("Content-type","application/json");
 xhr.setRequestHeader("Authentication",admintoken);
