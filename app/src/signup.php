@@ -1,5 +1,3 @@
-
-<?php include 'otpoverlay.php';?>
 <form methhod = "POST" name = "signup" id = "signup">
   <input type = "text" name = "fname" placeholder="First Name">
   <input type = "text" name = "lname" placeholder="Last Name"><br>
