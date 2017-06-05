@@ -69,7 +69,7 @@ var mobile = document.getElementById("mobile").value;
 var password = document.getElementById("password").value;
 var email = document.getElementById("email").value;
 var uname = fname.concat(lname);
-console.log(fname);
+console.log(uname);
 var data = JSON.stringify({"username":uname,"email":email,"password":password,"mobile":mobile});
 xhr.send(data);
 otpoverlaydropdown();
