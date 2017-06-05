@@ -1,6 +1,6 @@
 function popalert() {
 xhr = new XMLHttpRequest();
-var url  = "http://auth.vcap.me/singup";
+var url  = "http://auth.vcap.me/signup";
 xhr.open("POST",url,true());
 xhr.setRequestHeader("Content-type","application/json");
 xhr.onreadystatechange = function(){
