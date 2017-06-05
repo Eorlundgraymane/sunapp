@@ -18,7 +18,7 @@ function otpoverlayslideup(){
 
 function otpverify(){
   xhr = new XMLHttpRequest();
-  var url  = "http://auth.vcap.me/mobile/comfirm";
+  var url  = "http://auth.vcap.me/mobile/confirm";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.setRequestHeader("Authentication",admintoken);
