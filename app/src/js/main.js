@@ -6,7 +6,7 @@ function otpoverlaydropdown(){
   signupdiv.style.height = "0";
   otpform.style.height="100%";
   otpform.style.opacity="1";
-  otpform.style.zIndex = "1";
+  otpform.style.zIndex = "999";
 }
 
 function popalert() {
