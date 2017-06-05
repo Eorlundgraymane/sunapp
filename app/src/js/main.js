@@ -32,8 +32,8 @@ function otpverify(){
   var otp = document.getElementById('otp').value;
   var mobile = document.getElementById('mobile').value;
   var data = {};
-  data['mobile'] = mobile;
-  data['otp'] = otp;
+  data["mobile"] = mobile;
+  data["otp"] = otp;
   jsondata = JSON.stringify(data);
   xhr.send(jsondata);
 }
@@ -52,7 +52,7 @@ function resendotp(){
   }
   var remobile = document.getElementById('mobile').value;
   var data = {};
-  data['mobile'] = mobile;
+  data["mobile"] = mobile;
   jsondata = JSON.stringify(data);
   xhr.send(jsondata);
 }
@@ -76,11 +76,13 @@ var email = document.getElementById("email").value;
 var uname = fname.concat(" ",lname);
 console.log(uname);
 var data = {};
-data['username'] = uname;
-data['email'] = email;
-data['mobile'] = mobile;
-data['password'] = password;
+data["username"] = uname;
+data["email"] = email;
+data["mobile"] = mobile;
+data["password"] = password;
+console.log(data);
 var jsondata = JSON.stringify(data);
+console.log(jsondata);
 xhr.send(jsondata);
 otpoverlaydropdown();
 /*
