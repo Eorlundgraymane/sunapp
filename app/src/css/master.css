@@ -6,9 +6,12 @@
   position: absolute;
   top: 25%;
 }
+#otpform
+{
+  transform: translate(50%,50%);
+}
 .otpform
 {
-  transform: translate(-50%,-50%);
   background-color: rgba(0,0,0,0.5);
   opacity: 0;
   z-index: -2;
