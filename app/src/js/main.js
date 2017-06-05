@@ -1,15 +1,12 @@
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
-  var signupdiv = document.getElementById('signupdiv');
   otpform.style.display = "block";
 
 }
 function otpoverlayslideup(){
   var otpform =  document.getElementById('otpform');
-  var signupdiv = document.getElementById('signupdiv');
   otpform.style.display = "none";
 }
-
 
 function popalert() {
 
