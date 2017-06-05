@@ -2,6 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <?php
+    header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
+    header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Cache-Control: post-check=0, pre-check=0", false);
+    header("Pragma: no-cache");
+    ?>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -10,7 +17,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="/js/main.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=<?php echo '$time()';?>" type="text/javascript"></script>
     <link rel="stylesheet" href="/css/master1.css?v=<?php echo '$time()';?>" media="screen" title="no title">
     <meta name = "viewport" content = "width=device-width,initial-scale=1">
     <title>Sunshine | Welcome</title>
