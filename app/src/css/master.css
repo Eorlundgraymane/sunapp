@@ -8,10 +8,10 @@
 }
 .otpform
 {
-  background-color: yellow;
+  height: 0;
+  opacity: 0;
 }
 #signup {
-  background-color: yellow;
   position: absolute;
   right: 10%;
   display: block;
