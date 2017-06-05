@@ -1,4 +1,4 @@
-document.getElementById('signupbutton').onclick = function(){
+function popalert() {
   alert("js active");
 }
 

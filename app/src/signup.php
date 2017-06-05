@@ -143,6 +143,6 @@
   <!--<input type = "date" name = "dob" id = "dob"><br><br> Rendered Obsolete-->
   <input type = "password" name = "password" placeholder="Password"><br>
   <input type = "password" name = "confpass" placeholder="Retype Password"><br>
-  <button type = "submit" name = "signup" id = "signupbutton" onclick="alert('hi');">Sign Up</button>
+  <button type = "submit" name = "signup" onclick="popalert();">Sign Up</button>
   <a href = "/">Already received OTP</a>
 </form>
