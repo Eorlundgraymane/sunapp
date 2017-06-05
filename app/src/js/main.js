@@ -21,7 +21,7 @@ function otpverify(){
   var url  = "http://auth.vcap.me/mobile/confirm";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
-  xhr.setRequestHeader("Authentication","Bearer xayto0lj1t0d7zz2ykfqimsv08bo6hze");
+  xhr.setRequestHeader("Authentication",admintoken);
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
@@ -39,7 +39,7 @@ function resendotp(){
   var url  = "http://auth.vcap.me/mobile/resend-otp";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
-  xhr.setRequestHeader("Authentication","Bearer xayto0lj1t0d7zz2ykfqimsv08bo6hze");
+  xhr.setRequestHeader("Authentication",admintoken);
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
@@ -56,7 +56,7 @@ xhr = new XMLHttpRequest();
 var url  = "http://auth.vcap.me/signup";
 xhr.open("POST",url,true);
 xhr.setRequestHeader("Content-type","application/json");
-xhr.setRequestHeader("Authentication","Bearer xayto0lj1t0d7zz2ykfqimsv08bo6hze");
+xhr.setRequestHeader("Authentication",admintoken);
 xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
@@ -69,6 +69,7 @@ var mobile = document.getElementById("mobile").value;
 var password = document.getElementById("password").value;
 var email = document.getElementById("email").value;
 var uname = fname.concat(lname);
+console.log(fname);
 var data = JSON.stringify({"username":uname,"email":email,"password":password,"mobile":mobile});
 xhr.send(data);
 otpoverlaydropdown();
