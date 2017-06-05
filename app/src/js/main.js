@@ -10,6 +10,6 @@ xhr.onreadystatechange = function(){
     alert("JSON received");
   }
 };
-var data = JSON.stringify({"username":"hey@mail.com","password":"justanotherpassword","mobile":"7025568897"});
+var data = JSON.stringify({"username":"rkmjstester","email":"hey@mail.com","password":"justanotherpassword","mobile":"7025568897"});
 xhr.send(data);
 }
