@@ -10,8 +10,8 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="/js/main.js?v=<?php echo time();?>" type="text/javascript"></script>
-    <link rel="stylesheet" href="/css/master.css?v=<?php echo time();?>" media="screen" title="no title">
+    <script src="/js/main.js?ver=<?php echo time();?>" type="text/javascript"></script>
+    <link rel="stylesheet" href="/css/master.css?ver=<?php echo time();?>" media="screen" title="no title">
     <meta name = "viewport" content = "width=device-width,initial-scale=1">
     <title>Sunshine | Welcome</title>
   </head>
