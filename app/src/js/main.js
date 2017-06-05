@@ -1,8 +1,5 @@
 function popalert() {
-  alert("js active");
-}
-
-/*xhr = new XMLHttpRequest();
+xhr = new XMLHttpRequest();
 var url  = "http://auth.vcap.me/singup";
 xhr.open("POST",url,true());
 xhr.setRequestHeader("Content-type","application/json");
@@ -15,4 +12,4 @@ xhr.onreadystatechange = function(){
 };
 var data = JSON.stringify({"username":"hey@mail.com","password":"justanotherpassword","mobile":"7025568897"});
 xhr.send(data);
-*/
+}
