@@ -51,9 +51,9 @@ function otpresend() {
       alert(JSON.stringify(json.message));
     }
   }
-  var remobile = document.getElementById("mobile").value;
+  var remobile = document.getElementById('mobile').value;
   var data = {};
-  data["mobile"] = mobile;
+  data["mobile"] = remobile;
   jsondata = JSON.stringify(data);
   console.log("DATA : "+data);
   console.log("JSON DATA : "+jsondata);
