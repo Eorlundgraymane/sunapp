@@ -1,22 +1,13 @@
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
   var signupdiv = document.getElementById('signupdiv');
-  signupdiv.style.zIndex = "-999";
-  signupdiv.style.opacity = "0.6";
-  signupdiv.style.maxHeight = "0";
-  otpform.style.maxHeight="100%";
-  otpform.style.opacity="0.9";
-  otpform.style.zIndex = "999";
+  otpform.style.display = "block";
+
 }
 function otpoverlayslideup(){
   var otpform =  document.getElementById('otpform');
   var signupdiv = document.getElementById('signupdiv');
-  signupdiv.style.zIndex = "999";
-  signupdiv.style.opacity = "1";
-  signupdiv.style.maxHeight = "100%";
-  otpform.style.maxHeight="0";
-  otpform.style.opacity="0";
-  otpform.style.zIndex = "-999";
+  otpform.style.display = "none";
 }
 
 
