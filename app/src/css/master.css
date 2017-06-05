@@ -6,10 +6,6 @@
   position: absolute;
   top: 25%;
 }
-#otpform
-{
-  transform: translate(50%,50%);
-}
 .otpform
 {
   background-color: rgba(0,0,0,0.5);
