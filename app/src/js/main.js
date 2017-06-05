@@ -1,4 +1,4 @@
-var admintoken = "Bearer xayto0lj1t0d7zz2ykfqimsv08bo6hze";
+var admintoken = "Bearer 0s29rr1bbgtn55vcakmg2w1bnuoqty9o";
 
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
@@ -18,7 +18,7 @@ function otpoverlayslideup(){
 
 function otpverify(){
   xhr = new XMLHttpRequest();
-  var url  = "http://auth.vcap.me/mobile/confirm";
+  var url  = "http://auth.washtub66.hasura-app.io/mobile/confirm";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.setRequestHeader("Authentication",admintoken);
@@ -40,7 +40,7 @@ function otpverify(){
 
 function otpresend() {
   xhr = new XMLHttpRequest();
-  var url  = "http://auth.vcap.me/mobile/resend-otp";
+  var url  = "http://auth.washtub66.hasura-app.io/mobile/resend-otp";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.setRequestHeader("Authentication",admintoken);
@@ -62,7 +62,7 @@ function otpresend() {
 
 function popalert() {
 xhr = new XMLHttpRequest();
-var url  = "http://auth.vcap.me/signup";
+var url  = "http://auth.washtub66.hasura-app.io/signup";
 xhr.open("POST",url,true);
 xhr.setRequestHeader("Content-type","application/json");
 xhr.setRequestHeader("Authentication",admintoken);
