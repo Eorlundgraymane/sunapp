@@ -8,10 +8,16 @@
 }
 .otpform
 {
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease;
   height: 0;
   opacity: 0;
 }
 #signup {
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease;
   position: absolute;
   right: 10%;
   display: block;
