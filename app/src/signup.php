@@ -1,3 +1,5 @@
+
+<?php include 'otpoverlay.php';?>
 <form methhod = "POST" name = "signup" id = "signup">
   <input type = "text" name = "fname" placeholder="First Name">
   <input type = "text" name = "lname" placeholder="Last Name"><br>
@@ -144,5 +146,5 @@
   <input type = "password" name = "password" placeholder="Password"><br>
   <input type = "password" name = "confpass" placeholder="Retype Password"><br>
   <button name = "signupbuttn" onclick = "popalert();" type = "button">Sign Up</button>
-  <a href = "/">Already received OTP</a>
+  <a onclick="otpoverlaydropdown();">Already received OTP</a>
 </form>

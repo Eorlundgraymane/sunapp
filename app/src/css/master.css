@@ -6,6 +6,11 @@
   position: absolute;
   top: 25%;
 }
+#otpform
+{
+  opacity: 0;
+  height: 0;
+}
 #signup {
   position: absolute;
   right: 10%;

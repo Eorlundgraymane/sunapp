@@ -1,4 +1,5 @@
 function popalert() {
+
 xhr = new XMLHttpRequest();
 var url  = "http://auth.vcap.me/signup";
 xhr.open("POST",url,true);
@@ -8,13 +9,18 @@ xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
     console.log(JSON.stringify(json));
-    alert("JSON received");
   }
 };
 var data = JSON.stringify({"username":"rkmjstester","email":"hey@mail.com","password":"justanotherpassword","mobile":"7025568897"});
 xhr.send(data);
+function otpoverlaydropdown();
 /*
   Bring up Overlay on reg Pane
   overlay should contain OTP text box
 */
+}
+function otpoverlaydropdown(){
+  var otpform =  document.getElementById('otpform');
+  otpform.style.height=100%;
+  optform.style.opacity=100%;
 }
