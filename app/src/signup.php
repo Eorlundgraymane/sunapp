@@ -1,4 +1,4 @@
-<form name = "signup" id = "signup">
+<form methhod = "POST" name = "signup" id = "signup">
   <input type = "text" name = "fname" placeholder="First Name">
   <input type = "text" name = "lname" placeholder="Last Name"><br>
   <input type = "text" name = "email" placeholder="Email ID"><br>
