@@ -9,7 +9,7 @@
 .otpform
 {
   position: absolute;
-  top: 25%;
+  right: 10%;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
