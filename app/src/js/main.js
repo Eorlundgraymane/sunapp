@@ -31,7 +31,7 @@ function otpverify(){
   }
   var otp = document.getElementById('otp').value;
   var mobile = document.getElementById('mobile').value;
-  var data = JSON.stringify({"mobile":mobile,"otp":otp});
+  var data = JSON.stringify({"mobile":mobile.String(),"otp":otp.String()});
   xhr.send(data);
 }
 function resendotp(){
@@ -48,7 +48,7 @@ function resendotp(){
     }
   }
   var remobile = document.getElementById('mobile').value;
-  var data = JSON.stringify({"mobile":remobile});
+  var data = JSON.stringify({"mobile":remobile.String()});
   xhr.send(data);
 }
 function popalert() {
