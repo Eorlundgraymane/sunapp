@@ -11,8 +11,8 @@
   background-color: rgba(0,0,0,0.5);
   opacity: 0;
   z-index: -2;
-  width: 350px;
-  height: 250px;
+  width: 300px;
+  height: 200px;
   position: absolute;
   right: 10%;
   transition-property: all;
