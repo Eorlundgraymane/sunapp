@@ -1,11 +1,13 @@
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
   otpform.style.display = "block";
+  otpform.style.opacity = "1";
 
 }
 function otpoverlayslideup(){
   var otpform =  document.getElementById('otpform');
   otpform.style.display = "none";
+  otpform.style.opacity = "0";
 }
 
 function popalert() {
