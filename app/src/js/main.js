@@ -1,5 +1,4 @@
 function popalert() {
-alert("function called");
 xhr = new XMLHttpRequest();
 var url  = "http://auth.vcap.me/signup";
 xhr.open("POST",url,true);
@@ -14,4 +13,11 @@ xhr.onreadystatechange = function(){
 };
 var data = JSON.stringify({"username":"rkmjstester","email":"hey@mail.com","password":"justanotherpassword","mobile":"7025568897"});
 xhr.send(data);
+
+$('#signup').submit(popalert());
+
+/*
+  Bring up Overlay on reg Pane
+  overlay should contain OTP text box
+*/
 }
