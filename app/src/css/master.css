@@ -8,6 +8,7 @@
 }
 .otpform
 {
+  background-color: black;
   position: absolute;
   right: 10%;
   transition-property: all;
