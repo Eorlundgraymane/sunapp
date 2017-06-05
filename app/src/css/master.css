@@ -8,8 +8,7 @@
 }
 #otpform
 {
-  opacity: 0;
-  height: 0;
+  z-index: -999;
 }
 #signup {
   position: absolute;
