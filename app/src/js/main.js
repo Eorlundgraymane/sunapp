@@ -55,6 +55,8 @@ function otpresend() {
   var data = {};
   data["mobile"] = mobile;
   jsondata = JSON.stringify(data);
+  console.log("DATA : "+data);
+  console.log("JSON DATA : "+jsondata);
   xhr.send(jsondata);
 }
 
