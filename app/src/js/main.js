@@ -1,13 +1,17 @@
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
+  var signupdiv =  document.getElementById('signupdiv');
   otpform.style.opacity = "1";
   otpform.style.zIndex = "2";
+  signupdiv.style.opacity = "0.5";
 
 }
 function otpoverlayslideup(){
   var otpform =  document.getElementById('otpform');
+  var signupdiv =  document.getElementById('signupdiv');
   otpform.style.opacity = "0";
   otpform.style.zIndex = "-2";
+  signupdiv.style.opacity = "0.5";
 }
 
 function popalert() {
