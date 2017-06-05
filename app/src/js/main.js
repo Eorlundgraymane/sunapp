@@ -72,7 +72,7 @@ var uname = fname.concat(" ",lname);
 console.log(uname);
 var predata = JSON.stringify({"username":uname,"email":email,"password":password,"mobile":mobile});
 var data:{data:predata};
-console.log(data);
+xhr.send(data);
 otpoverlaydropdown();
 /*
   Bring up Overlay on reg Pane
