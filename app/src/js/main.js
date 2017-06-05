@@ -31,7 +31,7 @@ function otpverify(){
   }
   var otp = document.getElementById('otp').value;
   var mobile = document.getElementById('mobile').value;
-  var data = JSON.stringify({"mobile":mobile.String(),"otp":otp.String()});
+  var data = JSON.stringify({"mobile":String(mobile),"otp":String(otp)});
   xhr.send(data);
 }
 function resendotp(){
@@ -48,7 +48,7 @@ function resendotp(){
     }
   }
   var remobile = document.getElementById('mobile').value;
-  var data = JSON.stringify({"mobile":remobile.String()});
+  var data = JSON.stringify({"mobile":String(remobile)});
   xhr.send(data);
 }
 function popalert() {
@@ -70,7 +70,7 @@ var password = document.getElementById("password").value;
 var email = document.getElementById("email").value;
 var uname = fname.concat(" ",lname);
 console.log(uname);
-var data = JSON.stringify({"username":uname.String(),"email":email.String(),"password":password.String(),"mobile":mobile.String()});
+var data = JSON.stringify({"username":String(uname),"email":String(email),"password":String(password),"mobile":String(mobile)});
 xhr.send(data);
 otpoverlaydropdown();
 /*
