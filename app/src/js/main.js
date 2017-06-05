@@ -1,7 +1,12 @@
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
+  var signupdiv = document.getElementById('singupdiv');
+  signupdiv.style.zIndex = "-999";
+  singupdiv.style.opacity - "0";
+  singupdiv.style.height = "0";
   otpform.style.height="100%";
-  optform.style.opacity="100%";
+  otpform.style.opacity="100%";
+  otpform.style.zIndex = "1";
 }
 
 function popalert() {
