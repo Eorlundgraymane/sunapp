@@ -31,7 +31,7 @@ function otpverify(){
   }
   var otp = document.getElementById('otp').value;
   var mobile = document.getElementById('mobile').value;
-  var data = JSON.stringify({[mobile]:mobile,[otp]:otp});
+  var data = JSON.stringify({"mobile":mobile,"otp":otp});
   xhr.send(data);
 }
 function resendotp(){
@@ -48,7 +48,7 @@ function resendotp(){
     }
   }
   var remobile = document.getElementById('mobile').value;
-  var data = JSON.stringify({[mobile]:remobile});
+  var data = JSON.stringify({"mobile":remobile});
   xhr.send(data);
 }
 function popalert() {
@@ -70,8 +70,9 @@ var password = document.getElementById("password").value;
 var email = document.getElementById("email").value;
 var uname = fname.concat(" ",lname);
 console.log(uname);
-var data = JSON.stringify({[username]:uname,[email]:email,[password]:password,[mobile]:mobile});
-xhr.send(data);
+var predata = JSON.stringify({"username":uname,"email":email,"password":password,"mobile":mobile});
+var data:{data:predata};
+console.log(data);
 otpoverlaydropdown();
 /*
   Bring up Overlay on reg Pane
