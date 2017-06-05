@@ -1,6 +1,6 @@
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
-  otpform.style.height="100%";
+  otpform.style.max-height="100%";
   optform.style.opacity="100%";
 }
 
