@@ -63,11 +63,11 @@ xhr.onreadystatechange = function(){
     console.log(JSON.stringify(json));
   }
 }
-var fname = document.getElementsByName("fname").value;
-var lname = document.getElementsByName("lname").value;
-var mobile = document.getElementsByName("mobile").value;
-var password = document.getElementsByName("password").value;
-var email = document.getElementsByName("email").value;
+var fname = document.getElementById("fname").value;
+var lname = document.getElementById("lname").value;
+var mobile = document.getElementById("mobile").value;
+var password = document.getElementById("password").value;
+var email = document.getElementById("email").value;
 var uname = fname.concat(lname);
 var data = JSON.stringify({"username":uname,"email":email,"password":password,"mobile":mobile});
 xhr.send(data);
