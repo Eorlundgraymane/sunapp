@@ -9,7 +9,7 @@
 .otpform
 {
   display: none;
-  background-color: black;
+  z-index: 2;
   position: absolute;
   right: 25%;
   transition-property: all;
