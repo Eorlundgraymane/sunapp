@@ -5,7 +5,6 @@ function otpoverlaydropdown(){
   signupdiv.style.opacity = "0.6";
   otpform.style.height="100%";
   otpform.style.opacity="0.9";
-  otpform.style.zIndex = "999";
 }
 function otpoverlayslideup(){
   var otpform =  document.getElementById('otpform');
@@ -14,7 +13,6 @@ function otpoverlayslideup(){
   signupdiv.style.opacity = "1";
   otpform.style.height="0";
   otpform.style.opacity="0";
-  otpform.style.zIndex = "-999";
 }
 
 
