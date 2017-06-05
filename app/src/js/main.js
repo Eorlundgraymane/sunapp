@@ -11,7 +11,7 @@ function otpoverlayslideup(){
   var signupdiv =  document.getElementById('signupdiv');
   otpform.style.opacity = "0";
   otpform.style.zIndex = "-2";
-  signupdiv.style.opacity = "0.5";
+  signupdiv.style.opacity = "1";
 }
 
 function popalert() {
