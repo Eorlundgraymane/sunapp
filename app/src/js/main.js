@@ -11,6 +11,7 @@ function otpoverlayslideup(){
   var otpform =  document.getElementById('otpform');
   var signupdiv = document.getElementById('signupdiv');
   signupdiv.style.zIndex = "999";
+  signupdiv.style.opacity = "1";
   otpform.style.height="0";
   otpform.style.opacity="0";
   otpform.style.zIndex = "-999";
