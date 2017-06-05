@@ -2,8 +2,8 @@ function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
   var signupdiv = document.getElementById('signupdiv');
   signupdiv.style.zIndex = "-999";
-  singupdiv.style.opacity - "0";
-  singupdiv.style.height = "0";
+  signupdiv.style.opacity - "0";
+  signupdiv.style.height = "0";
   otpform.style.height="100%";
   otpform.style.opacity="100%";
   otpform.style.zIndex = "1";
