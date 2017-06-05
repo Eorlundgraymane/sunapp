@@ -8,6 +8,8 @@
 }
 .otpform
 {
+  position: absolute;
+  top: 25%;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
