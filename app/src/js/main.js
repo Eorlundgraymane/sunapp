@@ -1,8 +1,8 @@
-/*function otpoverlaydropdown(){
+function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
   otpform.style.height="100%";
   optform.style.opacity="100%";
-}*/
+}
 
 function popalert() {
 
@@ -19,7 +19,7 @@ xhr.onreadystatechange = function(){
 }
 var data = JSON.stringify({"username":"rkmjstester","email":"hey@mail.com","password":"justanotherpassword","mobile":"7025568897"});
 xhr.send(data);
-//otpoverlaydropdown();
+otpoverlaydropdown();
 /*
   Bring up Overlay on reg Pane
   overlay should contain OTP text box
