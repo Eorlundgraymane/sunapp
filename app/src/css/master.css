@@ -15,7 +15,7 @@
   position: absolute;
   right: 10%;
   display: block;
-  animation-name: signupscroll;
+  animation-name: signupscroll1;
   animation-duration: 2s;
   animation-timing-function: ease-in();
   animation-iteration-count: 1;
