@@ -1,4 +1,4 @@
-<div id = "otpform">
+<div class = "otpform">
   <form method  = "POST" name = "otpform">
   <input type = "text" name = "mobile"><br>
   <input type = "text" name = "OTP"><br>
