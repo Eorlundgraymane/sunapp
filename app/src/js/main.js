@@ -71,7 +71,7 @@ xhr.onreadystatechange = function(){
 var fname = document.getElementById("fname").value;
 var lname = document.getElementById("lname").value;
 var mobile = document.getElementById("mobile").value;
-var password = document.getElementById("password").value;
+var password = document.getElementById("pass").value;
 var email = document.getElementById("email").value;
 var uname = fname.concat(" ",lname);
 console.log(uname);
