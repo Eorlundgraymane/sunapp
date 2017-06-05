@@ -3,8 +3,8 @@ function otpoverlaydropdown(){
   var signupdiv = document.getElementById('signupdiv');
   signupdiv.style.zIndex = "-999";
   signupdiv.style.opacity = "0.6";
-  signupdiv.style.height = "0";
-  otpform.style.height="100%";
+  signupdiv.style.maxHeight = "0";
+  otpform.style.maxHeight="100%";
   otpform.style.opacity="0.9";
   otpform.style.zIndex = "999";
 }
@@ -13,8 +13,8 @@ function otpoverlayslideup(){
   var signupdiv = document.getElementById('signupdiv');
   signupdiv.style.zIndex = "999";
   signupdiv.style.opacity = "1";
-  signupdiv.style.height = "100%";
-  otpform.style.height="0";
+  signupdiv.style.maxHeight = "100%";
+  otpform.style.maxHeight="0";
   otpform.style.opacity="0";
   otpform.style.zIndex = "-999";
 }
