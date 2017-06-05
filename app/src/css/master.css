@@ -10,6 +10,11 @@
 {
   transform: translate(25%,60%);
 }
+button
+{
+  color: white;
+  background-color: lightblue;
+}
 .otpform
 {
   background-color: rgba(0,0,0,0.5);
