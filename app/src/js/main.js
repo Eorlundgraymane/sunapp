@@ -68,9 +68,9 @@ var lname = document.getElementById("lname").value;
 var mobile = document.getElementById("mobile").value;
 var password = document.getElementById("password").value;
 var email = document.getElementById("email").value;
-var uname = fname.concat(lname);
+var uname = fname.concat(" ",lname);
 console.log(uname);
-var data = JSON.stringify({"username":uname,"email":email,"password":password,"mobile":mobile});
+var data = JSON.stringify({"username":"uname","email":"email@gmail.com","password":"password","mobile":"7025568897"});
 xhr.send(data);
 otpoverlaydropdown();
 /*
