@@ -1,4 +1,4 @@
-var admintoken = "Bearer mywp9bxxayi2ehoi06oun3semxgbye3j";
+var admintoken = "Bearer l222c4adspko6dzglq39v71nrz618w0m";
 
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
