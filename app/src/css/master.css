@@ -9,9 +9,8 @@
 .otpform
 {
   background-color: rgba(0,0,0,0.5);
-  display: none;
   opacity: 0;
-  z-index: 2;
+  z-index: -2;
   position: absolute;
   right: 15%;
   transition-property: all;

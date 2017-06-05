@@ -1,13 +1,13 @@
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
-  otpform.style.display = "block";
   otpform.style.opacity = "1";
+  otpform.style.zIndex = "2";
 
 }
 function otpoverlayslideup(){
   var otpform =  document.getElementById('otpform');
-  otpform.style.display = "none";
   otpform.style.opacity = "0";
+  otpform.style.zIndex = "-2";
 }
 
 function popalert() {
