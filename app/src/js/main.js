@@ -1,6 +1,6 @@
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
-  var signupdiv = document.getElementById('singupdiv');
+  var signupdiv = document.getElementById('signupdiv');
   signupdiv.style.zIndex = "-999";
   singupdiv.style.opacity - "0";
   singupdiv.style.height = "0";
