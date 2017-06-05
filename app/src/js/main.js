@@ -37,7 +37,8 @@ function otpverify(){
   jsondata = JSON.stringify(data);
   xhr.send(jsondata);
 }
-function resendotp(){
+
+function otpresend() {
   xhr = new XMLHttpRequest();
   var url  = "http://auth.vcap.me/mobile/resend-otp";
   xhr.open("POST",url,true);
@@ -56,6 +57,7 @@ function resendotp(){
   jsondata = JSON.stringify(data);
   xhr.send(jsondata);
 }
+
 function popalert() {
 xhr = new XMLHttpRequest();
 var url  = "http://auth.vcap.me/signup";
