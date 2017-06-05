@@ -3,6 +3,7 @@
 }
 .regpane
 {
+  background-color: yellow;
   position: absolute;
   top: 25%;
 }
