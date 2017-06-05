@@ -25,7 +25,6 @@
 #signup {
   position: absolute;
   right: 10%;
-  display: block;
   animation-name: signupscroll;
   animation-duration: 2s;
   animation-timing-function: ease-in();
