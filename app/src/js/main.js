@@ -5,7 +5,7 @@ function otpoverlaydropdown(){
   signupdiv.style.opacity = "0";
   signupdiv.style.height = "0";
   otpform.style.height="100%";
-  otpform.style.opacity="100%";
+  otpform.style.opacity="1";
   otpform.style.zIndex = "1";
 }
 
