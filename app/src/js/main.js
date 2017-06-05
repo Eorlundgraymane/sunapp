@@ -70,7 +70,7 @@ var password = document.getElementById("password").value;
 var email = document.getElementById("email").value;
 var uname = fname.concat(" ",lname);
 console.log(uname);
-var data = JSON.stringify({"username":"uname","email":"email@gmail.com","password":"password","mobile":"7025568897"});
+var data = JSON.stringify({"username":uname.String(),"email":email.String(),"password":password.String(),"mobile":mobile.String()});
 xhr.send(data);
 otpoverlaydropdown();
 /*
