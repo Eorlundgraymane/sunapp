@@ -13,7 +13,7 @@ function otpoverlaydropdown(){
   function expand(){
     var nowh = otpform.style.height;
     var newh = nowh+10;
-    console.log(nowh);
+    console.log("NOWH: "+nowh);
     otpform.style.height = newh+"px";
   }
 }
