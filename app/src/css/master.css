@@ -25,7 +25,7 @@ button
   opacity: 0;
   z-index: -2;
   width: 350px;
-  height: 250px;
+  height: 0px;
   position: absolute;
   right: 10%;
   transition-property: all;
