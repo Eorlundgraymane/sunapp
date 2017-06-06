@@ -144,7 +144,7 @@
   <!--<input type = "date" name = "dob" id = "dob"><br><br> Rendered Obsolete-->
   <input type = "password" name = "password" id = "pass" placeholder="Password"><br>
   <input type = "password" name = "confpass"placeholder="Retype Password"><br>
-  <button id = "signupbuttn" onclick = "popalert();" type = "button">Sign Up</button>
+  <button disabled id = "signupbuttn" onclick = "popalert();" type = "button">Sign Up</button>
   <button id = "otpready" type = "button" onclick="otpoverlaydropdown();">Already received OTP</button>
 </form>
 </div>
