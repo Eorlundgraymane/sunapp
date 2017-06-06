@@ -8,12 +8,12 @@ function otpoverlaydropdown(){
   signupdiv.style.opacity = "0.5";
   while (otpform.style.height <= 250) {
     setTimeout(function(){},100);
-    console.log(otpform.style.height);
     expand();
   }
   function expand(){
     var nowh = otpform.style.height;
     var newh = nowh+10;
+    console.log(nowh);
     otpform.style.height = newh+"px";
   }
 }
