@@ -6,16 +6,6 @@ function otpoverlaydropdown(){
   otpform.style.opacity = "1";
   otpform.style.zIndex = "2";
   signupdiv.style.opacity = "0.5";
-  while (otpform.offsetHeight <= 250) {
-    setTimeout(function(){},100);
-    expand();
-  }
-  function expand(){
-    var nowh = otpform.offsetHeight;
-    var newh = nowh+10;
-    console.log("NOWH: "+nowh);
-    otpform.style.height = newh+"px";
-  }
 }
 function otpoverlayslideup(){
   var otpform =  document.getElementById('otpform');
