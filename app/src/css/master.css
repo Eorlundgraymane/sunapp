@@ -15,7 +15,7 @@ button
   color: white;
   background-color: #7ec0ee;
 }
-#signupbuttn,#otpbutton,#resendotp
+#signupbuttn,#otpbutton,#resendotp,#loginbutton
 {
   cursor: not-allowed;
 }
