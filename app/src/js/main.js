@@ -6,6 +6,7 @@ function otpoverlaydropdown(){
   otpform.style.opacity = "1";
   otpform.style.zIndex = "2";
   signupdiv.style.opacity = "0.5";
+  otpform.style.displace = "block";
 }
 function otpoverlayslideup(){
   var otpform =  document.getElementById('otpform');
