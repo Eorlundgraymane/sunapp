@@ -1,9 +1,9 @@
 var admintoken = "Bearer l222c4adspko6dzglq39v71nrz618w0m";
 
 function otpoverlaydropdown(){
-  otpform.style.display = "block";
   var otpform =  document.getElementById('otpform');
   var signupdiv =  document.getElementById('signupdiv');
+  otpform.style.display = "block";
   otpform.style.opacity = "1";
   otpform.style.zIndex = "2";
   signupdiv.style.opacity = "0.5";
