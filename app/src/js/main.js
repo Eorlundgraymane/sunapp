@@ -27,6 +27,7 @@ function otpverify(){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json.message));
       alert(JSON.stringify(json.message));
+      otpoverlaydropdown();
     }
   }
   var otp = document.getElementById('otp').value;
