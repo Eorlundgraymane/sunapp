@@ -15,6 +15,10 @@ button
   color: white;
   background-color: #7ec0ee;
 }
+#loginbutton
+{
+  cursor: not-allowed;
+}
 .otpform
 {
   display: none;
