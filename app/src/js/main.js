@@ -84,7 +84,7 @@ function updatemyusers(){
   var data = {};
   data["type"] = "insert";
   data["args"] = {"table":"user"};
-  data["args"]["objects"] = {"{}"};
+  data["args"]["objects"] = {};
   data["args"]["objects"]["id"] = "101";
   data["args"]["objects"]["username"] = "newuser";
   data["args"]["objects"]["email"] = "newmail@gmail.com";
@@ -105,7 +105,7 @@ xhr.onreadystatechange = function(){
     var json = JSON.parse(xhr.responseText);
     console.log(JSON.stringify(json));
     alert("Successfully Signed Up. Please Veriy your mobile number");
-    updatemyusers();
+    //updatemyusers();
     otpoverlaydropdown();
   }
   else if(xhr.readyState == 4) {
