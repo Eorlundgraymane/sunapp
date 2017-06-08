@@ -1,4 +1,4 @@
-var admintoken = "Bearer l222c4adspko6dzglq39v71nrz618w0m";
+var admintoken = "Bearer nk8vh416e2v2sd1t6rhxmyzntgc8vx1t";
 
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
@@ -76,23 +76,6 @@ function updatemyusers(){
     }
   }
   var objects = {};
-  /*
-  {
-"type":"insert",
-"args":
-{
-  "table":"user",
-  "objects":[{
-      "id": 100,
-      "username": "rkmenon235",
-      "email": "rkmenon235@gmail.com",
-      "password": "password",
-      "dob": "1994-10-23"
-    }
-]
-
-}
-}*/
   objects["id"]= 101;
   objects["username"] = "username";
   objects["email"] = "email@gmail.com";
