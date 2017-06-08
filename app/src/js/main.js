@@ -24,7 +24,7 @@ function checklogout(pk)
     }
   }
   var data = {};
-  data["username"] = String(pk);
+  data["username"] = pk;
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
