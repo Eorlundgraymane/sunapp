@@ -70,14 +70,14 @@ xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
     console.log(JSON.stringify(json));
-    if(xhr.status != 400)
-    {
-      alert("Successfully Signed Up. Please Veriy your mobile number");
-      otpoverlaydropdown();
-    }
-    else {
-      alert("Something went wrong please try again");
-    }
+  }
+  if(xhr.status != 400)
+  {
+    alert("Successfully Signed Up. Please Veriy your mobile number");
+    otpoverlaydropdown();
+  }
+  else if(xhr.status == 400){
+    alert("Something went wrong please try again");
   }
 }
 var fname = document.getElementById("fname").value;
