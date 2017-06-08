@@ -42,7 +42,6 @@ function checklogout(pk)
   var url  = "https://auth.washtub66.hasura-app.io/logout";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
-  xhr.setRequestHeader("Authentication,auth_token");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
@@ -58,11 +57,9 @@ function checklogout(pk)
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Logout please try again");
     }
-  }
-  var pkey = pk;
+  }  
   var data = {};
-  data["username"] = pkey;
-  data["password"] = password;
+  data["username"] = pk;
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
@@ -185,12 +182,11 @@ function otpresend() {
   console.log("JSON DATA : "+jsondata);
   xhr.send(jsondata);
 }
-function updatemyusersprofile(pk,pasw){
+function updatemyusersprofile(){
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
-  xhr.setRequestHeader("Authentication",auth_token);
   xhr.withCredentials = true;
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
@@ -225,14 +221,13 @@ function updatemyusers(pk,pasw){
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
-  xhr.setRequestHeader("Authentication",auth_token);
   xhr.withCredentials = true;
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert("Your Sunshine Account is Ready, Setting up initial Profile");
-      updatemyusersprofile(pk,pasw);
+      updatemyusersprofile();
       checklogout(pk);
     }
     else if(xhr.readyState ==4){
