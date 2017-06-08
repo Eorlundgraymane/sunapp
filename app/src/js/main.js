@@ -78,16 +78,17 @@ function updatemyusers(){
     }
   }
   var objects = {};
-  objects["id"]= hasura_id;
-  objects["username"] = "username";
-  objects["email"] = "email@gmail.com";
-  objects["password"] = "newpassword";
-  objects["dob"] = "1994-10-23";
   var data = {};
+  var fname = document.getElementById("fname").value;
+  var lname = document.getElementById("lname").value;
+  var mobile = document.getElementById("mob").value;
+  var password = document.getElementById("pass").value;
+  var email = document.getElementById("email").value;
+  var uname = fname.concat(" ",lname);
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "user";
-  data["args"].objects = [{"id":19,"username":"username","email":"email@gmail.com","password":"password","dob":"1994-10-23"}];
+  data["args"].objects = [{"id":hasura_id,"username":uname,"email":email,"password":pass,"dob":dob}];
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
@@ -103,7 +104,7 @@ xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
     console.log(JSON.stringify(json.hasura_id));
-    
+    hasura_id = json.hasura_id;
     alert("Successfully Signed Up. Please Veriy your mobile number while we set up your Sunshine Account");
     updatemyusers();
     otpoverlaydropdown();
