@@ -77,11 +77,11 @@ function updatemyusers(){
     }
   }
   var data = [{}];
-  data.objects["id"]= 19;
-  data.objects["username"] = "username";
-  data.objects["email"] = "email@gmail.com";
-  data.objects["password"] = "newpassword";
-  data.objects["dob"] = "1994-10-23";
+  data["id"] = 19;
+  data["username"] = "username";
+  data["email"] = "email@gmail.com";
+  data["password"] = "newpassword";
+  data["dob"] = "1994-10-23";
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
