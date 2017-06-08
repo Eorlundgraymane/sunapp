@@ -89,19 +89,6 @@ function updatemyusers(){
 
 }
 }*/
-  var jstring = '"type": "insert",
-    "args": {
-        "table": "user",
-        "objects": [
-            {
-                "id": 100,
-                "username": "rkmenon235",
-                "email": "rkmenon235@gmail.com",
-                "password": "password",
-                "dob": "1994-10-23"
-            }
-        ]
-    }';
   objects["id"]= 101;
   objects["username"] = "username";
   objects["email"] = "email@gmail.com";
@@ -115,7 +102,7 @@ function updatemyusers(){
   data["args"] = {}
   data["args"]["table"] = "user";
   data["args"].objects = [objects];
-  var jsoninsert =jstring;
+  var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
 }
