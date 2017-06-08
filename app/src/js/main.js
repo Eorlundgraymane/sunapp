@@ -100,7 +100,7 @@ function otpresend() {
       otpcancelbutton.style.cursor = "pointer";
       resendotpbutton.innerHTML = "OTP sent to "+mobile+" !";
       setTimeout(function(){},3000);
-      resendotpbutton.innerHTML = "Resent OTP";
+      resendotpbutton.innerHTML = "Resend OTP";
       otpbutton.style.disabled = "false";
       resendotpbutton.style.disabled = "false";
       otpcancelbutton.style.disabled = "false";
