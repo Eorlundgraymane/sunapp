@@ -145,7 +145,7 @@ function updatemyusersprofile(){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "profile";
-  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthsine":0},"healthshine":0,"charityshine":0,"familyshine":0}];
+  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthsine":0,"healthshine":0,"charityshine":0,"familyshine":0}];
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
