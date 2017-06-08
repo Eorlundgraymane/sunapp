@@ -70,8 +70,8 @@ function updatemyusers(){
       console.log(JSON.stringify(json));
       alert(JSON.stringify(json.message));
     }
-    else {
-      alert(JSON.stringify(JSON.parse(xhr.responseText).message));
+    else if(xhr.readyState ==4){
+      console.log("Consoled Error : "JSON.stringify(JSON.parse(xhr.responseText).message));
     }
   }
   var objects = {};
