@@ -75,17 +75,17 @@ function updatemyusers(){
       console.log("Consoled Error : "+JSON.stringify(json));
     }
   }
-  var objects = {};
-  objects["id"]= 101;
-  objects["username"] = "username";
-  objects["email"] = "email@gmail.com";
-  objects["password"] = "newpassword";
-  objects["dob"] = "1994-10-23";
+  var data = {};
+  data.objects["id"]= 101;
+  data.objects["username"] = "username";
+  data.objects["email"] = "email@gmail.com";
+  data.objects["password"] = "newpassword";
+  data.objects["dob"] = "1994-10-23";
   /*data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "user";
   data["args"].objects = [{"id":19,"username":"username","email":"email@gmail.com","password":"password","dob":"1994-10-23"}];*/
-  var jsoninsert = JSON.stringify({objects});
+  var jsoninsert = JSON.stringify({data});
   console.log(jsoninsert);
   xhr.send(jsoninsert);
 }
