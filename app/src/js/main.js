@@ -1,7 +1,9 @@
 var admintoken = "Bearer nk8vh416e2v2sd1t6rhxmyzntgc8vx1t";
 var hasura_id;
 var auth_token;
-function checklogin()
+var pkey;
+var password;
+function checklogin(pk,pasw)
 {
   xhr = new XMLHttpRequest();
   var loginbutton = document.getElementById('loginbutton');
@@ -27,18 +29,16 @@ function checklogin()
       alert("Something went wrong during Login please try again");
     }
   }
-  var pkey = document.getElementById("primarykey").value;
-  var password = document.getElementById("password").value;
   var data = {};
-  data["username"] = pkey;
-  data["password"] = password;
+  data["username"] = pk;
+  data["password"] = pasw;
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
   xhr.send(jsondata);
 }
 
-function checklogout()
+function checklogout(pk)
 {
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/logout";
@@ -61,8 +61,7 @@ function checklogout()
       alert("Something went wrong during Logout please try again");
     }
   }
-  var pkey = document.getElementById("primarykey").value;
-  var password = document.getElementById("password").value;
+  var pkey = pk;
   var data = {};
   data["username"] = pkey;
   data["password"] = password;
@@ -188,7 +187,7 @@ function otpresend() {
   console.log("JSON DATA : "+jsondata);
   xhr.send(jsondata);
 }
-function updatemyusersprofile(){
+function updatemyusersprofile(pk,pasw){
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -199,7 +198,7 @@ function updatemyusersprofile(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
-      checklogout();
+      checklogout(pk);
       alert("Your Sunshine Profile is Ready. Go Ahead and log in");
     }
     else if(xhr.readyState ==4){
@@ -222,8 +221,8 @@ function updatemyusersprofile(){
   console.log(jsoninsert);
   xhr.send(jsoninsert);
 }
-function updatemyusers(){
-  checklogin();
+function updatemyusers(pk,pasw){
+  checklogin(pk,pasw);
   alert("That was , Don't worry we will log out of your account after setting up your Sunshine Profile");
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
@@ -236,7 +235,7 @@ function updatemyusers(){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert("Your Sunshine Account is Ready, Setting up initial Profile");
-      updatemyusersprofile();
+      updatemyusersprofile(pk,pasw);
     }
     else if(xhr.readyState ==4){
       var json = JSON.parse(xhr.responseText);
@@ -277,7 +276,9 @@ xhr.onreadystatechange = function(){
     console.log(JSON.stringify(json.hasura_id));
     hasura_id = json.hasura_id;
     alert("Successfully Signed Up. Please Veriy your mobile number while we set up your Sunshine Account");
-    updatemyusers();
+    pkey = document.getElementById("primarykey").value;
+    password = document.getElementById("password").value;
+    updatemyusers(pkey,password);
     otpoverlaydropdown();
   }
   else if(xhr.readyState == 4) {
