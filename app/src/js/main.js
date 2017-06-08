@@ -77,7 +77,7 @@ function updatemyusers(){
     }
   }
   var objects = {};
-  objects["id"]= 101;
+  objects["id"]= 19;
   objects["username"] = "username";
   objects["email"] = "email@gmail.com";
   objects["password"] = "newpassword";
@@ -86,7 +86,7 @@ function updatemyusers(){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "user";
-  data["args"].objects = [{"id":101,"username":"username","email":"email@gmail.com","password":"password","dob":"1994-10-23"}];
+  data["args"].objects = [{"id":19,"username":"username","email":"email@gmail.com","password":"password","dob":"1994-10-23"}];
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
