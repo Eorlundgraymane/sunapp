@@ -3,11 +3,18 @@ var admintoken = "Bearer nk8vh416e2v2sd1t6rhxmyzntgc8vx1t";
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
   var signupdiv =  document.getElementById('signupdiv');
+  var otpbutton = document.getElementById('otpbutton');
+  var otpcancelbutton = document.getElementById('otpcancel');
+  var resendotpbutton = document.getElementById('resendotp');
   otpform.style.display = "block";
   var otpbutton = document.getElementById('otpbutton');
   otpbutton.style.cursor = "pointer";
-  otpbutton.innerHTML = "Verify OTP";
+  resendotpbutton.style.cursor = "pointer";
+  otpcancelbutton.style.cursor = "pointer";
+  otpbutton.innerHTML = "Verifying....";
   otpbutton.style.disabled = "false";
+  resendotpbutton.style.disabled = "false";
+  otpcancelbutton.style.disabled = "false";
   otpform.style.opacity = "1";
   otpform.style.zIndex = "2";
   signupdiv.style.opacity = "0.5";
@@ -15,6 +22,16 @@ function otpoverlaydropdown(){
 function otpoverlayslideup(){
   var otpform =  document.getElementById('otpform');
   var signupdiv =  document.getElementById('signupdiv');
+  var otpbutton = document.getElementById('otpbutton');
+  var otpcancelbutton = document.getElementById('otpcancel');
+  var resendotpbutton = document.getElementById('resendotp');
+  otpbutton.style.cursor = "pointer";
+  resendotpbutton.style.cursor = "pointer";
+  otpcancelbutton.style.cursor = "pointer";
+  otpbutton.innerHTML = "Verifying....";
+  otpbutton.style.disabled = "false";
+  resendotpbutton.style.disabled = "false";
+  otpcancelbutton.style.disabled = "false";
   otpform.style.opacity = "0";
   otpform.style.zIndex = "-2";
   signupdiv.style.opacity = "1";
@@ -22,9 +39,15 @@ function otpoverlayslideup(){
 
 function otpverify(){
   var otpbutton = document.getElementById('otpbutton');
+  var otpcancelbutton = document.getElementById('otpcancel');
+  var resendotpbutton = document.getElementById('resendotp');
   otpbutton.style.cursor = "not-allowed";
+  resendotpbutton.style.cursor = "not-allowed";
+  otpcancelbutton.style.cursor = "not-allowed";
   otpbutton.innerHTML = "Verifying....";
   otpbutton.style.disabled = "true";
+  resendotpbutton.style.disabled = "true";
+  otpcancelbutton.style.disabled = "true";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/mobile/confirm";
   xhr.open("POST",url,true);
@@ -50,6 +73,17 @@ function otpverify(){
 }
 
 function otpresend() {
+  var otpbutton = document.getElementById('otpbutton');
+  var otpcancelbutton = document.getElementById('otpcancel');
+  var resendotpbutton = document.getElementById('resendotp');
+  var mobile = document.getElementById('mobile').value;
+  otpbutton.style.cursor = "not-allowed";
+  resendotpbutton.style.cursor = "not-allowed";
+  otpcancelbutton.style.cursor = "not-allowed";
+  resendotpbutton.innerHTML = "Sending OTP to "+mobile+" ....";
+  otpbutton.style.disabled = "true";
+  resendotpbutton.style.disabled = "true";
+  otpcancelbutton.style.disabled = "true";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/mobile/resend-otp";
   xhr.open("POST",url,true);
@@ -59,6 +93,13 @@ function otpresend() {
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
+      otpbutton.style.cursor = "pointer";
+      resendotpbutton.style.cursor = "pointer";
+      otpcancelbutton.style.cursor = "pointer";
+      resendotpbutton.innerHTML = "OTP sent to "+mobile+" !";
+      otpbutton.style.disabled = "false";
+      resendotpbutton.style.disabled = "false";
+      otpcancelbutton.style.disabled = "false";
       alert(JSON.stringify(json.message));
     }
   }
