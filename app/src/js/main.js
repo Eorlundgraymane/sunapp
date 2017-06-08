@@ -62,6 +62,7 @@ function otpverify(){
       otpbutton.innerHTML = "Verified Successfully";
       setTimeout(function(){},3000);
       alert(JSON.stringify(json.message));
+      setTimeout(function(){},3000);
       otpoverlayslideup();
     }
   }
@@ -101,6 +102,7 @@ function otpresend() {
       resendotpbutton.innerHTML = "OTP sent to "+mobile+" !";
       setTimeout(function(){},3000);
       resendotpbutton.innerHTML = "Resend OTP";
+      setTimeout(function(){},3000);
       otpbutton.style.disabled = "false";
       resendotpbutton.style.disabled = "false";
       otpcancelbutton.style.disabled = "false";
