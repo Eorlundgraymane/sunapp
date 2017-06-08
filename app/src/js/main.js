@@ -101,6 +101,7 @@ function updatemyusers(){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "user";
+  data["args"].objects = {};
   data["args"].objects["id"]= 101;
   data["args"].objects["username"] = "username";
   data["args"].objects["email"] = "email@gmail.com";
