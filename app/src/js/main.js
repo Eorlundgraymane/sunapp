@@ -12,6 +12,7 @@ function otpoverlaydropdown(){
   resendotpbutton.style.cursor = "pointer";
   otpcancelbutton.style.cursor = "pointer";
   otpbutton.innerHTML = "Verify";
+  resendotpbutton.innerHTML = "Resent OTP";
   otpbutton.style.disabled = "false";
   resendotpbutton.style.disabled = "false";
   otpcancelbutton.style.disabled = "false";
@@ -29,6 +30,7 @@ function otpoverlayslideup(){
   resendotpbutton.style.cursor = "pointer";
   otpcancelbutton.style.cursor = "pointer";
   otpbutton.innerHTML = "Verify";
+  resendotpbutton.innerHTML = "Resent OTP";
   otpbutton.style.disabled = "false";
   resendotpbutton.style.disabled = "false";
   otpcancelbutton.style.disabled = "false";
@@ -97,6 +99,8 @@ function otpresend() {
       resendotpbutton.style.cursor = "pointer";
       otpcancelbutton.style.cursor = "pointer";
       resendotpbutton.innerHTML = "OTP sent to "+mobile+" !";
+      setTimeout(function(){},3000);
+      resendotpbutton.innerHTML = "Resent OTP";
       otpbutton.style.disabled = "false";
       resendotpbutton.style.disabled = "false";
       otpcancelbutton.style.disabled = "false";
