@@ -34,9 +34,9 @@ function otpverify(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json.message));
-      alert(JSON.stringify(json.message));
       otpbutton.innerHTML = "Verified Successfully";
       setTimeout(function(){},3000);
+      alert(JSON.stringify(json.message));
       otpoverlayslideup();
     }
   }
