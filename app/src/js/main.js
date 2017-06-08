@@ -89,11 +89,11 @@ function updatemyusers(){
 
 }
 }*/
-  objects["id"][0] = 101;
-  objects["username"][0] = "username";
-  objects["email"][0] = "email@gmail.com";
-  objects["password"][0] = "newpassword";
-  objects["dob"][0] = "1994-10-23";
+  objects["id"]= 101;
+  objects["username"] = "username";
+  objects["email"] = "email@gmail.com";
+  objects["password"] = "newpassword";
+  objects["dob"] = "1994-10-23";
   console.log(JSON.stringify(objects));
   console.log(JSON.stringify({"table":"user"}));
   var arg = {};
