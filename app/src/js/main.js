@@ -51,40 +51,6 @@ function otpresend() {
       alert(JSON.stringify(json.message));
     }
   }
-  function updatemyusers(){
-    xhr = new XMLHttpRequest();
-    url = "https://data.washtubb66.hasura-app.io/v1/query";
-    var objects = {};
-    /*
-    {
-  "type":"insert",
-  "args":
-  {
-    "table":"user",
-    "objects":[{
-        "id": 100,
-        "username": "rkmenon235",
-        "email": "rkmenon235@gmail.com",
-        "password": "password",
-        "dob": "1994-10-23"
-    	}
-	]
-
-  }
-}
-*/
-    objects["id"] = "101";
-    objects["username"] = "newuser";
-    objects["email"] = "newmail@gmail.com";
-    objects["password"] = "newpassword";
-    objects["dob"] = "1994-10-23";
-    var data = {};
-    var args = JSON.stringify("table":"user",objects);
-    data["type"] = "insert";
-    data["args"] = args;
-    var jsoninsert = JSON.stringify(data);
-    console.log(jsoninsert);
-  }
   var remobile = document.getElementById('mobile').value;
   var data = {};
   data["mobile"] = remobile;
@@ -92,6 +58,40 @@ function otpresend() {
   console.log("DATA : "+data);
   console.log("JSON DATA : "+jsondata);
   xhr.send(jsondata);
+}
+function updatemyusers(){
+  xhr = new XMLHttpRequest();
+  url = "https://data.washtubb66.hasura-app.io/v1/query";
+  var objects = {};
+  /*
+  {
+"type":"insert",
+"args":
+{
+  "table":"user",
+  "objects":[{
+      "id": 100,
+      "username": "rkmenon235",
+      "email": "rkmenon235@gmail.com",
+      "password": "password",
+      "dob": "1994-10-23"
+    }
+]
+
+}
+}
+*/
+  objects["id"] = "101";
+  objects["username"] = "newuser";
+  objects["email"] = "newmail@gmail.com";
+  objects["password"] = "newpassword";
+  objects["dob"] = "1994-10-23";
+  var data = {};
+  var args = JSON.stringify("table":"user",objects);
+  data["type"] = "insert";
+  data["args"] = args;
+  var jsoninsert = JSON.stringify(data);
+  console.log(jsoninsert);
 }
 
 function popalert() {
