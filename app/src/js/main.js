@@ -61,7 +61,16 @@ function otpresend() {
 }
 function updatemyusers(){
   xhr = new XMLHttpRequest();
-  url = "https://data.washtubb66.hasura-app.io/v1/query";
+  var url = "https://data.washtubb66.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+      alert(JSON.stringify(json.message));
+    }
+  }
   var objects = {};
   /*
   {
@@ -96,6 +105,7 @@ function updatemyusers(){
   data["args"]["objects"] = JSON.stringify([objects]);
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
+  xhr.send(jsoninsert);
 }
 
 function popalert() {
