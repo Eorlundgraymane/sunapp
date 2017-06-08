@@ -82,7 +82,6 @@ function updatemyusers(){
 }
 */
   var data = {};
-  var args = JSON.stringify("table":"user"+objects);
   data["type"] = "insert";
   data["args"] = '{"table":"user"}';
   data["objects"] = {};
