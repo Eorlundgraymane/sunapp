@@ -24,7 +24,7 @@ function checklogin()
       alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
     }
     else if(xhr.readyState == 4) {
-      alert("Something went wrong please try again");
+      alert("Something went wrong during Login please try again");
     }
   }
   var pkey = document.getElementById("primarykey").value;
@@ -38,6 +38,39 @@ function checklogin()
   xhr.send(jsondata);
 }
 
+function checklogout()
+{
+  xhr = new XMLHttpRequest();
+  var url  = "https://auth.washtub66.hasura-app.io/logout";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.setRequestHeader("Authentication,auth_token");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json.hasura_id));
+      loginbutton.innerHTML = "Log In";
+      loginbutton.style.disabled = "false";
+      loginbutton.style.cursor = "pointer";
+      hasura_id = json.hasura_id;
+      auth_token = "Bearer "+json.auth_token;
+      alert("Successfully Logged Out.");
+    }
+    else if(xhr.readyState == 4) {
+      alert("Something went wrong during Logout please try again");
+    }
+  }
+  var pkey = document.getElementById("primarykey").value;
+  var password = document.getElementById("password").value;
+  var data = {};
+  data["username"] = pkey;
+  data["password"] = password;
+  console.log(data);
+  var jsondata = JSON.stringify(data);
+  console.log(jsondata);
+  xhr.send(jsondata);
+}
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
   var signupdiv =  document.getElementById('signupdiv');
@@ -160,17 +193,19 @@ function updatemyusersprofile(){
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
+  xhr.setRequestHeader("Authentication",auth_token);
   xhr.withCredentials = true;
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
+      checklogout();
       alert("Your Sunshine Profile is Ready. Go Ahead and log in");
     }
     else if(xhr.readyState ==4){
       var json = JSON.parse(xhr.responseText);
       console.log("Consoled Error : "+JSON.stringify(json));
-      alert("Something went wrong");
+      alert("Something went wrong during updating user profile");
     }
   }
   var objects = {};
@@ -206,7 +241,7 @@ function updatemyusers(){
     else if(xhr.readyState ==4){
       var json = JSON.parse(xhr.responseText);
       console.log("Consoled Error : "+JSON.stringify(json));
-      alert("Something went wrong");
+      alert("Something went wrong during updating user account");
     }
   }
   var objects = {};
@@ -246,7 +281,7 @@ xhr.onreadystatechange = function(){
     otpoverlaydropdown();
   }
   else if(xhr.readyState == 4) {
-    alert("Something went wrong please try again");
+    alert("Something went wrong during signup please try again");
   }
 }
 var fname = document.getElementById("fname").value;
