@@ -4,6 +4,10 @@ function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
   var signupdiv =  document.getElementById('signupdiv');
   otpform.style.display = "block";
+  var otpbutton = document.getElementById('otpbutton');
+  otpbutton.style.cursor = pointer;
+  otpbutton.innerHTML = "Verify OTP";
+  otpbutton.style.disabled = "false";
   otpform.style.opacity = "1";
   otpform.style.zIndex = "2";
   signupdiv.style.opacity = "0.5";
@@ -17,6 +21,10 @@ function otpoverlayslideup(){
 }
 
 function otpverify(){
+  var otpbutton = document.getElementById('otpbutton');
+  otpbutton.style.cursor = "not-allowed";
+  otpbutton.innerHTML = "Verifying....";
+  otpbutton.style.disabled = "true";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/mobile/confirm";
   xhr.open("POST",url,true);
