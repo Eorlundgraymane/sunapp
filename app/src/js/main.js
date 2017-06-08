@@ -85,11 +85,11 @@ function updatemyusers(){
   data["type"] = "insert";
   data["args"] = {"table":"user"};
   data["args"]["objects"] = [{}];
-  data["args"]["objects"]["id"] = "101";
-  data["args"]["objects"]["username"] = "newuser";
-  data["args"]["objects"]["email"] = "newmail@gmail.com";
-  data["args"]["objects"]["password"] = "newpassword";
-  data["args"]["objects"]["dob"] = "1994-10-23";
+  data["args"]["objects"][{"id"}] = "101";
+  data["args"]["objects"][{"username"}] = "newuser";
+  data["args"]["objects"][{"email"}] = "newmail@gmail.com";
+  data["args"]["objects"][{"password"}] = "newpassword";
+  data["args"]["objects"][{"dob"}] = "1994-10-23";
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
 }
