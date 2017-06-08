@@ -99,7 +99,7 @@ function updatemyusers(){
   var arg = {};
   data = {};
   data["type"] = "insert";
-  data["args"] = {[]}
+  data["args"] = [{}];
   data["args"]["table"] = "user";
   data["args"].objects = objects;
   console.log(data["args"].objects)
