@@ -295,6 +295,7 @@ function updatemyusersprofile(){
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
+  document.getElementById('signup').reset();
 }
 function updatemyusers(pk,pasw){
   checklogin(pk,pasw);
@@ -370,7 +371,6 @@ xhr.onreadystatechange = function(){
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = "false";
     signupbuttn.style.cursor = "pointer";
-    document.getElementById('signup').reset();
     otpoverlaydropdown();
   }
   else if(xhr.readyState == 4) {
