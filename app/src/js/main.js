@@ -5,7 +5,7 @@ function otpoverlaydropdown(){
   var signupdiv =  document.getElementById('signupdiv');
   otpform.style.display = "block";
   var otpbutton = document.getElementById('otpbutton');
-  otpbutton.style.cursor = pointer;
+  otpbutton.style.cursor = "pointer";
   otpbutton.innerHTML = "Verify OTP";
   otpbutton.style.disabled = "false";
   otpform.style.opacity = "1";
