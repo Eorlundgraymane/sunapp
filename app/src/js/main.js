@@ -101,7 +101,7 @@ function updatemyusers(){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "user";
-  data["args"]["objects"] = [objects];
+  data["args"]["objects"] = [objects[0]];
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
