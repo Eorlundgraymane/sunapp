@@ -73,7 +73,7 @@ xhr.onreadystatechange = function(){
     alert("Successfully Signed Up. Please Veriy your mobile number");
     otpoverlaydropdown();
   }
-  else{
+  if(xhr.readyState == 4){
     alert("Something went wrong please try again");
   }
 }
