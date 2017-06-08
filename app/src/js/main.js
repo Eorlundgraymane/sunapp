@@ -39,7 +39,7 @@ function checklogin(pk,pasw)
 function checklogout(pk)
 {
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.washtub66.hasura-app.io/logout";
+  var url  = "https://auth.washtub66.hasura-app.io/user/logout";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -186,6 +186,8 @@ function otpverify(){
   var password = document.getElementById("pass").value;
   var email = document.getElementById("email").value;
   var uname = fname.concat(" ",lname);
+  console.log(uname);
+  console.log(password);
   var otpbutton = document.getElementById('otpbutton');
   var otpcancelbutton = document.getElementById('otpcancel');
   var resendotpbutton = document.getElementById('resendotp');
