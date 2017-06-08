@@ -28,8 +28,8 @@ function checklogin(pk,pasw)
     }
   }
   var data = {};
-  data["username"] = pk;
-  data["password"] = pasw;
+  data["username"] = String(pk);
+  data["password"] = String(pasw);
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
@@ -59,7 +59,7 @@ function checklogout(pk)
     }
   }
   var data = {};
-  data["username"] = pk;
+  data["username"] = String(pk);
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
