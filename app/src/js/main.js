@@ -96,12 +96,12 @@ function updatemyusers(){
   objects["dob"] = "1994-10-23";
   console.log(JSON.stringify(objects));
   console.log(JSON.stringify({"table":"user"}));
-  var arg = {};
+  var arg = [{}];
   data = {};
   data["type"] = "insert";
   data["args"] = {}
   data["args"]["table"] = "user";
-  data["args"]["objects"] = JSON.parse([{"id":101,"username":"username","email":"email@gmail.com","password":"newpassword","dob":"1994-10-23"}]);
+  data["args"][objects][0] = objects;
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
