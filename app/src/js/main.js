@@ -42,7 +42,7 @@ function otpresend() {
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/mobile/resend-otp";
   xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","text/plain");
+  xhr.setRequestHeader("Content-type","application/json");
   xhr.setRequestHeader("Authentication",admintoken);
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
@@ -63,7 +63,7 @@ function updatemyusers(){
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","application/json");
+  xhr.setRequestHeader("Content-type","text/plain");
   xhr.setRequestHeader("Authentication",admintoken);
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
