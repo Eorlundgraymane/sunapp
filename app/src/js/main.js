@@ -89,11 +89,10 @@ function updatemyusers(){
   console.log(JSON.stringify(objects));
   console.log(JSON.stringify({"table":"users"}));
   var arg = {};
-  arg["table"] = "users";
-  arg["objects"] = JSON.stringify({objects});
   data = {};
   data["type"] = "insert";
-  data["args"] = JSON.stringify({arg});
+  data["args"]["table"] = "users";
+  data["args"]["objects"] = JSON.stringify({objects});
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
 }
