@@ -101,11 +101,12 @@ function updatemyusers(){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "user";
-  data["args"].objects = JSON.parse([{"id":101,"username":"username","email":"email@gmail.com","password":"password","dob":"1994-10-23"}]);
+  data["args"].objects = [{"id":101,"username":"username","email":"email@gmail.com","password":"password","dob":"1994-10-23"}];
   console.log(data["args"].objects)
   var jsoninsert = JSON.stringify(data);
+  console.log(data);
   console.log(jsoninsert);
-  xhr.send(jsoninsert);
+  xhr.send(data);
 }
 
 function popalert() {
