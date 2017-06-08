@@ -289,6 +289,7 @@ xhr.onreadystatechange = function(){
     signupbuttn.style.disabled = "false";
     signupbuttn.style.cursor = "pointer";
     updatemyusers(pkey,password);
+    document.getElementById('signup').reset();
     otpoverlaydropdown();
   }
   else if(xhr.readyState == 4) {
