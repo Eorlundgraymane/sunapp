@@ -80,7 +80,7 @@ function updatemyusers(){
 
 }
 }*/
-  objects["id"] = "101";
+  objects["id"] = 101;
   objects["username"] = "username";
   objects["email"] = "email@gmail.com";
   objects["password"] = "newpassword";
