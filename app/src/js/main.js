@@ -35,6 +35,9 @@ function otpverify(){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json.message));
       alert(JSON.stringify(json.message));
+      otpbutton.innerHTML = "Verified Successfully";
+      setTimeout(function{},3000);
+      otpoverlayslideup();
     }
   }
   var otp = document.getElementById('otp').value;
