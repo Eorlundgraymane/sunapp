@@ -61,10 +61,9 @@ function otpresend() {
 }
 function updatemyusers(){
   xhr = new XMLHttpRequest();
-  var url = "https://data.washtubb66.hasura-app.io/v1/query";
+  var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
-  xhr.setRequestHeader("Authentication",admintoken);
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
