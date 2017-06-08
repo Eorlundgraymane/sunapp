@@ -1,6 +1,79 @@
 var admintoken = "Bearer nk8vh416e2v2sd1t6rhxmyzntgc8vx1t";
 var hasura_id;
 var auth_token;
+function updatemyusersprofile(){
+  xhr = new XMLHttpRequest();
+  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = true;
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+      alert("Your Sunshine Profile is Ready. Go Ahead and log in");
+    }
+    else if(xhr.readyState ==4){
+      var json = JSON.parse(xhr.responseText);
+      console.log("Consoled Error : "+JSON.stringify(json));
+      alert("Something went wrong during updating user profile");
+    }
+  }
+  var objects = {};
+  var data = {};
+  var fname = document.getElementById("fname").value;
+  var lname = document.getElementById("lname").value;
+  var dob = year+"-"+month+"-"+day;
+  var uname = fname.concat(" ",lname);
+  data["type"] = "insert";
+  data["args"] = {};
+  data["args"]["table"] = "profile";
+  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"familyshine":0}];
+  var jsoninsert = JSON.stringify(data);
+  console.log(jsoninsert);
+  xhr.send(jsoninsert);
+  document.getElementById('signup').reset();
+}
+function updatemyusers(pk,pasw){
+  setTimeout(function(){},5000);
+  xhr = new XMLHttpRequest();
+  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = true;
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+      alert("Your Sunshine Account is Ready, Setting up initial Profile");
+      updatemyusersprofile();
+    }
+    else if(xhr.readyState ==4){
+      var json = JSON.parse(xhr.responseText);
+      console.log("Consoled Error : "+JSON.stringify(json));
+      alert("Something went wrong during updating user account");
+    }
+  }
+  var objects = {};
+  var data = {};
+  var fname = document.getElementById("fname").value;
+  var lname = document.getElementById("lname").value;
+  var mobile = document.getElementById("mob").value;
+  var password = document.getElementById("pass").value;
+  var email = document.getElementById("email").value;
+  var day = document.getElementById("day").value;
+  var month = document.getElementById("month").value;
+  var year = document.getElementById("year").value;
+  var dob = year+"-"+month+"-"+day;
+  var uname = fname.concat(" ",lname);
+  data["type"] = "insert";
+  data["args"] = {};
+  data["args"]["table"] = "user";
+  data["args"].objects = [{"id":hasura_id,"username":uname,"email":email,"password":password,"dob":dob}];
+  var jsoninsert = JSON.stringify(data);
+  console.log(jsoninsert);
+  xhr.send(jsoninsert);
+}
 function checklogin(pk,pasw)
 {
   xhr = new XMLHttpRequest();
@@ -9,7 +82,7 @@ function checklogin(pk,pasw)
   loginbutton.style.disabled = "true";
   loginbutton.style.curson = "not-allowed";
   var url  = "https://auth.washtub66.hasura-app.io/login";
-  xhr.open("POST",url,false);
+  xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
@@ -22,6 +95,7 @@ function checklogin(pk,pasw)
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
+      updatemyusers();
     }
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Login please try again");
@@ -44,7 +118,7 @@ function userlogin()
   loginbutton.style.disabled = "true";
   loginbutton.style.curson = "not-allowed";
   var url  = "https://auth.washtub66.hasura-app.io/login";
-  xhr.open("POST",url,false);
+  xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
@@ -140,115 +214,6 @@ function otpoverlayslideup(){
   otpform.style.zIndex = "-2";
   signupdiv.style.opacity = "1";
 }
-function updatemyusersprofile(){
-  xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
-  xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","application/json");
-  xhr.withCredentials = true;
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState == 4 && xhr.status == 200){
-      var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
-      alert("Your Sunshine Profile is Ready. Go Ahead and log in");
-    }
-    else if(xhr.readyState ==4){
-      var json = JSON.parse(xhr.responseText);
-      console.log("Consoled Error : "+JSON.stringify(json));
-      alert("Something went wrong during updating user profile");
-    }
-  }
-  var objects = {};
-  var data = {};
-  var fname = document.getElementById("fname").value;
-  var lname = document.getElementById("lname").value;
-  var dob = year+"-"+month+"-"+day;
-  var uname = fname.concat(" ",lname);
-  data["type"] = "insert";
-  data["args"] = {};
-  data["args"]["table"] = "profile";
-  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"familyshine":0}];
-  var jsoninsert = JSON.stringify(data);
-  console.log(jsoninsert);
-  xhr.send(jsoninsert);
-}
-function updatemyusersprofile(){
-  xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
-  xhr.open("POST",url,false);
-  xhr.setRequestHeader("Content-type","application/json");
-  xhr.withCredentials = true;
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState == 4 && xhr.status == 200){
-      var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
-      alert("Your Sunshine Profile is Ready. Go Ahead and log in");
-    }
-    else if(xhr.readyState ==4){
-      var json = JSON.parse(xhr.responseText);
-      console.log("Consoled Error : "+JSON.stringify(json));
-      alert("Something went wrong during updating user profile");
-    }
-  }
-  var objects = {};
-  var data = {};
-  var fname = document.getElementById("fname").value;
-  var lname = document.getElementById("lname").value;
-  var dob = year+"-"+month+"-"+day;
-  var uname = fname.concat(" ",lname);
-  data["type"] = "insert";
-  data["args"] = {};
-  data["args"]["table"] = "profile";
-  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"familyshine":0}];
-  var jsoninsert = JSON.stringify(data);
-  console.log(jsoninsert);
-  xhr.send(jsoninsert);
-  document.getElementById('signup').reset();
-}
-function updatemyusers(pk,pasw){
-  checklogin(pk,pasw);
-  setTimeout(function(){},5000);
-  xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
-  xhr.open("POST",url,false);
-  xhr.setRequestHeader("Content-type","application/json");
-  xhr.withCredentials = true;
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState == 4 && xhr.status == 200){
-      var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
-      alert("Your Sunshine Account is Ready, Setting up initial Profile");
-      updatemyusersprofile();
-      checklogout(pk);
-    }
-    else if(xhr.readyState ==4){
-      var json = JSON.parse(xhr.responseText);
-      console.log("Consoled Error : "+JSON.stringify(json));
-      alert("Something went wrong during updating user account");
-      checklogout(pk);
-    }
-  }
-  var objects = {};
-  var data = {};
-  var fname = document.getElementById("fname").value;
-  var lname = document.getElementById("lname").value;
-  var mobile = document.getElementById("mob").value;
-  var password = document.getElementById("pass").value;
-  var email = document.getElementById("email").value;
-  var day = document.getElementById("day").value;
-  var month = document.getElementById("month").value;
-  var year = document.getElementById("year").value;
-  var dob = year+"-"+month+"-"+day;
-  var uname = fname.concat(" ",lname);
-  data["type"] = "insert";
-  data["args"] = {};
-  data["args"]["table"] = "user";
-  data["args"].objects = [{"id":hasura_id,"username":uname,"email":email,"password":password,"dob":dob}];
-  var jsoninsert = JSON.stringify(data);
-  console.log(jsoninsert);
-  xhr.send(jsoninsert);
-}
-
 function otpverify(){
   var fname = document.getElementById("fname").value;
   var lname = document.getElementById("lname").value;
@@ -281,7 +246,7 @@ function otpverify(){
       alert(JSON.stringify(json.message));
       setTimeout(function(){},3000);
       otpoverlayslideup();
-      updatemyusers(uname,password);
+      checklogin(uname,password);
     }
   }
   var otp = document.getElementById('otp').value;
