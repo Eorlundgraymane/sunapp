@@ -83,7 +83,7 @@ function updatemyusers(){
 */
   var data = {};
   data["type"] = "insert";
-  data["args"] = '{"table":"user"}';
+  data["args"] = {"table":"user"};
   data["objects"] = {};
   data["objects"]["id"] = "101";
   data["objects"]["username"] = "newuser";
