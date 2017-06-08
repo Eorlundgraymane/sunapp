@@ -9,7 +9,7 @@ function checklogin(pk,pasw)
   loginbutton.style.disabled = "true";
   loginbutton.style.curson = "not-allowed";
   var url  = "https://auth.washtub66.hasura-app.io/login";
-  xhr.open("POST",url,true);
+  xhr.open("POST",url,false);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
@@ -173,7 +173,7 @@ function updatemyusersprofile(){
 function updatemyusersprofile(){
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
-  xhr.open("POST",url,true);
+  xhr.open("POST",url,false);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = true;
   xhr.onreadystatechange = function(){
@@ -208,7 +208,7 @@ function updatemyusers(pk,pasw){
   setTimeout(function(){},5000);
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
-  xhr.open("POST",url,true);
+  xhr.open("POST",url,false);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = true;
   xhr.onreadystatechange = function(){
