@@ -28,7 +28,7 @@ function otpoverlayslideup(){
   otpbutton.style.cursor = "pointer";
   resendotpbutton.style.cursor = "pointer";
   otpcancelbutton.style.cursor = "pointer";
-  otpbutton.innerHTML = "Verifying....";
+  otpbutton.innerHTML = "Verify";
   otpbutton.style.disabled = "false";
   resendotpbutton.style.disabled = "false";
   otpcancelbutton.style.disabled = "false";
