@@ -59,6 +59,7 @@ function otpresend() {
   console.log("JSON DATA : "+jsondata);
   xhr.send(jsondata);
 }
+var hasura_id;
 function updatemyusers(){
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
@@ -77,7 +78,7 @@ function updatemyusers(){
     }
   }
   var objects = {};
-  objects["id"]= 101;
+  objects["id"]= hasura_id;
   objects["username"] = "username";
   objects["email"] = "email@gmail.com";
   objects["password"] = "newpassword";
@@ -101,9 +102,10 @@ xhr.setRequestHeader("Authentication",admintoken);
 xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
-    console.log(JSON.stringify(json));
+    console.log(JSON.stringify(json.hasura_id));
+    
     alert("Successfully Signed Up. Please Veriy your mobile number while we set up your Sunshine Account");
-    //updatemyusers();
+    updatemyusers();
     otpoverlaydropdown();
   }
   else if(xhr.readyState == 4) {
