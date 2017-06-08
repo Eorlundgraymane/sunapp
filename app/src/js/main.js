@@ -81,16 +81,12 @@ function updatemyusers(){
   objects["email"] = "email@gmail.com";
   objects["password"] = "newpassword";
   objects["dob"] = "1994-10-23";
-  console.log(JSON.stringify(objects));
-  console.log(JSON.stringify({"table":"user"}));  
   var data = {};
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "user";
   data["args"].objects = [{"id":101,"username":"username","email":"email@gmail.com","password":"password","dob":"1994-10-23"}];
-  console.log(data["args"].objects)
   var jsoninsert = JSON.stringify(data);
-  console.log(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
 }
