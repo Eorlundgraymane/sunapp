@@ -76,6 +76,7 @@ function updatemyusers(){
     }
   }
   var data = {};
+  var objects = {};
   data.objects["id"]= 101;
   data.objects["username"] = "username";
   data.objects["email"] = "email@gmail.com";
