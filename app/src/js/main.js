@@ -70,6 +70,14 @@ xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
     console.log(JSON.stringify(json));
+    if(json[0].hasura_id >= 0)
+    {
+      alert("Successfully Signed Up. Please Veriy your mobile number");
+      otpoverlaydropdown();
+    }
+    else {
+      alert("Something went wrong please try again");
+    }
   }
 }
 var fname = document.getElementById("fname").value;
@@ -88,7 +96,6 @@ console.log(data);
 var jsondata = JSON.stringify(data);
 console.log(jsondata);
 xhr.send(jsondata);
-otpoverlaydropdown();
 /*
   Bring up Overlay on reg Pane
   overlay should contain OTP text box
