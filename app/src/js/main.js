@@ -61,9 +61,10 @@ function otpresend() {
 }
 function updatemyusers(){
   xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/api/1/table/user/insert";
+  var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
+  xhr.setRequestHeader("Authentication",admintoken);
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
@@ -75,18 +76,18 @@ function updatemyusers(){
       console.log("Consoled Error : "+JSON.stringify(json));
     }
   }
-  var data = {};
   var objects = {};
   objects["id"]= 101;
   objects["username"] = "username";
   objects["email"] = "email@gmail.com";
   objects["password"] = "newpassword";
   objects["dob"] = "1994-10-23";
-  /*data["type"] = "insert";
+  var data = {};
+  data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "user";
-  data["args"].objects = [{"id":19,"username":"username","email":"email@gmail.com","password":"password","dob":"1994-10-23"}];*/
-  var jsoninsert = JSON.stringify({data.objects});
+  data["args"].objects = [{"id":19,"username":"username","email":"email@gmail.com","password":"password","dob":"1994-10-23"}];
+  var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
 }
