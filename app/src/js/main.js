@@ -118,6 +118,7 @@ function otpresend() {
   xhr.send(jsondata);
 }
 var hasura_id;
+var auth_token;
 function updatemyusersprofile(){
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
@@ -229,4 +230,32 @@ xhr.send(jsondata);
   Bring up Overlay on reg Pane
   overlay should contain OTP text box
 */
+}
+function checklogin()
+{
+  xhr = new XMLHttpRequest();
+  var url  = "https://auth.washtub66.hasura-app.io/login";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json.hasura_id));
+      hasura_id = json.hasura_id;
+      auth_token = json.auth_token;
+      alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
+    }
+    else if(xhr.readyState == 4) {
+      alert("Something went wrong please try again");
+    }
+  }
+  var pkey = document.getElementById("primarykey").value;
+  var password = document.getElementById("password").value;
+  var data = {};
+  data["username"] = pkey;
+  data["password"] = password;
+  console.log(data);
+  var jsondata = JSON.stringify(data);
+  console.log(jsondata);
+  xhr.send(jsondata);
 }

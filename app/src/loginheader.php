@@ -5,6 +5,6 @@
   <form name = "loginform" id = "loginform">
     <input type = "text" name = "primarykey" id = "primarykey" placeholder="Email or Mobile">
     <input type = "password" name = "password" id = "password" placeholder="Password">
-    <button disabled type = "submit" id = "loginbutton" name = "login">Log in</button>
+    <button disabled type = "submit" id = "loginbutton" name = "login" onclick() = "checklogin()">Log in</button>
   </form>
 </div>
