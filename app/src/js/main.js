@@ -22,6 +22,7 @@ function checklogin(pk,pasw)
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
+      setTimeout(function(){},5000);
     }
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Login please try again");
@@ -137,7 +138,6 @@ function updatemyusersprofile(){
 }
 function updatemyusers(pk,pasw){
   checklogin(pk,pasw);
-  alert("That was Us , Don't worry we will log out of your account after setting up your Sunshine Profile");
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -148,6 +148,7 @@ function updatemyusers(pk,pasw){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert("Your Sunshine Account is Ready, Setting up initial Profile");
+      setTimeout(function(){},5000);
       updatemyusersprofile();
       checklogout(pk);
     }
