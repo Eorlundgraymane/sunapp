@@ -28,8 +28,8 @@ function checklogin(pk,pasw)
     }
   }
   var data = {};
-  data["username"] = String(pk);
-  data["password"] = String(pasw);
+  data["username"] = pk;
+  data["password"] = pasw;
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
