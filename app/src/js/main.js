@@ -220,7 +220,6 @@ function otpverify(){
   jsondata = JSON.stringify(data);
   xhr.send(jsondata);
 }
-
 function otpresend() {
   var otpbutton = document.getElementById('otpbutton');
   var otpcancelbutton = document.getElementById('otpcancel');
