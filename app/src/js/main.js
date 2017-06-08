@@ -1,8 +1,6 @@
 var admintoken = "Bearer nk8vh416e2v2sd1t6rhxmyzntgc8vx1t";
 var hasura_id;
 var auth_token;
-var pkey;
-var password;
 function checklogin(pk,pasw)
 {
   xhr = new XMLHttpRequest();
@@ -198,7 +196,6 @@ function updatemyusersprofile(pk,pasw){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
-      checklogout(pk);
       alert("Your Sunshine Profile is Ready. Go Ahead and log in");
     }
     else if(xhr.readyState ==4){
@@ -223,7 +220,7 @@ function updatemyusersprofile(pk,pasw){
 }
 function updatemyusers(pk,pasw){
   checklogin(pk,pasw);
-  alert("That was , Don't worry we will log out of your account after setting up your Sunshine Profile");
+  alert("That was Us , Don't worry we will log out of your account after setting up your Sunshine Profile");
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -236,11 +233,13 @@ function updatemyusers(pk,pasw){
       console.log(JSON.stringify(json));
       alert("Your Sunshine Account is Ready, Setting up initial Profile");
       updatemyusersprofile(pk,pasw);
+      checklogout(pk);
     }
     else if(xhr.readyState ==4){
       var json = JSON.parse(xhr.responseText);
       console.log("Consoled Error : "+JSON.stringify(json));
       alert("Something went wrong during updating user account");
+      checklogout(pk);
     }
   }
   var objects = {};
@@ -265,6 +264,12 @@ function updatemyusers(pk,pasw){
 }
 
 function popalert() {
+  var fname = document.getElementById("fname").value;
+  var lname = document.getElementById("lname").value;
+  var mobile = document.getElementById("mob").value;
+  var password = document.getElementById("pass").value;
+  var email = document.getElementById("email").value;
+  var uname = fname.concat(" ",lname);
 signupbutton = document.getElementById("signupbuttn");
 signupbuttn.innerHTML ="Signing Up...";
 signupbuttn.style.disabled = "true";
@@ -281,14 +286,14 @@ xhr.onreadystatechange = function(){
     console.log(JSON.stringify(json.hasura_id));
     hasura_id = json.hasura_id;
     alert("Successfully Signed Up. Please Veriy your mobile number while we set up your Sunshine Account");
-    pkey = document.getElementById("primarykey").value;
-    password = document.getElementById("password").value;
+    console.log(uname);
+    console.log(password);
     signupbuttn.innerHTML = "Signed Up!!";
     setTimeout(function(){},3000);
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = "false";
     signupbuttn.style.cursor = "pointer";
-    updatemyusers(pkey,password);
+    updatemyusers(uname,password);
     document.getElementById('signup').reset();
     otpoverlaydropdown();
   }
@@ -296,12 +301,6 @@ xhr.onreadystatechange = function(){
     alert("Something went wrong during signup please try again");
   }
 }
-var fname = document.getElementById("fname").value;
-var lname = document.getElementById("lname").value;
-var mobile = document.getElementById("mob").value;
-var password = document.getElementById("pass").value;
-var email = document.getElementById("email").value;
-var uname = fname.concat(" ",lname);
 console.log(uname);
 var data = {};
 data["username"] = uname;
