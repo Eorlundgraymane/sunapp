@@ -37,7 +37,7 @@ function checklogin(pk,pasw)
   xhr.send(jsondata);
 }
 
-function login()
+function userlogin()
 {
   xhr = new XMLHttpRequest();
   var loginbutton = document.getElementById('loginbutton');
