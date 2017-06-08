@@ -63,12 +63,15 @@ function updatemyusers(){
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","text/plain");
+  xhr.setRequestHeader("Content-type","application/json");
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert(JSON.stringify(json.message));
+    }
+    else {
+      alert(JSON.stringify(JSON.parse(xhr.responseText).message));
     }
   }
   var objects = {};
@@ -106,7 +109,7 @@ function updatemyusers(){
   var jsoninsert = JSON.stringify(data);
   console.log(data);
   console.log(jsoninsert);
-  xhr.send(data);
+  xhr.send(jsoninsert);
 }
 
 function popalert() {
