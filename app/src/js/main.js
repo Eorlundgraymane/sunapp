@@ -75,7 +75,7 @@ function updatemyusers(){
       console.log("Consoled Error : "+JSON.stringify(json));
     }
   }
-  var objects = [{}];
+  var objects = {[]};
   objects["id"]= 101;
   objects["username"] = "username";
   objects["email"] = "email@gmail.com";
