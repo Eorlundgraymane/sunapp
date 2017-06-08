@@ -283,7 +283,7 @@ xhr.onreadystatechange = function(){
     alert("Successfully Signed Up. Please Veriy your mobile number while we set up your Sunshine Account");
     pkey = document.getElementById("primarykey").value;
     password = document.getElementById("password").value;
-    signupbuttn.innerHTML("Signed Up!!");
+    signupbuttn.innerHTML = "Signed Up!!";
     setTimeout(function(){},3000);
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = "false";
