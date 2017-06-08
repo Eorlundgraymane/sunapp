@@ -81,15 +81,16 @@ function updatemyusers(){
 }
 }
 */
-  objects["id"] = "101";
-  objects["username"] = "newuser";
-  objects["email"] = "newmail@gmail.com";
-  objects["password"] = "newpassword";
-  objects["dob"] = "1994-10-23";
   var data = {};
   var args = JSON.stringify("table":"user"+objects);
   data["type"] = "insert";
-  data["args"] = args;
+  data["args"] = '{"table":"user"}';
+  data["objects"] = {};
+  data["objects"]["id"] = "101";
+  data["objects"]["username"] = "newuser";
+  data["objects"]["email"] = "newmail@gmail.com";
+  data["objects"]["password"] = "newpassword";
+  data["objects"]["dob"] = "1994-10-23";
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
 }
