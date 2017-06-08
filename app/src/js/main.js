@@ -71,7 +71,8 @@ function updatemyusers(){
       alert(JSON.stringify(json.message));
     }
     else if(xhr.readyState ==4){
-      console.log("Consoled Error : "JSON.stringify(JSON.parse(xhr.responseText).message));
+      var json = JSON.parse(xhr.responseText);
+      console.log("Consoled Error : "JSON.stringify(json.message));
     }
   }
   var objects = {};
