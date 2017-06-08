@@ -63,13 +63,13 @@ function updatemyusers(){
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","application/json");  
+  xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = true;
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
-      alert(JSON.stringify(json));
+      alert("Your Sunshine Account is Ready, Setting up initial Profile");
     }
     else if(xhr.readyState ==4){
       var json = JSON.parse(xhr.responseText);
@@ -102,7 +102,7 @@ xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
     console.log(JSON.stringify(json));
-    alert("Successfully Signed Up. Please Veriy your mobile number");
+    alert("Successfully Signed Up. Please Veriy your mobile number while we set up your Sunshine Account");
     //updatemyusers();
     otpoverlaydropdown();
   }
