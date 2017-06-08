@@ -139,7 +139,6 @@ function otpoverlayslideup(){
   signupdiv.style.opacity = "1";
 }
 function updatemyusersprofile(){
-  setTimeout(function(){},5000);
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -170,6 +169,39 @@ function updatemyusersprofile(){
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
+}
+function updatemyusersprofile(){
+  xhr = new XMLHttpRequest();
+  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = true;
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+      alert("Your Sunshine Profile is Ready. Go Ahead and log in");
+    }
+    else if(xhr.readyState ==4){
+      var json = JSON.parse(xhr.responseText);
+      console.log("Consoled Error : "+JSON.stringify(json));
+      alert("Something went wrong during updating user profile");
+    }
+  }
+  var objects = {};
+  var data = {};
+  var fname = document.getElementById("fname").value;
+  var lname = document.getElementById("lname").value;
+  var dob = year+"-"+month+"-"+day;
+  var uname = fname.concat(" ",lname);
+  data["type"] = "insert";
+  data["args"] = {};
+  data["args"]["table"] = "profile";
+  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"familyshine":0}];
+  var jsoninsert = JSON.stringify(data);
+  console.log(jsoninsert);
+  xhr.send(jsoninsert);
+  document.getElementById('signup').reset();
 }
 function updatemyusers(pk,pasw){
   checklogin(pk,pasw);
@@ -300,6 +332,7 @@ function otpresend() {
   console.log("JSON DATA : "+jsondata);
   xhr.send(jsondata);
 }
+/*
 function updatemyusersprofile(){
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
@@ -333,6 +366,7 @@ function updatemyusersprofile(){
   xhr.send(jsoninsert);
   document.getElementById('signup').reset();
 }
+
 function updatemyusers(pk,pasw){
   checklogin(pk,pasw);
   alert("That was Us , Don't worry we will log out of your account after setting up your Sunshine Profile");
@@ -376,7 +410,7 @@ function updatemyusers(pk,pasw){
   console.log(jsoninsert);
   xhr.send(jsoninsert);
 }
-
+*/
 function popalert() {
   var fname = document.getElementById("fname").value;
   var lname = document.getElementById("lname").value;
