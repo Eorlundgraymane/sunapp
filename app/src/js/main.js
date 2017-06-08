@@ -70,7 +70,7 @@ xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
     console.log(JSON.stringify(json));
-    if(json[0].hasura_id >= 0)
+    if(xhr.status != 400)
     {
       alert("Successfully Signed Up. Please Veriy your mobile number");
       otpoverlaydropdown();
