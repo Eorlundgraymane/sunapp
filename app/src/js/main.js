@@ -94,9 +94,8 @@ function updatemyusers(){
   objects["email"] = "email@gmail.com";
   objects["password"] = "newpassword";
   objects["dob"] = "1994-10-23";
-  objects["dob"] = "1994-10-23";
   console.log(JSON.stringify(objects));
-  console.log(JSON.stringify({"table":"users"}));
+  console.log(JSON.stringify({"table":"user"}));
   var arg = {};
   data = {};
   data["type"] = "insert";
