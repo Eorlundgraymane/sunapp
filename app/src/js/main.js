@@ -44,7 +44,7 @@ function userlogin()
   loginbutton.style.disabled = "true";
   loginbutton.style.curson = "not-allowed";
   var url  = "https://auth.washtub66.hasura-app.io/login";
-  xhr.open("POST",url,true);
+  xhr.open("POST",url,false);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
@@ -57,6 +57,8 @@ function userlogin()
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
+      checklogout(document.getElementById('primarykey').value);
+      document.getElementById('loginform').reset();
     }
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Login please try again");
