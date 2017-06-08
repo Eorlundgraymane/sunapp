@@ -64,7 +64,6 @@ function updatemyusers(){
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","text/plain");
-  xhr.setRequestHeader("Authentication",admintoken);
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
@@ -102,7 +101,7 @@ function updatemyusers(){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "user";
-  data["args"].objects = [{"id":101,"username":"username","email":"email@gmail.com","password":"password","dob":"1994-10-23"}];
+  data["args"].objects = JSON.parse([{"id":101,"username":"username","email":"email@gmail.com","password":"password","dob":"1994-10-23"}]);
   console.log(data["args"].objects)
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
