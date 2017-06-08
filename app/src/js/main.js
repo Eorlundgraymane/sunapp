@@ -12,12 +12,12 @@ function checklogout(pk)
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json.hasura_id));
-      loginbutton.innerHTML = "Log In";
-      loginbutton.style.disabled = "false";
-      loginbutton.style.cursor = "pointer";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged Out.");
+      loginbutton.innerHTML = "Log In";
+      loginbutton.style.disabled = "false";
+      loginbutton.style.cursor = "pointer";
     }
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Logout please try again");
