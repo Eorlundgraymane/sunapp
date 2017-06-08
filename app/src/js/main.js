@@ -265,6 +265,10 @@ function updatemyusers(pk,pasw){
 }
 
 function popalert() {
+signupbutton = document.getElementById("signupbuttn");
+signupbuttn.innerHTML("Signing Up...");
+signupbuttn.style.disabled = "true";
+signupbuttn.style.cursor = "not-allowed";
 xhr = new XMLHttpRequest();
 var url  = "https://auth.washtub66.hasura-app.io/signup";
 xhr.open("POST",url,true);
@@ -279,6 +283,11 @@ xhr.onreadystatechange = function(){
     alert("Successfully Signed Up. Please Veriy your mobile number while we set up your Sunshine Account");
     pkey = document.getElementById("primarykey").value;
     password = document.getElementById("password").value;
+    signupbuttn.innerHTML("Signed Up!!");
+    setTimeout(function(){},3000);
+    signupbuttn.innerHTML("Sign Up");
+    signupbuttn.style.disabled = "false";
+    signupbuttn.style.cursor = "pointer";
     updatemyusers(pkey,password);
     otpoverlaydropdown();
   }
