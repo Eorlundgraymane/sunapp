@@ -84,6 +84,10 @@ function updatemyusers(){
   var mobile = document.getElementById("mob").value;
   var password = document.getElementById("pass").value;
   var email = document.getElementById("email").value;
+  var day = document.getElementById("day").value;
+  var month = document.getElementById("month").value;
+  var year = document.getElementById("year").value;
+  var dob = year+"-"+month+"-"+day;
   var uname = fname.concat(" ",lname);
   data["type"] = "insert";
   data["args"] = {};
