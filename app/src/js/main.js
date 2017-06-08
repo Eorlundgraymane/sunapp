@@ -1,4 +1,42 @@
 var admintoken = "Bearer nk8vh416e2v2sd1t6rhxmyzntgc8vx1t";
+var hasura_id;
+var auth_token;
+function checklogin()
+{
+  xhr = new XMLHttpRequest();
+  var loginbutton = document.getElementById('loginbutton');
+  loginbutton.innerHTML = "Logging In";
+  loginbutton.style.disabled = "true";
+  loginbutton.style.curson = "not-allowed";
+  var url  = "https://auth.washtub66.hasura-app.io/login";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json.hasura_id));
+      loginbutton.innerHTML = "Log In";
+      loginbutton.style.disabled = "false";
+      loginbutton.style.cursor = "pointer";
+      hasura_id = json.hasura_id;
+      auth_token = "Bearer "+json.auth_token;
+      alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
+    }
+    else if(xhr.readyState == 4) {
+      alert("Something went wrong please try again");
+    }
+  }
+  var pkey = document.getElementById("primarykey").value;
+  var password = document.getElementById("password").value;
+  var data = {};
+  data["username"] = pkey;
+  data["password"] = password;
+  console.log(data);
+  var jsondata = JSON.stringify(data);
+  console.log(jsondata);
+  xhr.send(jsondata);
+}
 
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
@@ -117,8 +155,6 @@ function otpresend() {
   console.log("JSON DATA : "+jsondata);
   xhr.send(jsondata);
 }
-var hasura_id;
-var auth_token;
 function updatemyusersprofile(){
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
@@ -152,10 +188,13 @@ function updatemyusersprofile(){
   xhr.send(jsoninsert);
 }
 function updatemyusers(){
+  checklogin();
+  alert("That was , Don't worry we will log out of your account after setting up your Sunshine Profile");
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
+  xhr.setRequestHeader("Authentication",auth_token);
   xhr.withCredentials = true;
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
@@ -230,40 +269,4 @@ xhr.send(jsondata);
   Bring up Overlay on reg Pane
   overlay should contain OTP text box
 */
-}
-function checklogin()
-{
-  xhr = new XMLHttpRequest();
-  var loginbutton = document.getElementById('loginbutton');
-  loginbutton.innerHTML = "Logging In";
-  loginbutton.style.disabled = "true";
-  loginbutton.style.curson = "not-allowed";
-  var url  = "https://auth.washtub66.hasura-app.io/login";
-  xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","application/json");
-  xhr.withCredentials = "true";
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState == 4 && xhr.status == 200){
-      var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
-      loginbutton.innerHTML = "Log In";
-      loginbutton.style.disabled = "false";
-      loginbutton.style.cursor = "pointer";
-      hasura_id = json.hasura_id;
-      auth_token = json.auth_token;
-      alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
-    }
-    else if(xhr.readyState == 4) {
-      alert("Something went wrong please try again");
-    }
-  }
-  var pkey = document.getElementById("primarykey").value;
-  var password = document.getElementById("password").value;
-  var data = {};
-  data["username"] = pkey;
-  data["password"] = password;
-  console.log(data);
-  var jsondata = JSON.stringify(data);
-  console.log(jsondata);
-  xhr.send(jsondata);
 }
