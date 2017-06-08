@@ -234,6 +234,8 @@ xhr.send(jsondata);
 function checklogin()
 {
   xhr = new XMLHttpRequest();
+  var loginbutton = document.getElementById('loginbutton');
+  loginbutton.innerHTML = "Logging In";
   var url  = "https://auth.washtub66.hasura-app.io/login";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
@@ -241,6 +243,7 @@ function checklogin()
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json.hasura_id));
+      loginbutton.innerHTML = "Log In";
       hasura_id = json.hasura_id;
       auth_token = json.auth_token;
       alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
