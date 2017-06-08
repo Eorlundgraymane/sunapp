@@ -146,6 +146,6 @@
   <input type = "password" name = "confpass"placeholder="Retype Password"><br>
   <button id = "signupbuttn" onclick = "popalert();" type = "button">Sign Up</button>
   <button id = "otpready" type = "button" onclick="otpoverlaydropdown();">Already received OTP</button>
-  <button id = "updateuser" type = "button" onclick="updatemyusers();">Check Update Query</button>
+  <!--<button id = "updateuser" type = "button" onclick="updatemyusers();">Check Update Query</button>!-->
 </form>
 </div>
