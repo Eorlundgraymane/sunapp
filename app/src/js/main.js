@@ -82,8 +82,7 @@ function updatemyusers(){
   objects["password"] = "newpassword";
   objects["dob"] = "1994-10-23";
   console.log(JSON.stringify(objects));
-  console.log(JSON.stringify({"table":"user"}));
-  var arg = {};
+  console.log(JSON.stringify({"table":"user"}));  
   var data = {};
   data["type"] = "insert";
   data["args"] = {};
