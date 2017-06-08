@@ -266,7 +266,7 @@ function updatemyusers(pk,pasw){
 
 function popalert() {
 signupbutton = document.getElementById("signupbuttn");
-signupbuttn.innerHTML("Signing Up...");
+signupbuttn.innerHTML ="Signing Up...";
 signupbuttn.style.disabled = "true";
 signupbuttn.style.cursor = "not-allowed";
 xhr = new XMLHttpRequest();
@@ -285,7 +285,7 @@ xhr.onreadystatechange = function(){
     password = document.getElementById("password").value;
     signupbuttn.innerHTML("Signed Up!!");
     setTimeout(function(){},3000);
-    signupbuttn.innerHTML("Sign Up");
+    signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = "false";
     signupbuttn.style.cursor = "pointer";
     updatemyusers(pkey,password);
