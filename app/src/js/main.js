@@ -30,7 +30,7 @@ function otpoverlayslideup(){
   resendotpbutton.style.cursor = "pointer";
   otpcancelbutton.style.cursor = "pointer";
   otpbutton.innerHTML = "Verify";
-  resendotpbutton.innerHTML = "Resent OTP";
+  resendotpbutton.innerHTML = "Resend OTP";
   otpbutton.style.disabled = "false";
   resendotpbutton.style.disabled = "false";
   otpcancelbutton.style.disabled = "false";
