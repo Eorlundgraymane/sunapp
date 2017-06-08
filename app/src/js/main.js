@@ -1,7 +1,36 @@
 var admintoken = "Bearer nk8vh416e2v2sd1t6rhxmyzntgc8vx1t";
 var hasura_id;
 var auth_token;
-function updatemyusersprofile(){
+function checklogout(pk)
+{
+  xhr = new XMLHttpRequest();
+  var url  = "https://auth.washtub66.hasura-app.io/user/logout";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json.hasura_id));
+      loginbutton.innerHTML = "Log In";
+      loginbutton.style.disabled = "false";
+      loginbutton.style.cursor = "pointer";
+      hasura_id = json.hasura_id;
+      auth_token = "Bearer "+json.auth_token;
+      alert("Successfully Logged Out.");
+    }
+    else if(xhr.readyState == 4) {
+      alert("Something went wrong during Logout please try again");
+    }
+  }
+  var data = {};
+  data["username"] = String(pk);
+  console.log(data);
+  var jsondata = JSON.stringify(data);
+  console.log(jsondata);
+  xhr.send(jsondata);
+}
+function updatemyusersprofile(pk){
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -12,6 +41,7 @@ function updatemyusersprofile(){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert("Your Sunshine Profile is Ready. Go Ahead and log in");
+      checklogout(pk);
     }
     else if(xhr.readyState ==4){
       var json = JSON.parse(xhr.responseText);
@@ -46,7 +76,7 @@ function updatemyusers(pk,pasw){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert("Your Sunshine Account is Ready, Setting up initial Profile");
-      updatemyusersprofile();
+      updatemyusersprofile(pk);
     }
     else if(xhr.readyState ==4){
       var json = JSON.parse(xhr.responseText);
@@ -147,35 +177,6 @@ function userlogin()
   xhr.send(jsondata);
 }
 
-function checklogout(pk)
-{
-  xhr = new XMLHttpRequest();
-  var url  = "https://auth.washtub66.hasura-app.io/user/logout";
-  xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","application/json");
-  xhr.withCredentials = "true";
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState == 4 && xhr.status == 200){
-      var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
-      loginbutton.innerHTML = "Log In";
-      loginbutton.style.disabled = "false";
-      loginbutton.style.cursor = "pointer";
-      hasura_id = json.hasura_id;
-      auth_token = "Bearer "+json.auth_token;
-      alert("Successfully Logged Out.");
-    }
-    else if(xhr.readyState == 4) {
-      alert("Something went wrong during Logout please try again");
-    }
-  }
-  var data = {};
-  data["username"] = String(pk);
-  console.log(data);
-  var jsondata = JSON.stringify(data);
-  console.log(jsondata);
-  xhr.send(jsondata);
-}
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
   var signupdiv =  document.getElementById('signupdiv');
