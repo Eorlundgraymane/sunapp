@@ -302,85 +302,6 @@ function otpresend() {
   console.log("JSON DATA : "+jsondata);
   xhr.send(jsondata);
 }
-/*
-function updatemyusersprofile(){
-  xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
-  xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","application/json");
-  xhr.withCredentials = true;
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState == 4 && xhr.status == 200){
-      var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
-      alert("Your Sunshine Profile is Ready. Go Ahead and log in");
-    }
-    else if(xhr.readyState ==4){
-      var json = JSON.parse(xhr.responseText);
-      console.log("Consoled Error : "+JSON.stringify(json));
-      alert("Something went wrong during updating user profile");
-    }
-  }
-  var objects = {};
-  var data = {};
-  var fname = document.getElementById("fname").value;
-  var lname = document.getElementById("lname").value;
-  var dob = year+"-"+month+"-"+day;
-  var uname = fname.concat(" ",lname);
-  data["type"] = "insert";
-  data["args"] = {};
-  data["args"]["table"] = "profile";
-  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"familyshine":0}];
-  var jsoninsert = JSON.stringify(data);
-  console.log(jsoninsert);
-  xhr.send(jsoninsert);
-  document.getElementById('signup').reset();
-}
-
-function updatemyusers(pk,pasw){
-  checklogin(pk,pasw);
-  alert("That was Us , Don't worry we will log out of your account after setting up your Sunshine Profile");
-  xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
-  xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","application/json");
-  xhr.withCredentials = true;
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState == 4 && xhr.status == 200){
-      var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
-      alert("Your Sunshine Account is Ready, Setting up initial Profile");
-      updatemyusersprofile();
-      checklogout(pk);
-    }
-    else if(xhr.readyState ==4){
-      var json = JSON.parse(xhr.responseText);
-      console.log("Consoled Error : "+JSON.stringify(json));
-      alert("Something went wrong during updating user account");
-      checklogout(pk);
-    }
-  }
-  var objects = {};
-  var data = {};
-  var fname = document.getElementById("fname").value;
-  var lname = document.getElementById("lname").value;
-  var mobile = document.getElementById("mob").value;
-  var password = document.getElementById("pass").value;
-  var email = document.getElementById("email").value;
-  var day = document.getElementById("day").value;
-  var month = document.getElementById("month").value;
-  var year = document.getElementById("year").value;
-  var dob = year+"-"+month+"-"+day;
-  var uname = fname.concat(" ",lname);
-  data["type"] = "insert";
-  data["args"] = {};
-  data["args"]["table"] = "user";
-  data["args"].objects = [{"id":hasura_id,"username":uname,"email":email,"password":password,"dob":dob}];
-  var jsoninsert = JSON.stringify(data);
-  console.log(jsoninsert);
-  xhr.send(jsoninsert);
-}
-*/
 function popalert() {
   var fname = document.getElementById("fname").value;
   var lname = document.getElementById("lname").value;
@@ -414,7 +335,9 @@ xhr.onreadystatechange = function(){
     otpoverlaydropdown();
   }
   else if(xhr.readyState == 4) {
-    alert("Something went wrong during signup please try again");
+    var json = JSON.parse(xhr.responseText);
+    console.log(JSON.stringify(json.code));
+    alert(json.code);
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = "false";
     signupbuttn.style.cursor = "pointer";
