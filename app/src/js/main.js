@@ -3,6 +3,8 @@ var hasura_id;
 var auth_token;
 function checklogout(pk)
 {
+  document.getElementById('loginbutton').innerHTML = "Loggin Out...";
+  document.getElementById('loginbutton').style.disabled = true;
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/user/logout";
   xhr.open("POST",url,true);
@@ -19,12 +21,14 @@ function checklogout(pk)
       loginbutton.style.disabled = "false";
       loginbutton.style.cursor = "pointer";
       document.getElementById('loginform').reset();
+      document.getElementById('loginbutton').innerHTML = "Log In";
+      document.getElementById('loginbutton').style.disabled = false;
     }
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Logout please try again");
       loginbutton.innerHTML = "Log In";
       loginbutton.style.disabled = "false";
-      loginbutton.style.cursor = "pointer";
+      loginbutton.style.cursor = "pointer";            
     }
   }
   var data = {};
