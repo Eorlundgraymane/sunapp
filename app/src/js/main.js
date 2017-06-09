@@ -22,6 +22,9 @@ function checklogout(pk)
     }
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Logout please try again");
+      loginbutton.innerHTML = "Log In";
+      loginbutton.style.disabled = "false";
+      loginbutton.style.cursor = "pointer";
     }
   }
   var data = {};
@@ -41,7 +44,7 @@ function updatemyusersprofile(pk){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
-      alert("Your Sunshine Profile is Ready. Go Ahead and log in");
+      alert("Your Sunshine Profile is Ready. Please wait till we Log you out then go ahead and Log In");
       checklogout(pk);
     }
     else if(xhr.readyState ==4){
