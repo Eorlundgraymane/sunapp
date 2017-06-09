@@ -412,6 +412,9 @@ xhr.onreadystatechange = function(){
   }
   else if(xhr.readyState == 4) {
     alert("Something went wrong during signup please try again");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = "false";
+    signupbuttn.style.cursor = "pointer";
   }
 }
 console.log(uname);
