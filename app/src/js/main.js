@@ -13,9 +13,11 @@ function checkpass(){
   var confpass = document.getElementById('confpass').value;
   if(pass!=confpass){
     document.getElementById('passlabel').style.display = "inline";
+    document.getElementById('conflabel')/style.display = "none";
   }
   else {
-    document.getElementById('passlabel').style.display = "none";
+    document.getElementById('conflabel').style.display = "inline";
+    document.getElementById('passlabel').style.display = "none";    
   }
 }
 function checklogout(pk)

@@ -71,9 +71,14 @@ input,button,select {
   border-radius: 15px;
   margin: 3px;
 }
-label{
+passlabel{
   display: none;
   color: red;
+  font-size: 0.5em;
+}
+conflabel{
+  display: none;
+  color: green;
   font-size: 0.5em;
 }
 #sitebanner
