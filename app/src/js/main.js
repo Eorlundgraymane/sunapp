@@ -14,6 +14,7 @@ function checkfeb(){
     document.getElementById('month').options[2].disabled = true;
   }
   else if(Boolean(document.getElementById('day').value >27)){
+    document.getElementById('month').options[2].disabled = false;
     for(i = 0;i<=64;i++)
     {
       if(!Boolean(Boolean((document.getElementById('year').options[i].value %4)==0)&&(Boolean((document.getElementById('year').options[i].value %100)==0))&&Boolean((document.getElementById('year').options[i].value %400)==0))){
