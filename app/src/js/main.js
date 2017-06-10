@@ -382,6 +382,11 @@ function popalert() {
     var mobile = document.getElementById("mob").value;
     var password = document.getElementById("pass").value;
     var email = document.getElementById("email").value;
+    var day = document.getElementById("day").value;
+    var month = document.getElementById("month").value;
+    var year = document.getElementById("year").value;
+    var dob = year.concat("-",month,"-",day);
+    console.log(dob);
     var uname = fname.concat(" ",lname);
   var signupbuttn = document.getElementById("signupbuttn");
   signupbuttn.innerHTML ="Signing Up...";
