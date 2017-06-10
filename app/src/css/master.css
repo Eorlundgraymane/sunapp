@@ -66,19 +66,19 @@ button
     opacity: 1;
   }
 }
-::-webkit-input-placeheolder{
+::-webkit-input-placeholder{
   color: white;
 }
-::-moz-input-placeheolder{
+::-moz-input-placeholder{
   color: white;
 }
-:-moz-input-placeheolder{
+:-moz-input-placeholder{
   color: white;
 }
-:-ms-input-placeheolder{
+:-ms-input-placeholder{
   color: white;
 }
-::-ms-input-placeheolder{
+::-ms-input-placeholder{
   color: white;
 }
 input,select {
