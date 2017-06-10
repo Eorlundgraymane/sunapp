@@ -167,6 +167,7 @@ function updatemyusersprofile(pk){
 }
 function changebanner()
 {
+  document.getElementById('siteh1').innerHTML = "Getting your Name friend !!...";
   var data = {};
   data["type"] = "select";
   data["args"] = {};
