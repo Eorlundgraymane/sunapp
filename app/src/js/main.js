@@ -319,6 +319,7 @@ function getuser()
       loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
+      getuser();
     }
     else if(xhr.readyState == 4) {
       loginbutton.innerHTML = "Log In";
