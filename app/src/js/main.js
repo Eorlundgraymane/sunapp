@@ -129,8 +129,10 @@ function updatemyusersprofile(pk){
   var data = {};
   var fname = document.getElementById("fname").value;
   var lname = document.getElementById("lname").value;
+  var day = document.getElementById("day").value;
+  var month = document.getElementById("month").value;
+  var year = document.getElementById("year").value;
   var dob = year.concat("-",month,"-",day);
-  var dob = year+"-"+month+"-"+day;
   var uname = fname.concat(" ",lname);
   data["type"] = "insert";
   data["args"] = {};
@@ -168,10 +170,6 @@ function updatemyusers(pk,pasw){
   var mobile = document.getElementById("mob").value;
   var password = document.getElementById("pass").value;
   var email = document.getElementById("email").value;
-  var day = document.getElementById("day").value;
-  var month = document.getElementById("month").value;
-  var year = document.getElementById("year").value;
-  var dob = year+"-"+month+"-"+day;
   var uname = fname.concat(" ",lname);
   data["type"] = "insert";
   data["args"] = {};
