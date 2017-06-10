@@ -56,16 +56,15 @@ function comparepass(){
     document.getElementById('passlabel').style.display = "inline";
     document.getElementById('passlabel').style.opacity = "1";
     document.getElementById('conflabel').style.display = "none";
+    document.getElementById('conflabel').style.opacity = "0";
     return 0;
   }
-  else if(pass!=""){
+  else if((pass!="")&&(pass == confpass)){
     document.getElementById('conflabel').style.display = "inline";
     document.getElementById('conflabel').style.opacity = "1";
     document.getElementById('passlabel').style.display = "none";
-    return 0
-  }
-  else if(pass == confpass){
-    return 1;
+    document.getElementById('passlabel').style.opacity = "0";
+    return 1
   }
 }
 function checklogout(pk)
