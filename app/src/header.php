@@ -14,7 +14,7 @@
           echo' Checking to see if the post values reached here safely ...and nope, it seem\'s the\'re dead';
         }
         ?>
-        Click <a href = "#" onclick = "userlogout(<?php echo $_POST["primarykey"];?>);">here</a> to logout safely so that you don't cause any problems to my programming
+        Click <button type = "button" onclick = "userlogout(<?php echo $_POST["primarykey"];?>);">here</button> to logout safely so that you don't cause any problems to my programming
     </div>
   </body>
 </html>
