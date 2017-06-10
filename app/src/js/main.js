@@ -293,6 +293,7 @@ function getuser()
     }
     else {
       alert(JSON.stringify(json));
+      return 0;
     }
   }
   xhr.send(JSON.stringify(query));
@@ -318,8 +319,9 @@ function getuser()
       loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
-      getuser();
-      alert("Successfully Logged In. Sunshine is under construction. Let's just show you the hallway");
+      var loguser = getuser();
+      if(loguser != 0)
+      {alert("Successfully Logged In. Welcome "+loguser+"! Sunshine is under construction. Let's just show you the hallway");}
       document.getElementById('loginform').submit();
     }
     else if(xhr.readyState == 4) {
