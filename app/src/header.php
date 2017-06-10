@@ -8,7 +8,7 @@
         Sunshine<br>
         <?php
         if(isset($_POST['primarykey'])&& isset($_POST['password'])){
-        echo' Checking to see if the post values reached here safely '.$_POST["primarykey"].'is the primaey key and '.$_POST["password"].' is the password';
+        echo' Checking to see if the post values reached here safely '.$_POST["primarykey"].' is the primaey key and '.$_POST["password"].' is the password';
         }
         else {
           echo' Checking to see if the post values reached here safely ...and nope, it seem\'s the\'re dead';
