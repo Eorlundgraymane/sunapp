@@ -30,8 +30,7 @@ function getpiclink(){
           piclink =(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[1]).concat(":",(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[2])).replace(/"/g,"").replace(/}/g,"");
           console.log(piclink);
           document.getElementById('picbutton').display = "none;"
-          document.getElementById('profileimage').src = piclink;
-          document.getElementById('profileimage').style.opacity= 0.5;
+          document.getElementById('profileimage').src = piclink;          
 
           }
           else {
