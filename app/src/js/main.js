@@ -31,6 +31,8 @@ function getpiclink(){
           console.log(piclink);
           document.getElementById('picbutton').display = "none;"
           document.getElementById('profileimage').src = piclink;
+          document.getElementById('profileimage').style.webkitAnimationName = "fadeIn";
+          document.getElementById('profileimage').style.webkitAnimationDuration = "4s";
           }
           else {
             if(x.readyState === 4){

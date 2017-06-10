@@ -70,6 +70,11 @@ button{
   animation-timing-function: ease-in();
   animation-iteration-count: 1;
 }
+#profileimage{
+  transition-property: all;
+  transition-duration: 3s;
+  transition-timing-function: ease-in;
+}
 @keyframes fadeIn {
   0%{
     opacity: 0;
