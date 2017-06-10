@@ -67,19 +67,19 @@ button
   }
 }
 ::-webkit-input-placeholder{
-  color: white;
+  color: #7ec0ee;
 }
 ::-moz-input-placeholder{
-  color: white;
+  color: #7ec0ee;
 }
 :-moz-input-placeholder{
-  color: white;
+  color: #7ec0ee;
 }
 :-ms-input-placeholder{
-  color: white;
+  color: #7ec0ee;
 }
 ::-ms-input-placeholder{
-  color: white;
+  color: #7ec0ee;
 }
 input,select {
   outline: none;
