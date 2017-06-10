@@ -36,8 +36,7 @@ button{
   transition-duration: 2s;
   transition-timing-function: ease;
 }
-#signup {
-  background-color: #7ec0ee;
+#signup {  
   position: absolute;
   right: 10%;
   animation-name: signupscroll;
@@ -90,7 +89,7 @@ input,select {
   max-width: 100%;
   text-indent: 10px;
   margin: 3px;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(126,192,238,0.5);
   border-top: none;
   border-left: none;
   border-right: none;
