@@ -20,7 +20,7 @@ function checkfeb(){
 function checkleap()
 {
   if(Boolean((Boolean(document.getElementById('month').value == "February"))&&(Boolean(document.getElementById('day').value >28)))){
-      for(i = 0;i<=64;i++)
+      for(i = 1;i<=64;i++)
     {
       if(Boolean((document.getElementById('year').options[i].value % 4)==0))
       {
@@ -44,7 +44,7 @@ function checkleap()
     }
   }
   else {
-    for(i = 0;i<=64;i++)
+    for(i = 1; i<=64;i++)
     {
       document.getElementById('year').option[i].disabled = "false";
     }
