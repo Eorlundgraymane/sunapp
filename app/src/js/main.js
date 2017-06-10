@@ -5,8 +5,7 @@ function updateusername(){
   var fname = document.getElementById('fname').value;
   var lname = document.getElementById('lname').value;
   var uname = fname.concat(" ",lname);
-  document.getElementById('uname').value = uname;
-  document.getElementById('uname').reload();
+  document.getElementById('uname').value = uname;  
 }
 function checkfeb(){
   if(Boolean(document.getElementById('day').value >29))
