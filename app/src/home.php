@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+session_start();
   if(isset($_POST['primarykey'])&& isset($_POST['password'])){
     setcookie('mobilenumber',$_POST['primarykey'],time()+60*60*24*365,'/','sunshine.washtub66.hasura-app.io');
     setcookie('password',$_POST['password']);
