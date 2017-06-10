@@ -103,6 +103,7 @@ function checkleap()
   }
 }
 function comparepass(){
+  console.log(pass);
   var pass = document.getElementById('pass').value;
   var confpass = document.getElementById('confpass').value;
   if(pass!=confpass){
