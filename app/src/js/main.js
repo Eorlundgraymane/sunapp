@@ -53,14 +53,18 @@ function comparepass(){
   var pass = document.getElementById('pass').value;
   var confpass = document.getElementById('confpass').value;
   if(pass!=confpass){
-    document.getElementById('passlabel').className += "passlabel";
-    document.getElementById('conflabel').className = "confshow";
+    document.getElementById('passlabel').style.display = "inline";
+    document.getElementById('passlabel').style.opacity = "1";
+    document.getElementById('conflabel').style.display = "none";
+    document.getElementById('conflabel').style.opacity = "0";
     return 0;
   }
   else if((pass!="")&&(pass == confpass)){
-    document.getElementById('conflabel').className += "conflabel";
-    document.getElementById('passlabel').className = "passshow";
-    return 1;
+    document.getElementById('conflabel').style.display = "inline";
+    document.getElementById('conflabel').style.opacity = "1";
+    document.getElementById('passlabel').style.display = "none";
+    document.getElementById('passlabel').style.opacity = "0";
+    return 1
   }
 }
 function checklogout(pk)
