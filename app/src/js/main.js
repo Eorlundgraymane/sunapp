@@ -3,6 +3,7 @@ var hasura_id;
 var auth_token;
 var email;
 function getpiclink(){
+  console.log('piclink called');
   var piclink;
   var data = {};
   data["type"] = "select";
@@ -17,11 +18,13 @@ function getpiclink(){
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
+    console.log('xhr readystatechange');
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       var x = new XMLHttpRequest();
       x.onreadystatechange = function(){
+        console.log('x readystatechange');
         if(x.readyState == 4 && x.status == 200){
           var doc = x.responseText;
           piclink =(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[1]).concat(":",(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[2])).replace(/"/g,"").replace(/}/g,"");
@@ -34,7 +37,8 @@ function getpiclink(){
             }
           }
         }
-          x.open('GET','http://picasaweb.google.com/data/entry/api/user/'.concat((email).split("@")[0],"?alt=json"),true);
+          x.open('GET','http://picasaweb.google.com/data/entry/api/user/'.concat((email).split("@")[0],"?alt=json"),true);\
+          console.log('google called');
           x.send();
 
       }
@@ -43,6 +47,7 @@ function getpiclink(){
     }
     }
   xhr.send(query);
+  console.log('hasura call sent' );
 }
 function updateusername(){
   var fname = document.getElementById('fname').value;
