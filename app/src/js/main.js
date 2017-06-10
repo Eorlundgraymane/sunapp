@@ -277,8 +277,28 @@ function phplogin(pk,pasw)
   xhr.send(jsondata);
 }
 
+function getuser()
+{
+  var query = '{"type": "select","args": {"table": "user","columns": ["id","username","email","password","dob"]}}"}';
+  xhr = new XMLHttpRequest();
+  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json.username));
+      return JSON.stringify(json.username);
+    }
+    else {
+      alert(JSON.stringify(json));
+    }
+  }
+  xhr.send(JSON.stringify(query));
+}
 
-function userlogin()
+  function userlogin()
 {
   xhr = new XMLHttpRequest();
   var loginbutton = document.getElementById('loginbutton');
@@ -298,6 +318,7 @@ function userlogin()
       loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
+      getuser();
       alert("Successfully Logged In. Sunshine is under construction. Let's just show you the hallway");
       document.getElementById('loginform').submit();
     }
