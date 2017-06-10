@@ -307,7 +307,7 @@ function userlogin()
       loginbutton.style.cursor= "pointer";
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
-      alert("Something went wrong during Login please try again");
+      alert(JSON.stringify(json));
     }
   }
   var data = {};
