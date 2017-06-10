@@ -31,8 +31,8 @@ function getpiclink(){
           console.log(piclink);
           document.getElementById('picbutton').display = "none;"
           document.getElementById('profileimage').src = piclink;
-          document.getElementById('profileimage').style.opacity= 0;
-          document.getElementById('profileimage').style.opacity = 1;
+          document.getElementById('profileimage').style.opacity= 0.5;
+
           }
           else {
             if(x.readyState === 4){
