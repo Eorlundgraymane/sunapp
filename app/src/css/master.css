@@ -16,14 +16,12 @@
 #shine{
   border: 1px solid red;
 }
-#profilpic,#shine{
- min-height: 200%;
-}
 #shinetable{
   background-color: rgb(222, 247, 148);
   position: relative;
   left: 50%;
   border: 1px solid black;
+  height: 200%;
 }
 button{
   outline: none;
