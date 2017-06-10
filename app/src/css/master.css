@@ -21,8 +21,8 @@ body,html{
   border: 1px solid red;
 }
 .profileimage{
-  height: 1em;
-  width: 1.5em;
+  height: 5em;
+  width: 10em;
 }
 #shinetable{
   background-color: rgb(222, 247, 148);
