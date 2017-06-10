@@ -72,7 +72,7 @@ function checklogout(pk)
 {
   document.getElementById('loginbutton').innerHTML = "Loggin Out...";
   document.getElementById('loginbutton').style.disabled = true;
-  document.getElementById('loginbutton').style.cursor = not-allowed;
+  document.getElementById('loginbutton').style.cursor = "not-allowed";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/user/logout";
   xhr.open("POST",url,true);
