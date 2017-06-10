@@ -23,8 +23,8 @@ body,html{
 .profileimage{
   position: relative;
   left: 25%;
-  max-height: 5.1em;
-  max-width: 10em;
+  height: 5.1em;
+  width: 10em;
 }
 #shinetable{
   background-color: rgb(222, 247, 148);
