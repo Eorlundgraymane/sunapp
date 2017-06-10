@@ -105,30 +105,45 @@ function checkleap()
 function comparepass(){
   var pass = document.getElementById('pass').value;
   var confpass = document.getElementById('confpass').value;
+  var label = document.getElementById('passlabel');
   if(pass!=confpass){
-
-    document.getElementById('passlabel').innerHTML = "Password not Matching"
-    document.getElementById('passlabel').style.color = "red";
-    document.getElementById('passlabel').classList.remove("passlabel");
-    document.getElementById('passlabel').classList.add("passshow");
+    if(label.className == "passlabel"){
+      label.classList.toggle("passshow");
+      label.innerHTML = "Password not Matching";
+    }
+    else {
+      label.classList.toggle("passlabel");
+      label.innerHTML = "Password not Matching";
+      label.classList toggle("passshow");
+    }
+    label.style.color = "red";
     return 0;
   }
-  else if((pass!="")&&(pass == confpass)){
-    document.getElementById('passlabel').classList.remove("passshow");
-    document.getElementById('passlabel').classList.add("passlabel");
-    document.getElementById('passlabel').innerHTML = "Password Matched";
-    document.getElementById('passlabel').style.color = "green";
-    document.getElementById('passlabel').classList.remove("passlabel");
-    document.getElementById('passlabel').classList.add("passshow");
+  else if((pass!="")&&(pass == confpass))
+    if(label.className == "passlabel"){
+      label.classList.toggle("passshow");
+      label.innerHTML = "Password Matched !";
+    }
+    else {
+      label.classList.toggle("passlabel");
+      label.innerHTML = "Password Matched";
+      label.classList toggle("passshow");
+    }
+    label.style.color = "green";
     return 1;
   }
   else if(pass == ""){
-    document.getElementById('passlabel').classList.remove("passshow");
-    document.getElementById('passlabel').classList.add("passlabel");
-    document.getElementById('passlabel').innerHTML = "Password Empty";
-    document.getElementById('passlabel').style.color = "yellow";
-    document.getElementById('passlabel').classList.remove("passshow");
-    document.getElementById('passlabel').classList.add("passlabel");
+
+      if(label.className == "passlabel"){
+        label.classList.toggle("passshow");
+        label.innerHTML = "Password Empty";
+      }
+      else {
+        label.classList.toggle("passlabel");
+        label.innerHTML = "Password Empty";
+        label.classList toggle("passshow");
+      }
+      label.style.colot = "yellow";
     return 0;
   }
 }
