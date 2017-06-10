@@ -3,7 +3,6 @@
 }
 .regpane
 {
-  background-color: #7ec0ee;
   position: absolute;
   top: 25%;
 }
@@ -39,6 +38,7 @@ button
   transition-timing-function: ease;
 }
 #signup {
+  background-color: #7ec0ee;
   position: absolute;
   right: 10%;
   animation-name: signupscroll;
