@@ -211,7 +211,7 @@ function checklogin(pk,pasw)
   xhr.send(jsondata);
 }
 
-function phplogin()
+function phplogin(pk,pasw)
 {
   xhr = new XMLHttpRequest();
   var loginbutton = document.getElementById('loginbutton');
@@ -231,8 +231,7 @@ function phplogin()
       loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
-      alert("PHP Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
-      checklogout(document.getElementById('primarykey').value);
+      alert("PHP Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");      
     }
     else if(xhr.readyState == 4) {
       loginbutton.innerHTML = "Log In";
@@ -242,8 +241,8 @@ function phplogin()
     }
   }
   var data = {};
-  data["mobile"] = document.getElementById('primarykey').value;
-  data["password"] = document.getElementById('password').value;
+  data["mobile"] = pk;
+  data["password"] = pasw;
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
