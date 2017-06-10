@@ -159,9 +159,6 @@ input,select {
   opacity: 1;
   color: red;
   font-size: 0.85em;
-  transition-property: all;
-  transition-duration: 1s;
-  transition-timing-function: ease-in;
 }
 .conflabel{
   display: none;
@@ -177,9 +174,6 @@ input,select {
   opacity: 1;
   color: green;
   font-size: 0.85em;
-  transition-property: all;
-  transition-duration: 1s;
-  transition-timing-function: ease-in;
 }
 #sitebanner
 {
