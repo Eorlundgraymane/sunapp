@@ -165,7 +165,7 @@ function updatemyusersprofile(pk){
   xhr.send(jsoninsert);
   document.getElementById('signup').reset();
 }
-changebanner()
+function changebanner()
 {
   var data = {};
   data["type"] = "select";
