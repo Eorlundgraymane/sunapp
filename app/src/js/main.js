@@ -373,6 +373,7 @@ function otpresend() {
   xhr.send(jsondata);
 }
 function popalert() {
+  console.log(Boolean(comparepass));
   if(Boolean(comparepass()))
   {
     console.log(Boolean(comparepass));
