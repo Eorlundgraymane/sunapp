@@ -22,8 +22,8 @@
       <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "profilepic">
         <img class = "img-responsive img-rounded" alt = "No Image Uploaded">
       </div>
-      <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shinetable">
-        <table>
+      <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shinetablediv">
+        <table id = "shinetable">
           <tr>
             <th>Friendshine</th><th>Earthshine</th><th>Charityshine</th><th>Healthshine</th><th>Familyshine</th>
           </tr>
