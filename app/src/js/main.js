@@ -15,13 +15,16 @@ function comparepass(){
     document.getElementById('passlabel').style.display = "inline";
     document.getElementById('passlabel').style.opacity = "1";
     document.getElementById('conflabel').style.display = "none";
-    return Boolean(1);
+    return Boolean(0);
   }
   else if(pass!=""){
     document.getElementById('conflabel').style.display = "inline";
     document.getElementById('conflabel').style.opacity = "1";
     document.getElementById('passlabel').style.display = "none";
     return Boolean(0);
+  }
+  else {
+    return Boolean(1);
   }
 }
 function checklogout(pk)
