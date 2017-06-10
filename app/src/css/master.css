@@ -10,6 +10,9 @@
 {
   transform: translate(25%,60%);
 }
+#shinetable{
+  background-color: #rgb(222, 247, 148);
+}
 button{
   outline: none;
   background-color: #7ec0ee;
