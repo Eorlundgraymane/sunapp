@@ -34,12 +34,12 @@ function getpiclink(){
           }
           else {
             if(x.readyState === 4){
-              var doc = x.responseText;
+              var doc = JSON.stringify(x.responseText);
               alert("Could'nt get your Google pic  "+doc);
             }
           }
         }
-          x.open('GET','https://picasaweb.google.com/data/entry/api/user/'.concat((JSON.stringify(json[0].email)).split("@")[0],"?alt=json"),true);
+          x.open('GET','http://picasaweb.google.com/data/entry/api/user/'.concat((JSON.stringify(json[0].email)).split("@")[0],"?alt=json"),true);
           console.log('google called');
           x.send();
 
