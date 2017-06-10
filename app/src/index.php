@@ -5,7 +5,7 @@ if(isset($_COOKIE['mobilenumber'])&& isset($_COOKIE['password']))
   echo '<script>phplogin('+$_COOKIE["mobilenumber"]+','+$_COOKIE["password"]+');</script>';
 }
 else {
-  echo'<script> alert("PHP is running. YOu don\'t seem to have any cookies so this popup came for the dever to know that");</script>';
+  echo'<script> alert("PHP is running. You don\'t seem to have any cookies so this popup came for the dever to know that");</script>';
 }
  ?>
 <html>
