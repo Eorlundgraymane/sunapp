@@ -11,7 +11,7 @@
   transform: translate(25%,60%);
 }
 #shinetable{
-  background-color: #rgb(222, 247, 148);
+  background-color: rgb(222, 247, 148);
   align-content: center;
 }
 button{
