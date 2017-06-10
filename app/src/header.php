@@ -8,8 +8,8 @@
         Sunshine</h1><br>
         <?php
         if(isset($_POST['primarykey'])&& isset($_POST['password'])){
-        echo' Checking to see if the post values reached here safely '.$_POST["primarykey"].' is the primary key and '.$_POST["password"].' is the password';
-        echo' <button onclick = "changebanner();" type = "button">Click Here</button> to see your name on the Site Banner';
+        echo' Checking to see if the post values reached here safely '.$_POST["primarykey"].' is the primary key and '.$_POST["password"].' is the password<br>';
+        echo' <button onclick = "changebanner();" type = "button">Click Here</button> to see your name on the Site Banner<br>';
         }
         else {
           echo' Checking to see if the post values reached here safely ...and nope, it seem\'s the\'re dead';
