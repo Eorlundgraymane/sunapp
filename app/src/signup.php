@@ -55,7 +55,7 @@
     <option value = "12">December</option>
   </select>
   <select name = "year" id = "year">
-    <option value = "0000">Year</option>
+    <option class = "yearclass" value = "0000">Year</option>
     <option class = "yearclass" value = "1937">1937</option>
     <option class = "yearclass" value = "1938">1938</option>
     <option class = "yearclass" value = "1939">1939</option>
