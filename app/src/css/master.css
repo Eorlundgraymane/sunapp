@@ -1,3 +1,7 @@
+*,body,html{
+  height: 100%;
+  width: 100%;
+}
 .outer-container {
   background-image: url('sunshine-min.jpg');
 }
@@ -17,8 +21,8 @@
   border: 1px solid red;
 }
 .profileimage{
-  height: 100%;
-  width: auto;
+  height: 0.2em;
+  width: 0.4em;
 }
 #shinetable{
   background-color: rgb(222, 247, 148);
