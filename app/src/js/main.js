@@ -28,11 +28,11 @@ function checklogout(pk)
       alert("Something went wrong during Logout please try again");
       loginbutton.innerHTML = "Log In";
       loginbutton.style.disabled = "false";
-      loginbutton.style.cursor = "pointer";            
+      loginbutton.style.cursor = "pointer";
     }
   }
   var data = {};
-  data["username"] = pk;
+  data["mobile"] = pk;
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
@@ -132,14 +132,14 @@ function checklogin(pk,pasw)
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
-      updatemyusers();
+      updatemyusers(pk,pasw);
     }
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Login please try again");
     }
   }
   var data = {};
-  data["username"] = pk;
+  data["mobile"] = pk;
   data["password"] = pasw;
   console.log(data);
   var jsondata = JSON.stringify(data);
@@ -175,7 +175,7 @@ function userlogin()
     }
   }
   var data = {};
-  data["username"] = document.getElementById('primarykey').value;
+  data["mobile"] = document.getElementById('primarykey').value;
   data["password"] = document.getElementById('password').value;
   console.log(data);
   var jsondata = JSON.stringify(data);
@@ -253,7 +253,7 @@ function otpverify(){
       alert(JSON.stringify(json.message));
       setTimeout(function(){},3000);
       otpoverlayslideup();
-      checklogin(uname,password);
+      checklogin(mobile,password);
     }
   }
   var otp = document.getElementById('otp').value;
