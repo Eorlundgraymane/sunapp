@@ -329,7 +329,7 @@ function otpresend() {
   xhr.send(jsondata);
 }
 function popalert() {
-  if(comparepass() == 1)
+  if(Boolean(comparepass())
   {
     var fname = document.getElementById("fname").value;
     var lname = document.getElementById("lname").value;

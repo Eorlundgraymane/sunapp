@@ -76,14 +76,14 @@ input,button,select {
   color: red;
   font-size: 0.5em;
   transition-property: all;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
 }
 #conflabel{
   display: none;
   color: green;
   font-size: 0.75em;
   transition-property: all;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
 }
 #sitebanner
 {
