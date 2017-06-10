@@ -57,16 +57,16 @@ function comparepass(){
     document.getElementById('passlabel').style.display = "inline";
     document.getElementById('passlabel').style.opacity = "1";
     document.getElementById('conflabel').style.display = "none";
-    return Boolean(0);
+    return 0;
   }
   else if(pass!=""){
     document.getElementById('conflabel').style.display = "inline";
     document.getElementById('conflabel').style.opacity = "1";
     document.getElementById('passlabel').style.display = "none";
-    return Boolean(0);
+    return 0
   }
   else if(pass == confpass){
-    return Boolean(1);
+    return 1;
   }
 }
 function checklogout(pk)
@@ -373,7 +373,7 @@ function otpresend() {
   xhr.send(jsondata);
 }
 function popalert() {
-  if(comparepass())
+  if(Boolean(comparepass()))
   {
     console.log(Boolean(comparepass));
     var fname = document.getElementById("fname").value;
