@@ -39,7 +39,7 @@
     <option value = "30">30</option>
     <option value = "31">31</option>
   </select>
-  <select name = "month" id = "month">
+  <select onchange = "checkleap()" name = "month" id = "month">
     <option value = "00">Month</option>
     <option value = "01">January</option>
     <option value = "02">February</option>
