@@ -36,7 +36,7 @@ button{
   transition-duration: 2s;
   transition-timing-function: ease;
 }
-#signup {  
+#signup {
   position: absolute;
   right: 10%;
   animation-name: signupscroll;
@@ -81,7 +81,7 @@ button{
   color: white
 }
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px #7ec0ee inset;
+    -webkit-box-shadow: 0 0 0 30px rgba(126,192,238,0.75) inset;
     -webkit-text-fill-color: white;
 }
 input,select {
@@ -89,7 +89,7 @@ input,select {
   max-width: 100%;
   text-indent: 10px;
   margin: 3px;
-  background-color: rgba(126,192,238,0.5);
+  background-color: rgba(126,192,238,0.75);
   border-top: none;
   border-left: none;
   border-right: none;
