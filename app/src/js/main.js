@@ -279,7 +279,13 @@ function phplogin(pk,pasw)
 
 function getuser()
 {
-  var query = '{"type": "select","args": {"table": "user","columns": ["id","username","email","password","dob"]}}"}';
+  var data = {};
+  data["type"] = "select";
+  data["args"] = {};
+  data["args"]["table"] = "user";
+  data["args"]["columns"] = ["id","username","email","password","dob"];
+  var query = JSON.stringify(data);
+  console.log(query);
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -292,7 +298,7 @@ function getuser()
       alert("Successfully Logged In. Welcome "+JSON.stringify(json.username)+" ! Sunshine is under construction. Let's just show you the hallway");
       document.getElementById('loginform').submit();
     }
-    else {
+    else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
     }
   }
