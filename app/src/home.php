@@ -18,7 +18,7 @@
         <?php include 'header.php';?>
       </div>
     </row>
-    <row>
+    <row id = "profilerow">
       <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "profilepic">
         <img class = "img-responsive img-rounded" alt = "No Image Uploaded">
       </div>

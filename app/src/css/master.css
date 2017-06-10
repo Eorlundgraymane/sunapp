@@ -16,6 +16,9 @@
 #shine{
   border: 1px solid red;
 }
+#profilerow{
+ height: 3em;
+}
 #shinetable{
   background-color: rgb(222, 247, 148);
   position: relative;
