@@ -465,7 +465,7 @@ function otpverify(){
       otpcancelbutton.style.disabled = false;
       otpbutton.innerHTML = "Verify";
       alert("Something went wrong during OTP verification");
-      console.log(json);
+      console.log(JSON.stringify(json));
     }
   }
   var otp = document.getElementById('otp').value;
