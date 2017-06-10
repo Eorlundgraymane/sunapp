@@ -304,7 +304,7 @@ function userlogin()
     else if(xhr.readyState == 4) {
       loginbutton.innerHTML = "Log In";
       loginbutton.style.disabled = "false";
-      loginbutton.style.curson = "pointer";
+      loginbutton.style.cursor= "pointer";
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert("Something went wrong during Login please try again");
