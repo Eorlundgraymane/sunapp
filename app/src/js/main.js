@@ -226,15 +226,18 @@ function userlogin()
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json.hasura_id));
-      loginbutton.innerHTML = "Log In";
-      loginbutton.style.disabled = false;
-      loginbutton.style.cursor = "pointer";
+      loginbutton.innerHTML = "Logged In";
+      loginbutton.style.disabled = true;
+      loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
       checklogout(document.getElementById('primarykey').value);
     }
     else if(xhr.readyState == 4) {
+      loginbutton.innerHTML = "Log In";
+      loginbutton.style.disabled = "false";
+      loginbutton.style.curson = "pointer";
       alert("Something went wrong during Login please try again");
     }
   }
