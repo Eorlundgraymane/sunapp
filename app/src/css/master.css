@@ -159,7 +159,7 @@ input,select {
   color: red;
   font-size: 0.85em;
   animation-name: fadeOut;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-timing-function: ease;
   animation-iteration-count: 1;
 }
@@ -169,7 +169,7 @@ input,select {
   color: red;
   font-size: 0.85em;
   animation-name: fadeIn;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-timing-function: ease;
   animation-iteration-count: 1;
 }
