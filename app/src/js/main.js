@@ -124,7 +124,7 @@ function comparepass(){
     document.getElementById('passlabel').classList.add("passshow");
     return 1;
   }
-  else if(pass == ""){
+  else if(!pass){
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
     document.getElementById('passlabel').innerHTML = "Password Empty";
