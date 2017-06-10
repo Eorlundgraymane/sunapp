@@ -121,10 +121,10 @@ function comparepass(){
     return 1
   }
   else if(pass == ""){
-    document.getElementById('conflabel').classList.remove = "confshow";
-    document.getElementById('conflabel').classList.add = "conflabel";
-    document.getElementById('passlabel').classList.remove = "passshow";
-    document.getElementById('passlabel').classList.add = "passlabel";
+    document.getElementById('conflabel').classList.remove("confshow");
+    document.getElementById('conflabel').classList.add("conflabel");
+    document.getElementById('passlabel').classList.remove("passshow");
+    document.getElementById('passlabel').classList.add("passlabel");
   }
 }
 function checklogout(pk)
