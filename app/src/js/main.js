@@ -294,7 +294,6 @@ function getuser()
     }
     else {
       alert(JSON.stringify(json));
-      return 0;
     }
   }
   xhr.send(JSON.stringify(query));
