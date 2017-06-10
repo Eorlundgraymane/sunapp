@@ -44,9 +44,9 @@ function checkleap()
     }
   }
   else {
-    for(var i = 1; i<=64;i++)
+    for(var j = 1; i<=64;i++)
     {
-      document.getElementById('year').options[i].disabled = false;
+      document.getElementById('year').options[j].disabled = false;
     }
   }
 }
