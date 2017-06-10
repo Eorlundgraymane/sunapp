@@ -8,7 +8,7 @@ function updateusername(){
   document.getElementById('uname').value = uname;
   document.getElementById('uname').reload();
 }
-function checkpass(){
+function comparepass(){
   var pass = document.getElementById('pass').value;
   var confpass = document.getElementById('confpass').value;
   if(pass!=confpass){
@@ -17,7 +17,7 @@ function checkpass(){
   }
   else {
     document.getElementById('conflabel').style.display = "inline";
-    document.getElementById('passlabel').style.display = "none";    
+    document.getElementById('passlabel').style.display = "none";
   }
 }
 function checklogout(pk)
