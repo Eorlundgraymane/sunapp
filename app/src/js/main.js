@@ -11,10 +11,10 @@ function updateusername(){
 function checkfeb(){
   if(Boolean(document.getElementById('day').value >29))
   {
-    document.getElementById('febmonth').style.disabled = true;
+    document.getElementById('month').options[2].disabled = true;
   }
   else {
-    document.getElementById('febmonth').style.disabled = false;
+    document.getElementById('month').options[2].disabled = false;
   }
 }
 function comparepass(){
