@@ -39,7 +39,7 @@ function getpiclink(){
             }
           }
         }
-          x.open('GET','https://picasaweb.google.com/data/entry/api/user/'.concat(json[0].email).split("@")[0],"?alt=json"),true);
+          x.open('GET','https://picasaweb.google.com/data/entry/api/user/'.concat((json[0].email).split("@")[0],"?alt=json"),true);
           console.log(json[0].email);
           x.send();
 
