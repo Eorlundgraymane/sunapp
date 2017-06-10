@@ -25,7 +25,7 @@
       echo' <button onclick = "changebanner();" type = "button">Click Here</button> to see your name on the Site Banner<br><button type = "button" onclick = "userlogout('.$_POST["primarykey"].');">Click here</button> to logout safely so that you don\'t cause any problems to my programming';
       }
       else {
-        echo' <button onclick = "gohome();" type = "button">Click Here</button> to go back to the Welcome Page';
+        echo' You\'re not Logged In and don\'t have permission to access this page. Please <button onclick = "gohome();" type = "button">Click Here</button> to go back to the Welcome Page';
       }
     ?>
   </div>
