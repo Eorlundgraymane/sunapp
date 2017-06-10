@@ -12,8 +12,8 @@
 }
 #shinetable{
   background-color: rgb(222, 247, 148);
-  position: absolute;
-  right: 37.5%;
+  position: relative;
+  right: -50%;
 }
 table{
   border: 1px solid black;
