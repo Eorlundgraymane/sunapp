@@ -17,7 +17,7 @@
   border: 1px solid red;
 }
 #profilpic,#shine{
- height: 200%;
+ min-height: 200%;
 }
 #shinetable{
   background-color: rgb(222, 247, 148);
