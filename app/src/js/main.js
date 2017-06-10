@@ -106,7 +106,16 @@ function comparepass(){
   var pass = document.getElementById('pass').value;
   var confpass = document.getElementById('confpass').value;
   console.log(pass);
-  if(pass!=confpass){
+  if(pass.length() == 0){
+    document.getElementById('passlabel').classList.remove("passshow");
+    document.getElementById('passlabel').classList.add("passlabel");
+    document.getElementById('passlabel').innerHTML = "Password Empty";
+    document.getElementById('passlabel').style.color = "yellow";
+    document.getElementById('passlabel').classList.remove("passshow");
+    document.getElementById('passlabel').classList.add("passlabel");
+    return 0;
+  }
+  else if(pass!=confpass){
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
     document.getElementById('passlabel').innerHTML = "Password not Matching"
@@ -123,15 +132,6 @@ function comparepass(){
     document.getElementById('passlabel').classList.remove("passlabel");
     document.getElementById('passlabel').classList.add("passshow");
     return 1;
-  }
-  else if(pass.length() == 0){
-    document.getElementById('passlabel').classList.remove("passshow");
-    document.getElementById('passlabel').classList.add("passlabel");
-    document.getElementById('passlabel').innerHTML = "Password Empty";
-    document.getElementById('passlabel').style.color = "yellow";
-    document.getElementById('passlabel').classList.remove("passshow");
-    document.getElementById('passlabel').classList.add("passlabel");
-    return 0;
   }
 }
 function checklogout(pk)
