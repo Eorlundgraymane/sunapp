@@ -231,7 +231,7 @@ function phplogin(pk,pasw)
       loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
-      alert("PHP Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");      
+      alert("PHP Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
     }
     else if(xhr.readyState == 4) {
       loginbutton.innerHTML = "Log In";
@@ -277,6 +277,8 @@ function userlogin()
       loginbutton.innerHTML = "Log In";
       loginbutton.style.disabled = "false";
       loginbutton.style.curson = "pointer";
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
       alert("Something went wrong during Login please try again");
     }
   }
