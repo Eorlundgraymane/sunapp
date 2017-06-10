@@ -67,7 +67,7 @@ button
 input-placeheolder{
   color: white;
 }
-input,button,select {
+input,select {
   outline: none;
   max-width: 100%;
   text-indent: 10px;
