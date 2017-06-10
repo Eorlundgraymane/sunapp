@@ -19,7 +19,7 @@ function checkfeb(){
 }
 function checkleap()
 {
-  if(Boolean((Boolean(document.getElementById('month').value == "February")))&&(Boolean(document.getElementById('day').value >27))){
+  if(Boolean((Boolean(document.getElementById('month').value == "February"))&&(Boolean(document.getElementById('day').value >27))){
       for(i = 0;i<=64;i++)
     {
       if(!Boolean(Boolean((document.getElementById('year').options[i].value %4)==0)&&(Boolean((document.getElementById('year').options[i].value %100)==0))&&Boolean((document.getElementById('year').options[i].value %400)==0))){
