@@ -129,12 +129,13 @@ function updatemyusersprofile(pk){
   var data = {};
   var fname = document.getElementById("fname").value;
   var lname = document.getElementById("lname").value;
+  var dob = year.concat("-",month,"-",day);
   var dob = year+"-"+month+"-"+day;
   var uname = fname.concat(" ",lname);
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "profile";
-  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"familyshine":0}];
+  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"dob":dob,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"familyshine":0}];
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
