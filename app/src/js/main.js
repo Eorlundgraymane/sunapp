@@ -106,7 +106,6 @@ function comparepass(){
   var pass = document.getElementById('pass').value;
   var confpass = document.getElementById('confpass').value;
   console.log(pass);
-  }
   else if(pass!=confpass){
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
