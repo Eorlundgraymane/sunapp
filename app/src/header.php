@@ -16,7 +16,7 @@
         ?>
     </div>
     <div>
-      Click <a href = "#" onclck = "userlogout(<?php echo $_POST['primarykey'];?>);">here</a> to logout safely so that you don't cause any problems to my programming
+      Click <a href = "#" onclick = "userlogout(<?php echo $_POST["primarykey"];?>);">here</a> to logout safely so that you don't cause any problems to my programming
     </div>
   </body>
 </html>
