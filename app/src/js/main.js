@@ -351,7 +351,7 @@ console.log(uname);
 var data = {};
 data["username"] = uname;
 data["email"] = email;
-data["mobile"] = mob;
+data["mobile"] = mobile;
 data["password"] = password;
 console.log(data);
 var jsondata = JSON.stringify(data);
