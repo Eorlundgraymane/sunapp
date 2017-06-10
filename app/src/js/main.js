@@ -44,7 +44,7 @@ function checkleap()
     }
   }
   else {
-    for(var j = 1; i<=64;i++)
+    for(var j = 1; j<=64;j++)
     {
       document.getElementsByClassName("yearclass")[j].disabled = false;
     }
