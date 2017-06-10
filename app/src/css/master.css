@@ -12,6 +12,7 @@
 }
 #shinetable{
   background-color: #rgb(222, 247, 148);
+  align-content: center;
 }
 button{
   outline: none;
