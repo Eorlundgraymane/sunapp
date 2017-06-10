@@ -31,7 +31,8 @@
   </div>
   </row>
     <row>
-      <div onload = "getpiclink();" class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "profilepic">
+      <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "profilepic">
+        <button type = "button" onclick="getpiclink();">Click to load image</button>
         <img id = "profileimage" class = "profileimage img-responsive img-rounded" alt = "No Image Uploaded">
       </div>
       <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">
