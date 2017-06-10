@@ -123,7 +123,7 @@
   <!--<input type = "date" name = "dob" id = "dob"><br><br> Rendered Obsolete-->
   <input type = "password" name = "password"  id = "pass" placeholder="Password"><br>
   <input type = "password" name = "confpass"  id = "confpass" placeholder="Retype Password" onkeypress() ="comparepass();" onkeyup="comparepass();">
-  <div class = "passlabel" id = "passlabel">Passwords not matched</div><br>
+  <div class = "passshow" id = "passlabel">Passwords not matched</div><br>
   <button id = "signupbuttn" onclick = "popalert();" type = "button">Sign Up</button>
   <button id = "otpready" type = "button" onclick="otpoverlaydropdown();">Already received OTP</button>
   <!--<button id = "updateuser" type = "button" onclick="updatemyusers();">Check Update Query</button>!-->
