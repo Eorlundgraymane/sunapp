@@ -86,6 +86,9 @@ input,button,select {
   position: absolute;
   right: 0;
 }
+#loginbutton{
+  display: inline-block;
+}
 #sitename {
   font-size: 30px;
   color: white;
