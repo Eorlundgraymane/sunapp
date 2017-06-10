@@ -10,12 +10,13 @@
 {
   transform: translate(25%,60%);
 }
+#pofilepic{
+  border: 1px solid blue;
+}
 #shinetable{
   background-color: rgb(222, 247, 148);
   position: relative;
   left: 50%;
-}
-table{
   border: 1px solid black;
 }
 button{
