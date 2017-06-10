@@ -12,12 +12,12 @@ function comparepass(){
   var pass = document.getElementById('pass').value;
   var confpass = document.getElementById('confpass').value;
   if(pass!=confpass){
-    document.getElementById('pass').style.display = "inline";
-    document.getElementById('confpass').style.display = "none";
+    document.getElementById('passlabel').style.display = "inline";
+    document.getElementById('conflabel').style.display = "none";
   }
   else {
-    document.getElementById('confpass').style.display = "inline";
-    document.getElementById('pass').style.display = "none";
+    document.getElementById('conflabel').style.display = "inline";
+    document.getElementById('passlabel').style.display = "none";
   }
 }
 function checklogout(pk)
