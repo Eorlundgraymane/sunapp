@@ -70,6 +70,8 @@ input,button,select {
   text-indent: 10px;
   border-radius: 15px;
   margin: 3px;
+  background: none;
+  border: none;
 }
 #passlabel{
   display: none;
