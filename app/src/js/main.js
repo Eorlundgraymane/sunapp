@@ -117,13 +117,14 @@ function comparepass(){
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
     document.getElementById('passlabel').innerHTML = "Password Matched";
-    document.getElementById('conflabel').classList.remove("passlabel");
-    document.getElementById('conflabel').classList.add("passshow");
+    document.getElementById('passlabel').classList.remove("passlabel");
+    document.getElementById('passlabel').classList.add("passshow");
     return 1;
   }
   else if(pass == ""){
-    document.getElementById('conflabel').classList.remove("confshow");
-    document.getElementById('conflabel').classList.add("conflabel");
+    document.getElementById('passlabel').classList.remove("passshow");
+    document.getElementById('passlabel').classList.add("passlabel");
+    document.getElementById('passlabel').innerHTML = "Password Empty";
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
     return 0;
