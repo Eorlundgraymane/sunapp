@@ -155,7 +155,7 @@ input,select {
   transition-timing-function: ease-in;
 }
 .passshow{
-  display: none;
+  display: inline-block;
   opacity: 1;
   color: red;
   font-size: 0.85em;
@@ -173,7 +173,7 @@ input,select {
   transition-timing-function: ease-in;
 }
 .confshow{
-  display: none;
+  display: inline-block;
   opacity: 1;
   color: green;
   font-size: 0.85em;
