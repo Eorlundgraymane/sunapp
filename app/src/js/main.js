@@ -13,7 +13,7 @@ function comparepass(){
   var confpass = document.getElementById('confpass').value;
   if(pass!=confpass){
     document.getElementById('pass').style.display = "inline";
-    document.getElementById('confpass')/style.display = "none";
+    document.getElementById('confpass').style.display = "none";
   }
   else {
     document.getElementById('confpass').style.display = "inline";
