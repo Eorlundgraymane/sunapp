@@ -6,7 +6,17 @@ function updateusername(){
   var lname = document.getElementById('lname').value;
   var uname = fname.concat(" ",lname);
   document.getElementById('uname').value = uname;
-  document.getElementById('uname').reload();  
+  document.getElementById('uname').reload();
+}
+function checkpass(){
+  var pass = document.getElementById('pass').value;
+  var confpass = document.getElementById('confpass').value;
+  if(pass!=confpass){
+    document.getElementById('passlabel').style.display = "inline";
+  }
+  else {
+    document.getElementById('passlabel').style.display = "none";
+  }
 }
 function checklogout(pk)
 {
