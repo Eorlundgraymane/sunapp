@@ -173,7 +173,7 @@ function updatemyusers(pk,pasw){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "user";
-  data["args"].objects = [{"id":hasura_id,"username":uname,"email":email,"password":password,"dob":dob}];
+  data["args"].objects = [{"id":hasura_id,"username":uname,"email":email,"password":password}];
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
@@ -371,7 +371,7 @@ function otpresend() {
   console.log("JSON DATA : "+jsondata);
   xhr.send(jsondata);
 }
-function popalert() {  
+function popalert() {
   if(Boolean(comparepass))
   {
     console.log(Boolean(comparepass));
