@@ -82,7 +82,7 @@ button{
   color: white
 }
 input:-webkit-autofill {
-    -webkit-box-shadow: #7ec0ee;
+    -webkit-box-shadow: 0 0 0 30px #7ec0ee inset;
     -webkit-text-fill-color: white;
 }
 input,select {
