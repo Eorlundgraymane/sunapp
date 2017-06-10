@@ -22,7 +22,7 @@ function getpiclink(){
       console.log(JSON.stringify(json));
       var x = new XMLHttpRequest();
       x.onreadystatechange = function(){
-        if(x.readyState === 4 && x.status === 200){
+        if(x.readyState == 4 && x.status == 200){
           var doc = x.responseText;
           piclink =(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[1]).concat(":",(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[2])).replace(/"/g,"").replace(/}/g,"");
           console.log(piclink);
@@ -33,14 +33,15 @@ function getpiclink(){
               alert("Could'nt get your Google pic");
             }
           }
-          }
+        }
           x.open('GET','http://picasaweb.google.com/data/entry/api/user/'.concat((email).split("@")[0],"?alt=json"),true);
           x.send();
-    }
+
+      }
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
     }
-  }
+    }
   xhr.send(query);
 }
 function updateusername(){
