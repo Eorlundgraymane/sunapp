@@ -6,7 +6,6 @@
   <input type = "text" name = "email" id = "email" placeholder="Email ID"><br>
   <input type = "text" name = "mobile"id = "mob" placeholder="Mobile"><br>
   <select name = "day" id = "day">
-    <option value = "00">Day</option>
     <option value = "01">1</option>
     <option value = "02">2</option>
     <option value = "03">3</option>
@@ -38,9 +37,9 @@
     <option value = "29">29</option>
     <option value = "30">30</option>
     <option value = "31">31</option>
+    <option value = "00">Day</option>
   </select>
   <select name = "month" id = "month">
-    <option value = "00">Month</option>
     <option value = "01">January</option>
     <option value = "02">February</option>
     <option value = "03">March</option>
@@ -53,9 +52,9 @@
     <option value = "10">October</option>
     <option value = "11">November</option>
     <option value = "12">December</option>
+    <option value = "00">Month</option>
   </select>
   <select name = "year" id = "year">
-    <option value = "0">Year</option>
     <option value = "1999">1999</option>
     <option value = "1998">1998</option>
     <option value = "1997">1997</option>
@@ -116,6 +115,7 @@
     <option value = "1942">1942</option>
     <option value = "1941">1941</option>
     <option value = "1940">1940</option>
+    <option value = "0000">Year</option>
   </select><br>
   <!--<input type = "date" name = "dob" id = "dob"><br><br> Rendered Obsolete-->
   <input type = "password" name = "password" id = "pass" placeholder="Password"><br>
