@@ -1,5 +1,5 @@
 <div id  = "signupdiv">
-<form methhod = "POST" name = "signup" id = "signup">
+<form autocomplete = "off" methhod = "POST" name = "signup" id = "signup">
   <input type = "text" name = "fname" id = "fname" placeholder="First Name" onchange = "updateusername()">
   <input type = "text" name = "lname" id  = "lname" placeholder="Last Name" onchange = "updateusername()"><br>
   <input type = "text" name = "uname" id = "uname" placeholder="Username" disabled="true"><br>
