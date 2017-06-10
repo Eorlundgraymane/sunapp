@@ -13,11 +13,13 @@ function comparepass(){
   var confpass = document.getElementById('confpass').value;
   if(pass!=confpass){
     document.getElementById('passlabel').style.display = "inline";
+    document.getElementById('passlabel').style.opacity = "1";
     document.getElementById('conflabel').style.display = "none";
     return true;
   }
   else if(pass!=""){
     document.getElementById('conflabel').style.display = "inline";
+    document.getElementById('conflabel').style.opacity = "1";
     document.getElementById('passlabel').style.display = "none";
     return false;
   }

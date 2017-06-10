@@ -75,11 +75,15 @@ input,button,select {
   display: none;
   color: red;
   font-size: 0.5em;
+  transition-property: all;
+  transition-duration: 0.5s;
 }
 #conflabel{
   display: none;
   color: green;
   font-size: 0.75em;
+  transition-property: all;
+  transition-duration: 0.5s;
 }
 #sitebanner
 {
