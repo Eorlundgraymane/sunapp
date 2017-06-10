@@ -3,6 +3,7 @@
 }
 .regpane
 {
+  background-color: #7ec0ee;
   position: absolute;
   top: 25%;
 }
@@ -33,7 +34,6 @@ button
 }
 #signupdiv
 {
-  background-color: #7ec0ee;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
