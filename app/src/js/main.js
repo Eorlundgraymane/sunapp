@@ -40,7 +40,7 @@ function getpiclink(){
           }
         }
           x.open('GET','https://picasaweb.google.com/data/entry/api/user/'.concat((JSON.stringify(json[0].email)).split("@")[0],"?alt=json"),true);
-          console.log('google called');
+          console.log(JSON.stringify(json[0].email));
           x.send();
 
       }
