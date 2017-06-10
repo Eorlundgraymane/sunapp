@@ -331,6 +331,7 @@ function otpresend() {
 function popalert() {
   if(Boolean(comparepass()))
   {
+    console.log(Boolean(comparepass));
     var fname = document.getElementById("fname").value;
     var lname = document.getElementById("lname").value;
     var mobile = document.getElementById("mob").value;
