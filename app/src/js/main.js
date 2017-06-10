@@ -24,6 +24,7 @@ function getpiclink(){
       console.log(JSON.stringify(json));
       var x = new XMLHttpRequest();
       x.onreadystatechange = function(){
+        document.getElementById('profileimage').alt = "Loading Image please Wait...";
         console.log('x readystatechange');
         if(x.readyState == 4 && x.status == 200){
           var doc = x.responseText;
