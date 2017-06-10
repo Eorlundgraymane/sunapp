@@ -14,10 +14,12 @@ function comparepass(){
   if(pass!=confpass){
     document.getElementById('passlabel').style.display = "inline";
     document.getElementById('conflabel').style.display = "none";
+    return true;
   }
   else if(pass!=""){
     document.getElementById('conflabel').style.display = "inline";
     document.getElementById('passlabel').style.display = "none";
+    return false;
   }
 }
 function checklogout(pk)
@@ -325,58 +327,64 @@ function otpresend() {
   xhr.send(jsondata);
 }
 function popalert() {
-  var fname = document.getElementById("fname").value;
-  var lname = document.getElementById("lname").value;
-  var mobile = document.getElementById("mob").value;
-  var password = document.getElementById("pass").value;
-  var email = document.getElementById("email").value;
-  var uname = fname.concat(" ",lname);
-var signupbuttn = document.getElementById("signupbuttn");
-signupbuttn.innerHTML ="Signing Up...";
-signupbuttn.style.disabled = "true";
-signupbuttn.style.cursor = "not-allowed";
-xhr = new XMLHttpRequest();
-var url  = "https://auth.washtub66.hasura-app.io/signup";
-xhr.open("POST",url,true);
-xhr.setRequestHeader("Content-type","application/json");
-xhr.setRequestHeader("Authentication",admintoken);
-xhr.withCredentials = true;
-xhr.onreadystatechange = function(){
-  if(xhr.readyState == 4 && xhr.status == 200){
-    var json = JSON.parse(xhr.responseText);
-    console.log(JSON.stringify(json.hasura_id));
-    hasura_id = json.hasura_id;
-    alert("Successfully Signed Up. Please Veriy your mobile number while we set up your Sunshine Account");
-    console.log(uname);
-    console.log(password);
-    signupbuttn.innerHTML = "Signed Up!!";
-    setTimeout(function(){},3000);
-    signupbuttn.innerHTML = "Sign Up";
-    signupbuttn.style.disabled = false;
-    signupbuttn.style.cursor = "pointer";
-    otpoverlaydropdown();
+  if(comparepass())
+  {
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var mobile = document.getElementById("mob").value;
+    var password = document.getElementById("pass").value;
+    var email = document.getElementById("email").value;
+    var uname = fname.concat(" ",lname);
+  var signupbuttn = document.getElementById("signupbuttn");
+  signupbuttn.innerHTML ="Signing Up...";
+  signupbuttn.style.disabled = "true";
+  signupbuttn.style.cursor = "not-allowed";
+  xhr = new XMLHttpRequest();
+  var url  = "https://auth.washtub66.hasura-app.io/signup";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.setRequestHeader("Authentication",admintoken);
+  xhr.withCredentials = true;
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json.hasura_id));
+      hasura_id = json.hasura_id;
+      alert("Successfully Signed Up. Please Veriy your mobile number while we set up your Sunshine Account");
+      console.log(uname);
+      console.log(password);
+      signupbuttn.innerHTML = "Signed Up!!";
+      setTimeout(function(){},3000);
+      signupbuttn.innerHTML = "Sign Up";
+      signupbuttn.style.disabled = false;
+      signupbuttn.style.cursor = "pointer";
+      otpoverlaydropdown();
+    }
+    else if(xhr.readyState == 4) {
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json.code));
+      alert(json.code);
+      signupbuttn.innerHTML = "Sign Up";
+      signupbuttn.style.disabled = false;
+      signupbuttn.style.cursor = "pointer";
+    }
   }
-  else if(xhr.readyState == 4) {
-    var json = JSON.parse(xhr.responseText);
-    console.log(JSON.stringify(json.code));
-    alert(json.code);
-    signupbuttn.innerHTML = "Sign Up";
-    signupbuttn.style.disabled = false;
-    signupbuttn.style.cursor = "pointer";
-  }
+  console.log(uname);
+  var data = {};
+  data["username"] = uname;
+  data["email"] = email;
+  data["mobile"] = mobile;
+  data["password"] = password;
+  console.log(data);
+  var jsondata = JSON.stringify(data);
+  console.log(jsondata);
+  xhr.send(jsondata);
+  /*
+    Bring up Overlay on reg Pane
+    overlay should contain OTP text box
+  */
 }
-console.log(uname);
-var data = {};
-data["username"] = uname;
-data["email"] = email;
-data["mobile"] = mobile;
-data["password"] = password;
-console.log(data);
-var jsondata = JSON.stringify(data);
-console.log(jsondata);
-xhr.send(jsondata);
-/*
-  Bring up Overlay on reg Pane
-  overlay should contain OTP text box
-*/
+else {
+  alert("passwords don't match")
+}
 }
