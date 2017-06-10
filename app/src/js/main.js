@@ -165,6 +165,35 @@ function updatemyusersprofile(pk){
   xhr.send(jsoninsert);
   document.getElementById('signup').reset();
 }
+changebanner()
+{
+  var data = {};
+  data["type"] = "select";
+  data["args"] = {};
+  data["args"]["table"] = "user";
+  data["args"]["columns"] = ["id","username","email","password","dob"];
+  var query = JSON.stringify(data);
+  console.log(query);
+  xhr = new XMLHttpRequest();
+  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+      setTimeout(function(){
+        document.getElementById('sitebanner').innerHTML = json[0].username;
+      },3000);
+    }
+    else if(xhr.readyState ==4) {
+      alert(JSON.stringify(json));
+    }
+  }
+  xhr.send(query);
+
+}
 function updatemyusers(pk,pasw){
   setTimeout(function(){},5000);
   xhr = new XMLHttpRequest();
