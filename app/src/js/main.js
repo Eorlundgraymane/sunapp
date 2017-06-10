@@ -184,8 +184,9 @@ changebanner()
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       setTimeout(function(){
-        document.getElementById('sitebanner').innerHTML = json[0].username;
+        document.getElementById('siteh1').innerHTML = json[0].username;
       },3000);
+      document.getElementById('siteh1').innerHTML = Sunshine;
     }
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
