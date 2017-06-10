@@ -126,9 +126,8 @@ function checklogin(pk,pasw)
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));      loginbutton.innerHTML = "Log In";
-            loginbutton.style.disabled = false;
-            loginbutton.style.cursor = "pointer";
+      console.log(JSON.stringify(json.hasura_id));
+            loginbutton.innerHTML = "Logged In";            
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
