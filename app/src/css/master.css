@@ -21,6 +21,8 @@ body,html{
   border: 1px solid red;
 }
 .profileimage{
+  position: relative;
+  left: 25%;
   max-height: 5.1em;
   max-width: 10em;
 }
