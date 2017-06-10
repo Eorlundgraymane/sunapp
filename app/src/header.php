@@ -12,7 +12,7 @@
         echo' <button onclick = "changebanner();" type = "button">Click Here</button> to see your name on the Site Banner<br><button type = "button" onclick = "userlogout('.$_POST["primarykey"].');">Click here</button> to logout safely so that you don\'t cause any problems to my programming';
         }
         else {
-          echo' Checking to see if the post values reached here safely ...and nope, it seem\'s the\'re dead';
+          echo' Checking to see if the post values reached here safely ...and nope, it seem\'s the\'re dead<br>';
           echo' <button onclick = "gohome();" type = "button">Click Here</button> to go back to the Welcome Page';
         }
         ?>
