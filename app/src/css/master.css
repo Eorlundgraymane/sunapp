@@ -12,7 +12,8 @@
 }
 #shinetable{
   background-color: rgb(222, 247, 148);
-  align-content: center;
+  position: absolute;
+  right: 37.5%;
 }
 table{
   border: 1px solid black;
