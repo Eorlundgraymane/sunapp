@@ -34,7 +34,8 @@ function getpiclink(){
           }
           else {
             if(x.readyState === 4){
-              alert("Could'nt get your Google pic");
+              var doc = x.responseText;
+              alert("Could'nt get your Google pic  "+doc);
             }
           }
         }
