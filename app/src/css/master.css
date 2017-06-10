@@ -23,6 +23,9 @@
   border: 1px solid black;
   height: 200%;
 }
+td,tr,th{
+  border: 1px solid black;
+}
 button{
   outline: none;
   background-color: #7ec0ee;
