@@ -1,7 +1,8 @@
 <div id  = "signupdiv">
 <form methhod = "POST" name = "signup" id = "signup">
-  <input type = "text" name = "fname" id = "fname" placeholder="First Name">
-  <input type = "text" name = "lname" id  = "lname" placeholder="Last Name"><br>
+  <input type = "text" name = "fname" id = "fname" placeholder="First Name" onkeyup="updateusername()">
+  <input type = "text" name = "lname" id  = "lname" placeholder="Last Name" onkeyup="updateusername()"><br>
+  <input type = "text" name = "uname" id = "uname" placeholder="Username" disabled="true"><br>
   <input type = "text" name = "email" id = "email" placeholder="Email ID"><br>
   <input type = "text" name = "mobile"id = "mob" placeholder="Mobile"><br>
   <select name = "day" id = "day">

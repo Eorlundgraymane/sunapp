@@ -1,6 +1,12 @@
 var admintoken = "Bearer nk8vh416e2v2sd1t6rhxmyzntgc8vx1t";
 var hasura_id;
 var auth_token;
+function updateusername(){
+  var fname = document.getElementById('fname').value;
+  var lname = document.getElementById('lname').value;
+  var uname = fname.concat(" ",lname);
+  document.getElementById('uname').value = uname;
+}
 function checklogout(pk)
 {
   document.getElementById('loginbutton').innerHTML = "Loggin Out...";
@@ -127,7 +133,7 @@ function checklogin(pk,pasw)
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json.hasura_id));
-            loginbutton.innerHTML = "Logged In";            
+            loginbutton.innerHTML = "Logged In";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
