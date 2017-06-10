@@ -158,7 +158,11 @@ input,select {
   display: inline-block;
   opacity: 1;
   color: red;
-  font-size: 0.85em;
+  font-size: 0.85em;  
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
 }
 .conflabel{
   display: none;
@@ -174,6 +178,10 @@ input,select {
   opacity: 1;
   color: green;
   font-size: 0.85em;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
 }
 #sitebanner
 {
