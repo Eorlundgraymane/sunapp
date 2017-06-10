@@ -109,6 +109,7 @@ function comparepass(){
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
     document.getElementById('passlabel').innerHTML = "Password not Matching"
+    document.getElementById('passlabel').style.color = "red";
     document.getElementById('passlabel').classList.remove("passlabel");
     document.getElementById('passlabel').classList.add("passshow");
     return 0;
@@ -117,6 +118,7 @@ function comparepass(){
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
     document.getElementById('passlabel').innerHTML = "Password Matched";
+    document.getElementById('passlabel').style.color = "green";
     document.getElementById('passlabel').classList.remove("passlabel");
     document.getElementById('passlabel').classList.add("passshow");
     return 1;
@@ -125,6 +127,7 @@ function comparepass(){
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
     document.getElementById('passlabel').innerHTML = "Password Empty";
+    document.getElementById('passlabel').style.color = "yellow";
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
     return 0;

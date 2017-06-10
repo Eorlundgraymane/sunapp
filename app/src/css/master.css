@@ -156,7 +156,6 @@ input,select {
 .passlabel{
   display: inline-block;
   opacity: 0;
-  color: red;
   font-size: 0.85em;
   animation-name: fadeOut;
   animation-duration: 0.5s;
@@ -166,7 +165,6 @@ input,select {
 .passshow{
   display: inline-block;
   opacity: 1;
-  color: red;
   font-size: 0.85em;
   animation-name: fadeIn;
   animation-duration: 0.5s;
