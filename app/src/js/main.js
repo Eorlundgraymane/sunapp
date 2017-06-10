@@ -64,7 +64,7 @@ function comparepass(){
     document.getElementById('conflabel').style.opacity = "1";
     document.getElementById('passlabel').style.display = "none";
     document.getElementById('passlabel').style.opacity = "0";
-    return 1
+    return 1;
   }
 }
 function checklogout(pk)
