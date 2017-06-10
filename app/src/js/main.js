@@ -8,6 +8,15 @@ function updateusername(){
   document.getElementById('uname').value = uname;
   document.getElementById('uname').reload();
 }
+function checkfeb(){
+  if(Boolean(document.getElementById('day').value >29))
+  {
+    document.getElementById('febmonth').style.disabled = true;
+  }
+  else {
+    document.getElementById('febmonth').style.disabled = false;
+  }
+}
 function comparepass(){
   var pass = document.getElementById('pass').value;
   var confpass = document.getElementById('confpass').value;
