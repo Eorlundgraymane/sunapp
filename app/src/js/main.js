@@ -211,6 +211,46 @@ function checklogin(pk,pasw)
   xhr.send(jsondata);
 }
 
+function phplogin()
+{
+  xhr = new XMLHttpRequest();
+  var loginbutton = document.getElementById('loginbutton');
+  loginbutton.innerHTML = "Logging In";
+  loginbutton.style.disabled = "true";
+  loginbutton.style.curson = "not-allowed";
+  var url  = "https://auth.washtub66.hasura-app.io/login";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json.hasura_id));
+      loginbutton.innerHTML = "Logged In";
+      loginbutton.style.disabled = true;
+      loginbutton.style.cursor = "not-allowed";
+      hasura_id = json.hasura_id;
+      auth_token = "Bearer "+json.auth_token;
+      alert("PHP Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
+      checklogout(document.getElementById('primarykey').value);
+    }
+    else if(xhr.readyState == 4) {
+      loginbutton.innerHTML = "Log In";
+      loginbutton.style.disabled = "false";
+      loginbutton.style.curson = "pointer";
+      alert("PHP Something went wrong during Login please try again");
+    }
+  }
+  var data = {};
+  data["mobile"] = document.getElementById('primarykey').value;
+  data["password"] = document.getElementById('password').value;
+  console.log(data);
+  var jsondata = JSON.stringify(data);
+  console.log(jsondata);
+  xhr.send(jsondata);
+}
+
+
 function userlogin()
 {
   xhr = new XMLHttpRequest();
@@ -232,7 +272,7 @@ function userlogin()
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
-      checklogout(document.getElementById('primarykey').value);
+      document.getElementById('loginform').submit();
     }
     else if(xhr.readyState == 4) {
       loginbutton.innerHTML = "Log In";

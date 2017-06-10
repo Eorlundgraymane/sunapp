@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+if(isset($_COOKIE['mobilenumber'])&& isset($_COOKIE['password']))
+{
+  echo '<script>phplogin('+$_COOKIE["mobilenumber"]+','+$_COOKIE["password"]+');</script>';
+}
+ ?>
 <html>
   <head>
     <?php include 'headprereqs.php';?>
