@@ -65,7 +65,7 @@ function comparepass(){
     document.getElementById('passlabel').style.display = "none";
     return Boolean(0);
   }
-  else {
+  else if(pass == confpass){
     return Boolean(1);
   }
 }
@@ -437,6 +437,6 @@ function popalert() {
   */
 }
 else {
-  alert("passwords don't match")
+  alert("passwords don't match");
 }
 }
