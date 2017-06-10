@@ -15,13 +15,13 @@ function comparepass(){
     document.getElementById('passlabel').style.display = "inline";
     document.getElementById('passlabel').style.opacity = "1";
     document.getElementById('conflabel').style.display = "none";
-    return true;
+    return 1;
   }
   else if(pass!=""){
     document.getElementById('conflabel').style.display = "inline";
     document.getElementById('conflabel').style.opacity = "1";
     document.getElementById('passlabel').style.display = "none";
-    return false;
+    return 0;
   }
 }
 function checklogout(pk)
@@ -329,7 +329,7 @@ function otpresend() {
   xhr.send(jsondata);
 }
 function popalert() {
-  if(comparepass())
+  if(comparepass() == 1)
   {
     var fname = document.getElementById("fname").value;
     var lname = document.getElementById("lname").value;
