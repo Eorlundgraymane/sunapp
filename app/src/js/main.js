@@ -307,7 +307,10 @@ function phplogin(pk,pasw)
   console.log(jsondata);
   xhr.send(jsondata);
 }
-
+function gohome()
+{
+  window.location("https://sunshine.washtub66.hasura-app.io/");
+}
 function getuser()
 {
   var data = {};
