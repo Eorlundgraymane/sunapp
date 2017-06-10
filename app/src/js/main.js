@@ -106,7 +106,7 @@ function comparepass(){
   var pass = document.getElementById('pass').value;
   var confpass = document.getElementById('confpass').value;
   console.log(pass);
-  if(pass == ""){
+  if(pass.length == 0){
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
     document.getElementById('passlabel').innerHTML = "Password Empty";
