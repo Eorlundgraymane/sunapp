@@ -22,31 +22,31 @@ function checkleap()
   if(Boolean((Boolean(document.getElementById('month').value == 02))&&(Boolean(Boolean(document.getElementById('day').value >28) && (Boolean(document.getElementById('day').value <30)))))){
       for(var i = 1;i<=64;i++)
     {
-      if(Boolean((document.getElementById('year').options[i].value % 4)==0))
+      if(Boolean((document.getElementsByTagName("select #year option")[i].value % 4)==0))
       {
-        if(Boolean(document.getElementById('year').options[i].value % 100)==0)
+        if(Boolean(document.getElementsByTagName("select #year option")[i].value % 100)==0)
         {
-          if(Boolean(document.getElementById('year').option[i].value % 400)===0)
+          if(Boolean(document.getElementsByTagName("select #year option")[i].value % 400)===0)
           {
-              document.getElementById('year').options[i].disabled = false;
+              document.getElementsByTagName("select #year option")[i].disabled = false;
           }
           else {
-            document.getElementById('year').options[i].disabled = true;
+            document.getElementsByTagName("select #year option")[i].disabled = true;
           }
         }
         else {
-          document.getElementById('year').options[i].disabled = false;
+          document.getElementsByTagName("select #year option")[i].disabled = false;
         }
       }
       else {
-        document.getElementById('year').options[i].disabled = true;
+        document.getElementsByTagName("select #year option")[i].disabled = true;
       }
     }
   }
   else {
     for(var j = 1; i<=64;i++)
     {
-      document.getElementById('year').options[j].disabled = false;
+      document.getElementsByTagName("select #year option")[j].disabled = false;
     }
   }
 }
