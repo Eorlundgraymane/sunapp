@@ -295,7 +295,7 @@ function getuser()
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
-      alert("Successfully Logged In. Welcome "+JSON.stringify(json[0])+" ! Sunshine is under construction. Let's just show you the hallway");
+      alert("Successfully Logged In. Welcome "+JSON.stringify(json[0].username)+" ! Sunshine is under construction. Let's just show you the hallway");
       document.getElementById('loginform').submit();
     }
     else if(xhr.readyState ==4) {
