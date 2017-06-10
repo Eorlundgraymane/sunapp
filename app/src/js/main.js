@@ -435,12 +435,12 @@ function otpverify(){
   var otpcancelbutton = document.getElementById('otpcancel');
   var resendotpbutton = document.getElementById('resendotp');
   otpbutton.style.cursor = "not-allowed";
+  otpbutton.style.disabled = true;
   resendotpbutton.style.cursor = "not-allowed";
+  resendotpbutton.style.disabled = true;
   otpcancelbutton.style.cursor = "not-allowed";
+  otpcancelbutton.style.disabled = true;
   otpbutton.innerHTML = "Verifying....";
-  otpbutton.style.disabled = "true";
-  resendotpbutton.style.disabled = "true";
-  otpcancelbutton.style.disabled = "true";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/mobile/confirm";
   xhr.open("POST",url,true);
@@ -455,6 +455,17 @@ function otpverify(){
       setTimeout(function(){},3000);
       otpoverlayslideup();
       checklogin(mobile,password);
+    }
+    else {
+      otpbutton.style.cursor = "pointer";
+      otpbutton.style.disabled = false;
+      resendotpbutton.style.cursor = "pointer";
+      resendotpbutton.style.disabled = false;
+      otpcancelbutton.style.cursor = "pointer";
+      otpcancelbutton.style.disabled = false;
+      otpbutton.innerHTML = "Verify";
+      alert("Something went wrong during OTP verification");
+      console.log(json);
     }
   }
   var otp = document.getElementById('otp').value;
