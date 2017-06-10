@@ -15,7 +15,7 @@ function comparepass(){
     document.getElementById('passlabel').style.display = "inline";
     document.getElementById('conflabel').style.display = "none";
   }
-  else {
+  else if(pass!=""){
     document.getElementById('conflabel').style.display = "inline";
     document.getElementById('passlabel').style.display = "none";
   }
