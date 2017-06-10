@@ -136,15 +136,15 @@ input,select {
 }
 .passlabel{
   transition-property: all;
-  transition-duration: 1s;
-  transition-timing-function: ease-in;
+  transition-duration: 2s;
+  transition-timing-function: ease;
   opacity: 1;
   display: inline;
 }
 .conflabel{
   transition-property: all;
-  transition-duration: 1s;
-  transition-timing-function: ease-in;
+  transition-duration: 2s;
+  transition-timing-function: ease;
   opacity: 1;
   display: inline;
 }
