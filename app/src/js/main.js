@@ -1,6 +1,48 @@
 var admintoken = "Bearer nk8vh416e2v2sd1t6rhxmyzntgc8vx1t";
 var hasura_id;
 var auth_token;
+var email;
+function getpiclink(){
+  var piclink;
+  var data = {};
+  data["type"] = "select";
+  data["args"] = {};
+  data["args"]["table"] = "user";
+  data["args"]["columns"] = ["email"];
+  var query = JSON.stringify(data);
+  console.log(query);
+  xhr = new XMLHttpRequest();
+  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+      var x = new XMLHttpRequest();
+      x.onreadystatechange = function(){
+        if(x.readyState === 4 && x.status === 200){
+          var doc = x.responseText;
+          piclink =(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[1]).concat(":",(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[2])).replace(/"/g,"").replace(/}/g,"");
+          console.log(piclink);
+          document.getElementById('profileimage').src = piclink;
+          }
+          else {
+            if(x.readyState === 4){
+              alert("Could'nt get your Google pic");
+            }
+          }
+          }
+          x.open('GET','http://picasaweb.google.com/data/entry/api/user/'.concat((email).split("@")[0],"?alt=json"),true);
+          x.send();
+    }
+    else if(xhr.readyState ==4) {
+      alert(JSON.stringify(json));
+    }
+  }
+  xhr.send(query);
+}
 function updateusername(){
   var fname = document.getElementById('fname').value;
   var lname = document.getElementById('lname').value;
@@ -364,6 +406,7 @@ function getuser()
       loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
+      email = json.email;
       getuser();
     }
     else if(xhr.readyState == 4) {
@@ -463,7 +506,7 @@ function otpverify(){
       resendotpbutton.style.disabled = false;
       otpcancelbutton.style.cursor = "pointer";
       otpcancelbutton.style.disabled = false;
-      otpbutton.innerHTML = "Verify";      
+      otpbutton.innerHTML = "Verify";
       var json = JSON.parse(xhr.responseText);
       alert(JSON.stringify(json.message));
     }
