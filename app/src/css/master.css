@@ -16,6 +16,10 @@
 #shine{
   border: 1px solid red;
 }
+.profileimage{
+  height: 100%;
+  width: auto;
+}
 #shinetable{
   background-color: rgb(222, 247, 148);
   position: relative;
