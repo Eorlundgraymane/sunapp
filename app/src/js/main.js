@@ -37,7 +37,7 @@ function getpiclink(){
             }
           }
         }
-          x.open('GET','http://picasaweb.google.com/data/entry/api/user/'.concat((email).split("@")[0],"?alt=json"),true);\
+          x.open('GET','http://picasaweb.google.com/data/entry/api/user/'.concat((email).split("@")[0],"?alt=json"),true);
           console.log('google called');
           x.send();
 
