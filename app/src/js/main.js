@@ -106,14 +106,6 @@ function comparepass(){
   var pass = document.getElementById('pass').value;
   var confpass = document.getElementById('confpass').value;
   console.log(pass);
-  if(pass === null || pass === ""){
-    document.getElementById('passlabel').classList.remove("passshow");
-    document.getElementById('passlabel').classList.add("passlabel");
-    document.getElementById('passlabel').innerHTML = "Password Empty";
-    document.getElementById('passlabel').style.color = "yellow";
-    document.getElementById('passlabel').classList.remove("passshow");
-    document.getElementById('passlabel').classList.add("passlabel");
-    return 0;
   }
   else if(pass!=confpass){
     document.getElementById('passlabel').classList.remove("passshow");
