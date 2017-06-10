@@ -5,7 +5,7 @@
   <input type = "text" name = "uname" id = "uname" placeholder="Username" disabled="true"><br>
   <input type = "text" name = "email" id = "email" placeholder="Email ID"><br>
   <input type = "text" name = "mobile"id = "mob" placeholder="Mobile"><br>
-  <select onfocus = "checkfeb()" name = "day" id = "day">
+  <select onchange = "checkfeb()" name = "day" id = "day">
     <option value = "00">Day</option>
     <option value = "01">1</option>
     <option value = "02">2</option>
