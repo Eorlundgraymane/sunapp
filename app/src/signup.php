@@ -121,7 +121,7 @@
     <option class = "yearclass" value = "1999">1999</option>
 		</select><br>
   <!--<input type = "date" name = "dob" id = "dob"><br><br> Rendered Obsolete-->
-  <input type = "password" name = "password" required  id = "pass" placeholder="Password"><br>
+  <input type = "password" name = "password"  id = "pass" placeholder="Password"><br>
   <input type = "password" name = "confpass"  id = "confpass" placeholder="Retype Password" onkeypress() ="comparepass();" onkeyup="comparepass();">
   <div class = "passlabel" id = "passlabel">Passwords not matched</div><br>
   <button id = "signupbuttn" onclick = "popalert();" type = "button">Sign Up</button>
