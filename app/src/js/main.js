@@ -6,6 +6,8 @@ function updateusername(){
   var lname = document.getElementById('lname').value;
   var uname = fname.concat(" ",lname);
   document.getElementById('uname').value = uname;
+  var reload = document.getElementById('uname').innerHTML;
+  document.getElementById('uname').innerHTML = reload;
 }
 function checklogout(pk)
 {
