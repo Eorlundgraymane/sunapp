@@ -18,7 +18,7 @@ function checklogout(pk)
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged Out.");
       loginbutton.innerHTML = "Log In";
-      loginbutton.style.disabled = "false";
+      loginbutton.style.disabled = false;
       loginbutton.style.cursor = "pointer";
       document.getElementById('loginform').reset();
       document.getElementById('loginbutton').innerHTML = "Log In";
@@ -27,7 +27,7 @@ function checklogout(pk)
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Logout please try again");
       loginbutton.innerHTML = "Log In";
-      loginbutton.style.disabled = "false";
+      loginbutton.style.disabled = false;
       loginbutton.style.cursor = "pointer";
     }
   }
@@ -127,7 +127,7 @@ function checklogin(pk,pasw)
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json.hasura_id));      loginbutton.innerHTML = "Log In";
-            loginbutton.style.disabled = "false";
+            loginbutton.style.disabled = false;
             loginbutton.style.cursor = "pointer";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
@@ -163,7 +163,7 @@ function userlogin()
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json.hasura_id));
       loginbutton.innerHTML = "Log In";
-      loginbutton.style.disabled = "false";
+      loginbutton.style.disabled = false;
       loginbutton.style.cursor = "pointer";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
@@ -196,9 +196,9 @@ function otpoverlaydropdown(){
   otpcancelbutton.style.cursor = "pointer";
   otpbutton.innerHTML = "Verify";
   resendotpbutton.innerHTML = "Resent OTP";
-  otpbutton.style.disabled = "false";
-  resendotpbutton.style.disabled = "false";
-  otpcancelbutton.style.disabled = "false";
+  otpbutton.style.disabled = false;
+  resendotpbutton.style.disabled = false;
+  otpcancelbutton.style.disabled = false;
   otpform.style.opacity = "1";
   otpform.style.zIndex = "2";
   signupdiv.style.opacity = "0.5";
@@ -214,9 +214,9 @@ function otpoverlayslideup(){
   otpcancelbutton.style.cursor = "pointer";
   otpbutton.innerHTML = "Verify";
   resendotpbutton.innerHTML = "Resend OTP";
-  otpbutton.style.disabled = "false";
-  resendotpbutton.style.disabled = "false";
-  otpcancelbutton.style.disabled = "false";
+  otpbutton.style.disabled = false;
+  resendotpbutton.style.disabled = false;
+  otpcancelbutton.style.disabled = false;
   otpform.style.opacity = "0";
   otpform.style.zIndex = "-2";
   signupdiv.style.opacity = "1";
@@ -292,9 +292,9 @@ function otpresend() {
       setTimeout(function(){},3000);
       resendotpbutton.innerHTML = "Resend OTP";
       setTimeout(function(){},3000);
-      otpbutton.style.disabled = "false";
-      resendotpbutton.style.disabled = "false";
-      otpcancelbutton.style.disabled = "false";
+      otpbutton.style.disabled = false;
+      resendotpbutton.style.disabled = false;
+      otpcancelbutton.style.disabled = false;
       alert(JSON.stringify(json.message));
     }
   }
@@ -334,7 +334,7 @@ xhr.onreadystatechange = function(){
     signupbuttn.innerHTML = "Signed Up!!";
     setTimeout(function(){},3000);
     signupbuttn.innerHTML = "Sign Up";
-    signupbuttn.style.disabled = "false";
+    signupbuttn.style.disabled = false;
     signupbuttn.style.cursor = "pointer";
     otpoverlaydropdown();
   }
@@ -343,7 +343,7 @@ xhr.onreadystatechange = function(){
     console.log(JSON.stringify(json.code));
     alert(json.code);
     signupbuttn.innerHTML = "Sign Up";
-    signupbuttn.style.disabled = "false";
+    signupbuttn.style.disabled = false;
     signupbuttn.style.cursor = "pointer";
   }
 }
