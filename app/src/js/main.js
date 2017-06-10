@@ -72,6 +72,7 @@ function checklogout(pk)
 {
   document.getElementById('loginbutton').innerHTML = "Loggin Out...";
   document.getElementById('loginbutton').style.disabled = true;
+  document.getElementById('loginbutton').style.cursor = not-allowed;
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/user/logout";
   xhr.open("POST",url,true);
@@ -88,8 +89,6 @@ function checklogout(pk)
       loginbutton.style.disabled = false;
       loginbutton.style.cursor = "pointer";
       document.getElementById('loginform').reset();
-      document.getElementById('loginbutton').innerHTML = "Log In";
-      document.getElementById('loginbutton').style.disabled = false;
     }
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Logout please try again");
@@ -184,7 +183,7 @@ function checklogin(pk,pasw)
   var loginbutton = document.getElementById('loginbutton');
   loginbutton.innerHTML = "Logging In";
   loginbutton.style.disabled = "true";
-  loginbutton.style.curson = "not-allowed";
+  loginbutton.style.cursor = "not-allowed";
   var url  = "https://auth.washtub66.hasura-app.io/login";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
