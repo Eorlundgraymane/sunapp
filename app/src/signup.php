@@ -119,7 +119,8 @@
   </select><br>
   <!--<input type = "date" name = "dob" id = "dob"><br><br> Rendered Obsolete-->
   <input type = "password" name = "password" id = "pass" placeholder="Password"><br>
-  <input type = "password" name = "confpass"placeholder="Retype Password"><br>
+  <input type = "password" name = "confpass" id = "confpass" placeholder="Retype Password" onkeypress() ="comparepass();" onkeyup="comparepass();"><br>
+  <label for = "confpass"data-error = "passwords don't match" data-success = "Passwords matched!">Confirm Password</label>
   <button id = "signupbuttn" onclick = "popalert();" type = "button">Sign Up</button>
   <button id = "otpready" type = "button" onclick="otpoverlaydropdown();">Already received OTP</button>
   <!--<button id = "updateuser" type = "button" onclick="updatemyusers();">Check Update Query</button>!-->
