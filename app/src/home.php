@@ -19,6 +19,18 @@
       </div>
     </row>
     <row>
+    <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <?php
+      if(isset($_POST['primarykey'])&& isset($_POST['password'])){
+      echo' <button onclick = "changebanner();" type = "button">Click Here</button> to see your name on the Site Banner<br><button type = "button" onclick = "userlogout('.$_POST["primarykey"].');">Click here</button> to logout safely so that you don\'t cause any problems to my programming';
+      }
+      else {
+        echo' <button onclick = "gohome();" type = "button">Click Here</button> to go back to the Welcome Page';
+      }
+    ?>
+  </div>
+  </row>
+    <row>
       <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "profilepic">
         <img class = "profileimage img-responsive img-rounded" alt = "No Image Uploaded">
       </div>
