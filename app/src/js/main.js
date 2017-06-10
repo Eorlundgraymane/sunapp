@@ -104,6 +104,34 @@ function checklogout(pk)
   console.log(jsondata);
   xhr.send(jsondata);
 }
+
+function userlogout(pk)
+{
+  xhr = new XMLHttpRequest();
+  var url  = "https://auth.washtub66.hasura-app.io/user/logout";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json.hasura_id));
+      hasura_id = json.hasura_id;
+      auth_token = "Bearer "+json.auth_token;
+      alert("Successfully Logged Out. Bubye, Come back soon");
+      window.location = "https://sunshine.washtub66.hasura-app.io/";
+    }
+    else if(xhr.readyState == 4) {
+      alert("Something went wrong during Logout please try again");
+    }
+  }
+  var data = {};
+  data["mobile"] = pk;
+  console.log(data);
+  var jsondata = JSON.stringify(data);
+  console.log(jsondata);
+  xhr.send(jsondata);
+}
 function updatemyusersprofile(pk){
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
