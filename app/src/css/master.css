@@ -10,18 +10,10 @@
 {
   transform: translate(25%,60%);
 }
-button #signpbutton
-{
-  outline: none;
-  border-radius: 15px;
-  background-color: white;
-  color: #7ec0ee;
-}
 button{
   outline: none;
   border-radius: 15px;
   color: white;
-  background-color: #7ec0ee;
 }
 .otpform
 {
@@ -93,7 +85,7 @@ input,select {
   max-width: 100%;
   text-indent: 10px;
   margin: 3px;
-  background: none;
+  background-color: #7ec0ee;
   border-top: none;
   border-left: none;
   border-right: none;
