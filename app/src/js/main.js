@@ -106,25 +106,27 @@ function comparepass(){
   var pass = document.getElementById('pass').value;
   var confpass = document.getElementById('confpass').value;
   if(pass!=confpass){
+    document.getElementById('passlabel').classList.remove("passshow");
+    document.getElementById('passlabel').classList.add("passlabel");
+    document.getElementById('passlabel').innerHTML = "Password not Matching"
     document.getElementById('passlabel').classList.remove("passlabel");
     document.getElementById('passlabel').classList.add("passshow");
-    document.getElementById('conflabel').classList.remove("confshow");
-    document.getElementById('conflabel').classList.add("conflabel");
     return 0;
   }
   else if((pass!="")&&(pass == confpass)){
-    document.getElementById('conflabel').classList.remove("conflabel");
-    document.getElementById('conflabel').classList.add("confshow");
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
-
-    return 1
+    document.getElementById('passlabel').innerHTML = "Password Matched";
+    document.getElementById('conflabel').classList.remove("passlabel");
+    document.getElementById('conflabel').classList.add("passshow");
+    return 1;
   }
   else if(pass == ""){
     document.getElementById('conflabel').classList.remove("confshow");
     document.getElementById('conflabel').classList.add("conflabel");
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
+    return 0;
   }
 }
 function checklogout(pk)
