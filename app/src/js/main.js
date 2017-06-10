@@ -456,7 +456,7 @@ function otpverify(){
       otpoverlayslideup();
       checklogin(mobile,password);
     }
-    else {
+    else if(xhr.readyState ==4){
       otpbutton.style.cursor = "pointer";
       otpbutton.style.disabled = false;
       resendotpbutton.style.cursor = "pointer";
