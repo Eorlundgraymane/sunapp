@@ -36,13 +36,13 @@
     <option value = "27">27</option>
     <option value = "28">28</option>
     <option value = "29">29</option>
-    <option value = "30">30</option>
-    <option value = "31">31</option>
+    <option onfocus = "document.getElementById('febmonth').style.disabled = 'true';"value = "30">30</option>
+    <option onfocus = "document.getElementById('febmonth').style.disabled = 'true';"value = "31">31</option>
   </select>
   <select name = "month" id = "month">
     <option value = "00">Month</option>
     <option value = "01">January</option>
-    <option value = "02">February</option>
+    <option id = "febmonth" value = "02">February</option>
     <option value = "03">March</option>
     <option value = "04">April</option>
     <option value = "05">May</option>
