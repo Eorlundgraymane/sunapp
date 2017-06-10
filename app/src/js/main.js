@@ -309,7 +309,7 @@ function phplogin(pk,pasw)
 }
 function gohome()
 {
-  window.location("https://sunshine.washtub66.hasura-app.io/");
+  window.location = "https://sunshine.washtub66.hasura-app.io/";
 }
 function getuser()
 {
