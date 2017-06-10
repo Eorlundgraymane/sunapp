@@ -5,7 +5,7 @@ function updateusername(){
   var fname = document.getElementById('fname').value;
   var lname = document.getElementById('lname').value;
   var uname = fname.concat(" ",lname);
-  document.getElementById('uname').value = uname;  
+  document.getElementById('uname').value = uname;
 }
 function checkfeb(){
   if(Boolean(document.getElementById('day').value >29))
@@ -371,9 +371,8 @@ function otpresend() {
   console.log("JSON DATA : "+jsondata);
   xhr.send(jsondata);
 }
-function popalert() {
-  console.log(Boolean(comparepass));
-  if(Boolean(comparepass()))
+function popalert() {  
+  if(Boolean(comparepass))
   {
     console.log(Boolean(comparepass));
     var fname = document.getElementById("fname").value;
