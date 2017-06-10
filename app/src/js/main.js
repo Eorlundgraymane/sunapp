@@ -13,8 +13,16 @@ function checkfeb(){
   {
     document.getElementById('month').options[2].disabled = true;
   }
-  else {
-    document.getElementById('month').options[2].disabled = false;
+  else if(Boolean(document.getElementById('day').value >27)){
+    for(int i = 0;i<=64;i++)
+    {
+      if(!Boolean(Boolean((document.getElementById('year').options[i].value %4)==0)&&(Boolean((document.getElementById('year').options[i].value %100)==0))&&Boolean((document.getElementById('year').options[i].value %400)==0))){
+        document.getElementById('year').options[i].disabled = true;
+      }
+      else {
+        document.getElementById('year').optuons[i].disabled = false;
+      }
+    }
   }
 }
 function comparepass(){
