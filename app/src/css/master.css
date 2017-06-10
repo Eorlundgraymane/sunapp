@@ -154,7 +154,7 @@ input,select {
   color: white;
 }
 .passlabel{
-  display: none;
+  display: inline-block;
   opacity: 0;
   color: red;
   font-size: 0.85em;
