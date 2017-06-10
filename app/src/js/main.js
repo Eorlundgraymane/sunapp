@@ -296,7 +296,7 @@ function getuser()
       alert(JSON.stringify(json));
     }
   }
-  xhr.send(JSON.stringify(query));
+  xhr.send(query);
 }
 
   function userlogin()
