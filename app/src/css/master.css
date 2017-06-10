@@ -81,6 +81,10 @@ button{
 ::-ms-input-placeholder{
   color: white
 }
+input:-webkit-autofill {
+    -webkit-box-shadow: #7ec0ee;
+    -webkit-text-fill-color: white;
+}
 input,select {
   outline: none;
   max-width: 100%;
