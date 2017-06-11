@@ -9,6 +9,10 @@ body,html{
   list-style-type: none;
   margin-left: -20px;
   background-color: rgba(222, 247, 148,0.8);
+
+}
+#friend{
+  margin-left: -50px;
 }
 .regpane
 {
