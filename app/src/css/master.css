@@ -24,6 +24,18 @@ body,html{
 #profilearea{
   border: 2px solid orange;
 }
+#contentarea{
+  border: 2px solid yellow;
+}
+#friendspane{
+  border: 1px solid grey;
+}
+#newspane{
+  border: 1px solid black;
+}
+#postpane{
+  border: 1px solid lightgreen;
+}
 #centerform
 {
   transform: translate(25%,60%);
