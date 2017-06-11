@@ -41,8 +41,8 @@ function getfriendslist(){
           if(fhr.readyState === 4 && fxhr.status === 200){
             var fjson = JSON.parse(fxhr.responseText);
             console.log()
-          }
-        }*/
+          }*/
+        }
       }
       else if(xhr.readyState ==4) {
         alert(JSON.stringify(json));
