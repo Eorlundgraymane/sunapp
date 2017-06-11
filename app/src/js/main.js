@@ -149,6 +149,8 @@ function appfriendslogin(){
 function applogin(){
   if(suggesiondrop  == 0 && friendsuggestflag == 0)
     {
+      document.getElementById('friendssuggest').innerHTML = "Loading friend Suggessions";
+      alert("friend suggession is an experimental feature. Adding new friends will be coming soon");
       xhr = new XMLHttpRequest();
       var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -880,14 +882,13 @@ else {
 }
 
 function selectsuggests(){
-      document.getElementById('friendssuggest').innerHTML = "Loading friend Suggessions";
-      alert("friend suggession is an experimental feature. Adding new friends will be coming soon");
   var data = {};
   data["type"] = "select";
   data["args"] = {};
   data["args"]["table"] = "profile";
   data["args"]["columns"] = ["user_id","fname"];
   var query = JSON.stringify(data);
+  document.getElementById('friendssuggest').innerHTML = "";
   console.log(query);
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
@@ -898,7 +899,6 @@ function selectsuggests(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log("Users : "+JSON.stringify(json));
-      document.getElementById('friendssuggest').innerHTML = "";
       for(each of json)
       {
         var checkid = each.user_id;
