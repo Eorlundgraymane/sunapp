@@ -50,6 +50,7 @@ function getfriendslist(){
             alert("Could'nt get your friend's list at the moment");
           }
         }
+        fxhr.send(friendquery);
         }
       }
       else if(xhr.readyState ==4) {
