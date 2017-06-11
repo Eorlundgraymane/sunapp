@@ -147,6 +147,8 @@ function appfriendslogin(){
 }
 
 function applogin(){
+  if(suggesiondrop  == 0 && friendsuggestflag == 0)
+    {
       xhr = new XMLHttpRequest();
       var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -169,6 +171,14 @@ function applogin(){
         }
       }
       xhr.send();
+    }
+
+    else if(suggesiondrop  == 1) {
+    suggesiondrop  = 0;
+    }
+    else if(friendsuggestflag == 1){
+    suggesiondrop  =1;
+    }
   }
 
 
@@ -870,8 +880,6 @@ else {
 }
 
 function selectsuggests(){
-  if(suggesiondrop  == 0 && friendsuggestflag == 0)
-    {
       document.getElementById('friendssuggest').innerHTML = "Loading friend Suggessions";
       alert("friend suggession is an experimental feature. Adding new friends will be coming soon");
   var data = {};
@@ -937,13 +945,6 @@ function selectsuggests(){
     }
   }
   xhr.send(query);
-}
 
-else if(suggesiondrop  == 1) {
-suggesiondrop  = 0;
-}
-else if(friendsuggestflag == 1){
-suggesiondrop  =1;
-}
 
 }
