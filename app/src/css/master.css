@@ -8,11 +8,11 @@ body,html{
 #friendslist{
   list-style-type: none;
   margin-left: -20px;
-  background-color: rgba(222, 247, 148,0.8);
+  background-color: rgba(126,192,238,0.75);
 
 }
 #friend{
-  margin-left: -50px;
+  margin-left: -40px;
 }
 .regpane
 {
