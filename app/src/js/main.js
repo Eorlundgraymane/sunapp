@@ -813,8 +813,8 @@ function popalert() {
     }
     else if(xhr.readyState == 4) {
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.code));
-      alert(json.code);
+      console.log(JSON.stringify(json.message));
+      alert(json.message);
       signupbuttn.innerHTML = "Sign Up";
       signupbuttn.style.disabled = false;
       signupbuttn.style.cursor = "pointer";
