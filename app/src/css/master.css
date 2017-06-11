@@ -13,6 +13,7 @@ body,html{
 #sessionbuttons{
   position: relative;
   left: 75%;
+  margin-top: 10px;
 }
 #centerform
 {
