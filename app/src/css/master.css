@@ -15,8 +15,7 @@ body,html{
 }
 .sessionbutton{
   position: absolute;
-  right: 0;
-  display: inline-block;
+  right: 0;  
   margin-top: 10px;
 }
 #centerform
