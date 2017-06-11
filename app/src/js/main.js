@@ -146,7 +146,7 @@ function appfriendslogin(){
   }
 }
 
-function applogin(){    
+function applogin(){
       xhr = new XMLHttpRequest();
       var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -895,6 +895,7 @@ function selectsuggests(){
         var checkid = each.user_id;
         if(checkid != hasura_id)
         {
+          console.log(hasura_id);
           var checkname = each.fname;
           var checkdata = {};
           checkdata["type"] = "select";
