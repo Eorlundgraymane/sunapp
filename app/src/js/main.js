@@ -43,7 +43,7 @@ function getfriendslist(){
         fxhr.onreadystatechange = function(){
           if(fxhr.readyState == 4 && fxhr.status == 200){
             var fjson = JSON.parse(fxhr.responseText);
-            console.log(JSON.stringify(fjson.fname));
+            console.log(fjson.fname);
           }
           else if(fxhr.readyState === 4){
             var fjson = JSON.parse(fxhr.responseText);
