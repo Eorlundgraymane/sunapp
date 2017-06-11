@@ -899,6 +899,7 @@ function selectsuggests(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log("Users : "+JSON.stringify(json));
+      friendsuggestflag = 1
       for(each of json)
       {
         var checkid = each.user_id;
@@ -938,7 +939,7 @@ function selectsuggests(){
         }
         cxhr.send(checkquery);
       }
-    }  
+    }
     }
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
