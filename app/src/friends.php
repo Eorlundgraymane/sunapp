@@ -3,7 +3,10 @@
       Friend's List
     </button>
       <ul class = "collapse" id = "friendslist">
-        <li>Test friend</li>
+        <li><figure>
+          <div id = "friensprite"></div>
+          <figcaption>Test friend</figcaption>
+        </li>
         <li>Test friend</li>
         <li>Test friend</li>
         <li>Test friend</li>

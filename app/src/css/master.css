@@ -13,6 +13,11 @@ body,html{
 #sessionbutton{
   border: 1px solid purple;
 }
+#freindsprit
+{
+  width: 50px;
+  background-image: url('/css/friendsprite.gif');
+}
 .btn:hover{
   color: white;
 }
