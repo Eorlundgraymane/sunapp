@@ -15,7 +15,8 @@ body,html{
 }
 .sessionbutton{
   position:relative;
-  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   left: 65%;
   margin-top: 10px;
 }
