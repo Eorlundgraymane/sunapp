@@ -35,8 +35,6 @@ body,html{
 }
 #shinetable{
   background-color: rgb(222, 247, 148);
-  position: relative;
-  left: 50%;
   border: 1px solid black;
   height: 200%;
 }
