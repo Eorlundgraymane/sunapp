@@ -5,6 +5,31 @@ var email;
 
 function getfriendslist(){
   alert("Friend's list function is under construction.");
+  document.getElementById('friendslist').innerHTML = "Loading Friend's List";
+  var data = {};
+  data["type"] = "select";
+  data["args"] = {};
+  data["args"]["table"] = "friends";
+  data["args"]["columns"] = ["friend_id"];
+  var query = JSON.stringify(data);
+  console.log(query);
+  xhr = new XMLHttpRequest();
+  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+      console.log(json);
+    }
+    else if(xhr.readyState ==4) {
+      alert(JSON.stringify(json));
+    }
+  }
+  xhr.send(query);
+
 }
 function getpiclink(){
   console.log('piclink called');
