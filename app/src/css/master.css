@@ -14,6 +14,7 @@ body,html{
   border: 1px solid purple;
 }
 #freindslist{
+  border: 1px solid black;
   width: 200%;
 }
 .friendimg{
