@@ -4,8 +4,7 @@
     </button>
       <ul class = "collapse" id = "friendslist">
         <li><figure>
-          <div id = "friensprite"></div>
-          <figcaption>Test friend</figcaption>
+          <div id = "friensprite"><figcaption>Test friend</figcaption></div>
         </figure>
         </li>
         <li>Test friend</li>
