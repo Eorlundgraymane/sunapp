@@ -2,6 +2,7 @@
 <html>
   <head>
     <?php include 'headprereqs.php';?>
+    <script src = "js/sha.js"></script>
     <title>Sunshine | Welcome</title>
   </head>
     <body class = "outer-container">
