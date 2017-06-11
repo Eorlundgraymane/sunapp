@@ -18,7 +18,7 @@ function appfriendslogin(){
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       email = json.email;
-      getfreindslist();
+      getfriendslist();
     }
     else if(xhr.readyState == 4) {
       var json = JSON.parse(xhr.responseText);
