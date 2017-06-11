@@ -924,7 +924,7 @@ function selectsuggests(){
               }
             }
             else if(cxhr.readyState == 4){
-              console.log(each.fname + "is a suggession");
+              console.log("Error");
             }
         }
         cxhr.send(checkquery);
