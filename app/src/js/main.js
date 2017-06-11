@@ -872,7 +872,8 @@ function selectsuggests(){
         checkdata["args"]["table"] = "friends";
         checkdata["args"]["columns"] = ["user_id"];
         checkdata["args"]["where"] = {};
-        checkdata["args"]["where"]["friend_id"] = checkid;
+        checkdata["args"]["where"]["friend_id"] = hasura_id;
+        checkdata["args"]["where"]["user_id"] = checkid;
         var checkquery = JSON.stringify(checkdata);
         console.log(query);
         cxhr = new XMLHttpRequest();
