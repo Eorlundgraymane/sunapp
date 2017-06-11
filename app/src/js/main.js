@@ -42,8 +42,7 @@ function getfriendslist(){
         fxhr.withCredentials = "true";
         fxhr.onreadystatechange = function(){
           if(fxhr.readyState == 4 && fxhr.status == 200){
-            var fjson = JSON.parse(fxhr.responseText);
-            console.log(JSON.stringify(fjson.fname));
+            console.log(JSON.stringify(JSON.parse(fxhr.responseText).fname));
           }
           else if(fxhr.readyState === 4){
             var fjson = JSON.parse(fxhr.responseText);
@@ -52,7 +51,6 @@ function getfriendslist(){
           }
         }
         fxhr.send(friendquery);
-        setTimeout(function(){},3000);
         }
       }
       else if(xhr.readyState ==4) {
