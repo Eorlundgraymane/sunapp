@@ -13,6 +13,9 @@ body,html{
 #sessionbutton{
   border: 1px solid purple;
 }
+.btn:hover{
+  color: white;
+}
 .sessionbutton{
   position:relative;
   margin-left: 5px;
