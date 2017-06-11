@@ -13,11 +13,10 @@
     <title>Sunshine | Home</title>
   </head>
   <body class = "outer-container">
-    <row>      
-        <?php include 'header.php';?>
-      </div>
-    </row>
     <row>
+        <?php include 'header.php';?>
+    </row>
+    <row>      
       <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "profilepic">
         <!--<button id = "picbutton" type = "button" onclick="getpiclink();">Click to load image</button>-->
         <img id = "profileimage" class = "profileimage img-responsive img-rounded" alt = "No Image Uploaded">
