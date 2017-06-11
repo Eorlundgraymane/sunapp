@@ -845,6 +845,7 @@ else {
 function selectsuggests(){
   if(suggesiondrop  == 0 && friendsuggestflag == 0)
     {
+      document.getElementById('friendssuggest').innerHTML = "Wait till we restore the page state";
       alert("friend suggession is an experimental feature. Adding new friends will be coming soon");
   var data = {};
   data["type"] = "select";
@@ -890,6 +891,7 @@ function selectsuggests(){
       }
       cxhr.send(checkquery);
     }
+    document.getElementById('friendssuggest').innerHTML = "Friend Suggessions";
     }
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
