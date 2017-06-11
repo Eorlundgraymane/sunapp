@@ -145,6 +145,35 @@ function appfriendslogin(){
     droppeddown =1;
   }
 }
+
+function applogin(){
+      alert("Friend's list function is still experimental. Adding Friends feauture coming soon...");
+      document.getElementById('friendslist').innerHTML = "Loading Friend's List";
+      xhr = new XMLHttpRequest();
+      var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
+      xhr.open("POST",url,true);
+      xhr.setRequestHeader("Content-type","application/json");
+      xhr.withCredentials = "true";
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4 && xhr.status == 200){
+          var json = JSON.parse(xhr.responseText);
+          console.log(JSON.stringify(json.hasura_id));
+          hasura_id = json.hasura_id;
+          auth_token = "Bearer "+json.auth_token;
+          email = json.email;
+          getfriendslist();
+        }
+        else if(xhr.readyState == 4) {
+          var json = JSON.parse(xhr.responseText);
+          console.log(JSON.stringify(json));
+          alert(JSON.stringify(json));
+          alert("Could'nt get your friend's list at the moment");
+        }
+      }
+      xhr.send();
+  }
+
+
 function getfriendslist(){
   var data = {};
   data["type"] = "select";
@@ -843,6 +872,7 @@ else {
 }
 
 function selectsuggests(){
+  applogin();
   if(suggesiondrop  == 0 && friendsuggestflag == 0)
     {
       document.getElementById('friendssuggest').innerHTML = "Wait till we restore the page state";
@@ -866,10 +896,8 @@ function selectsuggests(){
       for(each of json)
       {
         var checkid = each.user_id;
-        if(checkid == hasura_id)
-        {}
-        else{
-          console.log(checkid+":"+hasura_id);
+        if(checkid != hasura_id)
+        {
           var checkname = each.fname;
           var checkdata = {};
           checkdata["type"] = "select";
