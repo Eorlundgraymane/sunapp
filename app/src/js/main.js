@@ -866,8 +866,9 @@ function selectsuggests(){
       for(each of json)
       {
         var checkid = each.user_id;
-        if(checkid != hasura_id)
-        {
+        if(checkid == hasura_id)
+        {}
+        else{
           var checkname = each.fname;
           var checkdata = {};
           checkdata["type"] = "select";
