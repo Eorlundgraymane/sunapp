@@ -862,7 +862,7 @@ function selectsuggests(){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      consle.log("Users : "+JSON.stringify(json));
+      console.log("Users : "+JSON.stringify(json));
       for(each of json)
       {
         var checkid = each.user_id;
