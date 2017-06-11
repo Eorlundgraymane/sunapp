@@ -3,6 +3,28 @@ var hasura_id;
 var auth_token;
 var email;
 var friendlistflag = 0;
+function applogin(){
+  xhr = new XMLHttpRequest();
+  var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json.hasura_id));
+      hasura_id = json.hasura_id;
+      auth_token = "Bearer "+json.auth_token;
+      email = json.email;
+    }
+    else if(xhr.readyState == 4) {
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+      alert(JSON.stringify(json));
+    }
+  }
+  xhr.send();
+}
 function getfriendslist(){
   if(friendlistflag == 0)
     {
@@ -13,6 +35,9 @@ function getfriendslist(){
     data["args"] = {};
     data["args"]["table"] = "friends";
     data["args"]["columns"] = ["user_id"];
+    data["args"]["where"] = {};
+    applogin();
+    data["args"]["where"]["friend_id"] = hasura_id;
     var query = JSON.stringify(data);
     console.log(query);
     var xhr = new XMLHttpRequest();
