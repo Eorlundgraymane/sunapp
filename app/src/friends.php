@@ -1,9 +1,8 @@
 <nav>
-    <button type = "button" class = "btn" data-toggle = "collapse" data-target = "#friendslist">
+    <button onclick = "getfriendslist();" type = "button" class = "btn" data-toggle = "collapse" data-target = "#friendslist">
       Friend's List
     </button>
       <ul class = "collapse" id = "friendslist">
-        <script>getfriendslist();</script>
         <li>
           <figure  id = "friend">
             <img class = "friendimg img-rounded" alt = "Friend's Image" src = "css/friendsprite.jpg">
