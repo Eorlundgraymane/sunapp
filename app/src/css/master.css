@@ -8,7 +8,7 @@ body,html{
 .collapse{
 }
 #friendslist{
-  list-style-type: none;
+  list-style-image: url('css/friendsprite.jpg');
 }
 .regpane
 {
