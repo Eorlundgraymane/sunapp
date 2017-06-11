@@ -10,6 +10,10 @@ body,html{
   position: absolute;
   top: 25%;
 }
+#sessionbuttons{
+  position: relative;
+  left: 75%;
+}
 #centerform
 {
   transform: translate(25%,60%);
