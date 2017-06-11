@@ -5,31 +5,31 @@
       <ul class = "collapse" id = "friendslist">
         <li>
           <figure  id = "friend">
-            <img class = "friendimg img-rounded" alt = "Friend's Image" src = "css/friendsprite.jpg">
+            <img class = "friendimg img-responsive img-rounded" alt = "Friend's Image" src = "css/friendsprite.jpg">
             <figcaption>Test friend</figcaption>
           </figure>
         </li>
         <li>
           <figure  id = "friend">
-            <img class = "friendimg img-rounded" alt = "Friend's Image" src = "css/friendsprite.jpg">
+            <img class = "friendimg img-responsive img-rounded" alt = "Friend's Image" src = "css/friendsprite.jpg">
             <figcaption>Test friend</figcaption>
           </figure>
         </li>
         <li>
           <figure  id = "friend">
-            <img class = "friendimg img-rounded" alt = "Friend's Image" src = "css/friendsprite.jpg">
+            <img class = "friendimg img-responsive img-rounded" alt = "Friend's Image" src = "css/friendsprite.jpg">
             <figcaption>Test friend</figcaption>
           </figure>
         </li>
         <li>
           <figure  id = "friend">
-            <img class = "friendimg img-rounded" alt = "Friend's Image" src = "css/friendsprite.jpg">
+            <img class = "friendimg img-responsive img-rounded" alt = "Friend's Image" src = "css/friendsprite.jpg">
             <figcaption>Test friend</figcaption>
           </figure>
         </li>
         <li>
           <figure  id = "friend">
-            <img class = "friendimg img-rounded" alt = "Friend's Image" src = "css/friendsprite.jpg">
+            <img class = "friendimg img-responsive img-rounded" alt = "Friend's Image" src = "css/friendsprite.jpg">
             <figcaption>Test friend</figcaption>
           </figure>
         </li>
