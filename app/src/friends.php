@@ -1,8 +1,10 @@
 <nav>
     <button type = "button" class = "btn" data-toggle = "collapse" data-target = "friendslist">
-      <h3>Friend's List</h3>
+      <h5>Friend's List</h5>
     </button>
-      <ul class = "collapse" id = "friendslist" >
+    <div  class = "collapse" id = "friendslist">
+      <ul >
         <li>Test friend</li>
       </ul>
+    </div>
 </nav>
