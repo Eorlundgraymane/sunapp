@@ -13,23 +13,10 @@
     <title>Sunshine | Home</title>
   </head>
   <body class = "outer-container">
-    <row>
-      <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id  = "sitebanner">
+    <row>      
         <?php include 'header.php';?>
       </div>
     </row>
-    <row>
-    <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <?php
-      if(isset($_POST['primarykey'])&& isset($_POST['password'])){
-      echo' <button onclick = "changebanner();" type = "button">Click Here</button> to see your name on the Site Banner<br><button type = "button" onclick = "userlogout('.$_POST["primarykey"].');">Click here</button> to logout safely so that you don\'t cause any problems to my programming';
-      }
-      else {
-        echo' You\'re not Logged In and don\'t have permission to access this page. Please <button onclick = "gohome();" type = "button">Click Here</button> to go back to the Welcome Page';
-      }
-    ?>
-  </div>
-  </row>
     <row>
       <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "profilepic">
         <!--<button id = "picbutton" type = "button" onclick="getpiclink();">Click to load image</button>-->
