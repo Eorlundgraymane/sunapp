@@ -5,8 +5,6 @@ body,html{
 .outer-container {
   background-image: url('sunshine-min.jpg');
 }
-.collapse{
-}
 #friendslist{
   list-style-type: none;
 }
