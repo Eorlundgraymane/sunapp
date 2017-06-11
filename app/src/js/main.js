@@ -4,6 +4,8 @@ var auth_token;
 var email;
 var droppeddown = 0;
 var friendlistflag = 0;
+var friendsuggestflag = 0;
+var suggesiondrop = 0;
 
 function SHA256(s){
  var chrsz  = 8;
@@ -838,4 +840,65 @@ function popalert() {
 else {
   alert("passwords don't match");
 }
+}
+
+function selectsuggests(){
+  if(suggesiondrop  == 0 && friendsuggestflag == 0)
+    {
+  var data = {};
+  data["type"] = "select";
+  data["args"] = {};
+  data["args"]["table"] = "profile";
+  data["args"]["columns"] = ["user_id","fname"];
+  var query = JSON.stringify(data);
+  console.log(query);
+  xhr = new XMLHttpRequest();
+  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      for(each of json)
+      {
+        var checkid = each.user_id;
+        var checkdata = {};
+        checkdata["type"] = "select";
+        checkdata["args"] = {};
+        checkdata["args"]["table"] = "friends";
+        checkdata["args"]["columns"] = ["user_id"];
+        checkdata["args"]["where"] = {};
+        checkdata["args"]["where"]["friend_id"] = checkid;
+        var checkquery = JSON.stringify(checkdata);
+        console.log(query);
+        cxhr = new XMLHttpRequest();
+        curl = url;
+        cxhr.open('POST',curl,false);
+        cxhr.setRequestHeader("Content-type","application/json");
+        cxhr.withCredentials = "true";
+        cxhr.onreadystatechange = function(){
+          if(cxhr.readyState == 4 && cxhr.status == 200){
+            console.log(each.fname + "is a friend");
+          }
+          else if(cxhr.readyState == 4){
+            console.log(each.fname + "is a suggession");
+          }
+      }
+    }
+    }
+    else if(xhr.readyState ==4) {
+      alert(JSON.stringify(json));
+    }
+  }
+  xhr.send(query);
+}
+
+else if(suggesiondrop  == 1) {
+suggesiondrop  = 0;
+}
+else if(friendsuggestflag == 1){
+suggesiondrop  =1;
+}
+
 }
