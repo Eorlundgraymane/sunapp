@@ -36,63 +36,62 @@ function appfriendslogin(){
   }
 }
 function getfriendslist(){
-    var data = {};
-    data["type"] = "select";
-    data["args"] = {};
-    data["args"]["table"] = "friends";
-    data["args"]["columns"] = ["user_id"];
-    data["args"]["where"] = {};
-    data["args"]["where"]["friend_id"] = hasura_id;
-    var query = JSON.stringify(data);
-    console.log(query);
-    var xhr = new XMLHttpRequest();
-    var url = "https://data.washtub66.hasura-app.io/v1/query";
-    xhr.open("POST",url,true);
-    xhr.setRequestHeader("Content-type","application/json");
-    xhr.withCredentials = "true";
-    xhr.onreadystatechange = function(){
-      if(xhr.readyState == 4 && xhr.status == 200){
-        document.getElementById('friendslist').innerHTML = "";
-        var json = JSON.parse(xhr.responseText);
-        console.log(json);
-        console.log(JSON.stringify(json));
-        var frienddata = {};
-        frienddata["type"] = "select";
-        frienddata["args"] = {};
-        frienddata["args"]["table"] = "profile";
-        frienddata["args"]["columns"] = ["fname"];
-        for(fid of json)
-        {
-          frienddata["args"]["where"] = {};
-          frienddata["args"]["where"]["user_id"] = fid.user_id;
-          var friendquery = JSON.stringify(frienddata);
-          var fxhr = new XMLHttpRequest();
-          fxhr.open("POST",url,false)
-          fxhr.setRequestHeader("Content-type","application/json");
-          fxhr.withCredentials = "true";
-          fxhr.onreadystatechange = function(){
-            if(fxhr.readyState == 4 && fxhr.status == 200){
-              var fjson = JSON.parse(fxhr.responseText);
-              console.log(JSON.stringify(fjson[0].fname));
-              var friendname = fjson[0].fname;
-              document.getElementById('friendslist').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+friendname+'</figcaption></figure></li>';
-            }
-            else if(fxhr.readyState === 4){
-              var fjson = JSON.parse(fxhr.responseText);
-              console.log(JSON.stringify(fjson));
-              alert("Could'nt get your friend's list at the moment");
-            }
+  var data = {};
+  data["type"] = "select";
+  data["args"] = {};
+  data["args"]["table"] = "friends";
+  data["args"]["columns"] = ["user_id"];
+  data["args"]["where"] = {};
+  data["args"]["where"]["friend_id"] = hasura_id;
+  var query = JSON.stringify(data);
+  console.log(query);
+  var xhr = new XMLHttpRequest();
+  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      document.getElementById('friendslist').innerHTML = "";
+      var json = JSON.parse(xhr.responseText);
+      console.log(json);
+      console.log(JSON.stringify(json));
+      var frienddata = {};
+      frienddata["type"] = "select";
+      frienddata["args"] = {};
+      frienddata["args"]["table"] = "profile";
+      frienddata["args"]["columns"] = ["fname"];
+      for(fid of json)
+      {
+        frienddata["args"]["where"] = {};
+        frienddata["args"]["where"]["user_id"] = fid.user_id;
+        var friendquery = JSON.stringify(frienddata);
+        var fxhr = new XMLHttpRequest();
+        fxhr.open("POST",url,false)
+        fxhr.setRequestHeader("Content-type","application/json");
+        fxhr.withCredentials = "true";
+        fxhr.onreadystatechange = function(){
+          if(fxhr.readyState == 4 && fxhr.status == 200){
+            var fjson = JSON.parse(fxhr.responseText);
+            console.log(JSON.stringify(fjson[0].fname));
+            var friendname = fjson[0].fname;
+            document.getElementById('friendslist').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+friendname+'</figcaption></figure></li>';
           }
-          fxhr.send(friendquery);
+          else if(fxhr.readyState === 4){
+            var fjson = JSON.parse(fxhr.responseText);
+            console.log(JSON.stringify(fjson));
+            alert("Could'nt get your friend's list at the moment");
           }
         }
-        else if(xhr.readyState ==4) {
-          alert(JSON.stringify(json));
+        fxhr.send(friendquery);
         }
       }
-    xhr.send(query);
-    friendlistflag = 1;
-  }
+      else if(xhr.readyState ==4) {
+        alert(JSON.stringify(json));
+      }
+    }
+  xhr.send(query);
+  friendlistflag = 1;
 }
 function getpiclink(){
   console.log('piclink called');
