@@ -13,9 +13,6 @@ body,html{
 #sessionbutton{
   border: 1px solid purple;
 }
-#friend{
-  border: 1px solid black;
-}
 .friendimg{
   width: 50px;
   height: auto;
