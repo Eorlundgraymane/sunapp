@@ -42,7 +42,7 @@ function getfriendslist(){
           if(fxhr.readyState == 4 && fxhr.status == 200){
             var fjson = JSON.parse(fxhr.responseText);
             console.log(JSON.stringify(fjson[0].fname));
-            var friendname = JSON.stringify(fjson[0].fname);
+            var friendname = fjson[0].fname;
             document.getElementById('friendslist').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+friendname+'</figcaption></figure></li>';
           }
           else if(fxhr.readyState === 4){
