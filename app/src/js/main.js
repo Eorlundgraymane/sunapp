@@ -880,7 +880,7 @@ function selectsuggests(){
         cxhr.withCredentials = "true";
         cxhr.onreadystatechange = function(){
           if(cxhr.readyState == 4 && cxhr.status == 200){
-            var cjson = JSON.parse(cxhr);
+            var cjson = JSON.parse(cxhr.responseText);
             console.log(JSON.stringify(cjson));
           }
           else if(cxhr.readyState == 4){
