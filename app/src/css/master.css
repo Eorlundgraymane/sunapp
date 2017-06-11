@@ -6,7 +6,9 @@ body,html{
   background-image: url('sunshine-min.jpg');
 }
 .collapse{
-    list-style-type: none;
+}
+#friendslist{
+  list-style-type: none;
 }
 .regpane
 {
