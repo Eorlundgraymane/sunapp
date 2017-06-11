@@ -29,8 +29,6 @@ body,html{
 .profileimage{
   position: relative;
   left: 25%;
-  height: 5.2em;
-  width: 10em;
   transition-property: all;
   transition-duration: 3s;
   transition-timing-function: ease;
@@ -39,8 +37,6 @@ body,html{
 .profileimageappeared{
   position: relative;
   left: 25%;
-  height: 5.2em;
-  width: 10em;
   opacity: 1;
 }
 #shinetable{
