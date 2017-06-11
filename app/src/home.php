@@ -42,7 +42,7 @@
     <row>
       <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "contentarea">
         <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "friendspane">
-          <?php //include 'friends.php';?>
+          <?php include 'friends.php';?>
         </div>
         <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-6" id = "newspane">
         </div>
