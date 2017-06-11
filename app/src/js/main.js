@@ -37,7 +37,7 @@ function getfriendslist(){
         var friendquery = JSON.stringify(frienddata);
         console.log(friendquery);
         var fxhr = new XMLHttpRequest();
-        fxhr.open("POST",url,true)
+        fxhr.open("POST",url,false)
         fxhr.setRequestHeader("Content-type","application/json");
         fxhr.withCredentials = "true";
         fxhr.onreadystatechange = function(){
