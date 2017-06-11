@@ -938,7 +938,7 @@ function selectsuggests(){
         cxhr.send(checkquery);
       }
     }
-    document.getElementById('friendssuggest').innerHTML = '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
+    document.getElementById('friendssuggest').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
     }
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
