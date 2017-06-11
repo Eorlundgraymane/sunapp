@@ -5,6 +5,9 @@ body,html{
 .outer-container {
   background-image: url('sunshine-min.jpg');
 }
+.collapse{
+    list-style-type: none;
+}
 .regpane
 {
   position: absolute;
