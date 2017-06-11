@@ -21,6 +21,8 @@ body,html{
   border: 1px solid red;
 }
 .profileimage{
+  position: relative;
+  left: 25%;
   height: 5.2em;
   width: 10em;
   transition-property: all;
@@ -29,12 +31,16 @@ body,html{
   opacity: 0;
 }
 .profileimageappeared{
+  position: relative;
+  left: 25%;
   height: 5.2em;
   width: 10em;
   opacity: 1;
 }
 #shinetable{
   background-color: rgb(222, 247, 148);
+  position: relative;
+  left: 50%;
   border: 1px solid black;
   height: 200%;
 }
