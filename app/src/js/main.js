@@ -28,10 +28,12 @@ function getfriendslist(){
       frienddata["args"] = {};
       frienddata["args"]["table"] = "profile";
       frienddata["args"]["columns"] = ["username"];
-      /*for(json of iterable)
+      for(fid of json)
       {
-        frienddata["args"]["where"] = json
-        var friendquery = JSON.stringify(frienddata);
+        console.log(fid.friendid);
+        console.log(JSON.stringify(fid.friendid));
+        /*frienddata["args"]["where"] = ["user_id":fid.friendid];
+        var friendquery = JSON.stringify(frienddata;
         console.log(friendquery);
         var fxhr = new XMLHttpRequest();
         fxhr.open("POST",url,true)
@@ -42,8 +44,8 @@ function getfriendslist(){
             var fjson = JSON.parse(fxhr.responseText);
             console.log()
           }
-          }
         }*/
+        }
       }
       else if(xhr.readyState ==4) {
         alert(JSON.stringify(json));
