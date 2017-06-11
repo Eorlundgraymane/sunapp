@@ -11,6 +11,9 @@ body,html{
   background-color: rgba(126,192,238,0.75);
 
 }
+.btn{
+  outline: none;
+}
 #friend{
   margin-left: -40px;
 }
