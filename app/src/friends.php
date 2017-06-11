@@ -6,6 +6,7 @@
         <li><figure>
           <div id = "friensprite"></div>
           <figcaption>Test friend</figcaption>
+        </figure>
         </li>
         <li>Test friend</li>
         <li>Test friend</li>
