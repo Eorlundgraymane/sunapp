@@ -898,6 +898,7 @@ function selectsuggests(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log("Users : "+JSON.stringify(json));
+      document.getElementById('friendssuggest').innerHTML = "";
       for(each of json)
       {
         var checkid = each.user_id;
@@ -928,7 +929,7 @@ function selectsuggests(){
               }
               else {
                 console.log(checkname+"  is a suggession");
-                document.getElementById('friendssuggest').innerHTML = '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
+                document.getElementById('friendssuggest').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
               }
             }
             else if(cxhr.readyState == 4){
@@ -938,7 +939,7 @@ function selectsuggests(){
         cxhr.send(checkquery);
       }
     }
-    document.getElementById('friendssuggest').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
+    document.getElementById('friendssuggest').innerHTML = '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
     }
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
