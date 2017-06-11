@@ -13,6 +13,9 @@ body,html{
 #sessionbutton{
   border: 1px solid purple;
 }
+.friendimg{
+  width: 30px;
+}
 figcaption{
   display: inline-block;
   vertical-align: top;

@@ -4,7 +4,7 @@
     </button>
       <ul class = "collapse" id = "friendslist">
         <li><figure>
-          <img class = "img-responsive img-circle" alt = "Friend's Image" src = "css/friendsprite.gif">
+          <img class = "friendimg img-responsive img-circle" alt = "Friend's Image" src = "css/friendsprite.jpg">
           <figcaption>Test friend</figcaption>
         </li>
         <li>Test friend</li>
