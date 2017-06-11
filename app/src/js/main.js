@@ -13,7 +13,7 @@ function getfriendslist(){
   data["args"]["columns"] = ["friend_id"];
   var query = JSON.stringify(data);
   console.log(query);
-  xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
@@ -21,12 +21,33 @@ function getfriendslist(){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
       console.log(json);
-    }
-    else if(xhr.readyState ==4) {
-      alert(JSON.stringify(json));
-    }
+      console.log(JSON.stringify(json));
+      var frienddata = {};
+      frienddata["type"] = "select";
+      frienddata["args"] = {};
+      frienddata["args"]["table"] = "profile";
+      frienddata["args"]["columns"] = ["username"];
+      /*for(json of iterable)
+      {
+        frienddata["args"]["where"] = json
+        var friendquery = JSON.stringify(frienddata);
+        console.log(friendquery);
+        var fxhr = new XMLHttpRequest();
+        fxhr.open("POST",url,true)
+        fxhr.setRequestHeader("Content-type","application/json");
+        fxhr.withCredentials = "true";
+        fxhr.onreadystatechange = function(){
+          if(fhr.readyState === 4 && fxhr.status === 200){
+            var fjson = JSON.parse(fxhr.responseText);
+            console.log()
+          }
+        }
+      }
+      else if(xhr.readyState ==4) {
+        alert(JSON.stringify(json));
+      }
+    }*/
   }
   xhr.send(query);
 
