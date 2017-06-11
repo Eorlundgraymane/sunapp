@@ -866,37 +866,40 @@ function selectsuggests(){
       for(each of json)
       {
         var checkid = each.user_id;
-        var checkname = each.fname;
-        var checkdata = {};
-        checkdata["type"] = "select";
-        checkdata["args"] = {};
-        checkdata["args"]["table"] = "friends";
-        checkdata["args"]["columns"] = ["user_id"];
-        checkdata["args"]["where"] = {};
-        checkdata["args"]["where"]["friend_id"] = hasura_id;
-        checkdata["args"]["where"]["user_id"] = checkid;
-        var checkquery = JSON.stringify(checkdata);
-        console.log(query);
-        cxhr = new XMLHttpRequest();
-        curl = url;
-        cxhr.open('POST',curl,false);
-        cxhr.setRequestHeader("Content-type","application/json");
-        cxhr.withCredentials = "true";
-        cxhr.onreadystatechange = function(){
-          if(cxhr.readyState == 4 && cxhr.status == 200){
-            var cjson = JSON.parse(cxhr.responseText);
-            if(cjson.length > 0){
-              console.log(checkname+"  is a friend");
+        if(checkid != hasura_id)
+        {
+          var checkname = each.fname;
+          var checkdata = {};
+          checkdata["type"] = "select";
+          checkdata["args"] = {};
+          checkdata["args"]["table"] = "friends";
+          checkdata["args"]["columns"] = ["user_id"];
+          checkdata["args"]["where"] = {};
+          checkdata["args"]["where"]["friend_id"] = hasura_id;
+          checkdata["args"]["where"]["user_id"] = checkid;
+          var checkquery = JSON.stringify(checkdata);
+          console.log(query);
+          cxhr = new XMLHttpRequest();
+          curl = url;
+          cxhr.open('POST',curl,false);
+          cxhr.setRequestHeader("Content-type","application/json");
+          cxhr.withCredentials = "true";
+          cxhr.onreadystatechange = function(){
+            if(cxhr.readyState == 4 && cxhr.status == 200){
+              var cjson = JSON.parse(cxhr.responseText);
+              if(cjson.length > 0){
+                console.log(checkname+"  is a friend");
+              }
+              else {
+                console.log(checkname+"  is a suggession");
+              }
             }
-            else {
-              console.log(checkname+"  is a suggession");
+            else if(cxhr.readyState == 4){
+              console.log(each.fname + "is a suggession");
             }
-          }
-          else if(cxhr.readyState == 4){
-            console.log(each.fname + "is a suggession");
-          }
+        }
+        cxhr.send(checkquery);
       }
-      cxhr.send(checkquery);
     }
     document.getElementById('friendssuggest').innerHTML = "Friend Suggessions";
     }
