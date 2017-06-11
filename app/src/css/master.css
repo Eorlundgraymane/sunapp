@@ -15,7 +15,7 @@ body,html{
 }
 .sessionbutton{
   position:relative;
-  right: 25%;
+  left: 25%;
   margin-top: 10px;
 }
 #centerform
