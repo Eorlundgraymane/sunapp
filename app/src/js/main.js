@@ -888,7 +888,6 @@ function selectsuggests(){
   data["args"]["table"] = "profile";
   data["args"]["columns"] = ["user_id","fname"];
   var query = JSON.stringify(data);
-  document.getElementById('friendssuggest').innerHTML = "";
   console.log(query);
   xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
@@ -897,6 +896,7 @@ function selectsuggests(){
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
+      document.getElementById('friendssuggest').innerHTML = "";
       var json = JSON.parse(xhr.responseText);
       console.log("Users : "+JSON.stringify(json));
       friendsuggestflag = 1
