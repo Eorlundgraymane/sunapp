@@ -8,5 +8,5 @@
         Friend's Suggessions
       </button>
         <ul class = "collapse" id = "friendssuggest">
-        </ul>
+        </ul><br>
 </nav>
