@@ -880,7 +880,8 @@ function selectsuggests(){
         cxhr.withCredentials = "true";
         cxhr.onreadystatechange = function(){
           if(cxhr.readyState == 4 && cxhr.status == 200){
-            console.log(each.fname + "is a friend");
+            var cjson = JSON.parse(cxhr);
+            console.log(JSON.stringify(cjson));
           }
           else if(cxhr.readyState == 4){
             console.log(each.fname + "is a suggession");
