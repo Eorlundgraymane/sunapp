@@ -6,7 +6,7 @@ var friendlistflag = 0;
 function appfriendslogin(){
   if(friendlistflag == 0)
     {
-      alert("Friend's list function is under construction.");
+      alert("Friend's list function is still experimental. Adding Friends feauture coming soon...");
       document.getElementById('friendslist').innerHTML = "Loading Friend's List";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
