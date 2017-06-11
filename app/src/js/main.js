@@ -4,7 +4,7 @@ var auth_token;
 var email;
 var friendlistflag = 0;
 function getfriendslist(){
-  if(freindlistflag == 0)
+  if(friendlistflag == 0)
     {
     alert("Friend's list function is under construction.");
     document.getElementById('friendslist').innerHTML = "Loading Friend's List";
