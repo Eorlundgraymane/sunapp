@@ -883,7 +883,12 @@ function selectsuggests(){
         cxhr.onreadystatechange = function(){
           if(cxhr.readyState == 4 && cxhr.status == 200){
             var cjson = JSON.parse(cxhr.responseText);
-            console.log("Check with : "+checkid +" "+JSON.stringify(cjson));
+            if(cjson.length > 0){
+              console.log(checkid+"  is a friend");
+            }
+            else {
+              cosole.log(checkid+"  is a suggession");
+            }
           }
           else if(cxhr.readyState == 4){
             console.log(each.fname + "is a suggession");
