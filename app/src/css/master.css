@@ -7,15 +7,12 @@ body,html{
 }
 #friendslist{
   list-style-type: none;
-  margin-left: -20px; 
+  margin-left: -20px;
 }
 .regpane
 {
   position: absolute;
   top: 25%;
-}
-#sessionbutton{
-  border: 1px solid purple;
 }
 .friendimg{
   width: 50px;
@@ -25,9 +22,6 @@ figcaption{
   display: inline;
   vertical-align: top;
 }
-.btn:hover{
-  color: white;
-}
 .sessionbutton{
   position:relative;
   margin-left: 5px;
@@ -35,33 +29,9 @@ figcaption{
   left: 65%;
   margin-top: 10px;
 }
-#siteheader{
-  border: 2px solid lightblue;
-}
-#profilearea{
-  border: 2px solid orange;
-}
-#contentarea{
-  border: 2px solid yellow;
-}
-#friendspane{
-  border: 1px solid grey;
-}
-#newspane{
-  border: 1px solid black;
-}
-#postpane{
-  border: 1px solid lightgreen;
-}
 #centerform
 {
   transform: translate(25%,60%);
-}
-#profilepic{
-  border: 1px solid blue;
-}
-#shine{
-  border: 1px solid red;
 }
 .profileimage{
   position: relative;
@@ -80,7 +50,6 @@ figcaption{
   background-color: rgb(222, 247, 148);
   position: relative;
   left: 50%;
-  border: 1px solid black;
   height: 200%;
 }
 td,tr,th{
@@ -223,13 +192,11 @@ input,select {
   right: 0;
 }
 #sitename {
-  border: 1px solid white;
   font-size: 30px;
   color: white;
   font-weight: 900;
 }
-#sitefooter {
-  border: 1px solid green;
+#sitefooter {  
   animation-name: fadeIn;
   animation-duration: 6s;
   animation-timing-function: ease-in();
