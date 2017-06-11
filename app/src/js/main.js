@@ -861,6 +861,7 @@ function selectsuggests(){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
+      consle.log("Users : "+JSON.stringify(json));
       for(each of json)
       {
         var checkid = each.user_id;
@@ -881,7 +882,7 @@ function selectsuggests(){
         cxhr.onreadystatechange = function(){
           if(cxhr.readyState == 4 && cxhr.status == 200){
             var cjson = JSON.parse(cxhr.responseText);
-            console.log(JSON.stringify(cjson));
+            console.log(checkid +" "+JSON.stringify(cjson));
           }
           else if(cxhr.readyState == 4){
             console.log(each.fname + "is a suggession");
