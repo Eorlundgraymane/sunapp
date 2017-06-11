@@ -5,6 +5,6 @@
   <form method="POST" action = "/home.php" name = "loginform" id = "loginform">
     <input type = "text" name = "primarykey" id = "primarykey" placeholder="Mobile">
     <input type = "password" name = "password" id = "password" placeholder="Password">
-    <button type = "button" id = "loginbutton" name = "login" onclick="userlogin();">Log in</button>
+    <button class = "btn" type = "button" id = "loginbutton" name = "login" onclick="userlogin();">Log in</button>
   </form>
 </div>
