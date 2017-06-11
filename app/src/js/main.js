@@ -2,6 +2,10 @@ var admintoken = "Bearer nk8vh416e2v2sd1t6rhxmyzntgc8vx1t";
 var hasura_id;
 var auth_token;
 var email;
+
+function getfriendslist(){
+  alert("Friend's list function is under construction.");
+}
 function getpiclink(){
   console.log('piclink called');
   var piclink;
