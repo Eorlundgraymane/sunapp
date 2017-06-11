@@ -866,6 +866,7 @@ function selectsuggests(){
       for(each of json)
       {
         var checkid = each.user_id;
+        var checkname = each.fname;
         var checkdata = {};
         checkdata["type"] = "select";
         checkdata["args"] = {};
@@ -885,10 +886,10 @@ function selectsuggests(){
           if(cxhr.readyState == 4 && cxhr.status == 200){
             var cjson = JSON.parse(cxhr.responseText);
             if(cjson.length > 0){
-              console.log(checkid+"  is a friend");
+              console.log(checkname+"  is a friend");
             }
             else {
-              cosole.log(checkid+"  is a suggession");
+              cosole.log(checkname+"  is a suggession");
             }
           }
           else if(cxhr.readyState == 4){
