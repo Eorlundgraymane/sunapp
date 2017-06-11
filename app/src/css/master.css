@@ -12,10 +12,10 @@ body,html{
 }
 #sessionbutton{
   border: 1px solid purple;
-  padding: 5px;
 }
 .sessionbutton{
   position:relative;
+  padding: 5px;
   left: 65%;
   margin-top: 10px;
 }
