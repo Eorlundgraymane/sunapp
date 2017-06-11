@@ -22,7 +22,7 @@
            include 'header.php';
            }
            else {
-             echo' <h1 id = "sitename">You\'re not Logged In and don\'t have permission to access this page. Please <button onclick = "gohome();" type = "button">Click Here</button> to go back to the Welcome Page</sitename>"';
+             echo' <h1 id = "sitename">You\'re not Logged In and don\'t have permission to access this page. Please <button onclick = "gohome();" type = "button">Click Here</button> to go back to the Welcome Page</sitename>';
            }
          ?>
          <?php
