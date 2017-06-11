@@ -869,6 +869,7 @@ function selectsuggests(){
         if(checkid == hasura_id)
         {}
         else{
+          console.log(checkid+":"+hasura_id);
           var checkname = each.fname;
           var checkdata = {};
           checkdata["type"] = "select";
