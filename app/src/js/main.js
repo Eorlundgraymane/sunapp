@@ -34,7 +34,7 @@ function getfriendslist(){
         console.log(JSON.stringify(fid.friend_id));
         frienddata["args"]["where"] = {};
         frienddata["args"]["where"]["user_id"] = JSON.stringify(fid.friendid);
-        var friendquery = JSON.stringify(frienddata);
+        var friendquery = JSON.stringify(friendddata);
         console.log(friendquery);
         /*
         var fxhr = new XMLHttpRequest();
