@@ -882,7 +882,7 @@ function selectsuggests(){
         cxhr.onreadystatechange = function(){
           if(cxhr.readyState == 4 && cxhr.status == 200){
             var cjson = JSON.parse(cxhr.responseText);
-            console.log(checkid +" "+JSON.stringify(cjson));
+            console.log("Check with : "+checkid +" "+JSON.stringify(cjson));
           }
           else if(cxhr.readyState == 4){
             console.log(each.fname + "is a suggession");
