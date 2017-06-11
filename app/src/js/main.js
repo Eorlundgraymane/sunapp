@@ -3,7 +3,9 @@ var hasura_id;
 var auth_token;
 var email;
 var friendlistflag = 0;
-function applogin(){
+function appfriendslogin(){
+  alert("Friend's list function is under construction.");
+  document.getElementById('friendslist').innerHTML = "Loading Friend's List";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
   xhr.open("POST",url,true);
@@ -16,11 +18,13 @@ function applogin(){
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       email = json.email;
+      getfreindslist();
     }
     else if(xhr.readyState == 4) {
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert(JSON.stringify(json));
+      alert("Could'nt get your friend's list at the moment");
     }
   }
   xhr.send();
@@ -28,15 +32,12 @@ function applogin(){
 function getfriendslist(){
   if(friendlistflag == 0)
     {
-    alert("Friend's list function is under construction.");
-    document.getElementById('friendslist').innerHTML = "Loading Friend's List";
     var data = {};
     data["type"] = "select";
     data["args"] = {};
     data["args"]["table"] = "friends";
     data["args"]["columns"] = ["user_id"];
     data["args"]["where"] = {};
-    applogin();
     data["args"]["where"]["friend_id"] = hasura_id;
     var query = JSON.stringify(data);
     console.log(query);
