@@ -21,6 +21,9 @@ body,html{
 #siteheader{
   border: 2px solid lightblue;
 }
+#profilearea{
+  border: 2px solid orange;
+}
 #centerform
 {
   transform: translate(25%,60%);
