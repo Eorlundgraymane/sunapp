@@ -41,11 +41,12 @@ function getfriendslist(){
         fxhr.setRequestHeader("Content-type","application/json");
         fxhr.withCredentials = "true";
         fxhr.onreadystatechange = function(){
-          if(fxhr.readyState === 4 && fxhr.status === 200){
+          if(fxhr.readyState == 4 && fxhr.status == 200){
             var fjson = JSON.parse(fxhr.responseText);
             console.log(JSON.stringify(fjson.username));
           }
           else if(fxhr.readyState === 4){
+            var fjson = JSON.parse(fxr.responseText);
             console.log(JSON.stringify(fjson));
             alert("Could'nt get your friend's list at the moment");
           }
