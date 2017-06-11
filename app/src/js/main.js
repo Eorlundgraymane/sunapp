@@ -885,6 +885,7 @@ function selectsuggests(){
             console.log(each.fname + "is a suggession");
           }
       }
+      cxhr.send(checkquery);
     }
     }
     else if(xhr.readyState ==4) {
