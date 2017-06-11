@@ -43,11 +43,11 @@ function getfriendslist(){
             console.log()
           }
         }
-      }
+      }*/
       else if(xhr.readyState ==4) {
         alert(JSON.stringify(json));
       }
-    }*/
+    }
   }
   xhr.send(query);
 
