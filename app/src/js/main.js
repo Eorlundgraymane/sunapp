@@ -4,34 +4,38 @@ var auth_token;
 var email;
 var friendlistflag = 0;
 function appfriendslogin(){
-  alert("Friend's list function is under construction.");
-  document.getElementById('friendslist').innerHTML = "Loading Friend's List";
-  xhr = new XMLHttpRequest();
-  var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
-  xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","application/json");
-  xhr.withCredentials = "true";
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState == 4 && xhr.status == 200){
-      var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
-      hasura_id = json.hasura_id;
-      auth_token = "Bearer "+json.auth_token;
-      email = json.email;
-      getfriendslist();
-    }
-    else if(xhr.readyState == 4) {
-      var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
-      alert(JSON.stringify(json));
-      alert("Could'nt get your friend's list at the moment");
-    }
-  }
-  xhr.send();
-}
-function getfriendslist(){
   if(friendlistflag == 0)
     {
+      alert("Friend's list function is under construction.");
+      document.getElementById('friendslist').innerHTML = "Loading Friend's List";
+      xhr = new XMLHttpRequest();
+      var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
+      xhr.open("POST",url,true);
+      xhr.setRequestHeader("Content-type","application/json");
+      xhr.withCredentials = "true";
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4 && xhr.status == 200){
+          var json = JSON.parse(xhr.responseText);
+          console.log(JSON.stringify(json.hasura_id));
+          hasura_id = json.hasura_id;
+          auth_token = "Bearer "+json.auth_token;
+          email = json.email;
+          getfriendslist();
+        }
+        else if(xhr.readyState == 4) {
+          var json = JSON.parse(xhr.responseText);
+          console.log(JSON.stringify(json));
+          alert(JSON.stringify(json));
+          alert("Could'nt get your friend's list at the moment");
+        }
+      }
+      xhr.send();
+    }
+    else {
+    friendlistflag = 0;
+  }
+}
+function getfriendslist(){
     var data = {};
     data["type"] = "select";
     data["args"] = {};
@@ -88,9 +92,6 @@ function getfriendslist(){
       }
     xhr.send(query);
     friendlistflag = 1;
-  }
-  else {
-    friendlistflag = 0;
   }
 }
 function getpiclink(){
