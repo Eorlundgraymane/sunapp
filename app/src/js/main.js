@@ -161,7 +161,7 @@ function applogin(){
           hasura_id = json.hasura_id;
           auth_token = "Bearer "+json.auth_token;
           email = json.email;
-          getfriendslist();
+          selectsuggests();
         }
         else if(xhr.readyState == 4) {
           var json = JSON.parse(xhr.responseText);
@@ -872,7 +872,6 @@ else {
 }
 
 function selectsuggests(){
-  applogin();
   if(suggesiondrop  == 0 && friendsuggestflag == 0)
     {
       document.getElementById('friendssuggest').innerHTML = "Wait till we restore the page state";
