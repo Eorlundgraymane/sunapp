@@ -3,7 +3,7 @@
       Friend's List
     </button>
       <ul class = "collapse" id = "friendslist">
-      </ul>
+      </ul><br>
       <button onclick = "applogin();" type = "button" class = "btn" data-toggle = "collapse" data-target = "#friendssuggest">
         Friend's Suggessions
       </button>
