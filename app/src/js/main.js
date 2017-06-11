@@ -10,7 +10,7 @@ function getfriendslist(){
   data["type"] = "select";
   data["args"] = {};
   data["args"]["table"] = "friends";
-  data["args"]["columns"] = ["user_id"];
+  data["args"]["columns"] = ["friend_id"];
   var query = JSON.stringify(data);
   console.log(query);
   var xhr = new XMLHttpRequest();
@@ -32,7 +32,7 @@ function getfriendslist(){
       for(fid of json)
       {
         frienddata["args"]["where"] = {};
-        frienddata["args"]["where"]["user_id"] = fid.user_id;
+        frienddata["args"]["where"]["user_id"] = fid.friend_id;
         var friendquery = JSON.stringify(frienddata);
         var fxhr = new XMLHttpRequest();
         fxhr.open("POST",url,false)
