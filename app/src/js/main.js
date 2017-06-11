@@ -36,17 +36,20 @@ function getfriendslist(){
         frienddata["args"]["where"]["user_id"] = JSON.stringify(fid.friend_id);
         var friendquery = JSON.stringify(frienddata);
         console.log(friendquery);
-        /*
         var fxhr = new XMLHttpRequest();
         fxhr.open("POST",url,true)
         fxhr.setRequestHeader("Content-type","application/json");
         fxhr.withCredentials = "true";
         fxhr.onreadystatechange = function(){
-          if(fhr.readyState === 4 && fxhr.status === 200){
+          if(fxhr.readyState === 4 && fxhr.status === 200){
             var fjson = JSON.parse(fxhr.responseText);
-            console.log()
+            console.log(JSON.stringify(fjson));
           }
-        }*/
+          else if(fxhr.readyState === 4){
+            console.log(fjson);
+            alert("Could'nt get your friend's list at the moment");
+          }
+        }
         }
       }
       else if(xhr.readyState ==4) {
