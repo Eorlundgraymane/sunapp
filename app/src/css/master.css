@@ -21,7 +21,6 @@ body,html{
   width: 30px;
 }
 figcaption{
-  display: inline;
   vertical-align: top;
 }
 .btn:hover{
