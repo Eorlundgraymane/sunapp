@@ -42,8 +42,8 @@ function getfriendslist(){
             var fjson = JSON.parse(fxhr.responseText);
             console.log()
           }
-        }
-      }*/
+        }*/
+      }
       else if(xhr.readyState ==4) {
         alert(JSON.stringify(json));
       }
