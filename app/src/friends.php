@@ -3,8 +3,8 @@
       Friend's List
     </button>
       <ul class = "collapse" id = "friendslist">
-        <li id = "friend">
-          <figure>
+        <li>
+          <figure  id = "friend">
             <img class = "friendimg img-responsive img-circle" alt = "Friend's Image" src = "css/friendsprite.jpg">
             <figcaption>Test friend</figcaption>
           </figure>
