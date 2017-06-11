@@ -30,8 +30,8 @@ function getfriendslist(){
       frienddata["args"]["columns"] = ["username"];
       for(fid of json)
       {
-        console.log(fid.friendid);
-        console.log(JSON.stringify(fid.friendid));
+        console.log(fid.friend_id);
+        console.log(JSON.stringify(fid.friend_id));
         /*frienddata["args"]["where"] = ["user_id":fid.friendid];
         var friendquery = JSON.stringify(frienddata;
         console.log(friendquery);
