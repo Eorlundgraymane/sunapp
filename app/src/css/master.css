@@ -40,7 +40,7 @@ figcaption{
 }
 .profileimage{
   position: relative;
-  left: 10%;
+  left: 0%;
   transition-property: all;
   transition-duration: 3s;
   transition-timing-function: ease;
