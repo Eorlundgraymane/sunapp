@@ -46,7 +46,7 @@ function getfriendslist(){
             console.log(JSON.stringify(fjson.username));
           }
           else if(fxhr.readyState === 4){
-            console.log(fjson);
+            console.log(JSON.stringify(fjson));
             alert("Could'nt get your friend's list at the moment");
           }
         }
