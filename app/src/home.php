@@ -14,7 +14,7 @@
   </head>
   <body class = "outer-container">
     <row>
-      <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "siteheader">
         <?php include 'header.php';?>
       </div>
     </row>

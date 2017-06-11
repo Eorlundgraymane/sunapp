@@ -18,6 +18,9 @@ body,html{
   left: 65%;
   margin-top: 10px;
 }
+#siteheader{
+  border: 2px solid lightblue;
+}
 #centerform
 {
   transform: translate(25%,60%);
