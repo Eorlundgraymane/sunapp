@@ -146,9 +146,7 @@ function appfriendslogin(){
   }
 }
 
-function applogin(){
-      alert("Friend's list function is still experimental. Adding Friends feauture coming soon...");
-      document.getElementById('friendslist').innerHTML = "Loading Friend's List";
+function applogin(){    
       xhr = new XMLHttpRequest();
       var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
