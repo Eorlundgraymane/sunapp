@@ -161,6 +161,7 @@ input,select {
   font-weight: 900;
 }
 #sitefooter {
+  border: 1px solid green;
   animation-name: fadeIn;
   animation-duration: 6s;
   animation-timing-function: ease-in();
