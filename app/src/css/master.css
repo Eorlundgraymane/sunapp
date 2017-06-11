@@ -8,6 +8,7 @@ body,html{
 #friendslist{
   list-style-type: none;
   margin-left: -20px;
+  background-color: rgba(222, 247, 148,0.8);
 }
 .regpane
 {
@@ -196,7 +197,7 @@ input,select {
   color: white;
   font-weight: 900;
 }
-#sitefooter {  
+#sitefooter {
   animation-name: fadeIn;
   animation-duration: 6s;
   animation-timing-function: ease-in();
