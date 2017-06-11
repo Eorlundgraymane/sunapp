@@ -120,6 +120,10 @@ button{
   animation-iteration-count: 1;
 }
 #profileimage{
+  animation-name:fadeIn;
+  animation-duration:3s;
+  animation-timing-function:ease-in;
+  animation-iteration-count: 1;
   transition-property: all;
   transition-duration: 3s;
   transition-timing-function: ease-in;
@@ -142,13 +146,6 @@ button{
   100%{
     opacity: 0;
   }
-}
-img
-{
-  animation-name:fadeIn;
-  animation-duration:3s;
-  animation-timing-function:ease-in;
-  animation-iteration-count: 1;
 }
 @keyframes signupscroll {
   0%{
