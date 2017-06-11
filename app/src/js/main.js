@@ -2,9 +2,10 @@ var admintoken = "Bearer nk8vh416e2v2sd1t6rhxmyzntgc8vx1t";
 var hasura_id;
 var auth_token;
 var email;
+var droppeddown = 0;
 var friendlistflag = 0;
 function appfriendslogin(){
-  if(friendlistflag == 0)
+  if(droppeddown == 0 && friendlistflag == 0)
     {
       alert("Friend's list function is still experimental. Adding Friends feauture coming soon...");
       document.getElementById('friendslist').innerHTML = "Loading Friend's List";
@@ -21,18 +22,23 @@ function appfriendslogin(){
           auth_token = "Bearer "+json.auth_token;
           email = json.email;
           getfriendslist();
+          droppeddown = 1;
         }
         else if(xhr.readyState == 4) {
           var json = JSON.parse(xhr.responseText);
           console.log(JSON.stringify(json));
           alert(JSON.stringify(json));
           alert("Could'nt get your friend's list at the moment");
+          droppeddown = 1;
         }
       }
       xhr.send();
     }
-    else {
-    friendlistflag = 0;
+    else if(droppeddown == 1) {
+    droppeddown = 0;
+  }
+  else if(friendlistflag == 1){
+    droppeddown =1;
   }
 }
 function getfriendslist(){
