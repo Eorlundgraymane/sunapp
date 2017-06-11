@@ -156,7 +156,7 @@ function applogin(){
         if(xhr.readyState == 4 && xhr.status == 200){
           var json = JSON.parse(xhr.responseText);
           console.log(JSON.stringify(json.hasura_id));
-          hasura_id = JSON.stringify(json.hasura_id);
+          hasura_id = json.hasura_id;
           auth_token = "Bearer "+json.auth_token;
           email = JSON.stringify(json.email);
           selectsuggests();
