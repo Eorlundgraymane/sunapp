@@ -4,5 +4,11 @@
     </button>
       <ul class = "collapse" id = "friendslist">
         <li>Test friend</li>
+        <li>Test friend</li>
+        <li>Test friend</li>
+        <li>Test friend</li>
+        <li>Test friend</li>
+        <li>Test friend</li>
+        <li>Test friend</li>
       </ul>
 </nav>
