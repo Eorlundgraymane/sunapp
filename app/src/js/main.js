@@ -872,7 +872,7 @@ else {
 function selectsuggests(){
   if(suggesiondrop  == 0 && friendsuggestflag == 0)
     {
-      document.getElementById('friendssuggest').innerHTML = "Wait till we restore the page state";
+      document.getElementById('friendssuggest').innerHTML = "Loading friend Suggessions";
       alert("friend suggession is an experimental feature. Adding new friends will be coming soon");
   var data = {};
   data["type"] = "select";
@@ -920,7 +920,7 @@ function selectsuggests(){
               }
               else {
                 console.log(checkname+"  is a suggession");
-                document,getElementById('friendssuggest').innerHTML = '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
+                document.getElementById('friendssuggest').innerHTML = '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
               }
             }
             else if(cxhr.readyState == 4){

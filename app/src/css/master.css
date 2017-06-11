@@ -5,7 +5,7 @@ body,html{
 .outer-container {
   background-image: url('sunshine-min.jpg');
 }
-#friendslist{
+#friendslist,#friendsuggest{
   list-style-type: none;
   margin-left: -20px;
   background-color: rgba(126,192,238,0.75);
