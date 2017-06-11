@@ -920,6 +920,7 @@ function selectsuggests(){
               }
               else {
                 console.log(checkname+"  is a suggession");
+                document,getElementById('friendssuggest').innerHTML = '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
               }
             }
             else if(cxhr.readyState == 4){
