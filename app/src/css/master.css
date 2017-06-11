@@ -13,8 +13,10 @@ body,html{
 #sessionbutton{
   border: 1px solid purple;
 }
+#freindslist{
+  width: 100%;
+}
 .friendimg{
-  display: block;
   width: 30px;
 }
 figcaption{
