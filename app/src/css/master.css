@@ -11,6 +11,7 @@ body,html{
   top: 25%;
 }
 #sessionbutton{
+  border: 1px solid purple;
   position: relative;
   right: 0;
   margin-top: 10px;
