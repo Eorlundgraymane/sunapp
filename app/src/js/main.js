@@ -845,6 +845,7 @@ else {
 function selectsuggests(){
   if(suggesiondrop  == 0 && friendsuggestflag == 0)
     {
+      alert("friend suggession is an experimental feature. Adding new friends will be coming soon");
   var data = {};
   data["type"] = "select";
   data["args"] = {};
