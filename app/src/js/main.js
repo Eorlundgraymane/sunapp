@@ -27,7 +27,7 @@ function getfriendslist(){
       frienddata["type"] = "select";
       frienddata["args"] = {};
       frienddata["args"]["table"] = "profile";
-      frienddata["args"]["columns"] = ["username"];
+      frienddata["args"]["columns"] = ["fname"];
       for(fid of json)
       {
         console.log(fid.friend_id);
