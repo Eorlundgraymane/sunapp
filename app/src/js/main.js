@@ -43,7 +43,7 @@ function getfriendslist(){
         fxhr.onreadystatechange = function(){
           if(fxhr.readyState == 4 && fxhr.status == 200){
             var fjson = JSON.parse(fxhr.responseText);
-            console.log(fjson.fname);
+            console.log(JSON.stringify(fjson.fname));
           }
           else if(fxhr.readyState === 4){
             var fjson = JSON.parse(fxhr.responseText);
@@ -52,6 +52,7 @@ function getfriendslist(){
           }
         }
         fxhr.send(friendquery);
+        setTimeout(function(){},3000);
         }
       }
       else if(xhr.readyState ==4) {
