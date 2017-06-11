@@ -66,6 +66,12 @@ function comparepass(){
     document.getElementById('passlabel').style.opacity = "0";
     return 1
   }
+  else if(pass == ""){
+    document.getElementById('conflabel').style.display = "none";
+    document.getElementById('conflabel').style.opacity = "0";
+    document.getElementById('passlabel').style.display = "none";
+    document.getElementById('passlabel').style.opacity = "0";
+  }
 }
 function checklogout(pk)
 {
