@@ -889,7 +889,7 @@ function selectsuggests(){
               console.log(checkname+"  is a friend");
             }
             else {
-              cosole.log(checkname+"  is a suggession");
+              console.log(checkname+"  is a suggession");
             }
           }
           else if(cxhr.readyState == 4){
