@@ -13,10 +13,6 @@ body,html{
 #sessionbutton{
   border: 1px solid purple;
 }
-#friendsprite{
-  width: 50px;
-  background-image: url('/css/friendsprite.gif') 0 0;
-}
 figcaption{
   display: inline-block;
   vertical-align: top;
