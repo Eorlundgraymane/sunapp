@@ -86,10 +86,6 @@ figcaption{
 th{
   text-align: center;
 }
-td{
-  align-items: center;
-  justify-content: center;
-}
 button{
   outline: none;
   background-color: #7ec0ee;

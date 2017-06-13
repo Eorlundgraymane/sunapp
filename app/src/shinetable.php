@@ -7,7 +7,7 @@
      <tr>
        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
      </tr>
-     <tr>
+     <tr><center>
        <td>
          <img class = "shineicon img-responsive" src  = "css/generated/friend.svg" alt ="Friend Icon">
        </td>
@@ -22,7 +22,7 @@
        </td>
        <td>
          <img class = "shineicon img-responsive" src  = "css/generated/family.svg" alt ="Family Icon">
-       </td>
+       </td></center>
      </tr>
      <tr>
        <th>Friendshine</th><th>Earthshine</th><th>Charityshine</th><th>Healthshine</th><th>Familyshine</th>
