@@ -75,6 +75,7 @@ figcaption{
 }
 #shinetablediv{
   align-items: center;
+  justify-content: center;
   height: 2em;
 }
 #shinetable{
