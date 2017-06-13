@@ -118,12 +118,12 @@ function appfriendslogin(){
       xhr.open("POST",url,true);
       xhr.setRequestHeader("Content-type","application/json");
       xhr.withCredentials = "true";
+      document.getElementById('friendslistbutton').disabled = true;
+      document.getElementById('friendssuggestbutton').disabled = true;
+      document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
+      document.getElementById('friendslistbutton').style.cursor = "not-allowed";
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
-          document.getElementById('friendslistbutton').disabled = true;
-          document.getElementById('friendssuggestbutton').disabled = true;
-          document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
-          document.getElementById('friendslistbutton').style.cursor = "not-allowed";
           var json = JSON.parse(xhr.responseText);
           console.log(JSON.stringify(json.hasura_id));
           hasura_id = json.hasura_id;
@@ -160,12 +160,12 @@ function applogin(){
       xhr.open("POST",url,true);
       xhr.setRequestHeader("Content-type","application/json");
       xhr.withCredentials = "true";
+      document.getElementById('friendslistbutton').disabled = true;
+      document.getElementById('friendssuggestbutton').disabled = true;
+      document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
+      document.getElementById('friendslistbutton').style.cursor = "not-allowed";
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
-          document.getElementById('friendslistbutton').disabled = true;
-          document.getElementById('friendssuggestbutton').disabled = true;
-          document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
-          document.getElementById('friendslistbutton').style.cursor = "not-allowed";
           var json = JSON.parse(xhr.responseText);
           console.log(JSON.stringify(json.hasura_id));
           hasura_id = json.hasura_id;
