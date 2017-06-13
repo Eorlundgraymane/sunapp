@@ -685,7 +685,7 @@ function shineblock(){
   if(tabledrop == 1)
     {
       var table = document.getElementById('shinetablediv');
-      table.style.display = "block;"
+      table.style.display = "block";
       table.classList.remove("collapse.in");
       table.classList.add("collapse");
       tabledrop = 0;
