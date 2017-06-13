@@ -956,16 +956,15 @@ function selectsuggests(){
                 console.log(checkname+"  is a suggession");
                 document.getElementById('friendssuggest').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
               }
-              document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
             }
             else if(cxhr.readyState == 4){
               console.log("Error");
-              document.getElementById('friendssuggestbutton').innerHTML = "Error";
             }
         }
         cxhr.send(checkquery);
       }
     }
+    document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
     document.getElementById('friendslistbutton').disabled = false;
     document.getElementById('friendssuggestbutton').disabled = false;
     document.getElementById('friendssuggestbutton').style.cursor = "pointer";
@@ -977,7 +976,7 @@ function selectsuggests(){
       document.getElementById('friendssuggestbutton').disabled = false;
       document.getElementById('friendssuggestbutton').style.cursor = "pointer";
       document.getElementById('friendslistbutton').style.cursor = "pointer";
-      document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
+      document.getElementById('friendssuggestbutton').innerHTML = "Error";
       alert(JSON.stringify(json));
     }
   }
