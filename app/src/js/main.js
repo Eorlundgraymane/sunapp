@@ -683,7 +683,7 @@ function getuser()
   xhr = new XMLHttpRequest();
   var loginbutton = document.getElementById('loginbutton');
   loginbutton.innerHTML = "Logging In <img width = '30px' height = '30px' src = 'css/loader.gif'>";
-  loginbutton.style.disabled = "true";
+  loginbutton.style.disabled = true;
   loginbutton.style.cursor = "not-allowed";
   var url  = "https://auth.washtub66.hasura-app.io/login";
   xhr.open("POST",url,true);
