@@ -771,6 +771,7 @@ function addfriend(id){
       console.log(JSON.stringify(response));
     }
     else if(xhr.readyState == 4){
+      var response = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(response));
       console.log("Error during adding friend");
     }
