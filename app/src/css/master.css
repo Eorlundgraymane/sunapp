@@ -74,8 +74,6 @@ figcaption{
   opacity: 1;
 }
 #shinetablediv{
-  align-items: center;
-  justify-content: center;
   height: 2em;
 }
 #shinetable{
@@ -87,6 +85,10 @@ figcaption{
 }
 th{
   text-align: center;
+}
+td{
+  align-items: center;
+  justify-content: center;
 }
 button{
   outline: none;
