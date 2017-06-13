@@ -255,14 +255,16 @@ function getfriendslist(){
   data["type"] = "select";
   data["args"] = {};
   data["args"]["table"] = "user";
-  data["args"]["columns"]["name"] = "profile";
-  data["args"]["columns"]["columns"] = ["fname"];
-  data["args"]["columns"]["columns"]["name"] = "mefriend";
-  data["args"]["columns"]["columns"]["columns"] = ["friend_id"];
-  data["args"]["columns"]["columns"]["columns"]["name"] = "mefriend";
-  data["args"]["columns"]["columns"]["columns"]["columns"] = ["friend_id"];
-  data["args"]["columns"]["columns"]["columns"]["where"] = {};
-  data["args"]["columns"]["columns"]["columns"]["where"]["friend_id"] = hasura_id;
+  data["args"]["columns"][{"name"}] = "profile";
+  data["args"]["columns"][{"columns"}] = ["fname"];
+  data["args"]["columns"][{"columns"}][{"name"}] = "mefriend";
+  data["args"]["columns"][{"columns"}][{"columns"}] = ["friend_id"];
+  data["args"]["columns"][{"columns"}][{"columns"}][{"name"}] = "friend_profile";
+  data["args"]["columns"][{"columns"}][{"columns"}][{"columns"}] = ["fname"];
+  data["args"]["columns"]["columns"][{"columns"}][{"columns"}][{"name"}] = "mefriend";
+  data["args"]["columns"]["columns"][{"columns"}][{"columns"}][{"columns"}] = ["friend_id"];
+  data["args"]["columns"]["columns"][{"columns"}][{"columns"}][{"where"}] = {};
+  data["args"]["columns"]["columns"][{"columns"}][{"columns"}][{"where"}]["friend_id"] = hasura_id;
 
 
   query = JSON.stringify(data);
