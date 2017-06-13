@@ -118,7 +118,7 @@ function appfriendslogin(){
       xhr.open("POST",url,true);
       xhr.setRequestHeader("Content-type","application/json");
       xhr.withCredentials = "true";
-      //document.getElementById('friendslistbutton').disabled = true;
+      document.getElementById('friendslistbutton').disabled = true;
       document.getElementById('friendssuggestbutton').disabled = true;
       document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
       document.getElementById('friendslistbutton').style.cursor = "not-allowed";
@@ -168,7 +168,7 @@ function applogin(){
       xhr.setRequestHeader("Content-type","application/json");
       xhr.withCredentials = "true";
       document.getElementById('friendslistbutton').disabled = true;
-      //document.getElementById('friendssuggestbutton').disabled = true;
+      document.getElementById('friendssuggestbutton').disabled = true;
       document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
       document.getElementById('friendslistbutton').style.cursor = "not-allowed";
       document.getElementById('logoutbutton').disabled = true;
@@ -770,11 +770,11 @@ function otpverify(){
   var otpcancelbutton = document.getElementById('otpcancel');
   var resendotpbutton = document.getElementById('resendotp');
   otpbutton.style.cursor = "not-allowed";
-  //otpbutton.style.disabled = true;
+  otpbutton.style.disabled = true;
   resendotpbutton.style.cursor = "not-allowed";
-  //resendotpbutton.style.disabled = true;
+  resendotpbutton.style.disabled = true;
   otpcancelbutton.style.cursor = "not-allowed";
-  //otpcancelbutton.style.disabled = true;
+  otpcancelbutton.style.disabled = true;
   otpbutton.innerHTML = "Verifying <img width = '16px' height = '16px' src = 'css/loader.gif'>";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/mobile/confirm";
