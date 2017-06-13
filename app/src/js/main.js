@@ -703,7 +703,7 @@ function getuser()
     }
     else if(xhr.readyState == 4) {
       loginbutton.innerHTML = "Log In";
-      loginbutton.style.disabled = "false";
+      loginbutton.style.disabled = false;
       loginbutton.style.cursor= "pointer";
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
