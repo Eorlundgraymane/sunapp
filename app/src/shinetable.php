@@ -1,4 +1,4 @@
-<button id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
+<button id = "shinetablebutton" onclick = "shineblock" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
   Your Shine Table
 </button>
 <div id = "shinetablediv" class = "collapse">
