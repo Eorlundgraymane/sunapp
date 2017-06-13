@@ -776,6 +776,7 @@ function addfriend(id){
     }
   }
   jsondata = JSON.stringify(data);
+  console.log(jsondata);
   xhr.send(jsondata);
 }
 function otpoverlaydropdown(){
