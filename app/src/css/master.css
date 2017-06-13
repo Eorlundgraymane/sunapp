@@ -9,6 +9,7 @@ body,html{
   list-style-type: none;
   background-color: rgba(126,192,238,0.75);
   color: white;
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 #friendspane{
