@@ -72,8 +72,7 @@ figcaption{
 #shinetable{
   background-color: rgb(222, 247, 148);
   position: relative;
-  left: 50%;
-  height: 200%;
+  left: 50%;  
 }
 td,tr,th{
   border: 1px solid black;
