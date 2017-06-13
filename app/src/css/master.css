@@ -53,6 +53,8 @@ figcaption{
   margin-top: 10px;
 }
 .shineicon{
+  display: block;
+  text-align: center;
   height: 30px;
   width: 30px;
 }
@@ -87,7 +89,6 @@ th{
   text-align: center;
 }
 td{
-  align = center;
   text-align: center;
 }
 button{
