@@ -672,6 +672,7 @@ function getuser()
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
+      alert("Successfully Logged In. Welcome "+JSON.stringify(json.username)+" ! Sunshine is under construction. Let's just show you the hallway");
       document.getElementById('loginform').submit();
     }
     else if(xhr.readyState ==4) {
@@ -701,7 +702,6 @@ function getuser()
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       email = json.email;
-      alert("Successfully Logged In. Welcome "+JSON.stringify(json.username)+" ! Sunshine is under construction. Let's just show you the hallway");
       getuser();
     }
     else if(xhr.readyState == 4) {
