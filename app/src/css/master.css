@@ -75,11 +75,13 @@ figcaption{
   left: 0%;
   opacity: 1;
 }
+#shine{
+  border-radius: 1px solid white;
+}
 #shinetablediv{
   height: 2em;
 }
 #shinetable{
-  border-radius: 1px solid white;
   background-color: rgb(222, 247, 148);
   table-layout: fixed;
   width: 100%;
