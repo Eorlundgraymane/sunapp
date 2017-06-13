@@ -42,6 +42,9 @@ body,html{
   width: 50px;
   height: auto;
 }
+.collapse.in{
+  display: inline;
+}
 figcaption{
   display: inline;
   vertical-align: top;
