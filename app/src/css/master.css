@@ -81,6 +81,9 @@ figcaption{
 #shinetablediv{
   height: 2em;
 }
+th{
+  text-align: center;
+}
 #shinetable{
   text-align: center;
   background-color: rgb(222, 247, 148);
