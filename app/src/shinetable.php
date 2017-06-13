@@ -3,7 +3,7 @@
     Your Shine Table
   </button>
   <div id = "shinetablediv" class = "collapse">
-    <table id = "shinetable">
+    <table id = "shinetable" class = "table">
      <tr>
        <td>0</td>
        <td>0</td>
