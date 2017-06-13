@@ -52,6 +52,12 @@ figcaption{
   left: 55%;
   margin-top: 10px;
 }
+.shineicon{
+  position: relative;
+  left: 45%;
+  height: 30px;
+  width: 30px;
+}
 #centerform
 {
   transform: translate(25%,60%);
