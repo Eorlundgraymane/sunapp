@@ -680,7 +680,18 @@ function getuser()
   }
   xhr.send(query);
 }
-
+var tabledrop =0;
+function shineblock(){
+  if(tabledrop == 1)
+    {
+      var table = document.getElementById('shinetablediv');
+      table.style.display = "block;"
+      tabledrop = 0;
+    }
+    else if(tabledrop == 0){
+      tabledrop = 1;
+    }
+}
   function userlogin()
 {
   xhr = new XMLHttpRequest();
