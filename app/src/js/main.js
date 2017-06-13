@@ -428,6 +428,7 @@ function checklogout(pk)
 
 function userlogout(pk)
 {
+  document.getElementById('logoutbutton').innerHTML = "Logging Out...";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/user/logout";
   xhr.open("POST",url,true);
@@ -968,7 +969,7 @@ function selectsuggests(){
     document.getElementById('friendslistbutton').disabled = false;
     document.getElementById('friendssuggestbutton').disabled = false;
     document.getElementById('friendssuggestbutton').style.cursor = "pointer";
-    document.getElementById('friendslistbutton').style.cursor = "pointer";    
+    document.getElementById('friendslistbutton').style.cursor = "pointer";
     }
     else if(xhr.readyState ==4) {
       document.getElementById('friendslistbutton').disabled = false;
