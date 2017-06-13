@@ -8,6 +8,8 @@ body,html{
 #friendslist,#friendssuggest{
   list-style-type: none;
   margin-left: -20px;
+  border-left: 1px solid white;
+  height: 100%;
   background-color: rgba(126,192,238,0.75);
 
 }
