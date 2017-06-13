@@ -1,10 +1,8 @@
 <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">
-  <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3">
-    <button id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
-      Your Shine Table
-    </button>
-  </div>
-  <div id = "shinetablediv" class = "collapse col-lg-6 col-md-6 col-sm-6 col-xs-6">
+  <button id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
+    Your Shine Table
+  </button>
+  <div id = "shinetablediv" class = "collapse">
     <table id = "shinetable">
      <tr>
        <td>0</td>
