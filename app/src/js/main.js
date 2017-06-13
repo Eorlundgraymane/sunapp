@@ -722,6 +722,7 @@ function getuser()
   xhr.send(jsondata);
 }
 function addfriend(id){
+  applogin();
   var xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   var data = {};
@@ -950,7 +951,6 @@ else {
 }
 
 function selectsuggests(){
-  applogin();
   var data = {};
   data["type"] = "select";
   data["args"] = {};
