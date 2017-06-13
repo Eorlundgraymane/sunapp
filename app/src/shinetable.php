@@ -1,5 +1,5 @@
 <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">
- <table id = "shinetable" class = "collpase">
+ <table id = "shinetable" class = "collapse">
    <tr>
      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
    </tr>
