@@ -75,10 +75,6 @@ figcaption{
   left: 0%;
   opacity: 1;
 }
-.collapse{
-  display: inline;
-  opacity: 0;
-}
 .collapse.in{
   display: inline;
 }
