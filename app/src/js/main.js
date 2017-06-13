@@ -526,10 +526,13 @@ function changebanner()
       console.log(JSON.stringify(json));
       setTimeout(function(){
         document.getElementById('siteh1').innerHTML = "Sunshine";
+        document.getElementById('changebanner').innerHTML = "Change Banner";
       },3000);
       document.getElementById('siteh1').innerHTML =  json[0].username;
     }
     else if(xhr.readyState ==4) {
+      document.getElementById('siteh1').innerHTML = "Sunshine";
+      document.getElementById('changebanner').innerHTML = "Change Banner";
       alert(JSON.stringify(json));
     }
   }
