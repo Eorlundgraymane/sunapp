@@ -709,6 +709,7 @@ function getuser()
       console.log(JSON.stringify(json));
       alert(JSON.stringify(json));
     }
+    console.log("userlog function over");
   }
   var data = {};
   data["mobile"] = document.getElementById('primarykey').value;
