@@ -59,9 +59,6 @@ figcaption{
   height: 30px;
   width: 30px;
 }
-.table{
-  display: block;
-}
 #centerform{
   transform: translate(25%,60%);
 }
