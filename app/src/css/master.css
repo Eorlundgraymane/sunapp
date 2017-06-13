@@ -74,6 +74,7 @@ figcaption{
   opacity: 1;
 }
 #shinetablediv{
+  align-items: center;
   height: 2em;
 }
 #shinetable{
