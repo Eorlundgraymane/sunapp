@@ -11,7 +11,7 @@
 <html>
   <head>
     <?php include 'headprereqs.php';?>
-    <title><img src = "favicon.ico">Sunshine | Home</title>
+    <title>Sunshine | Home</title>
   </head>
   <body class = "outer-container">
     <row>

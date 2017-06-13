@@ -10,3 +10,4 @@
 <script src="/js/main.js?ver=<?php echo time();?>" type="text/javascript"></script>
 <link rel="stylesheet" href="/css/master.css?ver=<?php echo time();?>" media="screen" title="no title">
 <meta name = "viewport" content = "width=device-width,initial-scale=1">
+<link rel="icon" href="css/favicon.ico" sizes="16x16">
