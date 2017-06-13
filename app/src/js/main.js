@@ -695,8 +695,7 @@ function getuser()
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
-      loginbutton.innerHTML = "Logged In";
+      console.log(JSON.stringify(json.hasura_id));      
       loginbutton.style.disabled = true;
       loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
