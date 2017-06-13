@@ -781,7 +781,7 @@ function addfriend(id,name){
       var response = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(response));
       document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggesions";
-      alert(Name+" was sent a friend request. When it's accepted, your friend's list will get updated.");
+      alert(name+" was sent a friend request. When it's accepted, your friend's list will get updated.");
       var buttons = document.getElementsByClassName("btn");
       for(i of buttons){
         i.disabled = false;
