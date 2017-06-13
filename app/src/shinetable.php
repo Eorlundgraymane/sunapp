@@ -1,4 +1,4 @@
-<div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">
+
   <button id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
     Your Shine Table
   </button>
@@ -23,4 +23,3 @@
      </tr>
    </table>
  </div>
-</div>
