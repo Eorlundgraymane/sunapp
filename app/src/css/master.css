@@ -75,6 +75,9 @@ figcaption{
   left: 0%;
   opacity: 1;
 }
+.collapse.in{
+  display: inline;
+}
 #shinetablediv{
   height: 2em;
 }
@@ -82,7 +85,6 @@ th{
   text-align: center;
 }
 #shinetable{
-  display: inline;
   text-align: center;
   background-color: rgb(222, 247, 148);
   border-radius: 5px;
