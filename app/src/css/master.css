@@ -53,6 +53,7 @@ figcaption{
   margin-top: 10px;
 }
 .shineicon{
+  border: 1px solid black;
   position: relative;
   left: 50%;
   height: 30px;
