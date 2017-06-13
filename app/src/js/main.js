@@ -955,8 +955,8 @@ function selectsuggests(){
               else {
                 console.log(checkname+"  is a suggession");
                 document.getElementById('friendssuggest').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
-                document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
               }
+              document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
             }
             else if(cxhr.readyState == 4){
               console.log("Error");
