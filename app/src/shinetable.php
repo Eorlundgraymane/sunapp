@@ -8,7 +8,22 @@
        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
      </tr>
      <tr>
-       <td><img class = "img-responsive" alt ="Friend Icon"></td><td><img class = "img-responsive" alt ="Earth Icon"></td><td><img class = "img-responsive" alt ="Charity Icon"></td><td><img class = "img-responsive" alt ="Health Icon"></td><td><img class = "img-responsive" alt ="Family Icon"></td>
+       <td>
+         <img class = "img-responsive" src  = "css/generated/friend.svg" alt ="Friend Icon">
+       </td>
+       <td>
+         <img class = "img-responsive" src  = "css/generated/earth.svg" alt ="Earth Icon">
+       </td>
+       <td>
+         <img class = "img-responsive" src  = "css/generated/charity.svg" alt ="Charity Icon">
+       </td>
+       <td>
+         <img class = "img-responsive" src  = "css/generated/health.svg"  alt ="Health Icon">
+       </td>
+       <td>
+         <img class = "img-responsive" src  = "css/generated/family.svg" alt ="Family Icon">
+       </td>
+     </tr>
      <tr>
        <th>Friendshine</th><th>Earthshine</th><th>Charityshine</th><th>Healthshine</th><th>Familyshine</th>
      </tr>
