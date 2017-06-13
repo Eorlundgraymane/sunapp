@@ -245,7 +245,7 @@ function getfriendslist(){
             var fjson = JSON.parse(fxhr.responseText);
             console.log(JSON.stringify(fjson));
             alert("Could'nt get your friend's list at the moment");
-            document.getElementById('friendslistbutton').innerHTML = "Friend's List";
+            document.getElementById('friendslistbutton').innerHTML = "Error";
           }
         }
         fxhr.send(friendquery);
@@ -960,7 +960,7 @@ function selectsuggests(){
             }
             else if(cxhr.readyState == 4){
               console.log("Error");
-              document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
+              document.getElementById('friendssuggestbutton').innerHTML = "Error";
             }
         }
         cxhr.send(checkquery);
