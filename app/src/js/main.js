@@ -136,6 +136,7 @@ function appfriendslogin(){
           var json = JSON.parse(xhr.responseText);
           console.log(JSON.stringify(json));
           alert(JSON.stringify(json));
+          document.getElementById('friendslistbutton').disabled = true;
           alert("Could'nt get your friend's list at the moment");
           droppeddown = 1;
         }
@@ -178,6 +179,7 @@ function applogin(){
           console.log(JSON.stringify(json));
           alert(JSON.stringify(json));
           alert("Could'nt get your friend's list at the moment");
+          document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
         }
       }
       xhr.send();
