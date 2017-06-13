@@ -238,16 +238,16 @@ function getfriendslist(){
         }
         fxhr.send(friendquery);
         }
-        document.getElementById('getfriendslistbutton').disabled = true;
-        document.getElementById('friendssuggestbutton').disabled = true;
-        document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
-        document.getElementById('getfriendslistbutton').style.cursor = "not-allowed";
+        document.getElementById('getfriendslistbutton').disabled = false;
+        document.getElementById('friendssuggestbutton').disabled = false;
+        document.getElementById('friendssuggestbutton').style.cursor = "pointer";
+        document.getElementById('getfriendslistbutton').style.cursor = "pointer";
       }
       else if(xhr.readyState ==4) {
-        document.getElementById('getfriendslistbutton').disabled = true;
-        document.getElementById('friendssuggestbutton').disabled = true;
-        document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
-        document.getElementById('getfriendslistbutton').style.cursor = "not-allowed";
+        document.getElementById('getfriendslistbutton').disabled = false;
+        document.getElementById('friendssuggestbutton').disabled = false;
+        document.getElementById('friendssuggestbutton').style.cursor = "pointer";
+        document.getElementById('getfriendslistbutton').style.cursor = "pointer";
         alert(JSON.stringify(json));
       }
     }
