@@ -122,6 +122,10 @@ function appfriendslogin(){
       document.getElementById('friendssuggestbutton').disabled = true;
       document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
       document.getElementById('friendslistbutton').style.cursor = "not-allowed";
+      document.getElementById('logoutbutton').disabled = true;
+      document.getElementById('logoutbutton').style.cursor = "not-allowed";
+      document.getElementById('changebanner').disabled = true;
+      document.getElementById('changebanner').style.cursor = "not-allowed";
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
           var json = JSON.parse(xhr.responseText);
@@ -167,6 +171,10 @@ function applogin(){
       document.getElementById('friendssuggestbutton').disabled = true;
       document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
       document.getElementById('friendslistbutton').style.cursor = "not-allowed";
+      document.getElementById('logoutbutton').disabled = true;
+      document.getElementById('logoutbutton').style.cursor = "not-allowed";
+      document.getElementById('changebanner').disabled = true;
+      document.getElementById('changebanner').style.cursor = "not-allowed";
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
           var json = JSON.parse(xhr.responseText);
@@ -254,12 +262,20 @@ function getfriendslist(){
         document.getElementById('friendssuggestbutton').disabled = false;
         document.getElementById('friendssuggestbutton').style.cursor = "pointer";
         document.getElementById('friendslistbutton').style.cursor = "pointer";
+        document.getElementById('logoutbutton').disabled = false;
+        document.getElementById('logoutbutton').style.cursor = "pointer";
+        document.getElementById('changebanner').disabled = false;
+        document.getElementById('changebanner').style.cursor = "pointer";
       }
       else if(xhr.readyState ==4) {
         document.getElementById('friendslistbutton').disabled = false;
         document.getElementById('friendssuggestbutton').disabled = false;
         document.getElementById('friendssuggestbutton').style.cursor = "pointer";
         document.getElementById('friendslistbutton').style.cursor = "pointer";
+        document.getElementById('logoutbutton').disabled = false;
+        document.getElementById('logoutbutton').style.cursor = "pointer";
+        document.getElementById('changebanner').disabled = false;
+        document.getElementById('changebanner').style.cursor = "pointer";
         alert(JSON.stringify(json));
       }
     }
@@ -970,11 +986,19 @@ function selectsuggests(){
     document.getElementById('friendslistbutton').disabled = false;
     document.getElementById('friendssuggestbutton').disabled = false;
     document.getElementById('friendssuggestbutton').style.cursor = "pointer";
+    document.getElementById('logoutbutton').disabled = false;
+    document.getElementById('logoutbutton').style.cursor = "pointer";
+    document.getElementById('changebanner').disabled = false;
+    document.getElementById('changebanner').style.cursor = "pointer";
     document.getElementById('friendslistbutton').style.cursor = "pointer";
     }
     else if(xhr.readyState ==4) {
       document.getElementById('friendslistbutton').disabled = false;
       document.getElementById('friendssuggestbutton').disabled = false;
+      document.getElementById('logoutbutton').disabled = false;
+      document.getElementById('logoutbutton').style.cursor = "pointer";
+      document.getElementById('changebanner').disabled = false;
+      document.getElementById('changebanner').style.cursor = "pointer";
       document.getElementById('friendssuggestbutton').style.cursor = "pointer";
       document.getElementById('friendslistbutton').style.cursor = "pointer";
       document.getElementById('friendssuggestbutton').innerHTML = "Error";
