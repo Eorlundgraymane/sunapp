@@ -695,7 +695,7 @@ function getuser()
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));      
+      console.log(JSON.stringify(json.hasura_id));
       loginbutton.style.disabled = true;
       loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
@@ -721,7 +721,29 @@ function getuser()
   console.log(jsondata);
   xhr.send(jsondata);
 }
-
+function addfriend(id){
+  var xhr = new XMLHttpRequest();
+  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  var data = {};
+  data["type"] = "insert";
+  data["args"] = {};
+  data["args"]["table"] = "friends";
+  data["args"].objects = [{"user_id":hasura_id,"friend_id":id}];
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var response = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(response));
+    }
+    else if(xhr.readyState == 4){
+      console.log(JSON.stringify(response));
+      console.log("Error during adding friend");
+    }
+  }
+  jsondata = JSON.stringify(data);
+  xhr.send(jsondata);
+}
 function otpoverlaydropdown(){
   var otpform =  document.getElementById('otpform');
   var signupdiv =  document.getElementById('signupdiv');
@@ -953,6 +975,7 @@ function selectsuggests(){
         {
           console.log(hasura_id);
           var checkname = each.fname;
+          var suggestid = each.user_id;
           var checkdata = {};
           checkdata["type"] = "select";
           checkdata["args"] = {};
@@ -976,7 +999,7 @@ function selectsuggests(){
               }
               else {
                 console.log(checkname+"  is a suggession");
-                document.getElementById('friendssuggest').innerHTML += '<li class = "list-group"><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
+                document.getElementById('friendssuggest').innerHTML += '<li onclick = "addfriend('+suggestid+');" class = "list-group"><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
               }
             }
             else if(cxhr.readyState == 4){
