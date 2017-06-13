@@ -394,7 +394,7 @@ function comparepass(){
     document.getElementById('passlabel').classList.remove("passlabel");
     document.getElementById('passlabel').classList.add("passshow");
     return 0;
-  }
+*  }
   else if((pass!="")&&(pass == confpass)){
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
@@ -507,6 +507,7 @@ function updatemyusersprofile(pk){
 function changebanner()
 {
   document.getElementById('siteh1').innerHTML = "Getting your Name friend !!...";
+  document.getElementById('changebanner').innerHTML = "<img width = '30px' height = '30px' src = 'css/loader.gif'>";
   var data = {};
   data["type"] = "select";
   data["args"] = {};
