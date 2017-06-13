@@ -78,12 +78,6 @@ figcaption{
 th{
   text-align: center;
 }
-#shine{
-  border: 1px solid black;
-}
-td,tr,th{
-  border: 1px solid black;
-}
 button{
   outline: none;
   background-color: #7ec0ee;
