@@ -255,7 +255,7 @@ function getfriendslist(){
   data["type"] = "select";
   data["args"] = {};
   data["args"]["table"] = "user";
-  data["args"]["columns"][{"name"}] = "profile";
+  data["args"]["columns"]["name"] = "profile";
   data["args"]["columns"][{"columns"}] = ["fname"];
   data["args"]["columns"][{"columns"}][{"name"}] = "mefriend";
   data["args"]["columns"][{"columns"}][{"columns"}] = ["friend_id"];
