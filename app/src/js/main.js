@@ -251,15 +251,12 @@ function applogin(){
 
 
 function getfriendslist(){
-  var data = {};
-  data["type"] = "select";
-  data["args"] = {};
-  data["args"]["table"] = "friends";
-  data["args"]["columns"] = ["user_id"];
-  data["args"]["where"] = {};
-  data["args"]["where"]["friend_id"] = hasura_id;
-  var query = JSON.stringify(data);
+
+  var data = '"type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name":"friend_profile", "columns":[ "fname", { "name":"mefriend", "columns":[ "friend_id" ], "where":{"friend_id":'+hasura_id+' } } ] } ] } ] } ] } }';
+  var query = JSON.stringify({data});
   console.log(query);
+  /*
+
   var xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -271,12 +268,7 @@ function getfriendslist(){
       var json = JSON.parse(xhr.responseText);
       console.log(json);
       console.log(JSON.stringify(json));
-      var frienddata = {};
-      frienddata["type"] = "select";
-      frienddata["args"] = {};
-      frienddata["args"]["table"] = "profile";
-      frienddata["args"]["columns"] = ["fname"];
-      for(fid of json)
+    for(fid of json)
       {
         frienddata["args"]["where"] = {};
         frienddata["args"]["where"]["user_id"] = fid.user_id;
@@ -301,7 +293,7 @@ function getfriendslist(){
           }
         }
         fxhr.send(friendquery);
-        }
+      }
         document.getElementById('friendslistbutton').disabled = false;
         document.getElementById('friendssuggestbutton').disabled = false;
         document.getElementById('friendssuggestbutton').style.cursor = "pointer";
@@ -324,7 +316,7 @@ function getfriendslist(){
       }
     }
   xhr.send(query);
-  friendlistflag = 1;
+  friendlistflag = 1;*/
 }
 function getpiclink(){
   console.log('piclink called');
@@ -1090,6 +1082,4 @@ function selectsuggests(){
     }
   }
   xhr.send(query);
-
-
 }
