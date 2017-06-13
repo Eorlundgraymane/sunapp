@@ -112,7 +112,7 @@ function appfriendslogin(){
   if(droppeddown == 0 && friendlistflag == 0)
     {
       alert("Friend's list function is still experimental. Adding Friends feauture coming soon...");
-      document.getElementById('friendslistbutton').innerHTML = "Loading Friend's List <img width = '16px' height = '16px' src = 'css/loader.gif'>";
+      document.getElementById('friendslistbutton').innerHTML = "Loading Friend's List <img width = '16px' height = '16px' src = 'css/loader.gif>'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -160,7 +160,7 @@ function appfriendslogin(){
 function applogin(){
   if(suggesiondrop  == 0 && friendsuggestflag == 0)
     {
-      document.getElementById('friendssuggestbutton').innerHTML = "Loading Friend Suggessions <img width = '16px' height = '16px' src = 'css/loader.gif'";
+      document.getElementById('friendssuggestbutton').innerHTML = "Loading Friend Suggessions <img width = '16px' height = '16px' src = 'css/loader.gif>'";
       alert("friend suggession is an experimental feature. Adding new friends will be coming soon");
       xhr = new XMLHttpRequest();
       var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
@@ -444,7 +444,7 @@ function checklogout(pk)
 
 function userlogout(pk)
 {
-  document.getElementById('logoutbutton').innerHTML = "Logging Out <img width = '16px' height = '16px' src = 'css/loader.gif'";
+  document.getElementById('logoutbutton').innerHTML = "Logging Out <img width = '16px' height = '16px' src = 'css/loader.gif>'";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/user/logout";
   xhr.open("POST",url,true);
@@ -682,7 +682,7 @@ function getuser()
 {
   xhr = new XMLHttpRequest();
   var loginbutton = document.getElementById('loginbutton');
-  loginbutton.innerHTML = "Logging In <img width = '16px' height = '16px' src = 'css/loader.gif'";
+  loginbutton.innerHTML = "Logging In <img width = '16px' height = '16px' src = 'css/loader.gif>'";
   loginbutton.style.disabled = "true";
   loginbutton.style.cursor = "not-allowed";
   var url  = "https://auth.washtub66.hasura-app.io/login";
@@ -856,7 +856,7 @@ function otpresend() {
 function popalert() {
   if(Boolean(comparepass))
   {
-    signupbuttn.innerHTML = "Signing Up <img width = '16px' height = '16px' src = 'css/loader.gif'";
+    signupbuttn.innerHTML = "Signing Up <img width = '16px' height = '16px' src = 'css/loader.gif>'";
     console.log(Boolean(comparepass));
     var fname = document.getElementById("fname").value;
     var lname = document.getElementById("lname").value;
