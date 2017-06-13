@@ -10,6 +10,7 @@
     <div class = "input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i><span>
     <input type = "password" name = "password" id = "password" placeholder="Password">
+  </div>
     <button class = "btn" type = "button" id = "loginbutton" name = "login" onclick="userlogin();">Log in</button>
   </form>
 </div>
