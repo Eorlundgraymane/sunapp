@@ -950,6 +950,7 @@ else {
 }
 
 function selectsuggests(){
+  applogin();
   var data = {};
   data["type"] = "select";
   data["args"] = {};
