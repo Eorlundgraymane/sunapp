@@ -75,6 +75,9 @@ figcaption{
   width: 100%;
   text-align: center;
 }
+th{
+  text-align: center;
+}
 #shine{
   border: 1px solid black;
 }
