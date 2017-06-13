@@ -6,8 +6,9 @@ body,html{
   background-image: url('sunshine-min.jpg');
 }
 #friendslist,#friendssuggest{
-  list-style-type: none;  
+  list-style-type: none;
   background-color: rgba(126,192,238,0.75);
+  color: white;
 }
 #friendspane{
   border-right: 1px solid white;
