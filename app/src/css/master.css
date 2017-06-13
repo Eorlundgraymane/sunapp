@@ -60,7 +60,7 @@ figcaption{
   width: 30px;
 }
 .collapse-in{
-  display: inline;
+  display: flex;
 }
 #centerform{
   transform: translate(25%,60%);
