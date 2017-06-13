@@ -255,24 +255,17 @@ function getfriendslist(){
   data["type"] = "select";
   data["args"] = {};
   data["args"]["table"] = "user";
-  data["args"].columns[0] = {};
-  data["args"].columns["name"] = "profile";
-  data["args"].columns.columns = {};
-  data["args"].columns.columns[0] = "fname";
-  data["args"].columns.columns[1] = {};
-  data["args"].columns.columns[1]["name"] = "mefriend";
-  data["args"].columns.columns[1].columns = {};
-  data["args"].columns.columns[1].columns[0] = "friend_id";
-  data["args"].columns.columns[1].columns[1] = {};
-  data["args"].columns.columns[1].columns[1]["name"] = "friend_profile";
-  data["args"].columns.columns[1].columns[1].columns = {};
-  data["args"].columns.columns[1].columns[1].columns[0] = "fname";
-  data["args"].columns.columns[1].columns[1].columns[1] = {};
-  data["args"].columns.columns[1].columns[1].columns[1]["name"] = "mefriend";
-  data["args"].columns.columns[1].columns[1].columns[1].columns = {};
-  data["args"].columns.columns[1].columns[1].columns[1].columns[0] = "friend_id";
-  data["args"].columns.columns[1].columns[1].columns[1]["where"] = {};
-  data["args"].columns.columns[1].columns[1].columns[1]["where"]["friend_id"] = hasura_id;
+  data["args"]["columns"] = [];
+  data["args"]["columns"]["name"] = "profile";
+  data["args"]["columns"]["columns"] = ["fname"];
+  data["args"]["columns"]["columns"]["name"] = "mefriend";
+  data["args"]["columns"]["columns"]["columns"] = ["friend_id"];
+  data["args"]["columns"]["columns"]["columns"]["name"] = "mefriend";
+  data["args"]["columns"]["columns"]["columns"]["columns"] = ["friend_id"];
+  data["args"]["columns"]["columns"]["columns"]["where"] = {};
+  data["args"]["columns"]["columns"]["columns"]["where"]["friend_id"] = hasura_id;
+
+
   query = JSON.stringify(data);
   console.log(query);
   /*
