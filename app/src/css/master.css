@@ -70,9 +70,10 @@ figcaption{
   opacity: 1;
 }
 #shinetable{
-  background-color: rgb(222, 247, 148);  
+  background-color: rgb(222, 247, 148);
   table-layout: fixed;
   width: 100%;
+  text-align: center;
 }
 #shine{
   border: 1px solid black;
