@@ -156,8 +156,13 @@ function appfriendslogin(){
     document.getElementById('friendslistbutton').innerHTML = "Friend's List";
   }
 }
-function addlogin(id){
+function addlogin(id,name){
   document.getElementById('friendssuggestbutton').innerHTML = "Adding Friend <img width = '30px' height = '30px' src = 'css/loader.gif'>";
+  var buttons = document.getElementsByClassName("btn");
+  for(i of buttons){
+    i.disabled = true;
+    i.style.cursor = "not-allowed";
+  }
   xhr = new XMLHttpRequest();
   var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
   xhr.open("POST",url,true);
@@ -178,13 +183,18 @@ function addlogin(id){
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       email = JSON.stringify(json.email);
-      addfriend(id);
+      addfriend(id,name);
     }
     else if(xhr.readyState == 4) {
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert(JSON.stringify(json));
       alert("Could'nt add your friend at the moment");
+      var buttons = document.getElementsByClassName("btn");
+      for(i of buttons){
+        i.disabled = false;
+        i.style.cursor = "pointer";
+      }
       document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
     }
   }
@@ -755,7 +765,7 @@ function getuser()
   console.log(jsondata);
   xhr.send(jsondata);
 }
-function addfriend(id){
+function addfriend(id,name){
   var xhr = new XMLHttpRequest();
   var url = "https://data.washtub66.hasura-app.io/v1/query";
   var data = {};
@@ -770,11 +780,21 @@ function addfriend(id){
     if(xhr.readyState == 4 && xhr.status == 200){
       var response = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(response));
+      document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggesions";
+      alert(Name+" was sent a friend request. When it's accepted, your friend's list will get updated.");
+      var buttons = document.getElementsByClassName("btn");
+      for(i of buttons){
+        i.disabled = false;
+        i.style.cursor = "pointer";
+      }
     }
     else if(xhr.readyState == 4){
+      i.disabled = false;
+      i.style.cursor = "pointer";
       var response = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(response));
-      console.log("Error during adding friend");
+      document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggesions";
+      alert("Something went wrong while adding your friend. Please try again later");
     }
   }
   jsondata = JSON.stringify(data);
@@ -1036,7 +1056,7 @@ function selectsuggests(){
               }
               else {
                 console.log(checkname+"  is a suggession");
-                document.getElementById('friendssuggest').innerHTML += '<li onclick = "addlogin('+suggestid+');" class = "list-group"><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
+                document.getElementById('friendssuggest').innerHTML += '<li class = "list-group"><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption><button type = "button" class = "btn" onclick = "addlogin('+suggestid+','+checkname+');">'+checkname+'</button></figcaption></figure></li>';
               }
             }
             else if(cxhr.readyState == 4){
