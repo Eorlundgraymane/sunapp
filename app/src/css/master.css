@@ -13,6 +13,7 @@ body,html{
 }
 .btn:focus {
   outline:0;
+  color: white;
 }
 #friend{
   margin-left: -40px;
