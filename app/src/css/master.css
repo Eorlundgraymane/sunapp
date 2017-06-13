@@ -59,6 +59,9 @@ figcaption{
   height: 30px;
   width: 30px;
 }
+.collapse-in{
+  display: inline;
+}
 #centerform{
   transform: translate(25%,60%);
 }
