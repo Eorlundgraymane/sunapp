@@ -1,6 +1,6 @@
 <div id = "otpform" class = "otpform">
   <div id = "centerform">
-    <form method  = "POST" name = "otpform">
+    <form class = "form-horizontal" method  = "POST" name = "otpform">
       <div class = "input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i><span>
       <input type = "text" id = "mobile" name = "remobile" placeholder="Mobile"><br>
