@@ -701,7 +701,7 @@ function getuser()
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       email = json.email;
-      alert("Successfully Logged In. Welcome "+JSON.stringify(json[0].username)+" ! Sunshine is under construction. Let's just show you the hallway");
+      alert("Successfully Logged In. Welcome "+JSON.stringify(json.username)+" ! Sunshine is under construction. Let's just show you the hallway");
       getuser();
     }
     else if(xhr.readyState == 4) {
