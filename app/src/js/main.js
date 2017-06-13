@@ -686,6 +686,8 @@ function shineblock(){
     {
       var table = document.getElementById('shinetablediv');
       table.style.display = "block;"
+      table.classList.remove("collapse.in");
+      table.classList.add("collapse");
       tabledrop = 0;
     }
     else if(tabledrop == 0){
