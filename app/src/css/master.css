@@ -12,7 +12,8 @@ body,html{
 }
 #friendspane{
   border-right: 1px solid white;
-  height: 10em;
+  height: 50em;
+  width: 20em;
 }
 .btn:focus {
   outline:0;
