@@ -73,7 +73,10 @@ figcaption{
   background-color: rgb(222, 247, 148);
   position: relative;
   left: 50%;
-  display: block;  
+  display: block;
+}
+#shine{
+  border: 1px solid black;
 }
 td,tr,th{
   border: 1px solid black;
