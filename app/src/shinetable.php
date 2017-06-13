@@ -9,19 +9,19 @@
      </tr>
      <tr>
        <td>
-         <img class = "img-responsive" src  = "css/generated/friend.svg" alt ="Friend Icon">
+         <img class = "shineicon img-responsive" src  = "css/generated/friend.svg" alt ="Friend Icon">
        </td>
        <td>
-         <img class = "img-responsive" src  = "css/generated/earth.svg" alt ="Earth Icon">
+         <img class = "shineicon img-responsive" src  = "css/generated/earth.svg" alt ="Earth Icon">
        </td>
        <td>
-         <img class = "img-responsive" src  = "css/generated/charity.svg" alt ="Charity Icon">
+         <img class = "shineicon img-responsive" src  = "css/generated/charity.svg" alt ="Charity Icon">
        </td>
        <td>
-         <img class = "img-responsive" src  = "css/generated/health.svg"  alt ="Health Icon">
+         <img class = "shineicon img-responsive" src  = "css/generated/health.svg"  alt ="Health Icon">
        </td>
        <td>
-         <img class = "img-responsive" src  = "css/generated/family.svg" alt ="Family Icon">
+         <img class = "shineicon img-responsive" src  = "css/generated/family.svg" alt ="Family Icon">
        </td>
      </tr>
      <tr>
