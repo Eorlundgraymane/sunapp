@@ -251,22 +251,7 @@ function applogin(){
 
 
 function getfriendslist(){
-  var data = {};
-  data["type"] = "select";
-  data["args"] = {};
-  data["args"]["table"] = "user";
-  data["args"]["columns"]["name"] = "profile";
-  data["args"]["columns"]["columns"] = ["fname"];
-  data["args"]["columns"]["columns"]["name"] = "mefriend";
-  data["args"]["columns"]["columns"]["columns"] = ["friend_id"];
-  data["args"]["columns"]["columns"]["columns"]["name"] = "friend_profile";
-  data["args"]["columns"]["columns"]["columns"]["columns"] = ["fname"];
-  data["args"]["columns"]["columns"]["columns"]["columns"]["name"] = "mefriend";
-  data["args"]["columns"]["columns"]["columns"]["columns"]["columns"] = ["friend_id"];
-  data["args"]["columns"]["columns"]["columns"]["columns"]["where"] = {};
-  data["args"]["columns"]["columns"]["columns"]["columns"]["where"]["friend_id"] = hasura_id;
-
-
+  var data = { "type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": 81 } } ] } ] } ] } ] } };
   query = JSON.stringify(data);
   console.log(query);
   /*
