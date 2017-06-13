@@ -11,8 +11,8 @@ body,html{
   background-color: rgba(126,192,238,0.75);
 }
 #friendspane{
-  border-left: 1px solid white;
-  height: 100%;
+  border-right: 1px solid white;
+  height: 2em;
 }
 .btn:focus {
   outline:0;
