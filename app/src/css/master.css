@@ -71,8 +71,10 @@ figcaption{
 }
 #shinetable{
   background-color: rgb(222, 247, 148);
-
   display: block;
+}
+tr{
+  width: 100%;
 }
 #shine{
   border: 1px solid black;
