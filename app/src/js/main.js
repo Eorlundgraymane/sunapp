@@ -144,10 +144,12 @@ function appfriendslogin(){
       xhr.send();
     }
     else if(droppeddown == 1) {
+    document.getElementById('friendslistbutton').innerHTML = "Friend's List";
     droppeddown = 0;
   }
   else if(friendlistflag == 1){
     droppeddown =1;
+    document.getElementById('friendslistbutton').innerHTML = "Friend's List";
   }
 }
 
@@ -186,9 +188,11 @@ function applogin(){
     }
 
     else if(suggesiondrop  == 1) {
+    document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
     suggesiondrop  = 0;
     }
     else if(friendsuggestflag == 1){
+    document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
     suggesiondrop  =1;
     }
   }
@@ -235,7 +239,7 @@ function getfriendslist(){
             console.log(JSON.stringify(fjson[0].fname));
             var friendname = fjson[0].fname;
             document.getElementById('friendslist').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+friendname+'</figcaption></figure></li>';
-            document.getElementById('friendslistbutton').innerHTML = "Friend's List";
+            document.getElementById('friendslistbutton').innerHTML = "Friend's List Loaded";
           }
           else if(fxhr.readyState === 4){
             var fjson = JSON.parse(fxhr.responseText);
@@ -951,7 +955,7 @@ function selectsuggests(){
               else {
                 console.log(checkname+"  is a suggession");
                 document.getElementById('friendssuggest').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
-                document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
+                document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
               }
             }
             else if(cxhr.readyState == 4){
