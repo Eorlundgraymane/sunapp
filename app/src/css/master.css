@@ -19,9 +19,6 @@ body,html{
 #friendslistbutton{
   margin-bottom: 5px;
 }
-#contentarea{
-  display: inline;
-}
 #friendspane{
   border-right: 1px solid white;
   height: 50em;
@@ -79,6 +76,7 @@ figcaption{
   opacity: 1;
 }
 #shinetablediv{
+  display: inline;
   height: 2em;
 }
 #shinetable{
