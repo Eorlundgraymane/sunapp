@@ -75,8 +75,10 @@ figcaption{
   left: 0%;
   opacity: 1;
 }
+.collapse.in{
+  display: inline-block;
+}
 #shinetablediv{
-  display: inline;
   height: 2em;
 }
 #shinetable{
