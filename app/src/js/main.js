@@ -768,10 +768,10 @@ function addfriend(id){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var response = JSON.parse(xhr.responseText);
-      console.log(response);
+      console.log(JSON.stringify(response));
     }
     else if(xhr.readyState == 4){
-      console.log(response);
+      console.log(JSON.stringify(response));
       console.log("Error during adding friend");
     }
   }
