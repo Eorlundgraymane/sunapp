@@ -251,9 +251,29 @@ function applogin(){
 
 
 function getfriendslist(){
-
-  var data = '"type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name":"friend_profile", "columns":[ "fname", { "name":"mefriend", "columns":[ "friend_id" ], "where":{"friend_id":'+hasura_id+' } } ] } ] } ] } ] } }';
-  var query = JSON.stringify({data});
+  var data = {};
+  data["type"] = "select";
+  data["args"] = {};
+  data["args"]["table"] = "user";
+  data["args"].columns[0] = {};
+  data["args"].columns[0]["name"] = "profile";
+  data["args"].columns[0].columns = {};
+  data["args"].columns[0].columns[0] = "fname";
+  data["args"].columns[0].columns[1] = {};
+  data["args"].columns[0].columns[1]["name"] = "mefriend";
+  data["args"].columns[0].columns[1].columns = {};
+  data["args"].columns[0].columns[1].columns[0] = "friend_id";
+  data["args"].columns[0].columns[1].columns[1] = {};
+  data["args"].columns[0].columns[1].columns[1]["name"] = "friend_profile";
+  data["args"].columns[0].columns[1].columns[1].columns = {};
+  data["args"].columns[0].columns[1].columns[1].columns[0] = "fname";
+  data["args"].columns[0].columns[1].columns[1].columns[1] = {};
+  data["args"].columns[0].columns[1].columns[1].columns[1]["name"] = "mefriend";
+  data["args"].columns[0].columns[1].columns[1].columns[1].columns = {};
+  data["args"].columns[0].columns[1].columns[1].columns[1].columns[0] = "friend_id";
+  data["args"].columns[0].columns[1].columns[1].columns[1]["where"] = {};
+  data["args"].columns[0].columns[1].columns[1].columns[1]["where"]["friend_id"] = hasura_id;
+  query = JSON.stringify(data);
   console.log(query);
   /*
 
