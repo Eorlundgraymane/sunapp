@@ -3,7 +3,7 @@
   <head>
     <?php include 'headprereqs.php';?>
     <script src = "js/sha.js"></script>
-    <title>Sunshine | Welcome</title>
+    <title><img src = "favicon.ico">Sunshine | Home</title>
   </head>
     <body class = "outer-container">
       <row>
