@@ -2,7 +2,7 @@
     Sunshine
 </div>
 <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "loginspace">
-  <form method="POST" action = "/home.php" name = "loginform" id = "loginform">
+  <form class = "form-inline" method="POST" action = "/home.php" name = "loginform" id = "loginform">
     <div class = "input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i><span>
       <input type = "text" name = "primarykey" id = "primarykey" placeholder="Mobile">
