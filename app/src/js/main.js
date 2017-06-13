@@ -120,6 +120,10 @@ function appfriendslogin(){
       xhr.withCredentials = "true";
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
+          document.getElementById('getfriendslistbutton').disabled = true;
+          document.getElementById('friendssuggestbutton').disabled = true;
+          document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
+          document.getElementById('getfriendslistbutton').style.cursor = "not-allowed";
           var json = JSON.parse(xhr.responseText);
           console.log(JSON.stringify(json.hasura_id));
           hasura_id = json.hasura_id;
@@ -234,8 +238,16 @@ function getfriendslist(){
         }
         fxhr.send(friendquery);
         }
+        document.getElementById('getfriendslistbutton').disabled = true;
+        document.getElementById('friendssuggestbutton').disabled = true;
+        document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
+        document.getElementById('getfriendslistbutton').style.cursor = "not-allowed";
       }
       else if(xhr.readyState ==4) {
+        document.getElementById('getfriendslistbutton').disabled = true;
+        document.getElementById('friendssuggestbutton').disabled = true;
+        document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
+        document.getElementById('getfriendslistbutton').style.cursor = "not-allowed";
         alert(JSON.stringify(json));
       }
     }
