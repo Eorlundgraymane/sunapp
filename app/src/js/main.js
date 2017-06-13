@@ -112,7 +112,7 @@ function appfriendslogin(){
   if(droppeddown == 0 && friendlistflag == 0)
     {
       alert("Friend's list function is still experimental. Adding Friends feauture coming soon...");
-      document.getElementById('friendslist').innerHTML = "Loading Friend's List";
+      document.getElementById('friendslistbutton').innerHTML = "Loading Friend's List";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -153,7 +153,7 @@ function appfriendslogin(){
 function applogin(){
   if(suggesiondrop  == 0 && friendsuggestflag == 0)
     {
-      document.getElementById('friendssuggest').innerHTML = "Loading friend Suggessions";
+      document.getElementById('friendssuggestbutton').innerHTML = "Loading friend Suggessions";
       alert("friend suggession is an experimental feature. Adding new friends will be coming soon");
       xhr = new XMLHttpRequest();
       var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
@@ -233,11 +233,13 @@ function getfriendslist(){
             console.log(JSON.stringify(fjson[0].fname));
             var friendname = fjson[0].fname;
             document.getElementById('friendslist').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+friendname+'</figcaption></figure></li>';
+            document.getElementById('friendslistbutton').innerHTML = "Friend's List";
           }
           else if(fxhr.readyState === 4){
             var fjson = JSON.parse(fxhr.responseText);
             console.log(JSON.stringify(fjson));
             alert("Could'nt get your friend's list at the moment");
+            document.getElementById('friendslistbutton').innerHTML = "Friend's List";
           }
         }
         fxhr.send(friendquery);
@@ -947,10 +949,12 @@ function selectsuggests(){
               else {
                 console.log(checkname+"  is a suggession");
                 document.getElementById('friendssuggest').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+checkname+'</figcaption></figure></li>';
+                document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
               }
             }
             else if(cxhr.readyState == 4){
               console.log("Error");
+              document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
             }
         }
         cxhr.send(checkquery);
@@ -960,12 +964,14 @@ function selectsuggests(){
     document.getElementById('friendssuggestbutton').disabled = false;
     document.getElementById('friendssuggestbutton').style.cursor = "pointer";
     document.getElementById('friendslistbutton').style.cursor = "pointer";
+    document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
     }
     else if(xhr.readyState ==4) {
       document.getElementById('friendslistbutton').disabled = false;
       document.getElementById('friendssuggestbutton').disabled = false;
       document.getElementById('friendssuggestbutton').style.cursor = "pointer";
       document.getElementById('friendslistbutton').style.cursor = "pointer";
+      document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
       alert(JSON.stringify(json));
     }
   }
