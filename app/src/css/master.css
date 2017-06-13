@@ -7,7 +7,6 @@ body,html{
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
-  margin-left: -20px;
   background-color: rgba(126,192,238,0.75);
 }
 #friendspane{
