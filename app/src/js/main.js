@@ -274,7 +274,7 @@ function getfriendslist(){
           friendlistflag = 1;
           droppeddown = 0;
         }
-        else if(json[0]["profile"][0])["mefriend"].length > 0){
+        else if(json[0]["profile"][0]["mefriend"].length > 0){
           for(myfid of json[0]["profile"][0]["mefriend"])
           {
             if(myfid["friend_id"] != hasura_id){
