@@ -281,6 +281,10 @@ function getfriendslist(){
               console.log(myfid);
               console.log("JSON RESPONSE: "+JSON.stringify(json));
               console.log(myfid["friend_profile"]["fname"]);
+              var friendname = myfid["friend_profile"]["fname"];
+              var friendid = myfid["friend_id"];
+              document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\" onclick = \"addlogin("+friendid+",'"+friendname+"');\">"+friendname+"</li>";
+
             }
           }
         }
