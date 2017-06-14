@@ -1026,16 +1026,22 @@ function selectsuggests(){
           suggestname = users["fname"];
           document.getElementById('friendssuggest').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">"+suggestname+"</li>";
           document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
-          document.getElementById('friendssuggestbutton').disabed = false;
-          document.getElementById('friendssuggestbutton').style.cursor = "pointer";
+          var btns = document.getElementsByClassName(btn);
+          for(each of btns){
+            btns.disabled = false;
+            btns.style.cursor = "pointer";
+          }
         }
       }
       friendsuggestflag = 1;
     }
     else if(xhr.readyState ==4) {
       document.getElementById('friendssuggestbutton').innerHTML = "Error";
-      document.getElementById('friendssuggestbutton').disabed = false;
-      document.getElementById('friendssuggestbutton').style.cursor = "pointer";
+      var btns = document.getElementsByClassName(btn);
+      for(each of btns){
+        btns.disabled = false;
+        btns.style.cursor = "pointer";
+      }
       var json = JSON.parse(xhr.responseText);
       alert(JSON.stringify(json));
       friendsuggestflag = 0;
