@@ -287,7 +287,7 @@ function getfriendslist(){
               if(myfid["friend_profile"]["mefriend"].length > 0){
                 var friendname = myfid["friend_profile"]["fname"];
                 var friendid = myfid["friend_id"];
-                var prourl = myfid["proimage"];
+                var prourl = myfid["friend_profile"]["proimage"];
                 document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"><figcaption><button type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
               }
             }
