@@ -6,7 +6,7 @@
      <figure>
      <img id = "profileimage" class = "profileimage img-responsive img-rounded" alt = "No Image Uploaded">
      <figcaption id = "profilename"></figcaption>
-     <script>getpiclink();</script>     
+     <script>getpiclink();</script>
    </figure>
     </div>
     <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">
@@ -22,6 +22,10 @@
         <?php include 'friends.php';?>
       </div>
       <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "newspane">
+          <div class = "jumbotron">
+            <h3>POSTS FROM YOUR FRIENDS COMING SOON....</h3>
+          <p> Upload pics and vids so that your friends can see share and like</p>
+        </div>
       </div>
       <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "postpane">
       </div>
