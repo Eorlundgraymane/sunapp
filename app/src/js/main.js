@@ -150,11 +150,12 @@ function appfriendslogin(){
       droppeddown = 0;
     }
     else if(droppeddown == 1 && friendlistflag == 0){
-      droppeddown =1;
+      droppeddown =0;
+      friendlistflag = 0;
     }
     else if(droppeddown == 0 && friendlistflag == 1){
       droppeddown = 1;
-      friendlistflag = 0;
+      friendlistflag = 1;
     }
 
 }
@@ -271,7 +272,7 @@ function getfriendslist(){
           document.getElementById('friendslistbutton').innerHTML = "No Friends Yet";
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
-          friendlistflag = 1;
+          friendlistflag = 0;
           droppeddown = 0;
         }
         else if(json[0]["profile"][0]["mefriend"].length > 0){
@@ -284,16 +285,18 @@ function getfriendslist(){
               var friendname = myfid["friend_profile"]["fname"];
               var friendid = myfid["friend_id"];
               document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\" onclick = \"addlogin("+friendid+",'"+friendname+"');\">"+friendname+"</li>";
-              friendlistflag = 1;
-              droppeddown = 0;
             }
           }
+          friendlistflag = 1;
+          droppeddown = 0;
+          document.getElementById('friendslistbutton').innerHTML = "Friends List Loaded";
         }
         }
         else if(xhr.readyState ==4) {
           alert(JSON.stringify(json));
           friendlistflag = 0;
           droppeddown = 0;
+          document.getElementById('friendslistbutton').innerHTML = "Error";
         }
         document.getElementById('friendslistbutton').disabled = false;
         document.getElementById('friendssuggestbutton').disabled = false;
