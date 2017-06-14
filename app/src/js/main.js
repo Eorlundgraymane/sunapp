@@ -1005,9 +1005,9 @@ else {
 }
 
 function selectsuggests(){
-  var data = { "type": "select", "args": { "table": "profile", "columns": [ "fname", { "name": "mefriend", "columns": ["friend_id","where"{"friend_id" : "$ne" : hasura_id }]}]}};
+  var data = { "type": "select", "args": { "table": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id"],"where": { "friend_id":{"$ne": hasura_id} } } ] } };
   var query = JSON.stringify(data);
-  console.log(query);/*
+  console.log(query);
   xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -1017,71 +1017,14 @@ function selectsuggests(){
     if(xhr.readyState == 4 && xhr.status == 200){
       document.getElementById('friendssuggest').innerHTML = "";
       var json = JSON.parse(xhr.responseText);
+      console.log(json)l;
       console.log("Users : "+JSON.stringify(json));
       friendsuggestflag = 1
-      for(each of json)
-      {
-        var checkid = each.user_id;
-        if(checkid != hasura_id)
-        {
-          console.log(hasura_id);
-          var checkname = each.fname;
-          var suggestid = each.user_id;
-          var checkdata = {};
-          checkdata["type"] = "select";
-          checkdata["args"] = {};
-          checkdata["args"]["table"] = "friends";
-          checkdata["args"]["columns"] = ["user_id"];
-          checkdata["args"]["where"] = {};
-          checkdata["args"]["where"]["friend_id"] = hasura_id;
-          checkdata["args"]["where"]["user_id"] = checkid;
-          var checkquery = JSON.stringify(checkdata);
-          console.log(query);
-          cxhr = new XMLHttpRequest();
-          curl = url;
-          cxhr.open('POST',curl,false);
-          cxhr.setRequestHeader("Content-type","application/json");
-          cxhr.withCredentials = "true";
-          cxhr.onreadystatechange = function(){
-            if(cxhr.readyState == 4 && cxhr.status == 200){
-              var cjson = JSON.parse(cxhr.responseText);
-              if(cjson.length > 0){
-                console.log(checkname+"  is a friend");
-              }
-              else {
-                console.log(checkname+"  is a suggession");
-                document.getElementById('friendssuggest').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+checkname+"');\">"+checkname+"</button></figcaption></figure></li>";
-              }
-            }
-            else if(cxhr.readyState == 4){
-              console.log("Error");
-            }
-        }
-        cxhr.send(checkquery);
-      }
-    }
-    document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
-    document.getElementById('friendslistbutton').disabled = false;
-    document.getElementById('friendssuggestbutton').disabled = false;
-    document.getElementById('friendssuggestbutton').style.cursor = "pointer";
-    document.getElementById('logoutbutton').disabled = false;
-    document.getElementById('logoutbutton').style.cursor = "pointer";
-    document.getElementById('changebanner').disabled = false;
-    document.getElementById('changebanner').style.cursor = "pointer";
-    document.getElementById('friendslistbutton').style.cursor = "pointer";
     }
     else if(xhr.readyState ==4) {
-      document.getElementById('friendslistbutton').disabled = false;
-      document.getElementById('friendssuggestbutton').disabled = false;
-      document.getElementById('logoutbutton').disabled = false;
-      document.getElementById('logoutbutton').style.cursor = "pointer";
-      document.getElementById('changebanner').disabled = false;
-      document.getElementById('changebanner').style.cursor = "pointer";
-      document.getElementById('friendssuggestbutton').style.cursor = "pointer";
-      document.getElementById('friendslistbutton').style.cursor = "pointer";
-      document.getElementById('friendssuggestbutton').innerHTML = "Error";
+      var json = JSON.parse(xhr.responseText);
       alert(JSON.stringify(json));
     }
   }
-  xhr.send(query);*/
+  xhr.send(query);
 }
