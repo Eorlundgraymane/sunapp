@@ -204,8 +204,9 @@ function addlogin(id,name){
   xhr.send();
 }
 
+var addflag =1;
 function applogin(){
-  if(suggesiondrop  == 0 && friendsuggestflag == 0)
+  if(addflag == 1 || (suggesiondrop  == 0 && friendsuggestflag == 0))
     {
       document.getElementById('friendssuggestbutton').innerHTML = "Loading Friend Suggessions <img width = '30px' height = '30px' src = 'css/loader.gif'>";
       alert("friend suggession is an experimental feature. Adding new friends will be coming soon");
@@ -250,6 +251,7 @@ function applogin(){
     document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
     suggesiondrop  =1;
     }
+    addflag = 0;
   }
 
 
@@ -776,6 +778,7 @@ function addfriend(id,name){
         i.disabled = false;
         i.style.cursor = "pointer";
       }
+      addflag = 1;
       applogin();
     }
     else if(xhr.readyState == 4){
