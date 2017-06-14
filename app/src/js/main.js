@@ -264,30 +264,24 @@ function getfriendslist(){
       if(xhr.readyState == 4 && xhr.status == 200){
         document.getElementById('friendslist').innerHTML = "";
         var json = JSON.parse(xhr.responseText);
-        console.log(json);
-        console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
-          document.getElementById('friendslistbutton').disabled = false;
-          document.getElementById('friendssuggestbutton').disabled = false;
-          document.getElementById('friendssuggestbutton').style.cursor = "pointer";
-          document.getElementById('friendslistbutton').style.cursor = "pointer";
-          document.getElementById('friendslistbutton').style.innerHTML = "Friends List";
-          document.getElementById('logoutbutton').disabled = false;
-          document.getElementById('logoutbutton').style.cursor = "pointer";
-          document.getElementById('changebanner').disabled = false;
-          document.getElementById('changebanner').style.cursor = "pointer";
+        if(json[0]["profile"][0]["mefriend"].length == 0){
+          document.getElementById('friendslistbutton').style.innerHTML = "No Friends Yet";
+          console.log(json);
+          console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
+        }
 
         }
         else if(xhr.readyState ==4) {
-          document.getElementById('friendslistbutton').disabled = false;
-          document.getElementById('friendssuggestbutton').disabled = false;
-          document.getElementById('friendssuggestbutton').style.cursor = "pointer";
-          document.getElementById('friendslistbutton').style.cursor = "pointer";
-          document.getElementById('logoutbutton').disabled = false;
-          document.getElementById('logoutbutton').style.cursor = "pointer";
-          document.getElementById('changebanner').disabled = false;
-          document.getElementById('changebanner').style.cursor = "pointer";
           alert(JSON.stringify(json));
         }
+        document.getElementById('friendslistbutton').disabled = false;
+        document.getElementById('friendssuggestbutton').disabled = false;
+        document.getElementById('friendssuggestbutton').style.cursor = "pointer";
+        document.getElementById('friendslistbutton').style.cursor = "pointer";        
+        document.getElementById('logoutbutton').disabled = false;
+        document.getElementById('logoutbutton').style.cursor = "pointer";
+        document.getElementById('changebanner').disabled = false;
+        document.getElementById('changebanner').style.cursor = "pointer";
       }
     xhr.send(query);
   }
