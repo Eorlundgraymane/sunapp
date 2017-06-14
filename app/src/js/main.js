@@ -323,6 +323,7 @@ function addpiclink(link){
   data["args"] = {};
   data["args"]["table"] = "profile";
   data["args"].objects = [{"proimage":link}];
+  var query = JSON.stringify(data);
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -338,6 +339,7 @@ function addpiclink(link){
       console.log("Profile picture NOT updated");
     }
   }
+  xhr.send(query);
 }
 function getpiclink(){
   console.log('piclink called');
