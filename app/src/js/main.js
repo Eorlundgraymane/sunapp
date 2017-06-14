@@ -1028,8 +1028,8 @@ function selectsuggests(){
           document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
           var btns = document.getElementsByClassName('btn');
           for(each of btns){
-            btns.disabled = false;
-            btns.style.cursor = "pointer";
+            each.disabled = false;
+            each.style.cursor = "pointer";
           }
         }
       }
@@ -1039,8 +1039,8 @@ function selectsuggests(){
       document.getElementById('friendssuggestbutton').innerHTML = "Error";
       var btns = document.getElementsByClassName('btn');
       for(each of btns){
-        btns.disabled = false;
-        btns.style.cursor = "pointer";
+        each.disabled = false;
+        each.style.cursor = "pointer";
       }
       var json = JSON.parse(xhr.responseText);
       alert(JSON.stringify(json));
