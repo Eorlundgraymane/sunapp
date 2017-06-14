@@ -782,6 +782,11 @@ function addfriend(id,name){
       console.log(JSON.stringify(response));
       document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggesions";
       alert("You already sent a friend request to "+name);
+      var buttons = document.getElementsByClassName("btn");
+      for(i of buttons){
+        i.disabled = false;
+        i.style.cursor = "pointer";
+      }
     }
   }
   jsondata = JSON.stringify(data);
