@@ -238,10 +238,6 @@ input,select {
   color: white;
   font-weight: 900;
 }
-#siteheader{
-  position: fixed;
-  top: 0;
-}
 #sitefooter {
   animation-name: fadeIn;
   animation-duration: 6s;
