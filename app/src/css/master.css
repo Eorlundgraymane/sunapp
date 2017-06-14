@@ -67,7 +67,7 @@ figcaption{
 }
 #siteheader{
   position: fixed;
-  display: inline-block;
+  display: block;
 }
 #centerform{
   transform: translate(25%,60%);
