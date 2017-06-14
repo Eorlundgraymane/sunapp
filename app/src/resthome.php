@@ -23,7 +23,7 @@
       </div>
       <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "newspane">
           <div class = "jumbotron">
-            <h3>POSTS FROM YOUR FRIENDS COMING SOON....</h3>
+            <h1>POSTS FROM YOUR FRIENDS COMING SOON....</h1>
           <p> Upload pics and vids so that your friends can see share and like</p>
         </div>
       </div>
