@@ -148,6 +148,7 @@ function appfriendslogin(){
       xhr.send();
     }
     else if(droppeddown == 1){
+      friendslist = 1;
       droppeddown = 0;
     }
 }
