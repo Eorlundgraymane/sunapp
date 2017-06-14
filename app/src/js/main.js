@@ -1041,9 +1041,9 @@ function pullposts(){
     "columns":["post","created",{
       "name":"author",
       "columns":["fname","proimage"]
-    }]
+    }],
     "order_by":{"created"}
-  }};
+  };
   var query = JSON.stringify(data);
   var url = "https://data.unwound15.hasura-app.io/";
   xhr = new XMLHttpRequest();
