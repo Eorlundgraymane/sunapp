@@ -1057,6 +1057,7 @@ function selectsuggests(){
           suggestname = users["fname"];
           propic = users["proimage"];
           document.getElementById('friendssuggest').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src =\""+propic+"\"><figcaption>"+suggestname+"<button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">Add</figcaption></figure></li>";
+          friendsuggestflag = 1;
           }
         }
         document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
@@ -1065,7 +1066,6 @@ function selectsuggests(){
           each.disabled = false;
           each.style.cursor = "pointer";
       }
-      friendsuggestflag = 1;
     }
     else if(xhr.readyState ==4) {
       document.getElementById('friendssuggestbutton').innerHTML = "Error";
