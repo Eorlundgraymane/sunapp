@@ -790,6 +790,7 @@ function addfriend(id,name){
         i.disabled = false;
         i.style.cursor = "pointer";
       }
+      applogin();
     }
   }
   jsondata = JSON.stringify(data);
