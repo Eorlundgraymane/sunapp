@@ -26,7 +26,12 @@
             <ul id = "posts">
               <button type = "button" class = ".btn" onclick="pullposts()">Pull Latest Post</button>
             </ul>
-            <h1 id = "post_title">POSTS FROM YOUR FRIENDS COMING SOON....</h1>
+            <figure id = "auth_info">
+            <img id = "auth_img" class = "img img-rounded img-responsive" alt = "Author Image">
+            <figcaption id = "auth_name"></figcaption>
+          </figure> 
+            <h1 id = "post_title">
+              POSTS FROM YOUR FRIENDS COMING SOON....</h1>
             <figure>
               <img id = "post_image" class = "img img-rounded img-responsive" alt = "Post Image">
               <figcaption id = "post_text">
