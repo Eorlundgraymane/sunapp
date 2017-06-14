@@ -270,7 +270,7 @@ function getfriendslist(){
           document.getElementById('friendslistbutton').innerHTML = "No Friends Yet";
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
-          friendlistflag = 1;
+          friendlistflag = 0;
         }
         /*else if(json[0]["profile"][0])["mefriend"]["friend_"]){
         }*/
