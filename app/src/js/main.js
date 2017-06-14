@@ -265,16 +265,17 @@ function getfriendslist(){
         document.getElementById('friendslist').innerHTML = "";
         var json = JSON.parse(xhr.responseText);
         console.log(json);
-        console.log(JSON.stringify(json));
+        console.log(JSON.stringify(json[0]));
           document.getElementById('friendslistbutton').disabled = false;
           document.getElementById('friendssuggestbutton').disabled = false;
           document.getElementById('friendssuggestbutton').style.cursor = "pointer";
           document.getElementById('friendslistbutton').style.cursor = "pointer";
+          document.getElementById('friendslistbutton').style.innerHTML = "Friends List";
           document.getElementById('logoutbutton').disabled = false;
           document.getElementById('logoutbutton').style.cursor = "pointer";
           document.getElementById('changebanner').disabled = false;
           document.getElementById('changebanner').style.cursor = "pointer";
-          
+
         }
         else if(xhr.readyState ==4) {
           document.getElementById('friendslistbutton').disabled = false;
