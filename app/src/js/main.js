@@ -254,7 +254,7 @@ function applogin(){
 
 function getfriendslist(){
   if(friendlistflag == 0 && droppeddown == 0){
-    var data = { "type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": 81 } } ] } ] } ] } ] } };
+    var data = { "type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": hasura_id } } ] } ] } ] } ] } };
     query = JSON.stringify(data);
     console.log(query);
     var xhr = new XMLHttpRequest();
