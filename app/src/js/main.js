@@ -1062,7 +1062,7 @@ function pullposts(){
         var title = each["title"];
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
-        document.getElementById('posts').innerHTML = '<li><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><figcaption id = "auth_name">'+author_name+'</figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+post_img+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption></figure></li>';
+        document.getElementById('posts').innerHTML = '<li><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><figcaption id = "auth_name">'+author_name+'</figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption></figure></li>';
       }
     }
     else if (xhr.readyState == 4) {
