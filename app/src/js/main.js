@@ -1017,7 +1017,7 @@ function selectsuggests(){
     if(xhr.readyState == 4 && xhr.status == 200){
       document.getElementById('friendssuggest').innerHTML = "";
       var json = JSON.parse(xhr.responseText);
-      console.log(json)l;
+      console.log(json);
       console.log("Users : "+JSON.stringify(json));
       friendsuggestflag = 1
     }
