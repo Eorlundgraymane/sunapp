@@ -264,14 +264,17 @@ function getfriendslist(){
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
           droppeddown =1;
+          friendlistflag = 1;
         }
         else {
-
+            droppeddown =1;
+            friendlistflag = 0;
         }
-
         }
         else if(xhr.readyState ==4) {
           alert(JSON.stringify(json));
+              droppeddown =1;
+              friendlistflag = 0;
         }
         document.getElementById('friendslistbutton').disabled = false;
         document.getElementById('friendssuggestbutton').disabled = false;
@@ -282,7 +285,6 @@ function getfriendslist(){
         document.getElementById('changebanner').disabled = false;
         document.getElementById('changebanner').style.cursor = "pointer";
         droppeddown =1;
-        friendlistflag =0;
       }
     xhr.send(query);
   }
