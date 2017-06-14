@@ -282,6 +282,7 @@ function getfriendslist(){
                 var friendname = myfid["friend_profile"]["fname"];
                 var friendid = myfid["friend_id"];
                 var prourl = myfid["friend_profile"]["proimage"];
+                console.log(prourl);
                 document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"><figcaption><button type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
               }
             }
@@ -796,6 +797,7 @@ function addfriend(id,name){
       }
       addflag = 1;
       applogin();
+      appfriendslogin();
     }
     else if(xhr.readyState == 4){
       i.disabled = false;
@@ -810,6 +812,7 @@ function addfriend(id,name){
         i.style.cursor = "pointer";
       }
       applogin();
+      appfriendslogin();
     }
   }
   jsondata = JSON.stringify(data);
