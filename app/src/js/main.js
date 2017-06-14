@@ -1037,7 +1037,7 @@ function selectsuggests(){
     }
     else if(xhr.readyState ==4) {
       document.getElementById('friendssuggestbutton').innerHTML = "Error";
-      var btns = document.getElementsByClassName(btn);
+      var btns = document.getElementsByClassName('btn');
       for(each of btns){
         btns.disabled = false;
         btns.style.cursor = "pointer";
