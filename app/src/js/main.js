@@ -920,6 +920,17 @@ function otpresend() {
       otpcancelbutton.style.disabled = false;
       alert(JSON.stringify(json.message));
     }
+    else if (xhr.readyState ==4){
+      otpbutton.style.cursor = "pointer";
+      resendotpbutton.style.cursor = "pointer";
+      otpcancelbutton.style.cursor = "pointer";
+      resendotpbutton.style.disabled = false;
+      otpcancelbutton.style.disabled = false;
+      resendotpbutton.innerHTML = "OTP Failed";
+      setTimeout(function(){},3000);
+      resendotpbutton.innerHTML = "Resend OTP";
+      alert(JSON.stringify(json.message));
+    }
   }
   var remobile = document.getElementById('mobile').value;
   var data = {};
