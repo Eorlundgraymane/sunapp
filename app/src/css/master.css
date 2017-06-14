@@ -71,6 +71,7 @@ figcaption{
 .profileimage{
   position: relative;
   left: 0%;
+  width: 5em;
   transition-property: all;
   transition-duration: 3s;
   transition-timing-function: ease;
@@ -79,6 +80,7 @@ figcaption{
 .profileimageappeared{
   position: relative;
   left: 0%;
+  width: 5em;
   opacity: 1;
 }
 #shinetablediv{
