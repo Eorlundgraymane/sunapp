@@ -13,6 +13,12 @@ body,html{
   margin-bottom: 5px;
   cursor: pointer;
 }
+#profilename{
+  color: white;
+  margin-top: 5px;
+  font-weight: bolder;
+  text-decoration: underline;
+}
 #friendssuggestbutton{
   margin-bottom: 5px;
 }
