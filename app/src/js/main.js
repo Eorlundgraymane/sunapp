@@ -259,10 +259,13 @@ function getfriendslist(){
         document.getElementById('friendslist').innerHTML = "";
         var json = JSON.parse(xhr.responseText);
         if(json[0]["profile"][0]["mefriend"].length == 0){
-          document.getElementById('friendslistbutton').innerHTML = "No Friends Yet";
+          document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Sent some requests first.</li>";
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
-          droppeddown =1;          
+          droppeddown =1;
+        }
+        else {
+
         }
 
         }
