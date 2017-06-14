@@ -293,7 +293,7 @@ function getfriendslist(){
           }
           friendlistflag = 1;
           droppeddown = 0;
-          document.getElementById('friendslistbutton').innerHTML = "Friends List Loaded<button type = \"btn\" onclick = \"getfriendslist();\"><img src = \"css/refresh.png\" width = \"15px\" height = \"15px\"></button>";        
+          document.getElementById('friendslistbutton').innerHTML = "Friends List Loaded";        
         }
         }
         else if(xhr.readyState ==4) {
