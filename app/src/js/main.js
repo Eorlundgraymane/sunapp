@@ -284,7 +284,7 @@ function getfriendslist(){
               console.log(myfid["friend_profile"]["fname"]);
               var friendname = myfid["friend_profile"]["fname"];
               var friendid = myfid["friend_id"];
-              document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\"\">"+friendname+"</li>";
+              document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
             }
           }
           friendlistflag = 1;
@@ -1024,7 +1024,7 @@ function selectsuggests(){
         if(users["youfriend"].length == 0 && users["user_id"]!= hasura_id){
           suggestid = users["user_id"];
           suggestname = users["fname"];
-          document.getElementById('friendssuggest').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"></figcaption>"+suggestname+"<button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">Add</li>";
+          document.getElementById('friendssuggest').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption>"+suggestname+"<button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">Add</figcaption></figure></li>";
           }
         }
         document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
