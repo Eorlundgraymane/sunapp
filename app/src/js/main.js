@@ -265,7 +265,7 @@ function getfriendslist(){
         document.getElementById('friendslist').innerHTML = "";
         var json = JSON.parse(xhr.responseText);
         console.log(json);
-        console.log(JSON.stringify(json[0]));
+        console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
           document.getElementById('friendslistbutton').disabled = false;
           document.getElementById('friendssuggestbutton').disabled = false;
           document.getElementById('friendssuggestbutton').style.cursor = "pointer";
