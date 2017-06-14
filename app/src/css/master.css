@@ -3,7 +3,7 @@ body,html{
   width: 100%;
 }
 .outer-container {
-  background-image: url('sunshine-min.jpg');    
+  background-image: url('sunshine-min.jpg');
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
@@ -246,7 +246,6 @@ input,select {
   animation-duration: 6s;
   animation-timing-function: ease-in();
   animation-iteration-count: 1;
-  position: fixed;
   bottom: 0;
   text-align: center;
   color: white;
