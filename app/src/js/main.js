@@ -319,10 +319,10 @@ function addpiclink(link){
   var xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   var data = {};
-  data["type"] = "insert";
+  data["type"] = "update";
   data["args"] = {};
   data["args"]["table"] = "profile";
-  data["args"].objects = [{"proimage":link}];
+  data["args"]["$set"] = {"proimage": link};
   var query = JSON.stringify(data);
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
