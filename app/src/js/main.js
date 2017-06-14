@@ -1077,7 +1077,7 @@ function selectsuggests(){
           each.disabled = false;
           each.style.cursor = "pointer";
       }
-      friendsuggestflag = 1;
+      friendsuggestflag = 1;      
     }
     else if(xhr.readyState ==4) {
       document.getElementById('friendssuggestbutton').innerHTML = "Error";
