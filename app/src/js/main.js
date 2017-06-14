@@ -896,9 +896,9 @@ function otpresend() {
   resendotpbutton.style.cursor = "not-allowed";
   otpcancelbutton.style.cursor = "not-allowed";
   resendotpbutton.innerHTML = "Sending OTP to "+mobile+" <img width = '30px' height = '30px' src = 'css/loader.gif'>";
-  otpbutton.style.disabled = "true";
-  resendotpbutton.style.disabled = "true";
-  otpcancelbutton.style.disabled = "true";
+  otpbutton.style.disabled = true;
+  resendotpbutton.style.disabled = true;
+  otpcancelbutton.style.disabled = true;
   xhr = new XMLHttpRequest();
   var url  = "https://auth.unwound15.hasura-app.io/mobile/resend-otp";
   xhr.open("POST",url,true);
