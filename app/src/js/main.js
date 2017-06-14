@@ -1056,7 +1056,8 @@ function pullposts(){
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
-      document.getElementById('post_image').src = "";
+      document.getElementById('post_image').src = res[0]["postimg"];
+      document.getElementById('post_text').innerHTML = res[0]["post"];
     }
     else if (xhr.readyState == 4) {
       var res = JSON.parse(xhr.responseText);
