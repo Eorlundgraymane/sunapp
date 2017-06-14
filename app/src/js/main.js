@@ -257,7 +257,7 @@ function getfriendslist(){
   /*
 
   var xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -328,7 +328,7 @@ function getpiclink(){
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -508,7 +508,7 @@ function userlogout(pk)
 }
 function updatemyusersprofile(pk){
   xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = true;
@@ -551,7 +551,7 @@ function changebanner()
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -577,7 +577,7 @@ function changebanner()
 function updatemyusers(pk,pasw){
   setTimeout(function(){},5000);
   xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = true;
@@ -699,7 +699,7 @@ function getuser()
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -758,7 +758,7 @@ function getuser()
 }
 function addfriend(id,name){
   var xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
   var data = {};
   data["type"] = "insert";
   data["args"] = {};
@@ -948,7 +948,7 @@ function popalert() {
   signupbuttn.style.disabled = "true";
   signupbuttn.style.cursor = "not-allowed";
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.washtub66.hasura-app.io/signup";
+  var url  = "https://auth.unwound15.hasura-app.io/signup";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.setRequestHeader("Authentication",admintoken);
@@ -1006,7 +1006,7 @@ function selectsuggests(){
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
-  var url = "https://data.washtub66.hasura-app.io/v1/query";
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
