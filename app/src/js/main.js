@@ -1060,7 +1060,12 @@ function selectsuggests(){
           friendsuggestflag = 1;
           }
         }
-        document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
+        if(friendsuggestflag ==1){
+          document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
+        }
+        else{
+          document.getElementById('friendssuggestbutton').innerHTML = "No Suggessions yet";
+        }
         var btns = document.getElementsByClassName('btn');
         for(each of btns){
           each.disabled = false;
