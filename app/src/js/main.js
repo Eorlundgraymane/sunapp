@@ -269,8 +269,8 @@ function getfriendslist(){
           document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Sent some requests first.</li>";
           document.getElementById('friendslistbutton').innerHTML = "No Friends Yet";
           droppeddown = 1;
-          document.getElementById('friendslist').collapse;
-          document.getElementById('friendslist').collapse.in;          
+          document.getElementById('friendslist').classList.remove("in");
+          document.getElementById('friendslist').classList.add("in");          
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
           friendlistflag = 0;
