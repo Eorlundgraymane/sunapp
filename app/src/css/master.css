@@ -5,13 +5,19 @@ body,html{
 .outer-container {
   background-image: url('sunshine-min.jpg');
 }
-#friendslist,#friendssuggest,#post{
+#friendslist,#friendssuggest{
   list-style-type: none;
   background-color: rgba(126,192,238,0.75);
   color: white;
   border-radius: 2px;
   margin-bottom: 5px;
   cursor: pointer;
+}
+#post{
+  list-style-type: none;
+  background-color: rgba(126,192,238,0.75);
+  border-radius: 2px;
+  margin-bottom: 5px;
 }
 #profilename{
   color: white;
