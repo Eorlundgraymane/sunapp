@@ -1024,14 +1024,16 @@ function selectsuggests(){
         if(users["youfriend"].length == 0 && users["user_id"]!= hasura_id){
           suggestid = users["user_id"];
           suggestname = users["fname"];
-          document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">"+suggestname+"</li>";
+          document.getElementById('friendssuggest').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">"+suggestname+"</li>";
+          document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
         }
       }
-      friendsuggestflag = 1
+      friendsuggestflag = 1;
     }
     else if(xhr.readyState ==4) {
       var json = JSON.parse(xhr.responseText);
       alert(JSON.stringify(json));
+      friendsuggestflag = 0;
     }
   }
   xhr.send(query);
