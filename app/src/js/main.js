@@ -252,7 +252,7 @@ function applogin(){
 
 
 function getfriendslist(){
-  if(friendlistflag == 0){
+  if(friendlistflag == 0 && droppeddown == 0){
     var data = { "type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": 81 } } ] } ] } ] } ] } };
     query = JSON.stringify(data);
     console.log(query);
@@ -268,13 +268,12 @@ function getfriendslist(){
           if(json[0]["profile"][0]["mefriend"].length == 0){
           document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Sent some requests first.</li>";
           document.getElementById('friendslistbutton').innerHTML = "No Friends Yet";
-          droppeddown = 1;
           document.getElementById('friendslist').classList.remove("in");
           document.getElementById('friendslist').classList.add("in");
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
           friendlistflag = 0;
-          droppeddown == 1;
+          droppeddown = 1;
         }
         /*else if(json[0]["profile"][0])["mefriend"]["friend_"]){
         }*/
@@ -282,6 +281,7 @@ function getfriendslist(){
         else if(xhr.readyState ==4) {
           alert(JSON.stringify(json));
           friendlistflag = 0;
+          droppeddown = 1;
         }
         document.getElementById('friendslistbutton').disabled = false;
         document.getElementById('friendssuggestbutton').disabled = false;
