@@ -933,6 +933,9 @@ function otpresend() {
 function popalert() {
   if(Boolean(comparepass))
   {
+    var signupbuttn = document.getElementById("signupbuttn");
+    signupbuttn.style.disabled = true;
+    signupbuttn.style.cursor = "not-allowed";
     signupbuttn.innerHTML = "Signing Up <img width = '30px' height = '30px' src = 'css/loader.gif'>";
     console.log(Boolean(comparepass));
     var fname = document.getElementById("fname").value;
@@ -947,10 +950,6 @@ function popalert() {
     var dob = year.concat("-",month,"-",day);
     console.log(dob);
     var uname = fname.concat(" ",lname);
-  var signupbuttn = document.getElementById("signupbuttn");
-  signupbuttn.innerHTML ="Signing Up...";
-  signupbuttn.style.disabled = "true";
-  signupbuttn.style.cursor = "not-allowed";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.unwound15.hasura-app.io/signup";
   xhr.open("POST",url,true);
