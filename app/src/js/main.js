@@ -1056,13 +1056,15 @@ function pullposts(){
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
-      document.getElementById('post_image').src = res[0]["postimg"];
-      document.getElementById('post_text').innerHTML = res[0]["post"];
-      document.getElementById('post_title').innerHTML = res[0]["title"];
-      var author_img = res[0]["author"]["proimage"];
-      var author_name = res[0]["author"]["fname"];
-      document.getElementById('auth_img').src = author_img;
-      document.getElementById('auth_name').innerHTML = author_name;
+      for(each of res){
+        document.getElementById('post_image').src = each["postimg"];
+        document.getElementById('post_text').innerHTML = each["post"];
+        document.getElementById('post_title').innerHTML = each["title"];
+        var author_img = each["author"]["proimage"];
+        var author_name = each["author"]["fname"];
+        document.getElementById('auth_img').src = author_img;
+        document.getElementById('auth_name').innerHTML = author_name;
+      }
     }
     else if (xhr.readyState == 4) {
       var res = JSON.parse(xhr.responseText);
