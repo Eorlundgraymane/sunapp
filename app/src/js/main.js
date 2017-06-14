@@ -982,7 +982,7 @@ function popalert() {
       signupbuttn.style.cursor = "pointer";
       otpoverlaydropdown();
     }
-    else if(xhr.readyState == 4 && xhr.status == 409) {
+    else if(xhr.readyState == 4) {
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json.message));
       alert("Sorry User already exists");
