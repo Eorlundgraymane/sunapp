@@ -575,7 +575,6 @@ function changebanner()
 
 }
 function updatemyusers(pk,pasw){
-  setTimeout(function(){},5000);
   xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -629,7 +628,7 @@ function checklogin(pk,pasw)
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json.hasura_id));
-            loginbutton.innerHTML = "Logged In";
+      loginbutton.innerHTML = "Logged In";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
@@ -838,7 +837,7 @@ function otpverify(){
   var fname = document.getElementById("fname").value;
   var lname = document.getElementById("lname").value;
   var mobile = document.getElementById("mob").value;
-  var password = document.getElementById("pass").value;
+  var password = SHA256(document.getElementById("pass").value);
   var email = document.getElementById("email").value;
   var uname = fname.concat(" ",lname);
   console.log(uname);
