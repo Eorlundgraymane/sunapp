@@ -134,7 +134,6 @@ function appfriendslogin(){
           auth_token = "Bearer "+json.auth_token;
           email = json.email;
           getfriendslist();
-          friendlistflag = 1;
         }
         else if(xhr.readyState == 4) {
           var json = JSON.parse(xhr.responseText);
@@ -271,12 +270,14 @@ function getfriendslist(){
           document.getElementById('friendslistbutton').innerHTML = "No Friends Yet";
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
+          friendlistflag = 1;
         }
         /*else if(json[0]["profile"][0])["mefriend"]["friend_"]){
         }*/
         }
         else if(xhr.readyState ==4) {
           alert(JSON.stringify(json));
+          friendlistflag = 0;
         }
         document.getElementById('friendslistbutton').disabled = false;
         document.getElementById('friendssuggestbutton').disabled = false;
