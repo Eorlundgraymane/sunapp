@@ -322,7 +322,7 @@ function addpiclink(link){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "profile";
-  data["args"].objects = [{"proimage"}:link];
+  data["args"].objects = [{"proimage":link}];
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -371,7 +371,7 @@ function getpiclink(){
           document.getElementById('profileimage').src = piclink;
           document.getElementById('profileimage').classList.remove('profileimage');
           document.getElementById('profileimage').classList.add('profileimageappeared');
-          
+
           addpiclink(piclink);
 
           }
