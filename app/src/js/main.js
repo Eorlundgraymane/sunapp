@@ -1025,13 +1025,13 @@ function selectsuggests(){
           suggestid = users["user_id"];
           suggestname = users["fname"];
           document.getElementById('friendssuggest').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">"+suggestname+"</li>";
-          document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
-          var btns = document.getElementsByClassName('btn');
-          for(each of btns){
-            each.disabled = false;
-            each.style.cursor = "pointer";
           }
         }
+        document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
+        var btns = document.getElementsByClassName('btn');
+        for(each of btns){
+          each.disabled = false;
+          each.style.cursor = "pointer";
       }
       friendsuggestflag = 1;
     }
