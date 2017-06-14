@@ -776,6 +776,7 @@ function addfriend(id,name){
         i.disabled = false;
         i.style.cursor = "pointer";
       }
+      applogin();
     }
     else if(xhr.readyState == 4){
       i.disabled = false;
