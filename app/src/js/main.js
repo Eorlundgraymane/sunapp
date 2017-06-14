@@ -251,71 +251,45 @@ function applogin(){
 
 
 function getfriendslist(){
-  var data = { "type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": 81 } } ] } ] } ] } ] } };
-  query = JSON.stringify(data);
-  console.log(query);
-  /*
-
-  var xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
-  xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","application/json");
-  xhr.withCredentials = "true";
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState == 4 && xhr.status == 200){
-      document.getElementById('friendslist').innerHTML = "";
-      var json = JSON.parse(xhr.responseText);
-      console.log(json);
-      console.log(JSON.stringify(json));
-    for(fid of json)
-      {
-        frienddata["args"]["where"] = {};
-        frienddata["args"]["where"]["user_id"] = fid.user_id;
-        var friendquery = JSON.stringify(frienddata);
-        var fxhr = new XMLHttpRequest();
-        fxhr.open("POST",url,false)
-        fxhr.setRequestHeader("Content-type","application/json");
-        fxhr.withCredentials = "true";
-        fxhr.onreadystatechange = function(){
-          if(fxhr.readyState == 4 && fxhr.status == 200){
-            var fjson = JSON.parse(fxhr.responseText);
-            console.log(JSON.stringify(fjson[0].fname));
-            var friendname = fjson[0].fname;
-            document.getElementById('friendslist').innerHTML += '<li><figure  id = "friend"><img class = "friendimg img-rounded" alt = "Friend\'s Image" src = "css/friendsprite.jpg"><figcaption>'+friendname+'</figcaption></figure></li>';
-            document.getElementById('friendslistbutton').innerHTML = "Friend's List Loaded";
-          }
-          else if(fxhr.readyState === 4){
-            var fjson = JSON.parse(fxhr.responseText);
-            console.log(JSON.stringify(fjson));
-            alert("Could'nt get your friend's list at the moment");
-            document.getElementById('friendslistbutton').innerHTML = "Error";
-          }
+  if(friendlistflag == 0){
+    var data = { "type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": 81 } } ] } ] } ] } ] } };
+    query = JSON.stringify(data);
+    console.log(query);
+    var xhr = new XMLHttpRequest();
+    var url = "https://data.unwound15.hasura-app.io/v1/query";
+    xhr.open("POST",url,true);
+    xhr.setRequestHeader("Content-type","application/json");
+    xhr.withCredentials = "true";
+    xhr.onreadystatechange = function(){
+      if(xhr.readyState == 4 && xhr.status == 200){
+        document.getElementById('friendslist').innerHTML = "";
+        var json = JSON.parse(xhr.responseText);
+        console.log(json);
+        console.log(JSON.stringify(json));
+          document.getElementById('friendslistbutton').disabled = false;
+          document.getElementById('friendssuggestbutton').disabled = false;
+          document.getElementById('friendssuggestbutton').style.cursor = "pointer";
+          document.getElementById('friendslistbutton').style.cursor = "pointer";
+          document.getElementById('logoutbutton').disabled = false;
+          document.getElementById('logoutbutton').style.cursor = "pointer";
+          document.getElementById('changebanner').disabled = false;
+          document.getElementById('changebanner').style.cursor = "pointer";
+          
         }
-        fxhr.send(friendquery);
+        else if(xhr.readyState ==4) {
+          document.getElementById('friendslistbutton').disabled = false;
+          document.getElementById('friendssuggestbutton').disabled = false;
+          document.getElementById('friendssuggestbutton').style.cursor = "pointer";
+          document.getElementById('friendslistbutton').style.cursor = "pointer";
+          document.getElementById('logoutbutton').disabled = false;
+          document.getElementById('logoutbutton').style.cursor = "pointer";
+          document.getElementById('changebanner').disabled = false;
+          document.getElementById('changebanner').style.cursor = "pointer";
+          alert(JSON.stringify(json));
+        }
       }
-        document.getElementById('friendslistbutton').disabled = false;
-        document.getElementById('friendssuggestbutton').disabled = false;
-        document.getElementById('friendssuggestbutton').style.cursor = "pointer";
-        document.getElementById('friendslistbutton').style.cursor = "pointer";
-        document.getElementById('logoutbutton').disabled = false;
-        document.getElementById('logoutbutton').style.cursor = "pointer";
-        document.getElementById('changebanner').disabled = false;
-        document.getElementById('changebanner').style.cursor = "pointer";
-      }
-      else if(xhr.readyState ==4) {
-        document.getElementById('friendslistbutton').disabled = false;
-        document.getElementById('friendssuggestbutton').disabled = false;
-        document.getElementById('friendssuggestbutton').style.cursor = "pointer";
-        document.getElementById('friendslistbutton').style.cursor = "pointer";
-        document.getElementById('logoutbutton').disabled = false;
-        document.getElementById('logoutbutton').style.cursor = "pointer";
-        document.getElementById('changebanner').disabled = false;
-        document.getElementById('changebanner').style.cursor = "pointer";
-        alert(JSON.stringify(json));
-      }
-    }
-  xhr.send(query);
-  friendlistflag = 1;*/
+    xhr.send(query);
+  }
 }
 function getpiclink(){
   console.log('piclink called');
