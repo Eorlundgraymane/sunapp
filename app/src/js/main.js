@@ -262,7 +262,7 @@ function getfriendslist(){
           document.getElementById('friendslistbutton').innerHTML = "No Friends Yet";
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
-          droppeddown =1;
+          droppeddown =1;          
         }
 
         }
@@ -278,6 +278,7 @@ function getfriendslist(){
         document.getElementById('changebanner').disabled = false;
         document.getElementById('changebanner').style.cursor = "pointer";
         droppeddown =1;
+        friendlistflag =0;
       }
     xhr.send(query);
   }
