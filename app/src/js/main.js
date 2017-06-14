@@ -1057,13 +1057,12 @@ function pullposts(){
       console.log(res);
       console.log(JSON.stringify(res));
       for(each of res){
-        document.getElementById('post_image').src = each["postimg"];
-        document.getElementById('post_text').innerHTML = each["post"];
-        document.getElementById('post_title').innerHTML = each["title"];
+        var postimg = each["postimg"];
+        var post = each["post"];
+        var title = each["title"];
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
-        document.getElementById('auth_img').src = author_img;
-        document.getElementById('auth_name').innerHTML = author_name;
+        document.getElementById('posts').innerHTML = '<li><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><figcaption id = "auth_name">'+auth_name+'</figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+post_img'+" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption></figure></li>';
       }
     }
     else if (xhr.readyState == 4) {
