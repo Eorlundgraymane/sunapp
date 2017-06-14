@@ -1059,7 +1059,7 @@ function pullposts(){
       document.getElementById('post_image').src = res[0]["postimg"];
       document.getElementById('post_text').innerHTML = res[0]["post"];
       document.getElementById('post_title').innerHTML = res[0]["title"];
-      var author_img = res[0]["author"]["proimg"];
+      var author_img = res[0]["author"]["proimage"];
       var author_name = res[0]["author"]["fname"];
       document.getElementById('auth_img').src = author_img;
       document.getElementById('auth_name').innerHTML = author_name;
