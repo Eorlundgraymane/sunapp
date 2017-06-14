@@ -270,10 +270,11 @@ function getfriendslist(){
           document.getElementById('friendslistbutton').innerHTML = "No Friends Yet";
           droppeddown = 1;
           document.getElementById('friendslist').classList.remove("in");
-          document.getElementById('friendslist').classList.add("in");          
+          document.getElementById('friendslist').classList.add("in");
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
           friendlistflag = 0;
+          droppeddown == 1;
         }
         /*else if(json[0]["profile"][0])["mefriend"]["friend_"]){
         }*/
