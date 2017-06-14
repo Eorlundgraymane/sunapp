@@ -260,6 +260,7 @@ function getfriendslist(){
         var json = JSON.parse(xhr.responseText);
         if(json[0]["profile"][0]["mefriend"].length == 0){
           document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Sent some requests first.</li>";
+          document.getElementById('friends').innerHTML = "No Friends Yet";
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
           droppeddown =1;
