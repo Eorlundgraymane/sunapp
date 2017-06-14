@@ -284,7 +284,7 @@ function getfriendslist(){
               console.log(myfid["friend_profile"]["fname"]);
               var friendname = myfid["friend_profile"]["fname"];
               var friendid = myfid["friend_id"];
-              document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\" onclick = \"addlogin("+friendid+",'"+friendname+"');\">"+friendname+"</li>";
+              document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\"\">"+friendname+"</li>";
             }
           }
           friendlistflag = 1;
@@ -1005,7 +1005,7 @@ else {
 }
 
 function selectsuggests(){
-  var data = { "type": "select", "args": { "table": "profile", "columns": [ "fname", { "name": "youfriend", "columns": [ "friend_id"],"where": { "user_id": hasura_id } } ] } };
+  var data = { "type": "select", "args": { "table": "profile", "columns": [ "fname","user_id", { "name": "youfriend", "columns": [ "friend_id"],"where": { "user_id": hasura_id } } ] } };
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
@@ -1021,6 +1021,11 @@ function selectsuggests(){
       for(users of json){
         console.log(users["fname"]);
         console.log(users["youfriend"].length);
+        if(users["youfriend"].length == 0 && users["user_id"]!= hasura_id){
+          suggestid = users["user_id"];
+          suggestname = users["fname"];
+          document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">"+suggestname+"</li>";
+        }
       }
       friendsuggestflag = 1
     }
