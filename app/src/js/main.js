@@ -1005,7 +1005,7 @@ else {
 }
 
 function selectsuggests(){
-  var data = { "type": "select", "args": { "table": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id"],"where": { "friend_id":{"$ne": hasura_id} } } ] } };
+  var data = { "type": "select", "args": { "table": "profile", "columns": [ "fname", { "name": "youfriend", "columns": [ "friend_id"],"where": { "user_id": hasura_id } } ] } };
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
@@ -1018,7 +1018,10 @@ function selectsuggests(){
       document.getElementById('friendssuggest').innerHTML = "";
       var json = JSON.parse(xhr.responseText);
       console.log(json);
-      console.log("Users : "+JSON.stringify(json));
+      for(users of json){
+        console.log(users["fname"]]);
+        console.log(users[0].length);
+      }
       friendsuggestflag = 1
     }
     else if(xhr.readyState ==4) {
