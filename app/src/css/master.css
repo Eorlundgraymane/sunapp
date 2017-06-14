@@ -65,6 +65,10 @@ figcaption{
   height: 30px;
   width: 30px;
 }
+#siteheader{
+  float: right;
+  float: left;
+}
 #centerform{
   transform: translate(25%,60%);
 }
