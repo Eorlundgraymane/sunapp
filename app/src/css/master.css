@@ -65,9 +65,6 @@ figcaption{
   height: 30px;
   width: 30px;
 }
-#siteheader{
-  position: sticky;
-}
 #centerform{
   transform: translate(25%,60%);
 }
