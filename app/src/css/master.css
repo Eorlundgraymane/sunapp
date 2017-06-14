@@ -5,7 +5,7 @@ body,html{
 .outer-container {
   background-image: url('sunshine-min.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
