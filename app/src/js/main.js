@@ -280,7 +280,7 @@ function getfriendslist(){
             if(myfid["friend_id"] != hasura_id){
               console.log(myfid);
               console.log("JSON RESPONSE: "+JSON.stringify(json));
-              console.log(myfid["friend_profile"]["fname"]);              
+              console.log(myfid["friend_profile"]["fname"]);
             }
           }
         }
@@ -438,7 +438,7 @@ function checklogout(pk)
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
+      console.log(JSON.stringify(hasura_id));
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged Out.");
