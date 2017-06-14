@@ -109,7 +109,7 @@ function SHA256(s){
 
 
 function appfriendslogin(){
-  if(droppeddown == 0)
+  if(droppeddown == 0 && friendlistflag == 0)
     {
       alert("Friend's list function is still experimental. Adding Friends feauture coming soon...");
       document.getElementById('friendslistbutton').innerHTML = "Loading Friend's List <img width = '30px' height = '30px' src = 'css/loader.gif'>";
@@ -133,24 +133,30 @@ function appfriendslogin(){
           hasura_id = json.hasura_id;
           auth_token = "Bearer "+json.auth_token;
           email = json.email;
-          droppeddown = 1;
           getfriendslist();
+          friendlistflag = 1;
         }
         else if(xhr.readyState == 4) {
-          droppeddown = 1;
           var json = JSON.parse(xhr.responseText);
           console.log(JSON.stringify(json));
           alert(JSON.stringify(json));
           document.getElementById('friendslistbutton').disabled = true;
           alert("Could'nt get your friend's list at the moment");
+          friendlistflag = 0;
         }
       }
       xhr.send();
     }
-    else if(droppeddown == 1){
-      friendslist = 1;
-      droppeddown = 0;
+    else if (droppeddown == 1 && friendlistflag == 1) {
+      droppeddown == 0;
     }
+    else if(droppeddown == 1 && friendlistflag == 0){
+      droppeddown ==9;
+    }
+    else if(droppeddown == 0 && friendlistflag == 1){
+      droppeddown == 1;
+    }
+
 }
 function addlogin(id,name){
   document.getElementById('friendssuggestbutton').innerHTML = "Adding Friend <img width = '30px' height = '30px' src = 'css/loader.gif'>";
@@ -265,14 +271,12 @@ function getfriendslist(){
           document.getElementById('friendslistbutton').innerHTML = "No Friends Yet";
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
-          friendlistflag = 1;
         }
         /*else if(json[0]["profile"][0])["mefriend"]["friend_"]){
         }*/
         }
         else if(xhr.readyState ==4) {
           alert(JSON.stringify(json));
-              friendlistflag = 1;
         }
         document.getElementById('friendslistbutton').disabled = false;
         document.getElementById('friendssuggestbutton').disabled = false;
@@ -284,9 +288,6 @@ function getfriendslist(){
         document.getElementById('changebanner').style.cursor = "pointer";
       }
     xhr.send(query);
-  }
-  else if(friendlistflag ==1){
-    friendlistflag = 0;
   }
 }
 function getpiclink(){
