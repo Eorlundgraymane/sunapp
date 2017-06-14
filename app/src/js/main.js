@@ -1046,7 +1046,7 @@ function pullposts(){
   }
 };
   var query = JSON.stringify(data);
-  var url = "https://data.unwound15.hasura-app.io/";
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr = new XMLHttpRequest();
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
