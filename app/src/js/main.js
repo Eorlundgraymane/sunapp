@@ -711,6 +711,10 @@ function getuser()
       document.getElementById('loginform').submit();
     }
     else if(xhr.readyState ==4) {
+      var json = JSON.parse(xhr.responseText);
+      loginbutton.innerHTML = "Log In";
+      loginbutton.style.disabled = false;
+      loginbutton.style.cursor= "pointer";
       alert(JSON.stringify(json));
     }
   }
@@ -745,9 +749,6 @@ function getuser()
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert(JSON.stringify(json));
-      loginbutton.innerHTML = "Log In";
-      loginbutton.style.disabled = false;
-      loginbutton.style.cursor = "pointer";
     }
     console.log("userlog function over");
   }
