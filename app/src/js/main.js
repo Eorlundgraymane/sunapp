@@ -148,7 +148,7 @@ function appfriendslogin(){
       xhr.send();
     }
     else if(droppeddown == 1){
-      droppeddown == 0;
+      droppeddown = 0;
     }
 }
 function addlogin(id,name){
