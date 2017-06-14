@@ -278,8 +278,8 @@ function getfriendslist(){
           for(myfid of json[0]["profile"][0]["mefriend"])
           {
             if(myfid["friend_id"] != hasura_id){
-              console.log(myfid)
-              console.log("JSON RESPONSE: "+json)
+              console.log(myfid);
+              console.log("JSON RESPONSE: "+JSON.stringify(json));
             }
           }
         }
