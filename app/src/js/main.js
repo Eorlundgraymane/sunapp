@@ -1048,7 +1048,7 @@ else {
 }
 
 function selectsuggests(){
-  var data = { "type": "select", "args": { "table": "profile", "columns": [ "fname","user_id","proimage" { "name": "youfriend", "columns": [ "friend_id"],"where": { "user_id": hasura_id } } ] } };
+  var data = { "type": "select", "args": { "table": "profile", "columns": [ "fname","user_id","proimage", { "name": "youfriend", "columns": [ "friend_id"],"where": { "user_id": hasura_id } } ] } };
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
