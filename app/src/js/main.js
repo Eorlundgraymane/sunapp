@@ -271,7 +271,6 @@ function getfriendslist(){
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
           friendlistflag = 0;
-          document.getElementById('friendslist').style.display = "block";
         }
         /*else if(json[0]["profile"][0])["mefriend"]["friend_"]){
         }*/
