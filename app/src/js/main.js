@@ -154,6 +154,7 @@ function appfriendslogin(){
     }
     else if(droppeddown == 0 && friendlistflag == 1){
       droppeddown = 1;
+      friendlistflag = 0;
     }
 
 }
@@ -266,7 +267,7 @@ function getfriendslist(){
           document.getElementById('friendslist').innerHTML = "";
           var json = JSON.parse(xhr.responseText);
           if(json[0]["profile"][0]["mefriend"].length == 0){
-          document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Sent some requests first.</li>";
+          document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Send some requests first.</li>";
           document.getElementById('friendslistbutton').innerHTML = "No Friends Yet";
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
@@ -279,7 +280,7 @@ function getfriendslist(){
         else if(xhr.readyState ==4) {
           alert(JSON.stringify(json));
           friendlistflag = 0;
-          droppeddown = 1;
+          droppeddown = 0;
         }
         document.getElementById('friendslistbutton').disabled = false;
         document.getElementById('friendssuggestbutton').disabled = false;
