@@ -109,7 +109,7 @@ function SHA256(s){
 
 
 function appfriendslogin(){
-  if(droppeddown == 0 && friendlistflag == 0)
+  if(droppeddown == 0)
     {
       alert("Friend's list function is still experimental. Adding Friends feauture coming soon...");
       document.getElementById('friendslistbutton').innerHTML = "Loading Friend's List <img width = '30px' height = '30px' src = 'css/loader.gif'>";
@@ -147,14 +147,9 @@ function appfriendslogin(){
       }
       xhr.send();
     }
-    else if(droppeddown == 1) {
-    document.getElementById('friendslistbutton').innerHTML = "Friend's List";
-    droppeddown = 0;
-  }
-  else if(friendlistflag == 1){
-    droppeddown =1;
-    document.getElementById('friendslistbutton').innerHTML = "Friend's List";
-  }
+    else if(droppeddown == 1){
+      droppeddown == 0;
+    }
 }
 function addlogin(id,name){
   document.getElementById('friendssuggestbutton').innerHTML = "Adding Friend <img width = '30px' height = '30px' src = 'css/loader.gif'>";
@@ -277,7 +272,7 @@ function getfriendslist(){
         document.getElementById('friendslistbutton').disabled = false;
         document.getElementById('friendssuggestbutton').disabled = false;
         document.getElementById('friendssuggestbutton').style.cursor = "pointer";
-        document.getElementById('friendslistbutton').style.cursor = "pointer";        
+        document.getElementById('friendslistbutton').style.cursor = "pointer";
         document.getElementById('logoutbutton').disabled = false;
         document.getElementById('logoutbutton').style.cursor = "pointer";
         document.getElementById('changebanner').disabled = false;
