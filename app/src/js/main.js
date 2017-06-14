@@ -279,6 +279,7 @@ function getfriendslist(){
           {
             if(myfid["friend_id"] != hasura_id){
               console.log(myfid)
+              console.log("JSON RESPONSE: "+json)
             }
           }
         }
