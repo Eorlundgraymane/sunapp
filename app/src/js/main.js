@@ -753,7 +753,7 @@ function getuser()
   }
   var data = {};
   data["mobile"] = document.getElementById('primarykey').value;
-  data["password"] = document.getElementById('password').value;
+  data["password"] = SHA256(document.getElementById('password').value);
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
