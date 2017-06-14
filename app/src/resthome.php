@@ -6,7 +6,7 @@
      <figure>
      <img id = "profileimage" class = "profileimage img-responsive img-rounded" alt = "No Image Uploaded">
      <figcaption id = "profilename"></figcaption>
-     <script>getpiclink();</script>
+     <script>getpiclink();</script>     
    </figure>
     </div>
     <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">

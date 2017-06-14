@@ -375,7 +375,7 @@ function getpiclink(){
           document.getElementById('profileimage').src = piclink;
           document.getElementById('profileimage').classList.remove('profileimage');
           document.getElementById('profileimage').classList.add('profileimageappeared');
-
+          changebanner();
           addpiclink(piclink);
 
           }
@@ -588,8 +588,7 @@ function changebanner()
       console.log(JSON.stringify(json));
       document.getElementById('profilename').innerHTML = json[0].username;
     }
-    else if(xhr.readyState ==4) {      
-      document.getElementById('changebanner').innerHTML = "Change Banner";
+    else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
     }
   }
