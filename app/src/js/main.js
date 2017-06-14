@@ -345,11 +345,12 @@ function addpiclink(link){
 function getpiclink(){
   console.log('piclink called');
   var piclink;
+  var proname;
   var data = {};
   data["type"] = "select";
   data["args"] = {};
   data["args"]["table"] = "user";
-  data["args"]["columns"] = ["email"];
+  data["args"]["columns"] = ["email","fname"];
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
@@ -372,6 +373,7 @@ function getpiclink(){
           console.log(piclink);
           //document.getElementById('picbutton').display = "none";
           document.getElementById('profileimage').src = piclink;
+          document.getElementById('profilename').innerHTML = json[0].fname;
           document.getElementById('profileimage').classList.remove('profileimage');
           document.getElementById('profileimage').classList.add('profileimageappeared');
 
@@ -1077,7 +1079,7 @@ function selectsuggests(){
           each.disabled = false;
           each.style.cursor = "pointer";
       }
-      friendsuggestflag = 1;      
+      friendsuggestflag = 1;
     }
     else if(xhr.readyState ==4) {
       document.getElementById('friendssuggestbutton').innerHTML = "Error";

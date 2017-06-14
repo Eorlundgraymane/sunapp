@@ -3,8 +3,11 @@
   <row>
     <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "profilepic">
      <!--<button id = "picbutton" type = "button" onclick="getpiclink();">Click to load image</button>-->
+     <figure>
      <img id = "profileimage" class = "profileimage img-responsive img-rounded" alt = "No Image Uploaded">
+     <figcaption id = "profilename"></figcaption>
      <script>getpiclink();</script>
+   </figure>
     </div>
     <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">
       <?php include 'shinetable.php';?>
