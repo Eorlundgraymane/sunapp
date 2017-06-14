@@ -23,6 +23,9 @@
       </div>
       <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "newspane">
           <div class = "jumbotron">
+            <ul id = "posts">
+              <button type = "button" class = ".btn" onclick="pullposts()">Pull Latest Post</button>
+            </ul>
             <h1 id = "post_title">POSTS FROM YOUR FRIENDS COMING SOON....</h1>
             <figure>
               <img id = "post_image" class = "img img-rounded img-responsive" alt = "Post Image">
@@ -30,9 +33,6 @@
                   Upload pics and vids so that your friends can see share and like
                 </figcaption>
               </figure>
-          <ul id = "posts">
-            <button type = "button" class = ".btn" onclick="pullposts()">Pull Latest Post</button>
-          </ul>
         </div>
       </div>
       <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "postpane">

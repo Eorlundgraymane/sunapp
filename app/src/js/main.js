@@ -1038,7 +1038,7 @@ function pullposts(){
   alert("This function is still under construction and placed only for the Dever. If you're awesome you can check out what's goin on in the console");
   var data = {"type":"select","args":{
     "table":"posts",
-    "columns":["post","postimg","created",{
+    "columns":["post","postimg","created","title",{
       "name":"author",
       "columns":["fname","proimage"]
     }],
@@ -1058,6 +1058,7 @@ function pullposts(){
       console.log(JSON.stringify(res));
       document.getElementById('post_image').src = res[0]["postimg"];
       document.getElementById('post_text').innerHTML = res[0]["post"];
+      document.getElementById('post_title').innerHTML = res[0]["title"];
     }
     else if (xhr.readyState == 4) {
       var res = JSON.parse(xhr.responseText);
