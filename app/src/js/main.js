@@ -323,6 +323,7 @@ function addpiclink(link){
   data["args"] = {};
   data["args"]["table"] = "profile";
   data["args"]["$set"] = {"proimage": link};
+  data["args"]["where"] = {"user_id":hasura_id};
   var query = JSON.stringify(data);
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
