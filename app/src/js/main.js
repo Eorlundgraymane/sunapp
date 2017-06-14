@@ -287,13 +287,14 @@ function getfriendslist(){
               if(myfid["friend_profile"]["mefriend"].length > 0){
                 var friendname = myfid["friend_profile"]["fname"];
                 var friendid = myfid["friend_id"];
-                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \"css/friendsprite.jpg\"><figcaption><button type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
+                var prourl = myfid["proimage"];
+                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\""><figcaption><button type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
               }
             }
           }
           friendlistflag = 1;
           droppeddown = 0;
-          document.getElementById('friendslistbutton').innerHTML = "Friends List Loaded";        
+          document.getElementById('friendslistbutton').innerHTML = "Friends List Loaded";
         }
         }
         else if(xhr.readyState ==4) {
