@@ -268,12 +268,10 @@ function getfriendslist(){
           if(json[0]["profile"][0]["mefriend"].length == 0){
           document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Sent some requests first.</li>";
           document.getElementById('friendslistbutton').innerHTML = "No Friends Yet";
-          document.getElementById('friendslist').classList.remove("in");
-          document.getElementById('friendslist').classList.add("in");
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
-          friendlistflag = 0;
-          droppeddown = 1;
+          friendlistflag = 1;
+          droppeddown = 0;
         }
         /*else if(json[0]["profile"][0])["mefriend"]["friend_"]){
         }*/
