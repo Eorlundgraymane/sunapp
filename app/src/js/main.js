@@ -781,7 +781,7 @@ function addfriend(id,name){
       var response = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(response));
       document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggesions";
-      alert("You already sent a friend request to this friend");
+      alert("You already sent a friend request to "+name);
     }
   }
   jsondata = JSON.stringify(data);
