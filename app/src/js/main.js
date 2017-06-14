@@ -315,6 +315,30 @@ function getfriendslist(){
     xhr.send(query);
   }
 }
+function addpiclink(link){
+  var xhr = new XMLHttpRequest();
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var data = {};
+  data["type"] = "insert";
+  data["args"] = {};
+  data["args"]["table"] = "profile";
+  data["args"].objects = [{"proimage"}:link];
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var response = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(response));
+      console.log("Profile picture updated");
+    }
+    else if(xhr.readyState ==4) {
+      var response = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(response));
+      console.log("Profile picture NOT updated");
+    }
+  }
+}
 function getpiclink(){
   console.log('piclink called');
   var piclink;
@@ -347,6 +371,9 @@ function getpiclink(){
           document.getElementById('profileimage').src = piclink;
           document.getElementById('profileimage').classList.remove('profileimage');
           document.getElementById('profileimage').classList.add('profileimageappeared');
+          
+          addpiclink(piclink);
+
           }
           else {
             if(x.readyState === 4){
