@@ -15,7 +15,7 @@ body,html{
 }
 #post{
   list-style-type: none;
-  background-color: rgba(126,192,238,0.75);
+  background-color: white;
   border-radius: 2px;
   margin-bottom: 5px;
 }
