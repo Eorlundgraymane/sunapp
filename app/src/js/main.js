@@ -1019,7 +1019,7 @@ function selectsuggests(){
       var json = JSON.parse(xhr.responseText);
       console.log(json);
       for(users of json){
-        console.log(users["fname"]]);
+        console.log(users["fname"]);
         console.log(users[0].length);
       }
       friendsuggestflag = 1
