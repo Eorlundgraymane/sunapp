@@ -1020,7 +1020,7 @@ function selectsuggests(){
       console.log(json);
       for(users of json){
         console.log(users["fname"]);
-        console.log(users[0].length);
+        console.log(users["youfriend"].length);
       }
       friendsuggestflag = 1
     }
