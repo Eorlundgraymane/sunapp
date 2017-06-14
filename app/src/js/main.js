@@ -1005,13 +1005,9 @@ else {
 }
 
 function selectsuggests(){
-  var data = {};
-  data["type"] = "select";
-  data["args"] = {};
-  data["args"]["table"] = "profile";
-  data["args"]["columns"] = ["user_id","fname"];
+  var data = { "type": "select", "args": { "table": "profile", "columns": [ "fname", { "name": "mefriend", "columns": ["friend_id","where"{"friend_id" : "$ne" : hasura_id }]}]}};
   var query = JSON.stringify(data);
-  console.log(query);
+  console.log(query);/*
   xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -1087,5 +1083,5 @@ function selectsuggests(){
       alert(JSON.stringify(json));
     }
   }
-  xhr.send(query);
+  xhr.send(query);*/
 }
