@@ -114,7 +114,7 @@ function appfriendslogin(){
       alert("Friend's list function is still experimental. Adding Friends feauture coming soon...");
       document.getElementById('friendslistbutton').innerHTML = "Loading Friend's List <img width = '30px' height = '30px' src = 'css/loader.gif'>";
       xhr = new XMLHttpRequest();
-      var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
+      var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
       xhr.setRequestHeader("Content-type","application/json");
       xhr.withCredentials = "true";
@@ -164,7 +164,7 @@ function addlogin(id,name){
     i.style.cursor = "not-allowed";
   }
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
+  var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -207,7 +207,7 @@ function applogin(){
       document.getElementById('friendssuggestbutton').innerHTML = "Loading Friend Suggessions <img width = '30px' height = '30px' src = 'css/loader.gif'>";
       alert("friend suggession is an experimental feature. Adding new friends will be coming soon");
       xhr = new XMLHttpRequest();
-      var url  = "https://auth.washtub66.hasura-app.io/user/account/info";
+      var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
       xhr.setRequestHeader("Content-type","application/json");
       xhr.withCredentials = "true";
@@ -446,7 +446,7 @@ function checklogout(pk)
   document.getElementById('loginbutton').style.disabled = true;
   document.getElementById('loginbutton').style.cursor = "not-allowed";
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.washtub66.hasura-app.io/user/logout";
+  var url  = "https://auth.unwound15.hasura-app.io/user/logout";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -481,7 +481,7 @@ function userlogout(pk)
 {
   document.getElementById('logoutbutton').innerHTML = "Logging Out <img width = '30px' height = '30px' src = 'css/loader.gif'>";
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.washtub66.hasura-app.io/user/logout";
+  var url  = "https://auth.unwound15.hasura-app.io/user/logout";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -492,7 +492,7 @@ function userlogout(pk)
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged Out. Bubye, Come back soon");
-      window.location = "https://sunshine.washtub66.hasura-app.io/";
+      window.location = "https://sunshine.unwound15.hasura-app.io/";
     }
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Logout please try again");
@@ -620,7 +620,7 @@ function checklogin(pk,pasw)
   loginbutton.innerHTML = "Logging In";
   loginbutton.style.disabled = "true";
   loginbutton.style.cursor = "not-allowed";
-  var url  = "https://auth.washtub66.hasura-app.io/login";
+  var url  = "https://auth.unwound15.hasura-app.io/login";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -654,7 +654,7 @@ function phplogin(pk,pasw)
   loginbutton.innerHTML = "Logging In";
   loginbutton.style.disabled = "true";
   loginbutton.style.curson = "not-allowed";
-  var url  = "https://auth.washtub66.hasura-app.io/login";
+  var url  = "https://auth.unwound15.hasura-app.io/login";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -686,7 +686,7 @@ function phplogin(pk,pasw)
 }
 function gohome()
 {
-  window.location = "https://sunshine.washtub66.hasura-app.io/";
+  window.location = "https://sunshine.unwound15.hasura-app.io/";
 }
 function getuser()
 {
@@ -726,7 +726,7 @@ function getuser()
   loginbutton.innerHTML = "Logging In <img width = '30px' height = '30px' src = 'css/loader.gif'>";
   loginbutton.style.disabled = true;
   loginbutton.style.cursor = "not-allowed";
-  var url  = "https://auth.washtub66.hasura-app.io/login";
+  var url  = "https://auth.unwound15.hasura-app.io/login";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -853,7 +853,7 @@ function otpverify(){
   otpcancelbutton.style.disabled = true;
   otpbutton.innerHTML = "Verifying <img width = '30px' height = '30px' src = 'css/loader.gif'>";
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.washtub66.hasura-app.io/mobile/confirm";
+  var url  = "https://auth.unwound15.hasura-app.io/mobile/confirm";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.onreadystatechange = function(){
@@ -900,7 +900,7 @@ function otpresend() {
   resendotpbutton.style.disabled = "true";
   otpcancelbutton.style.disabled = "true";
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.washtub66.hasura-app.io/mobile/resend-otp";
+  var url  = "https://auth.unwound15.hasura-app.io/mobile/resend-otp";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.setRequestHeader("Authentication",admintoken);
