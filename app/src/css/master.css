@@ -3,8 +3,7 @@ body,html{
   width: 100%;
 }
 .outer-container {
-  background-image: url('sunshine-min.jpg');  
-  background-size: cover;
+  background-image: url('sunshine-min.jpg');    
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
