@@ -350,7 +350,7 @@ function getpiclink(){
   data["type"] = "select";
   data["args"] = {};
   data["args"]["table"] = "user";
-  data["args"]["columns"] = ["email","fname"];
+  data["args"]["columns"] = ["email"];
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
@@ -373,7 +373,6 @@ function getpiclink(){
           console.log(piclink);
           //document.getElementById('picbutton').display = "none";
           document.getElementById('profileimage').src = piclink;
-          document.getElementById('profilename').innerHTML = json[0].fname;
           document.getElementById('profileimage').classList.remove('profileimage');
           document.getElementById('profileimage').classList.add('profileimageappeared');
 
