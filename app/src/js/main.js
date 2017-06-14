@@ -570,8 +570,6 @@ function updatemyusersprofile(pk){
 }
 function changebanner()
 {
-  document.getElementById('siteh1').innerHTML = "Getting your Name friend !!...";
-  document.getElementById('changebanner').innerHTML = "Changing Banner <img width = '30px' height = '30px' src = 'css/loader.gif'>";
   var data = {};
   data["type"] = "select";
   data["args"] = {};
@@ -586,16 +584,11 @@ function changebanner()
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
-      document.getElementById('changebanner').innerHTML = "Change Banner";
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
-      setTimeout(function(){
-        document.getElementById('siteh1').innerHTML = "Sunshine";
-      },3000);
-      document.getElementById('siteh1').innerHTML =  json[0].username;
+      document.getElementById('profilename').innerHTML = json[0].username;
     }
-    else if(xhr.readyState ==4) {
-      document.getElementById('siteh1').innerHTML = "Sunshine";
+    else if(xhr.readyState ==4) {      
       document.getElementById('changebanner').innerHTML = "Change Banner";
       alert(JSON.stringify(json));
     }
