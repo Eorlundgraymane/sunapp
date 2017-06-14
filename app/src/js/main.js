@@ -124,8 +124,6 @@ function appfriendslogin(){
       document.getElementById('friendslistbutton').style.cursor = "not-allowed";
       document.getElementById('logoutbutton').disabled = true;
       document.getElementById('logoutbutton').style.cursor = "not-allowed";
-      document.getElementById('changebanner').disabled = true;
-      document.getElementById('changebanner').style.cursor = "not-allowed";
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
           var json = JSON.parse(xhr.responseText);
@@ -177,8 +175,6 @@ function addlogin(id,name){
   document.getElementById('friendslistbutton').style.cursor = "not-allowed";
   document.getElementById('logoutbutton').disabled = true;
   document.getElementById('logoutbutton').style.cursor = "not-allowed";
-  document.getElementById('changebanner').disabled = true;
-  document.getElementById('changebanner').style.cursor = "not-allowed";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
@@ -221,8 +217,6 @@ function applogin(){
       document.getElementById('friendslistbutton').style.cursor = "not-allowed";
       document.getElementById('logoutbutton').disabled = true;
       document.getElementById('logoutbutton').style.cursor = "not-allowed";
-      document.getElementById('changebanner').disabled = true;
-      document.getElementById('changebanner').style.cursor = "not-allowed";
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
           var json = JSON.parse(xhr.responseText);
@@ -309,8 +303,6 @@ function getfriendslist(){
         document.getElementById('friendslistbutton').style.cursor = "pointer";
         document.getElementById('logoutbutton').disabled = false;
         document.getElementById('logoutbutton').style.cursor = "pointer";
-        document.getElementById('changebanner').disabled = false;
-        document.getElementById('changebanner').style.cursor = "pointer";
       }
     xhr.send(query);
   }
