@@ -151,7 +151,7 @@ function appfriendslogin(){
       droppeddown == 0;
     }
     else if(droppeddown == 1 && friendlistflag == 0){
-      droppeddown ==9;
+      droppeddown ==0;
     }
     else if(droppeddown == 0 && friendlistflag == 1){
       droppeddown == 1;
