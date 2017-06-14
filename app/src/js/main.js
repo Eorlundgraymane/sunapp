@@ -288,7 +288,7 @@ function getfriendslist(){
                 var friendname = myfid["friend_profile"]["fname"];
                 var friendid = myfid["friend_id"];
                 var prourl = myfid["proimage"];
-                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\""><figcaption><button type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
+                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"><figcaption><button type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
               }
             }
           }
