@@ -928,6 +928,8 @@ function otpresend() {
       resendotpbutton.innerHTML = "OTP Failed";
       setTimeout(function(){},3000);
       resendotpbutton.innerHTML = "Resend OTP";
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
       alert(JSON.stringify(json.message));
     }
   }
