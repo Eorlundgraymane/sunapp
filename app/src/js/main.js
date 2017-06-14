@@ -593,7 +593,7 @@ function updatemyusers(pk,pasw){
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
-  xhr.withCredentials = true;
+  xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
@@ -1034,7 +1034,36 @@ else {
   alert("passwords don't match");
 }
 }
-
+function pullposts(){
+  alert("This function is still under construction and placed only for the Dever. If you're awesome you can check out what's goin on in the console");
+  var data = {"type":"select","args":{
+    "table":"posts",
+    "columns":["post","created",{
+      "name":"author",
+      "columns":["fname","proimage"]
+    }]
+    "order_by":{"created"};
+  }}
+  var query = JSON.stringify(data);
+  var url = "https://data.unwound15.hasura-app.io/";
+  xhr = new XMLHttpRequest();
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      console.log(JSON.stringify(res));
+    }
+    else if (xhr.readyState == 4) {
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      console.log(JSON.stringify(res));
+    }
+  }
+  xhr.send(query);
+}
 function selectsuggests(){
   var data = { "type": "select", "args": { "table": "profile", "columns": [ "fname","user_id","proimage", { "name": "youfriend", "columns": [ "friend_id"],"where": { "user_id": hasura_id } } ] } };
   var query = JSON.stringify(data);

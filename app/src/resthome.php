@@ -25,6 +25,9 @@
           <div class = "jumbotron">
             <h1>POSTS FROM YOUR FRIENDS COMING SOON....</h1>
           <p> Upload pics and vids so that your friends can see share and like</p>
+          <ul id = "posts">
+            <button type = "button" class = ".btn" onclick="pullpost()">Pull Latest Post</button>
+          </ul>
         </div>
       </div>
       <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "postpane">
