@@ -1147,6 +1147,7 @@ function pullposts(){
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
+        console.log(hasura_id);
         if(author_id == hasura_id){
           document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><figcaption id = "auth_name">'+author_name+'</figcaption></figure><h1 id = "post_title">'+title+'</h1><button type = "button" class = "btn" onclick = "alert(\'Delete Posts Coming Soon...\');">X</button><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption></figure></li>';
         }

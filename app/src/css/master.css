@@ -13,6 +13,9 @@ body,html{
   margin-bottom: 5px;
   cursor: pointer;
 }
+#newpane{
+  overflow-y: scroll;
+}
 #postpane{
   border-left: 1px solid white;
   height: 50em;
