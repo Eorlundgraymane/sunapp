@@ -26,6 +26,13 @@ body,html{
   border-radius: 5px;
   margin-bottom: 5px;
 }
+#uploadpane{
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bolder;
+  text-decoration: underline;
+}
 #profilename{
   color: white;
   margin-top: 5px;

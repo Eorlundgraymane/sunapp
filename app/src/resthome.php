@@ -22,6 +22,7 @@
         <?php include 'friends.php';?>
       </div>
       <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "newspane">
+        <h3 id = "uploadpane">Upload New Post</h3>
             <button type = "button" class = "btn" onclick="pullposts()">Pull Latest Post</button>
             <ul id = "posts">
 
