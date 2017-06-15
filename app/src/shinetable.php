@@ -1,4 +1,4 @@
-<button onclick = "loadtable();" id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
+<button onclick = "tablelogin();" id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
   Your Shine Table
 </button>
 <div id = "shinetablediv" class = "collapse">
