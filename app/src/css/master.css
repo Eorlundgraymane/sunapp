@@ -15,9 +15,7 @@ body,html{
 }
 #deletepost{
   vertical-align: top;
-  display: inline;
-  position: relative;
-  right: 100%;
+  display: inline;  
 }
 #posts{
   overflow-y: scroll;
