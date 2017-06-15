@@ -1221,8 +1221,9 @@ xhr.onreadystatechange = function(){
 }
 }
 
-function timeSince(timeStamp) {
+function timeSince(timeStam) {
   var now = new Date(),
+  var timeStamp = new Date(timeStam);
     secondsPast = (now.getTime() - timeStamp.getTime()) / 1000;
   if(secondsPast < 60){
     return parseInt(secondsPast) + 's';
@@ -1270,7 +1271,7 @@ function pullposts(id){
         var postimg = each["postimg"];
         var post = each["post"];
         var title = each["title"];
-        var timestamp = new Date(timeSince(each["created"]));
+        var timestamp = timeSince(each["created"]);
         console.log(timestamp);
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
