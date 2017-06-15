@@ -1293,7 +1293,26 @@ function like(id,auth_id){
   data["args"].objects = [{"post_id":id,"user_id":auth_id,"liker_id":hasura_id}];
   query = JSON.stringify(data);
   console.log(query);
-
+  var xhr = new XMLHttpRequest();
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      console.log("Liked");
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      alert("liked");
+    }
+    else if(xhr.readyState == 4) {
+      console.log("not liked");
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      alert("Not Liked");
+    }
+  }
+  xhr.send(query);
 }
 function pullposts(id){
   var data = {"type":"select","args":{
