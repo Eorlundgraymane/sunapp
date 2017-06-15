@@ -1150,6 +1150,76 @@ function pushpost(){
   }
   xhr.send(query);
 }
+function deletepostlogin(id){
+  var btns = document.getElementsByClassName('btn');
+  for(each of btns){
+    each.disabled = true;
+    each.style.cursor = "not-allowed";
+  }
+  xhr = new XMLHttpRequest();
+  var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json.hasura_id));
+      hasura_id = json.hasura_id;
+      auth_token = "Bearer "+json.auth_token;
+      email = JSON.stringify(json.email);
+      deletepost(id,hasura_id);
+    }
+    else if(xhr.readyState == 4) {
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+      alert(JSON.stringify(json));
+      var btns = document.getElementsByClassName('btn');
+      for(each of btns){
+        each.disabled = false;
+        each.style.cursor = "pointer";
+    }
+    }
+  }
+  xhr.send();
+}
+function deletepost(id,userid){
+  var data = {"type":"delete","args":{
+    "table":"posts",
+    "where":{
+      "id":id,
+      "user_id":userid
+  }}
+};
+var query = JSON.stringify(data);
+var url = "https://data.unwound15.hasura-app.io/v1/query";
+xhr = new XMLHttpRequest();
+xhr.open("POST",url,true);
+xhr.setRequestHeader("Content-type","application/json");
+xhr.withCredentials = "true";
+xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(json);
+      alert("Post Deleted, Pulling fresh post list");
+      var btns = document.getElementsByClassName('btn');
+      for(each of btns){
+        each.disabled = false;
+        each.style.cursor = "pointer";
+    }
+    }
+    else if(xhr.readyState ==4) {
+      var json = JSON.parse(xhr.responseText);
+      consolw.log(json);
+      alert("Post could'nt be deleted");
+      var btns = document.getElementsByClassName('btn');
+      for(each of btns){
+        each.disabled = false;
+        each.style.cursor = "pointer";
+    }
+    }
+}
+}
 function pullposts(id){
   var data = {"type":"select","args":{
     "table":"posts",
