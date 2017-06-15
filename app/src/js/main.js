@@ -1326,10 +1326,12 @@ function pullposts(id){
       },
       {
         "name":"likers",
-        "columns":["liker_id"],
-        "where":{
-          "liker_id":id
+        "columns":["liker_id",
+        {
+          "name":"liker",
+          "columns":["fname"]
         }
+      ]
       }
   ],
       "order_by":"created"
@@ -1366,6 +1368,12 @@ function pullposts(id){
               document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+id+');"><img id = "img'+postid+'"  src = "css/heart.svg" width = "21px" height = "16px"></button></div></figure></li>';
           }
           else{
+            var liketitle = "";
+            for(liker of likers)
+            {
+              liketitle +=liker["liker"]["fname"]+" ";
+            }
+            console.log(liketitle);
             document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div><button type = "button" class = "btn like" onclick = "unlike('+postid+','+id+');"><img id = "img'+postid+'"  src = "css/generated/health.svg" width = "21px" height = "16px"></button></div></figure></li>';
           }
         }
@@ -1374,6 +1382,12 @@ function pullposts(id){
             document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+id+');"><img id = "img'+postid+'" src = "css/heart.svg" width = "21px" height = "16px"></button></div></figure></li>';
           }
           else{
+            var liketitle = "";
+            for(liker of likers)
+            {
+              liketitle +=liker["liker"]["fname"]+" ";
+            }
+            console.log(liketitle);
             document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div><button type = "button" class = "btn like" onclick = "unlike('+postid+','+id+');"><img id = "img'+postid+'" src = "css/generated/health.svg" width = "21px" height = "16px"></button></div></figure></li>';
           }
         }
