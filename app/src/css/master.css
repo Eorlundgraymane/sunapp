@@ -18,28 +18,28 @@ body,html{
   max-height: 50em;
 }
 #posts::-webkit-scrollbar-track{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #7ec0ee;
+  background-color: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: #7ec0ee;
 }
 #posts::-webkit-scrollbar{
 	width: 6px;
-	background-color: #7ec0ee;
+	background-color: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
 #posts::-webkit-scrollbar-thumb{
-	background-color: rgba(255,255,255,0.5);
+	background-color:  #7ec0ee;
 }
 #posts:-ms-scrollbar-track{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #7ec0ee;
+  background-color: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: #7ec0ee;
 }
 #posts:-ms-scrollbar{
 	width: 6px;
-	background-color: #7ec0ee;
+	background-color: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
 #posts:-ms-scrollbar-thumb{
-background-color: rgba(255,255,255,0.5);
+	background-color:  #7ec0ee;
 }
 #posts::-moz-scrollbar-track{
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
