@@ -1383,8 +1383,8 @@ function refreshscore(){
           "args":{
             "table":"likes",
             "columns":["post_id",{
-            "name":"author",
-            "columns":["earthshine","healthshine","charityshine","socialshine","friendshine"],
+              "name":"post",
+            "columns":["user_id","earthshine","healthshine","charityshine","socialshine","friendshine"],
             "where":{
             "user_id":hasura_id
             }
