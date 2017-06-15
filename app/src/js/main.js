@@ -1360,7 +1360,7 @@ function pullposts(id){
         "columns":["liker_id",
         {
           "name":"liker",
-          "columns":["fname","user_id"]
+          "columns":["fname","user_id","proimage"]
         }
       ]
       }
@@ -1411,7 +1411,7 @@ function pullposts(id){
                 service = "unlike";
               }
               if(count <= 10){
-                liketitle +=liker["liker"]["fname"]+", ";
+                liketitle += "<img src = '"+liker['liker']['proimage']+"' title = '"+liker["liker"]["fname"]+"'>";
                 count++;
               }
               else{
@@ -1440,7 +1440,7 @@ function pullposts(id){
                 service = "unlike";
               }
               if(count <= 10){
-                liketitle +=liker["liker"]["fname"]+", ";
+                liketitle += "<img src = '"+liker['liker']['proimage']+"' title = '"+liker["liker"]["fname"]+"'>";
                 count++;
               }
               else {
