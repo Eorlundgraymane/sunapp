@@ -233,6 +233,7 @@ function gethasurapushpost(){
   xhr.send();
 }
 function gethasurapullpost(){
+  alert("This function is still under construction and placed only for the Dever. If you're awesome you can check out what's goin on in the console");
   var btns = document.getElementsByClassName('btn');
   for(each of btns){
     each.disabled = true;
@@ -1150,7 +1151,6 @@ function pushpost(){
   xhr.send(query);
 }
 function pullposts(id){
-  alert("This function is still under construction and placed only for the Dever. If you're awesome you can check out what's goin on in the console");
   var data = {"type":"select","args":{
     "table":"posts",
     "columns":["post","postimg","created","title",{
