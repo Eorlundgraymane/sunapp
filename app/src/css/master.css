@@ -108,9 +108,9 @@ background-color: rgba(255,255,255,0.5);
 }
 #post{
   position: relative;
-  left: -3em;
+  left: -2em;
   list-style-type: none;
-  min-width: 40em;
+  min-width: 35em;
   background-color: rgba(255,255,255,0.50);
   border-radius: 5px;
   margin-bottom: 5px;
