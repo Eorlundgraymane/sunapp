@@ -1318,7 +1318,9 @@ function unlike(id,liker_id){
   data["type"] = "delete";
   data["args"] = {};
   data["args"]["table"] = "likes";
-  data["args"].objects = [{"post_id":id,"liker_id":liker_id}];
+  data["args"]["where"] = {};
+  data["args"]["where"]["post_id"] = id;
+  data["args"]["where"]["liker_id"] = liker_id;
   query = JSON.stringify(data);
   console.log(query);
   var xhr = new XMLHttpRequest();
