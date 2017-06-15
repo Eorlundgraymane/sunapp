@@ -1286,7 +1286,6 @@ function like(id,liker_id){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "likes";
-  data["type"] = "insert";
   data["args"].objects = [{"post_id":id,"liker_id":liker_id}];
   query = JSON.stringify(data);
   console.log(query);
@@ -1308,6 +1307,38 @@ function like(id,liker_id){
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       alert("Not Liked");
+    }
+  }
+  xhr.send(query);
+}
+function unlike(id,liker_id){
+  var likimg = document.getElementById('img'+id);
+  likimg.src = "css/generated/health.svg";
+  var data = {};
+  data["type"] = "delete";
+  data["args"] = {};
+  data["args"]["table"] = "likes";
+  data["args"].objects = [{"post_id":id,"liker_id":liker_id}];
+  query = JSON.stringify(data);
+  console.log(query);
+  var xhr = new XMLHttpRequest();
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      console.log("Liked");
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      alert("unliked");
+      gethasurapullpost();
+    }
+    else if(xhr.readyState == 4) {
+      console.log("not liked");
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      alert("Not Unliked");
     }
   }
   xhr.send(query);
