@@ -108,6 +108,7 @@ background-color: rgba(255,255,255,0.5);
   height: 10em;
 }
 #post{
+  position: relative;
   left: -10em;
   list-style-type: none;
   min-width: 45em;
