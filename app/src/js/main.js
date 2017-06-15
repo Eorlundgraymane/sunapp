@@ -1333,7 +1333,7 @@ function pullposts(id){
   ],
       "order_by":"created"
 }
-};
+  };
   var query = JSON.stringify(data);
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr = new XMLHttpRequest();
@@ -1358,6 +1358,7 @@ function pullposts(id){
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
         var likers = each["likers"];
+        console.log(likers);
         console.log(id);
         if(author_id == id){
           if(likers.length == 0){
