@@ -1037,13 +1037,13 @@ else {
 
 function pushpost(){
   alert("This function is still under construction and placed only for the Dever. If you're awesome you can check out what's goin on in the console");
-  var posttext = document.getElementById('newposttext');
-  var postimg = document.getElementById('newpostimg');
-  var title = document.getElementById('newposttitle');
-  var earth = document.getElementById('earth');
-  var charity = document.getElementById('charity');
-  var social = document.getElementById('social');
-  var health = document.getElementById('health');
+  var posttext = document.getElementById('newposttext').value;
+  var postimg = document.getElementById('newpostimg').value;
+  var title = document.getElementById('newposttitle').value;
+  var earth = document.getElementById('earth').value;
+  var charity = document.getElementById('charity').value;
+  var social = document.getElementById('social').value;
+  var health = document.getElementById('health').value;
   var data = {"type":"insert","args":{
     "table":"posts",
     "objects":[
