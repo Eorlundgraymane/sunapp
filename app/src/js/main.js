@@ -1388,6 +1388,22 @@ function loadtable(){
     var query = JSON.stringify(data);
     console.log(query);
     alert("Load table function coming soon....");
+    xhr = new XMLHttpRequest();
+    var url  = "https://data.unwound15.hasura-app.io/v1/query";
+    xhr.open("POST",url,true);
+    xhr.setRequestHeader("Content-type","application/json");
+    xhr.withCredentials = "true";
+    xhr.onreadystatechange = function(){
+      if(xhr.readyState == 4 && xhr.status == 200){
+        var json = JSON.parse(xhr.responseText);
+        console.log(JSON.stringify(json));
+      }
+      else if(xhr.readyState ==4){
+        var json = JSON.parse(xhr.responseText);
+        console.log(JSON.stringify(json));
+      }
+
+    }
     loadflag = 1;
 }
 
