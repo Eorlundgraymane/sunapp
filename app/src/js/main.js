@@ -1317,10 +1317,11 @@ function like(id,auth_id){
 function pullposts(id){
   var data = {"type":"select","args":{
     "table":"posts",
-    "columns":["post","id","postimg","created","title",{
+    "columns":["post","id","postimg","created","title",
+      "order_by":"created",
+      {
       "name":"author",
       "columns":["fname","proimage","user_id"],
-      "order_by":"created",
       "name":"likers",
       "columns":["liker_id"],
       "where":{
