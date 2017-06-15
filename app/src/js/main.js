@@ -1048,7 +1048,15 @@ function pushpost(){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "posts";
-  data["args"].objects = [{"post":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":earth,"charityshine":charity,"healthshine":health,"social":social}];
+  data["args"].objects = [{"post":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":earth,"charityshine":charity,"healthshine":health,"socialshine":social}];
+  data["args"].objects["post"] = posttext;
+  data["args"].objects["postimg"] = postimg;
+  data["args"].objects["title"] = title;
+  data["args"].objects["user_id"] = hasura_id;
+  data["args"].objects["earthshine"] = earth;
+  data["args"].objects["charityshine"] = charity;
+  data["args"].objects["socialshine"] = social;
+  data["args"].objects["healthshine"] = health;
   query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
