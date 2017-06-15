@@ -1320,13 +1320,13 @@ function pullposts(id){
     "columns":["post","id","postimg","created","title",{
       "name":"author",
       "columns":["fname","proimage","user_id"],
+      "order":"desc",
+      "order_by":"created",
       "name":"likers",
-      "columns":["liker_id","created"],
+      "columns":["liker_id"],
       "where":{
         "liker_id":id
-      },
-    "order":"desc",
-    "order_by":"created"
+      }
   }]
 }};
   var query = JSON.stringify(data);
