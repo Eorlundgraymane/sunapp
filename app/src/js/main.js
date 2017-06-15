@@ -1404,7 +1404,7 @@ function pullposts(id){
             var likeimg = "css/heart.svg";
             for(liker of likers)
             {
-              if(liker["user_id"] == id){
+              if(liker["liker"]["user_id"] == id){
                 likeimg = "css/generated/health.svg";
                 service = "unlike";
               }
@@ -1433,7 +1433,7 @@ function pullposts(id){
             var count = 0;
             for(liker of likers)
             {
-              if(liker["user_id"] == id){
+              if(liker["liker"]["user_id"] == id){
                 likeimg = "css/generated/health.svg";
                 service = "unlike";
               }
