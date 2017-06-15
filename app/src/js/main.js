@@ -1347,9 +1347,15 @@ function unlike(id,liker_id){
   }
   xhr.send(query);
 }
-
+var loadflag = 0;
 function loadtable(){
-  alert("Load table function coming soon....");
+  if(loadflag == 0){
+    alert("Load table function coming soon....");
+    loadflag = 1;
+  }
+  else{
+    loadflag = 0;
+  }
 }
 
 
