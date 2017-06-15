@@ -1227,8 +1227,8 @@ function pullposts(id){
       "name":"author",
       "columns":["fname","proimage","user_id"]
     }],
-    "order_by":"created",
-    "order":"asc"
+    "order":"asc",
+    "order_by":"created"
   }
 };
   var query = JSON.stringify(data);
