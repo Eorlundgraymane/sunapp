@@ -27,7 +27,7 @@
          ?>
          <?php
            if(isset($_POST['primarykey'])&& isset($_POST['password'])&& isset($_POST['friendkey'])){
-           include 'resthome.php';
+           include 'friendresthome.php';
          }
          else {
           echo '<row>';
