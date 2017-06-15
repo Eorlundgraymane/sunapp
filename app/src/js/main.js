@@ -1048,7 +1048,7 @@ function pushpost(){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "posts";
-  data["args"].objects = {"post":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":earth,"charityshine":charity,"healthshine":health,"social":social};
+  data["args"].objects = [{"post":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":earth,"charityshine":charity,"healthshine":health,"social":social}];
   console.log(JSON.stringify(data));
 }
 
