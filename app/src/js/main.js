@@ -1388,9 +1388,7 @@ function loadtable(){
     var query = JSON.stringify(data);
     console.log(query);
     alert("Load table function coming soon....");
-
     loadflag = 1;
-  }
 }
 
 
