@@ -14,7 +14,8 @@ body,html{
   cursor: pointer;
 }
 #newposttext{
-  width: 10em
+  rows : "5";
+  columns : "10";
 }
 #post{
   list-style-type: none;
