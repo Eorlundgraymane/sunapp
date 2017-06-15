@@ -1328,9 +1328,10 @@ function pullposts(id){
         "where":{
           "liker_id":id
         }
-      },
+      }
+  ],
       "order_by":"created"
-  ]}
+}
 };
   var query = JSON.stringify(data);
   var url = "https://data.unwound15.hasura-app.io/v1/query";
