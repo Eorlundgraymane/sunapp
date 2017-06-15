@@ -1350,7 +1350,15 @@ function unlike(id,liker_id){
 var loadflag = 0;
 function loadtable(){
   if(loadflag == 0){
+    var data = {};
+    data["type"] = "select";
+    data["args"] = {};
+    data["args"]["table"] = "profile";
+    data["args"]["columns"] = ["healthshine","charityshine","socialshine","friendshine","earthshine"];
+    var query = JSON.stringify(data);
+    console.log(query);
     alert("Load table function coming soon....");
+
     loadflag = 1;
   }
   else{
