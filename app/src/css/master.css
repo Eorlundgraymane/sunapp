@@ -238,10 +238,7 @@ button{
 ::-webkit-input-placeholder{
   color: white
 }
-::-moz-textarea-placeholder{
-  color: white
-}
-::-moz-input-placeholder{
+:-moz-input-placeholder{
   color: white
 }
 :-moz-textarea-placeholder{
@@ -250,10 +247,10 @@ button{
 :-moz-input-placeholder{
   color: white
 }
-:-ms-textarea-placeholder{
+::-ms-textarea-placeholder{
   color: white
 }
-:-ms-input-placeholder{
+::-ms-input-placeholder{
   color: white
 }
 ::-ms-textarea-placeholder{
