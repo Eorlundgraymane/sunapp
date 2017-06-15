@@ -20,8 +20,7 @@ body,html{
 }
 #posts{
   overflow-y: scroll;
-  position: relative;
-  left: -3em;
+  position: relative;  
   max-height: 50em;
   min-width: 45em;
 }
