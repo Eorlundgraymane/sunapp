@@ -1053,10 +1053,10 @@ function pushpost(){
   data["args"].objects[0]["postimg"] = postimg;
   data["args"].objects[0]["title"] = title;
   data["args"].objects[0]["user_id"] = hasura_id;
-  data["args"].objects[0]["earthshine"] = earth;
-  data["args"].objects[0]["charityshine"] = charity;
-  data["args"].objects[0]["socialshine"] = social;
-  data["args"].objects[0]["healthshine"] = health;
+  data["args"].objects[0]["earthshine"] = parseInt(earth);
+  data["args"].objects[0]["charityshine"] = parseInt(charity);
+  data["args"].objects[0]["socialshine"] = parseInt(social);
+  data["args"].objects[0]["healthshine"] = parseInt(health);
   query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
