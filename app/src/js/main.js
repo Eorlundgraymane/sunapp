@@ -1411,7 +1411,7 @@ function pullposts(id){
                 service = "unlike";
               }
               if(count <= 10){
-                liketitle += "<img src = '"+liker['liker']['proimage']+"' title = '"+liker["liker"]["fname"]+"'>";
+                liketitle += "<img class = 'likers' width = '20px' height = '20px' src = '"+liker['liker']['proimage']+"' title = '"+liker["liker"]["fname"]+"'>";
                 count++;
               }
               else{
@@ -1440,7 +1440,7 @@ function pullposts(id){
                 service = "unlike";
               }
               if(count <= 10){
-                liketitle += "<img src = '"+liker['liker']['proimage']+"' title = '"+liker["liker"]["fname"]+"'>";
+                liketitle += "<img class = 'likers' width = '20px' height = '20px' src = '"+liker['liker']['proimage']+"' title = '"+liker["liker"]["fname"]+"'>";
                 count++;
               }
               else {
