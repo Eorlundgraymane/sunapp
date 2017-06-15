@@ -109,7 +109,7 @@ function SHA256(s){
 
 
 function appfriendslogin(){
-  if(droppeddown == 0 && friendlistflag == 0)
+  if(addflag == 1 || (droppeddown == 0 && friendlistflag == 0))
     {
       alert("Friend's list function is still experimental. Adding Friends feauture coming soon...");
       document.getElementById('friendslistbutton').innerHTML = "Loading Friend's List <img width = '30px' height = '30px' src = 'css/loader.gif'>";
@@ -311,7 +311,6 @@ function applogin(){
     document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
     suggesiondrop  =1;
     }
-    addflag = 0;
   }
 
 
@@ -878,6 +877,7 @@ function addfriend(id,name){
         i.disabled = false;
         i.style.cursor = "pointer";
       }
+      addflag = 1;
       applogin();
     }
   }
@@ -1506,10 +1506,8 @@ function selectsuggests(){
           each.disabled = false;
           each.style.cursor = "pointer";
       }
-      appfriendslogin();
     }
     else if(xhr.readyState ==4) {
-      appfriendslogin();
       document.getElementById('friendssuggestbutton').innerHTML = "Error";
       var btns = document.getElementsByClassName('btn');
       for(each of btns){
