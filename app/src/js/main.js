@@ -1270,7 +1270,8 @@ function pullposts(id){
         var postimg = each["postimg"];
         var post = each["post"];
         var title = each["title"];
-        var timestamp = timeSince(each["created"]);
+        var timestamp = new Date(timeSince(each["created"]));
+        console.log(timestamp);
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
