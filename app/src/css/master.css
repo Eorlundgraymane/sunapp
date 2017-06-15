@@ -13,6 +13,9 @@ body,html{
   margin-bottom: 5px;
   cursor: pointer;
 }
+#postpane{
+  border-left: 1px solid white;
+}
 #newposttext{
   width: 30em;
   height: 10em;
