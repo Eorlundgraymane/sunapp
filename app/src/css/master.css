@@ -367,7 +367,7 @@ input,select,textarea {
   font-weight: 900;
 }
 #sitefooter {
-  background-color: rgba(255, 255, 255,0.5);
+  background-color: rgba(0, 0, 0,0.5);
   animation-name: fadeIn;
   animation-duration: 6s;
   animation-timing-function: ease-in();
