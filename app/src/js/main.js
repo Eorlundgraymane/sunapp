@@ -290,7 +290,7 @@ function applogin(){
           hasura_id = json.hasura_id;
           auth_token = "Bearer "+json.auth_token;
           email = JSON.stringify(json.email);
-          selectsuggests();
+          selectsuggests();          
         }
         else if(xhr.readyState == 4) {
           var json = JSON.parse(xhr.responseText);
@@ -316,7 +316,7 @@ function applogin(){
 
 
 function getfriendslist(){
-  if(friendlistflag == 0 && droppeddown == 0){
+  if(addflag == 1 || friendlistflag == 0 && droppeddown == 0){
     var data = { "type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname","proimage", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": hasura_id } } ] } ] } ] } ] } };
     query = JSON.stringify(data);
     console.log(query);
@@ -336,6 +336,7 @@ function getfriendslist(){
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
           friendlistflag = 0;
           droppeddown = 0;
+          addflag =0;
         }
         else if(json[0]["profile"][0]["mefriend"].length > 0){
           for(myfid of json[0]["profile"][0]["mefriend"])
