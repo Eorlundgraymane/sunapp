@@ -1402,7 +1402,7 @@ function pullposts(id){
             for(liker of likers)
             {
               if(count <= 10){
-                liketitle +=liker["liker"]["fname"]+" ";
+                liketitle +=liker["liker"]["fname"]+", ";
                 count++;
               }
               else{
@@ -1424,7 +1424,7 @@ function pullposts(id){
             for(liker of likers)
             {
               if(count <= 10){
-                liketitle +=liker["liker"]["fname"]+" ";
+                liketitle +=liker["liker"]["fname"]+", ";
                 count++;
               }
               else {
