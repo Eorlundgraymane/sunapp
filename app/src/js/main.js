@@ -1286,7 +1286,7 @@ function like(id,auth_id){
   var likimg = document.getElementById('img'+id);
   likimg.src = "css/generated/health.svg";
   var data = {};
-  data["type"]:"insert";
+  data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "likes";
   data["type"] = "insert";
