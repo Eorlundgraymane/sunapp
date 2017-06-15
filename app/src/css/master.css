@@ -374,6 +374,7 @@ input,select,textarea {
   position: fixed;
   bottom: 0;
   text-align: center;
+  z-index: 999;
   color: white;
   font-weight: bolder;
   font-style: italic;
