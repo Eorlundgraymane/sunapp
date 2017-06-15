@@ -1321,11 +1321,10 @@ function pullposts(id){
       "name":"author",
       "columns":["fname","proimage","user_id"],
       "name":"likers",
-      "columns":["liker_id",
+      "columns":["liker_id"],
       "where":{
         "liker_id":id
-      }
-    ],
+      },
     "order":"desc",
     "order_by":"created"
   }]
