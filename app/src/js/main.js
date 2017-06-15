@@ -1356,7 +1356,7 @@ function loadtable(){
     data["args"]["table"] = "profile";
     data["args"]["columns"] = ["healthshine","charityshine","socialshine","friendshine","earthshine"];
     data["args"]["where"] = {};
-    data["args"]["where"]["user_id"] == hasura_id;
+    data["args"]["where"]["user_id"] = hasura_id;
     var query = JSON.stringify(data);
     console.log(query);
     alert("Load table function coming soon....");
