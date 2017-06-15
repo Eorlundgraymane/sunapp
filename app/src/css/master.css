@@ -19,8 +19,7 @@ body,html{
   display: inline-block;
 }
 #posts{
-  overflow-y: scroll;
-  position: relative;
+  overflow-y: scroll;  
   max-height: 50em;
   min-width: 45em;
 }
