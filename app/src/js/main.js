@@ -1319,7 +1319,12 @@ function pullposts(id){
     "table":"posts",
     "columns":["post","id","postimg","created","title",{
       "name":"author",
-      "columns":["fname","proimage","user_id"]
+      "columns":["fname","proimage","user_id"],
+      "name":"likes",
+      "columns":["liker_id"],
+      "where":{
+        "liker_id":id
+      }
     }],
     "order":"desc",
     "order_by":"created"
@@ -1348,12 +1353,23 @@ function pullposts(id){
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
+        var likers = each["likes"]["liker_id"];
         console.log(id);
         if(author_id == id){
-          document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+author_id+');"><img id = "img'+postid+'"  src = "css/heart.svg" width = "21px" height = "16px"></button></div></figure></li>';
+          if(likers.length == 0){
+              document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+author_id+');"><img id = "img'+postid+'"  src = "css/heart.svg" width = "21px" height = "16px"></button></div></figure></li>';
+          }
+          else{
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div><button type = "button" class = "btn like" onclick = "unlike('+postid+','+author_id+');"><img id = "img'+postid+'"  src = "css/generated/health.svg" width = "21px" height = "16px"></button></div></figure></li>';
+          }
         }
         else{
-          document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+author_id+');"><img id = "img'+postid+'" src = "css/heart.svg" width = "21px" height = "16px"></button></div></figure></li>';
+            if(likers.length == 0){
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+author_id+');"><img id = "img'+postid+'" src = "css/heart.svg" width = "21px" height = "16px"></button></div></figure></li>';
+          }
+          else{
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div><button type = "button" class = "btn like" onclick = "unlike('+postid+','+author_id+');"><img id = "img'+postid+'" src = "css/generated/health.svg" width = "21px" height = "16px"></button></div></figure></li>';
+          }
         }
       }
       var btns = document.getElementsByClassName('btn');
