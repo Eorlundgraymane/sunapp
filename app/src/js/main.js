@@ -1043,7 +1043,7 @@ function pushpost(){
   var earth = document.getElementById('earth');
   var charity = document.getElementById('charity');
   var social = document.getElementById('social');
-  var health = document.getElementById('hea;th');
+  var health = document.getElementById('health');
   var data = {"type":"insert","args":{
     "table":"posts",
     "objects":[
