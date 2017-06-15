@@ -22,13 +22,13 @@
         <?php include 'friends.php';?>
       </div>
       <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "newspane">
-        <h3 id = "uploadpane">Upload New Post</h3>
             <button type = "button" class = "btn" onclick="pullposts()">Pull Latest Post</button>
             <ul id = "posts">
 
             </ul>
       </div>
       <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "postpane">
+        <h3 id = "uploadpane">Upload New Post</h3>
           <form method = "POST" action = "#">
             <div id = "uploadform" class = "form-group">
               <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
