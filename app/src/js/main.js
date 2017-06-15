@@ -1384,11 +1384,8 @@ function refreshscore(){
             "table":"likes",
             "columns":["post_id",{
               "name":"post",
-            "columns":["user_id","earthshine","healthshine","charityshine","socialshine","friendshine"],
-            "where":{
-            "user_id":hasura_id
-            }
-          }]
+              "columns":["user_id","earthshine","healthshine","charityshine","socialshine","friendshine"]
+            }]
           }
 };
 console.log(JSON.stringify(data));
