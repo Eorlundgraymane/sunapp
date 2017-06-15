@@ -15,7 +15,7 @@ body,html{
 }
 #newposttext{
   rows : "15";
-  columns : "30";
+  cols : "30";
   width: 100%;
   height: 100%;
 }
