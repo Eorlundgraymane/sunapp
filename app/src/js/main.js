@@ -1397,6 +1397,11 @@ function loadtable(){
       if(xhr.readyState == 4 && xhr.status == 200){
         var json = JSON.parse(xhr.responseText);
         console.log(JSON.stringify(json));
+        document.getElementById('friendshine').innerHTML = json[0]["friendshine"];
+        document.getElementById('earthshine').innerHTML = json[0]["earthshine"];
+        document.getElementById('charityshine').innerHTML = json[0]["charityshine"];
+        document.getElementById('socialshine').innerHTML = json[0]["socialshine"];
+        document.getElementById('healthshine').innerHTML = json[0]["healthshine"];
       }
       else if(xhr.readyState ==4){
         var json = JSON.parse(xhr.responseText);

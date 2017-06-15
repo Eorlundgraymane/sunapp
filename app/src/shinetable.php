@@ -5,10 +5,10 @@
   <table id = "shinetable" class = "table table-responsive">
    <tr>
      <td id = "friendshine">0</td>
-     <td id = "friendshine">0</td>
-     <td id = "friendshine">0</td>
-     <td id = "friendshine">0</td>
-     <td id = "friendshine">0</td>
+     <td id = "earthshine">0</td>
+     <td id = "charityshine">0</td>
+     <td id = "healthshine">0</td>
+     <td id = "socialshine">0</td>
    </tr>
    <tr>
      <td><img class = "shineicon img-responsive" src  = "css/generated/friend.svg" alt ="Friend Icon"></td>
