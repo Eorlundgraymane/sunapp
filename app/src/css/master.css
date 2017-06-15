@@ -371,6 +371,7 @@ input,select,textarea {
   animation-duration: 6s;
   animation-timing-function: ease-in();
   animation-iteration-count: 1;
+  position: absolute;
   bottom: 0;
   text-align: center;
   color: white;
