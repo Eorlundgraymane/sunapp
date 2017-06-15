@@ -29,28 +29,28 @@ body,html{
 #posts::-webkit-scrollbar-thumb{
 	background-color: #000000;
 }
-#posts::-ms-scrollbar-track{
+#posts:-ms-scrollbar-track{
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #7ec0ee;
 }
-#posts-3::-ms-scrollbar{
+#posts-3:-ms-scrollbar{
 	width: 6px;
 	background-color: #7ec0ee;
 }
 
-#posts::-ms-scrollbar-thumb{
+#posts:-ms-scrollbar-thumb{
 	background-color: #000000;
 }
-#posts:-moz-scrollbar-track{
+#posts::-moz-scrollbar-track{
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #7ec0ee;
 }
-#posts-3:-moz-scrollbar{
+#posts-3::-moz-scrollbar{
 	width: 6px;
 	background-color: #7ec0ee;
 }
 
-#posts:-moz-scrollbar-thumb{
+#posts::-moz-scrollbar-thumb{
 	background-color: #000000;
 }
 #postpane{
@@ -238,25 +238,25 @@ button{
 ::-webkit-input-placeholder{
   color: white
 }
-:-moz-input-placeholder{
+::-moz-input-placeholder{
   color: white
 }
-:-moz-textarea-placeholder{
+::-moz-textarea-placeholder{
   color: white
 }
-:-moz-input-placeholder{
+::-moz-input-placeholder{
   color: white
 }
-::-ms-textarea-placeholder{
+:-ms-textarea-placeholder{
   color: white
 }
-::-ms-input-placeholder{
+:-ms-input-placeholder{
   color: white
 }
-::-ms-textarea-placeholder{
+:-ms-textarea-placeholder{
   color: white
 }
-::-ms-input-placeholder{
+:-ms-input-placeholder{
   color: white
 }
 textarea:-webkit-autofil{
