@@ -1124,7 +1124,8 @@ function pullposts(){
       "name":"author",
       "columns":["fname","proimage"]
     }],
-    "order_by":"created"
+    "order_by":"created",
+    "order":"desc"
   }
 };
   var query = JSON.stringify(data);
