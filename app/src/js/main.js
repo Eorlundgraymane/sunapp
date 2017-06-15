@@ -1188,11 +1188,21 @@ function pullposts(id){
           document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><figcaption id = "auth_name">'+author_name+'</figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption></figure></li>';
         }
       }
+      var btns = document.getElementsByClassName('btn');
+      for(each of btns){
+        each.disabled = false;
+        each.style.cursor = "pointer";
+    }
     }
     else if (xhr.readyState == 4) {
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
+      var btns = document.getElementsByClassName('btn');
+      for(each of btns){
+        each.disabled = false;
+        each.style.cursor = "pointer";
+    }
     }
   }
   xhr.send(query);
