@@ -1325,7 +1325,7 @@ function pullposts(id){
       "columns":["liker_id"],
       "where":{
         "liker_id":id
-      }
+      },
       "order_by":"created"
   }]
 }};
