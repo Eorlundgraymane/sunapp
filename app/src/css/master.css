@@ -175,26 +175,45 @@ button{
     opacity: 1;
   }
 }
+::-webkit-textarea-placeholder{
+  color: white
+}
 ::-webkit-input-placeholder{
+  color: white
+}
+::-moz-textarea-placeholder{
   color: white
 }
 ::-moz-input-placeholder{
   color: white
 }
+:-moz-textarea-placeholder{
+  color: white
+}
 :-moz-input-placeholder{
+  color: white
+}
+:-ms-textarea-placeholder{
   color: white
 }
 :-ms-input-placeholder{
   color: white
 }
+::-ms-textarea-placeholder{
+  color: white
+}
 ::-ms-input-placeholder{
   color: white
+}
+textarea:-webkit-autofil{
+  -webkit-box-shadow: 0 0 0 30px rgba(126,192,238,0.75) inset;
+  -webkit-text-fill-color: white;
 }
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px rgba(126,192,238,0.75) inset;
     -webkit-text-fill-color: white;
 }
-input,select {
+input,select,textarea {
   outline: none;
   max-width: 100%;
   text-indent: 10px;
