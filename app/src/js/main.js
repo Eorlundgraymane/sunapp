@@ -1048,6 +1048,7 @@ function pushpost(){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "posts";
+  data["args"].objects = [];
   data["args"].objects["post"] = posttext;
   data["args"].objects["postimg"] = postimg;
   data["args"].objects["title"] = title;
