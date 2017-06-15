@@ -1321,7 +1321,7 @@ function pullposts(id){
       "name":"author",
       "columns":["fname","proimage","user_id"],
       "name":"likers",
-      "columns":["liker_id"],
+      "columns":["liker_id","created"],
       "where":{
         "liker_id":id
       },
