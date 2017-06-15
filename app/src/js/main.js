@@ -1049,9 +1049,30 @@ function pushpost(){
   data["args"] = {};
   data["args"]["table"] = "posts";
   data["args"].objects = [{"post":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":earth,"charityshine":charity,"healthshine":health,"social":social}];
-  console.log(JSON.stringify(data));
+  query = JSON.stringify(data);
+  console.log(query);
+  xhr = new XMLHttpRequest();
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      console.log(JSON.stringify(res));
+      alert("Post Uploaded");
+      pullposts();
+      }
+    else if (xhr.readyState == 4) {
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      console.log(JSON.stringify(res));
+      alert("Couldn't Post , it's till experimental");
+    }
+  }
+  xhr.send(query);
 }
-
 function pullposts(){
   alert("This function is still under construction and placed only for the Dever. If you're awesome you can check out what's goin on in the console");
   var data = {"type":"select","args":{
