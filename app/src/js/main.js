@@ -6,7 +6,8 @@ var droppeddown = 0;
 var friendlistflag = 0;
 var friendsuggestflag = 0;
 var suggesiondrop = 0;
-
+var addflag = 1;
+var getflag = 1;
 function SHA256(s){
  var chrsz  = 8;
  var hexcase = 0;
@@ -109,7 +110,7 @@ function SHA256(s){
 
 
 function appfriendslogin(){
-  if(addflag == 1 || (droppeddown == 0 && friendlistflag == 0))
+  if(getflag == 1 || (droppeddown == 0 && friendlistflag == 0))
     {
       alert("Friend's list function is still experimental. Adding Friends feauture coming soon...");
       document.getElementById('friendslistbutton').innerHTML = "Loading Friend's List <img width = '30px' height = '30px' src = 'css/loader.gif'>";
@@ -132,6 +133,7 @@ function appfriendslogin(){
           auth_token = "Bearer "+json.auth_token;
           email = json.email;
           getfriendslist();
+          getflag = 0;
         }
         else if(xhr.readyState == 4) {
           var json = JSON.parse(xhr.responseText);
@@ -266,7 +268,6 @@ function gethasurapullpost(){
   }
   xhr.send();
 }
-var addflag =1;
 function applogin(){
   if(addflag == 1 || (suggesiondrop  == 0 && friendsuggestflag == 0))
     {
@@ -291,6 +292,7 @@ function applogin(){
           auth_token = "Bearer "+json.auth_token;
           email = JSON.stringify(json.email);
           selectsuggests();
+          addflag = 0;
         }
         else if(xhr.readyState == 4) {
           var json = JSON.parse(xhr.responseText);
@@ -315,7 +317,7 @@ function applogin(){
 
 
 function getfriendslist(){
-  if(addflag == 1 || friendlistflag == 0 && droppeddown == 0){
+  if(friendlistflag == 0 && droppeddown == 0){
     var data = { "type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname","proimage", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": hasura_id } } ] } ] } ] } ] } };
     query = JSON.stringify(data);
     console.log(query);
@@ -363,7 +365,7 @@ function getfriendslist(){
           droppeddown = 0;
           document.getElementById('friendslistbutton').innerHTML = "Error";
         }
-        addflag =0;
+        getflag =0;
         document.getElementById('friendslistbutton').disabled = false;
         document.getElementById('friendssuggestbutton').disabled = false;
         document.getElementById('friendssuggestbutton').style.cursor = "pointer";
@@ -1506,6 +1508,7 @@ function selectsuggests(){
           each.disabled = false;
           each.style.cursor = "pointer";
       }
+      getfriendslist();
     }
     else if(xhr.readyState ==4) {
       document.getElementById('friendssuggestbutton').innerHTML = "Error";
@@ -1518,6 +1521,7 @@ function selectsuggests(){
       alert(JSON.stringify(json));
       friendsuggestflag = 0;
     }
+    addflag = 0;
   }
   xhr.send(query);
 }
