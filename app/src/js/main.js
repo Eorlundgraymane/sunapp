@@ -1219,6 +1219,7 @@ xhr.onreadystatechange = function(){
     }
     }
 }
+xhr.send(query);
 }
 
 function time_ago(time) {
