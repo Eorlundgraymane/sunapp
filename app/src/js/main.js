@@ -1044,12 +1044,11 @@ function pushpost(){
   var charity = document.getElementById('charity').value;
   var social = document.getElementById('social').value;
   var health = document.getElementById('health').value;
-  var data = {"type":"insert","args":{
-    "table":"posts",
-    "objects":[
-      "post":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":earth,"charityshine":charity,"healthshine":health,"social":social
-    ]
-  }};
+  var data = {};
+  data["type"] = "insert";
+  data["args"]:{};
+  data["args"]["table"] = "posts";
+  data["args"].objects = {"post":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":earth,"charityshine":charity,"healthshine":health,"social":social};
   console,log(JSON.stringify(data));
 }
 
