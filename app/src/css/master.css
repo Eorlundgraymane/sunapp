@@ -346,10 +346,6 @@ input,select,textarea {
 .jumbotron{
   width: 100%;
 }
-#like{
-  height: 1em;
-  width: 1em;
-}
 #sitebanner
 {
   animation-name: fadeIn;
