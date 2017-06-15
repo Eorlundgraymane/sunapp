@@ -1357,7 +1357,7 @@ function pullposts(id){
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
-        var likers = each["likers"];
+        var likers = each["liker"];
         console.log(likers);
         console.log(id);
         if(author_id == id){
