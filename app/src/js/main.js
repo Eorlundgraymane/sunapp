@@ -1362,7 +1362,7 @@ function tablelogin(){
         hasura_id = json.hasura_id;
         auth_token = "Bearer "+json.auth_token;
         email = JSON.stringify(json.email);
-        loadtable();
+        refreshscore();
       }
       else if(xhr.readyState == 4) {
         var json = JSON.parse(xhr.responseText);
@@ -1376,6 +1376,40 @@ function tablelogin(){
   else{
     loadflag = 0;
   }
+}
+function refreshscore(){
+  var data = {};
+  data = {"type":"select",
+          "args":{
+            "table":"likes",
+            "columns":["post_id",{
+            "name":"author",
+            "columns":["earthshine","healthshine","charityshine","socialshine","friendshine"]
+            "where":{
+            "user_id":hasura_id;
+            }
+          }]
+          }
+};
+console.log(JSON.stringify(data));
+var query = JSON.stringify(data);
+console.log(query);
+xhr = new XMLHttpRequest();
+var url  = "https://data.unwound15.hasura-app.io/v1/query";
+xhr.open("POST",url,true);
+xhr.setRequestHeader("Content-type","application/json");
+xhr.withCredentials = "true";
+xhr.onreadystatechange = function(){
+  if(xhr.readyState == 4 && xhr.status == 200){
+    var json = JSON.parse(xhr.responseText);
+    console.log(JSON.stringify(json));
+  }
+  else if(xhr.readyState ==4){
+    var json = JSON.parse(xhr.responseText);
+    console.log(json);
+  }
+}
+xhr.send(query);
 }
 function loadtable(){
     var data = {};
