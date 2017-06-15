@@ -1405,6 +1405,7 @@ function loadtable(){
 
     }
     loadflag = 1;
+    xhr.send(query);
 }
 
 
