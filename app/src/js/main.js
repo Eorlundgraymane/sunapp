@@ -1365,9 +1365,17 @@ function pullposts(id){
           }
           else{
             var liketitle = "";
+            var count = 0;
             for(liker of likers)
             {
-              liketitle +=liker["liker"]["fname"]+" ";
+              if(count <= 10){
+                liketitle +=liker["liker"]["fname"]+" ";
+                count++;
+              }
+              else{
+                liketitle += "and others ";
+                break;
+              }
             }
             console.log(liketitle);
             document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div><button type = "button" class = "btn like" onclick = "unlike('+postid+','+id+');"><img id = "img'+postid+'"  src = "css/generated/health.svg" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'</div></figure></li>';
@@ -1379,9 +1387,17 @@ function pullposts(id){
           }
           else{
             var liketitle = "";
+            var count = 0;
             for(liker of likers)
             {
-              liketitle +=liker["liker"]["fname"]+" ";
+              if(count <= 10){
+                liketitle +=liker["liker"]["fname"]+" ";
+                count++;
+              }
+              else {
+                liketitle += "and others ";
+                break;
+              }
             }
             console.log(liketitle);
             document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div><button type = "button" class = "btn like" onclick = "unlike('+postid+','+id+');"><img id = "img'+postid+'" src = "css/generated/health.svg" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'</div></figure></li>';
