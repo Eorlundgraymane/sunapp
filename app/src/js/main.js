@@ -1243,7 +1243,8 @@ function pullposts(id){
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
-      for(each of res){
+      var reverpost = res.reverse();
+      for(each of reverpost){
         var postimg = each["postimg"];
         var post = each["post"];
         var title = each["title"];
