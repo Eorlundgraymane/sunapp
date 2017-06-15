@@ -33,6 +33,10 @@
             <input type = "text" id = "newposttitle" placeholder = "Title"><br>
             <input type = "text" id = "newpostimg" placeholder = "Image URL"><br>
             <input type = "text" id = "newposttext" placeholder = "Post"><br>
+            <input type = "number" id = "earth" placeholder = "Earth Shine"><br>
+            <input type = "number" id = "charity" placeholder = "Charity Shine"><br>
+            <input type = "number" id = "health" placeholder = "Health Shine"><br>
+            <input type = "number" id = "social" placeholder = "Social Shine"><br>
             <button class = "btn" type = "button" id = "postbutton" onclick = "pushpost();">Post</button>
           </form>
         </div>
