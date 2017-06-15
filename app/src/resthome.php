@@ -38,7 +38,7 @@
               <input type = "number" id = "charity" placeholder = "Charity Shine"><br>
               <input type = "number" id = "health" placeholder = "Health Shine"><br>
               <input type = "number" id = "social" placeholder = "Social Shine"><br>
-              <button class = "btn" type = "button" id = "postbutton" onclick = "pushpost();">Post</button>
+              <button class = "btn" type = "button" id = "postbutton" onclick = "gethasurapushpost();">Post</button>
             </div>
           </form>
       </div>
