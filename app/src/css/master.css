@@ -16,6 +16,7 @@ body,html{
 #newposttext{
   rows : "15";
   columns : "30";
+  width: 100%;
 }
 #post{
   list-style-type: none;
