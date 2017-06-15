@@ -21,7 +21,7 @@ body,html{
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #7ec0ee;
 }
-#posts-3::-webkit-scrollbar{
+#posts::-webkit-scrollbar{
 	width: 6px;
 	background-color: #7ec0ee;
 }
@@ -33,7 +33,7 @@ body,html{
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #7ec0ee;
 }
-#posts-3:-ms-scrollbar{
+#posts:-ms-scrollbar{
 	width: 6px;
 	background-color: #7ec0ee;
 }
@@ -45,7 +45,7 @@ body,html{
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #7ec0ee;
 }
-#posts-3::-moz-scrollbar{
+#posts::-moz-scrollbar{
 	width: 6px;
 	background-color: #7ec0ee;
 }
