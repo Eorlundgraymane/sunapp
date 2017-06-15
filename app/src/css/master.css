@@ -16,7 +16,7 @@ body,html{
 #postpane{
   border-left: 1px solid white;
   height: 50em;
-  margin-right: -20px;
+  margin-left: -20px;
   margin-top: 10px;
 }
 #newposttext{
