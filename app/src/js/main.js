@@ -1284,7 +1284,7 @@ console.log(time_ago(new Date(Date.now() - aDay * 2)));
 function pullposts(id){
   var data = {"type":"select","args":{
     "table":"posts",
-    "columns":["post","postimg","created","title",{
+    "columns":["post","id","postimg","created","title",{
       "name":"author",
       "columns":["fname","proimage","user_id"]
     }],
@@ -1309,6 +1309,7 @@ function pullposts(id){
         var postimg = each["postimg"];
         var post = each["post"];
         var title = each["title"];
+        var postid = each["id"];
         var timestamp = time_ago(each["created"]);
         console.log(timestamp);
         var author_img = each["author"]["proimage"];
@@ -1316,7 +1317,7 @@ function pullposts(id){
         var author_id = each["author"]["user_id"];
         console.log(id);
         if(author_id == id){
-          document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "alert(\'Delete Posts Coming Soon...\');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption></figure></li>';
+          document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption></figure></li>';
         }
         else{
           document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><div id = "timestamp">'+timestamp+'</div></figure></li>';
