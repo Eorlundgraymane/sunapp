@@ -1282,7 +1282,7 @@ var aDay = 24 * 60 * 60 * 1000;
 console.log(time_ago(new Date(Date.now() - aDay)));
 console.log(time_ago(new Date(Date.now() - aDay * 2)));
 
-function like(id,auth_id){
+function like(id,liker_id){
   var likimg = document.getElementById('img'+id);
   likimg.src = "css/generated/health.svg";
   var data = {};
@@ -1290,7 +1290,7 @@ function like(id,auth_id){
   data["args"] = {};
   data["args"]["table"] = "likes";
   data["type"] = "insert";
-  data["args"].objects = [{"post_id":id,"user_id":auth_id,"liker_id":hasura_id}];
+  data["args"].objects = [{"post_id":id,"liker_id":liker_id}];
   query = JSON.stringify(data);
   console.log(query);
   var xhr = new XMLHttpRequest();
