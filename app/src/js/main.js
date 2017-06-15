@@ -1508,6 +1508,8 @@ function selectsuggests(){
           each.disabled = false;
           each.style.cursor = "pointer";
       }
+      friendlistflag = 0;
+      droppeddown = 0;
       getfriendslist();
     }
     else if(xhr.readyState ==4) {
