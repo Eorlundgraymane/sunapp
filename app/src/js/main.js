@@ -1202,6 +1202,7 @@ xhr.onreadystatechange = function(){
       var json = JSON.parse(xhr.responseText);
       console.log(json);
       alert("Post Deleted, Pulling fresh post list");
+      gethasurapullpost();
       var btns = document.getElementsByClassName('btn');
       for(each of btns){
         each.disabled = false;
