@@ -17,6 +17,7 @@ body,html{
   rows : "15";
   columns : "30";
   width: 100%;
+  height: 100%;
 }
 #post{
   list-style-type: none;
