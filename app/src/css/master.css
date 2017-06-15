@@ -15,6 +15,7 @@ body,html{
 }
 #posts{
   overflow-y: scroll;
+  max-height: 10em;
 }
 #postpane{
   border-left: 1px solid white;
