@@ -29,7 +29,7 @@
       </div>
       <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "postpane">
         <h3 id = "uploadpane">Upload New Post</h3>
-          <form method = "POST" action = "#">
+          <form id  = "postform" method = "POST" action = "#">
             <div id = "uploadform" class = "form-group">
               <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
               <input  type = "text" id = "newpostimg" placeholder = "Image URL"><br>
