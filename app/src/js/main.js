@@ -1320,7 +1320,6 @@ function pullposts(id){
     "columns":["post","id","postimg","created","title",{
       "name":"author",
       "columns":["fname","proimage","user_id"],
-      "order":"desc",
       "order_by":"created",
       "name":"likers",
       "columns":["liker_id"],
