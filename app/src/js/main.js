@@ -1344,12 +1344,12 @@ function pullposts(id){
       console.log(JSON.stringify(res));
       var reverpost = res.reverse();
       for(each of reverpost){
+        console.log(each);
         var postimg = each["postimg"];
         var post = each["post"];
         var title = each["title"];
         var postid = each["id"];
         var timestamp = time_ago(each["created"]);
-        console.log(timestamp);
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
