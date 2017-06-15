@@ -1280,6 +1280,7 @@ var aDay = 24 * 60 * 60 * 1000;
 console.log(time_ago(new Date(Date.now() - aDay)));
 console.log(time_ago(new Date(Date.now() - aDay * 2)));
 
+
 function pullposts(id){
   var data = {"type":"select","args":{
     "table":"posts",
