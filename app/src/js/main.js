@@ -606,11 +606,13 @@ function updatemyusersprofile(pk){
       console.log(JSON.stringify(json));
       alert("Your Sunshine Profile is Ready. Please wait till we Log you out then go ahead and Log In");
       checklogout(pk);
+      document.getElementById('signup').reset();
     }
     else if(xhr.readyState ==4){
       var json = JSON.parse(xhr.responseText);
       console.log("Consoled Error : "+JSON.stringify(json));
       alert("Something went wrong during updating user profile");
+      document.getElementById('signup').reset();
     }
   }
   var objects = {};
@@ -625,7 +627,6 @@ function updatemyusersprofile(pk){
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
-  document.getElementById('signup').reset();
 }
 function changebanner()
 {
