@@ -1318,7 +1318,6 @@ function pullposts(id){
   var data = {"type":"select","args":{
     "table":"posts",
     "columns":["post","id","postimg","created","title",
-      "order_by":"created",
       {
       "name":"author",
       "columns":["fname","proimage","user_id"],
@@ -1327,6 +1326,7 @@ function pullposts(id){
       "where":{
         "liker_id":id
       }
+      "order_by":"created",
   }]
 }};
   var query = JSON.stringify(data);
