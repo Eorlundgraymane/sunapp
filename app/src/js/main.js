@@ -1291,6 +1291,8 @@ function like(id,auth_id){
   data["args"]["table"] = "likes";
   data["type"] = "insert";
   data["args"].objects = [{"post_id":id,"user_id":auth_id,"liker_id":hasura_id}];
+  query = JSON.stringify(data);
+  console.log(query);
 
 }
 function pullposts(id){
