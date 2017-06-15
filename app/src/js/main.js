@@ -1100,7 +1100,7 @@ function pushpost(){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
-      pullposts();
+      pullposts(hasura_id);
       }
     else if (xhr.readyState == 4) {
       var res = JSON.parse(xhr.responseText);
@@ -1116,7 +1116,7 @@ function pushpost(){
   }
   xhr.send(query);
 }
-function pullposts(){
+function pullposts(id){
   alert("This function is still under construction and placed only for the Dever. If you're awesome you can check out what's goin on in the console");
   var data = {"type":"select","args":{
     "table":"posts",
@@ -1147,8 +1147,8 @@ function pullposts(){
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
-        console.log(hasura_id);
-        if(author_id == hasura_id){
+        console.log(id);
+        if(author_id == id){
           document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><figcaption id = "auth_name">'+author_name+'</figcaption></figure><h1 id = "post_title">'+title+'</h1><button type = "button" class = "btn" onclick = "alert(\'Delete Posts Coming Soon...\');">X</button><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption></figure></li>';
         }
         else{
