@@ -1320,7 +1320,7 @@ function pullposts(id){
     "columns":["post","id","postimg","created","title",{
       "name":"author",
       "columns":["fname","proimage","user_id"],
-      "name":"likes",
+      "name":"likers",
       "columns":["liker_id"],
       "where":{
         "liker_id":id
@@ -1353,7 +1353,7 @@ function pullposts(id){
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
-        var likers = each["likes"]["liker_id"];
+        var likers = each["likers"]["liker_id"];
         console.log(id);
         if(author_id == id){
           if(likers.length == 0){
