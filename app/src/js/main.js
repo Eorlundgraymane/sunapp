@@ -1282,7 +1282,7 @@ var aDay = 24 * 60 * 60 * 1000;
 console.log(time_ago(new Date(Date.now() - aDay)));
 console.log(time_ago(new Date(Date.now() - aDay * 2)));
 
-function like(id,author_id,liker_id){
+function like(id,liker_id){
   var likimg = document.getElementById('img'+id);
   likimg.src = "css/generated/health.svg";
   var data = {};
