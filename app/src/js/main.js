@@ -1326,7 +1326,7 @@ function pullposts(id){
       "where":{
         "liker_id":id
       },
-      "order_by":"created"
+      "order_by":"posts.created"
   }]
 }};
   var query = JSON.stringify(data);
