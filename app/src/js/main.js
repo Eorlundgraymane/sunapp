@@ -1047,8 +1047,7 @@ function pushpost(){
   var data = {};
   data["type"] = "insert";
   data["args"] = {};
-  data["args"]["table"] = "posts";
-  data["args"].objects = [{"post":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":earth,"charityshine":charity,"healthshine":health,"socialshine":social}];
+  data["args"]["table"] = "posts";  
   data["args"].objects[0]["post"] = posttext;
   data["args"].objects[0]["postimg"] = postimg;
   data["args"].objects[0]["title"] = title;
