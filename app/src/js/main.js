@@ -1220,6 +1220,28 @@ xhr.onreadystatechange = function(){
     }
 }
 }
+
+function timeSince(timeStamp) {
+  var now = new Date(),
+    secondsPast = (now.getTime() - timeStamp.getTime()) / 1000;
+  if(secondsPast < 60){
+    return parseInt(secondsPast) + 's';
+  }
+  if(secondsPast < 3600){
+    return parseInt(secondsPast/60) + 'm';
+  }
+  if(secondsPast <= 86400){
+    return parseInt(secondsPast/3600) + 'h';
+  }
+  if(secondsPast > 86400){
+      day = timeStamp.getDate();
+      month = timeStamp.toDateString().match(/ [a-zA-Z]*/)[0].replace(" ","");
+      year = timeStamp.getFullYear() == now.getFullYear() ? "" :  " "+timeStamp.getFullYear();
+      return day + " " + month + year;
+  }
+}
+
+
 function pullposts(id){
   var data = {"type":"select","args":{
     "table":"posts",
@@ -1248,12 +1270,13 @@ function pullposts(id){
         var postimg = each["postimg"];
         var post = each["post"];
         var title = each["title"];
+        var timestamp = timeSince(ach["created"]);
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
         console.log(id);
         if(author_id == id){
-          document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "alert(\'Delete Posts Coming Soon...\');">X</button><figcaption id = "auth_name">'+author_name+'</figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption></figure></li>';
+          document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "alert(\'Delete Posts Coming Soon...\');">X</button><figcaption id = "auth_name">'+author_name+'</figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption><br><div id = "timestamp">'+timestamp+'</figure></li>';
         }
         else{
           document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><figcaption id = "auth_name">'+author_name+'</figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+post+'</figcaption></figure></li>';
