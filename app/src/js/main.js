@@ -1045,6 +1045,7 @@ function pushpost(){
   var social = document.getElementById('social').value;
   var health = document.getElementById('health').value;
   var data = {};
+  console.log(hasura_id);
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "posts";
