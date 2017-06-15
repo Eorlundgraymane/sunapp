@@ -21,7 +21,7 @@ body,html{
 #posts{
   overflow-y: scroll;
   position: relative;
-  left: -5em;
+  left: -1em;
   max-height: 50em;
   min-width: 30em;
 }
