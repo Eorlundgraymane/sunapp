@@ -1319,12 +1319,13 @@ function pullposts(id){
     "table":"posts",
     "columns":["post","id","postimg","created","title",{
       "name":"author",
-      "columns":["fname","proimage","user_id"],
+      "columns":["fname","proimage","user_id",
       "name":"likers",
       "columns":["liker_id"],
       "where":{
         "liker_id":id
       }
+    ]
     }],
     "order":"desc",
     "order_by":"created"
