@@ -335,7 +335,6 @@ function getfriendslist(){
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
           friendlistflag = 0;
           droppeddown = 0;
-          addflag =0;
         }
         else if(json[0]["profile"][0]["mefriend"].length > 0){
           for(myfid of json[0]["profile"][0]["mefriend"])
@@ -364,6 +363,7 @@ function getfriendslist(){
           droppeddown = 0;
           document.getElementById('friendslistbutton').innerHTML = "Error";
         }
+        addflag =0;
         document.getElementById('friendslistbutton').disabled = false;
         document.getElementById('friendssuggestbutton').disabled = false;
         document.getElementById('friendssuggestbutton').style.cursor = "pointer";
