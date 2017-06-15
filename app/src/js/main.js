@@ -1348,8 +1348,36 @@ function unlike(id,liker_id){
   xhr.send(query);
 }
 var loadflag = 0;
-function loadtable(){
+function tablelogin(){
   if(loadflag == 0){
+    xhr = new XMLHttpRequest();
+    var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
+    xhr.open("POST",url,true);
+    xhr.setRequestHeader("Content-type","application/json");
+    xhr.withCredentials = "true";
+    xhr.onreadystatechange = function(){
+      if(xhr.readyState == 4 && xhr.status == 200){
+        var json = JSON.parse(xhr.responseText);
+        console.log(JSON.stringify(json.hasura_id));
+        hasura_id = json.hasura_id;
+        auth_token = "Bearer "+json.auth_token;
+        email = JSON.stringify(json.email);
+        loadtable();
+      }
+      else if(xhr.readyState == 4) {
+        var json = JSON.parse(xhr.responseText);
+        console.log(JSON.stringify(json));
+        alert(JSON.stringify(json));
+        alert("Could'nt get your friend's list at the moment");
+      }
+    }
+    xhr.send();
+  }
+  else{
+    loadflag = 0;
+  }
+}
+function loadtable(){
     var data = {};
     data["type"] = "select";
     data["args"] = {};
@@ -1362,9 +1390,6 @@ function loadtable(){
     alert("Load table function coming soon....");
 
     loadflag = 1;
-  }
-  else{
-    loadflag = 0;
   }
 }
 
