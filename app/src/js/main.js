@@ -1386,7 +1386,7 @@ function refreshscore(){
             "name":"author",
             "columns":["earthshine","healthshine","charityshine","socialshine","friendshine"],
             "where":{
-            "user_id":hasura_id;
+            "user_id":hasura_id
             }
           }]
           }
