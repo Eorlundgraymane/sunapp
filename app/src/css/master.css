@@ -6,6 +6,7 @@ body,html{
   background-image: url('sunshine-min.jpg');
 }
 #friendslist,#friendssuggest{
+  position: fixed;
   list-style-type: none;
   background-color: rgba(126,192,238,0.75);
   color: white;
@@ -13,11 +14,11 @@ body,html{
   margin-bottom: 5px;
   cursor: pointer;
 }
-#posts{
-  overflow-y: scroll;
-  max-height: 10em;
+#siteheader{
+  position: fixed;
 }
 #postpane{
+  position: fixed;
   border-left: 1px solid white;
   height: 50em;
   margin-left: -20px;
