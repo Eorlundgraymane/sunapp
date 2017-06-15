@@ -1384,7 +1384,7 @@ function refreshscore(){
             "table":"likes",
             "columns":["post_id",{
               "name":"post",
-              "columns":["user_id","earthshine","healthshine","charityshine","socialshine","friendshine"]
+              "columns":["user_id","earthshine","healthshine","charityshine","socialshine"]
             }]
           }
 };
