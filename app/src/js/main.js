@@ -1034,6 +1034,19 @@ else {
   alert("passwords don't match");
 }
 }
+
+function pushpost(){
+  alert("This function is still under construction and placed only for the Dever. If you're awesome you can check out what's goin on in the console");
+  
+  var data = {"type":"insert","args":{
+    "table":"posts",
+    "objects":[
+      "post":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":earth,"charityshine":charity,"healthshine":health,"social",social
+    ]
+  }};
+  console,log(JSON.stringify(data));
+}
+
 function pullposts(){
   alert("This function is still under construction and placed only for the Dever. If you're awesome you can check out what's goin on in the console");
   var data = {"type":"select","args":{

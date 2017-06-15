@@ -28,6 +28,14 @@
             </ul>
       </div>
       <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "postpane">
+        <div id = "uploadform">
+          <form method = "POST" action = "#">
+            <input type = "text" id = "newposttitle" placeholder = "Title"><br>
+            <input type = "text" id = "newpostimg" placeholder = "Image URL"><br>
+            <input type = "text" id = "newposttext" placeholder = "Post"><br>
+            <button class = "btn" type = "button" id = "postbutton" onclick = "pushpost();">Post</button>
+          </form>
+        </div>
       </div>
     </row>
   </div>
