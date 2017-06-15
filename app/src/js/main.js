@@ -1134,7 +1134,7 @@ function pullposts(){
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
-    document.getElementById('posts').innerHTML +=
+    document.getElementById('posts').innerHTML = "";
     if(xhr.readyState == 4 && xhr.status == 200){
       var res = JSON.parse(xhr.responseText);
       console.log(res);
