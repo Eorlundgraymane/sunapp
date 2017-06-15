@@ -1304,7 +1304,7 @@ function like(id,liker_id){
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       alert("liked");
-      gethasurapullpost(liker_id);
+      gethasurapullpost();
     }
     else if(xhr.readyState == 4) {
       console.log("not liked");
