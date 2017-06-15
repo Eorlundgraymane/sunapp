@@ -367,6 +367,7 @@ input,select,textarea {
   font-weight: 900;
 }
 #sitefooter {
+  clear: both;
   animation-name: fadeIn;
   animation-duration: 6s;
   animation-timing-function: ease-in();
