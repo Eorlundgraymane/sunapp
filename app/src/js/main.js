@@ -1347,6 +1347,12 @@ function unlike(id,liker_id){
   }
   xhr.send(query);
 }
+
+function loadtable(){
+  alert("Load table function coming soon....");
+}
+
+
 function pullposts(id){
   var data = {"type":"select","args":{
     "table":"posts",

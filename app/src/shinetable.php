@@ -1,14 +1,14 @@
-<button id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
+<button onclick = "loadtable();" id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
   Your Shine Table
 </button>
 <div id = "shinetablediv" class = "collapse">
   <table id = "shinetable" class = "table table-responsive">
    <tr>
-     <td>0</td>
-     <td>0</td>
-     <td>0</td>
-     <td>0</td>
-     <td>0</td>
+     <td id = "friendshine">0</td>
+     <td id = "friendshine">0</td>
+     <td id = "friendshine">0</td>
+     <td id = "friendshine">0</td>
+     <td id = "friendshine">0</td>
    </tr>
    <tr>
      <td><img class = "shineicon img-responsive" src  = "css/generated/friend.svg" alt ="Friend Icon"></td>
