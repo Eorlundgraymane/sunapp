@@ -833,7 +833,7 @@ function checkCookie(cname) {
     }
 }
 function clearCookies(){
-  var allcookies = document.ccokie.split(";");
+  var allcookies = document.cookie.split(";");
   for(cookie of allcookies){
     setCookie(getCookie(cookie.split("=")[0]),"",0);
   }
