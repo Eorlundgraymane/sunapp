@@ -806,7 +806,7 @@ function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";domain=.unwound15.hasura-app.io;path=/";
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 function getCookie(cname) {
     var name = cname + "=";
@@ -823,11 +823,20 @@ function getCookie(cname) {
     }
     return "";
 }
+function checkCookie(cname) {
+    var cook = getCookie(cname);
+    if (cook != "") {
+        alert("Welcome again " + cook);
+        return 1;
+    } else {
+        return 0;
+    }
+}
 function deleteCookie(cname) {
     var d = new Date();
     d.setTime(d.getTime());
     var expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + ";" + expires + ";domain=.unwound15.hasura-app.io;path=/";
+    document.cookie = cname + "=;" + expires + ";path=/";
 }
 function clearCookies(){
   var allcookies = document.cookie.split(";");
