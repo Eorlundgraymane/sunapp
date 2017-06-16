@@ -5,7 +5,7 @@ if(checkCookie("primarykey")){
   alert("Hello "+getCookie("primarykey")+" !");
 }
 else{
-  var cookie = prompt("Enter yout primary key");
+  var cookie = prompt("Enter your primary key");
   setCookie("primarykey",cookie,10);
 }
 </script>
