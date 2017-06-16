@@ -394,6 +394,7 @@ function addpiclink(link){
       var response = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(response));
       console.log("Profile picture updated");
+      getpiclink();
     }
     else if(xhr.readyState ==4) {
       var response = JSON.parse(xhr.responseText);
@@ -474,6 +475,13 @@ function getpiclink(){
   xhr.send(query);
   console.log('hasura call sent' );
 }
+function updatephoto(){
+  var newlink = prompt("Enter new profile image URL");
+  if(newlink!="" && newlink!=null){
+    addpiclink(newlink);
+  }
+}
+
 function updateusername(){
   var fname = document.getElementById('fname').value;
   var lname = document.getElementById('lname').value;
