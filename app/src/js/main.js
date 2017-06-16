@@ -827,8 +827,7 @@ function getCookie(cname) {
 }
 function checkCookie(cname) {
     var cook = getCookie(cname);
-    if (cook != "") {
-        alert("Welcome again " + cook);
+    if (cook != "") {        
         return 1;
     } else {
         return 0;
