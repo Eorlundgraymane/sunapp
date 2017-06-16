@@ -456,7 +456,11 @@ function getpiclink(){
             console.log(json[0].email);
             x.send();
 
-        }  
+        }
+        else{
+          piclink = JSON.stringify(json[0]["profile"][0]["proimage"]);
+          document.getElementById('profileimage').src = piclink;
+        }
       }
 
     else if(xhr.readyState ==4) {
