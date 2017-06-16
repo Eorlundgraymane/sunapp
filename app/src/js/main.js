@@ -581,6 +581,7 @@ function userlogout(pk)
       console.log(JSON.stringify(hasura_id));
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
+      clearCookies();
       alert("Successfully Logged Out. Bubye, Come back soon");
       window.location = "https://sunshine.unwound15.hasura-app.io/";
     }
@@ -730,8 +731,9 @@ function checklogin(pk,pasw)
   xhr.send(jsondata);
 }
 
-function phplogin(pk,pasw)
-{
+function jslogin(){
+  var pk = getCookie("primarykey");
+  var pasw = getCookie("password");
   xhr = new XMLHttpRequest();
   var loginbutton = document.getElementById('loginbutton');
   loginbutton.innerHTML = "Logging In";
@@ -866,9 +868,8 @@ function clearCookies(){
       loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
-      document.cookie = "hasura_id="+hasura_id;
-      document.cookie = "password="+SHA256(document.getElementById('password').value);
-      document.cookie = "mobile="+document.getElementById('primarykey').value;
+      setCookie("primarykey",document.getElementById('primarykey').value,1);
+      setCookie("password",document.getElementById('password').value,1);
       console.log(document.cookie);
       getuser();
     }
