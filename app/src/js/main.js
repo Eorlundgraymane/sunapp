@@ -428,7 +428,7 @@ function getpiclink(){
     console.log('xhr readystatechange');
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(json);      
+      console.log(json[0]["profile"][0]["proimage"]);      
       var x = new XMLHttpRequest();
       x.onreadystatechange = function(){
         document.getElementById('profileimage').alt = "Loading Image please Wait...";
