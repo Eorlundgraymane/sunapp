@@ -4,7 +4,9 @@
     <?php include 'headprereqs.php';?>
     <script src = "js/sha.js"></script>
     <script>
-    
+    if(checkCookie("primarykey")){
+      gopro();
+    }
     </script>
     <title>Sunshine | Home</title>
   </head>

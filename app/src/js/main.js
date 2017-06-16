@@ -769,9 +769,11 @@ function jslogin(){
   console.log(jsondata);
   xhr.send(jsondata);
 }
-function gohome()
-{
+function gohome(){
   window.location = "https://sunshine.unwound15.hasura-app.io/";
+}
+function gopro(){
+  window.location = "https://sunshine.unwound15.hasura-app.io/home.php";
 }
 function getuser()
 {
@@ -827,7 +829,7 @@ function getCookie(cname) {
 }
 function checkCookie(cname) {
     var cook = getCookie(cname);
-    if (cook != "") {        
+    if (cook != "") {
         return 1;
     } else {
         return 0;
