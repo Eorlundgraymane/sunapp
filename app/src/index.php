@@ -3,7 +3,10 @@
   <head>
     <?php include 'headprereqs.php';?>
     <script src = "js/sha.js"></script>
-    <title>Sunshine | Home</title>    
+    <script>
+    
+    </script>
+    <title>Sunshine | Home</title>
   </head>
     <body class = "outer-container">
       <row>
