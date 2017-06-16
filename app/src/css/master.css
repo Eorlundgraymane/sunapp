@@ -20,6 +20,8 @@ body,html{
 }
 #profilephotobutton{
   background-color: rgba(0,0,0,0);
+  margin: 0;
+  padding: 0;
 }
 #posts{
   overflow-y: scroll;
