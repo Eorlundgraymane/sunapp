@@ -480,6 +480,9 @@ function updatephoto(){
   if(newlink!="" && newlink!=null){
     addpiclink(newlink);
   }
+  else{
+    alert("You chose to keep the current profile photo");
+  }
 }
 
 function updateusername(){
