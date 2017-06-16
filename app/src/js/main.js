@@ -823,14 +823,11 @@ function getCookie(cname) {
     }
     return "";
 }
-function deleteCookie(cname, exdays) {
+function deleteCookie(cname, 0) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + ";" + expires + ";domain=.unwound15.hasura-app.io;path=/";
-}
-funtion deleteCookie(cname){
-  document.setcookie(cname+"=;")
 }
 function clearCookies(){
   var allcookies = document.cookie.split(";");
