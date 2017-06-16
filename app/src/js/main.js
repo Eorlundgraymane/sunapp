@@ -802,6 +802,45 @@ function getuser()
   }
   xhr.send(query);
 }
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+function checkCookie(cname) {
+    var cook = getCookie(came);
+    if (cook != "") {
+        alert("Welcome again " + cook);
+    } else {
+        cook = prompt("Please enter your name:", "");
+        if (cook != "" && cook != null) {
+            setCookie("cname", cook, 365);
+        }
+    }
+}
+function clearCookies(){
+  var allcookies = document.ccokie.split(";");
+  for(cookie of allcookies){
+    setCookie(getCookie(cookie.split("=")[0]),"",0);
+  }
+  console.log(document.cookie);
+}
   function userlogin()
 {
   xhr = new XMLHttpRequest();
@@ -821,11 +860,9 @@ function getuser()
       loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
-      email = json.email;
       document.cookie = "hasura_id="+hasura_id;
       document.cookie = "password="+SHA256(document.getElementById('password').value);
       document.cookie = "mobile="+document.getElementById('primarykey').value;
-      document.cookie = "email="+email;
       console.log(document.cookie);
       getuser();
     }
