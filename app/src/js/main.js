@@ -836,6 +836,7 @@ function clearCookies(){
   var allcookies = document.cookie.split(";");
   for(cookie of allcookies){
     console.log(cookie);
+    console.log(cookie.split("=")[0]);
     setCookie(getCookie(cookie.split("=")[0]),"",0);
   }
   console.log(document.cookie);
