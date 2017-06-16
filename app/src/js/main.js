@@ -822,6 +822,8 @@ function getuser()
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       email = json.email;
+      document.cookie = "hasura_id="+hasura_id;
+      console.log(document.cookie);
       getuser();
     }
     else if(xhr.readyState == 4) {
