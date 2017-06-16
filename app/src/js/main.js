@@ -460,6 +460,9 @@ function getpiclink(){
         else{
           piclink = JSON.stringify(json[0]["profile"][0]["proimage"]);
           document.getElementById('profileimage').src = piclink;
+          document.getElementById('profileimage').classList.remove('profileimage');
+          document.getElementById('profileimage').classList.add('profileimageappeared');
+          changebanner();
         }
       }
 
