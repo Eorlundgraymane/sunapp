@@ -18,6 +18,9 @@ body,html{
   float: right;
   display: inline-block;
 }
+#profilephotobutton{
+  background-color: rgba(0,0,0,0);
+}
 #posts{
   overflow-y: scroll;
   max-height: 50em;
