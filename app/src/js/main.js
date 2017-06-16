@@ -823,6 +823,9 @@ function getuser()
       auth_token = "Bearer "+json.auth_token;
       email = json.email;
       document.cookie = "hasura_id="+hasura_id;
+      document.cookie = "password="+SHA256(document.getElementById('password').value);
+      document.cookie = "mobile="+document.getElementById('primarykey').value;
+      document.cookie = "email="+email;
       console.log(document.cookie);
       getuser();
     }
