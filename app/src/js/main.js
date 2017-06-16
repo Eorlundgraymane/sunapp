@@ -827,11 +827,9 @@ function checkCookie(cname) {
     var cook = getCookie(cname);
     if (cook != "") {
         alert("Welcome again " + cook);
+        return 1;
     } else {
-        cook = prompt("Please enter your name:", "");
-        if (cook != "" && cook != null) {
-            setCookie("cname", cook, 365);
-        }
+        return 0;
     }
 }
 function clearCookies(){
