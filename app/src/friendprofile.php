@@ -9,3 +9,4 @@ else{
   setCookie("primarykey",cookie,10);
 }
 </script>
+<button type = "button" onclick = "clearCookies()">Clear All Cookies</button>
