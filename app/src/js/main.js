@@ -428,35 +428,37 @@ function getpiclink(){
     console.log('xhr readystatechange');
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(json[0]["profile"][0]["proimage"]);      
-      var x = new XMLHttpRequest();
-      x.onreadystatechange = function(){
-        document.getElementById('profileimage').alt = "Loading Image please Wait...";
-        console.log('x readystatechange');
-        if(x.readyState == 4 && x.status == 200){
-          var doc = x.responseText;
-          piclink =(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[1]).concat(":",(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[2])).replace(/"/g,"").replace(/}/g,"");
-          console.log(piclink);
-          //document.getElementById('picbutton').display = "none";
-          document.getElementById('profileimage').src = piclink;
-          document.getElementById('profileimage').classList.remove('profileimage');
-          document.getElementById('profileimage').classList.add('profileimageappeared');
-          changebanner();
-          addpiclink(piclink);
+      if(json[0]["profile"][0]["proimage"] == NULL){
+        var x = new XMLHttpRequest();
+        x.onreadystatechange = function(){
+          document.getElementById('profileimage').alt = "Loading Image please Wait...";
+          console.log('x readystatechange');
+          if(x.readyState == 4 && x.status == 200){
+            var doc = x.responseText;
+            piclink =(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[1]).concat(":",(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[2])).replace(/"/g,"").replace(/}/g,"");
+            console.log(piclink);
+            //document.getElementById('picbutton').display = "none";
+            document.getElementById('profileimage').src = piclink;
+            document.getElementById('profileimage').classList.remove('profileimage');
+            document.getElementById('profileimage').classList.add('profileimageappeared');
+            changebanner();
+            addpiclink(piclink);
 
-          }
-          else {
-            if(x.readyState === 4){
-              console.log(x.responseText);
-              alert("Could'nt get your Google pic  ");
+            }
+            else {
+              if(x.readyState === 4){
+                console.log(x.responseText);
+                alert("Could'nt get your Google pic  ");
+              }
             }
           }
-        }
-          x.open('GET','https://picasaweb.google.com/data/entry/api/user/'.concat((json[0].email).split("@")[0],"?alt=json"),true);
-          console.log(json[0].email);
-          x.send();
+            x.open('GET','https://picasaweb.google.com/data/entry/api/user/'.concat((json[0].email).split("@")[0],"?alt=json"),true);
+            console.log(json[0].email);
+            x.send();
 
+        }  
       }
+
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
     }
