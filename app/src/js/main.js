@@ -144,7 +144,7 @@ function getallsmileys(){
     ':-|': '<img src="css/smileys/sceptic.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com">',
     ';-)': '<img src="css/smileys/winking.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com">',
   };
-    for(each of smileys){
+    for(each of JSON.parse(smileys)){
       var sm = each.JSON.stringify(each).split('":"');
       for(eachsm of sm){
         if(sm.indexOf(eachsm)%2 != 0){
