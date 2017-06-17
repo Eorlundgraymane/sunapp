@@ -664,7 +664,7 @@ function sunshinescroll(){
         if(sprite==2 || (sprite == nextfade && sprite != 0))
         {document.getElementById('message').classList.toggle('demessage');
         nextshow = sprite+2;
-        nextfade = sprite+4};
+        nextfade = sprite+4;}
         else if(sprite == nextshow && show!=0){
           document.getElementById('message').classList.toggle('demessage');
         }
@@ -675,7 +675,7 @@ function sunshinescroll(){
         if(sprite==2 || (sprite == nextfade && sprite != 0))
         {document.getElementById('message').classList.toggle('demessage');
         nextshow = sprite+2;
-        nextfade = sprite+4};
+        nextfade = sprite+4;}
         else if(sprite == nextshow && show!=0){
           document.getElementById('message').classList.toggle('demessage');
         }
