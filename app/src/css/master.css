@@ -115,6 +115,12 @@ background-color: rgba(255,255,255,0.5);
     transition-property: all;
     transition-duration: 2s;
     transition-timing-function: ease-in;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-property: all;
+    -o-transition-duration: 2s;
+    -o-transition-timing-function: ease-in;
 }
 
 .sprite-friendshine {
@@ -125,6 +131,12 @@ background-color: rgba(255,255,255,0.5);
     transition-property: all;
     transition-duration: 2s;
     transition-timing-function: ease-in;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-property: all;
+    -o-transition-duration: 2s;
+    -o-transition-timing-function: ease-in;
 }
 
 .sprite-charityshine {
@@ -135,6 +147,12 @@ background-color: rgba(255,255,255,0.5);
     transition-property: all;
     transition-duration: 2s;
     transition-timing-function: ease-in;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-property: all;
+    -o-transition-duration: 2s;
+    -o-transition-timing-function: ease-in;
 }
 
 .sprite-earthshine {
@@ -145,6 +163,12 @@ background-color: rgba(255,255,255,0.5);
     transition-property: all;
     transition-duration: 2s;
     transition-timing-function: ease-in;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-property: all;
+    -o-transition-duration: 2s;
+    -o-transition-timing-function: ease-in;
 }
 
 .sprite-socialshine {
@@ -155,6 +179,12 @@ background-color: rgba(255,255,255,0.5);
     transition-property: all;
     transition-duration: 2s;
     transition-timing-function: ease-in;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-property: all;
+    -o-transition-duration: 2s;
+    -o-transition-timing-function: ease-in;
 }
 
 .sprite-healthshine {
@@ -165,6 +195,12 @@ background-color: rgba(255,255,255,0.5);
     transition-property: all;
     transition-duration: 2s;
     transition-timing-function: ease-in;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-property: all;
+    -o-transition-duration: 2s;
+    -o-transition-timing-function: ease-in;
 }
 
 
