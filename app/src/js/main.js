@@ -368,13 +368,13 @@ function getfriendslist(){
                 var friendid = myfid["friend_id"];
                 var prourl = myfid["friend_profile"]["proimage"];
                 console.log(prourl);
-                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"><figcaption><button type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
+                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"><figcaption><button onclick = "gotofriend(friend_id);" type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
               }
             }
           }
           friendlistflag = 1;
           droppeddown = 0;
-          document.getElementById('friendslistbutton').innerHTML = "Friends List Loaded";
+          document.getElementById('friendslistbutton').click();
         }
         }
         else if(xhr.readyState ==4) {
