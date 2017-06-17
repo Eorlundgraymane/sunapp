@@ -51,7 +51,7 @@
                <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "friendspane">
                  <?php include 'friends.php';?>
                </div>
-               <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "newspane">
+               <div onload = "keeppulling();" class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "newspane">
                      <button id = "postpuller" type = "button" class = "btn" onclick="gethasurapullpost()">Pull Latest Post</button>
                      <ul id = "posts">
 
