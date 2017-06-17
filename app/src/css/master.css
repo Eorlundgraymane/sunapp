@@ -1,10 +1,9 @@
 body,html{
   height: 100%;
   width: 100%;
-  background-color: rgba(242, 175, 44,0.5);
 }
 .outer-container {
-  background-color: rgb{0,0,0);
+  background-color: rgba(242, 175, 44,0.5);
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
