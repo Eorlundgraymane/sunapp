@@ -171,6 +171,7 @@ background-color: rgba(255,255,255,0.5);
   height: 10em;
 }
 #newspane{
+  border-bottom: 1px solid white;
   min-width: 53em;
 }
 #post{
