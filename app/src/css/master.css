@@ -247,6 +247,7 @@ background-color: rgba(255,255,255,0.5);
 }
 .demessage{
   opacity: 0;
+  color: white;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
