@@ -515,6 +515,9 @@ function getpiclink(){
 
         }
         else{
+          if(checkCookie("primarykey") && !checkCookie("friendid")){
+            gethasurapullpost();
+          }
           piclink = json[0]["profile"][0]["proimage"];
           document.getElementById('profileimage').src = piclink;
           document.getElementById('profileimage').classList.remove('profileimage');
