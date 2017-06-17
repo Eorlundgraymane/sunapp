@@ -653,7 +653,7 @@ function checklogout(pk)
 
 function sunshinescroll(){
   var sprites = {};
-    sprites = ["earthshine","friendshine","socialshine","charityshine","healthshine"];
+    sprites = ["earthshine","friendshine","socialshine","healthshine","charityshine"];
   for (sprite of sprites){
     console.log(sprite);
       setTimeout(function(){
