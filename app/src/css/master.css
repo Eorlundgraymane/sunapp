@@ -149,7 +149,6 @@ background-color: rgba(255,255,255,0.5);
   animation-duration: 5s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
-  opacity: 0;
   width: 512px;
   height: 512px;
   background-position: -8px -204px;
@@ -199,7 +198,7 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-healthshine {
-  
+
   animation-name: fadeInOut;
   animation-duration: 5s;
   animation-iteration-count: 1;
