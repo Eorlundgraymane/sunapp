@@ -111,7 +111,7 @@ background-color: rgba(255,255,255,0.5);
   background-color:rgba(255, 130, 0, 1);
   border-left: 1px solid white;
   height: 50em;
-  margin-left: -2em;
+  margin-left: -10em;
   margin-top: 10px;
 }
 #friendsbuttons{
@@ -120,9 +120,6 @@ background-color: rgba(255,255,255,0.5);
 #newposttext{
   width: 30em;
   height: 10em;
-}
-#contentarea{
-  min-width: 1366px;
 }
 #post{
   position: relative;
