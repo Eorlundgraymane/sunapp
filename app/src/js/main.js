@@ -134,9 +134,10 @@ function updateposter(){
 }
 function getallsmileys(){
     var sms = JSON.stringify(smileys).split(',');
-    for(each of sms){    
+    for(each of sms){
       var sm = each.split('":"');
       for(eachsm of sm){
+        if(indexOf(eachsm)%2 == 0)    
         console.log(eachsm);
       }
     }
