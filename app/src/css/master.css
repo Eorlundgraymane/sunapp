@@ -311,7 +311,7 @@ background-color: rgba(255,255,255,0.5);
   height: 10em;
 }
 #newspane{
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid rgba(88, 185, 83,1);
   border-radius: 5px;
   min-width: 53em;
 }
