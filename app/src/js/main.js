@@ -119,7 +119,7 @@ var smileys = {
   ';-)': '<img src="css/smilies/winking.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com"/>',
 };
 
-function smilyMe(msg) {
+function smileyMe(msg) {
   //smiley replace
   return msg.replace(/(\:\)|\:-\)|\:D|\:-D|\blol\b|\:-\||\:-\(|\;-\))/g, function(all) {
     return smileys[all] || all;
