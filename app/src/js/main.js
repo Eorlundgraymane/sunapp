@@ -139,7 +139,7 @@ function getallsmileys(){
       for(eachsm of sm){
 
         if(sm.indexOf(eachsm)%2 == 0){
-          eachsm = eachsm.replace('}','');
+          eachsm = eachsm.replace('{','');
           eachsm = eachsm.replace('>"','>');
           console.log(eachsm);
           document.getElementById('allsmileys').innerHTML += eachsm+" -> ";
