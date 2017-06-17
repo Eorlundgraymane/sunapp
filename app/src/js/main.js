@@ -652,7 +652,7 @@ function checklogout(pk)
 }
 
 function sunshinescroll(){
-  var sprites = {"earthshine","friendshine","socialshine","charityshine","healthshine"};
+  var sprites = {"earth":"earthshine","friend":"friendshine","social":"socialshine","charity":"charityshine","health":"healthshine"};
   for (each of sprites){
       var scroller  = document.getElementsByClassName("sprite");
       var prevclass = scroller.className;
