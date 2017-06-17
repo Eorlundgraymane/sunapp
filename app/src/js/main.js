@@ -1718,8 +1718,7 @@ function pullposts(id){
       for(each of btns){
         each.disabled = false;
         each.style.cursor = "pointer";
-    }
-    document.getElementById('postcollapse').click();    
+    }    
     changebanner();
     }
     else if (xhr.readyState == 4) {
