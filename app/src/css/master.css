@@ -239,7 +239,6 @@ background-color: rgba(255,255,255,0.5);
   margin-top: 10em;
 }
 .message{
-  opacity: 1;
   color: white;
   transition-property: all;
   transition-duration: 2s;
