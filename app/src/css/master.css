@@ -177,7 +177,7 @@ figcaption{
 }
 .sessionbutton{
   position:relative;
-  margin-right: 1em;
+  margin-right: -2em;
   left: 75%;
   margin-top: 2em;
 }
