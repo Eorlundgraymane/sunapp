@@ -120,22 +120,22 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-charityshine {
-    width: 15em;
+    width: 10em;
     background-position: -8px -204px;
 }
 
 .sprite-earthshine {
-    width: 15em;
+    width: 10em;
     background-position: -8px -732px;
 }
 
 .sprite-socialshine{
-    width: 15em;
+    width: 10em;
     background-position: -8px -1260px;
 }
 
 .sprite-healthshine {
-    width: 15em;    
+    width: 10em;    
     background-position: -8px -1665px;
 }
 
