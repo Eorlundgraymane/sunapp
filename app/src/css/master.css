@@ -384,7 +384,8 @@ input,select,textarea {
   right: 0;
 }
 #siteheader{
-  margin-top: -1em;
+  margin: 0;
+  padding: 0;
 }
 #sitename {
   font-size: 30px;
