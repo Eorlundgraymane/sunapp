@@ -666,7 +666,7 @@ function sunshinescroll(){
         sprite = 0;
         sunshinescroll();
       }
-    },7000)
+    },5000)
 }
 
 function userlogout(pk)
