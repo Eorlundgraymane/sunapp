@@ -657,11 +657,10 @@ function sunshinescroll(){
       setTimeout(function(){
       var scroller  = document.getElementsByClassName("sprite");
       var prevclass = scroller[0].className.split(' ')[1];
-      scroller[0].classList.remove(prevclass); scroller[0].innerHTML = sprites[sprite];scroller[0].classList.add("sprite-"+sprites[sprite]);
-      sprite++;
-      if(sprite < 5){
+      scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].innerHTML = sprites[sprite]; scroller[0].classList.remove(prevclass);
         sunshinescroll();
-      }
+      sprite++;
+      if(sprite < 5){       }
       else{
         sprite = 0;
         sunshinescroll();
