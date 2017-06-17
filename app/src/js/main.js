@@ -128,7 +128,7 @@ function smileyMe(msg) {
 window.onload = function(){
   if(checkCookie("primarykey") && !checkCookie("friendid")){
     setInterval(gethasurapullpost(),5000);
-  })
+  }
 }
 
 function addsmiley(smcode){
