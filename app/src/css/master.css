@@ -125,8 +125,7 @@ background-color: rgba(255,255,255,0.5);
     width: 256px;
     height: 256px;
     background-position: -8px -204px;
-    zoom: .25;
-    z-index: 999;
+    zoom: .25;    
 }
 
 .sprite-earthshine {
@@ -141,7 +140,6 @@ background-color: rgba(255,255,255,0.5);
     height: 389px;
     background-position: -8px -1260px;
     zoom: .25;
-    z-index: 999;
 }
 
 .sprite-healthshine {
