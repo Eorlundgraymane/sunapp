@@ -656,18 +656,20 @@ function sunshinescroll(){
     sprites = ["friendshine","Be friends with Everyone!!!","friendshine-fadeOut","Be friends with Everyone!!!","charityshine","Show charity to the needy","charityshine-fadeOut","Show charity to the needy","earthshine","Take care of mother Nature","earthshine-fadeOut","Take care of mother Nature","socialshine","Spend quality time with your loved ones","socialshine-fadeOut","Spend quality time with your loved ones","healthshine","Take care of your body","healthshine-fadeOut","Take care of your body","friendshine-fadeIn","Be friends with Everyone!!!"];
       setTimeout(function(){
       var scroller  = document.getElementsByClassName("sprite");
+      var nextfade = 0;
       if(scroller[0].className.split(' ').length > 1){
         var prevclass = scroller[0].className.split(' ')[1];
         scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);document.getElementById('message').innerHTML = sprites[sprite+1];
-        if(sprite%2==0 && sprite!=0)
-        {document.getElementById('message').classList.remove("message");document.getElementById('message').classList.add("demessage");}
-        else if(sprite!=0){document.getElementById('message').classList.remove("demessage");document.getElementById('message').classList.add("message");}
+        if(sprite==2 || sprite == nextfade)
+        {document.getElementById('message').classList.toggle('demessage');
+        nextfade == sprite+4;}
+
       }
       else{
         scroller[0].classList.add("sprite-"+sprites[sprite]);document.getElementById('message').innerHTML = sprites[sprite+1];
-        if(sprite%2==0 && sprite!=0)
-        {document.getElementById('message').classList.remove("message");document.getElementById('message').classList.add("demessage");}
-        else if(sprite!=0){document.getElementById('message').classList.remove("demessage");document.getElementById('message').classList.add("message");}
+        if(sprite==2 || sprite == nextfade)
+        {document.getElementById('message').classList.toggle('demessage');
+        nextfade == sprite+4;}
       }
       sprite++;
       sprite++;
