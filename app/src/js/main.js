@@ -1719,7 +1719,7 @@ function pullposts(id){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
-    document.getElementById('posts').classList.toggle("in");
+    document.getElementById('postcollapse').click();    
     changebanner();
     }
     else if (xhr.readyState == 4) {
