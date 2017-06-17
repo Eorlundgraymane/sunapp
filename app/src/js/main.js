@@ -655,6 +655,7 @@ function sunshinescroll(){
   var sprites = {};
     sprites = ["earthshine","friendshine","socialshine","charityshine","healthshine"];
   for (sprite of sprites){
+    console.log(sprite);
       setTimeout(function(){
       var scroller  = document.getElementsByClassName("sprite");
       var prevclass = scroller.className;
