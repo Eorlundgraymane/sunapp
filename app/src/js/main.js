@@ -134,7 +134,7 @@ function updateposter(){
 }
 function getallsmileys(){
     console.log(smileys);
-    console.log(JSON.stringify(smielys));
+    console.log(JSON.stringify(smileys));
 }
 
 function appfriendslogin(){
