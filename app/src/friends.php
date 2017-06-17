@@ -18,7 +18,7 @@
             <div class = "sprite sprite-friendshine">
               Make Friends
               </div>
-              <div class =/ "sprite sprite-socialshine">
+              <div class = "sprite sprite-socialshine">
                 Have fun with your loved ones
                 </div>
                 <div class = "sprite sprite-earthshine">
