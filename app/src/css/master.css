@@ -108,7 +108,20 @@ body::-moz-scrollbar-thumb{
 background-color: rgba(255,255,255,0.5);
 }
 
+@keyframes fadeInOut {
+  0%{opacity: 0;}
+  33%{opacity: 1;}
+  66%{opacity: 1;}
+  100%{opacity: 0;}
+
+}
+
+}
+
 .sprite {
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
     background-image: url('spritesheet.png');
     background-repeat: no-repeat;
     display: block;
@@ -124,6 +137,9 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-friendshine {
+    animation-name: fadeInOut;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
     width: 275px;
     height: 180px;
     background-position: -8px -8px;
@@ -140,6 +156,9 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-charityshine {
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
     width: 512px;
     height: 512px;
     background-position: -8px -204px;
@@ -156,6 +175,9 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-earthshine {
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
     width: 512px;
     height: 512px;
     background-position: -8px -732px;
@@ -172,6 +194,9 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-socialshine {
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
     width: 600px;
     height: 389px;
     background-position: -8px -1260px;
@@ -188,6 +213,9 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-healthshine {
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
     width: 290px;
     height: 290px;
     background-position: -8px -1665px;
@@ -202,11 +230,6 @@ background-color: rgba(255,255,255,0.5);
     -o-transition-duration: 2s;
     -o-transition-timing-function: ease-in;
 }
-
-
-
-
-
 #postpane{
   float: right;
   background-color:rgba(255, 130, 0, 1);
