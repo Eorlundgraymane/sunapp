@@ -3,7 +3,7 @@ body,html{
   width: 100%;
 }
 .outer-container {
-  background-color:rgba(255, 130, 0, 0.55);  
+  background-color:rgba(255, 130, 0, 0.69);  
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
