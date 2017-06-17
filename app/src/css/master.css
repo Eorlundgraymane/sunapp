@@ -116,7 +116,7 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite {
-  opacity: 0;
+  opacity: 1;
   animation-name: fadeInOut;
   animation-duration: 5s;
   animation-timing-function: ease-in;
@@ -136,7 +136,7 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-friendshine {
-  opacity: 0;
+  opacity: 1;
     animation-name: fadeInOut;
     animation-duration: 5s;
     animation-timing-function: ease-in;
@@ -157,7 +157,7 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-charityshine {
-  opacity: 0;
+  opacity:1;
   animation-name: fadeInOut;
   animation-duration: 5s;
   animation-timing-function: ease-in;
@@ -178,7 +178,7 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-earthshine {
-  opacity: 0;
+  opacity:1;
   animation-name: fadeInOut;
   animation-duration: 5s;
   animation-timing-function: ease-in;
@@ -199,7 +199,7 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-socialshine {
-  opacity: 0;
+  opacity:1;
   animation-name: fadeInOut;
   animation-duration: 5s;
   animation-timing-function: ease-in;
@@ -220,7 +220,7 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-healthshine {
-  opacity: 0;
+  opacity:1;
   animation-name: fadeInOut;
   animation-duration: 5s;
   animation-timing-function: ease-in;
@@ -348,7 +348,7 @@ figcaption{
   transition-property: all;
   transition-duration: 3s;
   transition-timing-function: ease;
-  opacity: 0;
+  opacity:1;
 }
 .profileimageappeared{
   position: relative;
@@ -380,7 +380,7 @@ button{
 {
   display: none;
   background-color: rgba(0,0,0,0.8);
-  opacity: 0;
+  opacity:1;
   z-index: -2;
   width: 350px;
   height: 250px;
@@ -415,10 +415,10 @@ button{
 }
 @keyframes fadeIn {
   0%{
-    opacity: 0;
+    opacity:1;
   }
   75%{
-    opacity: 0;
+    opacity:1;
   }
   100%{
     opacity: 1;
@@ -429,13 +429,13 @@ button{
     opacity: 1;
   }
   100%{
-    opacity: 0;
+    opacity:1;
   }
 }
 @keyframes signupscroll {
   0%{
     right: -30%;
-    opacity: 0;
+    opacity:1;
   }
   100%{
     right: 10%;
@@ -491,7 +491,7 @@ input,select,textarea {
 }
 .passlabel{
   display: inline-block;
-  opacity: 0;
+  opacity:1;
   font-size: 0.85em;
   animation-name: fadeOut;
   animation-duration: 0.5s;
