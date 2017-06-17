@@ -657,19 +657,28 @@ function sunshinescroll(){
       setTimeout(function(){
       var scroller  = document.getElementsByClassName("sprite");
       var nextfade = 0;
+      var nextshow = 0;
       if(scroller[0].className.split(' ').length > 1){
         var prevclass = scroller[0].className.split(' ')[1];
         scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);document.getElementById('message').innerHTML = sprites[sprite+1];
         if(sprite==2 || (sprite == nextfade && sprite != 0))
         {document.getElementById('message').classList.toggle('demessage');
+        nextshow = sprite+2;
         nextfade = sprite+4};
+        else if(sprite == nextshow && show!=0){
+          document.getElementById('message').classList.toggle('demessage');
+        }
 
       }
       else{
         scroller[0].classList.add("sprite-"+sprites[sprite]);document.getElementById('message').innerHTML = sprites[sprite+1];
         if(sprite==2 || (sprite == nextfade && sprite != 0))
         {document.getElementById('message').classList.toggle('demessage');
-      nextfade = sprite+4};
+        nextshow = sprite+2;
+        nextfade = sprite+4};
+        else if(sprite == nextshow && show!=0){
+          document.getElementById('message').classList.toggle('demessage');
+        }
       }
       sprite++;
       sprite++;
