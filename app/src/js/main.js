@@ -658,10 +658,10 @@ function sunshinescroll(){
       var scroller  = document.getElementsByClassName("sprite");
       if(scroller[0].className.split(' ').length > 1){
         var prevclass = scroller[0].className.split(' ')[1];
-        scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);scroller[0].innerHTML = sprites[sprite+1];
+        scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);document.getElementById('message').innerHTML = sprites[sprite+1];
       }
       else{
-        scroller[0].classList.add("sprite-"+sprites[sprite]); scroller[0].innerHTML = sprites[sprite];scroller[0].innerHTML = sprites[sprite+1];
+        scroller[0].classList.add("sprite-"+sprites[sprite]);document.getElementById('message').innerHTML = sprites[sprite+1];
       }
       sprite++;
       sprite++;

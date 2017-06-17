@@ -12,6 +12,7 @@
         <div id = "messages">
         <div class = "sprite nosprite">
           </div>
+          <div id = "message"></div>
           <script>sunshinescroll()</script>
         </div>
 
