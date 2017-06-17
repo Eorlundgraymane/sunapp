@@ -117,31 +117,31 @@ background-color: rgba(255,255,255,0.5);
 .sprite-friendshine {
     width: 69px;
     height: 45px;
-    background-position: -8px -8px;
+    background-position: -2px -2px;
 }
 
 .sprite-charityshine {
     width: 128px;
     height: 128px;
-    background-position: -8px -204px;
+    background-position: -2px -51px;
 }
 
 .sprite-earthshine {
     width: 128px;
     height: 128px;
-    background-position: -8px -732px;
+    background-position: -2px -183px;
 }
 
 .sprite-socialshine{
     width: 150px;
     height: 99px;
-    background-position: -8px -1260px;
+    background-position: -2px -315px;
 }
 
 .sprite-healthshine {
     width: 72px;
     height: 72px;
-    background-position: -8px -1665px;
+    background-position: -2px -413px;
 }
 
 
