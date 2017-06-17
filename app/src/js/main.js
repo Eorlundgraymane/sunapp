@@ -657,7 +657,7 @@ function sunshinescroll(){
   for (each of sprites){
       var scroller  = document.getElementsByClassName("sprite");
       var prevclass = scroller.className;
-      setTimeout(function(){scroller[0].classList.remove(prevclass); scroller[0].innerHTML = each;scroller[0].classList.add("sprite-"+each)},1000 );
+      setTimeout(function(){scroller[0].classList.remove(prevclass); scroller[0].innerHTML = each;scroller[0].classList.add("sprite sprite-"+each)},1000 );
   }
 }
 
