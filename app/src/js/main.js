@@ -522,7 +522,6 @@ function getpiclink(){
           document.getElementById('profileimage').src = piclink;
           document.getElementById('profileimage').classList.remove('profileimage');
           document.getElementById('profileimage').classList.add('profileimageappeared');
-          changebanner();
         }
       }
 
@@ -1688,6 +1687,7 @@ function pullposts(id){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
+    changebanner();
     }
     else if (xhr.readyState == 4) {
       var res = JSON.parse(xhr.responseText);
