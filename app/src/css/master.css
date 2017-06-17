@@ -111,36 +111,36 @@ background-color: rgba(255,255,255,0.5);
 .sprite {
     background-image: url('spritesheet.png');
     background-repeat: no-repeat;
-    display: block;    
+    display: block;
 }
 
 .sprite-friendshine {
-    width: 275px;
-    height: 180px;
+    width: 15em;
+    height: auto;
     background-position: -8px -8px;
 }
 
 .sprite-charityshine {
-    width: 512px;
-    height: 512px;
+    width: 15em;
+    height: auto
     background-position: -8px -204px;
 }
 
 .sprite-earthshine {
-    width: 512px;
-    height: 512px;
+    width: 15em;
+    height: auto
     background-position: -8px -732px;
 }
 
 .sprite-socialshine{
-    width: 600px;
-    height: 389px;
+    width: 15em;
+    height: auto
     background-position: -8px -1260px;
 }
 
 .sprite-healthshine {
-    width: 290px;
-    height: 290px;
+    width: 15em;
+    height: auto
     background-position: -8px -1665px;
 }
 
