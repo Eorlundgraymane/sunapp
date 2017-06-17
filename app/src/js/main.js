@@ -128,9 +128,9 @@ function smileyMe(msg) {
     return smileys[all] || all;
   });
 }
-function getallsmileys()
-  for(each of smileys){
-  document.getElementById('allsmileys').innerHTML += each;
+function getallsmileys(){
+    for(each of smileys){
+      document.getElementById('allsmileys').innerHTML += each;
   }
 }
 
