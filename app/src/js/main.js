@@ -125,12 +125,6 @@ function smileyMe(msg) {
     return smileys[all] || all;
   });
 }
-window.onload = function(){
-  if(checkCookie("primarykey") && !checkCookie("friendid")){
-    gethasurapullpost();
-  }
-}
-
 function addsmiley(smcode){
   document.getElementById('newposttext').innerHTML += smcode;
   console.log("added"+smcode);
@@ -499,6 +493,9 @@ function getpiclink(){
             console.log(piclink);
             //document.getElementById('picbutton').display = "none";
             document.getElementById('profileimage').src = piclink;
+            if(checkCookie("primarykey") && !checkCookie("friendid")){
+              gethasurapullpost();
+            }
             document.getElementById('profileimage').classList.remove('profileimage');
             document.getElementById('profileimage').classList.add('profileimageappeared');
             changebanner();
