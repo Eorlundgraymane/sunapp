@@ -664,7 +664,7 @@ function sunshinescroll(){
       }
       else{
         sprite = 0;
-        sunshinescroll
+        sunshinescroll();
       }
     },5000)
 }
