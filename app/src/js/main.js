@@ -151,6 +151,7 @@ function getallsmileys(){
           eachsm = eachsm.replace('}','');
           eachsm = eachsm.replace('>"','>');
           console.log(eachsm);
+          console.log(nextsm);
           document.getElementById('allsmileys').innerHTML += "<button class = \"btn\" onclick() = addsmiley(\""+nextsm+"\"); type = \"button\">"+eachsm+"</button> ";
         }
       }
