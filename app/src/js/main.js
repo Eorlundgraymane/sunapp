@@ -130,7 +130,7 @@ function updateposter(){
   console.log("called");
   var newtext = document.getElementById('newposttext').value;
   var smileyedtext = smileyMe(newtext);
-  smileyMe(document.getElementById('newposttext').innerHTML = smileyedtext;
+  document.getElementById('newposttext').innerHTML = smileyedtext;
 }
 function getallsmileys(){
     console.log(smileys);
