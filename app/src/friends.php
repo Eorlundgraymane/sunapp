@@ -12,7 +12,7 @@
         <div id = "messages">
         <div class = "sprite nosprite">
           </div>
-          <div id = "message"></div>
+          <div id = "message" class = "message"></div>
           <script>sunshinescroll()</script>
         </div>
 

@@ -238,8 +238,18 @@ background-color: rgba(255,255,255,0.5);
 #messages{
   margin-top: 10em;
 }
-#message{
+.message{
+  opacity: 1;
   color: white;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+}
+.demessage{
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease;
 }
 .sprite-healthshine {
   opacity: 1;
