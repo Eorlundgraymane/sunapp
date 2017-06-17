@@ -1696,7 +1696,8 @@ function selectsuggests(){
           }
         }
         if(friendsuggestflag ==1){
-          document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions Loaded";
+          document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
+          document.getElementById('friendssuggestbutton').click();
         }
         else{
           document.getElementById('friendssuggestbutton').innerHTML = "No Suggessions yet";
