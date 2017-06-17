@@ -129,10 +129,6 @@ background-color: rgba(255,255,255,0.5);
 
 .sprite-friendshine {
   opacity: 1;
-  animation-name: fadeInOut;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
   width: 275px;
   height: 180px;
   background-position: -8px -8px;
@@ -146,10 +142,6 @@ background-color: rgba(255,255,255,0.5);
 }
 .sprite-friendshine-fadeOut {
   opacity: 0;
-  animation-name: fadeInOut;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
   width: 275px;
   height: 180px;
   background-position: -8px -8px;
@@ -163,10 +155,6 @@ background-color: rgba(255,255,255,0.5);
 }
 .sprite-charityshine {
   opacity: 1;
-  animation-name: fadeInOut;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
   width: 512px;
   height: 512px;
   background-position: -8px -204px;
@@ -180,10 +168,6 @@ background-color: rgba(255,255,255,0.5);
 }
 .sprite-charityshine-fadeOut {
   opacity: 0;
-  animation-name: fadeInOut;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
   width: 512px;
   height: 512px;
   background-position: -8px -204px;
@@ -198,10 +182,6 @@ background-color: rgba(255,255,255,0.5);
 
 .sprite-earthshine {
   opacity: 1;
-  animation-name: fadeInOut;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
   width: 512px;
   height: 512px;
   background-position: -8px -732px;
@@ -216,10 +196,6 @@ background-color: rgba(255,255,255,0.5);
 
 .sprite-earthshine-fadeOut {
   opacity: 0;
-  animation-name: fadeInOut;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
   width: 512px;
   height: 512px;
   background-position: -8px -732px;
@@ -234,10 +210,6 @@ background-color: rgba(255,255,255,0.5);
 
 .sprite-socialshine {
   opacity: 1;
-  animation-name: fadeInOut;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
   width: 600px;
   height: 389px;
   background-position: -8px -1260px;
@@ -253,10 +225,6 @@ background-color: rgba(255,255,255,0.5);
 
 .sprite-socialshine-fadeOut {
   opacity: 0;
-  animation-name: fadeInOut;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
   width: 600px;
   height: 389px;
   background-position: -8px -1260px;
@@ -271,10 +239,6 @@ background-color: rgba(255,255,255,0.5);
 
 .sprite-healthshine {
   opacity: 1;
-  animation-name: fadeInOut;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
   width: 290px;
   height: 290px;
   background-position: -8px -1665px;
@@ -288,10 +252,6 @@ background-color: rgba(255,255,255,0.5);
 }
 .sprite-healthshine-fadeOut {
   opacity: 0;
-  animation-name: fadeInOut;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
   width: 290px;
   height: 290px;
   background-position: -8px -1665px;
