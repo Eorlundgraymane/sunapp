@@ -63,7 +63,9 @@
                      <div id = "uploadform" class = "form-group">
                        <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
                        <input  type = "text" id = "newpostimg" placeholder = "Image URL"><br>
-                       <textarea  id = "newposttext" placeholder="Post here..."></textarea><br>
+                       <textarea onchange() = "updateposter();" onkeydown() = "updateposter();" onkeydown() = "updateposter();" onkeypress() = "updateposter();" id = "newposttext" placeholder="Post here..."></textarea><br>
+                       <div id = "allsmileys"></div>
+                       <script>getallsmileys()</script>
                        <input type = "number" id = "earth" placeholder = "Earth Shine"><br>
                        <input type = "number" id = "charity" placeholder = "Charity Shine"><br>
                        <input type = "number" id = "health" placeholder = "Health Shine"><br>

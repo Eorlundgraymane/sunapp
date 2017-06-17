@@ -119,13 +119,19 @@ var smileys = {
   ';-)': '<img src="css/smilies/winking.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com"/>',
 };
 
+function updateposter(){
+  document.getElementById('newposttext').value = smileyMe(document.getElementById('newposttext'));
+}
 function smileyMe(msg) {
   //smiley replace
   return msg.replace(/(\:\)|\:-\)|\:D|\:-D|\blol\b|\:-\||\:-\(|\;-\))/g, function(all) {
     return smileys[all] || all;
   });
 }
-
+function getallsmileys()
+  for(each of smileys)
+  document.getElementById('allsmileys').innerHTML += each;
+}
 
 function appfriendslogin(){
   if(getflag == 1 || (droppeddown == 0 && friendlistflag == 0))
