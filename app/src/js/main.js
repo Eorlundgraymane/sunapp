@@ -1719,6 +1719,7 @@ function pullposts(id){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
+    document.getElementById('posts').classList.toggle("in");
     changebanner();
     }
     else if (xhr.readyState == 4) {
