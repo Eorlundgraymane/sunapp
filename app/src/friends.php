@@ -9,7 +9,7 @@
       </button>
         <ul class = "collapse" id = "friendssuggest">
         </ul><br>
-        <div class = "sprite nosprite">          
+        <div class = "sprite ">          
           </div>
           <script>sunshinescroll()</script>
 
