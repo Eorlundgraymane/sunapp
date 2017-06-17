@@ -652,21 +652,20 @@ function checklogout(pk)
 }
 var sprite = 0;
 function sunshinescroll(){
+  while(true){
   var sprites = {};
     sprites = ["earthshine","friendshine","socialshine","healthshine","charityshine"];
-      setTimeout(function(){
       var scroller  = document.getElementsByClassName("sprite");
       var prevclass = scroller[0].className.split(' ')[1];
       scroller[0].classList.remove(prevclass); scroller[0].innerHTML = sprites[sprite];scroller[0].classList.add("sprite-"+sprites[sprite]);
       sprite++;
       if(sprite < 5){
-        sunshinescroll();
+
       }
       else{
-        sprite = 0;
-        sunshinescroll();
+        sprite = 0;        
       }
-    },5000)
+    }
 }
 
 function userlogout(pk)
