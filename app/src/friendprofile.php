@@ -15,4 +15,4 @@ else{
 }
 
 </script>
-<button type = "button" onclick = "clearCookies()">Clear All Cookies</button>
+<button type = "button" onclick = "gopro()">Go to your profile page</button>
