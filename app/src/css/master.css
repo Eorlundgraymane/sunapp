@@ -387,10 +387,10 @@ input,select,textarea {
   padding: 0;
 }
 #sitename {
-  font-size: 30px;
+  font-size: 20px;
   color: white;
   font-weight: 900;
-  margin-left: 2em;
+  margin-left: 1em;
 }
 #sitefooter {
   background-color: rgba(0, 0, 0,0.5);
