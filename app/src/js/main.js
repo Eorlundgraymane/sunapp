@@ -253,6 +253,7 @@ function gethasurapushpost(){
   xhr.send();
 }
 function gethasurapullpost(){
+  document.getElementById('postpuller').innerHTML = "Pulling latest Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
   alert("This function is still under construction and placed only for the Dever. If you're awesome you can check out what's goin on in the console");
   var btns = document.getElementsByClassName('btn');
   for(each of btns){
@@ -1575,6 +1576,7 @@ function pullposts(id){
   xhr.onreadystatechange = function(){
     document.getElementById('posts').innerHTML = "";
     if(xhr.readyState == 4 && xhr.status == 200){
+      document.getElementById('postpuller').innerHTML = "Refresh Posts";
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
