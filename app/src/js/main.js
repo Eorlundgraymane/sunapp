@@ -319,7 +319,7 @@ function gethasurapullpost(){
 function applogin(){
   if(addflag == 1 || (suggesiondrop  == 0 && friendsuggestflag == 0))
     {
-      document.getElementById('friendssuggestbutton').innerHTML = "Loading Friend Suggessions <img width = '30px' height = '30px' src = 'css/loader.gif'>";
+      document.getElementById('friendssuggestbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loader.gif'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -346,18 +346,18 @@ function applogin(){
           console.log(JSON.stringify(json));
           alert(JSON.stringify(json));
           alert("Could'nt get your friend's list at the moment");
-          document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
+          document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"30px\" height = \"30px\">";
         }
       }
       xhr.send();
     }
 
     else if(suggesiondrop  == 1) {
-    document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
+    document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"30px\" height = \"30px\">";
     suggesiondrop  = 0;
     }
     else if(friendsuggestflag == 1){
-    document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
+    document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"30px\" height = \"30px\">";
     suggesiondrop  =1;
     }
   }
@@ -1718,7 +1718,7 @@ function pullposts(id){
       for(each of btns){
         each.disabled = false;
         each.style.cursor = "pointer";
-    }    
+    }
     changebanner();
     }
     else if (xhr.readyState == 4) {
@@ -1760,11 +1760,11 @@ function selectsuggests(){
           }
         }
         if(friendsuggestflag ==1){
-          document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
+          document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"30px\" height = \"30px\">";
           document.getElementById('friendssuggestbutton').click();
         }
         else{
-          document.getElementById('friendssuggestbutton').innerHTML = "No Suggessions yet";
+          document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"30px\" height = \"30px\">";
         }
         var btns = document.getElementsByClassName('btn');
         for(each of btns){
