@@ -346,18 +346,18 @@ function applogin(){
           console.log(JSON.stringify(json));
           alert(JSON.stringify(json));
           alert("Could'nt get your friend's list at the moment");
-          document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"30px\" height = \"30px\">";
+          document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"10px\" height = \"10px\">";
         }
       }
       xhr.send();
     }
 
     else if(suggesiondrop  == 1) {
-    document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"30px\" height = \"30px\">";
+    document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"10px\" height = \"10px\">";
     suggesiondrop  = 0;
     }
     else if(friendsuggestflag == 1){
-    document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"30px\" height = \"30px\">";
+    document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"10px\" height = \"10px\">";
     suggesiondrop  =1;
     }
   }
