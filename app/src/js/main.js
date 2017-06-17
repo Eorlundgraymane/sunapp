@@ -148,7 +148,7 @@ function getallsmileys(){
           eachsm = eachsm.replace('}','');
           eachsm = eachsm.replace('>"','>');
           console.log(eachsm);
-          document.getElementById('allsmileys').innerHTML += eachsm;
+          document.getElementById('allsmileys').innerHTML += eachsm+" ";
         }
       }
     }
