@@ -140,7 +140,7 @@ function getallsmileys(){
         if(sm.indexOf(eachsm)%2 != 0){
           eachsm = eachsm.replace('}','');
           eachsm = eachsm.replace('>"','>');
-          document.getElementById('allsmileys').innerHTML += eachsm;
+          console.log(eachsm);
         }
       }
     }
