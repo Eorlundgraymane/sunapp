@@ -115,14 +115,12 @@ background-color: rgba(255,255,255,0.5);
   margin-top: 10px;
 }
 #friendsbuttons{
-  margin-top: 1em;
-  min-height: 100%;
-}
-.sprite_container{
   background-image: url('css/spritesheet.png');
   background-repeat: no-repeat;
   height: 20px;
   width: 20px;
+  margin-top: 1em;
+  min-height: 100%;
 }
 #post_image{
   max-width : 40em;
