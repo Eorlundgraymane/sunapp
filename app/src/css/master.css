@@ -111,7 +111,7 @@ body::-moz-scrollbar-thumb{
 background-color: rgba(255,255,255,0.5);
 }
 #postpane{
-  flex-grow: 100%;
+  flex-grow: 1;
   background-color:rgba(255, 130, 0, 1);
   border-left: 1px solid white;
   height: 50em;
@@ -155,7 +155,11 @@ background-color: rgba(255,255,255,0.5);
 #friendslistbutton{
   margin-bottom: 5px;
 }
+#newspane{
+  flex-grow: 2;
+}
 #friendspane{
+  flex-grow: 1;
   background-color:rgba(255, 130, 0, 1);
   border-right: 1px solid white;
   height: 50em;
