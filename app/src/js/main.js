@@ -661,27 +661,41 @@ function sunshinescroll(){
       if(scroller[0].className.split(' ').length > 1){
         var prevclass = scroller[0].className.split(' ')[1];
         scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);document.getElementById('message').innerHTML = sprites[sprite+1];
-        if(sprite==2 || (sprite == nextfade && sprite != 0))
-        {document.getElementById('message').classList.toggle('demessage');
+        if(sprite==2 || (sprite == nextfade && nextfade != 0)){
+        document.getElementById('message').classList.toggle('demessage');
+        console.log("first loop called  sprite = "+sprite);
         nextshow = sprite+2;
-        nextfade = sprite+4;}
+        nextfade = sprite+4;
+        console.log("nextshow = "+nextshow);
+        console.log("nextfade = "+nextfade);
+      }
+
         else if(sprite == nextshow && nextshow!=0){
           document.getElementById('message').classList.toggle('demessage');
+          console.log("first loop else called  sprite = "+sprite);
+          console.log("nextshow = "+nextshow);
+          console.log("nextfade = "+nextfade);
         }
 
       }
       else{
         scroller[0].classList.add("sprite-"+sprites[sprite]);document.getElementById('message').innerHTML = sprites[sprite+1];
-        if(sprite==2 || (sprite == nextfade && sprite != 0))
+        if(sprite==2 || (sprite == nextfade && nextfade != 0))
         {document.getElementById('message').classList.toggle('demessage');
         nextshow = sprite+2;
-        nextfade = sprite+4;}
+        nextfade = sprite+4;
+        console.log("second loop called  sprite = "+sprite);
+        console.log("nextshow = "+nextshow);
+        console.log("nextfade = "+nextfade);
+      }
         else if(sprite == nextshow && nextshow!=0){
           document.getElementById('message').classList.toggle('demessage');
+          console.log("second loop else called  sprite = "+sprite);
+          console.log("nextshow = "+nextshow);
+          console.log("nextfade = "+nextfade);
         }
       }
-      sprite++;
-      sprite++;
+      sprite+=2;
       if(sprite < sprites.length){
         sunshinescroll();
       }
