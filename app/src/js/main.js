@@ -127,7 +127,7 @@ function smileyMe(msg) {
 }
 window.onload = function(){
   if(checkCookie("primarykey") && !checkCookie("friendid")){
-    setInterval(gethasurapullpost(),5000);
+    gethasurapullpost();
   }
 }
 
@@ -167,7 +167,6 @@ function getallsmileys(){
 function appfriendslogin(){
   if(getflag == 1 || (droppeddown == 0 && friendlistflag == 0))
     {
-      alert("Friend's list function is still experimental. Adding Friends feauture coming soon...");
       document.getElementById('friendslistbutton').innerHTML = "Loading Friend's List <img width = '30px' height = '30px' src = 'css/loader.gif'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
@@ -291,7 +290,6 @@ function gethasurapushpost(){
 }
 function gethasurapullpost(){
   document.getElementById('postpuller').innerHTML = "Pulling latest Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
-  alert("This function is still under construction and placed only for the Dever. If you're awesome you can check out what's goin on in the console");
   var btns = document.getElementsByClassName('btn');
   for(each of btns){
     each.disabled = true;
@@ -328,7 +326,6 @@ function applogin(){
   if(addflag == 1 || (suggesiondrop  == 0 && friendsuggestflag == 0))
     {
       document.getElementById('friendssuggestbutton').innerHTML = "Loading Friend Suggessions <img width = '30px' height = '30px' src = 'css/loader.gif'>";
-      alert("friend suggession is an experimental feature. Adding new friends will be coming soon");
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -634,7 +631,7 @@ function checklogout(pk)
       console.log(JSON.stringify(hasura_id));
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
-      alert("Successfully Logged Out.");
+      alert("Successfully Logged Out.Go Ahead and Log In!!");
       loginbutton.innerHTML = "Log In";
       loginbutton.style.disabled = false;
       loginbutton.style.cursor = "pointer";
@@ -670,7 +667,6 @@ function userlogout(pk)
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       clearCookies();
-      alert("Successfully Logged Out. Bubye, Come back soon");
       window.location = "https://sunshine.unwound15.hasura-app.io/";
     }
     else if(xhr.readyState == 4) {
@@ -803,7 +799,6 @@ function checklogin(pk,pasw)
       loginbutton.innerHTML = "Logged In";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
-      alert("Successfully Logged In. Your user ID is "+hasura_id+" and your Authentication token is "+auth_token+" Sunshine is under construction. Your account is safe. We will be right back");
       updatemyusers(pk,pasw);
     }
     else if(xhr.readyState == 4) {
@@ -881,7 +876,6 @@ function getuser()
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
-      alert("Successfully Logged In. Welcome "+JSON.stringify(json[0].username)+" ! Sunshine is under construction. Let's just show you the hallway");
       document.getElementById('loginform').submit();
     }
     else if(xhr.readyState ==4) {
@@ -1242,7 +1236,6 @@ else {
 }
 
 function pushpost(){
-  alert("This function is still under construction and placed only for the Dever. If you're awesome you can check out what's goin on in the console");
   var posttext = document.getElementById('newposttext').value;
   var postimg = document.getElementById('newpostimg').value;
   var title = document.getElementById('newposttitle').value;
