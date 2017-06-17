@@ -651,6 +651,15 @@ function checklogout(pk)
   xhr.send(jsondata);
 }
 
+function sunshinescroll(){
+  var sprites = {"earthshine","friendshine","socialshine","charityshine","healthshine"};
+  for (each of sprites){
+      var scroller  = document.getElementsByClassName("sprite");
+      var prevclass = scroller.className;
+      setTimeout(function(){scroller[0].classList.remove(prevclass); scroller[0].innerHTML = each;scroller[0].classList.add("sprite-"+each)},1000 );
+  }
+}
+
 function userlogout(pk)
 {
   document.getElementById('logoutbutton').innerHTML = "Logging Out <img width = '30px' height = '30px' src = 'css/loader.gif'>";

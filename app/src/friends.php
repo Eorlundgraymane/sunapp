@@ -12,17 +12,6 @@
         <div class = "sprite sprite-healthshine">
           Stay Healthy
           </div>
-          <div class = "sprite sprite-charityshine">
-            Show Charity
-            </div>
-            <div class = "sprite sprite-friendshine">
-              Make Friends
-              </div>
-              <div class = "sprite sprite-socialshine">
-                Have fun with your loved ones
-                </div>
-                <div class = "sprite sprite-earthshine">
-                  Protect your fellow lifeforms
-                  </div>
+          <script>sunshinescroll()</script>
 
 </nav>
