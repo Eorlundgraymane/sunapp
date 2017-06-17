@@ -667,7 +667,7 @@ function sunshinescroll(){
       }
       else{
         scroller[0].classList.add("sprite-"+sprites[sprite]);document.getElementById('message').innerHTML = sprites[sprite+1];
-        if(sprite==2 || (sprite == nextfade && sprite != 0)
+        if(sprite==2 || (sprite == nextfade && sprite != 0))
         {document.getElementById('message').classList.toggle('demessage');
       nextfade = sprite+4};
       }
