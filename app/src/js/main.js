@@ -126,7 +126,7 @@ function smileyMe(msg) {
   });
 }
 function addsmiley(smcode){
-  document.getElementById('newposttext').innerHTML = document.getElementById('newposttext').value+smcode;
+  document.getElementById('newposttext').value = document.getElementById('newposttext').value+smcode;
   console.log(document.getElementById('newposttext').value);
   console.log("added"+smcode);
 }
