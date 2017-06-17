@@ -125,11 +125,7 @@ function smileyMe(msg) {
     return smileys[all] || all;
   });
 }
-function keeppulling(){
-  if(checkCookie("primarykey")&& !checkCookie("friendid")){
-    setInterval(gethasurapullpost(),5000);
-  }
-}
+window.onload() = function(){alert("Fully Loaded");}
 
 function addsmiley(smcode){
   document.getElementById('newposttext').innerHTML += smcode;
