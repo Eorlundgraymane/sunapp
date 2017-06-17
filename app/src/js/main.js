@@ -120,7 +120,7 @@ var smileys = {
 };
 
 function updateposter(){
-  document.getElementById('newposttext').value = smileyMe(document.getElementById('newposttext'));
+  document.getElementById('newposttext').value = smileyMe(document.getElementById('newposttext').value);
 }
 function smileyMe(msg) {
   //smiley replace
