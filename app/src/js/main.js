@@ -133,17 +133,7 @@ function updateposter(){
   document.getElementById('newposttext').innerHTML = smileyedtext;
 }
 function getallsmileys(){
-  var smileys = {
-    ':)': '<img src="css/smileys/happy-9.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com"/>',
-    ':-)': '<img src="css/smilies/happy-9.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com" />',
-    ':D': '<img src="css/smilies/happy-5.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com" />',
-    ':-(': '<img src="css/smilies/sad-1.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com" />',
-    ':-D': '<img src="css/smilies/happy-5.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com"/>',
-    'lol': '<img src="css/smilies/laughing-2.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com"/>',
-    ':-|': '<img src="css/smilies/sceptic.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com"/>',
-    ';-)': '<img src="css/smilies/winking.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com"/>',
-  };
-    var sms = smileys.split(',');
+    var sms = JSON.stringify(smileys).split(',');
     for(each of sms)
     console.log(each);
 }
