@@ -379,6 +379,7 @@ function getfriendslist(){
           }
           friendlistflag = 1;
           droppeddown = 0;
+          document.getElementById('friendslistbutton').innerHTML = "Friends List";
           document.getElementById('friendslistbutton').click();
         }
         }
