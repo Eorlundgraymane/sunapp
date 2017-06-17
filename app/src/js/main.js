@@ -661,11 +661,13 @@ function sunshinescroll(){
         scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);document.getElementById('message').innerHTML = sprites[sprite+1];
         if(sprite%2==0 && sprite!=0)
         {document.getElementById('message').classList.remove("message");document.getElementById('message').classList.add("demessage");}
+        else if(sprite!=0){document.getElementById('message').classList.remove("demessage");document.getElementById('message').classList.add("message");}
       }
       else{
         scroller[0].classList.add("sprite-"+sprites[sprite]);document.getElementById('message').innerHTML = sprites[sprite+1];
         if(sprite%2==0 && sprite!=0)
         {document.getElementById('message').classList.remove("message");document.getElementById('message').classList.add("demessage");}
+        else if(sprite!=0){document.getElementById('message').classList.remove("demessage");document.getElementById('message').classList.add("message");}
       }
       sprite++;
       sprite++;
