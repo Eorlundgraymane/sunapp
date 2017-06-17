@@ -115,27 +115,32 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-friendshine {
-    width: 10em;
+    width: 69px;
+    height: 45px;
     background-position: -8px -8px;
 }
 
 .sprite-charityshine {
-    width: 10em;
+    width: 128px;
+    height: 128px;
     background-position: -8px -204px;
 }
 
 .sprite-earthshine {
-    width: 10em;
+    width: 128px;
+    height: 128px;
     background-position: -8px -732px;
 }
 
 .sprite-socialshine{
-    width: 10em;
+    width: 150px;
+    height: 99px;
     background-position: -8px -1260px;
 }
 
 .sprite-healthshine {
-    width: 10em;
+    width: 72px;
+    height: 72px;
     background-position: -8px -1665px;
 }
 
