@@ -140,9 +140,9 @@ function getallsmileys(){
 
         if(sm.indexOf(eachsm)%2 == 0){
           eachsm = eachsm.replace('{','');
-          eachsm = eachsm.replace('>"','>');
+          eachsm = eachsm.replace('"','');
           console.log(eachsm);
-          document.getElementById('allsmileys').innerHTML += eachsm+" -> ";
+          document.getElementById('allsmileys').innerHTML += eachsm+" : ";
         }
         else if(sm.indexOf(eachsm)%2 != 0){
           eachsm = eachsm.replace('}','');
