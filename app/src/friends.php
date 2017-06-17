@@ -9,6 +9,15 @@
       </button>
         <ul class = "collapse" id = "friendssuggest">
         </ul><br>
-        <div class = "sprite_container">
+        <div class = "sprite-healthshine">
           </div>
+          <div class = "sprite-charityshine">
+            </div>
+            <div class = "sprite-friendshine">
+              </div>
+              <div class = "sprite-socialshine">
+                </div>
+                <div class = "sprite-earthshine">
+                  </div>
+
 </nav>
