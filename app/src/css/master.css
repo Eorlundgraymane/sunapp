@@ -114,7 +114,6 @@ background-color: rgba(255,255,255,0.5);
 100%{opacity: 0;}
 }
 .sprite {
-    opacity: 0;
     background-image: url('spritesheet.png');
     background-repeat: no-repeat;
     display: block;
