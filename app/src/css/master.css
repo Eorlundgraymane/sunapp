@@ -153,7 +153,7 @@ background-color: rgba(255,255,255,0.5);
   float: right;
   background-color:rgba(255, 130, 0, 1);
   border-left: 1px solid white;
-  height: 50em;
+  height: 53em;
   margin-top: 10px;
 }
 .sprite_container{
@@ -177,7 +177,7 @@ background-color: rgba(255,255,255,0.5);
   position: relative;
   left: -2em;
   list-style-type: none;
-  min-width: 53em;
+  min-width: 50em;
   background-color: rgba(255,255,255,0.50);
   border-radius: 5px;
   margin-top: 5px;
