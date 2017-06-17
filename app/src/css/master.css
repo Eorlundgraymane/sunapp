@@ -118,8 +118,8 @@ background-color: rgba(255,255,255,0.5);
   margin-top: 1em;
 }
 #post_image{
-  max-width : 10em;
-  max-height : 10em;
+  max-width : 50em;
+  max-height : 50em;
 }
 #newposttext{
   width: 30em;
