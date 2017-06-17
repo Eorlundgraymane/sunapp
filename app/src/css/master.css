@@ -13,6 +13,10 @@ body,html{
   margin-bottom: 5px;
   cursor: pointer;
 }
+#allsmileys{
+  color: white;
+  font-weight: bold;
+}
 #deletepost{
   vertical-align: top;
   float: right;
