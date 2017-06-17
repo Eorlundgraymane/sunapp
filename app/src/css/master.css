@@ -177,9 +177,12 @@ figcaption{
 }
 .sessionbutton{
   position:relative;
-  padding: 0;
+  margin-left: 1em;
   left: 75%;
   margin-top: 2em;
+}
+#sessionbutton{
+  margin: 0;
 }
 .shineicon{
   position: relative;
