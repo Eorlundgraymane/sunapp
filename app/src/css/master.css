@@ -177,8 +177,7 @@ figcaption{
 }
 .sessionbutton{
   position:relative;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 1em;
   left: 75%;
   margin-top: 2em;
 }
@@ -391,6 +390,7 @@ input,select,textarea {
   font-size: 30px;
   color: white;
   font-weight: 900;
+  margin-left: 2em;
 }
 #sitefooter {
   background-color: rgba(0, 0, 0,0.5);
