@@ -121,11 +121,14 @@ background-color: rgba(255,255,255,0.5);
   width: 30em;
   height: 10em;
 }
+#newspane{
+  min-width: 50em;
+}
 #post{
   position: relative;
   left: -2em;
   list-style-type: none;
-  min-width: 75em;
+  min-width: 50em;
   background-color: rgba(255,255,255,0.50);
   border-radius: 5px;
   margin-top: 5px;
