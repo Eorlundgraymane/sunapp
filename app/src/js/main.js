@@ -125,7 +125,9 @@ function smileyMe(msg) {
     return smileys[all] || all;
   });
 }
-
+function addsmiley(smcode){
+  document.getElementById('newposttext').innerHTML += smcode;
+}
 function updateposter(){
   console.log("called");
   var newtext = document.getElementById('newposttext').value;
@@ -148,7 +150,7 @@ function getallsmileys(){
           eachsm = eachsm.replace('}','');
           eachsm = eachsm.replace('>"','>');
           console.log(eachsm);
-          document.getElementById('allsmileys').innerHTML += "<button class = \"btn\" id = \""+nextsm+"\" type = \"button\">"+eachsm+"</button> ";
+          document.getElementById('allsmileys').innerHTML += "<button class = \"btn\" onclick() = addsmiley(\""+nextsm+"\"); type = \"button\">"+eachsm+"</button> ";
         }
       }
     }
