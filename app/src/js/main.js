@@ -112,7 +112,7 @@ var smileys = {
   ':)': '<img src="css/smileys/happy-9.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com">',
   ':-)': '<img src="css/smileys/happy-9.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com" >',
   ':D': '<img src="css/smileys/happy-5.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com" >',
-  ':-(': '<img src="css/smileys/sad-1.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com" />',
+  ':-(': '<img src="css/smileys/sad-1.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com" >',
   ':-D': '<img src="css/smileys/happy-5.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com">',
   'lol': '<img src="css/smileys/laughing-2.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com">',
   ':-|': '<img src="css/smileys/sceptic.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com">',
@@ -133,9 +133,8 @@ function updateposter(){
   document.getElementById('newposttext').innerHTML = smileyedtext;
 }
 function getallsmileys(){
-    var sms = JSON.stringify(smileys).split(',');
-    for(each of sms){
-      var sm = each.split('":"');
+    for(each of smileys){
+      var sm = each.JSON.stringify(split('":"'));
       for(eachsm of sm){
         if(sm.indexOf(eachsm)%2 != 0){
           eachsm = eachsm.replace('}','');
