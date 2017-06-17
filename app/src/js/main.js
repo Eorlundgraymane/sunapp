@@ -661,7 +661,7 @@ function sunshinescroll(){
       if(scroller[0].className.split(' ').length > 1){
         var prevclass = scroller[0].className.split(' ')[1];
         scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);document.getElementById('message').innerHTML = sprites[sprite+1];
-        if(sprite==2 || (sprite == nextfade && nextfade != 0)){
+        if(sprite==2 || ((sprite == nextfade) && (nextfade != 0))){
         document.getElementById('message').classList.toggle('demessage');
         console.log("first loop called  sprite = "+sprite);
         nextshow = sprite+2;
@@ -670,7 +670,7 @@ function sunshinescroll(){
         console.log("nextfade = "+nextfade);
       }
 
-        else if(sprite == nextshow && nextshow!=0){
+        else if((sprite == nextshow) && (nextshow!=0)){
           document.getElementById('message').classList.toggle('demessage');
           console.log("first loop else called  sprite = "+sprite);
           console.log("nextshow = "+nextshow);
@@ -680,7 +680,7 @@ function sunshinescroll(){
       }
       else{
         scroller[0].classList.add("sprite-"+sprites[sprite]);document.getElementById('message').innerHTML = sprites[sprite+1];
-        if(sprite==2 || (sprite == nextfade && nextfade != 0))
+        if(sprite==2 || ((sprite == nextfade) && (nextfade != 0)))
         {document.getElementById('message').classList.toggle('demessage');
         nextshow = sprite+2;
         nextfade = sprite+4;
@@ -688,7 +688,7 @@ function sunshinescroll(){
         console.log("nextshow = "+nextshow);
         console.log("nextfade = "+nextfade);
       }
-        else if(sprite == nextshow && nextshow!=0){
+        else if((sprite == nextshow) && (nextshow!=0)){
           document.getElementById('message').classList.toggle('demessage');
           console.log("second loop else called  sprite = "+sprite);
           console.log("nextshow = "+nextshow);
