@@ -652,7 +652,6 @@ function checklogout(pk)
 }
 var sprite = 0;
 function sunshinescroll(){
-  while(true){
   var sprites = {};
     sprites = ["earthshine","friendshine","socialshine","healthshine","charityshine"];
       var scroller  = document.getElementsByClassName("sprite");
@@ -660,12 +659,12 @@ function sunshinescroll(){
       scroller[0].classList.remove(prevclass); scroller[0].innerHTML = sprites[sprite];scroller[0].classList.add("sprite-"+sprites[sprite]);
       sprite++;
       if(sprite < 5){
-
+        sunshinescroll();
       }
       else{
-        sprite = 0;        
+        sprite = 0;
+        sunshinescroll();
       }
-    }
 }
 
 function userlogout(pk)
