@@ -1,4 +1,4 @@
-<nav>
+<nav id = "friendsbuttons">
     <button id = "friendslistbutton" onclick = "appfriendslogin();" type = "button" class = "btn" data-toggle = "collapse" data-target = "#friendslist">
       Friend's List
     </button>
