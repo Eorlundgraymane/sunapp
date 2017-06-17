@@ -122,7 +122,7 @@ background-color: rgba(255,255,255,0.5);
   height: 10em;
 }
 #contentarea{
-  min-width: 100%;
+  min-width: 1366px;
 }
 #post{
   position: relative;
