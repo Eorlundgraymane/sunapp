@@ -653,18 +653,18 @@ function checklogout(pk)
 var sprite = 0;
 function sunshinescroll(){
   var sprites = {};
-    sprites = ["friendshine","friendshine-fadeOut","charityshine","charityshine-fadeOut","earthshine","earthshine-fadeOut","socialshine","socialshine-fadeOut","healthshine","healthshine-fadeOut"];
+    sprites = ["friendshine","friendshine-fadeOut","charityshine","charityshine-fadeOut","earthshine","earthshine-fadeOut","socialshine","socialshine-fadeOut","healthshine","healthshine-fadeOut","friendshine-fadeIn"];
       setTimeout(function(){
       var scroller  = document.getElementsByClassName("sprite");
       if(scroller[0].className.split(' ').length > 1){
         var prevclass = scroller[0].className.split(' ')[1];
-        scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass); 
+        scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);
       }
       else{
         scroller[0].classList.add("sprite-"+sprites[sprite]); scroller[0].innerHTML = sprites[sprite];
       }
       sprite++;
-      if(sprite < 10){
+      if(sprite < 11){
         sunshinescroll();
       }
       else{
