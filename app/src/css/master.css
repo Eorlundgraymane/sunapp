@@ -383,6 +383,9 @@ input,select,textarea {
   position: absolute;
   right: 0;
 }
+#siteheader{
+  margin-top: 1em;
+}
 #sitename {
   font-size: 30px;
   color: white;
