@@ -13,9 +13,9 @@ body,html{
   margin-bottom: 5px;
   cursor: pointer;
 }
-#allsmileys{
-  color: white;
-  font-weight: bold;
+#addsmiley{
+  border: 0;
+  margin: 0;
 }
 #deletepost{
   vertical-align: top;
