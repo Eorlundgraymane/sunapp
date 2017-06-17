@@ -112,34 +112,35 @@ background-color: rgba(255,255,255,0.5);
     background-image: url('spritesheet.png');
     background-repeat: no-repeat;
     display: block;
+    background-size: 10em 15em;
 }
 
 .sprite-friendshine {
-    width: 10em;
+    width: 275px;
     height: 180px;
     background-position: -8px -8px;
 }
 
 .sprite-charityshine {
-    width: 10em;
+    width: 256px;
     height: 256px;
     background-position: -8px -204px;
 }
 
 .sprite-earthshine {
-    width: 10em;
+    width: 512px;
     height: 512px;
     background-position: -8px -732px;
 }
 
 .sprite-socialshine{
-    width: 10em;
+    width: 600px;
     height: 389px;
     background-position: -8px -1260px;
 }
 
 .sprite-healthshine {
-    width: 10em;
+    width: 290px;
     height: 290px;
     background-position: -8px -1665px;
 }
