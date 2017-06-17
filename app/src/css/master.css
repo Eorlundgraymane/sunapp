@@ -24,6 +24,9 @@ body,html{
   float: right;
   display: inline-block;
 }
+#contentarea{
+  display: flex;
+}
 #profilephotobutton{
   background-color: rgba(0,0,0,0);
   margin: 0;
