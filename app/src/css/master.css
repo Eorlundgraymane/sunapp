@@ -35,31 +35,31 @@ body,html{
   min-width: 40em;
 }
 #posts::-webkit-scrollbar-track{
-  background-color: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: inset 0 0 6px rgba(0,0,0,0.8);
 	-webkit-box-shadow: #7ec0ee;
 }
 #posts::-webkit-scrollbar{
 	width: 6px;
-	background-color: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: inset 0 0 6px rgba(0,0,0,0.8);
 }
 
 #posts::-webkit-scrollbar-thumb{
 	background-color:  #7ec0ee;
 }
 #posts:-ms-scrollbar-track{
-  background-color: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: inset 0 0 6px rgba(0,0,0,0.8);
 	-webkit-box-shadow: #7ec0ee;
 }
 #posts:-ms-scrollbar{
 	width: 6px;
-	background-color: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: inset 0 0 6px rgba(0,0,0,0.8);
 }
 
 #posts:-ms-scrollbar-thumb{
 	background-color:  #7ec0ee;
 }
 #posts::-moz-scrollbar-track{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
 	background-color: #7ec0ee;
 }
 #posts::-moz-scrollbar{
@@ -68,7 +68,7 @@ body,html{
 }
 
 #posts::-moz-scrollbar-thumb{
-background-color: rgba(255,255,255,0.5);
+background-color: rgba(255,255,255,0.8);
 }
 
 body::-webkit-scrollbar-track{
