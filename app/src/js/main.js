@@ -659,7 +659,7 @@ function sunshinescroll(){
       var prevclass = scroller[0].className.split(' ')[1];
       scroller[0].classList.remove(prevclass); scroller[0].innerHTML = sprites[sprite];scroller[0].classList.add("sprite-"+sprites[sprite]);
       sprite++;
-      id(sprite < 5){
+      if(sprite < 5){
         sunshinescroll();
       }
     },1000)
