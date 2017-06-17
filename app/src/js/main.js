@@ -138,7 +138,7 @@ function getallsmileys(){
       var sm = each.split('":"');
       for(eachsm of sm){
         if(sm.indexOf(eachsm)%2 != 0){
-          eachsm = eachsm.replace(},'');
+          eachsm = eachsm.replace('}','');
           eachsm = eachsm.replace('>"','>');
           console.log(eachsm);
         }
