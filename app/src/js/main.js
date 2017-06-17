@@ -658,11 +658,10 @@ function sunshinescroll(){
       var scroller  = document.getElementsByClassName("sprite");
       if(scroller[0].className.split(' ').length > 1){
         var prevclass = scroller[0].className.split(' ')[1];
-        console.log(sprites[sprite]);
-        scroller[0].classList.add("sprite-"+sprites[sprite]); scroller[0].innerHTML = sprites[sprite];
+        console.log(prevclass);
+        scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass); scroller[0].innerHTML = sprites[sprite];
       }
       else{
-        console.log(sprites[sprite]);
         scroller[0].classList.add("sprite-"+sprites[sprite]); scroller[0].innerHTML = sprites[sprite];
       }
       sprite++;
