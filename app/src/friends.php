@@ -9,8 +9,10 @@
       </button>
         <ul class = "collapse" id = "friendssuggest">
         </ul><br>
-        <div class = "sprite nosprite">          
+        <div id = "messages">
+        <div class = "sprite nosprite">
           </div>
           <script>sunshinescroll()</script>
+        </div>
 
 </nav>
