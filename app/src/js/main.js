@@ -653,8 +653,8 @@ function checklogout(pk)
 
 function sunshinescroll(){
   var sprites = {};
-    sprites = {"earth":"earthshine","friend":"friendshine","social":"socialshine","charity":"charityshine","health":"healthshine"};
-  for (each of JSON.parse(sprites)){
+    sprites = ["earthshine","friendshine","socialshine","charityshine","healthshine"];
+  for (each of sprites){
       var scroller  = document.getElementsByClassName("sprite");
       var prevclass = scroller.className;
       setTimeout(function(){scroller[0].classList.remove(prevclass); scroller[0].innerHTML = each;scroller[0].classList.add("sprite-"+each)},1000 );
