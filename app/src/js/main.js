@@ -658,7 +658,7 @@ function sunshinescroll(){
     console.log(sprite);
       setTimeout(function(){
       var scroller  = document.getElementsByClassName("sprite");
-      var prevclass = scroller.className;
+      var prevclass = scroller[0].className;
       console.log(prevclass);
       scroller[0].classList.remove(prevclass); scroller[0].innerHTML = sprite;scroller[0].classList.add("sprite sprite-"+sprite)},1000 );
   }
