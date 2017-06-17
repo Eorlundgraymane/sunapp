@@ -117,6 +117,7 @@ background-color: rgba(255,255,255,0.5);
 #friendsbuttons{
   margin-top: 1em;
   min-height: 100%;
+  max-width: 1em;
   background-image: url('spritesheet.png');
 }
 #post_image{
