@@ -109,13 +109,13 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite {
-    background-image: url('spritesheet.png');
+    background-image: url('resprite.png');
     background-repeat: no-repeat;
     display: block;
 }
 
 .sprite-friendshine {
-    width: 15em;
+    width: 10em;
     background-position: -8px -8px;
 }
 
@@ -135,7 +135,7 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-healthshine {
-    width: 10em;    
+    width: 10em;
     background-position: -8px -1665px;
 }
 
