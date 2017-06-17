@@ -661,14 +661,14 @@ function sunshinescroll(){
         var prevclass = scroller[0].className.split(' ')[1];
         scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);document.getElementById('message').innerHTML = sprites[sprite+1];
         if(sprite==2 || (sprite == nextfade && sprite != 0))
-        {document.getElementById('message').classList.toggle('demessage')
+        {document.getElementById('message').classList.toggle('demessage');
         nextfade= sprite+4};
 
       }
       else{
         scroller[0].classList.add("sprite-"+sprites[sprite]);document.getElementById('message').innerHTML = sprites[sprite+1];
         if(sprite==2 || (sprite == nextfade && sprite != 0)
-        {document.getElementById('message').classList.toggle('demessage')
+        {document.getElementById('message').classList.toggle('demessage');
       nextfade = sprite+4};
       }
       sprite++;
