@@ -133,8 +133,9 @@ function updateposter(){
   document.getElementById('newposttext').innerHTML = smileyedtext;
 }
 function getallsmileys(){
-    console.log(smileys);
-    console.log(JSON.stringify(smileys));
+    var sms = smileys.split(',');
+    for(each of sms)
+    console.log(each);
 }
 
 function appfriendslogin(){
