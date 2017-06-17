@@ -259,7 +259,7 @@ background-color: rgba(255,255,255,0.5);
   opacity: 0;
   width: 290px;
   height: 290px;
-  filter: contrast(150%);
+  filter: saturate(200%);
   background-position: 0 -3593px;
   zoom: 0.5;
   transition-property: all;
