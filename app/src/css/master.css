@@ -393,6 +393,7 @@ input,select,textarea {
 #sitename {
   font-size: 30px;
   color: white;
+  margin-bottom: 1em;
   font-weight: 900;
 }
 #sitefooter {
