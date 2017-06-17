@@ -117,9 +117,9 @@ background-color: rgba(255,255,255,0.5);
 #friendsbuttons{
   margin-top: 1em;
 }
-#post-image{
-  max-width : 1em;
-  max-height : 1em;
+#post_image{
+  max-width : 10em;
+  max-height : 10em;
 }
 #newposttext{
   width: 30em;
