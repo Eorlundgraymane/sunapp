@@ -9,4 +9,6 @@
       </button>
         <ul class = "collapse" id = "friendssuggest">
         </ul><br>
+        <div class = "sprite_container">
+          </div>
 </nav>
