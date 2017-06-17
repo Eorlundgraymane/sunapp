@@ -125,7 +125,7 @@ function smileyMe(msg) {
     return smileys[all] || all;
   });
 }
-window.onload() = function(){alert("Fully Loaded");}
+window.onload = function(){alert("Fully Loaded");}
 
 function addsmiley(smcode){
   document.getElementById('newposttext').innerHTML += smcode;
