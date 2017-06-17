@@ -24,9 +24,6 @@ body,html{
   float: right;
   display: inline-block;
 }
-#contentarea{
-  display: flex;
-}
 #profilephotobutton{
   background-color: rgba(0,0,0,0);
   margin: 0;
@@ -111,11 +108,14 @@ body::-moz-scrollbar-thumb{
 background-color: rgba(255,255,255,0.5);
 }
 #postpane{
-  flex-grow: 1;
+  float: right;
   background-color:rgba(255, 130, 0, 1);
   border-left: 1px solid white;
   height: 50em;
   margin-top: 10px;
+}
+#newspane{
+  clear: both;
 }
 #friendsbuttons{
   margin-top: 1em;
@@ -155,11 +155,8 @@ background-color: rgba(255,255,255,0.5);
 #friendslistbutton{
   margin-bottom: 5px;
 }
-#newspane{
-  flex-grow: 2;
-}
 #friendspane{
-  flex-grow: 1;
+  float: left;
   background-color:rgba(255, 130, 0, 1);
   border-right: 1px solid white;
   height: 50em;
