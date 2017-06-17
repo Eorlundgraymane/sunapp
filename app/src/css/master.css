@@ -125,21 +125,21 @@ background-color: rgba(255,255,255,0.5);
     width: 512px;
     height: 512px;
     background-position: -8px -204px;
-    zoom: 0.5;
+    zoom: 0.25;
 }
 
 .sprite-earthshine {
     width: 512px;
     height: 512px;
     background-position: -8px -732px;
-    zoom: 0.5;
+    zoom: 0.25;
 }
 
 .sprite-socialshine{
     width: 600px;
     height: 389px;
     background-position: -8px -1260px;
-    zoom: 0.5;
+    zoom: 0.25;
 }
 
 .sprite-healthshine {
