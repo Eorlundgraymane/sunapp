@@ -129,8 +129,7 @@ function smileyMe(msg) {
   });
 }
 function getallsmileys(){
-    for(each of smileys){
-      document.getElementById('allsmileys').innerHTML += each;
+    console.log(smileys);
   }
 }
 
