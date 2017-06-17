@@ -262,12 +262,6 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-duration: 2s;
   -webkit-transition-timing-function: ease-in;
 }
-
-
-
-
-
-
 #postpane{
   float: right;
   background-color:rgba(255, 130, 0, 1);
