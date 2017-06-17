@@ -137,8 +137,11 @@ function getallsmileys(){
     for(each of sms){
       var sm = each.split('":"');
       for(eachsm of sm){
-        if(sm.indexOf(eachsm)%2 != 0)    
-        console.log(eachsm);
+        if(sm.indexOf(eachsm)%2 != 0){
+          eachsm = eachsm.replace(},'');
+          eachsm = eachsm.replace('>"','>');
+          console.log(eachsm);
+        }
       }
     }
 }
