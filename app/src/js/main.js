@@ -130,7 +130,6 @@ function smileyMe(msg) {
 }
 function getallsmileys(){
     console.log(smileys);
-  }
 }
 
 function appfriendslogin(){
