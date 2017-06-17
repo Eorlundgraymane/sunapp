@@ -63,7 +63,7 @@
                      <div id = "uploadform" class = "form-group">
                        <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
                        <input  type = "text" id = "newpostimg" placeholder = "Image URL"><br>
-                       <textarea onchange = "updateposter();" onkeyup = "updateposter();" onkeydown = "updateposter();" onkeypress = "updateposter();" id = "newposttext" placeholder="Post here..."><img src="css/smileys/happy-9.svg" width = "16px" height = "16px" border="0" alt="" title = "Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com"/></textarea><br>
+                       <textarea onchange = "updateposter();" onkeyup = "updateposter();" onkeydown = "updateposter();" onkeypress = "updateposter();" id = "newposttext" placeholder="Post here..."></textarea><br>
                        <div id = "allsmileys"></div>
                        <script>getallsmileys()</script>
                        <input type = "number" id = "earth" placeholder = "Earth Shine"><br>
