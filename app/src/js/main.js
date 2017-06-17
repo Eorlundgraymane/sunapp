@@ -653,13 +653,13 @@ function checklogout(pk)
 var sprite = 0;
 function sunshinescroll(){
   var sprites = {};
-    sprites = ["friendshine","charityshine","earthshine","socialshine","healthshine"];
+    sprites = ["friendshine","friendshine-fadeOut","charityshine","charityshine-fadeOut","earthshine","earthshine-fadeOut","socialshine","socialshine-fadeOut","healthshine","healthshine-fadeOut"];
       setTimeout(function(){
       var scroller  = document.getElementsByClassName("sprite");
       var prevclass = scroller[0].className.split(' ')[1];
       scroller[0].classList.remove(prevclass); scroller[0].innerHTML = sprites[sprite];scroller[0].classList.add("sprite-"+sprites[sprite]);
       sprite++;
-      if(sprite < 5){
+      if(sprite < 10){
         sunshinescroll();
       }
       else{
