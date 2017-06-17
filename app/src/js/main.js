@@ -334,6 +334,11 @@ function applogin(){
   }
 
 
+function gotofriend(fid){
+alert("Friend's Page coming soon");
+}
+
+
 function getfriendslist(){
   if(friendlistflag == 0 && droppeddown == 0){
     var data = { "type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname","proimage", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": hasura_id } } ] } ] } ] } ] } };
