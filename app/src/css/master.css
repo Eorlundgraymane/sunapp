@@ -112,17 +112,22 @@ background-color: rgba(255,255,255,0.5);
 0%{opacity: 0;}
 100%{opacity: 1;}
 }
-.nosprite{
-  opacity: 0;
+.sprite {
   background-image: url('spritesheet.png');
   background-repeat: no-repeat;
   display: block;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in;
+}
+.nosprite{
+  opacity: 0;
 }
 
 .sprite-friendshine {
-  background-image: url('spritesheet.png');
-  background-repeat: no-repeat;
-  display: block;
   opacity: 1;
   width: 275px;
   height: 180px;
@@ -136,9 +141,6 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease-in;
 }
 .sprite-friendshine-fadeOut {
-  background-image: url('spritesheet.png');
-  background-repeat: no-repeat;
-  display: block;
   opacity: 0;
   width: 275px;
   height: 180px;
@@ -152,9 +154,6 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease-in;
 }
 .sprite-charityshine {
-  background-image: url('spritesheet.png');
-  background-repeat: no-repeat;
-  display: block;
   opacity: 1;
   width: 512px;
   height: 512px;
@@ -168,9 +167,6 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease-in;
 }
 .sprite-charityshine-fadeOut {
-  background-image: url('spritesheet.png');
-  background-repeat: no-repeat;
-  display: block;
   opacity: 0;
   width: 512px;
   height: 512px;
@@ -185,9 +181,6 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-earthshine {
-  background-image: url('spritesheet.png');
-  background-repeat: no-repeat;
-  display: block;
   opacity: 1;
   width: 512px;
   height: 512px;
@@ -202,9 +195,6 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-earthshine-fadeOut {
-  background-image: url('spritesheet.png');
-  background-repeat: no-repeat;
-  display: block;
   opacity: 0;
   width: 512px;
   height: 512px;
@@ -219,9 +209,6 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-socialshine {
-  background-image: url('spritesheet.png');
-  background-repeat: no-repeat;
-  display: block;
   opacity: 1;
   width: 600px;
   height: 389px;
@@ -237,9 +224,6 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-socialshine-fadeOut {
-  background-image: url('spritesheet.png');
-  background-repeat: no-repeat;
-  display: block;
   opacity: 0;
   width: 600px;
   height: 389px;
@@ -254,9 +238,6 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .sprite-healthshine {
-  background-image: url('spritesheet.png');
-  background-repeat: no-repeat;
-  display: block;
   opacity: 1;
   width: 290px;
   height: 290px;
@@ -270,9 +251,6 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease-in;
 }
 .sprite-healthshine-fadeOut {
-  background-image: url('spritesheet.png');
-  background-repeat: no-repeat;
-  display: block;
   opacity: 0;
   width: 290px;
   height: 290px;
