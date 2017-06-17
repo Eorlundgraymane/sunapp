@@ -659,9 +659,13 @@ function sunshinescroll(){
       if(scroller[0].className.split(' ').length > 1){
         var prevclass = scroller[0].className.split(' ')[1];
         scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);document.getElementById('message').innerHTML = sprites[sprite+1];
+        if(sprite%2==0 && sprite!=0)
+        {document.getElementById('message').classList.remove("message");document.getElementById('message').classList.add("demessage");}
       }
       else{
         scroller[0].classList.add("sprite-"+sprites[sprite]);document.getElementById('message').innerHTML = sprites[sprite+1];
+        if(sprite%2==0 && sprite!=0)
+        {document.getElementById('message').classList.remove("message");document.getElementById('message').classList.add("demessage");}
       }
       sprite++;
       sprite++;
