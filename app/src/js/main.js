@@ -134,7 +134,7 @@ function updateposter(){
 }
 function getallsmileys(){
     for(each of smileys){
-      var sm = each.JSON.stringify(split('":"'));
+      var sm = each.JSON.stringify(each).split('":"');
       for(eachsm of sm){
         if(sm.indexOf(eachsm)%2 != 0){
           eachsm = eachsm.replace('}','');
