@@ -665,7 +665,7 @@ function sunshinescroll(){
         {document.getElementById('message').classList.toggle('demessage');
         nextshow = sprite+2;
         nextfade = sprite+4;}
-        else if(sprite == nextshow && show!=0){
+        else if(sprite == nextshow && nextshow!=0){
           document.getElementById('message').classList.toggle('demessage');
         }
 
@@ -676,7 +676,7 @@ function sunshinescroll(){
         {document.getElementById('message').classList.toggle('demessage');
         nextshow = sprite+2;
         nextfade = sprite+4;}
-        else if(sprite == nextshow && show!=0){
+        else if(sprite == nextshow && nextshow!=0){
           document.getElementById('message').classList.toggle('demessage');
         }
       }
