@@ -7,7 +7,7 @@ body,html{
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
-  background-color: rgba(252, 114, 0, 0.87);
+  background-color:rgba(88, 185, 83,1);
   color: white;
   border-radius: 2px;
   margin-bottom: 5px;
