@@ -121,8 +121,6 @@ background-color: rgba(255,255,255,0.5);
 .sprite_container{
   background-image: url('css/spritesheet.png');
   background-repeat: no-repeat;
-  min-height: 5px;
-  min-width: 5px;
 }
 #post_image{
   max-width : 40em;
