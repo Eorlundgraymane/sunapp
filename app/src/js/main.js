@@ -653,18 +653,19 @@ function checklogout(pk)
 var sprite = 0;
 function sunshinescroll(){
   var sprites = {};
-    sprites = ["friendshine","friendshine-fadeOut","charityshine","charityshine-fadeOut","earthshine","earthshine-fadeOut","socialshine","socialshine-fadeOut","healthshine","healthshine-fadeOut","friendshine-fadeIn"];
+    sprites = ["friendshine","Be friends with Everyone!!!","friendshine-fadeOut","Be friends with Everyone!!!","charityshine","Show charity to the needy","charityshine-fadeOut","Show charity to the needy","earthshine","Take care of mother Nature","earthshine-fadeOut","Take care of mother Nature","socialshine","Spend quality time with your loved ones","socialshine-fadeOut","Spend quality time with your loved ones","healthshine","Take care of your body","healthshine-fadeOut","Take care of your body","friendshine-fadeIn""Be friends with Everyone!!!"];
       setTimeout(function(){
       var scroller  = document.getElementsByClassName("sprite");
       if(scroller[0].className.split(' ').length > 1){
         var prevclass = scroller[0].className.split(' ')[1];
-        scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);
+        scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);scroller[0].innerHTML = sprites[sprite+1];
       }
       else{
-        scroller[0].classList.add("sprite-"+sprites[sprite]); scroller[0].innerHTML = sprites[sprite];
+        scroller[0].classList.add("sprite-"+sprites[sprite]); scroller[0].innerHTML = sprites[sprite];scroller[0].innerHTML = sprites[sprite+1];
       }
       sprite++;
-      if(sprite < 11){
+      sprite++;
+      if(sprite < sprites.length){
         sunshinescroll();
       }
       else{
