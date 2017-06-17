@@ -662,7 +662,10 @@ function sunshinescroll(){
       if(sprite < 5){
         sunshinescroll();
       }
-    },1000)
+      else{
+        sprite = 0;
+      }
+    },5000)
 }
 
 function userlogout(pk)

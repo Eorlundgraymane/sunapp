@@ -112,6 +112,9 @@ background-color: rgba(255,255,255,0.5);
     background-image: url('spritesheet.png');
     background-repeat: no-repeat;
     display: block;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
 }
 
 .sprite-friendshine {
@@ -119,6 +122,9 @@ background-color: rgba(255,255,255,0.5);
     height: 180px;
     background-position: -8px -8px;
     zoom: 0.5;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
 }
 
 .sprite-charityshine {
@@ -126,6 +132,9 @@ background-color: rgba(255,255,255,0.5);
     height: 512px;
     background-position: -8px -204px;
     zoom: 0.25;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
 }
 
 .sprite-earthshine {
@@ -133,6 +142,9 @@ background-color: rgba(255,255,255,0.5);
     height: 512px;
     background-position: -8px -732px;
     zoom: 0.25;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
 }
 
 .sprite-socialshine {
@@ -140,6 +152,9 @@ background-color: rgba(255,255,255,0.5);
     height: 389px;
     background-position: -8px -1260px;
     zoom: .25;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
 }
 
 .sprite-healthshine {
@@ -147,6 +162,9 @@ background-color: rgba(255,255,255,0.5);
     height: 290px;
     background-position: -8px -1665px;
     zoom: 0.5;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
 }
 
 
