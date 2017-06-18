@@ -1657,7 +1657,7 @@ function refreshscore(){
   data = {"type":"select",
           "args":{
             "table":"posts",
-            "columns":["post_id","user_id","earthshine","healthshine","charityshine","socialshine",
+            "columns":["user_id","earthshine","healthshine","charityshine","socialshine",
             {
               "name":"likers",
               "columns":["liker_id"]
