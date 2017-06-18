@@ -1659,7 +1659,7 @@ function refreshscore(){
             "table":"posts",
             "columns":["post_id","user_id","earthshine","healthshine","charityshine","socialshine",
             {
-              "name":"likes",
+              "name":"likers",
               "columns":["liker_id"]
             }],
             "where":{
