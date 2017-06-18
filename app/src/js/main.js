@@ -1790,6 +1790,63 @@ xhr.onreadystatechange = function(){
 }
 xhr.send(query);
 }
+
+function refreshscore(){
+  var data = {};
+  var earth = 0;
+  var friends = 0;
+  var social = 0;
+  var charity = 0;
+  var health = 0;
+  data = {"type":"select",
+          "args":{
+            "table":"posts",
+            "columns":["user_id","earthshine","healthshine","charityshine","socialshine",
+            {
+              "name":"likers",
+              "columns":["liker_id"]
+            }],
+            "where":{
+              "user_id":parseInt(getCookie("friendid"))
+            }
+          }
+};
+console.log(JSON.stringify(data));
+var query = JSON.stringify(data);
+xhr = new XMLHttpRequest();
+var url  = "https://data.unwound15.hasura-app.io/v1/query";
+xhr.open("POST",url,true);
+xhr.setRequestHeader("Content-type","application/json");
+xhr.withCredentials = "true";
+xhr.onreadystatechange = function(){
+  if(xhr.readyState == 4 && xhr.status == 200){
+    var json = JSON.parse(xhr.responseText);
+    console.log(JSON.stringify(json));
+    for(shine of json){
+      if(shine["likers"].length>0){
+        for(liker of shine["likers"]){
+          earth+=shine["earthshine"];
+          social+=shine["socialshine"];
+          charity+=shine["charityshine"];
+          health+=shine["healthshine"];
+        }
+      }
+      else{
+        console.log("no likes");
+      }
+    }
+    addscore(earth,social,charity,health);
+  }
+  else if(xhr.readyState ==4){
+    var json = JSON.parse(xhr.responseText);
+    console.log(json);
+  }
+}
+xhr.send(query);
+}
+
+
+
 function refreshscore(){
   var data = {};
   var earth = 0;
