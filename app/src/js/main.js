@@ -1654,7 +1654,10 @@ function refreshscore(){
             "table":"likes",
             "columns":["post_id",{
               "name":"post",
-              "columns":["user_id","earthshine","healthshine","charityshine","socialshine"]            
+              "columns":["user_id","earthshine","healthshine","charityshine","socialshine"],
+              "where":{
+                "user_id":parseInt(getCookie("hasura_id"))
+              }
             }]
           }
 };
