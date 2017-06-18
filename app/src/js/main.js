@@ -1674,8 +1674,8 @@ xhr.withCredentials = "true";
 xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
-    console.log(JSON.stringify(json));
-    for(each of json["mefriend"]){
+    console.log(json);
+    for(each of json[0]["mefriend"]){
       console.log(each["friend_id"]);
     }
   }
