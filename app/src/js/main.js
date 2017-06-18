@@ -1647,6 +1647,41 @@ function tablelogin(){
     loadflag = 0;
   }
 }
+
+function addscore(){
+  var data = {};
+  data = {"type":"select",
+          "args":{
+            "table":"profile",
+            "columns":[
+              "name":"mefriend",
+              "columns":["friend_id"]
+            ],
+            "where":{"user_id":parseInt(getCookie("hasura_id"))}
+          }
+};
+console.log(JSON.stringify(data));
+var query = JSON.stringify(data);
+xhr = new XMLHttpRequest();
+var url  = "https://data.unwound15.hasura-app.io/v1/query";
+xhr.open("POST",url,true);
+xhr.setRequestHeader("Content-type","application/json");
+xhr.withCredentials = "true";
+xhr.onreadystatechange = function(){
+  if(xhr.readyState == 4 && xhr.status == 200){
+    var json = JSON.parse(xhr.responseText);
+    console.log(JSON.stringify(json));
+    for(each of json[0]){
+      console.log(each["friend_id"]);
+    }
+  }
+  else if(xhr.readyState == 4){
+    var json = JSON.parse(xhr.responseText);
+    console.log(JSON.stringify(json));
+  }
+}
+xhr.send(data);
+}
 function refreshscore(){
   var data = {};
   var earth = 0;
@@ -1684,15 +1719,12 @@ xhr.onreadystatechange = function(){
       social+=shine["socialshine"];
       charity+=shine["charityshine"];
       health+=shine["healthshine"];
-      console.log("Earth :"+earth);
-      console.log("Charity :"+charity);
-      console.log("Social :"+social);
-      console.log("Health :"+health);
       }
       else{
         console.log("no likes");
       }
     }
+    addscore(earth,social,charity,health);
   }
   else if(xhr.readyState ==4){
     var json = JSON.parse(xhr.responseText);
