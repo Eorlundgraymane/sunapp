@@ -1,5 +1,5 @@
 <button onclick = "refreshfscore();" id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
-  Your Shine Table
+  Friend's Shine Table
 </button>
 <div id = "shinetablediv" class = "collapse">
   <table id = "shinetable" class = "table table-responsive">
