@@ -717,8 +717,6 @@ function getpiclink(){
           document.getElementById('profileimage').classList.remove('profileimage');
           document.getElementById('profileimage').classList.add('profileimageappeared');
         }
-      }
-
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
     }
