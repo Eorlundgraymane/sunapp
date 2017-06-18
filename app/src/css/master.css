@@ -446,6 +446,7 @@ background-color: rgba(255,255,255,0.5);
 }
 #homemessages{
   padding-left: 10%;
+  min-width: 50%;
 }
 .message{
   color: white;
