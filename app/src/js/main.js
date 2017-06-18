@@ -1677,6 +1677,7 @@ xhr.onreadystatechange = function(){
   }
 }
 xhr.send(query);
+}
 function loadtable(){
     var data = {};
     data["type"] = "select";
