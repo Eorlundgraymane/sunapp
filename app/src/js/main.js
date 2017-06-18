@@ -1649,6 +1649,11 @@ function tablelogin(){
 }
 function refreshscore(){
   var data = {};
+  var earth = 0;
+  var friends = 0;
+  var social = 0;
+  var charity = 0;
+  var health = 0;
   data = {"type":"select",
           "args":{
             "table":"likes",
@@ -1673,6 +1678,9 @@ xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
     console.log(JSON.stringify(json));
+    for(shine of json){
+      console.log(shine);
+    }
   }
   else if(xhr.readyState ==4){
     var json = JSON.parse(xhr.responseText);
