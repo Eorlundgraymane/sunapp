@@ -411,14 +411,16 @@ function applogin(){
       xhr.send();
     }
 
-    else if(suggesiondrop  == 1 && friendsuggestflag == 1) {
-    document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
-    document.getElementById('friendssuggestbutton').click();
-    suggesiondrop  = 0;
+    else if (suggesiondrop == 1 && friendsuggestflag == 1) {
+      suggesiondrop = 0;
+    }
+    else if(suggesiondrop == 1 && friendsuggestflag == 0){
+      suggesiondrop =0;
+      friendsuggestflag = 0;
     }
     else if(suggesiondrop == 0 && friendsuggestflag == 1){
-    document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
-    suggesiondrop  =1;
+      suggesiondrop = 1;
+      friendsuggestflag = 1;
     }
   }
 
