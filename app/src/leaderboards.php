@@ -13,6 +13,7 @@
       <?php include 'header.php';?>
     </row>
     <row>
+      <?php include 'leaderboardtitle.php';?>
     </row>
     <row>
     </row>
