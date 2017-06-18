@@ -230,7 +230,7 @@ function appfriendsfriendlogin(){
           hasura_id = json.hasura_id;
           auth_token = "Bearer "+json.auth_token;
           email = json.email;
-          getfriendslist();
+          getfriendsfriendlist();
           getflag = 0;
         }
         else if(xhr.readyState == 4) {
@@ -433,6 +433,90 @@ function gotofriend(fid,friendname){
   window.location = "https://sunshine.unwound15.hasura-app.io/friendprofile.php";
 }
 
+
+function getfriendsfriendlist(){
+  if(friendlistflag == 0 && droppeddown == 0){
+    var data = {
+      "type": "select", "args": {
+         "table": "profile", "columns": [
+            "fname", {
+               "name": "mefriend", "columns": [
+                  "friend_id", {
+                     "name": "friend_profile", "columns": [
+                        "fname","proimage", {
+                          "name": "mefriend", "columns": [
+                             "friend_id" ],
+                             "where": {
+                                "friend_id": getCookie("friendid")
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  ,"where":{
+                    "user_id":getCookie("friendid")
+                  }
+                } };
+    query = JSON.stringify(data);
+    console.log(query);
+    var xhr = new XMLHttpRequest();
+    var url = "https://data.unwound15.hasura-app.io/v1/query";
+    xhr.open("POST",url,true);
+    xhr.setRequestHeader("Content-type","application/json");
+    xhr.withCredentials = "true";
+    xhr.onreadystatechange = function(){
+      if(xhr.readyState == 4 && xhr.status == 200){
+          document.getElementById('friendslist').innerHTML = "";
+          var json = JSON.parse(xhr.responseText);
+          if(json[0]["profile"][0]["mefriend"].length == 0){
+          document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Send some requests first.</li>";
+          document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "50px" height = "50px">';
+          console.log(json);
+          console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
+          friendlistflag = 0;
+          droppeddown = 0;
+        }
+        else if(json[0]["profile"][0]["mefriend"].length > 0){
+          for(myfid of json[0]["profile"][0]["mefriend"])
+          {
+            if(myfid["friend_id"] != hasura_id){
+              console.log(myfid);
+              console.log("JSON RESPONSE: "+JSON.stringify(json));
+              console.log(myfid["friend_profile"]["fname"]);
+              if(myfid["friend_profile"]["mefriend"].length > 0){
+                var friendname = myfid["friend_profile"]["fname"];
+                var friendid = myfid["friend_id"];
+                var prourl = myfid["friend_profile"]["proimage"];
+                console.log(prourl);
+                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"><figcaption><button onclick = \"gotofriend("+friendid+",'"+friendname+"');\" type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
+              }
+            }
+          }
+          friendlistflag = 1;
+          droppeddown = 0;
+          document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "50px" height = "50px">';
+          document.getElementById('friendslistbutton').click();
+        }
+        }
+        else if(xhr.readyState ==4) {
+          alert(JSON.stringify(json));
+          friendlistflag = 0;
+          droppeddown = 0;
+          document.getElementById('friendslistbutton').innerHTML = "Error";
+        }
+        getflag =0;
+        document.getElementById('friendslistbutton').disabled = false;
+        document.getElementById('friendssuggestbutton').disabled = false;
+        document.getElementById('friendssuggestbutton').style.cursor = "pointer";
+        document.getElementById('friendslistbutton').style.cursor = "pointer";
+        document.getElementById('logoutbutton').disabled = false;
+        document.getElementById('logoutbutton').style.cursor = "pointer";
+      }
+    xhr.send(query);
+  }
+}
 
 function getfriendslist(){
   if(friendlistflag == 0 && droppeddown == 0){
