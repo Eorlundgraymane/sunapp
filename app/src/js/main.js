@@ -1654,9 +1654,10 @@ function addscore(e,s,c,h){
     "type":"select",
     "args":{
       "table":"profile",
-      "columns":["",
+      "columns":[{
         "name":"mefriend",
         "columns":["friend_id"]
+          }
       ],
       "where":{"user_id":parseInt(getCookie("hasura_id"))}
       }
