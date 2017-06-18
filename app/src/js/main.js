@@ -375,6 +375,7 @@ function gethasurapullpost(){
 function applogin(){
   console.log(friendsuggestflag);
   console.log(addflag);
+  console.log(suggesiondrop);
   if(addflag == 1 || (suggesiondrop  == 0 && friendsuggestflag == 0))
     {
       document.getElementById('friendssuggestbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loader.gif'>";
