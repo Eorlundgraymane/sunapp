@@ -10,7 +10,7 @@
         <ul class = "collapse" id = "friendssuggest">
         </ul><br>
         <div id = "messages">
-        <div class = "sprite nosprite">
+        <div class = "col-xs-3 col-md-3 col-lg-3 col-sm-3 sprite nosprite">
           </div>
           <div id = "message" class = "message"></div>
           <script>sunshinescroll()</script>
