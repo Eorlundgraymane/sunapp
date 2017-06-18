@@ -686,13 +686,13 @@ function sunshinescroll(){
 
 function homescroll(){
   var sprites = {};
-    sprites = ["friendshine","Be friends with Everyone!!!","friendshine-fadeOut","Be friends with Everyone!!!","charityshine","Show charity to the needy","charityshine-fadeOut","Show charity to the needy","earthshine","Take care of mother Nature","earthshine-fadeOut","Take care of mother Nature","socialshine","Spend quality time with your loved ones","socialshine-fadeOut","Spend quality time with your loved ones","healthshine","Take care of your body","healthshine-fadeOut","Take care of your body","friendshine-fadeIn","Be friends with Everyone!!!"];
+    sprites = ["home-friendshine","Be friends with Everyone!!!","home-friendshine-fadeOut","Be friends with Everyone!!!","home-charityshine","Show charity to the needy","home-charityshine-fadeOut","Show charity to the needy","home-earthshine","Take care of mother Nature","home-earthshine-fadeOut","Take care of mother Nature","home-socialshine","Spend quality time with your loved ones","home-socialshine-fadeOut","Spend quality time with your loved ones","home-healthshine","Take care of your body","home-healthshine-fadeOut","Take care of your body","home-friendshine-fadeIn","Be friends with Everyone!!!"];
       setTimeout(function(){
       var scroller  = document.getElementsByClassName("sprite");
       var nextfade = 0;
       var nextshow = 0;
-      if(scroller[0].className.split(' ').length > 2){
-        var prevclass = scroller[0].className.split(' ')[2];
+      if(scroller[0].className.split(' ').length > 1){
+        var prevclass = scroller[0].className.split(' ')[1];
         scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);document.getElementById('message').innerHTML = sprites[sprite+1];
         if(sprite!=0 && sprite%2 == 0){
           document.getElementById('message').classList.toggle('demessage');

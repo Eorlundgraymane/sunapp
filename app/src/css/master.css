@@ -128,7 +128,7 @@ background-color: rgba(255,255,255,0.5);
 }
 
 
-.home .sprite-friendshine  {
+.home-sprite-friendshine  {
   opacity: 1;
   width: 275px;
   height: 180px;
@@ -141,7 +141,7 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-duration: 2s;
   -webkit-transition-timing-function: ease;
 }
-.home .sprite-friendshine-fadeOut {
+.home-sprite-friendshine-fadeOut {
   opacity: 0;
   width: 275px;
   height: 180px;
@@ -154,7 +154,7 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-duration: 2s;
   -webkit-transition-timing-function: ease;
 }
-.home .sprite-charityshine {
+.home-sprite-charityshine {
   opacity: 1;
   width: 512px;
   height: 512px;
@@ -167,7 +167,7 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-duration: 2s;
   -webkit-transition-timing-function: ease;
 }
-.home .sprite-charityshine-fadeOut {
+.home-sprite-charityshine-fadeOut {
   opacity: 0;
   width: 512px;
   height: 512px;
@@ -181,7 +181,7 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease;
 }
 
-.home .sprite-earthshine {
+.home-sprite-earthshine {
   opacity: 1;
   width: 512px;
   height: 512px;
@@ -195,7 +195,7 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease;
 }
 
-.home .sprite-earthshine-fadeOut {
+.home-sprite-earthshine-fadeOut {
   opacity: 0;
   width: 512px;
   height: 512px;
@@ -209,7 +209,7 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease;
 }
 
-.home .sprite-socialshine {
+.home-sprite-socialshine {
   opacity: 1;
   width: 600px;
   height: 389px;
@@ -223,7 +223,7 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease;
 }
 
-.home .sprite-socialshine-fadeOut {
+.home-sprite-socialshine-fadeOut {
   opacity: 0;
   width: 600px;
   height: 389px;
@@ -237,7 +237,7 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease;
 }
 
-.home .sprite-friendshine-fadeIn{
+.home-sprite-friendshine-fadeIn{
   opacity: 0;
   width: 275px;
   height: 180px;
