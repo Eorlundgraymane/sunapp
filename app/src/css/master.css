@@ -592,12 +592,11 @@ figcaption{
   width: 10em;
   opacity: 1;
 }
-#shine{
-  padding-right: 50%;
-}
 #shinetablediv{
   height: 2em;
   margin-right: 30%;
+  position: relative;
+  left: 50%;
 }
 th{
   text-align: center;
