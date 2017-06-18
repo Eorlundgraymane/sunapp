@@ -1656,19 +1656,18 @@ function refreshscore(){
   var health = 0;
   data = {"type":"select",
           "args":{
-            "table":"likes",
-            "columns":["post_id",{
-              "name":"post",
-              "columns":["user_id","earthshine","healthshine","charityshine","socialshine"],
-              "where":{
-                "user_id":parseInt(getCookie("hasura_id"))
-              }
-            }]
+            "table":"posts",
+            "columns":["post_id","user_id","earthshine","healthshine","charityshine","socialshine"{
+              "name":"likes",
+              "columns":["liker_id"]
+            }],
+            "where":{
+              "user_id":parseInt(getCookie("hasura_id"))
+            }
           }
 };
 console.log(JSON.stringify(data));
 var query = JSON.stringify(data);
-console.log(query);
 xhr = new XMLHttpRequest();
 var url  = "https://data.unwound15.hasura-app.io/v1/query";
 xhr.open("POST",url,true);
