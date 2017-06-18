@@ -922,6 +922,7 @@ function gohome(){
   window.location = "https://sunshine.unwound15.hasura-app.io/";
 }
 function gopro(){
+  deleteCookie("friendid");
   window.location = "https://sunshine.unwound15.hasura-app.io/home.php";
 }
 function getuser()
