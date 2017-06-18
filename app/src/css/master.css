@@ -594,6 +594,8 @@ figcaption{
 }
 #shinetablediv{
   height: 2em;
+  margin-right: 10%;
+
 }
 th{
   text-align: center;
