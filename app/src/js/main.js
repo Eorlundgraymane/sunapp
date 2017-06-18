@@ -2126,7 +2126,7 @@ function pullfposts(id){
             var likeimg = "css/heart.svg";
             for(liker of likers)
             {
-              if(liker["liker"]["user_id"] == id){
+              if(liker["liker"]["user_id"] == getCookie("hasura_id")){
                 likeimg = "css/generated/health.svg";
                 service = "unlike";
               }
