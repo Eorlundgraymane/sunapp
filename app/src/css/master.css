@@ -6,7 +6,7 @@ body,html{
   background-color:rgba(255, 130, 0, 0.69);
 }
 #trophy{
-  background-image: url('css/trophy.png');
+  background-image: url('trophy.png');
   min-width: 100%;
   min-height: 100%;
 }
