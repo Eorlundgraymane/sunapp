@@ -439,7 +439,7 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease;
 }
 
-#post_title{  
+#post_title{
   word-wrap: break-word;
 }
 #messages{
@@ -485,6 +485,7 @@ background-color: rgba(255,255,255,0.5);
   max-width: 76%;
 }
 #post{
+  font-size: 1%;
   font-weight: bolder;
   position: relative;
   left: -2em;
