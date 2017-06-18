@@ -2,7 +2,7 @@
 <script src = "js/main.js" type = "text/javascript"></script>
 <script>
 if(checkCookie("primarykey")&& checkCookie("friendid")){
-  alert("Hello "+getCookie("primarykey")+" This is the profile page of "+getCookie("friendid")+"!");
+  alert("Hello "+getCookie("primarykey")+" This is the profile page of "+getCookie("friendname")+"!");
 }
 else{
   if(!checkCookie("primarykey")){
