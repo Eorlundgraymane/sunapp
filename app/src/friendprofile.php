@@ -56,7 +56,7 @@
                  <?php include 'friendsfriends.php';?>
                </div>
                <div onload = "keeppulling();" class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "newspane">
-                     <button id = "postpuller" type = "button" class = "btn" onclick = "getfriendpost(parseInt(getCookie('friendid')));" >Pull Latest Post</button>
+                     <button id = "postpuller" type = "button" class = "btn" onclick = "pullfposts(parseInt(getCookie('friendid')));" >Pull Latest Post</button>
                      <ul id = "posts">
 
                      </ul>
