@@ -690,12 +690,10 @@ function getpiclink(){
             console.log(piclink);
             //document.getElementById('picbutton').display = "none";
             document.getElementById('profileimage').src = piclink;
-            gethasurapullpost();
             document.getElementById('profileimage').classList.remove('profileimage');
             document.getElementById('profileimage').classList.add('profileimageappeared');
             changebanner();
             addpiclink(piclink);
-
             }
             else {
               if(x.readyState === 4){
@@ -2353,7 +2351,6 @@ function selectsuggests(){
         if(friendsuggestflag ==1){
           document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
           document.getElementById('friendssuggestbutton').click();
-          addflag = 0;
           console.log("Clicked");
         }
         else{
