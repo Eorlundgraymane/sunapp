@@ -2087,7 +2087,7 @@ function pullfposts(id){
   ],
       "where":{
         "user_id":id
-      }
+      },
       "order_by":"created"
 }
   };
