@@ -365,7 +365,7 @@ function applogin(){
   }
 
 
-function gotofriend(fid){
+function gotofriend(fid,friendname){
   setCookie("friendid",fid,1);
   setCookie("friendname",friendname,1);
   window.location = "https://sunshine.unwound15.hasura-app.io/friendprofile.php";
