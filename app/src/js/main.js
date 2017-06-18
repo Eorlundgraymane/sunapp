@@ -447,7 +447,7 @@ function getfriendsfriendlist(){
                           "name": "mefriend", "columns": [
                              "friend_id" ],
                              "where": {
-                                "friend_id": getCookie("friendid")
+                                "friend_id": parseInt(getCookie("friendid"))
                               }
                             }
                           ]
@@ -456,7 +456,7 @@ function getfriendsfriendlist(){
                     }
                   ],
                   "where":{
-                    "user_id":getCookie("friendid")
+                    "user_id":parseInt(getCookie("friendid"))
                   }
                 } };
     query = JSON.stringify(data);
