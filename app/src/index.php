@@ -21,6 +21,7 @@
           <div class = "col-xs-8 col-sm-8 col-md-8 col-lg-8">
             <div id = "homemessages">
             <div class = "sprite nosprite ">
+              <div class = "forceback"></div>              
               </div>
               <div id = "message" class = "message"></div>
               <script>homescroll()</script>
