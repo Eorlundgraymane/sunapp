@@ -638,7 +638,7 @@ function getfpiclink(id){
           if(checkCookie("primarykey") && !checkCookie("friendid")){
             pullpost(getCookie("friendid"));
           }
-          piclink = json["proimage"];
+          piclink = json[0]["proimage"];
           document.getElementById('profileimage').src = piclink;
           document.getElementById('profileimage').classList.remove('profileimage');
           document.getElementById('profileimage').classList.add('profileimageappeared');
