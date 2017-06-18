@@ -596,7 +596,7 @@ figcaption{
   height: 2em;
   margin-right: 30%;
   position: relative;
-  left: 50%;
+  right: 50%;
 }
 th{
   text-align: center;
