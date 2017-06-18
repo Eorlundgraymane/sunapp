@@ -1683,7 +1683,7 @@ xhr.onreadystatechange = function(){
       console.log(shine);
       }
       else{
-        console.log(no likes);
+        console.log("no likes");
       }
     }
   }
