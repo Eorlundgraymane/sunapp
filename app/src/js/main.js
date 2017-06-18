@@ -1918,7 +1918,7 @@ xhr.onreadystatechange = function(){
 xhr.send(query);
 }
 
-function refreshscore(){
+function refreshfscore(){
   var data = {};
   var earth = 0;
   var friends = 0;
