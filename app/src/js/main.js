@@ -158,7 +158,6 @@ function getallsmileys(){
       }
     }
 }
-
 function appfriendslogin(){
   if(getflag == 1 || (droppeddown == 0 && friendlistflag == 0))
     {
@@ -209,6 +208,57 @@ function appfriendslogin(){
     }
 
 }
+
+
+function appfriendsfriendlogin(){
+  if(getflag == 1 || (droppeddown == 0 && friendlistflag == 0))
+    {
+      document.getElementById('friendslistbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loader.gif'>";
+      xhr = new XMLHttpRequest();
+      var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
+      xhr.open("POST",url,true);
+      xhr.setRequestHeader("Content-type","application/json");
+      xhr.withCredentials = "true";
+      document.getElementById('friendslistbutton').disabled = true;
+      document.getElementById('friendslistbutton').style.cursor = "not-allowed";
+      document.getElementById('logoutbutton').disabled = true;
+      document.getElementById('logoutbutton').style.cursor = "not-allowed";
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4 && xhr.status == 200){
+          var json = JSON.parse(xhr.responseText);
+          console.log(JSON.stringify(json.hasura_id));
+          hasura_id = json.hasura_id;
+          auth_token = "Bearer "+json.auth_token;
+          email = json.email;
+          getfriendslist();
+          getflag = 0;
+        }
+        else if(xhr.readyState == 4) {
+          var json = JSON.parse(xhr.responseText);
+          console.log(JSON.stringify(json));
+          alert(JSON.stringify(json));
+          document.getElementById('friendslistbutton').disabled = true;
+          document.getElementById('friendslistbutton').innerHTML ="<img src = \"css/friendsicon.png\" width = \"50px\" height = \"50px\">";
+          alert("Could'nt get your friend's list at the moment");
+          friendlistflag = 0;
+        }
+      }
+      xhr.send();
+    }
+    else if (droppeddown == 1 && friendlistflag == 1) {
+      droppeddown = 0;
+    }
+    else if(droppeddown == 1 && friendlistflag == 0){
+      droppeddown =0;
+      friendlistflag = 0;
+    }
+    else if(droppeddown == 0 && friendlistflag == 1){
+      droppeddown = 1;
+      friendlistflag = 1;
+    }
+
+}
+
 function addlogin(id,name){
   document.getElementById('friendssuggestbutton').innerHTML = "Adding Friend <img width = '30px' height = '30px' src = 'css/loader.gif'>";
   var buttons = document.getElementsByClassName("btn");
