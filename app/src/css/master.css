@@ -133,7 +133,7 @@ background-color: rgba(255,255,255,0.5);
   width: 275px;
   height: 180px;
   background-position: -200px -200px;
-  zoom: 1;
+  zoom: 0.5;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
@@ -146,7 +146,7 @@ background-color: rgba(255,255,255,0.5);
   width: 275px;
   height: 180px;
   background-position: 0 -490px;
-  zoom: 1;
+  zoom: 0.5;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
@@ -159,7 +159,7 @@ background-color: rgba(255,255,255,0.5);
   width: 512px;
   height: 512px;
   background-position: -200px -780px;
-  zoom: 0.5;
+  zoom: 0.25;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
@@ -172,7 +172,7 @@ background-color: rgba(255,255,255,0.5);
   width: 512px;
   height: 512px;
   background-position: 0 -1236px;
-  zoom: 0.5;
+  zoom: 0.25;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
@@ -186,7 +186,7 @@ background-color: rgba(255,255,255,0.5);
   width: 512px;
   height: 512px;
   background-position: -200px -1692px;
-  zoom: 0.5;
+  zoom: 0.25;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
@@ -200,7 +200,7 @@ background-color: rgba(255,255,255,0.5);
   width: 512px;
   height: 512px;
   background-position: 0 -2148px;
-  zoom: 0.5;
+  zoom: 0.25;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
@@ -214,7 +214,7 @@ background-color: rgba(255,255,255,0.5);
   width: 600px;
   height: 389px;
   background-position: -200px -2604px;
-  zoom: .5;
+  zoom: .25;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
@@ -228,7 +228,7 @@ background-color: rgba(255,255,255,0.5);
   width: 600px;
   height: 389px;
   background-position: 0 -2998px;
-  zoom: .5;
+  zoom: .25;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
@@ -236,6 +236,24 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-duration: 2s;
   -webkit-transition-timing-function: ease;
 }
+
+.home .sprite-friendshine-fadeIn{
+  opacity: 0;
+  width: 275px;
+  height: 180px;
+  background-position: 0 -0;
+  zoom: 0.5;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease;
+}
+
+
+
+
 
 .sprite-friendshine {
   opacity: 1;
