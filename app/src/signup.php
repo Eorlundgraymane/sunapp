@@ -1,4 +1,4 @@
-<div id  = "signupdiv" class = "col-xs-pull-4 col-sm-4 col-lg-4 col-md-4">
+<div id  = "signupdiv" class = "col-xs-4 col-sm-4 col-lg-4 col-md-4">
 <form methhod = "POST" action = "/home.php" name = "signup" id = "signup">
   <input type = "text" name = "fname" id = "fname" placeholder="First Name" onchange = "updateusername()">
   <input type = "text" name = "lname" id  = "lname" placeholder="Last Name" onchange = "updateusername()"><br>
