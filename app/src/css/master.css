@@ -10,8 +10,7 @@ body,html{
   left:45%;
 }
 #lead{
-  text-align: center;
-  text-indent: 30%;
+  text-align: center;  
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
