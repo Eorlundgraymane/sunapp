@@ -7,6 +7,8 @@ body,html{
 }
 #trophy{
   background-image: url('css/trophy.png');
+  min-width: 100%;
+  min-height: 100%;
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
