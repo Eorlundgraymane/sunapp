@@ -9,6 +9,9 @@ body,html{
   position: relative;
   left:45%;
 }
+#lead{
+  text-align: center;
+}
 #friendslist,#friendssuggest{
   list-style-type: none;
   background-color:rgba(88, 185, 83,1);
