@@ -710,7 +710,6 @@ function getpiclink(){
 
         }
         else{
-          if(checkCookie("primarykey") && !checkCookie("friendid")){
             gethasurapullpost();
           }
           piclink = json[0]["profile"][0]["proimage"];
