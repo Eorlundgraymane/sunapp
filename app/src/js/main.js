@@ -2352,6 +2352,7 @@ function selectsuggests(){
         if(friendsuggestflag ==1){
           document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
           document.getElementById('friendssuggestbutton').click();
+          console.log("Clicked");
         }
         else{
           document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
