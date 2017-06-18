@@ -2350,6 +2350,11 @@ function selectsuggests(){
         }
         if(friendsuggestflag ==1){
           document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
+          var btns = document.getElementsByClassName('btn');
+          for(each of btns){
+            each.disabled = false;
+            each.style.cursor = "pointer";
+        }
           document.getElementById('friendssuggestbutton').click();
           console.log("Clicked");
         }
