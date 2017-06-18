@@ -428,7 +428,7 @@ background-color: rgba(255,255,255,0.5);
   opacity: 0;
   width: 275px;
   height: 180px;
-  background-position: 0 -0;
+  background-position: 0 0;
   zoom: 50%;
   transition-property: all;
   transition-duration: 2s;
