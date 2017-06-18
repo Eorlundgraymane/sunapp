@@ -633,8 +633,8 @@ function getfpiclink(id){
   xhr.onreadystatechange = function(){
     console.log('xhr readystatechange');
     if(xhr.readyState == 4 && xhr.status == 200){
-      console.log(json);
       var json = JSON.parse(xhr.responseText);
+      console.log(json);
           if(checkCookie("primarykey") && !checkCookie("friendid")){
             pullpost(getCookie("friendid"));
           }
