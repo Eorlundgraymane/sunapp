@@ -11,7 +11,7 @@
         </ul><br>
         <div id = "messages">
         <div class = "col-xs-3 col-md-3 col-lg-3 col-sm-3 sprite nosprite">
-        </div><br><br><br><br><br><br><br><br>
+        </div><br><br><br><br><br><br>
           <div id = "message" class = "message"></div>
           <script>sunshinescroll()</script>
         </div>
