@@ -475,7 +475,7 @@ function getfriendsfriendlist(){
           document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Send some requests first.</li>";
           document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "50px" height = "50px">';
           console.log(json);
-          console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
+          console.log(JSON.stringify(json[0]["mefriend"].length));
           friendlistflag = 0;
           droppeddown = 0;
         }
