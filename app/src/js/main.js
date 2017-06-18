@@ -1648,7 +1648,7 @@ function tablelogin(){
   }
 }
 
-function addscore(){
+function addscore(e,s,c,h){
   var data = {};
   data = {"type":"select",
           "args":{
