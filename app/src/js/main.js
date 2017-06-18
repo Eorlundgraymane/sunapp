@@ -2068,6 +2068,7 @@ function loadtable(){
 }
 
 function pullfposts(id){
+  document.getElementById('postpuller').innerHTML = "Pulling latest Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
   var data = {"type":"select","args":{
     "table":"posts",
     "columns":["post","user_id","id","postimg","created","title",
@@ -2182,9 +2183,11 @@ function pullfposts(id){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
+    document.getElementById('postpuller').innerHTML = "Refresh Posts";
     changebanner();
     }
     else if (xhr.readyState == 4) {
+      document.getElementById('postpuller').innerHTML = "Error";
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
