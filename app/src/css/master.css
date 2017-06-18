@@ -471,8 +471,7 @@ background-color: rgba(255,255,255,0.5);
   margin-top: 1%;
 }
 #friendsbuttons{
-  padding: 0;
-  margin: 0;
+  margin-top: 1em;
 }
 #post_image{
   max-width : 100%;
@@ -521,10 +520,12 @@ background-color: rgba(255,255,255,0.5);
   text-decoration: underline;
 }
 #friendssuggestbutton{
-  margin-bottom: 5px;
+  margin: 0;
+  padding: 0;
 }
 #friendslistbutton{
-  margin-bottom: 5px;
+  margin: 0;
+  padding: 0;
 }
 #friendspane{
   background-color:rgba(88, 185, 83,1);
