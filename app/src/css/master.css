@@ -7,7 +7,7 @@ body,html{
 }
 #trophy{
   position: relative;
-  right: 50%;
+  left: 50%;
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
