@@ -1571,7 +1571,6 @@ function like(id,liker_id){
       console.log("Liked");
       var res = JSON.parse(xhr.responseText);
       console.log(res);
-      alert("liked");
       gethasurapullpost();
     }
     else if(xhr.readyState == 4) {
@@ -1604,8 +1603,7 @@ function unlike(id,liker_id){
     if(xhr.readyState == 4 && xhr.status == 200){
       console.log("Liked");
       var res = JSON.parse(xhr.responseText);
-      console.log(res);
-      alert("unliked");
+      console.log(res);      
       gethasurapullpost();
     }
     else if(xhr.readyState == 4) {
