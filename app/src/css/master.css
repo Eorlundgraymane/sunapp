@@ -125,9 +125,13 @@ background-color: rgba(255,255,255,0.5);
 }
 .nosprite{
   opacity: 0;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease;
 }
-
-
 .home-sprite-friendshine  {
   opacity: 1;
   width: 275px;
