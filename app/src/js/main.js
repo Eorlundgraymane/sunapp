@@ -2070,7 +2070,7 @@ function loadtable(){
 function pullfposts(id){
   var data = {"type":"select","args":{
     "table":"posts",
-    "columns":["post","id","postimg","created","title",
+    "columns":["post","user_id","id","postimg","created","title",
       {
         "name":"author",
         "columns":["fname","proimage","user_id"]
@@ -2085,6 +2085,9 @@ function pullfposts(id){
       ]
       }
   ],
+      "where":{
+        "user_id":id
+      }
       "order_by":"created"
 }
   };
