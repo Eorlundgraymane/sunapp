@@ -627,7 +627,7 @@ function getfpiclink(id){
       var json = JSON.parse(xhr.responseText);
       console.log(json);
           if(checkCookie("primarykey") && !checkCookie("friendid")){
-          pullposts(getCookie("friendid"));
+          pullfposts(getCookie("friendid"));
           }
           piclink = json[0]["proimage"];
           document.getElementById('profileimage').src = piclink;
@@ -2065,6 +2065,134 @@ function loadtable(){
     }
     loadflag = 1;
     xhr.send(query);
+}
+
+function pullfposts(id){
+  var data = {"type":"select","args":{
+    "table":"posts",
+    "columns":["post","id","postimg","created","title",
+      {
+        "name":"author",
+        "columns":["fname","proimage","user_id"]
+      },
+      {
+        "name":"likers",
+        "columns":["liker_id",
+        {
+          "name":"liker",
+          "columns":["fname","user_id","proimage"]
+        }
+      ]
+      }
+  ],
+      "order_by":"created"
+}
+  };
+  var query = JSON.stringify(data);
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  xhr = new XMLHttpRequest();
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    document.getElementById('posts').innerHTML = "";
+    if(xhr.readyState == 4 && xhr.status == 200){
+      document.getElementById('postpuller').innerHTML = "Refresh Posts";
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      console.log(JSON.stringify(res));
+      var reverpost = res.reverse();
+      for(each of reverpost){
+        console.log(each);
+        var postimg = each["postimg"];
+        var post = each["post"];
+        var title = each["title"];
+        var postid = each["id"];
+        var timestamp = time_ago(each["created"]);
+        var author_img = each["author"]["proimage"];
+        var author_name = each["author"]["fname"];
+        var author_id = each["author"]["user_id"];
+        var likers = each["likers"];
+        console.log(likers);
+        console.log(id);
+        if(author_id == id){
+          if(likers.length == 0){
+            var likeimg = "css/heart.svg";
+              document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img width = "80em" height = "80em" id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+id+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!! </div></figure></li>';
+          }
+          else{
+            var liketitle = "";
+            var service = "like";
+            var count = 0;
+            var likeimg = "css/heart.svg";
+            for(liker of likers)
+            {
+              if(liker["liker"]["user_id"] == id){
+                likeimg = "css/generated/health.svg";
+                service = "unlike";
+              }
+              if(count <= 10){
+                liketitle += "<img class = 'likers' width = '30px' height = '30px' src = '"+liker['liker']['proimage']+"' title = '"+liker["liker"]["fname"]+"'>";
+                count++;
+              }
+              else{
+                liketitle += "and others ";
+                break;
+              }
+            }
+            console.log(liketitle);
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+id+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
+          }
+        }
+        else{
+            if(likers.length == 0){
+              var likeimg = "css/heart.svg";
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+id+');"><img id = "img'+postid+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!!</div></figure></li>';
+          }
+          else{
+            var service = "like";
+            var likeimg = "css/heart.svg";
+            var liketitle = "";
+            var count = 0;
+            for(liker of likers)
+            {
+              if(liker["liker"]["user_id"] == id){
+                likeimg = "css/generated/health.svg";
+                service = "unlike";
+              }
+              if(count <= 10){
+                liketitle += "<img class = 'likers' width = '30px' height = '30px' src = '"+liker['liker']['proimage']+"' title = '"+liker["liker"]["fname"]+"'>";
+                count++;
+              }
+              else {
+                liketitle += "and others ";
+                break;
+              }
+            }
+            console.log(liketitle);
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+id+');"><img id = "img'+postid+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
+          }
+        }
+      }
+      var btns = document.getElementsByClassName('btn');
+      for(each of btns){
+        each.disabled = false;
+        each.style.cursor = "pointer";
+    }
+    changebanner();
+    }
+    else if (xhr.readyState == 4) {
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      console.log(JSON.stringify(res));
+      var btns = document.getElementsByClassName('btn');
+      for(each of btns){
+        each.disabled = false;
+        each.style.cursor = "pointer";
+    }
+    }
+  }
+  xhr.send(query);
 }
 
 
