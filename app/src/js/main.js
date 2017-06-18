@@ -284,6 +284,18 @@ function gethasurapushpost(){
   }
   xhr.send();
 }
+
+
+
+
+
+
+
+
+
+
+
+
 function gethasurapullpost(){
   document.getElementById('postpuller').innerHTML = "Pulling latest Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
   var btns = document.getElementsByClassName('btn');
@@ -461,6 +473,60 @@ function addpiclink(link){
   }
   xhr.send(query);
 }
+
+function getfpiclink(id){
+  console.log('piclink called');
+  var piclink;
+  var proname;
+  var data = {};
+  data["type"] = "select";
+  data["args"] = {};
+  data["args"] = {
+    "table" : "profile",
+    "columns":["proimage"],
+    "where":{
+      "user_id":id
+    }
+  };
+  var query = JSON.stringify(data);
+  console.log(query);
+  xhr = new XMLHttpRequest();
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    console.log('xhr readystatechange');
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+          if(checkCookie("primarykey") && !checkCookie("friendid")){
+            pullpost(getCookie("friendid"));
+          }
+          piclink = json["proimage"];
+          document.getElementById('profileimage').src = piclink;
+          document.getElementById('profileimage').classList.remove('profileimage');
+          document.getElementById('profileimage').classList.add('profileimageappeared');
+        }
+    else if(xhr.readyState ==4) {
+      alert(JSON.stringify(json));
+    }
+    }
+
+  xhr.send(query);
+  console.log('hasura call sent' );
+}
+
+
+
+
+
+
+
+
+
+
+
+
 function getpiclink(){
   console.log('piclink called');
   var piclink;
