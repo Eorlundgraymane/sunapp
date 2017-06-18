@@ -686,7 +686,7 @@ function sunshinescroll(){
 
 function homescroll(){
   var sprites = {};
-    sprites = ["home-friendshine","Be friends with Everyone!!!","home-friendshine-fadeOut","Be friends with Everyone!!!","home-charityshine","Show charity to the needy","home-charityshine-fadeOut","Show charity to the needy","home-earthshine","Take care of mother Nature","home-earthshine-fadeOut","Take care of mother Nature","home-socialshine","Spend quality time with your loved ones","home-socialshine-fadeOut","Spend quality time with your loved ones","home-healthshine","Take care of your body","home-healthshine-fadeOut","Take care of your body","home-friendshine-fadeIn","Be friends with Everyone!!!"];
+    sprites = ["home-sprite-friendshine","Be friends with Everyone!!!","home-sprite-friendshine-fadeOut","Be friends with Everyone!!!","home-sprite-charityshine","Show charity to the needy","home-sprite-charityshine-fadeOut","Show charity to the needy","home-sprite-earthshine","Take care of mother Nature","home-sprite-earthshine-fadeOut","Take care of mother Nature","home-sprite-socialshine","Spend quality time with your loved ones","home-sprite-socialshine-fadeOut","Spend quality time with your loved ones","home-sprite-healthshine","Take care of your body","home-sprite-healthshine-fadeOut","Take care of your body","home-sprite-friendshine-fadeIn","Be friends with Everyone!!!"];
       setTimeout(function(){
       var scroller  = document.getElementsByClassName("sprite");
       var nextfade = 0;
