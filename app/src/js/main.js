@@ -411,11 +411,11 @@ function applogin(){
       xhr.send();
     }
 
-    else if(suggesiondrop  == 1) {
+    else if(suggesiondrop  == 1 && friendsuggestflag == 1) {
     document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
     suggesiondrop  = 0;
     }
-    else if(friendsuggestflag == 1){
+    else if(suggesiondrop == 0 && friendsuggestflag == 1){
     document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
     suggesiondrop  =1;
     }
@@ -2370,7 +2370,7 @@ function selectsuggests(){
           each.style.cursor = "pointer";
       }
       friendlistflag = 0;
-      droppeddown = 0;      
+      droppeddown = 0;
     }
     else if(xhr.readyState ==4) {
       document.getElementById('friendssuggestbutton').innerHTML = "Error";
