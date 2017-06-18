@@ -1787,8 +1787,7 @@ function loadtable(){
     var id = parseInt(getCookie("hasura_id"));
     data["args"]["where"]["user_id"] = id;
     var query = JSON.stringify(data);
-    console.log(query);
-    alert("Load table function coming soon....");
+    console.log(query);    
     xhr = new XMLHttpRequest();
     var url  = "https://data.unwound15.hasura-app.io/v1/query";
     xhr.open("POST",url,true);
