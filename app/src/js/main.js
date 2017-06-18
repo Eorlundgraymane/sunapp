@@ -413,12 +413,10 @@ function applogin(){
 
     else if(suggesiondrop  == 1) {
     document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
-    document.getElementById('friendssuggestbutton').collapse();
     suggesiondrop  = 0;
     }
     else if(friendsuggestflag == 1){
     document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
-    document.getElementById('friendssuggestbutton').collapse();
     suggesiondrop  =1;
     }
   }
