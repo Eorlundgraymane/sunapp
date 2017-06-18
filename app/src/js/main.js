@@ -338,14 +338,6 @@ function gethasurapushpost(){
 
 
 
-
-
-
-
-
-
-
-
 function gethasurapullpost(){
   document.getElementById('postpuller').innerHTML = "Pulling latest Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
   var btns = document.getElementsByClassName('btn');
@@ -635,7 +627,7 @@ function getfpiclink(id){
       var json = JSON.parse(xhr.responseText);
       console.log(json);
           if(checkCookie("primarykey") && !checkCookie("friendid")){
-            pullpost(getCookie("friendid"));
+          pullposts(getCookie("friendid"));
           }
           piclink = json[0]["proimage"];
           document.getElementById('profileimage').src = piclink;
