@@ -1685,7 +1685,8 @@ function loadtable(){
     data["args"]["table"] = "profile";
     data["args"]["columns"] = ["healthshine","charityshine","socialshine","friendshine","earthshine"];
     data["args"]["where"] = {};
-    data["args"]["where"]["user_id"] = getCookie("hasura_id");
+    var id = parseInt(getCookie("hasura_id"));
+    data["args"]["where"]["user_id"] = id;
     var query = JSON.stringify(data);
     console.log(query);
     alert("Load table function coming soon....");
