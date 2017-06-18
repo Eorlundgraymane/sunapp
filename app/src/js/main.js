@@ -1713,6 +1713,7 @@ xhr.onreadystatechange = function(){
         console.log(JSON.parse(txhr.responseText));
       }
     }
+    txhr.send(addscorequery);
   }
   else if(xhr.readyState == 4){
     var json = JSON.parse(xhr.responseText);
