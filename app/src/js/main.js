@@ -2370,8 +2370,7 @@ function selectsuggests(){
           each.style.cursor = "pointer";
       }
       friendlistflag = 0;
-      droppeddown = 0;
-      getfriendslist();
+      droppeddown = 0;      
     }
     else if(xhr.readyState ==4) {
       document.getElementById('friendssuggestbutton').innerHTML = "Error";
