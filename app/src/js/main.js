@@ -1755,10 +1755,12 @@ xhr.onreadystatechange = function(){
     console.log(JSON.stringify(json));
     for(shine of json){
       if(shine["likers"].length>0){
-      earth+=shine["earthshine"];
-      social+=shine["socialshine"];
-      charity+=shine["charityshine"];
-      health+=shine["healthshine"];
+        for(liker of shine["likers"]){
+          earth+=shine["earthshine"];
+          social+=shine["socialshine"];
+          charity+=shine["charityshine"];
+          health+=shine["healthshine"];
+        }
       }
       else{
         console.log("no likes");
@@ -1787,7 +1789,7 @@ function loadtable(){
     var id = parseInt(getCookie("hasura_id"));
     data["args"]["where"]["user_id"] = id;
     var query = JSON.stringify(data);
-    console.log(query);    
+    console.log(query);
     xhr = new XMLHttpRequest();
     var url  = "https://data.unwound15.hasura-app.io/v1/query";
     xhr.open("POST",url,true);
