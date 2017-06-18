@@ -520,11 +520,11 @@ background-color: rgba(255,255,255,0.5);
   text-decoration: underline;
 }
 #friendssuggestbutton{
-  margin: 0;
+  margin-top: 1%;
   padding: 0;
 }
 #friendslistbutton{
-  margin: 0;
+  margin-top: 1%;
   padding: 0;
 }
 #friendspane{
