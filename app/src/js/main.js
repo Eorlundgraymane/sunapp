@@ -1015,9 +1015,10 @@ function clearCookies(){
       loginbutton.style.disabled = true;
       loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
+      setCookie("hasura_id",json.hasura_id,10);
       auth_token = "Bearer "+json.auth_token;
-      setCookie("primarykey",document.getElementById('primarykey').value,1);
-      setCookie("password",document.getElementById('password').value,1);
+      setCookie("primarykey",document.getElementById('primarykey').value,10);
+      setCookie("password",document.getElementById('password').value,10);
       console.log(document.cookie);
       getuser();
     }
@@ -1676,7 +1677,6 @@ xhr.onreadystatechange = function(){
   }
 }
 xhr.send(query);
-}
 function loadtable(){
     var data = {};
     data["type"] = "select";
@@ -1684,7 +1684,7 @@ function loadtable(){
     data["args"]["table"] = "profile";
     data["args"]["columns"] = ["healthshine","charityshine","socialshine","friendshine","earthshine"];
     data["args"]["where"] = {};
-    data["args"]["where"]["user_id"] = hasura_id;
+    data["args"]["where"]["user_id"] = getCookie("hasura_id");
     var query = JSON.stringify(data);
     console.log(query);
     alert("Load table function coming soon....");
