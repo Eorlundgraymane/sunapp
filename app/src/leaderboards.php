@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sunshine | Leaderboard</title>
-    <?php include 'headerprereqes.php';?>
+    <?php include 'headprereqes.php';?>
   </head>
   <body >
     <row>
