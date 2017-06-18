@@ -9,7 +9,7 @@
       </button>
         <ul class = "collapse" id = "friendssuggest">
         </ul><br>
-        <div id = "messages">
+        <div class = "forceback" id = "messages">
         <div class = "sprite nosprite">
           </div>
           <div id = "message" class = "message"></div>
