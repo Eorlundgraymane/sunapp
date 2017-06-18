@@ -1680,7 +1680,14 @@ xhr.onreadystatechange = function(){
     console.log(JSON.stringify(json));
     for(shine of json){
       if(shine["likers"].length>0){
-      console.log(shine);
+      earth+=shine["earthshine"];
+      social+=shine["socialshine"];
+      charity+=shine["charityshine"];
+      health+=shine["healthshine"];
+      console.log("Earth :"+earth);
+      console.log("Charity :"+charity);
+      console.log("Social :"+social);
+      console.log("Health :"+health);
       }
       else{
         console.log("no likes");
