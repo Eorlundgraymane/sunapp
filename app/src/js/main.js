@@ -1685,11 +1685,11 @@ xhr.onreadystatechange = function(){
       "args":{
         "table":"profile",
         "$set":{
-          "earthshine":e;,
-          "socialshine":s;,
-          "healthshine":h;,
-          "friendshine":f;,
-          "charityshine":c;
+          "earthshine":e,
+          "socialshine":s,
+          "healthshine":h,
+          "friendshine":f,
+          "charityshine":c
         },
         "where":{
           "user_id":parseInt(getCookie("hasura_id"))
