@@ -455,7 +455,7 @@ function getfriendsfriendlist(){
                       ]
                     }
                   ],
-                  ,"where":{
+                  "where":{
                     "user_id":getCookie("friendid")
                   }
                 } };
