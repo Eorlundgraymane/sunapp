@@ -471,7 +471,7 @@ function getfriendsfriendlist(){
           document.getElementById('friendslist').innerHTML = "";
           var json = JSON.parse(xhr.responseText);
           console.log(json);
-          if(json[0]["profile"][0]["mefriend"].length == 0){
+          if(json[0]["mefriend"].length == 0){
           document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Send some requests first.</li>";
           document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "50px" height = "50px">';
           console.log(json);
