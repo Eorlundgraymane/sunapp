@@ -814,7 +814,6 @@ input,select,textarea {
   margin: 0;
   min-width: 100%;
   text-align: center;
-  z-index: 999;
   color: white;
   font-weight: bolder;
   font-style: italic;
