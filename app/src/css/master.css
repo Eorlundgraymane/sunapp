@@ -11,6 +11,7 @@ body,html{
 }
 #lead{
   text-align: center;
+  text-indent: 50%;
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
