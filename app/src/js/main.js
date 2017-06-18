@@ -659,7 +659,7 @@ function sunshinescroll(){
       var scroller  = document.getElementsByClassName("sprite");
       var nextfade = 0;
       var nextshow = 0;
-      if(scroller[0].className.split(' ').length > 2){
+      if(scroller[0].className.split(' ').length > 1){
         var prevclass = scroller[0].className.split(' ')[2];
         scroller[0].classList.add("sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);document.getElementById('message').innerHTML = sprites[sprite+1];
         if(sprite!=0 && sprite%2 == 0){
@@ -691,7 +691,7 @@ function homescroll(){
       var scroller  = document.getElementsByClassName("sprite");
       var nextfade = 0;
       var nextshow = 0;
-      if(scroller[0].className.split(' ').length > 1){
+      if(scroller[0].className.split(' ').length > 2){
         var prevclass = scroller[0].className.split(' ')[2];
         scroller[0].classList.add("home-sprite-"+sprites[sprite]);scroller[0].classList.remove(prevclass);document.getElementById('message').innerHTML = sprites[sprite+1];
         if(sprite!=0 && sprite%2 == 0){
