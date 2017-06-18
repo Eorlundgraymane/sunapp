@@ -634,7 +634,13 @@ function getfpiclink(id){
     console.log('xhr readystatechange');
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-
+          if(checkCookie("primarykey") && !checkCookie("friendid")){
+            pullpost(getCookie("friendid"));
+          }
+          piclink = json["proimage"];
+          document.getElementById('profileimage').src = piclink;
+          document.getElementById('profileimage').classList.remove('profileimage');
+          document.getElementById('profileimage').classList.add('profileimageappeared');
         }
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
