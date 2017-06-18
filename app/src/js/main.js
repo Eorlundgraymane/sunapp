@@ -629,10 +629,8 @@ function getfpiclink(id){
           piclink = json[0]["proimage"];
           document.getElementById('profileimage').src = piclink;
           document.getElementById('profileimage').classList.remove('profileimage');
-          document.getElementById('profileimage').classList.add('profileimageappeared');
-          if(checkCookie("primarykey") && checkCookie("friendid")){
+          document.getElementById('profileimage').classList.add('profileimageappeared');          
           pullfposts(getCookie("friendid"));
-          }
         }
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
