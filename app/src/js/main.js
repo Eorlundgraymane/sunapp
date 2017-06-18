@@ -626,13 +626,13 @@ function getfpiclink(id){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(json);
-          if(checkCookie("primarykey") && !checkCookie("friendid")){
-          pullfposts(getCookie("friendid"));
-          }
           piclink = json[0]["proimage"];
           document.getElementById('profileimage').src = piclink;
           document.getElementById('profileimage').classList.remove('profileimage');
           document.getElementById('profileimage').classList.add('profileimageappeared');
+          if(checkCookie("primarykey") && checkCookie("friendid")){
+          pullfposts(getCookie("friendid"));
+          }
         }
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
