@@ -441,11 +441,9 @@ background-color: rgba(255,255,255,0.5);
 
 #messages{
   margin-top: 1%;
-  max-width: 100%;
 }
 #homemessages{
-  padding-left: 10%;
-  max-width: 100%;
+  padding-left: 10%;  
 }
 .message{
   color: white;
