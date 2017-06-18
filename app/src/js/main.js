@@ -707,11 +707,11 @@ function homescroll(){
       }
       sprite+=2;
       if(sprite < sprites.length){
-        sunshinescroll();
+        homescroll();
       }
       else{
         sprite = 0;
-        sunshinescroll();
+        homescroll();
       }
     },5000)
 }
