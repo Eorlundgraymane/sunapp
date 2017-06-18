@@ -20,7 +20,7 @@
         <div class = "regpane col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class = "col-xs-8 col-sm-8 col-md-8 col-lg-8">
             <div id = "homemessages">
-            <div class = "sprite nosprite ">              
+            <div class = "col-xs-3 col-md-3 col-lg-3 col-sm-3 sprite nosprite ">              
               </div>
               <div id = "message" class = "message"></div>
               <script>homescroll()</script>
