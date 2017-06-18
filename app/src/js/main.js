@@ -480,7 +480,7 @@ function getfriendsfriendlist(){
           droppeddown = 0;
         }
         else if(json[0]["mefriend"].length > 0){
-          for(myfid of json["mefriend"])
+          for(myfid of json[0]["mefriend"])
           {
             if(myfid["friend_id"] != getCookie("friendid")){
               console.log(myfid);
