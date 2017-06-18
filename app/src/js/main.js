@@ -2347,6 +2347,7 @@ function selectsuggests(){
           propic = users["proimage"];
           document.getElementById('friendssuggest').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src =\""+propic+"\"><figcaption>"+suggestname+"<button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">Add</figcaption></figure></li>";
           friendsuggestflag = 1;
+          console.log("gonna click");
           }
         }
         if(friendsuggestflag ==1){
