@@ -1663,7 +1663,7 @@ function addscore(e,s,c,h){
         "user_id":parseInt(getCookie("hasura_id"))
       }
       }
-    }
+    };
 console.log(JSON.stringify(data));
 var query = JSON.stringify(data);
 xhr = new XMLHttpRequest();
@@ -1684,7 +1684,7 @@ xhr.onreadystatechange = function(){
     console.log(JSON.stringify(json));
   }
 }
-xhr.send(data);
+xhr.send(query);
 }
 function refreshscore(){
   var data = {};
