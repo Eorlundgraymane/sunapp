@@ -481,7 +481,7 @@ function getfriendsfriendlist(){
         else if(json[0]["profile"][0]["mefriend"].length > 0){
           for(myfid of json[0]["profile"][0]["mefriend"])
           {
-            if(myfid["friend_id"] != hasura_id){
+            if(myfid["friend_id"] != getCookie("friendid")){
               console.log(myfid);
               console.log("JSON RESPONSE: "+JSON.stringify(json));
               console.log(myfid["friend_profile"]["fname"]);
@@ -508,8 +508,6 @@ function getfriendsfriendlist(){
         }
         getflag =0;
         document.getElementById('friendslistbutton').disabled = false;
-        document.getElementById('friendssuggestbutton').disabled = false;
-        document.getElementById('friendssuggestbutton').style.cursor = "pointer";
         document.getElementById('friendslistbutton').style.cursor = "pointer";
         document.getElementById('logoutbutton').disabled = false;
         document.getElementById('logoutbutton').style.cursor = "pointer";
