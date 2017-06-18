@@ -8,7 +8,7 @@ body,html{
 #trophy{
   background-image: url('trophy.png');
   min-width: 20%;
-  max-height: 50%;
+  min-height: 50%;
   background-repeat: no-repeat;
   background-size: contain;
 }
