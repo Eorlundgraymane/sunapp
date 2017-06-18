@@ -1654,11 +1654,11 @@ function refreshscore(){
             "table":"likes",
             "columns":["post_id",{
               "name":"post",
-              "columns":["user_id","earthshine","healthshine","charityshine","socialshine"]
-            }],
-            "where":{
-              "post.user_id": parseInt(getCookie("hasura_id"))
-            }
+              "columns":["user_id","earthshine","healthshine","charityshine","socialshine"],
+              "where":{
+                "user_id":parseInt(getCookie("hasura_id"))
+              }
+            }]
           }
 };
 console.log(JSON.stringify(data));
