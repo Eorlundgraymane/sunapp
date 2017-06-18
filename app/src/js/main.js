@@ -1679,7 +1679,12 @@ xhr.onreadystatechange = function(){
     var json = JSON.parse(xhr.responseText);
     console.log(JSON.stringify(json));
     for(shine of json){
+      if(shine["likers"].length>0){
       console.log(shine);
+      }
+      else{
+        console.log(no likes);
+      }
     }
   }
   else if(xhr.readyState ==4){
