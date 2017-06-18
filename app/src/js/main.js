@@ -1659,9 +1659,11 @@ function addscore(e,s,c,h){
         "columns":["friend_id"]
           }
       ],
-      "where":{"user_id":parseInt(getCookie("hasura_id"))}
+      "where":{
+        "user_id":parseInt(getCookie("hasura_id"))
       }
-    };
+      }
+    }
 console.log(JSON.stringify(data));
 var query = JSON.stringify(data);
 xhr = new XMLHttpRequest();
