@@ -136,8 +136,8 @@ background-color: rgba(255,255,255,0.5);
 
 .home-sprite-friendshine  {
   opacity: 1;
-  width: 275px;
-  height: 180px;
+  max-width: 275px;
+  max-height: 180px;
   background-position: -200px -200px;
   transition-property: all;
   transition-duration: 2s;
@@ -148,8 +148,8 @@ background-color: rgba(255,255,255,0.5);
 }
 .home-sprite-friendshine-fadeOut {
   opacity: 0;
-  width: 275px;
-  height: 180px;
+  max-width: 275px;
+  max-height: 180px;
   background-position: 0 -490px;
   transition-property: all;
   transition-duration: 2s;
@@ -160,8 +160,8 @@ background-color: rgba(255,255,255,0.5);
 }
 .home-sprite-charityshine {
   opacity: 1;
-  width: 512px;
-  height: 512px;
+  max-width: 512px;
+  max-height: 512px;
   background-position: -200px -780px;
   zoom:0.5;
   transition-property: all;
@@ -173,8 +173,8 @@ background-color: rgba(255,255,255,0.5);
 }
 .home-sprite-charityshine-fadeOut {
   opacity: 0;
-  width: 512px;
-  height: 512px;
+  max-width: 512px;
+  max-height: 512px;
   background-position: 0 -1236px;
   zoom:0.5;
   transition-property: all;
@@ -187,8 +187,8 @@ background-color: rgba(255,255,255,0.5);
 
 .home-sprite-earthshine {
   opacity: 1;
-  width: 512px;
-  height: 512px;
+  max-width: 512px;
+  max-height: 512px;
   background-position: -200px -1692px;
   zoom:0.5;
   transition-property: all;
@@ -201,8 +201,8 @@ background-color: rgba(255,255,255,0.5);
 
 .home-sprite-earthshine-fadeOut {
   opacity: 0;
-  width: 512px;
-  height: 512px;
+  max-width: 512px;
+  max-height: 512px;
   zoom:0.5;
   background-position: 0 -2148px;
   transition-property: all;
@@ -215,8 +215,8 @@ background-color: rgba(255,255,255,0.5);
 
 .home-sprite-socialshine {
   opacity: 1;
-  width: 600px;
-  height: 389px;
+  max-width: 600px;
+  max-height: 389px;
   background-position: -200px -2604px;
   zoom:0.5;
   transition-property: all;
@@ -229,8 +229,8 @@ background-color: rgba(255,255,255,0.5);
 
 .home-sprite-socialshine-fadeOut {
   opacity: 0;
-  width: 600px;
-  height: 389px;
+  max-width: 600px;
+  max-height: 389px;
   background-position: 0 -2998px;
   zoom:0.5;
   transition-property: all;
@@ -244,8 +244,8 @@ background-color: rgba(255,255,255,0.5);
 
 .home-sprite-healthshine {
   opacity: 1;
-  width: 290px;
-  height: 290px;
+  max-width: 290px;
+  max-height: 290px;
   filter: saturate(200%);
   background-position: -200px -3393px;
   transition-property: all;
@@ -257,8 +257,8 @@ background-color: rgba(255,255,255,0.5);
 }
 .home-sprite-healthshine-fadeOut {
   opacity: 0;
-  width: 290px;
-  height: 290px;
+  max-width: 290px;
+  max-height: 290px;
   filter: saturate(200%);
   background-position: 0 -3593px;
   transition-property: all;
@@ -271,8 +271,8 @@ background-color: rgba(255,255,255,0.5);
 
 .home-sprite-friendshine-fadeIn{
   opacity: 0;
-  width: 275px;
-  height: 180px;
+  max-width: 275px;
+  max-height: 180px;
   background-position: 0 0;
   transition-property: all;
   transition-duration: 2s;
@@ -288,8 +288,8 @@ background-color: rgba(255,255,255,0.5);
 
 .sprite-friendshine {
   opacity: 1;
-  width: 275px;
-  height: 180px;
+  max-width: 275px;
+  max-height: 180px;
   background-position: -200px -200px;
   zoom: 0.5;
   transition-property: all;
@@ -301,8 +301,8 @@ background-color: rgba(255,255,255,0.5);
 }
 .sprite-friendshine-fadeOut {
   opacity: 0;
-  width: 275px;
-  height: 180px;
+  max-width: 275px;
+  max-height: 180px;
   background-position: 0 -490px;
   zoom: 0.5;
   transition-property: all;
@@ -314,8 +314,8 @@ background-color: rgba(255,255,255,0.5);
 }
 .sprite-charityshine {
   opacity: 1;
-  width: 512px;
-  height: 512px;
+  max-width: 512px;
+  max-height: 512px;
   background-position: -200px -780px;
   zoom: 0.25;
   transition-property: all;
@@ -327,8 +327,8 @@ background-color: rgba(255,255,255,0.5);
 }
 .sprite-charityshine-fadeOut {
   opacity: 0;
-  width: 512px;
-  height: 512px;
+  max-width: 512px;
+  max-height: 512px;
   background-position: 0 -1236px;
   zoom: 0.25;
   transition-property: all;
@@ -341,8 +341,8 @@ background-color: rgba(255,255,255,0.5);
 
 .sprite-earthshine {
   opacity: 1;
-  width: 512px;
-  height: 512px;
+  max-width: 512px;
+  max-height: 512px;
   background-position: -200px -1692px;
   zoom: 0.25;
   transition-property: all;
@@ -355,8 +355,8 @@ background-color: rgba(255,255,255,0.5);
 
 .sprite-earthshine-fadeOut {
   opacity: 0;
-  width: 512px;
-  height: 512px;
+  max-width: 512px;
+  max-height: 512px;
   background-position: 0 -2148px;
   zoom: 0.25;
   transition-property: all;
@@ -369,8 +369,8 @@ background-color: rgba(255,255,255,0.5);
 
 .sprite-socialshine {
   opacity: 1;
-  width: 600px;
-  height: 389px;
+  max-width: 600px;
+  max-height: 389px;
   background-position: -200px -2604px;
   zoom: .25;
   transition-property: all;
@@ -383,8 +383,8 @@ background-color: rgba(255,255,255,0.5);
 
 .sprite-socialshine-fadeOut {
   opacity: 0;
-  width: 600px;
-  height: 389px;
+  max-width: 600px;
+  max-height: 389px;
   background-position: 0 -2998px;
   zoom: .25;
   transition-property: all;
@@ -395,13 +395,14 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease;
 }
 
+
 .sprite-healthshine {
   opacity: 1;
-  width: 290px;
-  height: 290px;
+  max-width: 290px;
+  max-height: 290px;
   filter: saturate(200%);
   background-position: -200px -3393px;
-  zoom: 0.25;
+  zoom: 0.5;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
@@ -411,11 +412,11 @@ background-color: rgba(255,255,255,0.5);
 }
 .sprite-healthshine-fadeOut {
   opacity: 0;
-  width: 290px;
-  height: 290px;
+  max-width: 290px;
+  max-height: 290px;
   filter: saturate(200%);
   background-position: 0 -3593px;
-  zoom: 0.25;
+  zoom: 0.5;
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
@@ -425,8 +426,8 @@ background-color: rgba(255,255,255,0.5);
 }
 .sprite-friendshine-fadeIn{
   opacity: 0;
-  width: 275px;
-  height: 180px;
+  max-width: 275px;
+  max-height: 180px;
   background-position: 0 -0;
   zoom: 0.5;
   transition-property: all;
@@ -437,11 +438,12 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease;
 }
 
+
 #messages{
-  margin-top: 5em;
+  margin-top: 1%;
 }
 #homemessages{
-  padding-left: 10em;
+  padding-left: 10%;
 }
 .message{
   color: white;
@@ -455,47 +457,6 @@ background-color: rgba(255,255,255,0.5);
   transition-property: all;
   transition-duration: 2s;
   transition-timing-function: ease;
-}
-.sprite-healthshine {
-  opacity: 1;
-  width: 290px;
-  height: 290px;
-  filter: saturate(200%);
-  background-position: -200px -3393px;
-  zoom: 0.5;
-  transition-property: all;
-  transition-duration: 2s;
-  transition-timing-function: ease;
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 2s;
-  -webkit-transition-timing-function: ease;
-}
-.sprite-healthshine-fadeOut {
-  opacity: 0;
-  width: 290px;
-  height: 290px;
-  filter: saturate(200%);
-  background-position: 0 -3593px;
-  zoom: 0.5;
-  transition-property: all;
-  transition-duration: 2s;
-  transition-timing-function: ease;
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 2s;
-  -webkit-transition-timing-function: ease;
-}
-.sprite-friendshine-fadeIn{
-  opacity: 0;
-  width: 275px;
-  height: 180px;
-  background-position: 0 -0;
-  zoom: 0.5;
-  transition-property: all;
-  transition-duration: 2s;
-  transition-timing-function: ease;
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 2s;
-  -webkit-transition-timing-function: ease;
 }
 #postpane{
   background-color:rgba(88, 185, 83,1);
