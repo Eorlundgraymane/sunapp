@@ -439,11 +439,12 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-timing-function: ease;
 }
 
+
 #messages{
   margin-top: 1%;
 }
 #homemessages{
-  padding-left: 10%;  
+  padding-left: 10%;
 }
 .message{
   color: white;
