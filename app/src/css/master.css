@@ -485,7 +485,8 @@ background-color: rgba(255,255,255,0.5);
   max-width: 76%;
 }
 #post_title{
-  font-size: 10%;
+  font-size: 20%;
+  font-weight: bolder;
 }
 #post_text{
   font-size: 5%;
