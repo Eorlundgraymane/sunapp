@@ -690,9 +690,7 @@ function getpiclink(){
             console.log(piclink);
             //document.getElementById('picbutton').display = "none";
             document.getElementById('profileimage').src = piclink;
-            if(checkCookie("primarykey") && !checkCookie("friendid")){
-              gethasurapullpost();
-            }
+            gethasurapullpost();
             document.getElementById('profileimage').classList.remove('profileimage');
             document.getElementById('profileimage').classList.add('profileimageappeared');
             changebanner();
