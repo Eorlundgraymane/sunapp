@@ -6,14 +6,7 @@ body,html{
   background-color:rgba(255, 130, 0, 0.69);
 }
 #trophy{
-  background-image: url('trophy.png');
-  background-repeat: no-repeat;
-  background-size: contain;
   border: 2px solid white;
-}
-#forcetrophy{
-min-width: 100%;
-min-height: 100%;
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
