@@ -592,6 +592,9 @@ figcaption{
   width: 10em;
   opacity: 1;
 }
+#shine{
+  padding-right: 50%;
+}
 #shinetablediv{
   height: 2em;
   margin-right: 30%;
@@ -603,7 +606,6 @@ th{
   text-align: center;
   background-color: rgb(222, 247, 148);
   border-radius: 5px;
-  padding-right: 50%;
 }
 button{
   outline: none;
