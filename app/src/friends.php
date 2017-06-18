@@ -1,6 +1,6 @@
 <nav id = "col-xs-3 col-md-3 col-lg-3 col-sm-3 friendsbuttons">
     <button title = "Friends List" id = "friendslistbutton" onclick = "appfriendslogin();" type = "button" class = "btn" data-toggle = "collapse" data-target = "#friendslist">
-      Friend's List
+      <img src = "css/friendsicon.png" width = "30px" height = "30px">
     </button>
       <ul class = "collapse" id = "friendslist">
       </ul><br>

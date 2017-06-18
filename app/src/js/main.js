@@ -162,7 +162,7 @@ function getallsmileys(){
 function appfriendslogin(){
   if(getflag == 1 || (droppeddown == 0 && friendlistflag == 0))
     {
-      document.getElementById('friendslistbutton').innerHTML = "Loading Friend's List <img width = '30px' height = '30px' src = 'css/loader.gif'>";
+      document.getElementById('friendslistbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loader.gif'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -189,6 +189,7 @@ function appfriendslogin(){
           console.log(JSON.stringify(json));
           alert(JSON.stringify(json));
           document.getElementById('friendslistbutton').disabled = true;
+          document.getElementById('friendslistbutton').innerHTML ="<img src = \"css/friendsicon.png\" width = \"30px\" height = \"30px\">";
           alert("Could'nt get your friend's list at the moment");
           friendlistflag = 0;
         }
@@ -385,7 +386,7 @@ function getfriendslist(){
           var json = JSON.parse(xhr.responseText);
           if(json[0]["profile"][0]["mefriend"].length == 0){
           document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Send some requests first.</li>";
-          document.getElementById('friendslistbutton').innerHTML = "No Friends Yet";
+          document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "30px" height = "30px">';
           console.log(json);
           console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
           friendlistflag = 0;
@@ -409,7 +410,7 @@ function getfriendslist(){
           }
           friendlistflag = 1;
           droppeddown = 0;
-          document.getElementById('friendslistbutton').innerHTML = "Friends List";
+          document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "30px" height = "30px">';
           document.getElementById('friendslistbutton').click();
         }
         }
