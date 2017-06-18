@@ -613,15 +613,16 @@ function getfpiclink(id){
   var piclink;
   var proname;
   var data = {};
-  data["type"] = "select";
-  data["args"] = {};
-  data["args"] = {
-    "table" : "profile",
-    "columns":["proimage"],
-    "where":{
-      "user_id":id
+  data = {
+  "type":"select",
+    "args":{
+      "table":"profile",
+        "columns":["proimage"],
+          "where":{
+            "user_id":parseInt(getCookie("friendid"))
+          }
     }
-  };
+}
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
