@@ -406,7 +406,7 @@ function getfriendslist(){
                 var friendid = myfid["friend_id"];
                 var prourl = myfid["friend_profile"]["proimage"];
                 console.log(prourl);
-                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"><figcaption><button onclick = \"gotofriend("+friendid+friendname");\" type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
+                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"><figcaption><button onclick = \"gotofriend("+friendid+","+friendname+");\" type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
               }
             }
           }
