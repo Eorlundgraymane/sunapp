@@ -1650,16 +1650,17 @@ function tablelogin(){
 
 function addscore(e,s,c,h){
   var data = {};
-  data = {"type":"select",
-          "args":{
-            "table":"profile",
-            "columns":[
-              "name":"mefriend",
-              "columns":["friend_id"]
-            ],
-            "where":{"user_id":parseInt(getCookie("hasura_id"))}
-          }
-};
+  data = {
+    "type":"select",
+    "args":{
+      "table":"profile",
+      "columns":[
+        "name":"mefriend",
+        "columns":["friend_id"]
+      ],
+      "where":{"user_id":parseInt(getCookie("hasura_id"))}
+      }
+    };
 console.log(JSON.stringify(data));
 var query = JSON.stringify(data);
 xhr = new XMLHttpRequest();
