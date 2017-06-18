@@ -1654,7 +1654,7 @@ function addscore(e,s,c,h){
     "type":"select",
     "args":{
       "table":"profile",
-      "columns":[{
+      "columns":["user_id",{
         "name":"mefriend",
         "columns":["friend_id"]
           }
