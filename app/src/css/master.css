@@ -502,7 +502,7 @@ background-color: rgba(255,255,255,0.5);
   border-left: 2px solid white;
   width: 33%;
   height: 50em;
-  margin-top: 10px;
+  margin-top: 1%;
 }
 #friendsbuttons{
   margin-top: 1em;
@@ -557,8 +557,8 @@ background-color: rgba(255,255,255,0.5);
   border-right: 2px solid white;
   height: 50em;
   width:15%;
-  margin-left: -20px;
-  margin-top: 10px;
+  margin-left: 2%;
+  margin-top: 1%;
 }
 .btn:focus {
   outline:0;
