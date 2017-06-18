@@ -7,10 +7,12 @@ body,html{
 }
 #trophy{
   background-image: url('trophy.png');
-  min-width: 20%;
-  min-height: 50%;
   background-repeat: no-repeat;
   background-size: contain;
+}
+#forcetrophy{
+min-width: 100%;
+min-height: 100%;
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
