@@ -1540,22 +1540,22 @@ function popalert() {
       alert("Please enter a 10 digit number");
     }
   }
-  else if(fname == null){
+  else if(fname == ""){
     alert("Please enter First name");
   }
-  else if(email == null){
+  else if(email == ""){
     alert("Please enter Email");
   }
-  else if(mobile == null){
+  else if(mobile == ""){
     alert("Please enter Mobile Number");
   }
   else if(day == 00){
     alert("Please enter Day");
   }
-  else if(month == null){
+  else if(month == 00){
     alert("Please enter Month");
   }
-  else if(year == null){
+  else if(year == 0000){
     alert("Please enter year");
   }
   /*
