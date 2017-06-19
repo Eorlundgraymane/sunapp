@@ -2141,6 +2141,8 @@ function goleads(){
   window.location = 'https://sunshine.unwound15.hasura-app.io/leaderboards.php';
 }
 function loadtable(){
+  var shinehead = document.getElementById("shinehead");
+  shinehead.innerHTML = "Refreshing your Shine Table +  <img src = css/loader.gif width = \"30px\" height = \"30px\">";
     var data = {};
     data["type"] = "select";
     data["args"] = {};
@@ -2166,10 +2168,12 @@ function loadtable(){
         document.getElementById('socialshine').innerHTML = json[0]["socialshine"];
         document.getElementById('healthshine').innerHTML = json[0]["healthshine"];
         document.getElementById('score').innerHTML = json[0]["shine"];
+        shinehead.innerHTML = "Shine Table";
       }
       else if(xhr.readyState ==4){
         var json = JSON.parse(xhr.responseText);
         console.log(JSON.stringify(json));
+        shinehead.innerHTML = "Shine Table";
       }
 
     }
