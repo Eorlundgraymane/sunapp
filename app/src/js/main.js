@@ -2145,11 +2145,16 @@ function loadtable(id){
   var shinehead = document.getElementById("shineheading");
   shinehead.innerHTML = "Refreshing your Shine Table <img src = css/loader.gif width = \"30px\" height = \"30px\">";
     var data = {};
-    data["type"] = "select";
-    data["args"] = {};
-    data["args"]["table"] = "profile";
-    data["args"]["columns"] = ["user_id","healthshine","charityshine","socialshine","friendshine","earthshine","shine"];
-    data["args"]["where"] = {"user_id" : id};
+    data = {
+      "type":"select",
+      "args":{
+        "table":"profile",
+        "columns":["user_id","healthshine","friendshine","socialshine","charityshine","shine","earthshine"],
+        "where":{
+          "user_id":id
+        }
+      }
+  };
     var query = JSON.stringify(data);
     console.log(query);
     xhr = new XMLHttpRequest();
