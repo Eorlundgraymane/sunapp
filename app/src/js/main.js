@@ -1951,7 +1951,6 @@ function tablelogin(){
 function addscore(e,s,c,h,t){
   var data = {};
   var f = 0;
-  var t = 0;
   data = {
     "type":"select",
     "args":{
@@ -1981,7 +1980,7 @@ xhr.onreadystatechange = function(){
       f += 50;
     }
     var addscoredata = {};
-    t=f;
+    t+=f;
     console.log(t);
     addscoredata = {
       "type":"update",
@@ -2010,7 +2009,7 @@ xhr.onreadystatechange = function(){
       if(txhr.readyState == 4 && txhr.status == 200){
         var json = JSON.parse(txhr.responseText);
         console.log(json);
-        loadtable();
+        loadtable(getCookie("hasura_id"));
       }
       else if(txhr.readyState == 4){
         console.log("Couldnt Update");
@@ -2071,7 +2070,7 @@ xhr.onreadystatechange = function(){
         console.log("no likes");
       }
     }
-    addscore(earth,social,charity,health);
+    loadtable(getCookie("friendid"));
   }
   else if(xhr.readyState ==4){
     var json = JSON.parse(xhr.responseText);
@@ -2142,7 +2141,7 @@ xhr.send(query);
 function goleads(){
   window.location = 'https://sunshine.unwound15.hasura-app.io/leaderboards.php';
 }
-function loadtable(){
+function loadtable(id){
   var shinehead = document.getElementById("shineheading");
   shinehead.innerHTML = "Refreshing your Shine Table <img src = css/loader.gif width = \"30px\" height = \"30px\">";
     var data = {};
@@ -2151,7 +2150,6 @@ function loadtable(){
     data["args"]["table"] = "profile";
     data["args"]["columns"] = ["healthshine","charityshine","socialshine","friendshine","earthshine","shine"];
     data["args"]["where"] = {};
-    var id = parseInt(getCookie("hasura_id"));
     data["args"]["where"]["user_id"] = id;
     var query = JSON.stringify(data);
     console.log(query);
