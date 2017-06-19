@@ -633,9 +633,6 @@ figcaption{
   border: 2px solid purple;
   text-align: center;
   border-radius: 5px;
-
-}
-.shinetable{
   overflow-y: scroll;
 }
 #lead{
