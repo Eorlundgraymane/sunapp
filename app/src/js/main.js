@@ -1532,7 +1532,32 @@ function popalert() {
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
-  xhr.send(jsondata);
+  if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000){
+    if(mobile/1000000000 < 10){
+    xhr.send(jsondata);
+    }
+    else{
+      alert("Please enter a 10 digit number");
+    }
+  }
+  else if(fname == null){
+    alert("Please enter First name");
+  }
+  else if(email == null){
+    alert("Please enter Email");
+  }
+  else if(mobile == null){
+    alert("Please enter Mobile Number");
+  }
+  else if(day == 00){
+    alert("Please enter Day");
+  }
+  else if(month == null){
+    alert("Please enter Month");
+  }
+  else if(year == null){
+    alert("Please enter year");
+  }
   /*
     Bring up Overlay on reg Pane
     overlay should contain OTP text box
