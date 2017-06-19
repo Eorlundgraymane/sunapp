@@ -8,11 +8,12 @@
   <table id = "shinetable" class = "table table-responsive">
     <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table</caption>
    <tr>
-     <td id = "friendshine">0</td>
-     <td id = "earthshine">0</td>
-     <td id = "charityshine">0</td>
-     <td id = "healthshine">0</td>
-     <td id = "socialshine">0</td>
+     <td id = "friendshine">_</td>
+     <td id = "earthshine">_</td>
+     <td id = "charityshine">_</td>
+     <td id = "healthshine">_</td>
+     <td id = "socialshine">_</td>
+     <td id = "score">_</td>
    </tr>
    <tr>
      <td><img class = "shineicon img-responsive" src  = "css/generated/friend.svg" alt ="Friend Icon"></td>
