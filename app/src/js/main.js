@@ -2233,7 +2233,7 @@ function pullfposts(id){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
-    document.getElementById('postpuller').innerHTML = "Refresh Posts";
+    document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "50px" height = "50px">';
     changebanner();
     }
     else if (xhr.readyState == 4) {
