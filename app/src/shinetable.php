@@ -1,11 +1,5 @@
 
-  <button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button" data-toggle = "collapse" data-target = ".shinetable">
-  <img width = "50px" height = "50px" src = "css/table.png">
-</button>
-<button  title = "Leaderboards" class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
-  <img width = "50px" height = "50px" src = "css/trophy.png">
-</button>
-<table class = "shinetable collapse table table-responsive">
+<table class = "shinetable table table-responsive">
   <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table</caption>
  <tr>
    <td id = "friendshine">_</td>
