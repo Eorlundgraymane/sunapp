@@ -118,6 +118,44 @@ var smileys = {
   ':-|': '<img src=\'css/smileys/sceptic.svg\' width = \'16px\' height = \'16px\' border=\'0\' alt=\'\' title = \'Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com\'>',
   ';-)': '<img src=\'css/smileys/winking.svg\' width = \'16px\' height = \'16px\' border=\'0\' alt=\'\' title = \'Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com\'>',
 };
+function loadleaderboards(){
+
+  var data = {};
+  data["type"] = "select";
+  data["args"] = {};
+  data["args"]["table"] = "profile";
+  data["args"]["columns"] = ["healthshine","friendshine","charityshine","socialshine","friendshine","earthshine"];
+  var query = JSON.stringify(data);
+  console.log(query);
+  xhr = new XMLHttpRequest();
+  var url  = "https://data.unwound15.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+      var nowshine = document.getElementById('leads');
+      for(table of json){
+        console.log(table);
+      }
+
+    }
+    else if(xhr.readyState ==4){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+    }
+
+  }
+  loadflag = 1;
+  xhr.send(query);
+
+
+}
+
+
+
 
 function smileyMe(msg) {
   //smiley replace
