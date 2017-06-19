@@ -656,6 +656,9 @@ button{
 .btn:disabled{
   opacity: 1;
 }
+th{
+  text-align: center;
+}
 .otpform
 {
   display: none;
