@@ -1951,6 +1951,7 @@ function tablelogin(){
 function addscore(e,s,c,h,t){
   var data = {};
   var f = 0;
+  var t = 0;
   data = {
     "type":"select",
     "args":{
@@ -1980,7 +1981,7 @@ xhr.onreadystatechange = function(){
       f += 50;
     }
     var addscoredata = {};
-    t+=f;
+    t=f;
     console.log(t);
     addscoredata = {
       "type":"update",
