@@ -2103,7 +2103,7 @@ function loadtable(){
         document.getElementById('charityshine').innerHTML = json[0]["charityshine"];
         document.getElementById('socialshine').innerHTML = json[0]["socialshine"];
         document.getElementById('healthshine').innerHTML = json[0]["healthshine"];
-        document.getElementById('shine').innerHTML = json[0]["shine"];
+        document.getElementById('score').innerHTML = json[0]["shine"];
       }
       else if(xhr.readyState ==4){
         var json = JSON.parse(xhr.responseText);
