@@ -629,6 +629,9 @@ figcaption{
   position: relative;
   right: 10%;
 }
+#shinetablediv .in{
+  display: block;
+}
 th{
   text-align: center;
 }
@@ -636,7 +639,6 @@ th{
   margin-bottom: 10%;
 }
 #shinetable{
-  display: inline;
   border: 2px solid purple;
   text-align: center;
   background-color: rgb(222, 247, 148);
