@@ -379,10 +379,6 @@ function gethasurapushpost(){
   }
   xhr.send();
 }
-
-
-
-
 function gethasurapullpost(){
   document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
   var btns = document.getElementsByClassName('btn');
