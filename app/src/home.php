@@ -14,14 +14,7 @@
     <title>Sunshine | Home</title>
   </head>
   <body class = "outer-container">
-    <script>
-    if(checkCookie("primarykey")){
-    }
-    else{
-      alert("You are not logged in. Please go to the home page");
-      gohome();
-    }
-    </script>
+    <?php include 'loginchecker.php';?>
     <row>
       <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "siteheader">
         <script>console.log(document.cookie);</script>

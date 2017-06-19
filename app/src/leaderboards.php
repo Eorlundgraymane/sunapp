@@ -7,6 +7,7 @@
     <title>Sunshine | Leaderboard</title>
     <?php include 'headprereqs.php';?>
   </head>
+  <?php include 'loginchecker.php';?>
   <body class = "outer-container" >
     <row>
       <?php include 'header.php';?>
