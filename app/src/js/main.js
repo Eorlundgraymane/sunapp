@@ -1485,6 +1485,7 @@ function popalert() {
     var lname = document.getElementById("lname").value;
     var mobile = document.getElementById("mob").value;
     var pass = document.getElementById("pass").value;
+    console.log(pass);
     var password = SHA256(pass);
     console.log(password);
     var email = document.getElementById("email").value;
