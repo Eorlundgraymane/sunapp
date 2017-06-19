@@ -600,7 +600,7 @@ figcaption{
 }
 #scoreshine{
   position: relative;
-  left: -10%;
+  left: 0%;
 }
 #centerform{
   transform: translate(25%,60%);
