@@ -2231,7 +2231,7 @@ function pullposts(id){
   xhr.onreadystatechange = function(){
     document.getElementById('posts').innerHTML = "";
     if(xhr.readyState == 4 && xhr.status == 200){
-      document.getElementById('postpuller').innerHTML = "Refresh Posts";
+      document.getElementById('postpuller').innerHTML ="<img id = \"postrefresh\" src = \"css/refreshpost.png\" width = \"50px\" height = \"50px\">";
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
