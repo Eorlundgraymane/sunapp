@@ -626,7 +626,6 @@ figcaption{
   box-shadow: 5px 5px 10px black;
 }
 #shinetablediv{
-  overflow-x: auto;
   height: 2em;
   margin-right: 30%;
   position: relative;
@@ -639,6 +638,7 @@ th{
   margin-bottom: 10%;
 }
 #shinetable{
+  overflow-x: auto;
   text-align: center;
   background-color: rgb(222, 247, 148);
   border-radius: 5px;
