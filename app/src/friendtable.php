@@ -6,6 +6,7 @@
 </button>
 <div id = "shinetablediv" class = "collapse">
   <table id = "shinetable" class = "table table-responsive">
+    <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table</caption>
    <tr>
      <td id = "friendshine">0</td>
      <td id = "earthshine">0</td>
