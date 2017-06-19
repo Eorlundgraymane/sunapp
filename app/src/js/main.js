@@ -1486,6 +1486,7 @@ function popalert() {
     var lname = document.getElementById("lname").value;
     var mobile = document.getElementById("mob").value;
     var pass = document.getElementById("pass").value;
+    var confpass = SHA256(document.getElementById("confpass").value);
     console.log(pass);
     var password = SHA256(pass);
     var email = document.getElementById("email").value;
@@ -1534,7 +1535,7 @@ function popalert() {
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
-  if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000 && password != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" && comparepass != 0){
+  if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000 && password != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" && confpass != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" ){
     if(mobile/1000000000 < 10 && mobile/1000000000 >1){
     xhr.send(jsondata);
     }
@@ -1583,6 +1584,12 @@ function popalert() {
   }
   else if (password == "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"){
     alert("Please enter password");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
+  }
+  else if(confpass == "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" ){
+    alert("Passwords don't match");
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = false;
     signupbuttn.style.cursor = "pointer";
