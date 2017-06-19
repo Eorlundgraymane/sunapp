@@ -1231,11 +1231,11 @@ function deleteCookie(cname) {
     document.cookie = cname + "=;" + expires + ";path=/";
 }
 function clearCookies(){
-  var allcookies = document.cookie.split(";");
-  for(cookie of allcookies){
-    console.log(cookie);
-    console.log(cookie.split("=")[0]);
-    deleteCookie(cookie.split("=")[0]);
+  deleteCookie("primarykey");
+  deleteCookie("password");
+  deleteCookie("friendid");
+  deleteCookie("hasura_id");
+
   }
   console.log(document.cookie);
 }
