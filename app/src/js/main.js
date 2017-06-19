@@ -1235,8 +1235,6 @@ function clearCookies(){
   deleteCookie("password");
   deleteCookie("friendid");
   deleteCookie("hasura_id");
-
-  }
   console.log(document.cookie);
 }
   function userlogin()
