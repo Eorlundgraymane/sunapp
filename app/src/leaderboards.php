@@ -15,7 +15,7 @@
       <?php include 'leaderboardtitle.php';?>
     </row>
     <row>
-      <?php include 'shinteboardtables.php';?>
+      <?php include 'shineboardtables.php';?>
     </row>
     <row>
     </row>
