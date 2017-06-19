@@ -1538,25 +1538,46 @@ function popalert() {
     }
     else{
       alert("Please enter a 10 digit number");
+      signupbuttn.innerHTML = "Sign Up";
+      signupbuttn.style.disabled = false;
+      signupbuttn.style.cursor = "pointer";
     }
   }
   else if(fname == ""){
     alert("Please enter First name");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
   }
   else if(email == ""){
     alert("Please enter Email");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
   }
   else if(mobile == ""){
     alert("Please enter Mobile Number");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
   }
   else if(day == 00){
     alert("Please enter Day");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
   }
   else if(month == 00){
     alert("Please enter Month");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
   }
   else if(year == 0000){
     alert("Please enter year");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
   }
   /*
     Bring up Overlay on reg Pane
@@ -1565,6 +1586,9 @@ function popalert() {
 }
 else {
   alert("passwords don't match");
+  signupbuttn.innerHTML = "Sign Up";
+  signupbuttn.style.disabled = false;
+  signupbuttn.style.cursor = "pointer";
 }
 }
 
