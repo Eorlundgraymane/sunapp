@@ -974,6 +974,7 @@ function userlogout(pk)
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Logout please try again");
       document.getElementById('logoutbutton').innerHTML = "Log Out";
+      window.location = "https://sunshine.unwound15.hasura-app.io/";
     }
   }
   var data = {};
