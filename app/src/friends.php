@@ -5,7 +5,7 @@
       <ul class = "collapse" id = "friendslist">
       </ul><br>
       <button title = "Friend Suggestions" id = "friendssuggestbutton" onclick = "applogin();" type = "button" data-toggle = "collapse" data-target = "#friendssuggest">
-        <img width = "50px" height = "40px" src = "css/th.jpg">
+        <img width = "50px" height = "50px" src = "css/th.jpg">
       </button>
         <ul class = "collapse" id = "friendssuggest">
         </ul><br>
