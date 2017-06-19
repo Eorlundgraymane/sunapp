@@ -625,12 +625,16 @@ figcaption{
 #shinetablediv{
   border: 2px solid white;
   height: 2em;
-}
-#shine{
+  margin-right: 30%;
+  position: relative;
+  right: 10%;
+}#shine{
   margin-bottom: 10%;
 }
 #shinetable{
   border: 2px solid purple;
+  text-align: center;
+  background-color: rgb(222, 247, 148);
   border-radius: 5px;
 }
 #lead{
