@@ -384,7 +384,7 @@ function gethasurapushpost(){
 
 
 function gethasurapullpost(){
-  document.getElementById('postpuller').innerHTML = "<img src = css/loader.gif width = \"30px\" height = \"30px\">";
+  document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
   var btns = document.getElementsByClassName('btn');
   for(each of btns){
     each.disabled = true;
@@ -2346,7 +2346,7 @@ function pullposts(id){
   xhr.onreadystatechange = function(){
     document.getElementById('posts').innerHTML = "";
     if(xhr.readyState == 4 && xhr.status == 200){
-      document.getElementById('postpuller').innerHTML ="Refreshing Posts <img id = \"postrefresh\" src = \"css/refreshpost.png\" width = \"50px\" height = \"50px\">";
+      document.getElementById('postpuller').innerHTML ="<img id = \"postrefresh\" src = \"css/refreshpost.png\" width = \"50px\" height = \"50px\">";
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
