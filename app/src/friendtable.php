@@ -1,5 +1,8 @@
 <button onclick = "refreshfscore();" id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
-  Friend's Shine Table
+  <img width = "50px" height = "50px" src = "css/table.png">
+</button>
+<button  title = "Leaderboards" class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
+  <img width = "50px" height = "50px" src = "css/trophy.png">
 </button>
 <div id = "shinetablediv" class = "collapse">
   <table id = "shinetable" class = "table table-responsive">
