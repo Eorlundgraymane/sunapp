@@ -11,7 +11,7 @@
 <row>
   <div class = "collapse col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shinetablediv">
   <table id = "shinetable" class = "table table-responsive">
-    <caption>Shine Table</caption>
+    <caption id = "shineheading">Shine Table</caption>
    <tr>
      <td id = "friendshine">_</td>
      <td id = "earthshine">_</td>
@@ -31,7 +31,6 @@
    <tr>
      <th>Friendshine</th><th>Earthshine</th><th>Charityshine</th><th>Healthshine</th><th>Socialshine</th><th>Shine</th>
    </tr>
-   <caption>Post activities, get likes, improve your Shine!!!</caption>
  </table>
 </div>
 </row>
