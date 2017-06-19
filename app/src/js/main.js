@@ -2182,7 +2182,7 @@ function loadtable(){
 }
 
 function pullfposts(id){
-  document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
+  document.getElementById('postpuller').innerHTML = "<img src = css/loader.gif width = \"30px\" height = \"30px\">";
   var data = {"type":"select","args":{
     "table":"posts",
     "columns":["post","user_id","id","postimg","created","title",
@@ -2215,7 +2215,7 @@ function pullfposts(id){
   xhr.onreadystatechange = function(){
     document.getElementById('posts').innerHTML = "";
     if(xhr.readyState == 4 && xhr.status == 200){
-      document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "50px" height = "50px">';
+      document.getElementById('postpuller').innerHTML = 'Refreshing Posts <img id = "postrefresh" src = "css/refreshpost.png" width = "50px" height = "50px">';
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
