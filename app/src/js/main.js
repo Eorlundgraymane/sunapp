@@ -802,37 +802,34 @@ function checkfeb(){
 function checkleap()
 {
   var years = document.getElementsByClassName("yearclass");
-  for(each of years){
-    console.log(each.value);
-  }
   if(Boolean((Boolean(document.getElementById('month').value == 02))&&(Boolean(document.getElementById('day').value == 29)))){
-      for(var i = 1;i<=64;i++)
+      for(each of years)
     {
-      if(Boolean((document.getElementsByClassName("yearclass")[i].value % 4)==0))
+      if(Boolean((each.value % 4)==0))
       {
-        if(Boolean(document.getElementsByClassName("yearclass")[i].value % 100)==0)
+        if(Boolean(each.value % 100)==0)
         {
-          if(Boolean(document.getElementsByClassName("yearclass")[i].value % 400)===0)
+          if(Boolean(each.value % 400)===0)
           {
-              document.getElementsByClassName("yearclass")[i].disabled = false;
+              each.disabled = false;
           }
           else {
-            document.getElementsByClassName("yearclass")[i].disabled = true;
+            each.disabled = true;
           }
         }
         else {
-          document.getElementsByClassName("yearclass")[i].disabled = false;
+          each.disabled = false;
         }
       }
       else {
-        document.getElementsByClassName("yearclass")[i].disabled = true;
+        each.disabled = true;
       }
     }
   }
   else {
-    for(var j = 1; j<=64;j++)
+    for(each of years)
     {
-      document.getElementsByClassName("yearclass")[j].disabled = false;
+      each.disabled = false;
     }
   }
 }
