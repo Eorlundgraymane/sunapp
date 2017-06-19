@@ -680,9 +680,6 @@ th{
   animation-timing-function: ease;
   animation-iteration-count: 1;
 }
-#profilearea{
-  overflow: auto;
-}
 #profileimage{
   animation-name:fadeIn;
   animation-duration:3s;
