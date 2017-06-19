@@ -1232,7 +1232,7 @@ function deleteCookie(cname) {
 }
 function clearCookies(){
   var cookies = document.cookie.split(';');
-  console.log(cookie);
+  console.log(cookies);
   for(cookie of cookies){
     console.log("Deleting :"+cookie.split('=')[0]);
     delete(cookie.split('=')[0]);
