@@ -1,8 +1,8 @@
-<button  class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button" data-toggle = "collapse" data-target = "#shinetablediv">
+<button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button" data-toggle = "collapse" data-target = "#shinetablediv">
   Your Shine Table
 </button>
-<button  class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
-  Leaderboards
+<button  title = "Leaderboards" class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
+  <img src = "css/trophy.png">
 </button>
 <div id = "shinetablediv" class = "collapse">
   <table id = "shinetable" class = "table table-responsive">
