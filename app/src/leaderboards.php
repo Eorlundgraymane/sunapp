@@ -10,8 +10,8 @@
   <?php include 'loginchecker.php';?>
   <body class = "outer-container" >
     <row>
-      <?php include 'header.php';?>      
-    </row>
+      <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "siteheader">
+      <?php include 'header.php';?>
     <row>
       <?php include 'leaderboardtitle.php';?>
     </row>

@@ -16,8 +16,7 @@
   <body class = "outer-container">
     <?php include 'loginchecker.php';?>
     <row>
-      <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "siteheader">
-        <script>console.log(document.cookie);</script>
+      <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "siteheader">        
          <?php
            include 'header.php';
          ?>
