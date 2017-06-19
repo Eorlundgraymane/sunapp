@@ -2300,7 +2300,7 @@ function pullposts(id){
         var likers = each["likers"];
         console.log(likers);
         console.log(id);
-        if(author_id == parseInt(getCookie("hasura_id"))){
+        if(author_id == id){
           console.log("ITS YOURS");
           if(likers.length == 0){
             var likeimg = "css/heart.svg";
