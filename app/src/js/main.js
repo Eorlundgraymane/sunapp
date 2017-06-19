@@ -339,7 +339,7 @@ function gethasurapushpost(){
 
 
 function gethasurapullpost(){
-  document.getElementById('postpuller').innerHTML = "Pulling latest Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
+  document.getElementById('postpuller').style.transofrm = 'rotate(1440deg)';
   var btns = document.getElementsByClassName('btn');
   for(each of btns){
     each.disabled = true;
