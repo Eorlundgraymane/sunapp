@@ -690,10 +690,8 @@ button{
   animation-iteration-count: 1;
 }
 #profilearea{
-  max-height: 50%;
   border: 2px solid red;
   overflow: auto;
-  display: table;
 }
 #profileimage{
   animation-name:fadeIn;
