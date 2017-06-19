@@ -801,6 +801,10 @@ function checkfeb(){
 }
 function checkleap()
 {
+  var years = document.getElementsByClassName("yearclass");
+  for(each of years){
+    console.log(each.value);
+  }
   if(Boolean((Boolean(document.getElementById('month').value == 02))&&(Boolean(document.getElementById('day').value == 29)))){
       for(var i = 1;i<=64;i++)
     {
