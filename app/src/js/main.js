@@ -419,7 +419,7 @@ function applogin(){
   console.log(suggesiondrop);
   if(addflag == 1 || (suggesiondrop  == 0 && friendsuggestflag == 0))
     {
-      document.getElementById('friendssuggestbutton').innerHTML = "<img width = '50px' height = '50px' src = 'css/loader.gif'>";
+      document.getElementById('friendssuggestbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loader.gif'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -446,7 +446,7 @@ function applogin(){
           console.log(JSON.stringify(json));
           alert(JSON.stringify(json));
           alert("Could'nt get your friend's list at the moment");
-          document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
+          document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"30px\" height = \"30px\">";
         }
       }
       xhr.send();
