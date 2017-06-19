@@ -2036,7 +2036,7 @@ function refreshfscore(){
   data = {"type":"select",
           "args":{
             "table":"posts",
-            "columns":["user_id","earthshine","healthshine","charityshine","socialshine","shine",
+            "columns":["user_id","earthshine","healthshine","charityshine","socialshine",
             {
               "name":"likers",
               "columns":["liker_id"]
