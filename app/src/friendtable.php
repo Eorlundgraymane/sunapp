@@ -1,4 +1,4 @@
-<button onclick = "loadtable();" id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
+<button onclick = "refreshfscore();" id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
   <img width = "50px" height = "50px" src = "css/table.png">
 </button>
 <button  title = "Leaderboards" class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
