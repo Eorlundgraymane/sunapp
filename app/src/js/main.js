@@ -2149,8 +2149,7 @@ function loadtable(id){
     data["args"] = {};
     data["args"]["table"] = "profile";
     data["args"]["columns"] = ["healthshine","charityshine","socialshine","friendshine","earthshine","shine"];
-    data["args"]["where"] = {};
-    data["args"]["where"]["user_id"] = id;
+    data["args"]["where"] = {"user_id" : id};    
     var query = JSON.stringify(data);
     console.log(query);
     xhr = new XMLHttpRequest();
