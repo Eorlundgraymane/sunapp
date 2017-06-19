@@ -17,7 +17,7 @@
      <td id = "charityshine">_</td>
      <td id = "healthshine">_</td>
      <td id = "socialshine">_</td>
-     <td id = "score">0</td>
+     <td id = "score">_</td>
    </tr>
    <tr>
      <td><img class = "shineicon img-responsive" src  = "css/generated/friend.svg" alt ="Friend Icon"></td>
