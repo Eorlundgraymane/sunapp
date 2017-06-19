@@ -1,5 +1,5 @@
 <row>
-  <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">
+  <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shinetoggles">
   <button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button" data-toggle = "collapse" data-target = "#shinetablediv">
   <img width = "50px" height = "50px" src = "css/table.png">
 </button>
@@ -9,8 +9,7 @@
 </div>
 </row>
 <row>
-  <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">
-<div id = "shinetablediv" class = "collapse">
+  <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shinetablediv" class = "collapse">
   <table id = "shinetable" class = "table table-responsive">
    <tr>
      <td id = "friendshine">0</td>
@@ -32,6 +31,5 @@
      <th>Friendshine</th><th>Earthshine</th><th>Charityshine</th><th>Healthshine</th><th>Socialshine</th><th>Shine</th>
    </tr>
  </table>
-</div>
 </div>
 </row>
