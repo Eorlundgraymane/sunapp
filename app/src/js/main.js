@@ -2151,7 +2151,7 @@ function loadtable(id){
         "table":"profile",
         "columns":["user_id","healthshine","friendshine","socialshine","charityshine","shine","earthshine"],
         "where":{
-          "user_id":id
+          "user_id":21
         }
       }
   };
