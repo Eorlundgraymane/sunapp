@@ -1927,7 +1927,7 @@ xhr.onreadystatechange = function(){
           "healthshine":h,
           "friendshine":f,
           "charityshine":c,
-          "shine":t;
+          "shine":t
         },
         "where":{
           "user_id":parseInt(getCookie("hasura_id"))
