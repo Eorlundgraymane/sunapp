@@ -627,12 +627,12 @@ figcaption{
   height: 2em;
   position: relative;
   right: 10%;
+  margin-right: 35%;
 }
 #shine{
   margin-bottom: 10%;
 }
 #shinetable{
-  padding-right: 35%;
   border: 2px solid purple;
   text-align: center;
   background-color: rgb(222, 247, 148);
