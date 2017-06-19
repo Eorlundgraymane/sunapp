@@ -1,7 +1,7 @@
 <button onclick = "refreshscore();" id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
   Your Shine Table
 </button>
-<button onclick = "window.location = 'https://sunsine.unwound15.hasura-app.io/leaderboards.php'" id = "leaderboardsbutton" type = "button">
+<button class = "btn" onclick = "window.location = 'https://sunsine.unwound15.hasura-app.io/leaderboards.php'" id = "leaderboardsbutton" type = "button">
   Leaderboards
 </button>
 <div id = "shinetablediv" class = "collapse">
