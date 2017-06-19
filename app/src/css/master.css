@@ -471,7 +471,7 @@ background-color: rgba(255,255,255,0.5);
   margin-top: 1%;
   padding-right: 0;
   margin-right: 0;
-  box-shadow: 5px 5px 10px black;
+  box-shadow: -2px 5px 10px black;
 }
 #friendsbuttons{
   margin-top: 1em
@@ -541,7 +541,7 @@ background-color: rgba(255,255,255,0.5);
   margin-left: 0;
   padding-left: 0;
   margin-top: 1%;
-  box-shadow: 5px 5px 10px black;
+  box-shadow: 2px 5px 10px black;
 }
 .btn{
   background-color: rgba(0,0,0,0);
