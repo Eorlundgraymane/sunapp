@@ -1,11 +1,11 @@
 <div id  = "signupdiv" class = "col-xs-4 col-sm-4 col-lg-4 col-md-4">
 <form methhod = "POST" action = "/home.php" name = "signup" id = "signup">
-  <input type = "text" name = "fname" id = "fname" placeholder="First Name" onchange = "updateusername()">
-  <input type = "text" name = "lname" id  = "lname" placeholder="Last Name" onchange = "updateusername()"><br>
+  <input required type = "text" name = "fname" id = "fname" placeholder="First Name" onchange = "updateusername()">
+  <input required type = "text" name = "lname" id  = "lname" placeholder="Last Name" onchange = "updateusername()"><br>
   <input type = "text" name = "uname" id = "uname" placeholder="Username" disabled="true"><br>
-  <input type = "text" name = "email" id = "email" placeholder="Email ID"><br>
-  <input type = "text" name = "mobile"id = "mob" placeholder="Mobile"><br>
-  <select onchange = "checkfeb()" name = "day" id = "day">
+  <input required type = "text" name = "email" id = "email" placeholder="Email ID"><br>
+  <input required type = "text" name = "mobile"id = "mob" placeholder="Mobile"><br>
+  <select required onchange = "checkfeb()" name = "day" id = "day">
     <option value = "00">Day</option>
     <option value = "01">1</option>
     <option value = "02">2</option>
@@ -39,7 +39,7 @@
     <option value = "30">30</option>
     <option value = "31">31</option>
   </select>
-  <select onchange = "checkleap()" name = "month" id = "month">
+  <select required onchange = "checkleap()" name = "month" id = "month">
     <option value = "00">Month</option>
     <option value = "01">January</option>
     <option value = "02">February</option>
@@ -54,7 +54,7 @@
     <option value = "11">November</option>
     <option value = "12">December</option>
   </select>
-  <select name = "year" id = "year">
+  <select required name = "year" id = "year">
     <option class = "yearclass" value = "0000">Year</option>
     <option class = "yearclass" value = "1937">1937</option>
     <option class = "yearclass" value = "1938">1938</option>
@@ -121,8 +121,8 @@
     <option class = "yearclass" value = "1999">1999</option>
 		</select><br>
   <!--<input type = "date" name = "dob" id = "dob"><br><br> Rendered Obsolete-->
-  <input type = "password" name = "password"  id = "pass" placeholder="Password"><br>
-  <input type = "password" name = "confpass"  id = "confpass" placeholder="Retype Password" onkeypress ="comparepass();" onkeyup="comparepass();">
+  <input required type = "password" name = "password"  id = "pass" placeholder="Password"><br>
+  <input required type = "password" name = "confpass"  id = "confpass" placeholder="Retype Password" onkeypress ="comparepass();" onkeyup="comparepass();">
   <div class = "passlabel" id = "passlabel">Passwords not matched</div><br>
   <button class = "btn" id = "signupbuttn" onclick = "popalert();" type = "button">Sign Up</button>
   <button class = "btn" id = "otpready" type = "button" onclick="otpoverlaydropdown();">Already received OTP</button>
