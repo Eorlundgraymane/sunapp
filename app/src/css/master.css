@@ -690,6 +690,9 @@ button{
   animation-timing-function: ease;
   animation-iteration-count: 1;
 }
+#profilearea{
+  display: block;
+}
 #profileimage{
   animation-name:fadeIn;
   animation-duration:3s;
