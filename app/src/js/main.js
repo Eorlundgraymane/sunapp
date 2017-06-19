@@ -124,7 +124,8 @@ function loadleaderboards(){
   data["type"] = "select";
   data["args"] = {};
   data["args"]["table"] = "profile";
-  data["args"]["columns"] = ["fname","healthshine","friendshine","charityshine","socialshine","friendshine","earthshine"];
+  data["args"]["columns"] = ["fname","shine","healthshine","friendshine","charityshine","socialshine","friendshine","earthshine"];
+  data["args"]["order_by"] = "shine";
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
@@ -138,12 +139,12 @@ function loadleaderboards(){
       console.log(JSON.stringify(json));
       var nowshine = document.getElementById('leads');
       nowshine.innerHTML += '<tr>';
-      nowshine.innerHTML += '<th>Sunshine</th><th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
+      nowshine.innerHTML += '<th>Sunshine</th><Shine></th><th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
       nowshine.innerHTML += '</tr>';
       for(table of json){
         console.log(table);
         nowshine.innerHTML += '<tr>';
-        nowshine.innerHTML += '<td>'+table["fname"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
+        nowshine.innerHTML += '<td>'+table["fname"]+'</td><td>'+table["shine"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
         nowshine.innerHTML += '</tr>';
       }
     }
