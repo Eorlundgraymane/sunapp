@@ -834,8 +834,8 @@ function checkleap()
   }
 }
 function comparepass(){
-  var pass = document.getElementById('pass').value;
-  var confpass = document.getElementById('confpass').value;
+  var pass = SHA256(document.getElementById('pass').value);
+  var confpass = SHA256(document.getElementById('confpass').value);
   console.log(pass);
   if(pass!=confpass){
     document.getElementById('passlabel').classList.remove("passshow");
