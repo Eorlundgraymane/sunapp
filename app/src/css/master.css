@@ -690,7 +690,7 @@ button{
   animation-iteration-count: 1;
 }
 #profilearea{
-  display: block;
+  overflow-y: visible;
   border: 2px solid red;
 }
 #profileimage{
