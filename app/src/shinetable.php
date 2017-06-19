@@ -11,7 +11,7 @@
 <row>
   <div class = "collapse col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shinetablediv">
   <table id = "shinetable" class = "table table-responsive">
-    <caption id = "shineheading">Shine Table</caption>
+    <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table</caption>
    <tr>
      <td id = "friendshine">_</td>
      <td id = "earthshine">_</td>
