@@ -627,7 +627,7 @@ th{
 }
 button{
   outline: none;
-  background-color: #7ec0ee;
+  background: none;
   border-radius: 15px;
   color: white;
 }
