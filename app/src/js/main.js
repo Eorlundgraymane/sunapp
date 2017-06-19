@@ -119,7 +119,6 @@ var smileys = {
   ';-)': '<img src=\'css/smileys/winking.svg\' width = \'16px\' height = \'16px\' border=\'0\' alt=\'\' title = \'Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com\'>',
 };
 function loadleaderboards(){
-
   var data = {};
   data["type"] = "select";
   data["args"] = {};
@@ -144,7 +143,7 @@ function loadleaderboards(){
       for(table of json){
         console.log(table);
         nowshine.innerHTML += '<tr>';
-        nowshine.innerHTML += '<td>'+table["fname"]+'</td><td>'+table["shine"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
+        nowshine.innerHTML += '<td>'+table["fname"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
         nowshine.innerHTML += '</tr>';
       }
     }
