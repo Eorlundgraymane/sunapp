@@ -1231,10 +1231,12 @@ function deleteCookie(cname) {
     document.cookie = cname + "=;" + expires + ";path=/";
 }
 function clearCookies(){
-  deleteCookie("primarykey");
-  deleteCookie("password");
-  deleteCookie("friendid");
-  deleteCookie("hasura_id");
+  var cookies = document.cookie.split(';');
+  console.log(cookie);
+  for(cookie of cookies){
+    console.log("Deleting :"+cookie.split('=')[0]);
+    delete(cookie.split('=')[0]);
+  }
   console.log(document.cookie);
 }
   function userlogin()
