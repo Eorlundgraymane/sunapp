@@ -1,5 +1,5 @@
 <button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button" data-toggle = "collapse" data-target = "#shinetablediv">
-  Your Shine Table
+  <img src = "css/table.png">
 </button>
 <button  title = "Leaderboards" class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
   <img src = "css/trophy.png">
