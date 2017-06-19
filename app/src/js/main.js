@@ -1533,7 +1533,7 @@ function popalert() {
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
   if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000){
-    if(mobile/100000000 < 10 && mobile/100000000 >1){
+    if(mobile/1000000000 < 10 && mobile/1000000000 >1){
     xhr.send(jsondata);
     }
     else{
