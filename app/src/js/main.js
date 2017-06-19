@@ -837,7 +837,7 @@ function comparepass(){
   var pass = SHA256(document.getElementById('pass').value);
   var confpass = SHA256(document.getElementById('confpass').value);
   console.log(pass);
-  if(pass!=confpass){
+  if(pass!=confpass && pass != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" && confpass != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" ){
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
     document.getElementById('passlabel').innerHTML = "Password not Matching"
@@ -846,7 +846,7 @@ function comparepass(){
     document.getElementById('passlabel').classList.add("passshow");
     return 0;
   }
-  else if((pass!="")&&(pass == confpass)){
+  else if((pass!="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" )&&(pass == confpass)){
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
     document.getElementById('passlabel').innerHTML = "Password Matched";
