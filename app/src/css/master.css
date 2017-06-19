@@ -9,6 +9,9 @@
 #lead{
   text-align: center;
 }
+#leaderboardbutton{
+  display: inline;
+}
 #friendslist,#friendssuggest{
   list-style-type: none;
   background-color:rgba(88, 185, 83,1);
