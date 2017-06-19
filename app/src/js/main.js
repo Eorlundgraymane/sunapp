@@ -2142,7 +2142,7 @@ function goleads(){
 }
 function loadtable(){
   var shinehead = document.getElementById("shineheading");
-  shinehead.innerHTML = "Refreshing your Shine Table +  <img src = css/loader.gif width = \"30px\" height = \"30px\">";
+  shinehead.innerHTML = "Refreshing your Shine Table <img src = css/loader.gif width = \"30px\" height = \"30px\">";
     var data = {};
     data["type"] = "select";
     data["args"] = {};
