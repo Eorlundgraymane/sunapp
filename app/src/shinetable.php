@@ -5,7 +5,7 @@
 <button  title = "Leaderboards" class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
   <img width = "50px" height = "50px" src = "css/trophy.png">
 </button>
-<table id = "shinetable" class = "collapse table table-responsive">
+<table id = "shinetable" class = "collapse table table-inverse table-responsive">
   <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table</caption>
  <tr>
    <td id = "friendshine">_</td>
@@ -23,7 +23,9 @@
    <td><img class = "shineicon img-responsive" src  = "css/generated/family.svg" alt ="Family Icon"></td>
    <td><img id = "scoreshine" class = "shineicon img-responsive" src  = "css/generated/shine.svg" alt ="Family Icon"></td>
  </tr>
+ <thead class = "thread-inverse">
  <tr>
-   <th>Friendshine</th><th>Earthshine</th><th>Charityshine</th><th>Healthshine</th><th>Socialshine</th><th>Shine</th>
+   <th scope = "row">Friendshine</th><th scope = "row">Earthshine</th><th scope = "row">Charityshine</th><th scope = "row">Healthshine</th><th scope = "row">Socialshine</th><th scope = "row">Shine</th>
  </tr>
+ </thead>
 </table>
