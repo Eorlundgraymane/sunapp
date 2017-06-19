@@ -145,9 +145,7 @@ function loadleaderboards(){
         nowshine.innerHTML += '<tr>';
         nowshine.innerHTML += '<td>'+table["friendshine"]+'</td>';
         nowshine.innerHTML += '<td>'+table["charityshine"]+'</td>';
-        nowshine.innerHTML += '<td>'+table["earthshine"]+'</td>';
-        nowshine.innerHTML += '<td>'+table["socialshine"]+'</td>';
-        nowshine.innerHTML += '<td>'+table["healthshine"]+'</td>';
+
         nowshine.innerHTML += '</tr>';
       }
     }
