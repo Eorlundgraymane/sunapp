@@ -623,7 +623,6 @@ figcaption{
   box-shadow: 5px 5px 10px black;
 }
 #shinetablediv{
-  padding-right: 35%;
   border: 2px solid white;
   height: 2em;
   position: relative;
@@ -633,6 +632,7 @@ figcaption{
   margin-bottom: 10%;
 }
 #shinetable{
+  padding-right: 35%;
   border: 2px solid purple;
   text-align: center;
   background-color: rgb(222, 247, 148);
