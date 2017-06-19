@@ -23,9 +23,7 @@
    <td><img class = "shineicon img-responsive" src  = "css/generated/family.svg" alt ="Family Icon"></td>
    <td><img id = "scoreshine" class = "shineicon img-responsive" src  = "css/generated/shine.svg" alt ="Family Icon"></td>
  </tr>
- <thead class = "thread-inverse">
  <tr>
-   <th scope = "row">Friendshine</th><th scope = "row">Earthshine</th><th scope = "row">Charityshine</th><th scope = "row">Healthshine</th><th scope = "row">Socialshine</th><th scope = "row">Shine</th>
+   <th >Friendshine</th><th >Earthshine</th><th >Charityshine</th><th >Healthshine</th><th >Socialshine</th><th >Shine</th>
  </tr>
- </thead>
 </table>
