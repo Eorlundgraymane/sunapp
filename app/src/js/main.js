@@ -138,7 +138,7 @@ function loadleaderboards(){
       console.log(JSON.stringify(json));
       var nowshine = document.getElementById('leads');
       nowshine.innerHTML += '<tr>';
-      nowshine.innerHTML += '<th>Sunshine</th><Shine></th><th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
+      nowshine.innerHTML += '<th>Sunshine</th><th><Shine></th><th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
       nowshine.innerHTML += '</tr>';
       for(table of json){
         console.log(table);
