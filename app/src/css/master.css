@@ -631,9 +631,7 @@ figcaption{
 th{
   text-align: center;
 }
-#shinetable{
-  border: 2px solid white;
-  padding-bottom: 10%;
+#shinetable{  
   text-align: center;
   background-color: rgb(222, 247, 148);
   border-radius: 5px;

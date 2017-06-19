@@ -1,9 +1,15 @@
-<button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button" data-toggle = "collapse" data-target = "#shinetablediv">
+<row>
+  <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">
+  <button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button" data-toggle = "collapse" data-target = "#shinetablediv">
   <img width = "50px" height = "50px" src = "css/table.png">
 </button>
 <button  title = "Leaderboards" class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
   <img width = "50px" height = "50px" src = "css/trophy.png">
 </button>
+</div>
+</row>
+<row>
+  <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">
 <div id = "shinetablediv" class = "collapse">
   <table id = "shinetable" class = "table table-responsive">
    <tr>
@@ -27,3 +33,5 @@
    </tr>
  </table>
 </div>
+</div>
+</row>
