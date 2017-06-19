@@ -801,7 +801,7 @@ function checkfeb(){
 }
 function checkleap()
 {
-  if(Boolean((Boolean(document.getElementById('month').value == 02))&&(Boolean(Boolean(document.getElementById('day').value >28) && (Boolean(document.getElementById('day').value <30)))))){
+  if(Boolean((Boolean(document.getElementById('month').value == 02))&&(Boolean(document.getElementById('day').value == 29)))){
       for(var i = 1;i<=64;i++)
     {
       if(Boolean((document.getElementsByClassName("yearclass")[i].value % 4)==0))
