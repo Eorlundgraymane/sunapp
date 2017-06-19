@@ -558,9 +558,13 @@ background-color: rgba(255,255,255,0.5);
   position: absolute;
   top: 25%;
 }
+.postauthimg{
+  box-shadow: 5px 5px 10px black;
+}
 .friendimg{
   width: 50px;
   height: auto;
+  box-shadow: 5px 5px 10px black;
 }
 figcaption{
   display: inline;
@@ -593,12 +597,14 @@ figcaption{
   transition-duration: 3s;
   transition-timing-function: ease;
   opacity: 0;
+  box-shadow: 5px 5px 10px black;
 }
 .profileimageappeared{
   position: relative;
   left: 0%;
   width: 10em;
   opacity: 1;
+  box-shadow: 5px 5px 10px black;
 }
 #shinetablediv{
   height: 2em;
@@ -659,6 +665,7 @@ button{
   transition-property: all;
   transition-duration: 3s;
   transition-timing-function: ease;
+  box-shadow: 5px 5px 10px black;
 }
 @keyframes fadeIn {
   0%{
