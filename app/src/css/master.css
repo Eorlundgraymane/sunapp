@@ -127,9 +127,6 @@ background-color: rgba(255,255,255,0.5);
   -webkit-transition-duration: 2s;
   -webkit-transition-timing-function: ease;
 }
-#shine{
-  border: 2px solid white;
-}
 .nosprite{
   opacity: 0;
   transition-property: all;
@@ -629,7 +626,6 @@ figcaption{
   margin-bottom: 10%;
 }
 #shinetable{
-  border: 2px solid purple;
   text-align: center;
   border-radius: 5px;
   overflow-y: scroll;
@@ -685,7 +681,6 @@ th{
   animation-iteration-count: 1;
 }
 #profilearea{
-  border: 2px solid red;
   overflow: auto;
 }
 #profileimage{
