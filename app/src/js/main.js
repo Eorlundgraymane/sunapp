@@ -2070,6 +2070,7 @@ xhr.onreadystatechange = function(){
         console.log("no likes");
       }
     }
+    console.log([parseInt(getCookie("friendid"))]);
     loadtable(parseInt(getCookie("friendid")));
   }
   else if(xhr.readyState ==4){
