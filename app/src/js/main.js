@@ -956,6 +956,7 @@ function homescroll(){
 
 function userlogout(pk)
 {
+  clearCookies();
   document.getElementById('logoutbutton').innerHTML = "Logging Out <img width = '30px' height = '30px' src = 'css/loader.gif'>";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.unwound15.hasura-app.io/user/logout";
@@ -968,7 +969,6 @@ function userlogout(pk)
       console.log(JSON.stringify(hasura_id));
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
-      clearCookies();
       window.location = "https://sunshine.unwound15.hasura-app.io/";
     }
     else if(xhr.readyState == 4) {
