@@ -10,7 +10,7 @@
   <?php include 'loginchecker.php';?>
   <body class = "outer-container" >
     <row>
-      <?php include 'header.php';?>
+      <?php include 'header.php';?>      
     </row>
     <row>
       <?php include 'leaderboardtitle.php';?>
