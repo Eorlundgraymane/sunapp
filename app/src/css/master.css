@@ -812,6 +812,12 @@ input,select,textarea {
   animation-iteration-count: 1;
   margin-top: 1em;
 }
+#siteslogan{
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-timing-function: ease();
+  animation-iteration-count: 1;
+}
 select{
   min-width: 20%;
 }
