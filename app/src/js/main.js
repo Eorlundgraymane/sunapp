@@ -143,7 +143,7 @@ function loadleaderboards(){
       for(table of json){
         console.log(table);
         nowshine.innerHTML += '<tr>';
-        
+        nowshine.innerHTML += '<td>'+table["fname"]+'</td><td>'+table["shine"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
         nowshine.innerHTML += '</tr>';
       }
     }
@@ -1926,7 +1926,7 @@ xhr.onreadystatechange = function(){
           "socialshine":s,
           "healthshine":h,
           "friendshine":f,
-          "charityshine":c
+          "charityshine":c,
           "shine":t;
         },
         "where":{
