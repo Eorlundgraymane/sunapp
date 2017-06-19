@@ -638,6 +638,7 @@ th{
 }
 #shine{
   margin-bottom: 5%;
+  border: 2px solid white;
 }
 #leads{
   position: relative;
