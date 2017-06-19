@@ -629,16 +629,11 @@ figcaption{
   position: relative;
   right: 10%;
 }
-th{
-  text-align: center;
-}
 #shine{
   margin-bottom: 10%;
 }
 #shinetable{
   border: 2px solid purple;
-  text-align: center;
-  background-color: rgb(222, 247, 148);
   border-radius: 5px;
 }
 #lead{
