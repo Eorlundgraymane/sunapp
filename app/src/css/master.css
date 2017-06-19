@@ -690,8 +690,8 @@ button{
   animation-iteration-count: 1;
 }
 #profilearea{
-  overflow-y: visible;
   border: 2px solid red;
+  overflow: auto;
 }
 #profileimage{
   animation-name:fadeIn;
