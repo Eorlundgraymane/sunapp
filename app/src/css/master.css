@@ -622,11 +622,6 @@ figcaption{
   opacity: 1;
   box-shadow: 5px 5px 10px black;
 }
-#shinetablediv{
-  border: 2px solid white;
-
-
-}
 #shine{
   margin-bottom: 10%;
 }
@@ -635,6 +630,7 @@ figcaption{
   text-align: center;
   background-color: rgb(222, 247, 148);
   border-radius: 5px;
+  max-width: 35%;
 }
 #lead{
   color: white;
