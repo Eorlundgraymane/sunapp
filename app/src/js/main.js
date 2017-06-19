@@ -2141,7 +2141,7 @@ function goleads(){
   window.location = 'https://sunshine.unwound15.hasura-app.io/leaderboards.php';
 }
 function loadtable(){
-  var shinehead = document.getElementById("shinehead");
+  var shinehead = document.getElementById("shineheading");
   shinehead.innerHTML = "Refreshing your Shine Table +  <img src = css/loader.gif width = \"30px\" height = \"30px\">";
     var data = {};
     data["type"] = "select";
