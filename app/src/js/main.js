@@ -1011,7 +1011,7 @@ function updatemyusersprofile(pk){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "profile";
-  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"socialshine":0}];
+  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"socialshine":0,"total":0}];
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.send(jsoninsert);
@@ -1884,7 +1884,7 @@ function tablelogin(){
   }
 }
 
-function addscore(e,s,c,h){
+function addscore(e,s,c,h,t){
   var data = {};
   var f = 0;
   data = {
@@ -1916,6 +1916,7 @@ xhr.onreadystatechange = function(){
       f += 50;
     }
     var addscoredata = {};
+    t+=f;
     addscoredata = {
       "type":"update",
       "args":{
@@ -1926,6 +1927,7 @@ xhr.onreadystatechange = function(){
           "healthshine":h,
           "friendshine":f,
           "charityshine":c
+          "shine":t;
         },
         "where":{
           "user_id":parseInt(getCookie("hasura_id"))
@@ -2022,6 +2024,7 @@ function refreshscore(){
   var social = 0;
   var charity = 0;
   var health = 0;
+  var total = 0;
   data = {"type":"select",
           "args":{
             "table":"posts",
@@ -2054,12 +2057,13 @@ xhr.onreadystatechange = function(){
           charity+=shine["charityshine"];
           health+=shine["healthshine"];
         }
+        total = earth+social+charity+health;
       }
       else{
         console.log("no likes");
       }
     }
-    addscore(earth,social,charity,health);
+    addscore(earth,social,charity,health,total);
   }
   else if(xhr.readyState ==4){
     var json = JSON.parse(xhr.responseText);
