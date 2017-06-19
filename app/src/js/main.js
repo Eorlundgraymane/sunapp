@@ -206,7 +206,7 @@ function getallsmileys(){
 function appfriendslogin(){
   if(getflag == 1 || (droppeddown == 0 && friendlistflag == 0))
     {
-      document.getElementById('friendslistbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loader.gif'>";
+      document.getElementById('friendslistbutton').innerHTML = "<img width = '20px' height = '20px' src = 'css/loader.gif'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -258,7 +258,7 @@ function appfriendslogin(){
 function appfriendsfriendlogin(){
   if(getflag == 1 || (droppeddown == 0 && friendlistflag == 0))
     {
-      document.getElementById('friendslistbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loader.gif'>";
+      document.getElementById('friendslistbutton').innerHTML = "<img width = '20px' height = '20px' src = 'css/loader.gif'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
