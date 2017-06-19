@@ -4,7 +4,7 @@
 </button>
 <button  title = "Leaderboards" class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
   <img width = "50px" height = "50px" src = "css/trophy.png">
-</button>
+</button><br><br>
 <table class = "shinetable collapse table table-responsive">
   <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table</caption>
  <tr>
