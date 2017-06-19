@@ -10,7 +10,7 @@
 </row>
 <row>
   <div id = "shinetable" class = "collapse col-lg-9 col-md-9 col-sm-9 col-xs-9">
-<table class = " table table-responsive">
+<table class = " shinetable table table-responsive">
   <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table</caption>
  <tr>
    <td id = "friendshine">_</td>
