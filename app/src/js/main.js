@@ -124,7 +124,7 @@ function loadleaderboards(){
   data["type"] = "select";
   data["args"] = {};
   data["args"]["table"] = "profile";
-  data["args"]["columns"] = ["healthshine","friendshine","charityshine","socialshine","friendshine","earthshine"];
+  data["args"]["columns"] = ["fname","healthshine","friendshine","charityshine","socialshine","friendshine","earthshine"];
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
