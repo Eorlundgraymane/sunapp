@@ -16,7 +16,7 @@
   <body class = "outer-container">
     <?php include 'loginchecker.php';?>
     <row>
-      <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "siteheader">        
+      <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "siteheader">
          <?php
            include 'header.php';
          ?>
@@ -44,7 +44,7 @@
                  <?php include 'friends.php';?>
                </div>
                <div onload = "keeppulling();" class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "newspane">
-                     <button id = "postpuller" type = "button" onclick = "gethasurapullpost();" ><img id = "postrefresh" src = "css/refreshpost.png" width = "50px" height = "50px"></button>
+                     <button  class = "btn" id = "postpuller" type = "button" onclick = "gethasurapullpost();" ><img id = "postrefresh" src = "css/refreshpost.png" width = "50px" height = "50px"></button>
                      <ul id = "posts">
 
                      </ul>
@@ -62,7 +62,7 @@
                        <input type = "number" id = "charity" placeholder = "Charity Shine"><br>
                        <input type = "number" id = "health" placeholder = "Health Shine"><br>
                        <input type = "number" id = "social" placeholder = "Social Shine"><br>
-                       <button type = "button" id = "postbutton" onclick = "gethasurapushpost();"><img src = "css/post.png" width = "50px" height = "50px"></button>
+                       <button class = "btn" type = "button" id = "postbutton" onclick = "gethasurapushpost();"><img src = "css/post.png" width = "50px" height = "50px"></button>
                      </div>
                    </form>
                </div>

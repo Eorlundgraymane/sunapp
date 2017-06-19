@@ -1,7 +1,7 @@
-<button onclick = "refreshscore();" id = "shinetablebutton" type = "button" data-toggle = "collapse" data-target = "#shinetablediv">
+<button  class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button" data-toggle = "collapse" data-target = "#shinetablediv">
   Your Shine Table
 </button>
-<button onclick = "goleads();" id = "leaderboardsbutton" type = "button">
+<button  class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
   Leaderboards
 </button>
 <div id = "shinetablediv" class = "collapse">
