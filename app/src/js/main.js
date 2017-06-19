@@ -143,7 +143,7 @@ function loadleaderboards(){
       for(table of json){
         console.log(table);
         nowshine.innerHTML += '<tr>';
-nowshine.innerHTML += '<th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
+        nowshine.innerHTML += '<td>Friendshine</td><td>Charityshine</td><td>Eartdshine</td><td>Socialshine</td><td>Healtdshine</td>';
         nowshine.innerHTML += '</tr>';
       }
     }
