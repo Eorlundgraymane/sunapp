@@ -623,7 +623,7 @@ figcaption{
   box-shadow: 5px 5px 10px black;
 }
 #shinetablediv{
-  max-width: 50%;
+  padding-right: 35%;
   border: 2px solid white;
   height: 2em;
   position: relative;
