@@ -530,7 +530,7 @@ function getfriendsfriendlist(){
                 var friendid = myfid["friend_id"];
                 var prourl = myfid["friend_profile"]["proimage"];
                 console.log(prourl);
-                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"><figcaption><button onclick = \"gotofriend("+friendid+",'"+friendname+"');\" type = \"button\" class = \"btn\"\">"+friendname+"</figcaption></figure></li>";
+                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button onclick = \"gotofriend("+friendid+",'"+friendname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"></button><br><figcaption>"+friendname+"</figcaption></figure></li>";
               }
             }
           }
@@ -590,7 +590,7 @@ function getfriendslist(){
                 var friendid = myfid["friend_id"];
                 var prourl = myfid["friend_profile"]["proimage"];
                 console.log(prourl);
-                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button onclick = \"gotofriend("+friendid+",'"+friendname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"></button><figcaption>"+friendname+"</figcaption></figure></li>";
+                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button onclick = \"gotofriend("+friendid+",'"+friendname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"></button><br><figcaption>"+friendname+"</figcaption></figure></li>";
               }
             }
           }
@@ -2465,7 +2465,7 @@ function selectsuggests(){
           suggestid = users["user_id"];
           suggestname = users["fname"];
           propic = users["proimage"];
-          document.getElementById('friendssuggest').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button onclick = \"gotofriend("+suggestid+",'"+suggestname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src =\""+propic+"\"></button><figcaption>"+suggestname+"<button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">Add</figcaption></figure></li>";
+          document.getElementById('friendssuggest').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button onclick = \"gotofriend("+suggestid+",'"+suggestname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src =\""+propic+"\"></button><br><figcaption>"+suggestname+"<br><button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">Add</figcaption></figure></li>";
           friendsuggestflag = 1;
           console.log("gonna click");
           }
