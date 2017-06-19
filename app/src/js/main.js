@@ -138,12 +138,12 @@ function loadleaderboards(){
       console.log(JSON.stringify(json));
       var nowshine = document.getElementById('leads');
       nowshine.innerHTML += '<tr>';
-      nowshine.innerHTML += '<th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
+      nowshine.innerHTML += '<th>Sunshine</th><th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
       nowshine.innerHTML += '</tr>';
       for(table of json){
         console.log(table);
         nowshine.innerHTML += '<tr>';
-        nowshine.innerHTML += '<td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
+        nowshine.innerHTML += '<td>'+table["fname"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
         nowshine.innerHTML += '</tr>';
       }
     }
