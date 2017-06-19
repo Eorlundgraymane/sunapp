@@ -1981,6 +1981,7 @@ xhr.onreadystatechange = function(){
     }
     var addscoredata = {};
     t+=f;
+    console.log(t);
     addscoredata = {
       "type":"update",
       "args":{
@@ -2035,7 +2036,7 @@ function refreshfscore(){
   data = {"type":"select",
           "args":{
             "table":"posts",
-            "columns":["user_id","earthshine","healthshine","charityshine","socialshine",
+            "columns":["user_id","earthshine","healthshine","charityshine","socialshine","shine"
             {
               "name":"likers",
               "columns":["liker_id"]
