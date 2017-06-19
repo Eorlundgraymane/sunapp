@@ -547,7 +547,7 @@ background-color: rgba(255,255,255,0.5);
   background-color: rgba(0,0,0,0);
 }
 .btn:focus {
-  outline:0;
+  outline:none;
   color: white;
 }
 #postbutton{
