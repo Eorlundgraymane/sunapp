@@ -533,7 +533,7 @@ background-color: rgba(255,255,255,0.5);
   border-right: 2px solid white;
   height: 50em;
   width:15%;
-  padding: 0; 
+  margin-left: 0;
   margin-top: 1%;
 }
 .btn{
