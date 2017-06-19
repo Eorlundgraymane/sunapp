@@ -1484,7 +1484,8 @@ function popalert() {
     var fname = document.getElementById("fname").value;
     var lname = document.getElementById("lname").value;
     var mobile = document.getElementById("mob").value;
-    var password = SHA256(document.getElementById("pass").value);
+    var pass = document.getElementById("pass").value;
+    var password = SHA256(pass);
     console.log(password);
     var email = document.getElementById("email").value;
     var day = document.getElementById("day").value;
@@ -1532,7 +1533,7 @@ function popalert() {
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
-  if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000 && password != null && comparepass){
+  if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000 && pass != null && comparepass){
     if(mobile/1000000000 < 10 && mobile/1000000000 >1){
     xhr.send(jsondata);
     }
@@ -1579,7 +1580,7 @@ function popalert() {
     signupbuttn.style.disabled = false;
     signupbuttn.style.cursor = "pointer";
   }
-  else if (password == ""){
+  else if (pass == ""){
     alert("Please enter password");
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = false;
