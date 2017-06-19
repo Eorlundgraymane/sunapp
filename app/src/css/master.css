@@ -639,9 +639,7 @@ th{
   background-color: rgb(222, 247, 148);
   border-radius: 5px;
 }
-#leads{
-  position: relative;
-  left: 30%;
+#leads{  
   text-align: center;
   background-color: rgb(222, 247, 148);
   border-radius: 5px;
