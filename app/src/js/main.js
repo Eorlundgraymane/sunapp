@@ -1532,7 +1532,7 @@ function popalert() {
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
-  if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000){
+  if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000 && password != "" && comparepass){
     if(mobile/1000000000 < 10 && mobile/1000000000 >1){
     xhr.send(jsondata);
     }
@@ -1575,6 +1575,12 @@ function popalert() {
   }
   else if(year == 0000){
     alert("Please enter year");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
+  }
+  else if (password == ""){
+    alert("Please enter password");
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = false;
     signupbuttn.style.cursor = "pointer";
