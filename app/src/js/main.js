@@ -2075,8 +2075,8 @@ xhr.onreadystatechange = function(){
 xhr.send(query);
 }
 
-function refreshtable(){
-
+function goleads(){
+window.location = 'https://sunsine.unwound15.hasura-app.io/leaderboards.php';
 }
 function loadtable(){
     var data = {};
