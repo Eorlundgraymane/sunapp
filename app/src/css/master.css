@@ -629,7 +629,7 @@ figcaption{
   position: relative;
   right: 10%;
 }
-#shinetablediv .in{
+.in{
   display: block;
 }
 th{
