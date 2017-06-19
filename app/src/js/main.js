@@ -402,7 +402,7 @@ function gethasurapullpost(){
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       email = JSON.stringify(json.email);
-      pullposts(hasura_id);
+      pullposts(parseInt((getCookie("hasura_id"))));
     }
     else if(xhr.readyState == 4) {
       var json = JSON.parse(xhr.responseText);
