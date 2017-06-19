@@ -627,6 +627,7 @@ figcaption{
   margin-right: 30%;
   position: relative;
   right: 10%;
+  bottom: 10%;
 }
 th{
   text-align: center;
@@ -635,7 +636,6 @@ th{
   text-align: center;
   background-color: rgb(222, 247, 148);
   border-radius: 5px;
-  margin-bottom: 5%;
 }
 #leads{
   position: relative;
