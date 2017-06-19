@@ -1,4 +1,5 @@
-  <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "shinetoggles">
+<row>
+    <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "shinetoggles">
   <button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button" data-toggle = "collapse" data-target = "#shinetablediv">
   <img width = "50px" height = "50px" src = "css/table.png">
 </button>
@@ -30,3 +31,4 @@
  </tr>
 </table>
 </div>
+</row>
