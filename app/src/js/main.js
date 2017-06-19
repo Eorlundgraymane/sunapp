@@ -135,6 +135,7 @@ function loadleaderboards(){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
+      var json = json.reverse();
       console.log(JSON.stringify(json));
       var nowshine = document.getElementById('leads');
       nowshine.innerHTML += '<tr>';
