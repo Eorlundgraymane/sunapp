@@ -583,8 +583,7 @@ figcaption{
   vertical-align: top;
 }
 .sessionbutton{
-  position:relative;
-  margin-left: 1em;
+  position:relative;  
   left: 75%;
   margin-top: 2em;
 }
