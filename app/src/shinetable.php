@@ -5,7 +5,7 @@
 <button  title = "Leaderboards" class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
   <img width = "50px" height = "50px" src = "css/trophy.png">
 </button>
-<table id = "shinetable" class = "collapse table table-inverse table-responsive">
+<table id = "shinetable" class = "collapse table table-responsive">
   <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table</caption>
  <tr>
    <td id = "friendshine">_</td>
