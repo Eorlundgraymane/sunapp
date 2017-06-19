@@ -12,11 +12,11 @@
   <div class = "collapse col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shinetablediv">
   <table id = "shinetable" class = "table table-responsive">
    <tr>
-     <td id = "friendshine">0</td>
-     <td id = "earthshine">0</td>
-     <td id = "charityshine">0</td>
-     <td id = "healthshine">0</td>
-     <td id = "socialshine">0</td>
+     <td id = "friendshine">_</td>
+     <td id = "earthshine">_</td>
+     <td id = "charityshine">_</td>
+     <td id = "healthshine">_</td>
+     <td id = "socialshine">_</td>
      <td id = "score">0</td>
    </tr>
    <tr>
