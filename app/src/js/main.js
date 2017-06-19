@@ -1589,7 +1589,7 @@ function popalert() {
     signupbuttn.style.cursor = "pointer";
   }
   else if(confpass == "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" ){
-    alert("Passwords don't match");
+    alert("Please confirm Password");
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = false;
     signupbuttn.style.cursor = "pointer";
