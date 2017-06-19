@@ -2083,7 +2083,7 @@ function loadtable(){
     data["type"] = "select";
     data["args"] = {};
     data["args"]["table"] = "profile";
-    data["args"]["columns"] = ["healthshine","charityshine","socialshine","friendshine","earthshine"];
+    data["args"]["columns"] = ["healthshine","charityshine","socialshine","friendshine","earthshine","shine"];
     data["args"]["where"] = {};
     var id = parseInt(getCookie("hasura_id"));
     data["args"]["where"]["user_id"] = id;
@@ -2103,6 +2103,7 @@ function loadtable(){
         document.getElementById('charityshine').innerHTML = json[0]["charityshine"];
         document.getElementById('socialshine').innerHTML = json[0]["socialshine"];
         document.getElementById('healthshine').innerHTML = json[0]["healthshine"];
+        document.getElementById('shine').innerHTML = json[0]["shine"];
       }
       else if(xhr.readyState ==4){
         var json = JSON.parse(xhr.responseText);
