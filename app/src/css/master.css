@@ -691,6 +691,7 @@ button{
 }
 #profilearea{
   display: block;
+  border: 2px solid red;
 }
 #profileimage{
   animation-name:fadeIn;
