@@ -1544,43 +1544,43 @@ function popalert() {
       signupbuttn.style.cursor = "pointer";
     }
   }
-  else if(fname == ""){
+  else if(fname == "" || fname = null){
     alert("Please enter First name");
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = false;
     signupbuttn.style.cursor = "pointer";
   }
-  else if(email == ""){
+  else if(email == "" || email == null){
     alert("Please enter Email");
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = false;
     signupbuttn.style.cursor = "pointer";
   }
-  else if(mobile == ""){
+  else if(mobile == "" || mobile == null){
     alert("Please enter Mobile Number");
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = false;
     signupbuttn.style.cursor = "pointer";
   }
-  else if(day == 00){
+  else if(day == 00 || day == null){
     alert("Please enter Day");
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = false;
     signupbuttn.style.cursor = "pointer";
   }
-  else if(month == 00){
+  else if(month == 00 || month == null){
     alert("Please enter Month");
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = false;
     signupbuttn.style.cursor = "pointer";
   }
-  else if(year == 0000){
+  else if(year == 0000 || year == null){
     alert("Please enter year");
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = false;
     signupbuttn.style.cursor = "pointer";
   }
-  else if (pass == ""){
+  else if (pass == "" || pass == null){
     alert("Please enter password");
     signupbuttn.innerHTML = "Sign Up";
     signupbuttn.style.disabled = false;
