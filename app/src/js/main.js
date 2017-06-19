@@ -2148,8 +2148,8 @@ function loadtable(id){
     data["type"] = "select";
     data["args"] = {};
     data["args"]["table"] = "profile";
-    data["args"]["columns"] = ["healthshine","charityshine","socialshine","friendshine","earthshine","shine"];
-    data["args"]["where"] = {"user_id" : id};    
+    data["args"]["columns"] = ["user_id","healthshine","charityshine","socialshine","friendshine","earthshine","shine"];
+    data["args"]["where"] = {"user_id" : id};
     var query = JSON.stringify(data);
     console.log(query);
     xhr = new XMLHttpRequest();
