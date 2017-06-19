@@ -10,7 +10,7 @@
   text-align: center;
 }
 #leaderboardbutton{
-  display: inline;
+  display: inline-block;
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
