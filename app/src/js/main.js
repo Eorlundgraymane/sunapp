@@ -1532,7 +1532,7 @@ function popalert() {
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
-  if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000 && password != "" && comparepass){
+  if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000 && password != null && comparepass){
     if(mobile/1000000000 < 10 && mobile/1000000000 >1){
     xhr.send(jsondata);
     }
