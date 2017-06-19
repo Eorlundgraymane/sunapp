@@ -22,8 +22,6 @@
          ?>
 
          <row>
-         <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "profilearea">
-           <row>
              <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "profilepic">
               <!--<button id = "picbutton" type = "button" onclick="getpiclink();">Click to load image</button>-->
               <figure title = "Update Profile Photo">
@@ -35,8 +33,6 @@
              <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">
                <?php include 'shinetable.php';?>
              </div>
-           </row>
-         </div>
          </row>
          <row>
            <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "contentarea">
