@@ -552,6 +552,7 @@ background-color: rgba(255,255,255,0.5);
 }
 #postbutton{
   border-radius : '10px';
+    box-shadow: 5px 5px 10px black;
 }
 #friend{
   margin-left: -40px;
