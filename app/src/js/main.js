@@ -2076,7 +2076,7 @@ xhr.send(query);
 }
 
 function goleads(){
-window.location = 'https://sunsine.unwound15.hasura-app.io/leaderboards.php';
+  window.location = 'https://sunsine.unwound15.hasura-app.io/leaderboards.php';
 }
 function loadtable(){
     var data = {};
