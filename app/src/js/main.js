@@ -142,13 +142,13 @@ function loadleaderboards(){
       nowshine.innerHTML += '</tr>';
       for(table of json){
         console.log(table);
-        nowshine.innerHTML += '<tr>';
+        nowshine.innerHTML += 'New';
         nowshine.innerHTML += '<td>'+table["friendshine"]+'</td>';
         nowshine.innerHTML += '<td>'+table["charityshine"]+'</td>';
         nowshine.innerHTML += '<td>'+table["earthshine"]+'</td>';
         nowshine.innerHTML += '<td>'+table["socialshine"]+'</td>';
         nowshine.innerHTML += '<td>'+table["healthshine"]+'</td>';
-        nowshine.innerHTML += '</tr>';
+        nowshine.innerHTML += 'End';
       }
     }
     else if(xhr.readyState ==4){
