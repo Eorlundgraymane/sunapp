@@ -639,6 +639,7 @@ th{
   margin-bottom: 10%;
 }
 #shinetable{
+  display: block;
   border: 2px solid purple;
   text-align: center;
   background-color: rgb(222, 247, 148);
