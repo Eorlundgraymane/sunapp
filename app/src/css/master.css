@@ -595,10 +595,6 @@ figcaption{
   height: 30px;
   width: 30px;
 }
-#scoreshine{
-  position: relative;
-  left: 10%;
-}
 #centerform{
   transform: translate(25%,60%);
 }
