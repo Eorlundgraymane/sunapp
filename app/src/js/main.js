@@ -2235,7 +2235,7 @@ function pullfposts(id){
   xhr.onreadystatechange = function(){
     document.getElementById('posts').innerHTML = "";
     if(xhr.readyState == 4 && xhr.status == 200){
-      document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "50px" height = "50px">';
+      document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "20px" height = "20px">';
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
@@ -2317,7 +2317,7 @@ function pullfposts(id){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
-    document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "50px" height = "50px">';
+    document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "20px" height = "20px">';
     changebanner();
     }
     else if (xhr.readyState == 4) {
@@ -2366,13 +2366,10 @@ function pullposts(id){
   xhr.onreadystatechange = function(){
     document.getElementById('posts').innerHTML = "";
     if(xhr.readyState == 4 && xhr.status == 200){
-      document.getElementById('postpuller').innerHTML ="<img id = \"postrefresh\" src = \"css/refreshpost.png\" width = \"50px\" height = \"50px\">";
+      document.getElementById('postpuller').innerHTML ="<img id = \"postrefresh\" src = \"css/refreshpost.png\" width = \"20px\" height = \"20px\">";
       var res = JSON.parse(xhr.responseText);
-      console.log(res);
-      console.log(JSON.stringify(res));
       var reverpost = res.reverse();
       for(each of reverpost){
-        console.log(each);
         var postimg = each["postimg"];
         var post = each["post"];
         var title = each["title"];
@@ -2382,10 +2379,7 @@ function pullposts(id){
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
         var likers = each["likers"];
-        console.log(likers);
-        console.log(id);
         if(author_id == id){
-          console.log("ITS YOURS");
           if(likers.length == 0){
             var likeimg = "css/heart.svg";
               document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img width = "80em" height = "80em" id = "auth_img" class = "postauthimg img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');"><img src = "css/delete.png" width = "20px" height = "25px"></button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+id+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!! </div></figure></li>';
@@ -2410,7 +2404,6 @@ function pullposts(id){
                 break;
               }
             }
-            console.log(liketitle);
             document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "postauthimg img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');"><img src = "css/delete.png" width = "20px" height = "25px"></button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+id+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
           }
         }
@@ -2439,7 +2432,6 @@ function pullposts(id){
                 break;
               }
             }
-            console.log(liketitle);
             document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "postauthimg img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+id+');"><img id = "img'+postid+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
           }
         }
@@ -2453,6 +2445,7 @@ function pullposts(id){
     }
     else if (xhr.readyState == 4) {
       var res = JSON.parse(xhr.responseText);
+      document.getElementById('postpuller').innerHTML ="<img id = \"postrefresh\" src = \"css/refreshpost.png\" width = \"20px\" height = \"20px\">";
       console.log(res);
       console.log(JSON.stringify(res));
       var btns = document.getElementsByClassName('btn');
