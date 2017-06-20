@@ -10,27 +10,27 @@
 </row>
 <row>
   <div id = "shinetable" class = "collapse col-lg-9 col-md-9 col-sm-9 col-xs-9">
-<table class = " shinetable table table-responsive">
-  <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table</caption>
- <tr>
-   <td id = "friendshine">_</td>
-   <td id = "earthshine">_</td>
-   <td id = "charityshine">_</td>
-   <td id = "healthshine">_</td>
-   <td id = "socialshine">_</td>
-   <td id = "score">_</td>
- </tr>
- <tr>
-   <td><img class = "shineicon img-responsive" src  = "css/generated/friend.svg" alt ="Friend Icon"></td>
-   <td><img class = "shineicon img-responsive" src  = "css/generated/earth.svg" alt ="Earth Icon"></td>
-   <td><img class = "shineicon img-responsive" src  = "css/generated/charity.svg" alt ="Charity Icon"></td>
-   <td><img class = "shineicon img-responsive" src  = "css/generated/health.svg"  alt ="Health Icon"></td>
-   <td><img class = "shineicon img-responsive" src  = "css/generated/family.svg" alt ="Family Icon"></td>
-   <td><img id = "scoreshine" class = "shineicon img-responsive" src  = "css/generated/shine.svg" alt ="Family Icon"></td>
- </tr>
- <tr>
-   <th >Friendshine</th><th >Earthshine</th><th >Charityshine</th><th >Healthshine</th><th >Socialshine</th><th >Shine</th>
- </tr>
-</table>
-</div>
+    <table class = "shinetable table table-responsive">
+      <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table</caption>
+     <tr>
+       <td id = "friendshine">_</td>
+       <td id = "earthshine">_</td>
+       <td id = "charityshine">_</td>
+       <td id = "healthshine">_</td>
+       <td id = "socialshine">_</td>
+       <td id = "score">_</td>
+     </tr>
+     <tr>
+       <td><img class = "shineicon img-responsive" src  = "css/generated/friend.svg" alt ="Friend Icon"></td>
+       <td><img class = "shineicon img-responsive" src  = "css/generated/earth.svg" alt ="Earth Icon"></td>
+       <td><img class = "shineicon img-responsive" src  = "css/generated/charity.svg" alt ="Charity Icon"></td>
+       <td><img class = "shineicon img-responsive" src  = "css/generated/health.svg"  alt ="Health Icon"></td>
+       <td><img class = "shineicon img-responsive" src  = "css/generated/family.svg" alt ="Family Icon"></td>
+       <td><img id = "scoreshine" class = "shineicon img-responsive" src  = "css/generated/shine.svg" alt ="Family Icon"></td>
+     </tr>
+     <tr>
+       <th>Friendshine</th><th>Earthshine</th><th>Charityshine</th><th>Healthshine</th><t >Socialshine</th><th>Shine</th>
+     </tr>
+   </table>
+  </div>
 </row>
