@@ -2084,6 +2084,8 @@ xhr.send(query);
 
 
 function refreshscore(){
+  var shinehead = document.getElementById("shineheading");
+  shinehead.innerHTML = "Refreshing your Shine Table <img src = css/loader.gif width = \"30px\" height = \"30px\">";
   var data = {};
   var earth = 0;
   var friends = 0;
@@ -2144,7 +2146,6 @@ function goleads(){
 }
 function loadtable(id){
   var shinehead = document.getElementById("shineheading");
-  shinehead.innerHTML = "Refreshing your Shine Table <img src = css/loader.gif width = \"30px\" height = \"30px\">";
     var data = {};
     data["type"] = "select";
     data["args"] = {};
@@ -2212,10 +2213,10 @@ function pullfposts(id){
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
-  document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "50px" height = "50px">';
   xhr.onreadystatechange = function(){
     document.getElementById('posts').innerHTML = "";
     if(xhr.readyState == 4 && xhr.status == 200){
+      document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "50px" height = "50px">';
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
