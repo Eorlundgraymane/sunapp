@@ -283,7 +283,7 @@ function appfriendsfriendlogin(){
           console.log(JSON.stringify(json));
           alert(JSON.stringify(json));
           document.getElementById('friendslistbutton').disabled = true;
-          document.getElementById('friendslistbutton').innerHTML ="<img src = \"css/friendsicon.png\" width = \"50px\" height = \"30px\">";
+          document.getElementById('friendslistbutton').innerHTML ="<img src = \"css/friendsicon.png\" width = \"50px\" height = \"40px\">";
           alert("Could'nt get your friend's list at the moment");
           friendlistflag = 0;
         }
@@ -512,7 +512,7 @@ function getfriendsfriendlist(){
           console.log(json);
           if(json[0]["mefriend"].length == 0){
           document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Send some requests first.</li>";
-          document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "50px" height = "50px">';
+          document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "50px" height = "40px">';
           console.log(json);
           console.log(JSON.stringify(json[0]["mefriend"].length));
           friendlistflag = 0;
@@ -536,7 +536,7 @@ function getfriendsfriendlist(){
           }
           friendlistflag = 1;
           droppeddown = 0;
-          document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "50px" height = "50px">';
+          document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "50px" height = "40px">';
           document.getElementById('friendslistbutton').click();
         }
         }
