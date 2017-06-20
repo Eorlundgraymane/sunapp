@@ -35,7 +35,7 @@
 
                      </ul>
                </div>
-               <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "uploadpane">
+               <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "postpane">
                </div>
              </row>
            </div>
