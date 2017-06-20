@@ -620,7 +620,6 @@ figcaption{
   box-shadow: 5px 5px 10px black;
 }
 #shinetable{
-  border: 1px solid black;
   text-align: center;
   border-radius: 5px;
   overflow-y: scroll;
@@ -631,6 +630,7 @@ figcaption{
   text-decoration: underline;
 }
 table{
+  border: 1px solid black;
   text-align: center;
   background-color: rgb(222, 247, 148);
   border-radius: 5px;
