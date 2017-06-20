@@ -29,7 +29,7 @@
               <script>getpiclink();</script>
             </figure>
              </div>
-             <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shine">
+             <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shinetable">
                <?php include 'shinetable.php';?>
              </div>
          </row>
