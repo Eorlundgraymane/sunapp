@@ -2144,8 +2144,23 @@ xhr.send(query);
 function goleads(){
   window.location = 'https://sunshine.unwound15.hasura-app.io/leaderboards.php';
 }
+function buttonsdiabled(){
+  var allbuttons = document.getElementsByClassName("btn");
+  for(button of allbuttons){
+    buttons.disabled = true;
+    buttons.style.cursor = "not-allowed";
+  }
+}
+function buttonsenabled(){
+  var allbuttons = document.getElementsByClassName("btn");
+  for(button of allbuttons){
+    buttons.disabled = false;
+    buttons.style.cursor = "pointer";
+  }
+}
 function loadtable(id){
   var shinehead = document.getElementById("shineheading");
+  buttonsdiabled();
     var data = {};
     data["type"] = "select";
     data["args"] = {};
@@ -2170,11 +2185,13 @@ function loadtable(id){
         document.getElementById('healthshine').innerHTML = json[0]["healthshine"];
         document.getElementById('score').innerHTML = json[0]["shine"];
         shinehead.innerHTML = 'Shine Table<button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button"><img width = "30px" height = "30px" src = "css/refreshpost.png"></button>';
+        buttonsenabled();
       }
       else if(xhr.readyState ==4){
         var json = JSON.parse(xhr.responseText);
         console.log(JSON.stringify(json));
         shinehead.innerHTML = "Shine Table";
+        buttonsenabled();
       }
 
     }
