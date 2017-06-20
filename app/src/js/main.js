@@ -2084,6 +2084,7 @@ xhr.send(query);
 
 
 function refreshscore(){
+  buttonsdisabled();
   var shinehead = document.getElementById("shineheading");
   shinehead.innerHTML = "Refreshing your Shine Table <img src = css/loader.gif width = \"30px\" height = \"30px\">";
   var data = {};
@@ -2134,6 +2135,7 @@ xhr.onreadystatechange = function(){
     addscore(earth,social,charity,health,total);
   }
   else if(xhr.readyState ==4){
+    buttonsenabled();
     var json = JSON.parse(xhr.responseText);
     console.log(json);
   }
@@ -2144,7 +2146,7 @@ xhr.send(query);
 function goleads(){
   window.location = 'https://sunshine.unwound15.hasura-app.io/leaderboards.php';
 }
-function buttonsdiabled(){
+function buttonsdisabled(){
   var allbuttons = document.getElementsByClassName("btn");
   for(button of allbuttons){
     buttons.disabled = true;
@@ -2160,7 +2162,7 @@ function buttonsenabled(){
 }
 function loadtable(id){
   var shinehead = document.getElementById("shineheading");
-  buttonsdiabled();
+  buttonsdisabled();
     var data = {};
     data["type"] = "select";
     data["args"] = {};
