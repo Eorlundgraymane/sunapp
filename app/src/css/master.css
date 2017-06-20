@@ -456,6 +456,11 @@ background-color: rgba(255,255,255,0.5);
   display: block;
   margin-top: 1%;
 }
+#friendsmessages{
+  display: block;
+  margin-top: 5%;
+  margin-left: 5%;
+}
 #homemessages{
   padding-left: 10%;
 }
