@@ -814,10 +814,6 @@ select{
   position: absolute;
   right: 0;
 }
-#siteheader{
-  margin: -1em;
-  padding: 0;
-}
 #sitename {
   font-size: 30px;
   color: white;
