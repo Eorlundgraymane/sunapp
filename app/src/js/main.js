@@ -2149,15 +2149,15 @@ function goleads(){
 function buttonsdisabled(){
   var allbuttons = document.getElementsByClassName("btn");
   for(button of allbuttons){
-    buttons.disabled = true;
-    buttons.style.cursor = "not-allowed";
+    button.disabled = true;
+    button.style.cursor = "not-allowed";
   }
 }
 function buttonsenabled(){
   var allbuttons = document.getElementsByClassName("btn");
   for(button of allbuttons){
-    buttons.disabled = false;
-    buttons.style.cursor = "pointer";
+    button.disabled = false;
+    button.style.cursor = "pointer";
   }
 }
 function loadtable(id){
