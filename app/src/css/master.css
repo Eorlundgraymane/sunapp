@@ -582,6 +582,7 @@ figcaption{
   position:relative;
   left: 50%;
   margin-top: 2em;
+  display: inline;
 }
 #sessionbutton{
   margin: 0;
