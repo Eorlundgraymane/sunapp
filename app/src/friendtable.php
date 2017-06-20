@@ -1,6 +1,6 @@
 <row>
   <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9">
-    <button  title = "Shinetable" onclick = "refreshfscore();" id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetablediv">
+    <button  title = "Shinetable" onclick = "refreshfscore();" id = "shinetablebutton" type = "button" class = "btn" data-toggle = "collapse" data-target = "#shinetable">
   <img width = "50px" height = "50px" src = "css/table.png">
 </button>
 <button  title = "Leaderboards" class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
