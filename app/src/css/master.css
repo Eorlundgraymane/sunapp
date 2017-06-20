@@ -722,39 +722,39 @@ th{
   }
 }
 ::-webkit-textarea-placeholder{
-  color: white
+  color: rgba(255,255,255,0.5);
 }
 ::-webkit-input-placeholder{
-  color: white
+  color: rgba(255,255,255,0.5);
 }
 ::-moz-input-placeholder{
-  color: white
+  color: rgba(255,255,255,0.5);
 }
 ::-moz-textarea-placeholder{
-  color: white
+  color: rgba(255,255,255,0.5);
 }
 ::-moz-input-placeholder{
-  color: white
+  color: rgba(255,255,255,0.5);
 }
 :-ms-textarea-placeholder{
-  color: white
+  color: rgba(255,255,255,0.5);
 }
 :-ms-input-placeholder{
-  color: white
+  color: rgba(255,255,255,0.5);
 }
 :-ms-textarea-placeholder{
-  color: white
+  color: rgba(255,255,255,0.5);
 }
 :-ms-input-placeholder{
-  color: white
+  color: rgba(255,255,255,0.5);
 }
 textarea:-webkit-autofil{
   -webkit-box-shadow: 0 0 0 30px rgb(9, 122, 4) inset;
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: rgba(255,255,255,0.5);
 }
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px rgb(9, 122, 4) inset;
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: rgba(255,255,255,0.5);
 }
 input,select,textarea {
   outline: none;
