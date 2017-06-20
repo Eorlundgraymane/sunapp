@@ -1,4 +1,5 @@
-<div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" class = "siteheader" id = "sitename"><h1 id = "siteh1">
+<row>
+  <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" class = "siteheader" id = "sitename"><h1 id = "siteh1">
   Sunshine</h1>
 </div>
 <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "sessionbutton">

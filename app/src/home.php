@@ -14,8 +14,7 @@
     <title>Sunshine | Home</title>
   </head>
   <body class = "outer-container">
-    <?php include 'loginchecker.php';?>
-    <row>
+    <?php include 'loginchecker.php';?>    
          <?php
            include 'header.php';
          ?>

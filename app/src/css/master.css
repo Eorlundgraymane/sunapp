@@ -813,7 +813,7 @@ select{
   position: absolute;
   right: 0;
 }
-#.siteheader{
+.siteheader{
   margin: -1em;
   padding: 0;
 }
