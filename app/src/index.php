@@ -22,7 +22,7 @@
             <div id = "siteslogan"><font color = "white" style = "text-decoration:underlined;font-weight:bolder;">Sunshine is a website which gives you the motivation to Be More Human<br><br> Make Friends, Help the needy,Plant a tree or feed some birds regularly,<br><br>Go to the Gym, Spend some time with your family,<br><br>Post and Share your Activities, Get Likes, Shine brighter on the leaderboards</font></div>
             <div id = "homemessages">
             <div class = "col-xs-4 col-md-4 col-lg-4 col-sm-4 sprite nosprite ">
-            </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div><br><br><br><b<br><br><br><br><br><br><br>
               <div id = "message" class = "message"></div>
               <script>homescroll()</script>
             </div>
