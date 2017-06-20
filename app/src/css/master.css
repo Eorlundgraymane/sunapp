@@ -826,6 +826,7 @@ select{
   padding: 0;
 }
 #sitename {
+  font-weight: 900;
   font-size: 30px;
   color: white;
   margin-bottom: 1em;
