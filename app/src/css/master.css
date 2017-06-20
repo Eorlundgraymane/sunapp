@@ -494,7 +494,7 @@ background-color: rgba(255,255,255,0.5);
   max-height: 5%;
 }
 #newposttext{
-  width: 100%;
+  width: 50%;
 }
 #newspane{
   border-bottom: 2px solid rgba(88, 185, 83,1);
