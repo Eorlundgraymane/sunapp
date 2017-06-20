@@ -2027,6 +2027,7 @@ xhr.send(query);
 }
 
 function refreshfscore(){
+  shinehead.innerHTML = "Refreshing your Shine Table <img src = css/loader.gif width = \"30px\" height = \"30px\">";
   var data = {};
   var earth = 0;
   var friends = 0;
