@@ -1,11 +1,4 @@
 <row>
-  <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9">
-<button  title = "Leaderboards" class = "btn" onclick = "goleads();" id = "leaderboardsbutton" type = "button">
-  <img width = "50px" height = "50px" src = "css/trophy.png">
-</button>
-</div>
-</row>
-<row>
   <div id = "shinetable" class = "col-lg-9 col-md-9 col-sm-9 col-xs-9">
     <table class = "shinetable table table-responsive">
       <button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button">
