@@ -41,7 +41,7 @@
                      <div id = "uploadform" class = "form-group">
                        <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
                        <input  type = "text" id = "newpostimg" placeholder = "Image URL"><br>
-                       <textarea id = "newposttext" placeholder="Post here..."></textarea><br>
+                       <textarea rows = "10" maxlength = "300" id = "newposttext" placeholder="Post here..."></textarea><br>
                        <div id = "allsmileys"></div>
                        <script>getallsmileys()</script>
                        <input type = "number" id = "earth" placeholder = "Earth Shine"><br>
