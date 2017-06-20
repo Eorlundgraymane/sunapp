@@ -569,9 +569,6 @@ background-color: rgba(255,255,255,0.5);
 .postauthimg{
   box-shadow: 5px 5px 10px black;
 }
-.sessionbutton{
-  padding-right: 10%;
-}
 .friendimg{
   width: 50px;
   height: auto;
@@ -584,7 +581,11 @@ figcaption{
 .sessionbutton{
   position:relative;
   left: 50%;
-  display: inline;
+  margin-top: 2em;
+}
+#sessionbutton{
+  margin: 0;
+  padding: 0;
 }
 .shineicon{
   position: relative;
