@@ -825,8 +825,10 @@ select{
   margin: -1em;
   padding: 0;
 }
-#sitename {
+#siteh1{
   font-weight: 900;
+}
+#sitename {
   font-size: 30px;
   color: white;
   margin-bottom: 1em;
