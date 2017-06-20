@@ -2169,7 +2169,7 @@ function loadtable(id){
         document.getElementById('socialshine').innerHTML = json[0]["socialshine"];
         document.getElementById('healthshine').innerHTML = json[0]["healthshine"];
         document.getElementById('score').innerHTML = json[0]["shine"];
-        shinehead.innerHTML = "Shine Table <img width = \"30px\" height = \"30px\" src = \"css/refreshpost.png\">";
+        shinehead.innerHTML = 'hine Table<button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button"><img width = "30px" height = "30px" src = "css/refreshpost.png"></button>';
       }
       else if(xhr.readyState ==4){
         var json = JSON.parse(xhr.responseText);
