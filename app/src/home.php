@@ -21,8 +21,7 @@
            include 'header.php';
          ?>
          <row>
-             <div class = "col-lg-2 col-md-2 col-sm-2 col-xs-2" id = "profilepic">
-              <!--<button id = "picbutton" type = "button" onclick="getpiclink();">Click to load image</button>-->
+             <div class = "col-lg-2 col-md-2 col-sm-2 col-xs-2" id = "profilepic">              
               <figure title = "Update Profile Photo">
               <button type = "button" class = "btn" id = "profilephotobutton" onclick = "updatephoto()"><img id = "profileimage" class = "profileimage img-responsive img-rounded" alt = "No Image Uploaded"></button>
               <figcaption id = "profilename"></figcaption>
