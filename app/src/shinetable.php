@@ -14,7 +14,7 @@
    <th><img class = "shineicon img-responsive" src  = "css/generated/charity.svg" alt ="Charity Icon"></th>
    <th><img class = "shineicon img-responsive" src  = "css/generated/health.svg"  alt ="Health Icon"></th>
    <th><img class = "shineicon img-responsive" src  = "css/generated/family.svg" alt ="Family Icon"></th>
-   <th><img id = "scoreshine" class = "shineicon img-responsive" src  = "css/generated/shine.svg" alt ="Family Icon"></th>
+   <th><img class = "shineicon img-responsive" src  = "css/generated/shine.svg" alt ="Family Icon"></th>
  </tr>
  <tr>
    <th>Friendshine</th><th>Earthshine</th><th>Charityshine</th><th>Healthshine</th><th>Socialshine</th><th>Shine</th>
