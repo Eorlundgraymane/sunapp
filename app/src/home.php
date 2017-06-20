@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<?php
-/*session_start();
-  if(isset($_POST['primarykey'])&& isset($_POST['password'])){
-    setcookie('mobilenumber',$_POST['primarykey'],time()+60*60*24*365,'/','sunshine.washtub66.hasura-app.io');
-    setcookie('password',$_POST['password']);
-    echo '<script>alert("Cookie mobile number = '+$_COOKIE["mobilenumber"]+'is set");';
-  }*/
- ?>
-
 <html>
   <head>
     <?php include 'headprereqs.php';?>
@@ -21,7 +12,7 @@
            include 'header.php';
          ?>
          <row>
-             <div class = "col-lg-2 col-md-2 col-sm-2 col-xs-2" id = "profilepic">              
+             <div class = "col-lg-2 col-md-2 col-sm-2 col-xs-2" id = "profilepic">
               <figure title = "Update Profile Photo">
               <button type = "button" class = "btn" id = "profilephotobutton" onclick = "updatephoto()"><img id = "profileimage" class = "profileimage img-responsive img-rounded" alt = "No Image Uploaded"></button>
               <figcaption id = "profilename"></figcaption>
