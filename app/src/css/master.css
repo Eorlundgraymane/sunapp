@@ -479,7 +479,7 @@ background-color: rgba(255,255,255,0.5);
 }
 #postpane{
   background-color:rgba(9, 122, 4, 1);
-  border-left: 1px solid black;
+  border: 1px solid black;
   width: 35%;
   height: 50em;
   margin-top: 0;
@@ -547,7 +547,7 @@ background-color: rgba(255,255,255,0.5);
 }
 #friendspane{
   background-color:rgba(9, 122, 4, 1);
-  border-right: 1px solid black;
+  border: 1px solid black;
   height: 50em;
   width:15%;
   margin-left: 0;
