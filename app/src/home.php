@@ -21,7 +21,7 @@
            include 'header.php';
          ?>
          <row>
-             <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "profilepic">
+             <div class = "col-lg-2 col-md-2 col-sm-2 col-xs-2" id = "profilepic">
               <!--<button id = "picbutton" type = "button" onclick="getpiclink();">Click to load image</button>-->
               <figure title = "Update Profile Photo">
               <button type = "button" class = "btn" id = "profilephotobutton" onclick = "updatephoto()"><img id = "profileimage" class = "profileimage img-responsive img-rounded" alt = "No Image Uploaded"></button>
@@ -29,7 +29,7 @@
               <script>getpiclink();</script>
             </figure>
              </div>
-             <div class = "col-lg-9 col-md-9 col-sm-9 col-xs-9" id = "shinetable">
+             <div class = "col-lg-10 col-md-10 col-sm-10 col-xs-10" id = "shinetable">
                <?php include 'shinetable.php';?>
              </div>
          </row>
