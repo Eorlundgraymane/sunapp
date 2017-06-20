@@ -1,7 +1,5 @@
 <table class = "shinetable table table-responsive">
-
     <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table <button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button"><img width = "30px" height = "30px" src = "css/refreshpost.png"></button></caption>
-
  <tr>
    <td id = "friendshine">_</td>
    <td id = "earthshine">_</td>
