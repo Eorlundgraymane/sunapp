@@ -283,7 +283,7 @@ function appfriendsfriendlogin(){
           console.log(JSON.stringify(json));
           alert(JSON.stringify(json));
           document.getElementById('friendslistbutton').disabled = true;
-          document.getElementById('friendslistbutton').innerHTML ="<img src = \"css/friendsicon.png\" width = \"50px\" height = \"50px\">";
+          document.getElementById('friendslistbutton').innerHTML ="<img src = \"css/friendsicon.png\" width = \"50px\" height = \"30px\">";
           alert("Could'nt get your friend's list at the moment");
           friendlistflag = 0;
         }
