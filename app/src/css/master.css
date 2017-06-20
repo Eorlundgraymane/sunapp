@@ -581,7 +581,7 @@ figcaption{
   vertical-align: top;
 }
 .sessionbutton{
-  float: left;
+  float: right;
   margin-top: 2em;
 }
 #sessionbutton{
