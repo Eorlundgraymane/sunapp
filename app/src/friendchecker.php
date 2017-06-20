@@ -1,7 +1,7 @@
 <script>
 if(checkCookie("primarykey")&& checkCookie("friendid")){
 }
-else if(!checkCookie("primary")){
+else if(!checkCookie("primarykey")){
   alert("You're not logged in as a user. Please log in");
   gohome();
 }
