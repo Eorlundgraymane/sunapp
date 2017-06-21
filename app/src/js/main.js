@@ -2356,7 +2356,7 @@ function pullposts(id){
       ]
       }
   ],
-      "order_by":"created"
+      "order_by":"-created"
 }
   };
   var query = JSON.stringify(data);
@@ -2370,7 +2370,8 @@ function pullposts(id){
     if(xhr.readyState == 4 && xhr.status == 200){
       document.getElementById('postpuller').innerHTML ="<img id = \"postrefresh\" src = \"css/refreshpost.png\" width = \"20px\" height = \"20px\">";
       var res = JSON.parse(xhr.responseText);
-      var reverpost = res.reverse();
+      console.log(res);
+      var reverpost = res;
       for(each of reverpost){
         var postimg = each["postimg"];
         var post = each["post"];
