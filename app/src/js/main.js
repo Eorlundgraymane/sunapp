@@ -1053,7 +1053,7 @@ function changefbanner()
   data["args"] = {};
   data["args"]["table"] = "profile";
   data["args"]["columns"] = ["fname","lname"];
-  data["args"]["where"] = {"id" : getCookie("friendid")};
+  data["args"]["where"] = {"id" : parseInt(getCookie("friendid"))};
   var query = JSON.stringify(data);
   console.log(query);
   xhr = new XMLHttpRequest();
