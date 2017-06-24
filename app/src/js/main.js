@@ -1051,8 +1051,8 @@ function changefbanner()
   var data = {};
   data["type"] = "select";
   data["args"] = {};
-  data["args"]["table"] = "user";
-  data["args"]["columns"] = ["username"];
+  data["args"]["table"] = "profile";
+  data["args"]["columns"] = ["fname","lname"];
   data["args"]["where"] = {"id" : getCookie("friendid")};
   var query = JSON.stringify(data);
   console.log(query);
@@ -1065,7 +1065,8 @@ function changefbanner()
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
-      document.getElementById('profilename').innerHTML = json[0].username;
+      var uname = json[0].fname.concat(" ",json[0].lname);
+      document.getElementById('profilename').innerHTML = uname;
     }
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
