@@ -1044,6 +1044,36 @@ function changebanner()
   xhr.send(query);
 
 }
+
+
+function changefbanner()
+{
+  var data = {};
+  data["type"] = "select";
+  data["args"] = {};
+  data["args"]["table"] = "user";
+  data["args"]["columns"] = ["username"];
+  data["args"]["where"] = {"id" : getCookie("friendid")};
+  var query = JSON.stringify(data);
+  console.log(query);
+  xhr = new XMLHttpRequest();
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      var json = JSON.parse(xhr.responseText);
+      console.log(JSON.stringify(json));
+      document.getElementById('profilename').innerHTML = json[0].username;
+    }
+    else if(xhr.readyState ==4) {
+      alert(JSON.stringify(json));
+    }
+  }
+  xhr.send(query);
+
+}
 function updatemyusers(pk,pasw){
   xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
@@ -2320,7 +2350,7 @@ function pullfposts(id){
         each.style.cursor = "pointer";
     }
     document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "20px" height = "20px">';
-    changebanner();
+    changefbanner();
     }
     else if (xhr.readyState == 4) {
       document.getElementById('postpuller').innerHTML = "Error";
