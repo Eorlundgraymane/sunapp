@@ -1065,7 +1065,7 @@ function changefbanner()
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
-      var uname = json[0].fname;
+      var uname = json[0].fname.concat(" ",json[0].lname);
       document.getElementById('profilename').innerHTML = uname;
     }
     else if(xhr.readyState ==4) {
