@@ -315,6 +315,7 @@ function appfriendsfriendlogin(){
           but.style.cursor = "pointer";
           but.disabled = false;
         }
+      }
       xhr.send();
     }
     else if (droppeddown == 1 && friendlistflag == 1) {
@@ -379,6 +380,7 @@ function addlogin(id,name){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send();
 }
 function gethasurapushpost(){
@@ -420,6 +422,7 @@ function gethasurapushpost(){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send();
 }
 function gethasurapullpost(){
@@ -462,6 +465,7 @@ function gethasurapullpost(){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send();
 }
 function applogin(){
@@ -508,6 +512,7 @@ function applogin(){
           but.style.cursor = "pointer";
           but.disabled = false;
         }
+      }
       xhr.send();
     }
 
@@ -619,6 +624,7 @@ function getfriendsfriendlist(){
           but.style.cursor = "pointer";
           but.disabled = false;
         }
+      }
     xhr.send(query);
   }
 }
@@ -689,6 +695,7 @@ function getfriendslist(){
           but.style.cursor = "pointer";
           but.disabled = false;
         }
+      }
     xhr.send(query);
   }
 }
@@ -726,6 +733,7 @@ function addpiclink(link){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(query);
 }
 
@@ -776,6 +784,7 @@ function getfpiclink(id){
         but.style.cursor = "pointer";
         but.disabled = false;
       }
+    }
   xhr.send(query);
   console.log('hasura call sent' );
 }
@@ -849,6 +858,7 @@ function getpiclink(){
                 but.style.cursor = "pointer";
                 but.disabled = false;
               }
+            }
             x.send();
 
         }
@@ -872,6 +882,7 @@ function getpiclink(){
         but.style.cursor = "pointer";
         but.disabled = false;
       }
+    }
   xhr.send(query);
   console.log('hasura call sent' );
 }
@@ -999,6 +1010,7 @@ function checklogout(pk)
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(jsondata);
 }
 var sprite = 0;
@@ -1102,6 +1114,7 @@ function userlogout(pk)
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(jsondata);
 }
 function updatemyusersprofile(pk){
@@ -1144,6 +1157,7 @@ function updatemyusersprofile(pk){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(jsoninsert);
 }
 function changebanner()
@@ -1178,6 +1192,7 @@ function changebanner()
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(query);
 
 }
@@ -1217,6 +1232,7 @@ function changefbanner()
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(query);
 
 }
@@ -1265,6 +1281,7 @@ function updatemyusers(pk,pasw){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(jsoninsert);
 }
 function checklogin(pk,pasw)
@@ -1305,6 +1322,7 @@ function checklogin(pk,pasw)
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(jsondata);
 }
 
@@ -1352,6 +1370,7 @@ function jslogin(){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(jsondata);
 }
 function gohome(){
@@ -1398,6 +1417,7 @@ function getuser()
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(query);
 }
 function setCookie(cname, cvalue, exdays) {
@@ -1493,6 +1513,7 @@ function clearCookies(){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(jsondata);
 }
 function addfriend(id,name){
@@ -1546,6 +1567,7 @@ function addfriend(id,name){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(jsondata);
 }
 function otpoverlaydropdown(){
@@ -1646,6 +1668,7 @@ function otpverify(){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(jsondata);
 }
 function otpresend() {
@@ -1708,6 +1731,7 @@ function otpresend() {
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(jsondata);
 }
 function popalert() {
@@ -1781,6 +1805,7 @@ function popalert() {
           but.style.cursor = "pointer";
           but.disabled = false;
         }
+      }
     xhr.send(jsondata);
     }
     else{
@@ -1906,6 +1931,7 @@ function pushpost(){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(query);
 }
 function deletepostlogin(id){
@@ -1947,6 +1973,7 @@ function deletepostlogin(id){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send();
 }
 function deletepost(id,userid){
@@ -1994,6 +2021,7 @@ xhr.ontimeout = function(e){
     but.style.cursor = "pointer";
     but.disabled = false;
   }
+}
 xhr.send(query);
 }
 
@@ -2162,6 +2190,7 @@ function like(id,liker_id){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(query);
 }
 function unlike(id,liker_id){
@@ -2203,6 +2232,7 @@ function unlike(id,liker_id){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(query);
 }
 var loadflag = 0;
@@ -2237,6 +2267,7 @@ function tablelogin(){
         but.style.cursor = "pointer";
         but.disabled = false;
       }
+    }
     xhr.send();
   }
   else{
@@ -2320,6 +2351,7 @@ xhr.onreadystatechange = function(){
         but.style.cursor = "pointer";
         but.disabled = false;
       }
+    }
     txhr.send(addscorequery);
   }
   else if(xhr.readyState == 4){
@@ -2335,6 +2367,7 @@ xhr.ontimeout = function(e){
     but.style.cursor = "pointer";
     but.disabled = false;
   }
+}
 xhr.send(query);
 }
 
@@ -2400,6 +2433,7 @@ xhr.ontimeout = function(e){
     but.style.cursor = "pointer";
     but.disabled = false;
   }
+}
 xhr.send(query);
 }
 
@@ -2470,6 +2504,7 @@ xhr.ontimeout = function(e){
     but.style.cursor = "pointer";
     but.disabled = false;
   }
+}
 xhr.send(query);
 }
 
@@ -2536,6 +2571,7 @@ function loadtable(id){
         but.style.cursor = "pointer";
         but.disabled = false;
       }
+    }
     xhr.send(query);
 }
 
@@ -2678,6 +2714,7 @@ function pullfposts(id){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(query);
 }
 
@@ -2810,6 +2847,7 @@ function pullposts(id){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(query);
 }
 function selectsuggests(){
@@ -2880,5 +2918,6 @@ function selectsuggests(){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(query);
 }
