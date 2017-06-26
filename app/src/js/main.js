@@ -1821,8 +1821,7 @@ function otpresend() {
       but.style.cursor = "pointer";
       but.disabled = false;
     }
-      resendotpbutton.innerHTML = "Resend OTP";    
-  }
+      resendotpbutton.innerHTML = "Resend OTP";
   }
   else{
   xhr.send(jsondata);
