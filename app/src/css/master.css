@@ -22,6 +22,17 @@
   padding-left: 0.2em;
   background: rgba(0,0,0,0);
 }
+#hasuralink{
+  color: white;
+  text-decoration: underline;
+  font-weight: bolder;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+#hasuralink:hover{
+  font-size: 150%;
+}
 #deletepost{
   vertical-align: top;
   float: right;
