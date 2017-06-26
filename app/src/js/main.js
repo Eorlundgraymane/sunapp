@@ -1885,9 +1885,9 @@ function pushpost(){
   var social = document.getElementById('social').value;
   var health = document.getElementById('health').value;
   if(title == "")
-  title = null;
+  {title = null;}
   if(posttext == "")
-  posttext  null;
+  {posttext  null;}
   var data = {};
   console.log(hasura_id);
   data["type"] = "insert";
