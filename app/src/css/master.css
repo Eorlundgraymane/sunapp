@@ -27,11 +27,11 @@
   text-decoration: underline;
   font-weight: bolder;
   transition-property: all;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
 #hasuralink:hover{
-  font-size: 150%;
+  font-size: 200%;
 }
 #deletepost{
   vertical-align: top;
