@@ -1887,7 +1887,7 @@ function pushpost(){
   if(title == "")
   {title = null;}
   if(posttext == "")
-  {posttext  null;}
+  {posttext = null;}
   var data = {};
   console.log(hasura_id);
   data["type"] = "insert";
