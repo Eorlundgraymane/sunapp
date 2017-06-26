@@ -1615,6 +1615,7 @@ function otpverify(){
   var password = SHA256(document.getElementById("pass").value);
   var email = document.getElementById("email").value;
   var uname = fname.concat(" ",lname);
+
   console.log(uname);
   console.log(password);
   var otpbutton = document.getElementById('otpbutton');
@@ -1660,16 +1661,72 @@ function otpverify(){
   data["mobile"] = mobile;
   data["otp"] = otp;
   jsondata = JSON.stringify(data);
-  xhr.timeout = 10000;
-  xhr.ontimeout = function(e){
-    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
-    var allbuts = document.getElementsByClassName("btn");
-    for(but of allbuts){
-      but.style.cursor = "pointer";
-      but.disabled = false;
+  if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000 && password != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"){
+    if(mobile/1000000000 < 10 && mobile/1000000000 >1){
+      xhr.timeout = 10000;
+      xhr.ontimeout = function(e){
+        alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+        var allbuts = document.getElementsByClassName("btn");
+        for(but of allbuts){
+          but.style.cursor = "pointer";
+          but.disabled = false;
+        }
+      }
+    xhr.send(jsondata);
+    }
+    else{
+      alert("First fill the signup form so that we can verify your OTP .Please enter a 10 digit mobile number");
+      signupbuttn.innerHTML = "Sign Up";
+      signupbuttn.style.disabled = false;
+      signupbuttn.style.cursor = "pointer";
     }
   }
-  xhr.send(jsondata);
+  else if(fname == ""){
+    alert("First fill the signup form so that we can verify your OTP .Please enter First name");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
+  }
+  else if(email == ""){
+    alert("First fill the signup form so that we can verify your OTP .Please enter Email");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
+  }
+  else if(mobile == ""){
+    alert("First fill the signup form so that we can verify your OTP .Please enter Mobile Number");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
+  }
+  else if(day == 00){
+    alert("First fill the signup form so that we can verify your OTP .Please enter Day");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
+  }
+  else if(month == 00 ){
+    alert("First fill the signup form so that we can verify your OTP .Please enter Month");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
+  }
+  else if(year == 0000){
+    alert("First fill the signup form so that we can verify your OTP .Please enter year");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
+  }
+  else if (password == "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"){
+    alert("First fill the signup form so that we can verify your OTP .Please enter password");
+    signupbuttn.innerHTML = "Sign Up";
+    signupbuttn.style.disabled = false;
+    signupbuttn.style.cursor = "pointer";
+  }
+  /*
+    Bring up Overlay on reg Pane
+    overlay should contain OTP text box
+  */
 }
 function otpresend() {
   var otpbutton = document.getElementById('otpbutton');
