@@ -28,7 +28,7 @@
   font-weight: bolder;
   transition-property: all;
   transition-duration: 0.5s;
-  transition-timing-function: ease-in;
+  transition-timing-function: ease-in-out;
 }
 #hasuralink:hover{
   font-size: 150%;
