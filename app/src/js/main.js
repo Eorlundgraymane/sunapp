@@ -850,8 +850,8 @@ function getpiclink(){
           }
             x.open('GET','https://picasaweb.google.com/data/entry/api/user/'.concat((json[0].email).split("@")[0],"?alt=json"),true);
             console.log(json[0].email);
-            xr.timeout = 10000;
-            xr.ontimeout = function(e){
+            x.timeout = 10000;
+            x.ontimeout = function(e){
               alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
               var allbuts = document.getElementsByClassName("btn");
               for(but of allbuts){
