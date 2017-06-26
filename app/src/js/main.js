@@ -1915,7 +1915,7 @@ function pushpost(){
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
-      alert("Couldn't Post , it's till experimental");
+      alert("Could'nt Post ,Please make sure you have filled in all the shine claims and title and a post message");
       var btns = document.getElementsByClassName('btn');
       for(each of btns){
         each.disabled = false;
