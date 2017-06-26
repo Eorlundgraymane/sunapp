@@ -1669,58 +1669,83 @@ function otpverify(){
         for(but of allbuts){
           but.style.cursor = "pointer";
           but.disabled = false;
+          otpbutton.innerHTML = "Verify"
         }
       }
     xhr.send(jsondata);
     }
     else{
       alert("First fill the signup form before clicking on already received OTP,so that we can verify your OTP .Please enter a 10 digit mobile number");
-      signupbuttn.innerHTML = "Sign Up";
-      signupbuttn.style.disabled = false;
-      signupbuttn.style.cursor = "pointer";
+      var allbuts = document.getElementsByClassName("btn");
+      for(but of allbuts){
+        but.style.cursor = "pointer";
+        but.disabled = false;
+        otpbutton.innerHTML = "Verify"
+      }
     }
   }
   else if(fname == ""){
     alert("First fill the signup form before clicking on already received OTP,so that we can verify your OTP .Please enter First name");
-    signupbuttn.innerHTML = "Sign Up";
-    signupbuttn.style.disabled = false;
-    signupbuttn.style.cursor = "pointer";
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+      otpbutton.innerHTML = "Verify"
+    }
   }
   else if(email == ""){
     alert("First fill the signup form before clicking on already received OTP,so that we can verify your OTP .Please enter Email");
-    signupbuttn.innerHTML = "Sign Up";
-    signupbuttn.style.disabled = false;
-    signupbuttn.style.cursor = "pointer";
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+      otpbutton.innerHTML = "Verify"
+    }
   }
   else if(mobile == ""){
     alert("First fill the signup form before clicking on already received OTP,so that we can verify your OTP .Please enter Mobile Number");
-    signupbuttn.innerHTML = "Sign Up";
-    signupbuttn.style.disabled = false;
-    signupbuttn.style.cursor = "pointer";
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+      otpbutton.innerHTML = "Verify"
+    }
   }
   else if(day == 00){
     alert("First fill the signup form before clicking on already received OTP,so that we can verify your OTP .Please enter Day");
-    signupbuttn.innerHTML = "Sign Up";
-    signupbuttn.style.disabled = false;
-    signupbuttn.style.cursor = "pointer";
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+      otpbutton.innerHTML = "Verify"
+    }
   }
   else if(month == 00 ){
     alert("First fill the signup form before clicking on already received OTP,so that we can verify your OTP .Please enter Month");
-    signupbuttn.innerHTML = "Sign Up";
-    signupbuttn.style.disabled = false;
-    signupbuttn.style.cursor = "pointer";
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+      otpbutton.innerHTML = "Verify"
+    }
   }
   else if(year == 0000){
     alert("First fill the signup form before clicking on already received OTP,so that we can verify your OTP .Please enter year");
-    signupbuttn.innerHTML = "Sign Up";
-    signupbuttn.style.disabled = false;
-    signupbuttn.style.cursor = "pointer";
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+      otpbutton.innerHTML = "Verify"
+    }
   }
   else if (password == "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"){
     alert("First fill the signup form before clicking on already received OTP,so that we can verify your OTP .Please enter password");
-    signupbuttn.innerHTML = "Sign Up";
-    signupbuttn.style.disabled = false;
-    signupbuttn.style.cursor = "pointer";
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+      otpbutton.innerHTML = "Verify"
+    }
   }
   /*
     Bring up Overlay on reg Pane
