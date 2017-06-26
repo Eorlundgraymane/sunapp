@@ -133,6 +133,7 @@ function loadleaderboards(){
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
+  }
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
@@ -156,6 +157,14 @@ function loadleaderboards(){
     }
   }
   loadflag = 1;
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(query);
 
 
@@ -212,6 +221,7 @@ function appfriendslogin(){
       xhr.open("POST",url,true);
       xhr.setRequestHeader("Content-type","application/json");
       xhr.withCredentials = "true";
+
       document.getElementById('friendslistbutton').disabled = true;
       document.getElementById('friendssuggestbutton').disabled = true;
       document.getElementById('friendssuggestbutton').style.cursor = "not-allowed";
@@ -236,6 +246,15 @@ function appfriendslogin(){
           document.getElementById('friendslistbutton').innerHTML ="<img src = \"css/friendsicon.png\" width = \"50px\" height = \"50px\">";
           alert("Could'nt get your friend's list at the moment");
           friendlistflag = 0;
+        }
+      }
+      xhr.timeout = 10000;
+      xhr.ontimeout = function(e){
+        alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+        var allbuts = document.getElementsByClassName("btn");
+        for(but of allbuts){
+          but.style.cursor = "pointer";
+          but.disabled = false;
         }
       }
       xhr.send();
@@ -288,6 +307,14 @@ function appfriendsfriendlogin(){
           friendlistflag = 0;
         }
       }
+      xhr.timeout = 10000;
+      xhr.ontimeout = function(e){
+        alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+        var allbuts = document.getElementsByClassName("btn");
+        for(but of allbuts){
+          but.style.cursor = "pointer";
+          but.disabled = false;
+        }
       xhr.send();
     }
     else if (droppeddown == 1 && friendlistflag == 1) {
@@ -344,6 +371,14 @@ function addlogin(id,name){
       document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggessions";
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send();
 }
 function gethasurapushpost(){
@@ -377,6 +412,14 @@ function gethasurapushpost(){
     }
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send();
 }
 function gethasurapullpost(){
@@ -411,6 +454,14 @@ function gethasurapullpost(){
     }
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send();
 }
 function applogin(){
@@ -449,6 +500,14 @@ function applogin(){
           document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"30px\" height = \"30px\">";
         }
       }
+      xhr.timeout = 10000;
+      xhr.ontimeout = function(e){
+        alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+        var allbuts = document.getElementsByClassName("btn");
+        for(but of allbuts){
+          but.style.cursor = "pointer";
+          but.disabled = false;
+        }
       xhr.send();
     }
 
@@ -552,6 +611,14 @@ function getfriendsfriendlist(){
         document.getElementById('logoutbutton').disabled = false;
         document.getElementById('logoutbutton').style.cursor = "pointer";
       }
+      xhr.timeout = 10000;
+      xhr.ontimeout = function(e){
+        alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+        var allbuts = document.getElementsByClassName("btn");
+        for(but of allbuts){
+          but.style.cursor = "pointer";
+          but.disabled = false;
+        }
     xhr.send(query);
   }
 }
@@ -614,6 +681,14 @@ function getfriendslist(){
         document.getElementById('logoutbutton').disabled = false;
         document.getElementById('logoutbutton').style.cursor = "pointer";
       }
+      xhr.timeout = 10000;
+      xhr.ontimeout = function(e){
+        alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+        var allbuts = document.getElementsByClassName("btn");
+        for(but of allbuts){
+          but.style.cursor = "pointer";
+          but.disabled = false;
+        }
     xhr.send(query);
   }
 }
@@ -643,6 +718,14 @@ function addpiclink(link){
       console.log("Profile picture NOT updated");
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(query);
 }
 
@@ -685,7 +768,14 @@ function getfpiclink(id){
       alert(JSON.stringify(json));
     }
     }
-
+    xhr.timeout = 10000;
+    xhr.ontimeout = function(e){
+      alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+      var allbuts = document.getElementsByClassName("btn");
+      for(but of allbuts){
+        but.style.cursor = "pointer";
+        but.disabled = false;
+      }
   xhr.send(query);
   console.log('hasura call sent' );
 }
@@ -751,6 +841,14 @@ function getpiclink(){
           }
             x.open('GET','https://picasaweb.google.com/data/entry/api/user/'.concat((json[0].email).split("@")[0],"?alt=json"),true);
             console.log(json[0].email);
+            xr.timeout = 10000;
+            xr.ontimeout = function(e){
+              alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+              var allbuts = document.getElementsByClassName("btn");
+              for(but of allbuts){
+                but.style.cursor = "pointer";
+                but.disabled = false;
+              }
             x.send();
 
         }
@@ -766,7 +864,14 @@ function getpiclink(){
       alert(JSON.stringify(json));
     }
     }
-
+    xhr.timeout = 10000;
+    xhr.ontimeout = function(e){
+      alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+      var allbuts = document.getElementsByClassName("btn");
+      for(but of allbuts){
+        but.style.cursor = "pointer";
+        but.disabled = false;
+      }
   xhr.send(query);
   console.log('hasura call sent' );
 }
@@ -886,6 +991,14 @@ function checklogout(pk)
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(jsondata);
 }
 var sprite = 0;
@@ -981,6 +1094,14 @@ function userlogout(pk)
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(jsondata);
 }
 function updatemyusersprofile(pk){
@@ -1015,6 +1136,14 @@ function updatemyusersprofile(pk){
   data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"socialshine":0,"total":0}];
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(jsoninsert);
 }
 function changebanner()
@@ -1041,6 +1170,14 @@ function changebanner()
       alert(JSON.stringify(json));
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(query);
 
 }
@@ -1072,6 +1209,14 @@ function changefbanner()
       alert(JSON.stringify(json));
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(query);
 
 }
@@ -1112,6 +1257,14 @@ function updatemyusers(pk,pasw){
   data["args"].objects = [{"id":hasura_id,"username":uname,"email":email,"password":password,"dob":dob}];
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(jsoninsert);
 }
 function checklogin(pk,pasw)
@@ -1144,6 +1297,14 @@ function checklogin(pk,pasw)
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(jsondata);
 }
 
@@ -1183,6 +1344,14 @@ function jslogin(){
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(jsondata);
 }
 function gohome(){
@@ -1221,6 +1390,14 @@ function getuser()
       alert(JSON.stringify(json));
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(query);
 }
 function setCookie(cname, cvalue, exdays) {
@@ -1308,6 +1485,14 @@ function clearCookies(){
   console.log(data);
   var jsondata = JSON.stringify(data);
   console.log(jsondata);
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(jsondata);
 }
 function addfriend(id,name){
@@ -1353,6 +1538,14 @@ function addfriend(id,name){
   }
   jsondata = JSON.stringify(data);
   console.log(jsondata);
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(jsondata);
 }
 function otpoverlaydropdown(){
@@ -1445,6 +1638,14 @@ function otpverify(){
   data["mobile"] = mobile;
   data["otp"] = otp;
   jsondata = JSON.stringify(data);
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(jsondata);
 }
 function otpresend() {
@@ -1499,6 +1700,14 @@ function otpresend() {
   jsondata = JSON.stringify(data);
   console.log("DATA : "+data);
   console.log("JSON DATA : "+jsondata);
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(jsondata);
 }
 function popalert() {
@@ -1564,6 +1773,14 @@ function popalert() {
   console.log(jsondata);
   if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000 && password != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" && confpass != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" ){
     if(mobile/1000000000 < 10 && mobile/1000000000 >1){
+      xhr.timeout = 10000;
+      xhr.ontimeout = function(e){
+        alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+        var allbuts = document.getElementsByClassName("btn");
+        for(but of allbuts){
+          but.style.cursor = "pointer";
+          but.disabled = false;
+        }
     xhr.send(jsondata);
     }
     else{
@@ -1681,6 +1898,14 @@ function pushpost(){
     }
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(query);
 }
 function deletepostlogin(id){
@@ -1714,6 +1939,14 @@ function deletepostlogin(id){
     }
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send();
 }
 function deletepost(id,userid){
@@ -1753,6 +1986,14 @@ xhr.onreadystatechange = function(){
     }
     }
 }
+xhr.timeout = 10000;
+xhr.ontimeout = function(e){
+  alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+  var allbuts = document.getElementsByClassName("btn");
+  for(but of allbuts){
+    but.style.cursor = "pointer";
+    but.disabled = false;
+  }
 xhr.send(query);
 }
 
@@ -1913,6 +2154,14 @@ function like(id,liker_id){
       alert("Not Liked");
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(query);
 }
 function unlike(id,liker_id){
@@ -1946,6 +2195,14 @@ function unlike(id,liker_id){
       alert("Not Unliked");
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(query);
 }
 var loadflag = 0;
@@ -1972,6 +2229,14 @@ function tablelogin(){
         alert("Could'nt get your friend's list at the moment");
       }
     }
+    xhr.timeout = 10000;
+    xhr.ontimeout = function(e){
+      alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+      var allbuts = document.getElementsByClassName("btn");
+      for(but of allbuts){
+        but.style.cursor = "pointer";
+        but.disabled = false;
+      }
     xhr.send();
   }
   else{
@@ -2047,6 +2312,14 @@ xhr.onreadystatechange = function(){
         console.log(JSON.parse(txhr.responseText));
       }
     }
+    txhr.timeout = 10000;
+    txhr.ontimeout = function(e){
+      alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+      var allbuts = document.getElementsByClassName("btn");
+      for(but of allbuts){
+        but.style.cursor = "pointer";
+        but.disabled = false;
+      }
     txhr.send(addscorequery);
   }
   else if(xhr.readyState == 4){
@@ -2054,6 +2327,14 @@ xhr.onreadystatechange = function(){
     console.log(JSON.stringify(json));
   }
 }
+xhr.timeout = 10000;
+xhr.ontimeout = function(e){
+  alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+  var allbuts = document.getElementsByClassName("btn");
+  for(but of allbuts){
+    but.style.cursor = "pointer";
+    but.disabled = false;
+  }
 xhr.send(query);
 }
 
@@ -2111,6 +2392,14 @@ xhr.onreadystatechange = function(){
     console.log(json);
   }
 }
+xhr.timeout = 10000;
+xhr.ontimeout = function(e){
+  alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+  var allbuts = document.getElementsByClassName("btn");
+  for(but of allbuts){
+    but.style.cursor = "pointer";
+    but.disabled = false;
+  }
 xhr.send(query);
 }
 
@@ -2173,6 +2462,14 @@ xhr.onreadystatechange = function(){
     console.log(json);
   }
 }
+xhr.timeout = 10000;
+xhr.ontimeout = function(e){
+  alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+  var allbuts = document.getElementsByClassName("btn");
+  for(but of allbuts){
+    but.style.cursor = "pointer";
+    but.disabled = false;
+  }
 xhr.send(query);
 }
 
@@ -2231,6 +2528,14 @@ function loadtable(id){
 
     }
     loadflag = 1;
+    xhr.timeout = 10000;
+    xhr.ontimeout = function(e){
+      alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+      var allbuts = document.getElementsByClassName("btn");
+      for(but of allbuts){
+        but.style.cursor = "pointer";
+        but.disabled = false;
+      }
     xhr.send(query);
 }
 
@@ -2365,6 +2670,14 @@ function pullfposts(id){
     }
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(query);
 }
 
@@ -2489,6 +2802,14 @@ function pullposts(id){
     }
     }
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(query);
 }
 function selectsuggests(){
@@ -2551,5 +2872,13 @@ function selectsuggests(){
     }
     addflag = 0;
   }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
   xhr.send(query);
 }
