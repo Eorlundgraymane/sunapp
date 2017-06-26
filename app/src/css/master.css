@@ -758,11 +758,11 @@ th{
 }
 textarea:-webkit-autofil{
   -webkit-box-shadow: 0 0 0 30px rgb(9, 122, 4) inset;
-  -webkit-text-fill-color: rgba(255,255,255,0.5);
+  -webkit-text-fill-color: rgba(255,255,255,1);
 }
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px rgb(9, 122, 4) inset;
-    -webkit-text-fill-color: rgba(255,255,255,0.5);
+    -webkit-text-fill-color: rgba(255,255,255,1);
 }
 input,select,textarea {
   outline: none;
