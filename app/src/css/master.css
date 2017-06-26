@@ -27,7 +27,7 @@
   text-decoration: underline;
   font-weight: bolder;
   transition-property: all;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-timing-function: ease-in;
 }
 #hasuralink:hover{
