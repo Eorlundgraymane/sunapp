@@ -1884,6 +1884,10 @@ function pushpost(){
   var charity = document.getElementById('charity').value;
   var social = document.getElementById('social').value;
   var health = document.getElementById('health').value;
+  if(title == "")
+  title = null;
+  if(posttext == "")
+  posttext  null;
   var data = {};
   console.log(hasura_id);
   data["type"] = "insert";
@@ -1915,7 +1919,7 @@ function pushpost(){
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
-      alert("Could'nt Post ,Please make sure you have filled in all the shine claims and title and a post message");
+      alert("Could'nt Post ,Please make sure you have filled in all the shine claims and title and a post messag");
       var btns = document.getElementsByClassName('btn');
       for(each of btns){
         each.disabled = false;
