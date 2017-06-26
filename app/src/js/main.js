@@ -1813,7 +1813,12 @@ function otpresend() {
       but.disabled = false;
     }
   }
+  if(mobile == "" || mobile == null){
+    alert("Enter Mobile number to verify");
+  }
+  else{
   xhr.send(jsondata);
+}
 }
 function popalert() {
   if(Boolean(comparepass))
