@@ -164,6 +164,7 @@ function loadleaderboards(){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+  }
   xhr.send(query);
 
 
