@@ -1812,9 +1812,17 @@ function otpresend() {
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+    resendotpbutton.innerHTML = "Resend OTP";
   }
   if(mobile == "" || mobile == null){
     alert("Enter Mobile number to verify");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
+      resendotpbutton.innerHTML = "Resend OTP";    
+  }
   }
   else{
   xhr.send(jsondata);
