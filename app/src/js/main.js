@@ -1146,7 +1146,7 @@ function updatemyusersprofile(pk){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "profile";
-  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"socialshine":0,"total":0}];
+  data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"socialshine":0,"shine":0}];
   var jsoninsert = JSON.stringify(data);
   console.log(jsoninsert);
   xhr.timeout = 10000;
