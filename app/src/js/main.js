@@ -2345,6 +2345,7 @@ function like(id,liker_id){
 }
 function unlike(id,liker_id){
   var likimg = document.getElementById('img'+id);
+  likimg.src = "css/generated/heart.svg";
   var data = {};
   data["type"] = "delete";
   data["args"] = {};
@@ -2364,7 +2365,6 @@ function unlike(id,liker_id){
       console.log("Liked");
       var res = JSON.parse(xhr.responseText);
       console.log(res);
-      likimg.src = "css/generated/health.svg";
       gethasurapullpost();
     }
     else if(xhr.readyState == 4) {
