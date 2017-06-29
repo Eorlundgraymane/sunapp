@@ -1978,7 +1978,7 @@ function pushpost(){
   var social = document.getElementById('social').value;
   var health = document.getElementById('health').value;
   if(parseInt(earth) > 100 || parseInt(charity) > 100 || parseInt(social) > 100 || parseInt(health) > 100){
-    document.getElementById("postform").submit();
+    alert("Shine value claims must not be greater than 100");
   }
   else if(parseInt(earth) < 0 || parseInt(charity) < 0 || parseInt(social) < 0 || parseInt(health) < 0){
     alert("No negative values for shines.");
