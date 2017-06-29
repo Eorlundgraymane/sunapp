@@ -36,7 +36,7 @@
                      </ul>
                </div>
                <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" id = "postpane">
-                 <h3 id = "uploadpane">Upload New Post</h3>
+                 <h3 title = "Share a photo of your dedication to being more human and get likes!!!" id = "uploadpane">Upload New Post</h3>
                    <form id  = "postform" method = "POST" action = "#">
                      <div id = "uploadform" class = "form-group">
                        <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
@@ -44,10 +44,10 @@
                        <textarea rows = "5" maxlength = "200" id = "newposttext" placeholder="Post here..."></textarea><br>
                        <div id = "allsmileys"></div>
                        <script>getallsmileys()</script>
-                       <input class = "shineinput" type = "number" min = "0" max = "100" id = "earth" placeholder = "Earth Shine"><br>
-                       <input class = "shineinput" type = "number" min = "0" max = "100" id = "charity" placeholder = "Charity Shine"><br>
-                       <input class = "shineinput" type = "number" min = "0" max = "100" id = "health" placeholder = "Health Shine"><br>
-                       <input class = "shineinput" type = "number" min = "0" max = "100" id = "social" placeholder = "Social Shine"><br>
+                       <input title = "Claim your Earthshine points to go up in the leaderboards" class = "shineinput" type = "number" min = "0" max = "100" id = "earth" placeholder = "Earth Shine"><br>
+                       <input title = "Claim your Charityshine points to go up in the leaderboards" class = "shineinput" type = "number" min = "0" max = "100" id = "charity" placeholder = "Charity Shine"><br>
+                       <input title = "Claim your Healthshine points to go up in the leaderboards" class = "shineinput" type = "number" min = "0" max = "100" id = "health" placeholder = "Health Shine"><br>
+                       <input title = "Claim your Socialshine points to go up in the leaderboards" class = "shineinput" type = "number" min = "0" max = "100" id = "social" placeholder = "Social Shine"><br>
                        <button title = "Post" class = "btn" type = "button" id = "postbutton" onclick = "gethasurapushpost();"><img src = "css/post.png" width = "50px" height = "50px"></button>
                      </div>
                    </form>
