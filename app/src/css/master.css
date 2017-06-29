@@ -735,7 +735,7 @@ figcaption{
   height: 30px;
   width: 30px;
 }
-th,td,tr{
+th,td,tr,h3,h1,li{
   cursor: default;
 }
 #centerform{
