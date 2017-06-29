@@ -2345,7 +2345,7 @@ function like(id,liker_id){
 }
 function unlike(id,liker_id){
   var likimg = document.getElementById('img'+id);
-  likimg.src = "css/generated/heart.svg";
+  likimg.src = "css/heart.svg";
   var data = {};
   data["type"] = "delete";
   data["args"] = {};
