@@ -16,12 +16,34 @@
   margin-bottom: 5px;
   cursor: pointer;
 }
-#hint{
-  display: inline;
+#hintearth{
+  display: none;
   font-size: 3px;
   color: white;
   cursor: default;
 }
+
+#hintsocial{
+  display: none;
+  font-size: 3px;
+  color: white;
+  cursor: default;
+}
+
+#hintcharity{
+  display: none;
+  font-size: 3px;
+  color: white;
+  cursor: default;
+}
+
+#hinthealth{
+  display: none;
+  font-size: 3px;
+  color: white;
+  cursor: default;
+}
+
 .addsmiley{
   border: 0;
   margin: 0;

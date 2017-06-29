@@ -1197,6 +1197,31 @@ function changebanner()
   xhr.send(query);
 
 }
+showearthhint(){
+  document.getElementById('hintearth').style.display = "inline";
+}
+showcharityhint(){
+  document.getElementById('hintcharity').style.display = "inline";
+}
+showsocialhint(){
+  document.getElementById('hintsocial').style.display = "inline";
+}
+shownaturehint(){
+  document.getElementById('hintnature').style.display = "inline";
+}
+hideearthhint(){
+  document.getElementById('hintearth').style.display = "none";
+}
+hidecharityhint(){
+  document.getElementById('hintcharity').style.display = "none";
+}
+hidesocialhint(){
+  document.getElementById('hintsocial').style.display = "none";
+}
+hidenaturehint(){
+  document.getElementById('hintnature').style.display = "none";
+}
+
 
 
 function changefbanner()
