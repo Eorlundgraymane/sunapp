@@ -2,6 +2,8 @@
     <button title = "Friends List" id = "friendslistbutton" onclick = "appfriendsfriendlogin();" type = "button" class = "btn" data-toggle = "collapse" data-target = "#friendslist">
       <img src = "css/friendsicon.png" width = "50px" height = "40px">
     </button>
+    <div id = "friendslistdiv">
       <ul class = "collapse" id = "friendslist">
-      </ul><br>
+      </ul>
+    </div><br>
 </nav>
