@@ -1206,7 +1206,7 @@ function showcharityhint(){
 function showsocialhint(){
   document.getElementById('hintsocial').style.display = "inline";
 }
-function shownhealthhint(){
+function showhealthhint(){
   document.getElementById('hinthealth').style.display = "inline";
 }
 function hideearthhint(){
