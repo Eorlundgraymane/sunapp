@@ -1997,14 +1997,12 @@ function pushpost(){
       each.style.cursor = "pointer";
   }
   }
-  }
   else if(parseInt(earth) < 0 || parseInt(charity) < 0 || parseInt(social) < 0 || parseInt(health) < 0){
     alert("No negative values for shines.");
     var btns = document.getElementsByClassName('btn');
     for(each of btns){
       each.disabled = false;
       each.style.cursor = "pointer";
-  }
   }
   }
   else{
