@@ -1179,6 +1179,7 @@ function changebanner()
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       document.getElementById('profilename').innerHTML = json[0].username;
+      refreshscore();
     }
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
