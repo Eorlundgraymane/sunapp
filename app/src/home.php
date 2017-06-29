@@ -48,7 +48,7 @@
                        <input class = "shineinput" type = "number" min = "0" max = "100" id = "charity" placeholder = "Charity Shine"><br>
                        <input class = "shineinput" type = "number" min = "0" max = "100" id = "health" placeholder = "Health Shine"><br>
                        <input class = "shineinput" type = "number" min = "0" max = "100" id = "social" placeholder = "Social Shine"><br>
-                       <button class = "btn" type = "button" id = "postbutton" onclick = "gethasurapushpost();"><img src = "css/post.png" width = "50px" height = "50px"></button>
+                       <button title = "Post" class = "btn" type = "button" id = "postbutton" onclick = "gethasurapushpost();"><img src = "css/post.png" width = "50px" height = "50px"></button>
                      </div>
                    </form>
                </div>
