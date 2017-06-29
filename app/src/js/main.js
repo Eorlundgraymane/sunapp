@@ -1983,12 +1983,30 @@ function pushpost(){
   {posttext = null;}
   if(title == null || posttext == null){
     alert("Please fill in Title and a post message. Images are optional");
+    var btns = document.getElementsByClassName('btn');
+    for(each of btns){
+      each.disabled = false;
+      each.style.cursor = "pointer";
+  }
+  }
   }
   else if(parseInt(earth) > 100 || parseInt(charity) > 100 || parseInt(social) > 100 || parseInt(health) > 100){
     alert("Shine value claims must not be greater than 100");
+    var btns = document.getElementsByClassName('btn');
+    for(each of btns){
+      each.disabled = false;
+      each.style.cursor = "pointer";
+  }
+  }
   }
   else if(parseInt(earth) < 0 || parseInt(charity) < 0 || parseInt(social) < 0 || parseInt(health) < 0){
     alert("No negative values for shines.");
+    var btns = document.getElementsByClassName('btn');
+    for(each of btns){
+      each.disabled = false;
+      each.style.cursor = "pointer";
+  }
+  }
   }
   else{
   var data = {};
