@@ -129,44 +129,44 @@ background-color: rgba(255,255,255,0.5);
 background-color: rgba(255,255,255,0.5);
 }
 
-#leads{
+#leadsdiv{
   overflow-y: scroll;
   max-height: 50%;
   max-width: 100%;
 }
-#leads::-webkit-scrollbar-track{
+#leadsdiv::-webkit-scrollbar-track{
   background-color: inset 0 0 6px rgba(0,0,0,0.3);
 	-webkit-box-shadow: #7ec0ee;
 }
-#leads::-webkit-scrollbar{
+#leadsdiv::-webkit-scrollbar{
 	width: 6px;
 	background-color: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
-#leads::-webkit-scrollbar-thumb{
+#leadsdiv::-webkit-scrollbar-thumb{
 	background-color:  #7ec0ee;
 }
-#leads:-ms-scrollbar-track{
+#leadsdiv:-ms-scrollbar-track{
   background-color: inset 0 0 6px rgba(0,0,0,0.3);
 	-webkit-box-shadow: #7ec0ee;
 }
-#leads:-ms-scrollbar{
+#leadsdiv:-ms-scrollbar{
 	width: 6px;
 	background-color: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
-#leads:-ms-scrollbar-thumb{
+#leadsdiv:-ms-scrollbar-thumb{
 	background-color:  #7ec0ee;
 }
-#leads::-moz-scrollbar-track{
+#leadsdiv::-moz-scrollbar-track{
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #7ec0ee;
 }
-#leads::-moz-scrollbar{
+#leadsdiv::-moz-scrollbar{
 	width: 6px;
 	background-color: #7ec0ee;
 }
-#leads::-moz-scrollbar-thumb{
+#leadsdiv::-moz-scrollbar-thumb{
 background-color: rgba(255,255,255,0.5);
 }
 #friendslist{
