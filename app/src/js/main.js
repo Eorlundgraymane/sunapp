@@ -1218,8 +1218,8 @@ function hidecharityhint(){
 function hidesocialhint(){
   document.getElementById('hintsocial').style.display = "none";
 }
-function hidenaturehint(){
-  document.getElementById('hintnature').style.display = "none";
+function hidehealthhint(){
+  document.getElementById('hinthealth').style.display = "none";
 }
 
 
