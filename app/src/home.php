@@ -30,7 +30,7 @@
                  <?php include 'friends.php';?>
                </div>
                <div onload = "keeppulling();" class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "newspane">
-                     <button  class = "btn" id = "postpuller" type = "button" onclick = "gethasurapullpost();" ><img id = "postrefresh" src = "css/refreshpost.png" width = "30px" height = "30px"></button>
+                     <button title = "Refresh Posts" class = "btn" id = "postpuller" type = "button" onclick = "gethasurapullpost();" ><img id = "postrefresh" src = "css/refreshpost.png" width = "30px" height = "30px"></button>
                      <ul id = "posts">
 
                      </ul>
