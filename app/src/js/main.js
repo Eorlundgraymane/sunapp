@@ -1220,6 +1220,7 @@ function changefbanner()
       console.log(JSON.stringify(json));
       var uname = json[0].fname.concat(" ",json[0].lname);
       document.getElementById('profilename').innerHTML = uname;
+      refreshfscore();
     }
     else if(xhr.readyState ==4) {
       alert(JSON.stringify(json));
