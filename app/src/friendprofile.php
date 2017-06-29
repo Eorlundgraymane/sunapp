@@ -13,9 +13,9 @@
          ?>
          <row>
              <div class = "col-lg-2 col-md-2 col-sm-2 col-xs-2" id = "profilepic">
-              <figure title = "Update Profile Photo">
+              <figure>
               <div id = "profilephotobutton"><img id = "profileimage" class = "profileimage img-responsive img-rounded" alt = "No Image Uploaded"></div>
-              <figcaption id = "profilename"></figcaption>
+              <figcaption title = "Profile Name" id = "profilename"></figcaption>
               <script>getfpiclink(parseInt(getCookie("friendid")));</script>
             </figure>
              </div>
