@@ -663,7 +663,7 @@ function getfriendslist(){
                 var friendid = myfid["friend_id"];
                 var prourl = myfid["friend_profile"]["proimage"];
                 console.log(prourl);
-                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button title = \"Visit "+friendname"'s Profile\" onclick = \"gotofriend("+friendid+",'"+friendname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"></button><br><figcaption>"+friendname+"</figcaption></figure></li>";
+                document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button title = \"Visit "+friendname+"'s Profile\" onclick = \"gotofriend("+friendid+",'"+friendname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"></button><br><figcaption>"+friendname+"</figcaption></figure></li>";
               }
             }
           }
