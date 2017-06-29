@@ -171,7 +171,7 @@ background-color: rgba(255,255,255,0.5);
 }
 #friendslistdiv{
   overflow-y: scroll;
-  max-height: 20%;
+  max-height: 20em;
   max-width: 100%;
 }
 #friendslistdiv::-webkit-scrollbar-track{
