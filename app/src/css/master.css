@@ -735,6 +735,9 @@ figcaption{
   height: 30px;
   width: 30px;
 }
+th,td,tr{
+  cursor: default;
+}
 #centerform{
   transform: translate(25%,60%);
 }
