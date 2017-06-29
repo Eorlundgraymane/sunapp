@@ -1989,7 +1989,6 @@ function pushpost(){
       each.style.cursor = "pointer";
   }
   }
-  }
   else if(parseInt(earth) > 100 || parseInt(charity) > 100 || parseInt(social) > 100 || parseInt(health) > 100){
     alert("Shine value claims must not be greater than 100");
     var btns = document.getElementsByClassName('btn');
