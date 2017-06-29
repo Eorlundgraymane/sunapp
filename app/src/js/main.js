@@ -1197,28 +1197,28 @@ function changebanner()
   xhr.send(query);
 
 }
-showearthhint(){
+function showearthhint(){
   document.getElementById('hintearth').style.display = "inline";
 }
-showcharityhint(){
+function showcharityhint(){
   document.getElementById('hintcharity').style.display = "inline";
 }
-showsocialhint(){
+function showsocialhint(){
   document.getElementById('hintsocial').style.display = "inline";
 }
-shownaturehint(){
+function shownaturehint(){
   document.getElementById('hintnature').style.display = "inline";
 }
-hideearthhint(){
+function hideearthhint(){
   document.getElementById('hintearth').style.display = "none";
 }
-hidecharityhint(){
+function hidecharityhint(){
   document.getElementById('hintcharity').style.display = "none";
 }
-hidesocialhint(){
+function hidesocialhint(){
   document.getElementById('hintsocial').style.display = "none";
 }
-hidenaturehint(){
+function hidenaturehint(){
   document.getElementById('hintnature').style.display = "none";
 }
 
