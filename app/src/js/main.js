@@ -2815,13 +2815,13 @@ function loadtable(id){
 }
 function keeppulling(){
   console.log("pulling posts again");
-  setTimeout(function(){console.log("started 5 second delay");},5000);
-  setInterval(function(){pullposts(parseInt(getCookie("hasura_id")));},5000);
+  setTimeout(function(){console.log("started 5 second delay");},10000);
+  setInterval(function(){pullposts(parseInt(getCookie("hasura_id")));},10000);
 }
 function keepfpulling(){
   console.log("pulling posts again");
-  setTimeout(function(){console.log("started 5 second delay");},5000);
-  setInterval(function(){pullfposts(parseInt(getCookie("friendid")));},5000);
+  setTimeout(function(){console.log("started 5 second delay");},10000);
+  setInterval(function(){pullfposts(parseInt(getCookie("friendid")));},10000);
 }
 function pullfposts(id){
   document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
@@ -2968,7 +2968,7 @@ function pullfposts(id){
       for(each of btns){
         each.disabled = false;
         each.style.cursor = "pointer";
-    }    
+    }
     }
   }
   xhr.timeout = 10000;
