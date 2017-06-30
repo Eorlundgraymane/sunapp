@@ -2965,7 +2965,7 @@ function pullposts(id){
     "columns":["post","id","postimg","created","title",
       {
         "name":"author",
-        "columns":["fname","proimage","user_id"]
+        "columns":["*"]
       },
       {
         "name":"likers",
@@ -2998,6 +2998,10 @@ function pullposts(id){
         var post = each["post"];
         var title = each["title"];
         var postid = each["id"];
+        var cshine = each["charityshine"];
+        var eshine = each["earthshine"];
+        var sshine = each["socialshine"];
+        var hshine = each["healthshine"];
         var timestamp = time_ago(each["created"]);
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
