@@ -2809,12 +2809,12 @@ function loadtable(id){
 function keeppulling(){
   console.log("pulling posts again");
   setTimeout(function(){console.log("started 5 second delay");},5000);
-  setInterval(pullposts(parseInt(getCookie("hasura_id"))),5000);
+  setInterval(function(){pullposts(parseInt(getCookie("hasura_id")));},5000);
 }
 function keepfpulling(){
   console.log("pulling posts again");
   setTimeout(function(){console.log("started 5 second delay");},5000);
-  setInterval(pullfposts(parseInt(getCookie("friendid"))),5000);
+  setInterval(function(){pullfposts(parseInt(getCookie("friendid")));},5000);
 }
 function pullfposts(id){
   document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
