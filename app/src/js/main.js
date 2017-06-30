@@ -2808,10 +2808,12 @@ function loadtable(id){
 }
 function keeppulling(){
   console.log("pulling posts again");
+  setTimeout(function(){console.log("started 5 second delay");},5000);
   setInterval(pullposts(parseInt(getCookie("hasura_id"))),5000);
 }
 function keepfpulling(){
   console.log("pulling posts again");
+  setTimeout(function(){console.log("started 5 second delay");},5000);
   setInterval(pullfposts(parseInt(getCookie("friendid"))),5000);
 }
 function pullfposts(id){
@@ -2949,6 +2951,7 @@ function pullfposts(id){
     }
     document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "20px" height = "20px">';
     changefbanner();
+    document.getElementById('posts').innerHTML += "<script>keepfpulling();</script>";
     }
     else if (xhr.readyState == 4) {
       document.getElementById('postpuller').innerHTML = "Error";
@@ -2960,6 +2963,7 @@ function pullfposts(id){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
+    document.getElementById('posts').innerHTML += "<script>keepfpulling();</script>";
     }
   }
   xhr.timeout = 10000;
@@ -3100,6 +3104,7 @@ function pullposts(id){
         each.style.cursor = "pointer";
     }
     changebanner();
+    document.getElementById('posts').innerHTML += "<script>keeppulling();</script>";
     }
     else if (xhr.readyState == 4) {
       var res = JSON.parse(xhr.responseText);
@@ -3111,6 +3116,7 @@ function pullposts(id){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
+    document.getElementById('posts').innerHTML += "<script>keeppulling();</script>";
     }
   }
   xhr.timeout = 10000;
