@@ -142,7 +142,7 @@ function loadleaderboards(){
       nowshine.innerHTML += '</tr>';
       for(table of json){
         nowshine.innerHTML += '<tr>';
-        nowshine.innerHTML += '<td>'+rank+'</td><td><img src = "'+table["proimage"]+'" height = "30px" width = "30px"></td><td>'+table["fname"]+'</td><td>'+table["shine"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
+        nowshine.innerHTML += '<td>'+rank+'</td><td><img title = "'+table["fname"]+'" src = "'+table["proimage"]+'" height = "30px" width = "30px"></td><td>'+table["fname"]+'</td><td>'+table["shine"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
         nowshine.innerHTML += '</tr>';
         rank++;
       }
