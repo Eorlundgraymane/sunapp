@@ -727,12 +727,14 @@ background-color: rgba(255,255,255,0.5);
 #postbutton{
   border-radius : 10px;
   padding: 0;
-  margin: 0;
+  margin: 0;  
+}
+#postbuttonimage{
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease;
 }
-#postbutton:hover{
+#postbuttonimage:hover{
   width: 150%;
   height: 150%;
 }
