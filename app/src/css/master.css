@@ -135,7 +135,7 @@ background-color: rgba(255,255,255,0.5);
 
 #posts{
   overflow-y: scroll;
-  max-height: 40em;
+  max-height: 45em;
   max-width: 100%;
 }
 #posts::-webkit-scrollbar-track{
