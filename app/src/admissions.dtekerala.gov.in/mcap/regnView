@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="/MCAP/web/images/favicon.ico">
+<title>MCAP - M.Tech Centralised Allotment Process</title>
+<link href="/mcap/bundles/app/css/bootstrap.min.css" rel="stylesheet">
+<link href="/mcap/bundles/app/css/sticky-footer.css" rel="stylesheet">
+<link href="/mcap/bundles/app/css/AdminLTE.css" rel="stylesheet">
+<link href="/mcap/bundles/app/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="/mcap/bundles/app/js/jquery.min.js"></script>
+<script src="/mcap/bundles/app/js/jquery.ui.datepicker.min.js"></script>
+<script src="/mcap/bundles/app/js/jquery.ui.datepicker.min.js"></script>
+<script src="/mcap/bundles/app/js/jquery-ui.min.js"></script>
+<script src="/mcap/bundles/app/js/bootstrap.min.js"></script>
+<link href="/mcap/bundles/app/css/jquery-bootstrap-datepicker.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-default" style="background-color: #00acd6; color: #fff">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img class='govt_emblem pull-left' src="/mcap/bundles/app/images/govt_of_kerala.png" width="120" alt="Directorate of Technical Education, Government of Kerala" />
+        <div class="header_content pull-right">
+          <h3>Directorate of Technical Education</h3>
+          <h4>Department of Technical Education - Government of Kerala</h4>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+              </div>
+    </div>
+  </nav>
+    <div class="container" style="width: 98%">
+    <div class="row">
+      <div class="col-md-12">
+                <form name="form" method="post">
+<div class="box box-info" style=" border-bottom: 2px solid #00acd6;">
+  <div class="box-header with-border"><h3 class="box-title">Know Your Registration Details</h3></div>
+  <div class="box-body">
+    <div class="row">
+      <div class="col-md-4">
+          <div class="input-group input-group-md col-md-12">
+          <label>Enter Your Mobile No</label>
+          <input type="text" id="form_mobile" name="form[mobile]" required="required" class="form-control" /><span class="input-group-btn" style="vertical-align:bottom"><button type="submit" id="form_btnRegnView" name="form[btnRegnView]" class="btn btn-info btn-flat pull-right">Get Registration Details</button></span>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="box-footer">
+          <br><br><br><br>
+      <div class="box-header with-border"><h4 class="box-footer">.... No Registration Details Found. Please Enter Your Mobile Number ....</h4></div>
+      </div>  
+    <div class="box-body">
+      <div class="alert alert-info alert-dismissable">
+        <h4><i class="icon fa fa-ban"></i> Important Note!</h4>
+        1. Kindly use valid & own E-mail ID during registration process because future communication will be done through this registered E-mail ID only<br>
+      </div>
+    </div>
+</div>
+<div><button type="submit" id="form_btnCancel" name="form[btnCancel]" class="btn btn-info">Return Back</button></div><input type="hidden" id="form__token" name="form[_token]" value="rAxq42VCHGm98PGLY9jFHCnrzt9IbupwZEQasiZND40" /></form>
+      </div>
+    </div>
+  </div>
+    <footer class="footer"  style="background-color: #00acd6; color: #fff">
+    <hr style="color: grey; height: 0px; line-height:0px; margin-top: 0px;margin-bottom: 0px; border-style: solid; border-width:1px">
+    <div class="container">
+      <p class="text-center">Developed by <a class="text-black" target="_blank" mce_href="http://www.dtekerala.gov.in/" href="http://www.dtekerala.gov.in/">IT Section - DTE, Tvpm</a></p>
+  </div>
+  </footer>
+
+</body>
+</html>

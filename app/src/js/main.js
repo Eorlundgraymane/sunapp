@@ -2343,6 +2343,88 @@ function like(id,liker_id){
   }
   xhr.send(query);
 }
+function flike(id,liker_id){
+  var likimg = document.getElementById('img'+id);
+  likimg.src = "css/generated/health.svg";
+  var data = {};
+  data["type"] = "insert";
+  data["args"] = {};
+  data["args"]["table"] = "likes";
+  data["args"].objects = [{"post_id":id,"liker_id":liker_id}];
+  query = JSON.stringify(data);
+  console.log(query);
+  var xhr = new XMLHttpRequest();
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      console.log("Liked");
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      pullfposts(getCookie("friendid"));
+    }
+    else if(xhr.readyState == 4) {
+      console.log("not liked");
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      alert("Not Liked");
+    }
+  }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
+  }
+  xhr.send(query);
+}
+function funlike(id,liker_id){
+  var likimg = document.getElementById('img'+id);
+  likimg.src = "css/heart.svg";
+  var data = {};
+  data["type"] = "delete";
+  data["args"] = {};
+  data["args"]["table"] = "likes";
+  data["args"]["where"] = {};
+  data["args"]["where"]["post_id"] = id;
+  data["args"]["where"]["liker_id"] = liker_id;
+  query = JSON.stringify(data);
+  console.log(query);
+  var xhr = new XMLHttpRequest();
+  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      console.log("Liked");
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      pullfposts(getCookie("friendid"));
+    }
+    else if(xhr.readyState == 4) {
+      console.log("not liked");
+      var res = JSON.parse(xhr.responseText);
+      console.log(res);
+      alert("Not Unliked");
+    }
+  }
+  xhr.timeout = 10000;
+  xhr.ontimeout = function(e){
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    var allbuts = document.getElementsByClassName("btn");
+    for(but of allbuts){
+      but.style.cursor = "pointer";
+      but.disabled = false;
+    }
+  }
+  xhr.send(query);
+}
 function unlike(id,liker_id){
   var likimg = document.getElementById('img'+id);
   likimg.src = "css/heart.svg";
@@ -2780,18 +2862,18 @@ function pullfposts(id){
         if(author_id == id){
           if(likers.length == 0){
             var likeimg = "css/heart.svg";
-              document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img width = "80em" height = "80em" id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!! </div></figure></li>';
+              document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img width = "80em" height = "80em" id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+'</figcaption><div><button type = "button" class = "btn like" onclick = "flike('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!! </div></figure></li>';
           }
           else{
             var liketitle = "";
-            var service = "like";
+            var service = "flike";
             var count = 0;
             var likeimg = "css/heart.svg";
             for(liker of likers)
             {
               if(liker["liker"]["user_id"] == parseInt(getCookie("hasura_id"))){
                 likeimg = "css/generated/health.svg";
-                service = "unlike";
+                service = "funlike";
               }
               if(count <= 10){
                 liketitle += "<img class = 'likers' width = '30px' height = '30px' src = '"+liker['liker']['proimage']+"' title = '"+liker["liker"]["fname"]+"'>";
@@ -2809,10 +2891,10 @@ function pullfposts(id){
         else{
             if(likers.length == 0){
               var likeimg = "css/heart.svg";
-            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!!</div></figure></li>';
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+'</figcaption><div><button type = "button" class = "btn like" onclick = "flike('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!!</div></figure></li>';
           }
           else{
-            var service = "like";
+            var service = "flike";
             var likeimg = "css/heart.svg";
             var liketitle = "";
             var count = 0;
@@ -2820,7 +2902,7 @@ function pullfposts(id){
             {
               if(liker["liker"]["user_id"] == id){
                 likeimg = "css/generated/health.svg";
-                service = "unlike";
+                service = "funlike";
               }
               if(count <= 10){
                 liketitle += "<img class = 'likers' width = '30px' height = '30px' src = '"+liker['liker']['proimage']+"' title = '"+liker["liker"]["fname"]+"'>";

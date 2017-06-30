@@ -1,0 +1,194 @@
+<script language="javascript" type="text/javascript" src="NICencrypt.js"></script>
+<html>
+    <head>
+        <script type="text/javascript">
+            function getfocus()
+            {
+                document.inde.txtrollno.focus();
+            }
+            function chk()
+            {
+                var roll = document.inde.txtrollno.value;
+                if (roll == '')
+                {
+                    alert("Enter Roll Number");
+                    document.inde.txtrollno.focus();
+                    return false;
+                }
+            }
+            function numbersonly(e)
+            {
+                var unicode = e.charCode ? e.charCode : e.keyCode
+                if (unicode != 8 && unicode != 9 && unicode != 13)
+                {
+                    if (unicode < 48 || unicode > 57)
+                        return false;
+                }
+            }
+        </script>
+        <meta http-equiv="Content-Language" content="en-us">
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>lCAP- Centralised Allotment Process(Lateral Entry)</title>
+        <link rel="stylesheet" type="text/css" href="../images/style.css">
+        <style type="text/css">
+            <!--
+            .style4 {color: #FF0000}
+            .login1 {
+                font-family:Cambria; font-size:14px;
+            }
+            .link1 a{
+                font-family:Cambria; font-size:14px;
+                color:#3300FF; text-decoration:underline;
+            }
+            .link1 a:hover{
+                font-family:Cambria; font-size:15px;
+                color:#FF0000; text-decoration:underline;
+            }
+            -->
+        </style>
+    </head>
+
+    <body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" onLoad="getfocus()">
+<table border="0" width="95%" id="table1" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+		<td height="78" width="20%" valign="top" rowspan="2" style="border-bottom:#1f80c5 1px solid;">
+			<img border="0" src="../images/lcapLogo.gif"></td>
+		<td valign="top">
+		
+<table align='right' height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td rowspan="2">
+				<img src="../images/top_menu_01.gif" width="33" height="42" alt=""></td>
+			<td height="22" bgcolor="#1f80c5">
+				<script type="text/javascript" language="JavaScript1.2" src="../menu/stm31.js"></script>
+<script type="text/javascript" language="JavaScript1.2">
+<!--
+stm_bm(["bmgmfhr",430,"../menu","blank.gif",0,"","",1,0,19,19,100,1,0,0,"","",83886139],this);
+stm_bp("p0",[0,4,0,0,4,0,4,7,100,"",-2,"",-2,100,0,0,"#999999","#1f80c5","",3,0,0,"#b8cddb"]);
+stm_ai("p0i0",[6,1,"#FFFFFF","",-1,-1,0]);
+stm_ai("p0i1",[0,"Course List","","",-1,-1,0,"../outrefiles/coursedesc.php","_blank","","","","",4,0,0,"","",0,0,0,0,1,"#D4D4D4",1,"#d7f1ff",1,"","",2,3,0,0,"#ffffff","#ffffff","#FFFFFF","#FFCC00","bold 11px Tahoma","bold 11px Tahoma",0,0]);
+stm_aix("p0i2","p0i0",[]);
+stm_ai("p0i1",[0,"College List","","",-1,-1,0,"../outrefiles/colcourse.php?cgp=E","_blank","","","","",4,0,0,"","",0,0,0,0,1,"#D4D4D4",1,"#d7f1ff",1,"","",2,3,0,0,"#ffffff","#ffffff","#FFFFFF","#FFCC00","bold 11px Tahoma","bold 11px Tahoma",0,0]);
+/*stm_ai("p0i1",[0,"Course List","","",-1,-1,0,"../main/coursedesc.php","_blank","","","","",4,0,0,"","",0,0,0,0,1,"#D4D4D4",1,"#d7f1ff",1,"","",2,3,0,0,"#ffffff","#ffffff","#FFFFFF","#FFCC00","bold 11px Tahoma","bold 11px Tahoma",0,0]);
+stm_aix("p0i2","p0i0",[]);
+stm_aix("p0i3","p0i1",[0,"College List","","",-1,-1,0,"","_self","","","","",4,0,0,"","",7,7]);
+stm_bp("p1",[1,4,-4,6,5,2,0,0,100,"",-2,"",-2,30,0,0,"#999999","#F4F4F4","",3,3,1,"#d0d0d0 #d0d0d0 #d0d0d0 #d0d0d0"]);
+stm_aix("p1i0","p0i1",[0,"Medical Counselling","","",-1,-1,0,"../main/colcourse.php?cgp=M","_blank","","","","",0,0,0,"","",0,0,0,0,1,"#D4D4D4",1,"#D41128",1,"","",2,3,0,0,"#ffffff","#ffffff","#000000","#D41128","11px Tahoma"]);
+stm_aix("p1i1","p1i0",[0,"Engineering Counselling","","",-1,-1,0,"../main/colcourse.php?cgp=E"]);
+stm_aix("p1i2","p1i0",[0,"Architecture Counselling","","",-1,-1,0,"../main/colcourse.php?cgp=R"]);
+stm_aix("p1i3","p1i0",[0,"B. Pharm Counselling","","",-1,-1,0,"../main/colcourse.php?cgp=B"]);
+stm_ep();*/
+stm_aix("p0i4","p0i0",[]);
+stm_ep();
+stm_em();
+//-->
+</script>
+			</td>
+			<td rowspan="2">
+				<img src="../images/top_menu_03.gif" width="25" height="42" alt=""></td>
+		</tr>
+		<tr>
+			<td height="20">&nbsp;</td>
+		</tr>
+</table>	
+
+	</td>
+	</tr>
+	<tr>
+	  <td valign="top" style="font-size:17px;font-weight:bold;color:#1f80c5;border-bottom:#1f80c5 1px solid; padding-left:100px;">Admission To B.Tech Course(Lateral Entry) - 2017</td>
+	</tr>
+</table>	
+        <p class="style1" align="center">
+            <noscript>
+    <marquee direction="left" behavior="alternate" width="700" truespeed="truespeed" scrollamount="1" scrolldelay="25"><font color="#FF0000"><strong> 
+            Javascript is disabled in your Browser............ It must be enabled in your browser for Login</strong></font></marquee>
+    </noscript> 
+</p> 
+<table border="0" width="80%" cellspacing="0" cellpadding="0" align="center" height="70%">
+    <tr>
+        <td valign="top"><p><br>
+                <br>
+
+                <span style="color:#1f80c5;font-weight:bold; font-family:Cambria; font-size:14px;">You need to Login for registering/modifying Options</span>
+</p><br>
+            <form name="inde" action="logincheck.php" method="post" autocomplete="off" />
+                            <table border="0" width="93%" cellspacing="0" cellpadding="0">
+
+                <tr>
+                    <td width="15%" class="login1">Roll&nbsp;Number</td>
+                    <td width="85%"><input type="text" name="txtrollno" size="20" maxlength="6" onKeyPress="return numbersonly(event)"                    </td>
+                </tr>
+                                               <tr>
+        <td height="35">&nbsp;</td>
+        <td colspan="2"><input type="submit" value="Submit" name="subuser1" onClick="return chk();"></td>
+    </tr>
+    </table>
+</form>
+<table border="0" width="93%" cellspacing="0" cellpadding="0">
+    <tr>
+        <td class="style4" style="font-weight:900; font-family:Cambria; font-size:14px;"></td>
+    </tr>
+    <tr>
+            <td class="content_help" >Please enter your  Roll Number  to Login.</td>	
+	
+    </tr>
+    <tr><td>&nbsp;</td></tr>
+    <tr><td><font color="#0000FF" style="font-family:Cambria; font-size:15px;">Candidates who have not yet received the keynumber or forgotten the password are directed to approach </font><a href=# onClick="window.open('../outrefiles/IGOFC.pdf', '_blank', 'status=0,scrollbars=1,resizable=1,screenX=100,screenY=10,left=100,top=10')"><font color="#CC0033">HelpDesk</font></a> </td></tr>
+    <tr><td>&nbsp;</td></tr>
+    <tr>
+        <td style="color:#D41128; font-family:Cambria; font-size:14px;"><p>In case of loss of Password, you have to come in person with proof of identity to the nearest <span class="style8"><a href="../outrefiles/IGOFC.pdf" target="_blank">IGOFC</a></span> or to the Office of the Director of Technical Education, Trivandrum for reseting the Password. </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr><td>&nbsp;</td></tr>
+    <td><div class="link1" style="padding:5px; text-align:center;"><a href="../outrefiles/timeschedule2017.pdf" target="_blank"> Time Schedule for Lateral Entry B.Tech Admission </a></div>
+        <div class="link1" style="padding:5px; text-align:center; display:none;"><a href="../outrefiles/feedetails2016.pdf" target="_blank">Click here to view the fees details</a></div>
+    </td>
+</tr>
+<tr><td style="font-weight:bold; color:#990000; font-family:Cambria; font-size:14px; padding-top:3px;" height="50"></td></tr>
+
+
+<tr>
+    <td style="font-weight:bold; color:#FF0000; font-family:Cambria; font-size:14px;" height="50"><br><br><marquee hspace="10" align="absmiddle" behavior="alternate" scrollamount="1" scrolldelay="18" truespeed="truespeed">Only candidates having rank upto 1709 can register their options upto 29-Jun-2017, 5PM</marquee></td>
+</tr>
+</table>
+</td></tr>
+</table>
+<table width="98%">
+    <tr>
+        <td align="center"><marquee hspace="300" align="absmiddle" behavior="alternate" scrollamount="1" scrolldelay="18" truespeed="truespeed">
+        <font color="#537FC4" size="3"><b>Mozilla Firefox or Internet Explorer Recommended </b></font>
+    </marquee></td>
+</tr>
+</table>
+<!----==============================================#E9E9E9===========-->
+<style type="text/css">
+<!--
+.style14 {font-weight: bold; color: #009999;}
+.style19 {
+	color: #1f80c5;
+	font-size: 11px;
+	font-family: tahoma;
+}
+.style23 {color: #000000; font-size: xx-small; font-family: tahoma; }
+.style31 {color: #000000; font-size: 11px; font-family: tahoma; }
+.style32 {font-size: 11px}
+-->
+</style>
+<table bgcolor="#F4F4F4" style="BORDER-TOP: #1f80c5 1px solid; BORDER-LEFT-WIDTH: 1px; BORDER-BOTTOM-WIDTH: 1px; BORDER-RIGHT-WIDTH: 1px" cellSpacing="0" cellPadding="0" width="95%" border="0" align="center">
+<tr>
+  <td height="16" align="center" valign="middle" class="style14"><span class="style19">Brought to you  by</span></td>
+</tr>
+<tr><td align="center"><span class="style31">Director of Technical Education, Tel : 0471-2451741</span></td>
+</tr>
+<tr>
+  <td align="center"><span class="style31">Software Design, Development and Hosting Services by </span></td>
+</tr>
+<tr>
+  <td align="center" class="style23"><span class="style32">National Informatics Centre (Kerala)<a href="mailto:cee[at]kerala[dot]nic[dot]in"></a> </span></td>
+</tr>
+<tr><td align="center" class="style23"><span class="style32">Network Services by E-Governance Network and Data Centre, Govt. of Kerala</span></td>
+</tr>
+
+</table></body>
+</html>

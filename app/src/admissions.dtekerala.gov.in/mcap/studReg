@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="/MCAP/web/images/favicon.ico">
+<title>MCAP - M.Tech Centralised Allotment Process</title>
+
+<link href="/mcap/bundles/app/css/bootstrap.min.css" rel="stylesheet">
+<link href="/mcap/bundles/app/css/sticky-footer.css" rel="stylesheet">
+<link href="/mcap/bundles/app/css/AdminLTE.css" rel="stylesheet">
+<link href="/mcap/bundles/app/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="/mcap/bundles/app/js/jquery.min.js"></script>
+<script src="/mcap/bundles/app/js/jquery.ui.datepicker.min.js"></script>
+<script src="/mcap/bundles/app/js/jquery.ui.datepicker.min.js"></script>
+<script src="/mcap/bundles/app/js/jquery-ui.min.js"></script>
+<script src="/mcap/bundles/app/js/bootstrap.min.js"></script>
+<link href="/mcap/bundles/app/css/jquery-bootstrap-datepicker.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-default" style="background-color: #00acd6; color: #fff">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img class='govt_emblem pull-left' src="/mcap/bundles/app/images/govt_of_kerala.png" width="120" alt="Directorate of Technical Education, Government of Kerala" />
+        <div class="header_content pull-right">
+          <h3>Directorate of Technical Education</h3>
+          <h4>Department of Technical Education - Government of Kerala</h4>
+        </div>
+
+      </div>
+
+      <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+              </div>
+    </div>
+  </nav>
+    <div class="container" style="width: 98%">
+    <div class="row">
+      <div class="col-md-12">
+                <style>
+.form-signin
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.need-help
+{
+    margin-top: 10px;
+}
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+      <h1 class="text-center login-title">Sign in to continue to MCAP </h1>
+      <div class="account-wall">
+        <img class="profile-img" src="/mcap/bundles/app/images/user.png" alt="Click to Login">
+        <form action="/mcap/login_check" method="post" class="form-signin">
+          <input type="hidden" name="_csrf_token" value="7T5I8Afp2dsej3MsSOda2-2owg0PpyKzDX9BbwJx0UU" />
+          <input type="text" class="form-control" id="username" name="_username" value="" required="required" placeholder="User Name" title="User Name / Application No" />
+          <input type="password" class="form-control" id="password" name="_password" required="required" placeholder="Password" title="Password"/>
+          <button class="btn btn-lg btn-block btn-info" id="_submit" name="_submit">Sign in</button>
+          <span class="clearfix"></span>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+    <footer class="footer" style="background-color: #00acd6; color: #fff">
+    <hr style="color: grey; height: 0px; line-height:0px; margin-top: 0px;margin-bottom: 0px; border-style: solid; border-width:1px">
+    <div class="container">
+      <p class="text-center">Developed by <a class="text-black" target="_blank" mce_href="http://www.dtekerala.gov.in/" href="http://www.dtekerala.gov.in/">IT Section - DTE, Tvpm</a></p>
+  </div>
+  </footer>
+
+</body>
+</html>
