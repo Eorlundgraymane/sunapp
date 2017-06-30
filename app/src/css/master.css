@@ -53,7 +53,7 @@
 .shineinput{
   min-width: 40%;
 }
-.hasuralink{
+.hasuralink,.hasuralink:visited{
   color: white;
   text-decoration: underline;
   font-weight: bolder;
