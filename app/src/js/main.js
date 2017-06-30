@@ -138,7 +138,7 @@ function loadleaderboards(){
       var json = json.reverse();
       var nowshine = document.getElementById('leads');
       nowshine.innerHTML += '<tr>';
-      nowshine.innerHTML += '<th>Rank</th><th>Profile</th><th>Sunshine</th><th>Shine</th><th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
+      nowshine.innerHTML += '<th>Rank</th><th>Profile Picture</th><th>Sunshine</th><th>Shine</th><th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
       nowshine.innerHTML += '</tr>';
       for(table of json){
         nowshine.innerHTML += '<tr>';
