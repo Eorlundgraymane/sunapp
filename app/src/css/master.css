@@ -53,7 +53,15 @@
 .shineinput{
   min-width: 40%;
 }
-.hasuralink,.hasuralink:visited{
+.hasuralink{
+  color: white;
+  text-decoration: underline;
+  font-weight: bolder;
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+.hasuralink:visited,.hasuralink:active{
   color: white;
   text-decoration: underline;
   font-weight: bolder;
