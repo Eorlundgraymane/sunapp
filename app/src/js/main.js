@@ -124,7 +124,7 @@ function loadleaderboards(){
   data["type"] = "select";
   data["args"] = {};
   data["args"]["table"] = "profile";
-  data["args"]["columns"] = ["fname","shine","healthshine","friendshine","charityshine","socialshine","friendshine","earthshine"];
+  data["args"]["columns"] = ["proimage","fname","shine","healthshine","friendshine","charityshine","socialshine","friendshine","earthshine"];
   data["args"]["order_by"] = "shine";
   var query = JSON.stringify(data);
   xhr = new XMLHttpRequest();
@@ -138,11 +138,11 @@ function loadleaderboards(){
       var json = json.reverse();
       var nowshine = document.getElementById('leads');
       nowshine.innerHTML += '<tr>';
-      nowshine.innerHTML += '<th>Rank</th><th>Sunshine</th><th>Shine</th><th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
+      nowshine.innerHTML += '<th>Rank</th><th>Profile</th><th>Sunshine</th><th>Shine</th><th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
       nowshine.innerHTML += '</tr>';
       for(table of json){
         nowshine.innerHTML += '<tr>';
-        nowshine.innerHTML += '<td>'+rank+'</td><td>'+table["fname"]+'</td><td>'+table["shine"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
+        nowshine.innerHTML += '<td>'+rank+'</td><td><img src = "'+table["proimage"]+'" height = "30px" width = "30px"></td><td>'+table["fname"]+'</td><td>'+table["shine"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
         nowshine.innerHTML += '</tr>';
         rank++;
       }
