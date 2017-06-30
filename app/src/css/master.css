@@ -8,6 +8,15 @@
 #lead{
   text-align: center;
 }
+.leaderimage{
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+}
+.leaderimage:hover{
+  height: 70px;
+  width:70px;
+}
 #friendslist,#friendssuggest{
   list-style-type: none;
   background-color:rgba(9, 122, 4, 1);
