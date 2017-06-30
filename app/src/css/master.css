@@ -735,7 +735,8 @@ background-color: rgba(255,255,255,0.5);
   transition-timing-function: ease;
 }
 #postbuttonimage:hover{
-  height: 10%;
+  height: 75px;
+  width: auto; 
 }
 #friend{
   margin-left: -40px;
