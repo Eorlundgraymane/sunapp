@@ -62,9 +62,15 @@
   transition-timing-function: ease-in-out;
 }
 .hasuralink:hover{
+  color: white;
+  text-decoration: underline;
+  font-weight: bolder;
   font-size: 200%;
 }
 .hasuralink:active{
+  color: white;
+  text-decoration: underline;
+  font-weight: bolder;
   font-size: 150%;
 }
 #deletepost{
