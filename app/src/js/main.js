@@ -2861,14 +2861,13 @@ function pullfposts(id){
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
         var likers = each["likers"];
-        var parsedpost = smileyMe(post);
+        var parsedpost = smileyMe(post).concat("<br>");
         if(parseInt(eshine) > 0){
-          parsedpost = parsedpost.concat("<br><img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine);
+          parsedpost = parsedpost.concat("<img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine);
         }
         if(parseInt(sshine) > 0 ){
           parsedpost = parsedpost.concat("<img src = \"css/generated/family.svg\" width = \"10px\" height = \"10px\">",sshine);
         }
-
         if(parseInt(hshine) > 0 ){
           parsedpost = parsedpost.concat("<img src = \"css/generated/health.svg\" width = \"10px\" height = \"10px\">",hshine);
         }
@@ -3016,9 +3015,9 @@ function pullposts(id){
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
-        var parsedpost = smileyMe(post);
+        var parsedpost = smileyMe(post).concat("<br>");
         if(parseInt(eshine) > 0){
-          parsedpost = parsedpost.concat("<br><img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine);
+          parsedpost = parsedpost.concat("<img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine);
         }
         if(parseInt(sshine) > 0 ){
           parsedpost = parsedpost.concat("<img src = \"css/generated/family.svg\" width = \"10px\" height = \"10px\">",sshine);
