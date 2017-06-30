@@ -2815,11 +2815,11 @@ function loadtable(id){
 }
 function keeppulling(){
   console.log("started 10 second delay");
-  setTimeout(function(){console.log("pulling posts again");gethasurapullpost();},10000);
+  setTimeout(function(){console.log("pulling posts again");gethasurapullpost();},60000);
 }
 function keepfpulling(){
   console.log("started 10 second delay");
-  setTimeout(function(){console.log("pulling posts again");pullfposts(parseInt(getCookie("friendid")));},10000);  
+  setTimeout(function(){console.log("pulling posts again");pullfposts(parseInt(getCookie("friendid")));},60000);  
 }
 function pullfposts(id){
   document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
