@@ -7,6 +7,7 @@
 }
 #lead{
   text-align: center;
+  cursor: default;
 }
 .leaderimage{
   transition-property: all;
