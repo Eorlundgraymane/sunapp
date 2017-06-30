@@ -30,7 +30,7 @@
                  <?php include 'friendsfriends.php';?>
                </div>
                <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "newspane">
-                     <button class = "btn" id = "postpuller"  type = "button" onclick = "pullfposts(parseInt(getCookie('friendid')));" ><img id = "postrefresh" src = "css/refreshpost.png" width = "50px" height = "50px"></button>
+                     <button title = "Posts will refresh every 30s" class = "btn" id = "postpuller"  type = "button" onclick = "pullfposts(parseInt(getCookie('friendid')));" ><img id = "postrefresh" src = "css/refreshpost.png" width = "50px" height = "50px"></button>
                      <ul id = "posts">
 
                      </ul>
