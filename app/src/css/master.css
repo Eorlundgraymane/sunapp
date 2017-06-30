@@ -14,8 +14,8 @@
   transition-timing-function: ease;
 }
 .leaderimage:hover{
-  height: 70px;
-  width:70px;
+  height: 100px;
+  width:100px;
 }
 #friendslist,#friendssuggest{
   list-style-type: none;
