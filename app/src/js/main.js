@@ -2706,7 +2706,7 @@ function pullfposts(id){
       },
       {
         "name":"likers",
-        "columns":["liker_id","created"
+        "columns":["liker_id","created",
         {
           "name":"liker",
           "columns":["fname","user_id","proimage"]
