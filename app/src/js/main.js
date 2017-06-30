@@ -2785,12 +2785,19 @@ function loadtable(id){
         document.getElementById('score').innerHTML = json[0]["shine"];
         shinehead.innerHTML = 'Shine Table<button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button"><img width = "20px" height = "20px" src = "css/refreshpost.png"></button>';
         buttonsenabled();
+        if(id == parseInt(getCookie("hasura_id"))){
+          keeppulling();
+        }
+        else if(id == parseInt(getCookie("friend_id"))){
+          keepfpulling();
+        }
       }
       else if(xhr.readyState ==4){
         var json = JSON.parse(xhr.responseText);
         console.log(JSON.stringify(json));
         shinehead.innerHTML = "Shine Table";
         buttonsenabled();
+        keeppulling();
       }
 
     }
@@ -2951,7 +2958,6 @@ function pullfposts(id){
     }
     document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "20px" height = "20px">';
     changefbanner();
-    document.getElementById('posts').innerHTML += "<script>keepfpulling();</script>";
     }
     else if (xhr.readyState == 4) {
       document.getElementById('postpuller').innerHTML = "Error";
@@ -2962,8 +2968,7 @@ function pullfposts(id){
       for(each of btns){
         each.disabled = false;
         each.style.cursor = "pointer";
-    }
-    document.getElementById('posts').innerHTML += "<script>keepfpulling();</script>";
+    }    
     }
   }
   xhr.timeout = 10000;
@@ -3104,7 +3109,6 @@ function pullposts(id){
         each.style.cursor = "pointer";
     }
     changebanner();
-    document.getElementById('posts').innerHTML += "<script>keeppulling();</script>";
     }
     else if (xhr.readyState == 4) {
       var res = JSON.parse(xhr.responseText);
@@ -3116,7 +3120,6 @@ function pullposts(id){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
-    document.getElementById('posts').innerHTML += "<script>keeppulling();</script>";
     }
   }
   xhr.timeout = 10000;
