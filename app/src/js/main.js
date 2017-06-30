@@ -577,7 +577,7 @@ function getfriendsfriendlist(){
           }
           friendlistflag = 1;
           droppeddown = 0;
-          document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "50px" height = "40px">';
+          document.getElementById('friendslistbutton').innerHTML = '<img class = \"img-rounded\" src = "css/friendsicon.png" width = "50px" height = "40px">';
           document.getElementById('friendslistbutton').click();
         }
         }
@@ -639,7 +639,7 @@ function getfriendslist(){
           }
           friendlistflag = 1;
           droppeddown = 0;
-          document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "50px" height = "40px">';
+          document.getElementById('friendslistbutton').innerHTML = '<img class = \"img-rounded\" src = "css/friendsicon.png" width = "50px" height = "40px">';
           document.getElementById('friendslistbutton').click();
         }
         }
@@ -3019,7 +3019,7 @@ function selectsuggests(){
           }
         }
         if(friendsuggestflag ==1){
-          document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
+          document.getElementById('friendssuggestbutton').innerHTML = "<img class = \"img-rounded\" src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
           var btns = document.getElementsByClassName('btn');
           for(each of btns){
             each.disabled = false;
@@ -3028,7 +3028,7 @@ function selectsuggests(){
           document.getElementById('friendssuggestbutton').click();
         }
         else{
-          document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
+          document.getElementById('friendssuggestbutton').innerHTML = "<img class = \"img-rounded\" src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
         }
         var btns = document.getElementsByClassName('btn');
         for(each of btns){
