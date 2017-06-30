@@ -2863,8 +2863,7 @@ function pullposts(id){
         {
           "name":"liker",
           "columns":["fname","user_id","proimage"]
-        },
-        "order_by":"created"
+        }
       ]
       }
   ],
