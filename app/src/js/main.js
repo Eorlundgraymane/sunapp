@@ -2662,7 +2662,7 @@ function loadtable(id){
         if(id == parseInt(getCookie("hasura_id"))){
           keeppulling();
         }
-        else if(id == parseInt(getCookie("friend_id"))){
+        else if(id == parseInt(getCookie("friendid"))){
           keepfpulling();
         }
       }
