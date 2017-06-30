@@ -736,7 +736,11 @@ background-color: rgba(255,255,255,0.5);
 }
 #postbuttonimage:hover{
   height: 75px;
-  width: auto; 
+  width: auto;
+}
+#postbuttonimage:active{
+  height: 65px;
+  width: auto;
 }
 #friend{
   margin-left: -40px;
