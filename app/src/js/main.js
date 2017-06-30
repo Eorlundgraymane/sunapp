@@ -2962,7 +2962,7 @@ function pullfposts(id){
 function pullposts(id){
   var data = {"type":"select","args":{
     "table":"posts",
-    "columns":["post","id","postimg","created","title",
+    "columns":["*",
       {
         "name":"author",
         "columns":["*"]
