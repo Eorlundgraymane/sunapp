@@ -2807,10 +2807,10 @@ function loadtable(id){
     xhr.send(query);
 }
 function keeppulling(){
-  setInterval(pullposts();,5000);
+  setInterval(pullposts(),5000);
 }
 function keepfpulling(){
-  setInterval(pullfposts();,5000);
+  setInterval(pullfposts(),5000);
 }
 function pullfposts(id){
   document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
