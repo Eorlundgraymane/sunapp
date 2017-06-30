@@ -2861,13 +2861,26 @@ function pullfposts(id){
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
         var likers = each["likers"];
+        var parsedpost = smileyMe(post);
+        if(parseInt(eshine) > 0){
+          parsedpost = parsedpost.concat("<br><img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine);
+        }
+        if(parseInt(sshine) > 0 ){
+          parsedpost = parsedpost.concat("<img src = \"css/generated/family.svg\" width = \"10px\" height = \"10px\">",sshine);
+        }
+
+        if(parseInt(hshine) > 0 ){
+          parsedpost = parsedpost.concat("<img src = \"css/generated/health.svg\" width = \"10px\" height = \"10px\">",hshine);
+        }
+        if(parseInt(cshine) > 0 ){
+          parsedpost = parsedpost.concat("<img src = \"css/generated/charity.svg\" width = \"10px\" height = \"10px\">",cshine);
+        }
         console.log(likers);
         console.log(id);
         if(author_id == id){
           if(likers.length == 0){
             var likeimg = "css/heart.svg";
-              document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img width = "80em" height = "80em" id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post).concat("<br><img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine,"<img src = \"css/generated/family.svg\" width = \"10px\" height = \"10px\">",sshine,"<img src = \"css/generated/health.svg\" width = \"10px\" height = \"10px\">",
-              hshine,"<img src = \"css/generated/charity.svg\" width = \"10px\" height = \"10px\">",cshine)+'</figcaption><div><button type = "button" class = "btn like" onclick = "flike('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!! </div></figure></li>';
+              document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img width = "80em" height = "80em" id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+parsedpost+'</figcaption><div><button type = "button" class = "btn like" onclick = "flike('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!! </div></figure></li>';
           }
           else{
             var liketitle = "";
@@ -2890,15 +2903,13 @@ function pullfposts(id){
               }
             }
             console.log(liketitle);
-            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post).concat("<br><img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine,"<img src = \"css/generated/family.svg\" width = \"10px\" height = \"10px\">",sshine,"<img src = \"css/generated/health.svg\" width = \"10px\" height = \"10px\">",
-            hshine,"<img src = \"css/generated/charity.svg\" width = \"10px\" height = \"10px\">",cshine)+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+parsedpost+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
           }
         }
         else{
             if(likers.length == 0){
               var likeimg = "css/heart.svg";
-            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post).concat("<br><img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine,"<img src = \"css/generated/family.svg\" width = \"10px\" height = \"10px\">",sshine,"<img src = \"css/generated/health.svg\" width = \"10px\" height = \"10px\">",
-            hshine,"<img src = \"css/generated/charity.svg\" width = \"10px\" height = \"10px\">",cshine)+'</figcaption><div><button type = "button" class = "btn like" onclick = "flike('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!!</div></figure></li>';
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+parsedpost+'</figcaption><div><button type = "button" class = "btn like" onclick = "flike('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!!</div></figure></li>';
           }
           else{
             var service = "flike";
@@ -2921,8 +2932,7 @@ function pullfposts(id){
               }
             }
             console.log(liketitle);
-            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post).concat("<br><img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine,"<img src = \"css/generated/family.svg\" width = \"10px\" height = \"10px\">",sshine,"<img src = \"css/generated/health.svg\" width = \"10px\" height = \"10px\">",
-            hshine,"<img src = \"css/generated/charity.svg\" width = \"10px\" height = \"10px\">",cshine)+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+id+');"><img id = "img'+postid+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+parsedpost+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+id+');"><img id = "img'+postid+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
           }
         }
       }
@@ -3006,12 +3016,25 @@ function pullposts(id){
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
+        var parsedpost = smileyMe(post);
+        if(parseInt(eshine) > 0){
+          parsedpost = parsedpost.concat("<br><img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine);
+        }
+        if(parseInt(sshine) > 0 ){
+          parsedpost = parsedpost.concat("<img src = \"css/generated/family.svg\" width = \"10px\" height = \"10px\">",sshine);
+        }
+
+        if(parseInt(hshine) > 0 ){
+          parsedpost = parsedpost.concat("<img src = \"css/generated/health.svg\" width = \"10px\" height = \"10px\">",hshine);
+        }
+        if(parseInt(cshine) > 0 ){
+          parsedpost = parsedpost.concat("<img src = \"css/generated/charity.svg\" width = \"10px\" height = \"10px\">",cshine);
+        }
         var likers = each["likers"];
         if(author_id == id){
           if(likers.length == 0){
             var likeimg = "css/heart.svg";
-              document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img width = "80em" height = "80em" id = "auth_img" class = "postauthimg img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');"><img src = "css/delete.png" width = "20px" height = "25px"></button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post).concat("<br><img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine,"<img src = \"css/generated/family.svg\" width = \"10px\" height = \"10px\">",sshine,"<img src = \"css/generated/health.svg\" width = \"10px\" height = \"10px\">",
-              hshine,"<img src = \"css/generated/charity.svg\" width = \"10px\" height = \"10px\">",cshine)+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+id+');"><img id = "img'+postid+'" title = "like" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!! </div></figure></li>';
+              document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img width = "80em" height = "80em" id = "auth_img" class = "postauthimg img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');"><img src = "css/delete.png" width = "20px" height = "25px"></button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+parsedpost+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+id+');"><img id = "img'+postid+'" title = "like" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!! </div></figure></li>';
           }
           else{
             var liketitle = "";
@@ -3033,15 +3056,13 @@ function pullposts(id){
                 break;
               }
             }
-            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "postauthimg img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');"><img src = "css/delete.png" width = "20px" height = "25px"></button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post).concat("<br><img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine,"<img src = \"css/generated/family.svg\" width = \"10px\" height = \"10px\">",sshine,"<img src = \"css/generated/health.svg\" width = \"10px\" height = \"10px\">",
-            hshine,"<img src = \"css/generated/charity.svg\" width = \"10px\" height = \"10px\">",cshine)+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+id+');"><img id = "img'+postid+'" title = "'+service+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "postauthimg img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');"><img src = "css/delete.png" width = "20px" height = "25px"></button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+parsedpost+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+id+');"><img id = "img'+postid+'" title = "'+service+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
           }
         }
         else{
             if(likers.length == 0){
               var likeimg = "css/heart.svg";
-            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "postauthimg img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post).concat("<br><img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine,"<img src = \"css/generated/family.svg\" width = \"10px\" height = \"10px\">",sshine,"<img src = \"css/generated/health.svg\" width = \"10px\" height = \"10px\">",
-            hshine,"<img src = \"css/generated/charity.svg\" width = \"10px\" height = \"10px\">",cshine)+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+id+');"><img id = "img'+postid+'" title = "like" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!!</div></figure></li>';
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "postauthimg img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+parsedpost+'</figcaption><div><button type = "button" class = "btn like" onclick = "like('+postid+','+id+');"><img id = "img'+postid+'" title = "like" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!!</div></figure></li>';
           }
           else{
             var service = "like";
@@ -3063,8 +3084,7 @@ function pullposts(id){
                 break;
               }
             }
-            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "postauthimg img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post).concat("<br><img src = \"css/generated/earth.svg\" width = \"10px\" height = \"10px\">",eshine,"<img src = \"css/generated/family.svg\" width = \"10px\" height = \"10px\">",sshine,"<img src = \"css/generated/health.svg\" width = \"10px\" height = \"10px\">",
-            hshine,"<img src = \"css/generated/charity.svg\" width = \"10px\" height = \"10px\">",cshine)+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+id+');"><img id = "img'+postid+'" title = "'+service+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
+            document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "postauthimg img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+parsedpost+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+id+');"><img id = "img'+postid+'" title = "'+service+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
           }
         }
       }
