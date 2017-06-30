@@ -2814,14 +2814,12 @@ function loadtable(id){
     xhr.send(query);
 }
 function keeppulling(){
-  console.log("started 10 second delay"); 
-  setTimeout(function(){console.log("pulling posts again");},10000);
-  gethasurapullpost();
+  console.log("started 10 second delay");
+  setTimeout(function(){console.log("pulling posts again");gethasurapullpost();},10000);
 }
 function keepfpulling(){
   console.log("started 10 second delay");
-  setTimeout(function(){console.log("pulling posts again");},10000);
-  pullfposts(parseInt(getCookie("friendid")));
+  setTimeout(function(){console.log("pulling posts again");pullfposts(parseInt(getCookie("friendid")));},10000);  
 }
 function pullfposts(id){
   document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
