@@ -2839,8 +2839,8 @@ function pullfposts(id){
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
-    document.getElementById('posts').innerHTML = "";
     if(xhr.readyState == 4 && xhr.status == 200){
+      document.getElementById('posts').innerHTML = "";
       document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "20px" height = "20px">';
       var res = JSON.parse(xhr.responseText);
       console.log(res);
@@ -2996,8 +2996,8 @@ function pullposts(id){
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
-    document.getElementById('posts').innerHTML = "";
     if(xhr.readyState == 4 && xhr.status == 200){
+      document.getElementById('posts').innerHTML = "";
       document.getElementById('postpuller').innerHTML ="<img id = \"postrefresh\" src = \"css/refreshpost.png\" width = \"20px\" height = \"20px\">";
       var res = JSON.parse(xhr.responseText);
       console.log(res);
