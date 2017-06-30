@@ -127,7 +127,6 @@ function loadleaderboards(){
   data["args"]["columns"] = ["fname","shine","healthshine","friendshine","charityshine","socialshine","friendshine","earthshine"];
   data["args"]["order_by"] = "shine";
   var query = JSON.stringify(data);
-  console.log(query);
   xhr = new XMLHttpRequest();
   var url  = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -137,13 +136,11 @@ function loadleaderboards(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       var json = json.reverse();
-      console.log(JSON.stringify(json));
       var nowshine = document.getElementById('leads');
       nowshine.innerHTML += '<tr>';
       nowshine.innerHTML += '<th>Rank</th><th>Sunshine</th><th>Shine</th><th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
       nowshine.innerHTML += '</tr>';
       for(table of json){
-        console.log(table);
         nowshine.innerHTML += '<tr>';
         nowshine.innerHTML += '<td>'+rank+'</td><td>'+table["fname"]+'</td><td>'+table["shine"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
         nowshine.innerHTML += '</tr>';
@@ -199,14 +196,11 @@ function getallsmileys(){
         if(sm.indexOf(eachsm)%2 == 0){
           eachsm = eachsm.replace('{','');
           eachsm = eachsm.replace('"','');
-          console.log(eachsm);
           nextsm = eachsm;
         }
         else if(sm.indexOf(eachsm)%2 != 0){
           eachsm = eachsm.replace('}','');
           eachsm = eachsm.replace('>"','>');
-          console.log(eachsm);
-          console.log(nextsm);
           document.getElementById('allsmileys').innerHTML += "<button class = \"btn addsmiley\" onclick = \"addsmiley('"+nextsm+"');\" type = \"button\">"+eachsm+"</button> ";
         }
       }
@@ -231,7 +225,6 @@ function appfriendslogin(){
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
           var json = JSON.parse(xhr.responseText);
-          console.log(JSON.stringify(json.hasura_id));
           hasura_id = json.hasura_id;
           auth_token = "Bearer "+json.auth_token;
           email = json.email;
@@ -290,7 +283,6 @@ function appfriendsfriendlogin(){
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
           var json = JSON.parse(xhr.responseText);
-          console.log(JSON.stringify(json.hasura_id));
           hasura_id = json.hasura_id;
           auth_token = "Bearer "+json.auth_token;
           email = json.email;
@@ -353,7 +345,6 @@ function addlogin(id,name){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       email = JSON.stringify(json.email);
@@ -397,7 +388,6 @@ function gethasurapushpost(){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       email = JSON.stringify(json.email);
@@ -440,7 +430,6 @@ function gethasurapullpost(){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       email = JSON.stringify(json.email);
@@ -469,9 +458,6 @@ function gethasurapullpost(){
   xhr.send();
 }
 function applogin(){
-  console.log(friendsuggestflag);
-  console.log(addflag);
-  console.log(suggesiondrop);
   if(addflag == 1 || (suggesiondrop  == 0 && friendsuggestflag == 0))
     {
       document.getElementById('friendssuggestbutton').innerHTML = "<img width = '20px' height = '20px' src = 'css/loader.gif'>";
@@ -489,7 +475,6 @@ function applogin(){
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
           var json = JSON.parse(xhr.responseText);
-          console.log(JSON.stringify(json.hasura_id));
           hasura_id = json.hasura_id;
           auth_token = "Bearer "+json.auth_token;
           email = JSON.stringify(json.email);
@@ -563,7 +548,6 @@ function getfriendsfriendlist(){
                   }
                 } };
     query = JSON.stringify(data);
-    console.log(query);
     var xhr = new XMLHttpRequest();
     var url = "https://data.unwound15.hasura-app.io/v1/query";
     xhr.open("POST",url,true);
@@ -573,12 +557,9 @@ function getfriendsfriendlist(){
       if(xhr.readyState == 4 && xhr.status == 200){
           document.getElementById('friendslist').innerHTML = "";
           var json = JSON.parse(xhr.responseText);
-          console.log(json);
           if(json[0]["mefriend"].length == 0){
           document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Send some requests first.</li>";
           document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "50px" height = "40px">';
-          console.log(json);
-          console.log(JSON.stringify(json[0]["mefriend"].length));
           friendlistflag = 0;
           droppeddown = 0;
         }
@@ -586,14 +567,10 @@ function getfriendsfriendlist(){
           for(myfid of json[0]["mefriend"])
           {
             if(myfid["friend_id"] != getCookie("friendid")){
-              console.log(myfid);
-              console.log("JSON RESPONSE: "+JSON.stringify(json));
-              console.log(myfid["friend_profile"]["fname"]);
               if(myfid["friend_profile"]["mefriend"].length > 0){
                 var friendname = myfid["friend_profile"]["fname"];
                 var friendid = myfid["friend_id"];
                 var prourl = myfid["friend_profile"]["proimage"];
-                console.log(prourl);
                 document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button title = \"Visit "+friendname+"'s Profile\" onclick = \"gotofriend("+friendid+",'"+friendname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"></button><br><figcaption>"+friendname+"</figcaption></figure></li>";
               }
             }
@@ -633,7 +610,6 @@ function getfriendslist(){
   if(friendlistflag == 0 && droppeddown == 0){
     var data = { "type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname","proimage", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": hasura_id } } ] } ] } ] } ] } };
     query = JSON.stringify(data);
-    console.log(query);
     var xhr = new XMLHttpRequest();
     var url = "https://data.unwound15.hasura-app.io/v1/query";
     xhr.open("POST",url,true);
@@ -646,8 +622,6 @@ function getfriendslist(){
           if(json[0]["profile"][0]["mefriend"].length == 0){
           document.getElementById('friendslist').innerHTML = "<li class = \"list-group\">Send some requests first.</li>";
           document.getElementById('friendslistbutton').innerHTML = '<img src = "css/friendsicon.png" width = "50px" height = "40px">';
-          console.log(json);
-          console.log(JSON.stringify(json[0]["profile"][0]["mefriend"].length));
           friendlistflag = 0;
           droppeddown = 0;
         }
@@ -655,14 +629,10 @@ function getfriendslist(){
           for(myfid of json[0]["profile"][0]["mefriend"])
           {
             if(myfid["friend_id"] != hasura_id){
-              console.log(myfid);
-              console.log("JSON RESPONSE: "+JSON.stringify(json));
-              console.log(myfid["friend_profile"]["fname"]);
               if(myfid["friend_profile"]["mefriend"].length > 0){
                 var friendname = myfid["friend_profile"]["fname"];
                 var friendid = myfid["friend_id"];
                 var prourl = myfid["friend_profile"]["proimage"];
-                console.log(prourl);
                 document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button title = \"Visit "+friendname+"'s Profile\" onclick = \"gotofriend("+friendid+",'"+friendname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"></button><br><figcaption>"+friendname+"</figcaption></figure></li>";
               }
             }
@@ -715,8 +685,6 @@ function addpiclink(link){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var response = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(response));
-      console.log("Profile picture updated");
       getpiclink();
     }
     else if(xhr.readyState ==4) {
@@ -753,17 +721,14 @@ function getfpiclink(id){
     }
 };
   var query = JSON.stringify(data);
-  console.log(query);
   xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
-    console.log('xhr readystatechange');
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(json);
           piclink = json[0]["proimage"];
           document.getElementById('profileimage').src = piclink;
           document.getElementById('profileimage').classList.remove('profileimage');
@@ -788,18 +753,6 @@ function getfpiclink(id){
   xhr.send(query);
   console.log('hasura call sent' );
 }
-
-
-
-
-
-
-
-
-
-
-
-
 function getpiclink(){
   console.log('piclink called');
   var piclink;
@@ -815,21 +768,18 @@ function getpiclink(){
     }]
   };
   var query = JSON.stringify(data);
-  console.log(query);
   xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
-    console.log('xhr readystatechange');
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       if(json[0]["profile"][0]["proimage"] == null){
         var x = new XMLHttpRequest();
         x.onreadystatechange = function(){
           document.getElementById('profileimage').alt = "Loading Image please Wait...";
-          console.log('x readystatechange');
           if(x.readyState == 4 && x.status == 200){
             var doc = x.responseText;
             piclink =(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[1]).concat(":",(((doc.split("<gphoto:thumbnail>")[0]).split("{")[17]).split(":")[2])).replace(/"/g,"").replace(/}/g,"");
@@ -849,7 +799,6 @@ function getpiclink(){
             }
           }
             x.open('GET','https://picasaweb.google.com/data/entry/api/user/'.concat((json[0].email).split("@")[0],"?alt=json"),true);
-            console.log(json[0].email);
             x.timeout = 10000;
             x.ontimeout = function(e){
               alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
@@ -948,7 +897,6 @@ function checkleap()
 function comparepass(){
   var pass = SHA256(document.getElementById('pass').value);
   var confpass = SHA256(document.getElementById('confpass').value);
-  console.log(pass);
   if(pass!=confpass && pass != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" && confpass != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" ){
     document.getElementById('passlabel').classList.remove("passshow");
     document.getElementById('passlabel').classList.add("passlabel");
@@ -981,7 +929,6 @@ function checklogout(pk)
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(hasura_id));
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       alert("Successfully Logged Out.Go Ahead and Log In!!");
@@ -999,9 +946,7 @@ function checklogout(pk)
   }
   var data = {};
   data["mobile"] = pk;
-  console.log(data);
   var jsondata = JSON.stringify(data);
-  console.log(jsondata);
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
     alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
@@ -1090,7 +1035,6 @@ function userlogout(pk)
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(hasura_id));
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       window.location = "https://sunshine.unwound15.hasura-app.io/";
@@ -1103,9 +1047,7 @@ function userlogout(pk)
   }
   var data = {};
   data["mobile"] = pk;
-  console.log(data);
   var jsondata = JSON.stringify(data);
-  console.log(jsondata);
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
     alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
@@ -1126,7 +1068,6 @@ function updatemyusersprofile(pk){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
       alert("Your Sunshine Profile is Ready. Please wait till we Log you out then go ahead and Log In");
       checklogout(pk);
       document.getElementById('signup').reset();
@@ -1148,7 +1089,6 @@ function updatemyusersprofile(pk){
   data["args"]["table"] = "profile";
   data["args"].objects = [{"user_id":hasura_id,"fname":fname,"lname":lname,"friendshine":0,"earthshine":0,"healthshine":0,"charityshine":0,"socialshine":0,"shine":0}];
   var jsoninsert = JSON.stringify(data);
-  console.log(jsoninsert);
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
     alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
@@ -1168,7 +1108,6 @@ function changebanner()
   data["args"]["table"] = "user";
   data["args"]["columns"] = ["id","username","email","password","dob"];
   var query = JSON.stringify(data);
-  console.log(query);
   xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -1177,7 +1116,6 @@ function changebanner()
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
       document.getElementById('profilename').innerHTML = json[0].username;
       refreshscore();
     }
@@ -1233,7 +1171,6 @@ function changefbanner()
   data["args"]["columns"] = ["fname","lname"];
   data["args"]["where"] = {"user_id" : parseInt(getCookie("friendid"))};
   var query = JSON.stringify(data);
-  console.log(query);
   xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -1242,7 +1179,6 @@ function changefbanner()
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
       var uname = json[0].fname.concat(" ",json[0].lname);
       document.getElementById('profilename').innerHTML = uname;
       refreshfscore();
@@ -1272,7 +1208,6 @@ function updatemyusers(pk,pasw){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
       alert("Your Sunshine Account is Ready, Setting up initial Profile");
       updatemyusersprofile(pk);
     }
@@ -1299,7 +1234,6 @@ function updatemyusers(pk,pasw){
   data["args"]["table"] = "user";
   data["args"].objects = [{"id":hasura_id,"username":uname,"email":email,"password":password,"dob":dob}];
   var jsoninsert = JSON.stringify(data);
-  console.log(jsoninsert);
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
     alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
@@ -1325,7 +1259,6 @@ function checklogin(pk,pasw)
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
       loginbutton.innerHTML = "Logged In";
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
@@ -1338,9 +1271,7 @@ function checklogin(pk,pasw)
   var data = {};
   data["mobile"] = pk;
   data["password"] = pasw;
-  console.log(data);
   var jsondata = JSON.stringify(data);
-  console.log(jsondata);
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
     alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
@@ -1368,7 +1299,6 @@ function jslogin(){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
       loginbutton.innerHTML = "Logged In";
       loginbutton.style.disabled = true;
       loginbutton.style.cursor = "not-allowed";
@@ -1386,9 +1316,7 @@ function jslogin(){
   var data = {};
   data["mobile"] = pk;
   data["password"] = pasw;
-  console.log(data);
   var jsondata = JSON.stringify(data);
-  console.log(jsondata);
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
     alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
@@ -1416,7 +1344,6 @@ function getuser()
   data["args"]["table"] = "user";
   data["args"]["columns"] = ["id","username","email","password","dob"];
   var query = JSON.stringify(data);
-  console.log(query);
   xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -1425,7 +1352,6 @@ function getuser()
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
       document.getElementById('loginform').submit();
     }
     else if(xhr.readyState ==4) {
@@ -1484,12 +1410,9 @@ function deleteCookie(cname) {
 }
 function clearCookies(){
   var cookies = document.cookie.split(';');
-  console.log(cookies);
   for(cookie of cookies){
-    console.log("Deleting :"+cookie.split('=')[0]);
     deleteCookie(cookie.split('=')[0]);
   }
-  console.log(document.cookie);
 }
   function userlogin()
 {
@@ -1505,7 +1428,6 @@ function clearCookies(){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
       loginbutton.style.disabled = true;
       loginbutton.style.cursor = "not-allowed";
       hasura_id = json.hasura_id;
@@ -1513,7 +1435,6 @@ function clearCookies(){
       auth_token = "Bearer "+json.auth_token;
       setCookie("primarykey",document.getElementById('primarykey').value,10);
       setCookie("password",document.getElementById('password').value,10);
-      console.log(document.cookie);
       getuser();
     }
     else if(xhr.readyState == 4) {
@@ -1529,9 +1450,7 @@ function clearCookies(){
   var data = {};
   data["mobile"] = document.getElementById('primarykey').value;
   data["password"] = SHA256(document.getElementById('password').value);
-  console.log(data);
   var jsondata = JSON.stringify(data);
-  console.log(jsondata);
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
     alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
@@ -1557,7 +1476,6 @@ function addfriend(id,name){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var response = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(response));
       document.getElementById('friendssuggestbutton').innerHTML = "Friend Suggesions";
       alert(name+" was sent a friend request. When it's accepted, your friend's list will get updated.");
       var buttons = document.getElementsByClassName("btn");
@@ -1585,7 +1503,6 @@ function addfriend(id,name){
     }
   }
   jsondata = JSON.stringify(data);
-  console.log(jsondata);
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
     alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
@@ -1642,8 +1559,6 @@ function otpverify(){
   var password = SHA256(document.getElementById("pass").value);
   var email = document.getElementById("email").value;
   var uname = fname.concat(" ",lname);
-  console.log(uname);
-  console.log(password);
   var otpbutton = document.getElementById('otpbutton');
   var otpcancelbutton = document.getElementById('otpcancel');
   var resendotpbutton = document.getElementById('resendotp');
@@ -1661,7 +1576,6 @@ function otpverify(){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.message));
       otpbutton.innerHTML = "Verified Successfully";
       setTimeout(function(){},3000);
       alert(JSON.stringify(json.message));
@@ -1798,7 +1712,6 @@ function otpresend() {
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
       otpbutton.style.cursor = "pointer";
       resendotpbutton.style.cursor = "pointer";
       otpcancelbutton.style.cursor = "pointer";
@@ -1821,7 +1734,6 @@ function otpresend() {
       setTimeout(function(){},3000);
       resendotpbutton.innerHTML = "Resend OTP";
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
       alert(JSON.stringify(json.message));
     }
   }
@@ -1829,8 +1741,6 @@ function otpresend() {
   var data = {};
   data["mobile"] = remobile;
   jsondata = JSON.stringify(data);
-  console.log("DATA : "+data);
-  console.log("JSON DATA : "+jsondata);
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
     alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
@@ -1861,20 +1771,17 @@ function popalert() {
     signupbuttn.style.disabled = true;
     signupbuttn.style.cursor = "not-allowed";
     signupbuttn.innerHTML = "Signing Up <img width = '30px' height = '30px' src = 'css/loader.gif'>";
-    console.log(Boolean(comparepass));
     var fname = document.getElementById("fname").value;
     var lname = document.getElementById("lname").value;
     var mobile = document.getElementById("mob").value;
     var pass = document.getElementById("pass").value;
     var confpass = SHA256(document.getElementById("confpass").value);
-    console.log(pass);
     var password = SHA256(pass);
     var email = document.getElementById("email").value;
     var day = document.getElementById("day").value;
     var month = document.getElementById("month").value;
     var year = document.getElementById("year").value;
     var dob = year.concat("-",month,"-",day);
-    console.log(dob);
     var uname = fname.concat(" ",lname);
   xhr = new XMLHttpRequest();
   var url  = "https://auth.unwound15.hasura-app.io/signup";
@@ -1885,11 +1792,8 @@ function popalert() {
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
       hasura_id = json.hasura_id;
       alert("Successfully Signed Up. Please Veriy your mobile number while we set up your Sunshine Account");
-      console.log(uname);
-      console.log(password);
       signupbuttn.innerHTML = "Signed Up!!";
       setTimeout(function(){},3000);
       signupbuttn.innerHTML = "Sign Up";
@@ -1899,22 +1803,18 @@ function popalert() {
     }
     else if(xhr.readyState == 4) {
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.message));
       alert("Sorry User already exists");
       signupbuttn.innerHTML = "Sign Up";
       signupbuttn.style.disabled = false;
       signupbuttn.style.cursor = "pointer";
     }
   }
-  console.log(uname);
   var data = {};
   data["username"] = uname;
   data["email"] = email;
   data["mobile"] = mobile;
   data["password"] = password;
-  console.log(data);
   var jsondata = JSON.stringify(data);
-  console.log(jsondata);
   if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000 && password != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" && confpass != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" ){
     if(mobile/1000000000 < 10 && mobile/1000000000 >1){
       xhr.timeout = 10000;
@@ -2034,13 +1934,11 @@ function pushpost(){
   }
   else{
   var data = {};
-  console.log(hasura_id);
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "posts";
   data["args"].objects = [{"post":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":parseInt(earth),"charityshine":parseInt(charity),"socialshine":parseInt(social),"healthshine":parseInt(health)}];
   query = JSON.stringify(data);
-  console.log(query);
   xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -2049,8 +1947,6 @@ function pushpost(){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var res = JSON.parse(xhr.responseText);
-      console.log(res);
-      console.log(JSON.stringify(res));
       alert("Post Uploaded");
       var btns = document.getElementsByClassName('btn');
       for(each of btns){
@@ -2098,7 +1994,6 @@ function deletepostlogin(id){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json.hasura_id));
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
       email = JSON.stringify(json.email);
@@ -2143,7 +2038,6 @@ xhr.withCredentials = "true";
 xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
-      console.log(json);
       alert("Post Deleted, Pulling fresh post list");
       gethasurapullpost();
       var btns = document.getElementsByClassName('btn');
@@ -2312,7 +2206,6 @@ function like(id,liker_id){
   data["args"]["table"] = "likes";
   data["args"].objects = [{"post_id":id,"liker_id":liker_id}];
   query = JSON.stringify(data);
-  console.log(query);
   var xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -2322,7 +2215,6 @@ function like(id,liker_id){
     if(xhr.readyState == 4 && xhr.status == 200){
       console.log("Liked");
       var res = JSON.parse(xhr.responseText);
-      console.log(res);
       gethasurapullpost();
     }
     else if(xhr.readyState == 4) {
@@ -2352,7 +2244,6 @@ function flike(id,liker_id){
   data["args"]["table"] = "likes";
   data["args"].objects = [{"post_id":id,"liker_id":liker_id}];
   query = JSON.stringify(data);
-  console.log(query);
   var xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -2362,7 +2253,6 @@ function flike(id,liker_id){
     if(xhr.readyState == 4 && xhr.status == 200){
       console.log("Liked");
       var res = JSON.parse(xhr.responseText);
-      console.log(res);
       pullfposts(getCookie("friendid"));
     }
     else if(xhr.readyState == 4) {
@@ -2394,7 +2284,6 @@ function funlike(id,liker_id){
   data["args"]["where"]["post_id"] = id;
   data["args"]["where"]["liker_id"] = liker_id;
   query = JSON.stringify(data);
-  console.log(query);
   var xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -2404,7 +2293,6 @@ function funlike(id,liker_id){
     if(xhr.readyState == 4 && xhr.status == 200){
       console.log("Liked");
       var res = JSON.parse(xhr.responseText);
-      console.log(res);
       pullfposts(getCookie("friendid"));
     }
     else if(xhr.readyState == 4) {
@@ -2436,7 +2324,6 @@ function unlike(id,liker_id){
   data["args"]["where"]["post_id"] = id;
   data["args"]["where"]["liker_id"] = liker_id;
   query = JSON.stringify(data);
-  console.log(query);
   var xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -2446,7 +2333,6 @@ function unlike(id,liker_id){
     if(xhr.readyState == 4 && xhr.status == 200){
       console.log("Liked");
       var res = JSON.parse(xhr.responseText);
-      console.log(res);
       gethasurapullpost();
     }
     else if(xhr.readyState == 4) {
@@ -2478,7 +2364,6 @@ function tablelogin(){
     xhr.onreadystatechange = function(){
       if(xhr.readyState == 4 && xhr.status == 200){
         var json = JSON.parse(xhr.responseText);
-        console.log(JSON.stringify(json.hasura_id));
         hasura_id = json.hasura_id;
         auth_token = "Bearer "+json.auth_token;
         email = JSON.stringify(json.email);
@@ -2524,7 +2409,6 @@ function addscore(e,s,c,h,t){
       }
       }
     };
-console.log(JSON.stringify(data));
 var query = JSON.stringify(data);
 xhr = new XMLHttpRequest();
 var url  = "https://data.unwound15.hasura-app.io/v1/query";
@@ -2534,13 +2418,11 @@ xhr.withCredentials = "true";
 xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
-    console.log(json);
     for(each of json[0]["mefriend"]){
       f += 50;
     }
     var addscoredata = {};
     t+=f;
-    console.log(t);
     addscoredata = {
       "type":"update",
       "args":{
@@ -2567,7 +2449,6 @@ xhr.onreadystatechange = function(){
     txhr.onreadystatechange = function(){
       if(txhr.readyState == 4 && txhr.status == 200){
         var json = JSON.parse(txhr.responseText);
-        console.log(json);
         loadtable(parseInt(getCookie("hasura_id")));
       }
       else if(txhr.readyState == 4){
@@ -2625,7 +2506,6 @@ function refreshfscore(){
             }
           }
 };
-console.log(JSON.stringify(data));
 var query = JSON.stringify(data);
 xhr = new XMLHttpRequest();
 var url  = "https://data.unwound15.hasura-app.io/v1/query";
@@ -2635,7 +2515,6 @@ xhr.withCredentials = "true";
 xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
-    console.log(JSON.stringify(json));
     for(shine of json){
       if(shine["likers"].length>0){
         for(liker of shine["likers"]){
@@ -2649,7 +2528,6 @@ xhr.onreadystatechange = function(){
         console.log("no likes");
       }
     }
-    console.log([parseInt(getCookie("friendid"))]);
     loadtable(parseInt(getCookie("friendid")));
   }
   else if(xhr.readyState ==4){
@@ -2695,7 +2573,6 @@ function refreshscore(){
             }
           }
 };
-console.log(JSON.stringify(data));
 var query = JSON.stringify(data);
 xhr = new XMLHttpRequest();
 var url  = "https://data.unwound15.hasura-app.io/v1/query";
@@ -2705,7 +2582,6 @@ xhr.withCredentials = "true";
 xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status == 200){
     var json = JSON.parse(xhr.responseText);
-    console.log(JSON.stringify(json));
     for(shine of json){
       if(shine["likers"].length>0){
         for(liker of shine["likers"]){
@@ -2767,7 +2643,6 @@ function loadtable(id){
     data["args"]["columns"] = ["healthshine","charityshine","socialshine","friendshine","earthshine","shine"];
     data["args"]["where"] = {"user_id" : id};
     var query = JSON.stringify(data);
-    console.log(query);
     xhr = new XMLHttpRequest();
     var url  = "https://data.unwound15.hasura-app.io/v1/query";
     xhr.open("POST",url,true);
@@ -2776,7 +2651,6 @@ function loadtable(id){
     xhr.onreadystatechange = function(){
       if(xhr.readyState == 4 && xhr.status == 200){
         var json = JSON.parse(xhr.responseText);
-        console.log(JSON.stringify(json));
         document.getElementById('friendshine').innerHTML = json[0]["friendshine"];
         document.getElementById('earthshine').innerHTML = json[0]["earthshine"];
         document.getElementById('charityshine').innerHTML = json[0]["charityshine"];
@@ -2843,7 +2717,7 @@ function pullfposts(id){
       "where":{
         "user_id":parseInt(id)
       },
-      "order_by":"created"
+      "order_by":"-created"
 }
   };
   var query = JSON.stringify(data);
@@ -2857,11 +2731,8 @@ function pullfposts(id){
       document.getElementById('posts').innerHTML = "";
       document.getElementById('postpuller').innerHTML = '<img id = "postrefresh" src = "css/refreshpost.png" width = "20px" height = "20px">';
       var res = JSON.parse(xhr.responseText);
-      console.log(res);
-      console.log(JSON.stringify(res));
-      var reverpost = res.reverse();
+      var reverpost = res;
       for(each of reverpost){
-        console.log(each);
         var postimg = each["postimg"];
         var post = each["post"];
         var title = each["title"];
@@ -2888,8 +2759,6 @@ function pullfposts(id){
         if(parseInt(cshine) > 0 ){
           parsedpost = parsedpost.concat("<img src = \"css/generated/charity.svg\" width = \"10px\" height = \"10px\">",cshine);
         }
-        console.log(likers);
-        console.log(id);
         if(author_id == id){
           if(likers.length == 0){
             var likeimg = "css/heart.svg";
@@ -2915,7 +2784,6 @@ function pullfposts(id){
                 break;
               }
             }
-            console.log(liketitle);
             document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+parsedpost+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
           }
         }
@@ -2944,7 +2812,6 @@ function pullfposts(id){
                 break;
               }
             }
-            console.log(liketitle);
             document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img  width = "80em" height = "80em"  id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image<figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+parsedpost+'</figcaption><div><button type = "button" class = "btn like" onclick = "'+service+'('+postid+','+id+');"><img id = "img'+postid+'" src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">'+liketitle+'liked this post</div></figure></li>';
           }
         }
@@ -3014,7 +2881,6 @@ function pullposts(id){
       document.getElementById('posts').innerHTML = "";
       document.getElementById('postpuller').innerHTML ="<img id = \"postrefresh\" src = \"css/refreshpost.png\" width = \"20px\" height = \"20px\">";
       var res = JSON.parse(xhr.responseText);
-      console.log(res);
       var reverpost = res;
       for(each of reverpost){
         var postimg = each["postimg"];
@@ -3134,7 +3000,6 @@ function pullposts(id){
 function selectsuggests(){
   var data = { "type": "select", "args": { "table": "profile", "columns": [ "fname","user_id","proimage", { "name": "youfriend", "columns": [ "friend_id"],"where": { "user_id": hasura_id } } ] } };
   var query = JSON.stringify(data);
-  console.log(query);
   xhr = new XMLHttpRequest();
   var url = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -3144,17 +3009,13 @@ function selectsuggests(){
     if(xhr.readyState == 4 && xhr.status == 200){
       document.getElementById('friendssuggest').innerHTML = "";
       var json = JSON.parse(xhr.responseText);
-      console.log(json);
       for(users of json){
-        console.log(users["fname"]);
-        console.log(users["youfriend"].length);
         if(users["youfriend"].length == 0 && users["user_id"]!= hasura_id){
           suggestid = users["user_id"];
           suggestname = users["fname"];
           propic = users["proimage"];
           document.getElementById('friendssuggest').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button onclick = \"gotofriend("+suggestid+",'"+suggestname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src =\""+propic+"\"></button><br><figcaption>"+suggestname+"<br><button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">Add</figcaption></figure></li>";
           friendsuggestflag = 1;
-          console.log("gonna click");
           }
         }
         if(friendsuggestflag ==1){
@@ -3165,7 +3026,6 @@ function selectsuggests(){
             each.style.cursor = "pointer";
         }
           document.getElementById('friendssuggestbutton').click();
-          console.log("Clicked");
         }
         else{
           document.getElementById('friendssuggestbutton').innerHTML = "<img src = \"css/th.jpg\" width = \"50px\" height = \"50px\">";
