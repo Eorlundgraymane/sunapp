@@ -2816,7 +2816,7 @@ function loadtable(id){
 function keeppulling(){
   console.log("pulling posts again");
   setTimeout(function(){console.log("started 5 second delay");},10000);
-  setInterval(function(){gethasurapullposts();},10000);
+  setInterval(function(){gethasurapullpost();},10000);
 }
 function keepfpulling(){
   console.log("pulling posts again");
