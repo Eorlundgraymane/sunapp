@@ -2706,12 +2706,13 @@ function pullfposts(id){
       },
       {
         "name":"likers",
-        "columns":["liker_id",
+        "columns":["liker_id","created"
         {
           "name":"liker",
           "columns":["fname","user_id","proimage"]
         }
-      ]
+      ],
+      "order_by":"created"
       }
   ],
       "where":{
