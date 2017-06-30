@@ -2689,11 +2689,11 @@ function loadtable(id){
 }
 function keeppulling(){
   console.log("Will refresh posts again in a couple of minutes");
-  setTimeout(function(){console.log("pulling posts again");gethasurapullpost();},2*60*1000);
+  setTimeout(function(){console.log("pulling posts again");gethasurapullpost();},5*60*1000);
 }
 function keepfpulling(){
   console.log("Will refresh posts again in a couple of minutes");
-  setTimeout(function(){console.log("pulling posts again");pullfposts(parseInt(getCookie("friendid")));},2*60*1000);
+  setTimeout(function(){console.log("pulling posts again");pullfposts(parseInt(getCookie("friendid")));},5*60*1000);
 }
 function pullfposts(id){
   document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
