@@ -2862,7 +2862,8 @@ function pullposts(id){
         "columns":["liker_id",
         {
           "name":"liker",
-          "columns":["fname","user_id","proimage"]
+          "columns":["fname","user_id","proimage"],
+          "order_by":"-created"        
         }
       ]
       }
