@@ -2657,7 +2657,7 @@ function loadtable(id){
         document.getElementById('socialshine').innerHTML = json[0]["socialshine"];
         document.getElementById('healthshine').innerHTML = json[0]["healthshine"];
         document.getElementById('score').innerHTML = json[0]["shine"];
-        shinehead.innerHTML = 'Shine Table<button  title = "Shinetable" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button"><img width = "20px" height = "20px" src = "css/refreshpost.png"></button>';
+        shinehead.innerHTML = 'Shine Table<button  title = "Shinetable will refresh every 30s" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button"><img width = "20px" height = "20px" src = "css/refreshpost.png"></button>';
         buttonsenabled();
         if(id == parseInt(getCookie("hasura_id"))){
           keeppulling();
