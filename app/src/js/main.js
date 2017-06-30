@@ -2688,11 +2688,11 @@ function loadtable(id){
     xhr.send(query);
 }
 function keeppulling(){
-  console.log("Will refresh posts again in a couple of minutes");
+  console.log("Will refresh posts again in a 5 minutes");
   setTimeout(function(){console.log("pulling posts again");gethasurapullpost();},5*60*1000);
 }
 function keepfpulling(){
-  console.log("Will refresh posts again in a couple of minutes");
+  console.log("Will refresh posts again in a 5 minutes");
   setTimeout(function(){console.log("pulling posts again");pullfposts(parseInt(getCookie("friendid")));},5*60*1000);
 }
 function pullfposts(id){
