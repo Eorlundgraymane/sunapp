@@ -18,28 +18,28 @@
 }
 #hintearth{
   display: none;
-  font-size: 3px;
+  font-size: 50%;
   color: white;
   cursor: default;
 }
 
 #hintsocial{
   display: none;
-  font-size: 3px;
+  font-size: 50%;
   color: white;
   cursor: default;
 }
 
 #hintcharity{
   display: none;
-  font-size: 3px;
+  font-size: 50%;
   color: white;
   cursor: default;
 }
 
 #hinthealth{
   display: none;
-  font-size: 3px;
+  font-size: 50%;
   color: white;
   cursor: default;
 }
