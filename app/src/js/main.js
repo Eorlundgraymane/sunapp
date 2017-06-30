@@ -2811,7 +2811,7 @@ function pullfposts(id){
   document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
   var data = {"type":"select","args":{
     "table":"posts",
-    "columns":["post","user_id","id","postimg","created","title",
+    "columns":["*",
       {
         "name":"author",
         "columns":["fname","proimage","user_id"]
@@ -2851,6 +2851,10 @@ function pullfposts(id){
         var postimg = each["postimg"];
         var post = each["post"];
         var title = each["title"];
+        var cshine = each["charityshine"];
+        var eshine = each["earthshine"];
+        var sshine = each["socialshine"];
+        var hshine = each["healthshine"];
         var postid = each["id"];
         var timestamp = time_ago(each["created"]);
         var author_img = each["author"]["proimage"];
@@ -2862,7 +2866,7 @@ function pullfposts(id){
         if(author_id == id){
           if(likers.length == 0){
             var likeimg = "css/heart.svg";
-              document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img width = "80em" height = "80em" id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+'</figcaption><div><button type = "button" class = "btn like" onclick = "flike('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!! </div></figure></li>';
+              document.getElementById('posts').innerHTML += '<li id = "post"><figure id = "auth_info"><img width = "80em" height = "80em" id = "auth_img" class = "img img-rounded img-responsive" src = "'+author_img+'"alt = "Author Image"><button title = "Delete Post" id = "deletepost" type = "button" class = "btn" onclick = "deletepostlogin('+postid+');">X</button><figcaption id = "auth_name">'+author_name+' <br><div id = "timestamp">'+timestamp+'</div></figcaption></figure><h1 id = "post_title">'+title+'</h1><figure><img id = "post_image" class = "img img-rounded img-responsive" src = "'+postimg+'" alt = "Post Image"><figcaption id = "post_text">'+smileyMe(post)+eshine+sshine+hshine+cshine+'</figcaption><div><button type = "button" class = "btn like" onclick = "flike('+postid+','+parseInt(getCookie("hasura_id"))+');"><img id = "img'+postid+'"  src = "'+likeimg+'" width = "21px" height = "16px"></button></div><br><div id = "likers">Be the first to like this post!!! </div></figure></li>';
           }
           else{
             var liketitle = "";
