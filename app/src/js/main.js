@@ -2807,9 +2807,11 @@ function loadtable(id){
     xhr.send(query);
 }
 function keeppulling(){
+  console.log("pulling posts again");
   setInterval(pullposts(parseInt(getCookie("hasura_id"))),5000);
 }
 function keepfpulling(){
+  console.log("pulling posts again");
   setInterval(pullfposts(parseInt(getCookie("friendid"))),5000);
 }
 function pullfposts(id){
