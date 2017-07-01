@@ -439,12 +439,13 @@ function gethasurapullpost(){
       console.log("failed");
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
-      alert(JSON.stringify(json));
+      alert("Couldn'nt connect to server. Please check if you have a working internet connection. We'll keep retrying");
       var btns = document.getElementsByClassName('btn');
       for(each of btns){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
+    keeppulling();
     }
   }
   xhr.timeout = 10000;
