@@ -436,6 +436,7 @@ function gethasurapullpost(){
       pullposts(parseInt((getCookie("hasura_id"))));
     }
     else if(xhr.readyState == 4) {
+      console.log("failed");
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert(JSON.stringify(json));
