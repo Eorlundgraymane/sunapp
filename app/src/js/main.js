@@ -454,7 +454,7 @@ function gethasurapullpost(){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
-    gethasurapullpost();
+    keeppulling();
   }
   xhr.send();
 }
@@ -1126,13 +1126,13 @@ function changebanner()
   }
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
-    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection we'll keep retrying");
     var allbuts = document.getElementsByClassName("btn");
     for(but of allbuts){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
-    gethasurapullpost();
+    keeppulling();
   }
   xhr.send(query);
 
@@ -2466,7 +2466,7 @@ xhr.onreadystatechange = function(){
         but.style.cursor = "pointer";
         but.disabled = false;
       }
-      gethasurapullpost();
+      keeppulling();
     }
     txhr.send(addscorequery);
   }
@@ -2483,7 +2483,7 @@ xhr.ontimeout = function(e){
     but.style.cursor = "pointer";
     but.disabled = false;
   }
-  gethasurapullpost();
+  keeppulling();
 }
 xhr.send(query);
 }
@@ -2616,7 +2616,7 @@ xhr.ontimeout = function(e){
     but.style.cursor = "pointer";
     but.disabled = false;
   }
-  gethasurapullpost();
+  keeppulling();
 }
 xhr.send(query);
 }
@@ -3000,13 +3000,13 @@ function pullposts(id){
   }
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
-    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection we'll keep trying");
     var allbuts = document.getElementsByClassName("btn");
     for(but of allbuts){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
-    gethasurapullpost();
+    keeppulling();
   }
   xhr.send(query);
 }
