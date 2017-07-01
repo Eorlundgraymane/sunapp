@@ -1602,7 +1602,7 @@ function otpverify(){
   data["otp"] = otp;
   jsondata = JSON.stringify(data);
   if(fname != null && email!=null && mobile !=null && day != 00 && month !=00 && year != 0000 && password != "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"){
-    if(mobile/1000000000 < 10 && mobile/1000000000 >1){
+    if(parseInt(mobile)/1000000000 < 10 && parseInt(mobile)/1000000000 >1){
       xhr.timeout = 10000;
       xhr.ontimeout = function(e){
         alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
