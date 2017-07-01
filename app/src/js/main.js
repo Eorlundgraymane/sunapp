@@ -448,12 +448,13 @@ function gethasurapullpost(){
   }
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
-    alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection. We'll keep retrying");
     var allbuts = document.getElementsByClassName("btn");
     for(but of allbuts){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+    gethasurapullpost();
   }
   xhr.send();
 }
@@ -1131,6 +1132,7 @@ function changebanner()
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+    gethasurapullpost();
   }
   xhr.send(query);
 
@@ -2458,12 +2460,13 @@ xhr.onreadystatechange = function(){
     }
     txhr.timeout = 10000;
     txhr.ontimeout = function(e){
-      alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+      alert("Couldn'nt connect to server. Please check if you have a working internet connection...we'll keep trying");
       var allbuts = document.getElementsByClassName("btn");
       for(but of allbuts){
         but.style.cursor = "pointer";
         but.disabled = false;
       }
+      gethasurapullpost();
     }
     txhr.send(addscorequery);
   }
@@ -2474,12 +2477,13 @@ xhr.onreadystatechange = function(){
 }
 xhr.timeout = 10000;
 xhr.ontimeout = function(e){
-  alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+  alert("Couldn'nt connect to server. Please check if you have a working internet connection...we'll keep trying");
   var allbuts = document.getElementsByClassName("btn");
   for(but of allbuts){
     but.style.cursor = "pointer";
     but.disabled = false;
   }
+  gethasurapullpost();
 }
 xhr.send(query);
 }
@@ -2606,12 +2610,13 @@ xhr.onreadystatechange = function(){
 }
 xhr.timeout = 10000;
 xhr.ontimeout = function(e){
-  alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+  alert("Couldn'nt connect to server. Please check if you have a working internet connection we'll keep trying");
   var allbuts = document.getElementsByClassName("btn");
   for(but of allbuts){
     but.style.cursor = "pointer";
     but.disabled = false;
   }
+  gethasurapullpost();
 }
 xhr.send(query);
 }
@@ -2671,7 +2676,12 @@ function loadtable(id){
         console.log(JSON.stringify(json));
         shinehead.innerHTML = "Shine Table";
         buttonsenabled();
-        keeppulling();
+        if(id == parseInt(getCookie("hasura_id"))){
+          keeppulling();
+        }
+        else if(id == parseInt(getCookie("friendid"))){
+          keepfpulling();
+        }
       }
 
     }
@@ -2996,6 +3006,7 @@ function pullposts(id){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+    gethasurapullpost();
   }
   xhr.send(query);
 }
