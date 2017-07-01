@@ -436,9 +436,7 @@ function gethasurapullpost(){
       pullposts(parseInt((getCookie("hasura_id"))));
     }
     else if(xhr.readyState == 4) {
-      console.log("failed");
-      var json = JSON.parse(xhr.responseText);
-      console.log(JSON.stringify(json));
+      console.log("failed");      
       alert("Couldn'nt connect to server. Please check if you have a working internet connection. We'll keep retrying");
       var btns = document.getElementsByClassName('btn');
       for(each of btns){
