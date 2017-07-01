@@ -437,7 +437,7 @@ function gethasurapullpost(){
     }
     else if(xhr.readyState == 4) {
       console.log("failed");
-      alert("Couldn'nt connect to server. Please check if you have a working internet connection. We'll keep retrying");
+      alert("Couldn'nt connect to server. Please check if you have a working internet connection...We'll keep retrying");
       var btns = document.getElementsByClassName('btn');
       for(each of btns){
         each.disabled = false;
