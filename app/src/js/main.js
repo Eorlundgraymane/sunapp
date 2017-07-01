@@ -436,7 +436,7 @@ function gethasurapullpost(){
       pullposts(parseInt((getCookie("hasura_id"))));
     }
     else if(xhr.readyState == 4) {
-      console.log("failed");      
+      console.log("failed");
       alert("Couldn'nt connect to server. Please check if you have a working internet connection. We'll keep retrying");
       var btns = document.getElementsByClassName('btn');
       for(each of btns){
@@ -1186,7 +1186,8 @@ function changefbanner()
       refreshfscore();
     }
     else if(xhr.readyState ==4) {
-      alert(JSON.stringify(json));
+      alert("Couldn'nt connect to server. Please check if you have a working internet connection...we'll keep trying");
+      keepfpulling();
     }
   }
   xhr.timeout = 10000;
@@ -2535,8 +2536,8 @@ xhr.onreadystatechange = function(){
     loadtable(parseInt(getCookie("friendid")));
   }
   else if(xhr.readyState ==4){
-    var json = JSON.parse(xhr.responseText);
-    console.log(json);
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection...we'll keep trying");
+    keepfpulling();
   }
 }
 xhr.timeout = 10000;
@@ -2672,10 +2673,9 @@ function loadtable(id){
         }
       }
       else if(xhr.readyState ==4){
-        var json = JSON.parse(xhr.responseText);
-        console.log(JSON.stringify(json));
         shinehead.innerHTML = "Shine Table";
         buttonsenabled();
+        alert("Couldn'nt connect to server. Please check if you have a working internet connection...we'll keep trying");
         if(id == parseInt(getCookie("hasura_id"))){
           keeppulling();
         }
@@ -2688,7 +2688,7 @@ function loadtable(id){
     loadflag = 1;
     xhr.timeout = 10000;
     xhr.ontimeout = function(e){
-      alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+      alert("Couldn'nt connect to server. Please check if you have a working internet connection...we'll keep trying");
       var allbuts = document.getElementsByClassName("btn");
       for(but of allbuts){
         but.style.cursor = "pointer";
@@ -2837,14 +2837,14 @@ function pullfposts(id){
     }
     else if (xhr.readyState == 4) {
       document.getElementById('postpuller').innerHTML = "Error";
-      var res = JSON.parse(xhr.responseText);
-      console.log(res);
-      console.log(JSON.stringify(res));
+      console.log("failed");
       var btns = document.getElementsByClassName('btn');
       for(each of btns){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
+    alert("Couldn'nt connect to server. Please check if you have a working internet connection...we'll keep trying");
+    keepfpulling();
     }
   }
   xhr.timeout = 10000;
