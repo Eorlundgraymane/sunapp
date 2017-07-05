@@ -13,7 +13,7 @@
     <body class = "outer-container">
       <row>
       <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "shinelay">
-        <img class = "img-rounded" width = '80px' height = '80px' src = 'css/loader.gif'>
+        <img class = "img-rounded" width = '100%' height = '100%' src = 'css/loader.gif'>
       </div>
       <row>
         <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "sitebanner">
