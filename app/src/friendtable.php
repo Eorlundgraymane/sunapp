@@ -1,5 +1,5 @@
 <table class = "shinetable table table-responsive">
-    <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table <button  title = "Shinetable will refresh every 30s" class = "btn" onclick = "refreshfscore();" id = "shinetablebutton" type = "button"><img width = "20px" height = "20px" src = "css/refreshpost.png"></button></caption>
+    <caption title = "Post activites,get likes, Improve your Shine"id = "shineheading">Shine Table <button  title = "Shinetable will refresh every 30s" class = "btn" onclick = "loadtable(parseInt(getCookie('friendid')));" id = "shinetablebutton" type = "button"><img width = "20px" height = "20px" src = "css/refreshpost.png"></button></caption>
  <tr>
    <td id = "friendshine">_</td>
    <td id = "earthshine">_</td>
