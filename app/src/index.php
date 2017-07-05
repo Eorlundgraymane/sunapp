@@ -3,8 +3,7 @@
   <head>
     <?php include 'headprereqs.php';?>
     <script src = "js/sha.js"></script>
-    <script>
-    notifyCookie();
+    <script>    
     if(checkCookie("primarykey")){
       gopro();
     }
