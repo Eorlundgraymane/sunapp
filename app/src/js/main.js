@@ -380,6 +380,7 @@ function addlogin(id,name){
   xhr.send();
 }
 function gethasurapushpost(){
+  document.getElementById('postbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   var btns = document.getElementsByClassName('btn');
   for(each of btns){
     each.disabled = true;
@@ -407,6 +408,7 @@ function gethasurapushpost(){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
+    document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
     }
   }
   xhr.timeout = 10000;
@@ -417,6 +419,7 @@ function gethasurapushpost(){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+    document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
   }
   xhr.send();
 }
@@ -1935,6 +1938,7 @@ function pushpost(){
       each.disabled = false;
       each.style.cursor = "pointer";
   }
+  document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
   }
   else if(parseInt(earth) > 100 || parseInt(charity) > 100 || parseInt(social) > 100 || parseInt(health) > 100){
     alert("Shine value claims must not be greater than 100");
@@ -1943,6 +1947,7 @@ function pushpost(){
       each.disabled = false;
       each.style.cursor = "pointer";
   }
+  document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
   }
   else if(parseInt(earth) < 0 || parseInt(charity) < 0 || parseInt(social) < 0 || parseInt(health) < 0){
     alert("No negative values for shines.");
@@ -1951,6 +1956,7 @@ function pushpost(){
       each.disabled = false;
       each.style.cursor = "pointer";
   }
+  document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
   }
   else{
   var data = {};
@@ -1973,6 +1979,7 @@ function pushpost(){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
+    document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
       document.getElementById('postform').reset();
       pullposts(hasura_id);
       }
@@ -1986,6 +1993,7 @@ function pushpost(){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
+    document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
     }
   }
   xhr.timeout = 10000;
@@ -1996,6 +2004,7 @@ function pushpost(){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+    document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
   }
   xhr.send(query);
 }
