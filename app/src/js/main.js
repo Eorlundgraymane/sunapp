@@ -3014,7 +3014,7 @@ function pullposts(id){
     }
     keeppulling();
   }
-  document.getElementById('postbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
+  document.getElementById('postpuller').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   xhr.send(query);
 }
 function selectsuggests(){
