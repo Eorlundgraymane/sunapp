@@ -119,7 +119,7 @@ var smileys = {
   ';-)': '<img src=\'css/smileys/winking.svg\' width = \'16px\' height = \'16px\' border=\'0\' alt=\'\' title = \'Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com\'>',
 };
 
-function nofifyCookie(){
+function notifyCookie(){
   if(checkCookie("cookie_permit") == 0){
     alert("We use cookies in our site. It is only to provide you a better user experience. Many of the site's features won't work without cookies.By pressing the 'Ok' button you consent the usage of cookies in your browser");
     setCookie("cookie_permit","permitted",10);
