@@ -941,6 +941,7 @@ function checklogout(pk)
       loginbutton.innerHTML = "Log In";
       loginbutton.style.disabled = false;
       loginbutton.style.cursor = "pointer";
+      document.getElementById('shinelay').style.display = "none";
       document.getElementById('loginform').reset();
     }
     else if(xhr.readyState == 4) {
@@ -948,6 +949,7 @@ function checklogout(pk)
       loginbutton.innerHTML = "Log In";
       loginbutton.style.disabled = false;
       loginbutton.style.cursor = "pointer";
+      document.getElementById('shinelay').style.display = "none";
     }
   }
   var data = {};
@@ -1081,6 +1083,7 @@ function updatemyusersprofile(pk){
     else if(xhr.readyState ==4){
       var json = JSON.parse(xhr.responseText);
       console.log("Consoled Error : "+JSON.stringify(json));
+      document.getElementById('shinelay').style.display = "none";
       alert("Something went wrong during updating user profile");
       document.getElementById('signup').reset();
     }
@@ -1223,6 +1226,7 @@ function updatemyusers(pk,pasw){
       var json = JSON.parse(xhr.responseText);
       console.log("Consoled Error : "+JSON.stringify(json));
       alert("Something went wrong during updating user account");
+      document.getElementById('shinelay').style.display = "none";
     }
   }
   var objects = {};
@@ -1273,6 +1277,7 @@ function checklogin(pk,pasw)
       updatemyusers(pk,pasw);
     }
     else if(xhr.readyState == 4) {
+      document.getElementById('shinelay').style.display = "none";
       alert("Something went wrong during Login please try again");
     }
   }
@@ -1600,6 +1605,7 @@ function otpverify(){
       otpcancelbutton.style.disabled = false;
       otpbutton.innerHTML = "Verify";
       var json = JSON.parse(xhr.responseText);
+      document.getElementById('shinelay').style.display = "none";
       alert(JSON.stringify(json.message));
     }
   }
@@ -1621,6 +1627,7 @@ function otpverify(){
           otpbutton.innerHTML = "Verify"
         }
       }
+    document.getElementById('shinelay').style.display = "block";
     xhr.send(jsondata);
     }
     else{
