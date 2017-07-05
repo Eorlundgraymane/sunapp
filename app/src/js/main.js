@@ -963,6 +963,7 @@ function checklogout(pk)
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+    document.getElementById('shinelay').style.display = "none";
   }
   xhr.send(jsondata);
 }
@@ -1106,6 +1107,7 @@ function updatemyusersprofile(pk){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+    document.getElementById('shinelay').style.display = "none";
   }
   xhr.send(jsoninsert);
 }
@@ -1254,6 +1256,7 @@ function updatemyusers(pk,pasw){
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+    document.getElementById('shinelay').style.display = "none";
   }
   xhr.send(jsoninsert);
 }
@@ -1293,6 +1296,7 @@ function checklogin(pk,pasw)
       but.style.cursor = "pointer";
       but.disabled = false;
     }
+    document.getElementById('shinelay').style.display = "none";
   }
   xhr.send(jsondata);
 }
@@ -1625,8 +1629,8 @@ function otpverify(){
           but.style.cursor = "pointer";
           but.disabled = false;
           otpbutton.innerHTML = "Verify";
-          document.getElementById('shinelay').style.display = "none";
         }
+        document.getElementById('shinelay').style.display = "none";
       }
     document.getElementById('shinelay').style.display = "block";
     xhr.send(jsondata);
