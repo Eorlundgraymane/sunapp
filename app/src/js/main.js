@@ -2058,7 +2058,7 @@ xhr.onreadystatechange = function(){
     }
     else if(xhr.readyState ==4) {
       var json = JSON.parse(xhr.responseText);
-      consolw.log(json);
+      console.log(json);
       alert("Post could'nt be deleted");
       var btns = document.getElementsByClassName('btn');
       for(each of btns){
