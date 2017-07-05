@@ -1979,7 +1979,7 @@ function pushpost(){
         each.disabled = false;
         each.style.cursor = "pointer";
     }
-    document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
+      document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
       document.getElementById('postform').reset();
       pullposts(hasura_id);
       }
@@ -3014,6 +3014,7 @@ function pullposts(id){
     }
     keeppulling();
   }
+  document.getElementById('postbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   xhr.send(query);
 }
 function selectsuggests(){
