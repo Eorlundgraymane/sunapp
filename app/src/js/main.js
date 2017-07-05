@@ -2628,7 +2628,7 @@ xhr.send(query);
 }
 
 function goleads(){
-  window.location = 'https://sunshine.unwound15.hasura-app.io/leaderboards.php';
+  window.location = 'https://sunshine.unwound15.hasura-app.io/leaderboard.php';
 }
 function buttonsdisabled(){
   var allbuttons = document.getElementsByClassName("btn");
