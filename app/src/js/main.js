@@ -2533,64 +2533,7 @@ xhr.send(query);
 function refreshfscore(){
   var shinehead = document.getElementById("shineheading");
   shinehead.innerHTML = "Refreshing your Shine Table <img src = css/loader.gif width = \"30px\" height = \"30px\">";
-  var data = {};
-  var earth = 0;
-  var friends = 0;
-  var social = 0;
-  var charity = 0;
-  var health = 0;
-  data = {"type":"select",
-          "args":{
-            "table":"posts",
-            "columns":["user_id","earthshine","healthshine","charityshine","socialshine",
-            {
-              "name":"likers",
-              "columns":["liker_id"]
-            }],
-            "where":{
-              "user_id":parseInt(getCookie("friendid"))
-            }
-          }
-};
-var query = JSON.stringify(data);
-xhr = new XMLHttpRequest();
-var url  = "https://data.unwound15.hasura-app.io/v1/query";
-xhr.open("POST",url,true);
-xhr.setRequestHeader("Content-type","application/json");
-xhr.withCredentials = "true";
-xhr.onreadystatechange = function(){
-  if(xhr.readyState == 4 && xhr.status == 200){
-    var json = JSON.parse(xhr.responseText);
-    for(shine of json){
-      if(shine["likers"].length>0){
-        for(liker of shine["likers"]){
-          earth+=shine["earthshine"];
-          social+=shine["socialshine"];
-          charity+=shine["charityshine"];
-          health+=shine["healthshine"];
-        }
-      }
-      else{
-        console.log("no likes");
-      }
-    }
-    loadtable(parseInt(getCookie("friendid")));
-  }
-  else if(xhr.readyState ==4){
-    alert("Couldn'nt connect to server. Please check if you have a working internet connection...we'll keep trying");
-    keepfpulling();
-  }
-}
-xhr.timeout = 10000;
-xhr.ontimeout = function(e){
-  alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
-  var allbuts = document.getElementsByClassName("btn");
-  for(but of allbuts){
-    but.style.cursor = "pointer";
-    but.disabled = false;
-  }
-}
-xhr.send(query);
+  loadtable(parseInt(getCookie("friendid")));
 }
 
 
@@ -2704,12 +2647,13 @@ function loadtable(id){
         document.getElementById('socialshine').innerHTML = json[0]["socialshine"];
         document.getElementById('healthshine').innerHTML = json[0]["healthshine"];
         document.getElementById('score').innerHTML = json[0]["shine"];
-        shinehead.innerHTML = 'Shine Table<button  title = "Shinetable will refresh every 30s" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button"><img width = "20px" height = "20px" src = "css/refreshpost.png"></button>';
         buttonsenabled();
         if(id == parseInt(getCookie("hasura_id"))){
+          shinehead.innerHTML = 'Shine Table<button  title = "Shinetable will refresh every 30s" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button"><img width = "20px" height = "20px" src = "css/refreshpost.png"></button>';
           keeppulling();
         }
         else if(id == parseInt(getCookie("friendid"))){
+          shinehead.innerHTML = 'Shine Table<button  title = "Shinetable will refresh every 30s" class = "btn" onclick = "refreshfscore();" id = "shinetablebutton" type = "button"><img width = "20px" height = "20px" src = "css/refreshpost.png"></button>';
           keepfpulling();
         }
       }
