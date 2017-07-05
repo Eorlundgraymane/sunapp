@@ -1356,6 +1356,9 @@ function gopro(){
   deleteCookie("friendname");
   window.location = "https://sunshine.unwound15.hasura-app.io/home.php";
 }
+function goleads(){
+  window.location = 'https://sunshine.unwound15.hasura-app.io/leaderboard.php';
+}
 function getuser()
 {
   var data = {};
@@ -2625,10 +2628,6 @@ xhr.ontimeout = function(e){
   keeppulling();
 }
 xhr.send(query);
-}
-
-function goleads(){
-  window.location = 'https://sunshine.unwound15.hasura-app.io/leaderboard.php';
 }
 function buttonsdisabled(){
   var allbuttons = document.getElementsByClassName("btn");
