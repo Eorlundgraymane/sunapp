@@ -2089,8 +2089,7 @@ lxhr.setRequestHeader("Content-type","application/json");
 lxhr.withCredentials = "true";
 lxhr.onreadystatechange = function(){
     if(lxhr.readyState == 4 && lxhr.status == 200){
-      var json = JSON.parse(lxhr.responseText);
-      alert("Post Deleted, Pulling fresh post list");
+      var json = JSON.parse(lxhr.responseText);      
       xhr.send(query);
     }
     else if(lxhr.readyState ==4) {
