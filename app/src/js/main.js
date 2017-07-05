@@ -132,7 +132,7 @@ function loadleaderboards(){
   data["args"] = {};
   data["args"]["table"] = "profile";
   data["args"]["columns"] = ["user_id","proimage","fname","shine","healthshine","friendshine","charityshine","socialshine","friendshine","earthshine"];
-  data["args"]["order_by"] = "shine","-user_id";
+  data["args"]["order_by"] = "shine","user_id";
   var query = JSON.stringify(data);
   xhr = new XMLHttpRequest();
   var url  = "https://data.unwound15.hasura-app.io/v1/query";
