@@ -1420,17 +1420,9 @@ function deleteCookie(cname) {
 }
 function clearCookies(){
   var cookies = document.cookie.split(';');
-  if(checkCookie("cookie_permit") == 1){
     for(cookie of cookies){
       deleteCookie(cookie.split('=')[0]);
     }
-    setCookie("cookie_permit","permitted",10);
-  }
-  else{
-    for(cookie of cookies){
-      deleteCookie(cookie.split('=')[0]);
-    }
-  }
 }
   function userlogin()
 {
