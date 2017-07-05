@@ -214,7 +214,7 @@ function getallsmileys(){
 function appfriendslogin(){
   if(getflag == 1 || (droppeddown == 0 && friendlistflag == 0))
     {
-      document.getElementById('friendslistbutton').innerHTML = "<img width = '20px' height = '20px' src = 'css/loader.gif'>";
+      document.getElementById('friendslistbutton').innerHTML = "<img width = '20px' height = '20px' src = 'css/loaderheavy.gif'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -275,7 +275,7 @@ function appfriendslogin(){
 function appfriendsfriendlogin(){
   if(getflag == 1 || (droppeddown == 0 && friendlistflag == 0))
     {
-      document.getElementById('friendslistbutton').innerHTML = "<img width = '20px' height = '20px' src = 'css/loader.gif'>";
+      document.getElementById('friendslistbutton').innerHTML = "<img width = '20px' height = '20px' src = 'css/loaderheavy.gif'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -330,7 +330,7 @@ function appfriendsfriendlogin(){
 }
 
 function addlogin(id,name){
-  document.getElementById('friendssuggestbutton').innerHTML = "Adding Friend <img width = '30px' height = '30px' src = 'css/loader.gif'>";
+  document.getElementById('friendssuggestbutton').innerHTML = "Adding Friend <img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   var buttons = document.getElementsByClassName("btn");
   for(i of buttons){
     i.disabled = true;
@@ -421,7 +421,7 @@ function gethasurapushpost(){
   xhr.send();
 }
 function gethasurapullpost(){
-  document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
+  document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loaderheavy.gif width = \"30px\" height = \"30px\">";
   var btns = document.getElementsByClassName('btn');
   for(each of btns){
     each.disabled = true;
@@ -466,7 +466,7 @@ function gethasurapullpost(){
 function applogin(){
   if(addflag == 1 || (suggesiondrop  == 0 && friendsuggestflag == 0))
     {
-      document.getElementById('friendssuggestbutton').innerHTML = "<img width = '20px' height = '20px' src = 'css/loader.gif'>";
+      document.getElementById('friendssuggestbutton').innerHTML = "<img width = '20px' height = '20px' src = 'css/loaderheavy.gif'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -1035,7 +1035,7 @@ function homescroll(){
 function userlogout(pk)
 {
   clearCookies();
-  document.getElementById('logoutbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loader.gif'>";
+  document.getElementById('logoutbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.unwound15.hasura-app.io/user/logout";
   xhr.open("POST",url,true);
@@ -1435,7 +1435,7 @@ function clearCookies(){
 {
   xhr = new XMLHttpRequest();
   var loginbutton = document.getElementById('loginbutton');
-  loginbutton.innerHTML = "Logging In <img width = '30px' height = '30px' src = 'css/loader.gif'>";
+  loginbutton.innerHTML = "Logging In <img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   loginbutton.style.disabled = true;
   loginbutton.style.cursor = "not-allowed";
   var url  = "https://auth.unwound15.hasura-app.io/login";
@@ -1585,7 +1585,7 @@ function otpverify(){
   resendotpbutton.style.disabled = true;
   otpcancelbutton.style.cursor = "not-allowed";
   otpcancelbutton.style.disabled = true;
-  otpbutton.innerHTML = "Verifying <img width = '30px' height = '30px' src = 'css/loader.gif'>";
+  otpbutton.innerHTML = "Verifying <img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   xhr = new XMLHttpRequest();
   var url  = "https://auth.unwound15.hasura-app.io/mobile/confirm";
   xhr.open("POST",url,true);
@@ -1721,7 +1721,7 @@ function otpresend() {
   otpbutton.style.cursor = "not-allowed";
   resendotpbutton.style.cursor = "not-allowed";
   otpcancelbutton.style.cursor = "not-allowed";
-  resendotpbutton.innerHTML = "Sending OTP to "+mobile+" <img width = '30px' height = '30px' src = 'css/loader.gif'>";
+  resendotpbutton.innerHTML = "Sending OTP to "+mobile+" <img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   otpbutton.style.disabled = true;
   resendotpbutton.style.disabled = true;
   otpcancelbutton.style.disabled = true;
@@ -1790,7 +1790,7 @@ function popalert() {
     var signupbuttn = document.getElementById("signupbuttn");
     signupbuttn.style.disabled = true;
     signupbuttn.style.cursor = "not-allowed";
-    signupbuttn.innerHTML = "Signing Up <img width = '30px' height = '30px' src = 'css/loader.gif'>";
+    signupbuttn.innerHTML = "Signing Up <img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
     var fname = document.getElementById("fname").value;
     var lname = document.getElementById("lname").value;
     var mobile = document.getElementById("mob").value;
@@ -2544,7 +2544,7 @@ xhr.send(query);
 
 function refreshfscore(){
   var shinehead = document.getElementById("shineheading");
-  shinehead.innerHTML = "Refreshing your Shine Table <img src = css/loader.gif width = \"30px\" height = \"30px\">";
+  shinehead.innerHTML = "Refreshing your Shine Table <img src = css/loaderheavy.gif width = \"30px\" height = \"30px\">";
   loadtable(parseInt(getCookie("friendid")));
 }
 
@@ -2553,7 +2553,7 @@ function refreshfscore(){
 function refreshscore(){
   buttonsdisabled();
   var shinehead = document.getElementById("shineheading");
-  shinehead.innerHTML = "Refreshing your Shine Table <img src = css/loader.gif width = \"30px\" height = \"30px\">";
+  shinehead.innerHTML = "Refreshing your Shine Table <img src = css/loaderheavy.gif width = \"30px\" height = \"30px\">";
   var data = {};
   var earth = 0;
   var friends = 0;
@@ -2703,7 +2703,7 @@ function keepfpulling(){
   setTimeout(function(){console.log("pulling posts again");pullfposts(parseInt(getCookie("friendid")));},5*60*1000);
 }
 function pullfposts(id){
-  document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loader.gif width = \"30px\" height = \"30px\">";
+  document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loaderheavy.gif width = \"30px\" height = \"30px\">";
   var data = {"type":"select","args":{
     "table":"posts",
     "columns":["*",
