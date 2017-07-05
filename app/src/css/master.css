@@ -16,6 +16,8 @@
 }
 #shinelay{
   background-image: url('/css/loader.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: none;
   background-color: rgba(0,0,0,0.8);
   opacity: 0.5;
