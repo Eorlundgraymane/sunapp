@@ -16,7 +16,7 @@
               <figure>
               <button  title = "Update Profile Photo" type = "button" class = "btn" id = "profilephotobutton" onclick = "updatephoto()"><img id = "profileimage" class = "profileimage img-responsive img-rounded" alt = "No Image Uploaded"></button>
               <figcaption title = "Profile Name" id = "profilename"></figcaption>
-              <script>getpiclink();</script>
+              <script>notifyCookie();getpiclink();</script>
             </figure>
              </div>
              <div class = "col-lg-10 col-md-10 col-sm-10 col-xs-10" id = "shinetable">

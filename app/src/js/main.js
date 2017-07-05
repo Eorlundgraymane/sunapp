@@ -118,6 +118,13 @@ var smileys = {
   ':-|': '<img src=\'css/smileys/sceptic.svg\' width = \'16px\' height = \'16px\' border=\'0\' alt=\'\' title = \'Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com\'>',
   ';-)': '<img src=\'css/smileys/winking.svg\' width = \'16px\' height = \'16px\' border=\'0\' alt=\'\' title = \'Designed by http://www.flaticon.com/authors/madebyoliver at http://www.flaticon.com\'>',
 };
+
+function nofifyCookie(){
+  if(checkCookie("cookie_permit") == 0){
+    alert("We use cookies in our site. It is only to provide you a better user experience. Many of the site's features won't work without cookies.By pressing the 'Ok' button you consent the usage of cookies in your browser");
+    setCookie("cookie_permit","permitted",10);
+  }
+}
 function loadleaderboards(){
   var data = {};
   rank = 1;
@@ -1413,8 +1420,16 @@ function deleteCookie(cname) {
 }
 function clearCookies(){
   var cookies = document.cookie.split(';');
-  for(cookie of cookies){
-    deleteCookie(cookie.split('=')[0]);
+  if(checkCookie("cookie_permit") == 1){
+    for(cookie of cookies){
+      deleteCookie(cookie.split('=')[0]);
+    }
+    setCookie("cookie_permit","permitted",10);
+  }
+  else{
+    for(cookie of cookies){
+      deleteCookie(cookie.split('=')[0]);
+    }
   }
 }
   function userlogin()
