@@ -2039,6 +2039,13 @@ function deletepost(id,userid){
       "user_id":userid
   }}
 };
+var dlikes = {"type":"delete","args":{
+  "table":"likes",
+  "where":{
+    "post_id":id
+}}
+};
+var lquery = JSON.stringify(dlikes);
 var query = JSON.stringify(data);
 var url = "https://data.unwound15.hasura-app.io/v1/query";
 xhr = new XMLHttpRequest();
@@ -2076,7 +2083,37 @@ xhr.ontimeout = function(e){
     but.disabled = false;
   }
 }
-xhr.send(query);
+lxhr = new XMLHttpRequest();
+lxhr.open("POST",url,true);
+lxhr.setRequestHeader("Content-type","application/json");
+lxhr.withCredentials = "true";
+lxhr.onreadystatechange = function(){
+    if(lxhr.readyState == 4 && lxhr.status == 200){
+      var json = JSON.parse(lxhr.responseText);
+      alert("Post Deleted, Pulling fresh post list");
+      xhr.send(query);
+    }
+    else if(lxhr.readyState ==4) {
+      var json = JSON.parse(lxhr.responseText);
+      console.log(json);
+      alert("Post could'nt be deleted");
+      var btns = document.getElementsByClassName('btn');
+      for(each of btns){
+        each.disabled = false;
+        each.style.cursor = "pointer";
+    }
+    }
+}
+lxhr.timeout = 10000;
+lxhr.ontimeout = function(e){
+  alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
+  var allbuts = document.getElementsByClassName("btn");
+  for(but of allbuts){
+    but.style.cursor = "pointer";
+    but.disabled = false;
+  }
+}
+lxhr.send(lquery);
 }
 
 (function timeAgo(selector) {
