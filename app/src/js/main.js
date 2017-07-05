@@ -1624,7 +1624,8 @@ function otpverify(){
         for(but of allbuts){
           but.style.cursor = "pointer";
           but.disabled = false;
-          otpbutton.innerHTML = "Verify"
+          otpbutton.innerHTML = "Verify";
+          document.getElementById('shinelay').style.display = "none";
         }
       }
     document.getElementById('shinelay').style.display = "block";
