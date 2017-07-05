@@ -13,7 +13,9 @@
     <body class = "outer-container">
       <row>
       <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "shinelay">
-        <img class = "img-rounded" width = '100%' height = '100%' src = 'css/loader.gif'>
+        <figure id = "forecelay">
+        <img class = "img-rounded" width = '50px' height = '50px' src = 'css/loader.gif'>
+        </figure>
       </div>
     </row>
       <row>
