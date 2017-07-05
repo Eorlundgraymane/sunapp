@@ -13,9 +13,9 @@
     <body class = "outer-container">
       <row>
       <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "shinelay">
-        <div class = "forcelay"></div>
+        <img class = "img-rounded" width = '100%' height = '100%' src = 'css/loader.gif'>
       </div>
-      </row>
+    </row>
       <row>
         <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "sitebanner">
           <?php include "loginheader.php";?><br>
