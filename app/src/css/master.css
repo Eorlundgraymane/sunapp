@@ -15,9 +15,6 @@
   transition-timing-function: ease;
 }
 #shinelay{
-  background-image: url('/css/loader.gif');
-  background-repeat: no-repeat;
-  background-size: contain;
   display: none;
   background-color: rgba(0,0,0,0.8);
   opacity: 0.5;
