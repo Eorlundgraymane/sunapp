@@ -389,6 +389,7 @@ function addlogin(id,name){
 }
 function gethasurapushpost(){
   document.getElementById('shinelay').classList.add("showshine");
+  setTimeout(function(){},5000);
   document.getElementById('postbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   var btns = document.getElementsByClassName('btn');
   for(each of btns){
@@ -786,7 +787,7 @@ function getpiclink(){
     setCookie("sunrise",1,1);
   }
   else{
-    document.getElementById('shinelay').classList.remove("showshine");    
+    document.getElementById('shinelay').classList.remove("showshine");
   }
   console.log('piclink called');
   var piclink;
