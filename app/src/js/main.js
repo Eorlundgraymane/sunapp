@@ -1955,6 +1955,7 @@ function pushpost(){
   if(posttext == "")
   {posttext = null;}
   if(title == null || posttext == null){
+    document.getElementById('shinelay').classList.remove("showshine");
     alert("Please fill in Title and a post message. Images are optional");
     var btns = document.getElementsByClassName('btn');
     for(each of btns){
@@ -2922,7 +2923,7 @@ function pullposts(id){
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
-    if(xhr.readyState == 4 && xhr.status == 200){      
+    if(xhr.readyState == 4 && xhr.status == 200){
       document.getElementById('shinelay').classList.remove("showshine");
       document.getElementById('posts').innerHTML = "";
       document.getElementById('postpuller').innerHTML ="<img id = \"postrefresh\" src = \"css/refreshpost.png\" width = \"20px\" height = \"20px\">";
