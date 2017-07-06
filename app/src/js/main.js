@@ -388,6 +388,7 @@ function addlogin(id,name){
   xhr.send();
 }
 function gethasurapushpost(){
+  document.getElementById('shinelay').classList.add("showshine");
   document.getElementById('postbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   var btns = document.getElementsByClassName('btn');
   for(each of btns){
@@ -408,6 +409,7 @@ function gethasurapushpost(){
       pushpost();
     }
     else if(xhr.readyState == 4) {
+      document.getElementById('shinelay').classList.remove("showshine");
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert(JSON.stringify(json));
@@ -421,6 +423,7 @@ function gethasurapushpost(){
   }
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
+    document.getElementById('shinelay').classList.remove("showshine");
     alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
     var allbuts = document.getElementsByClassName("btn");
     for(but of allbuts){
@@ -1992,6 +1995,7 @@ function pushpost(){
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
+      document.getElementById('shinelay').classList.remove("showshine");
       var res = JSON.parse(xhr.responseText);
       alert("Post Uploaded");
       var btns = document.getElementsByClassName('btn');
@@ -2004,6 +2008,7 @@ function pushpost(){
       pullposts(hasura_id);
       }
     else if (xhr.readyState == 4) {
+      document.getElementById('shinelay').classList.remove("showshine");
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       console.log(JSON.stringify(res));
@@ -2018,6 +2023,7 @@ function pushpost(){
   }
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
+    document.getElementById('shinelay').classList.remove("showshine");
     alert("Couldn'nt connect to server. Please check if you have a working internet connection and refresh the page");
     var allbuts = document.getElementsByClassName("btn");
     for(but of allbuts){
