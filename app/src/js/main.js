@@ -1827,8 +1827,7 @@ function popalert() {
   xhr = new XMLHttpRequest();
   var url  = "https://auth.unwound15.hasura-app.io/signup";
   xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","application/json");
-  xhr.setRequestHeader("Authentication",admintoken);
+  xhr.setRequestHeader("Content-type","application/json");  
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
