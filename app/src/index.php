@@ -12,7 +12,7 @@
   </head>
   <div class = "shinelay" id = "shinelay">
     <figure id = "forcelay">
-    <img class = "img-rounded" width = '30%' height = '30%' src = 'css/sunrise.gif'>
+    <img class = "img-rounded" width = '100%' height = '100%' src = 'css/sunrise.gif'>
     </figure>
   </div>
     <body class = "outer-container">
