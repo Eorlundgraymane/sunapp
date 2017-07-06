@@ -806,6 +806,10 @@ background-color: rgba(255,255,255,0.5);
   height: auto;
   box-shadow: 5px 5px 10px black;
 }
+#sunlink,#sunlink:hover,#sunlink:visited,#sunlink:active{
+  text-decoration: none;
+  color:white;
+}
 figcaption{
   display: inline;
   vertical-align: top;
