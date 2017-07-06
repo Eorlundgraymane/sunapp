@@ -1,4 +1,4 @@
-<div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "sitename"><button class = "btn" type = "button" onclick = "gopro();"><h1 id = "siteh1">
+<div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "sitename"><button id = "sunbutton" class = "btn" type = "button" onclick = "gopro();"><h1 id = "siteh1">
   Sunshine</h1></button>
 </div>
 <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "sessionbutton">
