@@ -780,8 +780,14 @@ function getfpiclink(id){
   console.log('hasura call sent' );
 }
 function getpiclink(){
-  setTimeout(function(){},5000);
-  document.getElementById('shinelay').classList.add("showshine");
+  if(checkCookie("sunrise") == 0){
+    document.getElementById('shinelay').classList.add("showshine");
+    setTimeout(function(){},5000);
+    setCookie("sunrise",1,1);
+  }
+  else{
+    document.getElementById('shinelay').classList.remove("showshine");    
+  }
   console.log('piclink called');
   var piclink;
   var proname;
