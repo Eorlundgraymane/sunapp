@@ -10,7 +10,7 @@
     </script>
     <title>Sunshine | Home</title>
   </head>
-  <div id = "shinelay">
+  <div class = "shinelay" id = "shinelay">
     <figure id = "forcelay">
     <img class = "img-rounded" width = '30%' height = '30%' src = 'css/loaderheavy.gif'>
     </figure>
