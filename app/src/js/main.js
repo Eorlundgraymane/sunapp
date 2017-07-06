@@ -146,16 +146,16 @@ function loadleaderboards(){
       var json = json.reverse();
       var nowshine = document.getElementById('leads');
       var proimage;
-      if(table["proimage"] == null || table["proimage"] == ""){
-        proimage = "/css/profileicon.png";
-      }
-      else{
-        proimage = table["proimage"];
-      }
       nowshine.innerHTML += '<tr>';
       nowshine.innerHTML += '<th>Rank</th><th>Profile Picture</th><th>Sunshine</th><th>Shine</th><th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
       nowshine.innerHTML += '</tr>';
       for(table of json){
+        if(table["proimage"] == null || table["proimage"] == ""){
+          proimage = "/css/profileicon.png";
+        }
+        else{
+          proimage = table["proimage"];
+        }
         nowshine.innerHTML += '<tr>';
         nowshine.innerHTML += '<td>'+rank+'</td><td><img class = "leaderimage img-rounded" title = "'+table["fname"]+'" src = "'+proimage+'" height = "40px" width = "40px"></td><td>'+table["fname"]+'</td><td>'+table["shine"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
         nowshine.innerHTML += '</tr>';
