@@ -2766,7 +2766,7 @@ function pullfposts(id){
       for(each of reverpost){
         var postimg = each["postimg"];
         if(postimg == null || postimg == ""){
-          postimg = "/css/profileicon.png";
+          postimg = "/css/post.jpg";
         }
         var post = each["post"];
         var title = each["title"];
@@ -2923,7 +2923,7 @@ function pullposts(id){
       for(each of reverpost){
         var postimg = each["postimg"];
         if(postimg == null || postimg == ""){
-          postimg = "/css/post.png";
+          postimg = "/css/post.jpg";
         }
         var post = each["post"];
         var title = each["title"];
