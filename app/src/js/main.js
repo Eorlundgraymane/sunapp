@@ -2889,7 +2889,6 @@ function pullfposts(id){
 
 
 function pullposts(id){
-  document.getElementById('shinelay').classList.remove("showshine");
   var data = {"type":"select","args":{
     "table":"posts",
     "columns":["*",
@@ -2919,6 +2918,7 @@ function pullposts(id){
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
+      document.getElementById('shinelay').classList.remove("showshine");
       document.getElementById('posts').innerHTML = "";
       document.getElementById('postpuller').innerHTML ="<img id = \"postrefresh\" src = \"css/refreshpost.png\" width = \"20px\" height = \"20px\">";
       var res = JSON.parse(xhr.responseText);
@@ -3022,6 +3022,7 @@ function pullposts(id){
     changebanner();
     }
     else if (xhr.readyState == 4) {
+      document.getElementById('shinelay').classList.remove("showshine");
       var res = JSON.parse(xhr.responseText);
       document.getElementById('postpuller').innerHTML ="<img id = \"postrefresh\" src = \"css/refreshpost.png\" width = \"20px\" height = \"20px\">";
       console.log(res);
@@ -3035,6 +3036,7 @@ function pullposts(id){
   }
   xhr.timeout = 10000;
   xhr.ontimeout = function(e){
+    document.getElementById('shinelay').classList.remove("showshine");
     alert("Couldn'nt connect to server. Please check if you have a working internet connection we'll keep trying");
     var allbuts = document.getElementsByClassName("btn");
     for(but of allbuts){
