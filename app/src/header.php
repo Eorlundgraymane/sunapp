@@ -1,5 +1,5 @@
-<div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "sitename"><button id = "sunbutton" class = "btn" type = "button" onclick = "gopro();"><h1 id = "siteh1">
-  Sunshine</h1></button>
+<div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "sitename"><h1 id = "siteh1">
+  <button id = "sunbutton" class = "btn" type = "button" onclick = "gopro();">Sunshine</button></h1>
 </div>
 <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6" id = "sessionbutton">
   <button title = "Log Out" id = "logoutbutton" class  = "btn sessionbutton" type = "button" onclick = "userlogout(getCookie('primarykey'));"><img src = "css/logout.png" width = "30px" height = "30px"></button>
