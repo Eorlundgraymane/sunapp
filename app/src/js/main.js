@@ -588,6 +588,9 @@ function getfriendsfriendlist(){
                 var friendname = myfid["friend_profile"]["fname"];
                 var friendid = myfid["friend_id"];
                 var prourl = myfid["friend_profile"]["proimage"];
+                if(prourl == null || prourl == ""){
+                  prourl = "/css/profileicon.png";
+                }
                 document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button title = \"Visit "+friendname+"'s Profile\" onclick = \"gotofriend("+friendid+",'"+friendname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"></button><br><figcaption>"+friendname+"</figcaption></figure></li>";
               }
             }
@@ -650,6 +653,9 @@ function getfriendslist(){
                 var friendname = myfid["friend_profile"]["fname"];
                 var friendid = myfid["friend_id"];
                 var prourl = myfid["friend_profile"]["proimage"];
+                if(prourl == null || prourl == ""){
+                  prourl = "/css/profileicon.png";
+                }
                 document.getElementById('friendslist').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button title = \"Visit "+friendname+"'s Profile\" onclick = \"gotofriend("+friendid+",'"+friendname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src = \""+prourl+"\"></button><br><figcaption>"+friendname+"</figcaption></figure></li>";
               }
             }
@@ -2919,6 +2925,9 @@ function pullposts(id){
         var hshine = each["healthshine"];
         var timestamp = time_ago(each["created"]);
         var author_img = each["author"]["proimage"];
+        if(author_img == null || author_img == ""){
+          author_img = "/css/profileicon.png";
+        }
         var author_name = each["author"]["fname"];
         var author_id = each["author"]["user_id"];
         var parsedpost = smileyMe(post).concat("<br>");
@@ -3042,6 +3051,9 @@ function selectsuggests(){
           suggestid = users["user_id"];
           suggestname = users["fname"];
           propic = users["proimage"];
+          if(propic == null || propic == ""){
+            propic = "/css/profileicon.png";
+          }
           document.getElementById('friendssuggest').innerHTML += "<li class = \"list-group\"><figure  id = \"friend\"><button onclick = \"gotofriend("+suggestid+",'"+suggestname+"');\" type = \"button\" class = \"btn\"\"><img class = \"friendimg img-rounded\" alt = \"Friend's Image\" src =\""+propic+"\"></button><br><figcaption>"+suggestname+"<br><button type = \"button\" class = \"btn\" onclick = \"addlogin("+suggestid+",'"+suggestname+"');\">Add</figcaption></figure></li>";
           friendsuggestflag = 1;
           }
