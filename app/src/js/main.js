@@ -1053,8 +1053,9 @@ function homescroll(){
     },5000)
 }
 
-function userlogout(pk)
-{
+function userlogout(pk){
+  document.getElementById('shinelay').classList.add("showshine");
+  setTimeout(function(){},3000);
   clearCookies();
   document.getElementById('logoutbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   xhr = new XMLHttpRequest();
@@ -1455,8 +1456,8 @@ function clearCookies(){
       deleteCookie(cookie.split('=')[0]);
     }
 }
-  function userlogin()
-{
+  function userlogin(){
+  setTimeout(function(){},3000);
   document.getElementById('shinelay').classList.add("showshine");
   xhr = new XMLHttpRequest();
   var loginbutton = document.getElementById('loginbutton');
