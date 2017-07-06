@@ -4,6 +4,11 @@
     <?php include 'headprereqs.php';?>
     <title>Sunshine | Home</title>
   </head>
+  <div class = "shinelay" id = "shinelay">
+    <figure id = "forcelay">
+    <img class = "img-rounded" width = '30%' height = '30%' src = 'css/loaderheavy.gif'>
+    </figure>
+  </div>
   <body class = "outer-container">
     <?php include 'loginchecker.php';?>
     <row>

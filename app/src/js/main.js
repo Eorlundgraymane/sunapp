@@ -777,6 +777,7 @@ function getfpiclink(id){
   console.log('hasura call sent' );
 }
 function getpiclink(){
+  document.getElementById('shinelay').classList.add("showshine");
   console.log('piclink called');
   var piclink;
   var proname;
@@ -817,6 +818,7 @@ function getpiclink(){
             }
             else {
               if(x.readyState === 4){
+                document.getElementById('shinelay').classList.remove("showshine");
                 console.log(x.responseText);
                 alert("Could'nt get your Google pic  ");
               }
@@ -831,6 +833,7 @@ function getpiclink(){
                 but.style.cursor = "pointer";
                 but.disabled = false;
               }
+              document.getElementById('shinelay').classList.remove("showshine");
             }
             x.send();
 
@@ -1454,6 +1457,7 @@ function clearCookies(){
 }
   function userlogin()
 {
+  document.getElementById('shinelay').classList.add("showshine");
   xhr = new XMLHttpRequest();
   var loginbutton = document.getElementById('loginbutton');
   loginbutton.innerHTML = "Logging In <img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
@@ -1652,7 +1656,7 @@ function otpverify(){
           otpbutton.innerHTML = "Verify";
         }
         document.getElementById('shinelay').classList.remove("showshine");
-      }    
+      }
     document.getElementById('shinelay').classList.add("showshine");
     xhr.send(jsondata);
     }
@@ -2886,6 +2890,7 @@ function pullfposts(id){
 
 
 function pullposts(id){
+  document.getElementById('shinelay').classList.remove("showshine");
   var data = {"type":"select","args":{
     "table":"posts",
     "columns":["*",
