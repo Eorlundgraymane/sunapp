@@ -1053,8 +1053,7 @@ function homescroll(){
       }
     },5000)
 }
-
-function userlogout(pk){    
+function userlogout(pk){
   clearCookies();
   document.getElementById('logoutbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   xhr = new XMLHttpRequest();
