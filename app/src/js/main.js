@@ -222,7 +222,7 @@ function getallsmileys(){
 function appfriendslogin(){
   if(getflag == 1 || (droppeddown == 0 && friendlistflag == 0))
     {
-      document.getElementById('friendslistbutton').innerHTML = "<img width = '20px' height = '20px' src = 'css/loaderheavy.gif'>";
+      document.getElementById('friendslistbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -283,7 +283,7 @@ function appfriendslogin(){
 function appfriendsfriendlogin(){
   if(getflag == 1 || (droppeddown == 0 && friendlistflag == 0))
     {
-      document.getElementById('friendslistbutton').innerHTML = "<img width = '20px' height = '20px' src = 'css/loaderheavy.gif'>";
+      document.getElementById('friendslistbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -477,7 +477,7 @@ function gethasurapullpost(){
 function applogin(){
   if(addflag == 1 || (suggesiondrop  == 0 && friendsuggestflag == 0))
     {
-      document.getElementById('friendssuggestbutton').innerHTML = "<img width = '20px' height = '20px' src = 'css/loaderheavy.gif'>";
+      document.getElementById('friendssuggestbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
       xhr = new XMLHttpRequest();
       var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
@@ -1827,7 +1827,7 @@ function popalert() {
   xhr = new XMLHttpRequest();
   var url  = "https://auth.unwound15.hasura-app.io/signup";
   xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","application/json");  
+  xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
