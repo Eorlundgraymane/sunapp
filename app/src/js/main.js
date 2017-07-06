@@ -134,6 +134,7 @@ function loadleaderboards(){
   data["args"]["columns"] = ["user_id","proimage","fname","shine","healthshine","friendshine","charityshine","socialshine","friendshine","earthshine"];
   data["args"]["order_by"] = ["shine","-user_id"];
   var query = JSON.stringify(data);
+  var proimage;
   xhr = new XMLHttpRequest();
   var url  = "https://data.unwound15.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
@@ -144,12 +145,19 @@ function loadleaderboards(){
       var json = JSON.parse(xhr.responseText);
       var json = json.reverse();
       var nowshine = document.getElementById('leads');
+      var proimage;
+      if(table["proimage"] == null || table["proimage"] == ""){
+        proimage = "/css/profileicon.png";
+      }
+      else{
+        proimage = table["proimage"];
+      }
       nowshine.innerHTML += '<tr>';
       nowshine.innerHTML += '<th>Rank</th><th>Profile Picture</th><th>Sunshine</th><th>Shine</th><th>Friendshine</th><th>Charityshine</th><th>Earthshine</th><th>Socialshine</th><th>Healthshine</th>';
       nowshine.innerHTML += '</tr>';
       for(table of json){
         nowshine.innerHTML += '<tr>';
-        nowshine.innerHTML += '<td>'+rank+'</td><td><img class = "leaderimage img-rounded" title = "'+table["fname"]+'" src = "'+table["proimage"]+'" height = "40px" width = "40px"></td><td>'+table["fname"]+'</td><td>'+table["shine"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
+        nowshine.innerHTML += '<td>'+rank+'</td><td><img class = "leaderimage img-rounded" title = "'+table["fname"]+'" src = "'+proimage+'" height = "40px" width = "40px"></td><td>'+table["fname"]+'</td><td>'+table["shine"]+'</td><td>'+table["friendshine"]+'</td><td>'+table["charityshine"]+'</td><td>'+table["earthshine"]+'</td><td>'+table["socialshine"]+'</td><td>'+table["healthshine"]+'</td>';
         nowshine.innerHTML += '</tr>';
         rank++;
       }
@@ -786,6 +794,7 @@ function getpiclink(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var json = JSON.parse(xhr.responseText);
       if(json[0]["profile"][0]["proimage"] == null){
+        document.getElementById('profileimage').src = "/css/profileicon.png";
         var x = new XMLHttpRequest();
         x.onreadystatechange = function(){
           document.getElementById('profileimage').alt = "Loading Image please Wait...";
