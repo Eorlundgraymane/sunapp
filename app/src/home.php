@@ -4,7 +4,7 @@
     <?php include 'headprereqs.php';?>
     <title>Sunshine | Home</title>
   </head>
-  <div class = "shinelay" id = "shinelay">
+  <div class = "shinelay show" id = "shinelay">
     <figure id = "forcelay">
     <img class = "img-rounded" width = '100%' height = '100%' src = 'css/sunrise.gif'>
     </figure>
@@ -48,7 +48,7 @@
                        <input  type = "text" id = "newpostimg" placeholder = "Image URL"><br>
                        <textarea rows = "5" maxlength = "200" id = "newposttext" placeholder="Post here..."></textarea><br>
                        <div id = "allsmileys"></div>
-                       <script>getallsmileys()</script>
+                       <script>getallsmileys();</script>
                        <input onfocus="showearthhint();" onblur = "hideearthhint();" title = "Claim your Earthshine points to go up in the leaderboards" class = "shineinput" type = "number" min = "0" max = "100" id = "earth" placeholder = "Earth Shine 0-100"><div id = "hintearth">how much you cared for the nature</div><br>
                        <input onfocus="showcharityhint();" onblur = "hidecharityhint();" title = "Claim your Charityshine points to go up in the leaderboards" class = "shineinput" type = "number" min = "0" max = "100" id = "charity" placeholder = "Charity Shine 0-100"><div id = "hintcharity">how much you showed charity</div><br>
                        <input onfocus="showhealthhint();" onblur = "hidehealthhint();" title = "Claim your Healthshine points to go up in the leaderboards" class = "shineinput" type = "number" min = "0" max = "100" id = "health" placeholder = "Health Shine 0-100"><div id = "hinthealth">how much you took care of your body</div><br>
