@@ -2765,6 +2765,9 @@ function pullfposts(id){
       var reverpost = res;
       for(each of reverpost){
         var postimg = each["postimg"];
+        if(postimg == null || postimg == ""){
+          postimg = "/css/profileicon.png";
+        }
         var post = each["post"];
         var title = each["title"];
         var cshine = each["charityshine"];
@@ -2775,6 +2778,9 @@ function pullfposts(id){
         var timestamp = time_ago(each["created"]);
         var author_img = each["author"]["proimage"];
         var author_name = each["author"]["fname"];
+        if(author_img == null || author_img == ""){
+          author_img = "/css/profileicon.png";
+        }
         var author_id = each["author"]["user_id"];
         var likers = each["likers"];
         var parsedpost = smileyMe(post).concat("<br>");
@@ -2916,6 +2922,9 @@ function pullposts(id){
       var reverpost = res;
       for(each of reverpost){
         var postimg = each["postimg"];
+        if(postimg == null || postimg == ""){
+          postimg = "/css/post.png";
+        }
         var post = each["post"];
         var title = each["title"];
         var postid = each["id"];
