@@ -2683,11 +2683,11 @@ function loadtable(id){
         document.getElementById('score').innerHTML = json[0]["shine"];
         buttonsenabled();
         if(id == parseInt(getCookie("hasura_id"))){
-          shinehead.innerHTML = 'Shine Table<button  title = "Shinetable will refresh every 30s" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button"><img width = "20px" height = "20px" src = "css/refreshpost.png"></button>';
+          shinehead.innerHTML = 'Shine Table<button  title = "Shinetable will refresh every 5 minutes" class = "btn" onclick = "refreshscore();" id = "shinetablebutton" type = "button"><img width = "20px" height = "20px" src = "css/refreshpost.png"></button>';
           keeppulling();
         }
         else if(id == parseInt(getCookie("friendid"))){
-          shinehead.innerHTML = 'Shine Table<button  title = "Shinetable will refresh every 30s" class = "btn" onclick = "refreshfscore();" id = "shinetablebutton" type = "button"><img width = "20px" height = "20px" src = "css/refreshpost.png"></button>';
+          shinehead.innerHTML = 'Shine Table<button  title = "Shinetable will refresh every 5 minutes" class = "btn" onclick = "refreshfscore();" id = "shinetablebutton" type = "button"><img width = "20px" height = "20px" src = "css/refreshpost.png"></button>';
           keepfpulling();
         }
       }
