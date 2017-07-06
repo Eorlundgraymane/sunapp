@@ -777,6 +777,7 @@ function getfpiclink(id){
   console.log('hasura call sent' );
 }
 function getpiclink(){
+  setTimeout(function(){},5000);
   document.getElementById('shinelay').classList.add("showshine");
   console.log('piclink called');
   var piclink;
@@ -1053,9 +1054,7 @@ function homescroll(){
     },5000)
 }
 
-function userlogout(pk){
-  document.getElementById('shinelay').classList.add("showshine");
-  setTimeout(function(){},3000);
+function userlogout(pk){    
   clearCookies();
   document.getElementById('logoutbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   xhr = new XMLHttpRequest();
@@ -1457,7 +1456,7 @@ function clearCookies(){
     }
 }
   function userlogin(){
-  setTimeout(function(){},3000);
+  setTimeout(function(){},5000);
   document.getElementById('shinelay').classList.add("showshine");
   xhr = new XMLHttpRequest();
   var loginbutton = document.getElementById('loginbutton');
