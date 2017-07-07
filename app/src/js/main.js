@@ -2389,12 +2389,12 @@ function funlike(id,liker_id){
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
-      console.log("Liked");
+      console.log("UnLiked");
       var res = JSON.parse(xhr.responseText);
       pullfposts(getCookie("friendid"));
     }
     else if(xhr.readyState == 4) {
-      console.log("not liked");
+      console.log("not unliked");
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       alert("Not Unliked");
@@ -2429,12 +2429,12 @@ function unlike(id,liker_id){
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
-      console.log("Liked");
+      console.log("UnLiked");
       var res = JSON.parse(xhr.responseText);
       gethasurapullpost();
     }
     else if(xhr.readyState == 4) {
-      console.log("not liked");
+      console.log("not unliked");
       var res = JSON.parse(xhr.responseText);
       console.log(res);
       alert("Not Unliked");
