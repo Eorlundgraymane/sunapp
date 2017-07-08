@@ -1171,8 +1171,7 @@ function changebanner()
     for(but of allbuts){
       but.style.cursor = "pointer";
       but.disabled = false;
-    }
-    keeppulling();
+    }    
   }
   xhr.send(query);
 
