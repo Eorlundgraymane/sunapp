@@ -3157,7 +3157,7 @@ function filedown(){
   xhr.open("GET",url,true);
   xhr.onreadystatechange = function(){
     if(xhr.readyState ==4 && xhr.readyState ==200){
-      alert("file will be downloaded")''
+      alert("file will be downloaded");
     }
     else if(xhr.readyState == 4){
       alert(JSON.stringify(xhr.responseText));
