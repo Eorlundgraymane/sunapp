@@ -3145,7 +3145,7 @@ function fileup(id){
     }
     else if(xhr.readyState == 4){
       var json = xhr.responseText;
-      alert(JSON.stringify(json);
+      alert(JSON.stringify(json));
     }
   }
   xhr.send(file);
