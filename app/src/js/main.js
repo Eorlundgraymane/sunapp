@@ -3131,9 +3131,9 @@ function selectsuggests(){
   }
   xhr.send(query);
 }
-function fileup(){
+function fileup(id){
   var file = document.getElementById("ftu").files[0];
-  url = "https://filestore.animation75.hasura-app.io/v1/file/12345678910abcde";
+  url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
   xhr = new XMLHttpRequest();
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","image/jpg");
@@ -3151,8 +3151,8 @@ function fileup(){
   }
   xhr.send(file);
 }
-function filedown(){
-  url = "https://filestore.animation75.hasura-app.io/v1/file/12345678910abcde";
+function filedown(id){
+  url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
   xhr = new XMLHttpRequest();
   xhr.open("GET",url,true);
   xhr.onreadystatechange = function(){
@@ -3165,8 +3165,8 @@ function filedown(){
   }
   xhr.send();
 }
-function filedel(){
-  url = "https://filestore.animation75.hasura-app.io/v1/file/12345678910abcde";
+function filedel(id){
+  url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
   xhr = new XMLHttpRequest();
   xhr.open("DELETE",url,true);
   xhr.withCredentials = "true";
