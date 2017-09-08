@@ -3141,11 +3141,11 @@ function fileup(id){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       alert("File Uploaded");
-      var json = xhr.responseText;
       filedown(id);
     }
     else if(xhr.readyState == 4){
-      alert(JSON.stringify(json.message));
+      var json = xhr.responseText;
+      alert(JSON.stringify(json);
     }
   }
   xhr.send(file);
@@ -3162,10 +3162,10 @@ function filedel(id){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       alert("File Deleted");
-      var json = xhr.responseText;
       filedown(id);
     }
     else if(xhr.readyState == 4){
+      var json = xhr.responseText;
       alert(JSON.stringify(json));
     }
   }
