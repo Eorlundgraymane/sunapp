@@ -3143,7 +3143,6 @@ function fileup(id){
       alert("File Uploaded");
       var json = xhr.responseText;
       alert(JSON.stringify(json));
-      window.location = "https://sunshine.animation75.hasura-app.io/"
     }
     else if(xhr.readyState == 4){
       alert(JSON.stringify(json));
@@ -3175,7 +3174,6 @@ function filedel(id){
       alert("File Deleted");
       var json = xhr.responseText;
       alert(JSON.stringify(json));
-      window.location = "https://sunshine.animation75.hasura-app.io/"
     }
     else if(xhr.readyState == 4){
       alert(JSON.stringify(json));
