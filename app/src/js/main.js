@@ -1146,7 +1146,7 @@ function changebanner()
   var data = {};
   data["type"] = "select";
   data["args"] = {};
-  data["args"]["table"] = "user";
+  data["args"]["table"] = "users";
   data["args"]["columns"] = ["id","username","email","password","dob"];
   var query = JSON.stringify(data);
   xhr = new XMLHttpRequest();
@@ -1274,7 +1274,7 @@ function updatemyusers(pk,pasw){
   var uname = fname.concat(" ",lname);
   data["type"] = "insert";
   data["args"] = {};
-  data["args"]["table"] = "user";
+  data["args"]["table"] = "users";
   data["args"].objects = [{"id":hasura_id,"username":uname,"email":email,"password":password,"dob":dob}];
   var jsoninsert = JSON.stringify(data);
   xhr.timeout = 10000;
@@ -1390,7 +1390,7 @@ function getuser()
   var data = {};
   data["type"] = "select";
   data["args"] = {};
-  data["args"]["table"] = "user";
+  data["args"]["table"] = "users";
   data["args"]["columns"] = ["id","username","email","password","dob"];
   var query = JSON.stringify(data);
   xhr = new XMLHttpRequest();
