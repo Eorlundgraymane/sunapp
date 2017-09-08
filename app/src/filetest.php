@@ -11,5 +11,7 @@
     Download
     <button onclick = "window.location = 'url = \'https://filestore.animation75.hasura-app.io/v1/file/12345678910abcde\'" type="button" value="Upload Image">Download Image</button>
 
+    Delete
+    <button onclick = "filedel()" type="button" value="Delete Image">Delete Image</button>
 </body>
 </html>

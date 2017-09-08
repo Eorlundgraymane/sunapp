@@ -3165,3 +3165,21 @@ function filedown(){
   }
   xhr.send();
 }
+function fildel(){
+  url = "https://filestore.animation75.hasura-app.io/v1/file/12345678910abcde";
+  xhr = new XMLHttpRequest();
+  xhr.open("DELETE",url,true);
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      alert("File Deleted");
+      var json = xhr.responseText;
+      alert(JSON.stringify(json));
+      window.location = "https://sunshine.animation75.hasura-app.io/"
+    }
+    else if(xhr.readyState == 4){
+      alert(JSON.stringify(json));
+    }
+  }
+  xhr.send();
+}
