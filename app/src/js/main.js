@@ -3152,7 +3152,7 @@ function fileup(id){
 }
 function filedown(id){
   url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
-  window.open(url,"Download");
+  document.getElementById("img").src = url;
 }
 function filedel(id){
   url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;

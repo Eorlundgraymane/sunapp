@@ -9,7 +9,7 @@
     <button onclick = "fileup(getCookie('hasura_id'))" type="button" value="Upload Image">Upload Image</button>
 
     Download
-    <button onclick = "filedown(getCookie('hasura_id'))" type="button" value="Upload Image">Upload Image</button>
+    <img id = "img" alt = "No Image Uploaded">
 
     Delete
     <button onclick = "filedel(getCookie('hasura_id'))" type="button" value="Delete Image">Delete Image</button>
