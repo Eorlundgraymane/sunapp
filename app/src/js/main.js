@@ -3151,19 +3151,8 @@ function fileup(id){
   xhr.send(file);
 }
 function filedown(id){
-  url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
-  xhr = new XMLHttpRequest();
-  xhr.open("GET",url,true);
-  xhr.responseType = "image/jpg";
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState ==4 && xhr.readyState ==200){
-      alert("file will be downloaded");
-    }
-    else if(xhr.readyState == 4){
-      alert(JSON.stringify(xhr.responseText));
-    }
-  }
-  xhr.send();
+    url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
+    window.location = url;
 }
 function filedel(id){
   url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
