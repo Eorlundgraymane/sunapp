@@ -3143,6 +3143,7 @@ function fileup(id){
       alert("File Uploaded");
       var json = xhr.responseText;
       alert(JSON.stringify(json));
+      filedown(id);
     }
     else if(xhr.readyState == 4){
       alert(JSON.stringify(json));
@@ -3164,6 +3165,7 @@ function filedel(id){
       alert("File Deleted");
       var json = xhr.responseText;
       alert(JSON.stringify(json));
+      filedown(id);
     }
     else if(xhr.readyState == 4){
       alert(JSON.stringify(json));
