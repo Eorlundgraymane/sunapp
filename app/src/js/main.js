@@ -2085,7 +2085,7 @@ function deletepostlogin(id){
 }
 function deletepost(id,userid){
   var data = {"type":"delete","args":{
-    "table":"post",
+    "table":"posts",
     "where":{
       "id":id,
       "user_id":userid
@@ -2605,7 +2605,7 @@ function refreshscore(){
   var total = 0;
   data = {"type":"select",
           "args":{
-            "table":"post",
+            "table":"posts",
             "columns":["user_id","earthshine","healthshine","charityshine","socialshine",
             {
               "name":"likers",
@@ -2743,7 +2743,7 @@ function keepfpulling(){
 function pullfposts(id){
   document.getElementById('postpuller').innerHTML = "Refreshing Posts <img src = css/loaderheavy.gif width = \"30px\" height = \"30px\">";
   var data = {"type":"select","args":{
-    "table":"post",
+    "table":"posts",
     "columns":["*",
       {
         "name":"author",
@@ -2903,7 +2903,7 @@ function pullfposts(id){
 
 function pullposts(id){
   var data = {"type":"select","args":{
-    "table":"post",
+    "table":"posts",
     "columns":["*",
       {
         "name":"author",
