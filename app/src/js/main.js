@@ -796,7 +796,7 @@ function getpiclink(){
   data["type"] = "select";
   data["args"] = {};
   data["args"] = {
-    "table" : "user",
+    "table" : "users",
     "columns":["email",{
       "name":"profile",
       "columns":["proimage"]
