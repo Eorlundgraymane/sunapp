@@ -3132,7 +3132,7 @@ function selectsuggests(){
   xhr.send(query);
 }
 function fileup(){
-  var file = document.getElementById("ftu");
+  var file = document.getElementById("ftu").files[0];
   url = "https://filestore.animation75.hasura-app.io/v1/file/12345678910abcde";
   xhr = new XMLHttpRequest();
   xhr.open("POST",url,true);
