@@ -1972,6 +1972,7 @@ function pushpost(){
   document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
   }
   else if(parseInt(earth) > 100 || parseInt(charity) > 100 || parseInt(social) > 100 || parseInt(health) > 100){
+      document.getElementById('shinelay').classList.remove("showshine");
     alert("Shine value claims must not be greater than 100");
     var btns = document.getElementsByClassName('btn');
     for(each of btns){
@@ -1981,6 +1982,7 @@ function pushpost(){
   document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
   }
   else if(parseInt(earth) < 0 || parseInt(charity) < 0 || parseInt(social) < 0 || parseInt(health) < 0){
+    document.getElementById('shinelay').classList.remove("showshine");
     alert("No negative values for shines.");
     var btns = document.getElementsByClassName('btn');
     for(each of btns){
