@@ -632,7 +632,7 @@ function getfriendsfriendlist(){
 
 function getfriendslist(){
   if(friendlistflag == 0 && droppeddown == 0){
-    var data = { "type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname","proimage", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": hasura_id } } ] } ] } ] } ] } };
+    var data = { "type": "select", "args": { "table": "users", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname","proimage", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": hasura_id } } ] } ] } ] } ] } };
     query = JSON.stringify(data);
     var xhr = new XMLHttpRequest();
     var url = "https://data.animation75.hasura-app.io/v1/query";
