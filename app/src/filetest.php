@@ -15,7 +15,7 @@
 
     <button onclick = "filedel(getCookie('hasura_id'))" type="button" value="Delete Image">Delete Image</button><br><br>
     <script>
-    filedown();
+    filedown(getCookie("hasura_id"));
     </script>
 </body>
 </html>
