@@ -136,7 +136,7 @@ function loadleaderboards(){
   var query = JSON.stringify(data);
   var proimage;
   xhr = new XMLHttpRequest();
-  var url  = "https://data.unwound15.hasura-app.io/v1/query";
+  var url  = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -224,7 +224,7 @@ function appfriendslogin(){
     {
       document.getElementById('friendslistbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
       xhr = new XMLHttpRequest();
-      var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
+      var url  = "https://auth.animation75.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
       xhr.setRequestHeader("Content-type","application/json");
       xhr.withCredentials = "true";
@@ -285,7 +285,7 @@ function appfriendsfriendlogin(){
     {
       document.getElementById('friendslistbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
       xhr = new XMLHttpRequest();
-      var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
+      var url  = "https://auth.animation75.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
       xhr.setRequestHeader("Content-type","application/json");
       xhr.withCredentials = "true";
@@ -345,7 +345,7 @@ function addlogin(id,name){
     i.style.cursor = "not-allowed";
   }
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
+  var url  = "https://auth.animation75.hasura-app.io/user/account/info";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -397,7 +397,7 @@ function gethasurapushpost(){
     each.style.cursor = "not-allowed";
   }
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
+  var url  = "https://auth.animation75.hasura-app.io/user/account/info";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -443,7 +443,7 @@ function gethasurapullpost(){
     each.style.cursor = "not-allowed";
   }
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
+  var url  = "https://auth.animation75.hasura-app.io/user/account/info";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -483,7 +483,7 @@ function applogin(){
     {
       document.getElementById('friendssuggestbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
       xhr = new XMLHttpRequest();
-      var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
+      var url  = "https://auth.animation75.hasura-app.io/user/account/info";
       xhr.open("POST",url,true);
       xhr.setRequestHeader("Content-type","application/json");
       xhr.withCredentials = "true";
@@ -539,7 +539,7 @@ function applogin(){
 function gotofriend(fid,friendname){
   setCookie("friendid",fid,1);
   setCookie("friendname",friendname,1);
-  window.location = "https://sunshine.unwound15.hasura-app.io/friendprofile.php";
+  window.location = "https://sunshine.animation75.hasura-app.io/friendprofile.php";
 }
 
 
@@ -570,7 +570,7 @@ function getfriendsfriendlist(){
                 } };
     query = JSON.stringify(data);
     var xhr = new XMLHttpRequest();
-    var url = "https://data.unwound15.hasura-app.io/v1/query";
+    var url = "https://data.animation75.hasura-app.io/v1/query";
     xhr.open("POST",url,true);
     xhr.setRequestHeader("Content-type","application/json");
     xhr.withCredentials = "true";
@@ -635,7 +635,7 @@ function getfriendslist(){
     var data = { "type": "select", "args": { "table": "user", "columns": [ { "name": "profile", "columns": [ "fname", { "name": "mefriend", "columns": [ "friend_id", { "name": "friend_profile", "columns": [ "fname","proimage", { "name": "mefriend", "columns": [ "friend_id" ],"where": { "friend_id": hasura_id } } ] } ] } ] } ] } };
     query = JSON.stringify(data);
     var xhr = new XMLHttpRequest();
-    var url = "https://data.unwound15.hasura-app.io/v1/query";
+    var url = "https://data.animation75.hasura-app.io/v1/query";
     xhr.open("POST",url,true);
     xhr.setRequestHeader("Content-type","application/json");
     xhr.withCredentials = "true";
@@ -698,7 +698,7 @@ function getfriendslist(){
 }
 function addpiclink(link){
   var xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   var data = {};
   data["type"] = "update";
   data["args"] = {};
@@ -749,7 +749,7 @@ function getfpiclink(id){
 };
   var query = JSON.stringify(data);
   xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -804,7 +804,7 @@ function getpiclink(){
   };
   var query = JSON.stringify(data);
   xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -960,7 +960,7 @@ function checklogout(pk)
   document.getElementById('loginbutton').style.disabled = true;
   document.getElementById('loginbutton').style.cursor = "not-allowed";
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.unwound15.hasura-app.io/user/logout";
+  var url  = "https://auth.animation75.hasura-app.io/user/logout";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -1067,7 +1067,7 @@ function userlogout(pk){
   clearCookies();
   document.getElementById('logoutbutton').innerHTML = "<img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.unwound15.hasura-app.io/user/logout";
+  var url  = "https://auth.animation75.hasura-app.io/user/logout";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -1076,12 +1076,12 @@ function userlogout(pk){
       var json = JSON.parse(xhr.responseText);
       hasura_id = json.hasura_id;
       auth_token = "Bearer "+json.auth_token;
-      window.location = "https://sunshine.unwound15.hasura-app.io/";
+      window.location = "https://sunshine.animation75.hasura-app.io/";
     }
     else if(xhr.readyState == 4) {
       alert("Something went wrong during Logout please try again");
       document.getElementById('logoutbutton').innerHTML = "Log Out";
-      window.location = "https://sunshine.unwound15.hasura-app.io/";
+      window.location = "https://sunshine.animation75.hasura-app.io/";
     }
   }
   var data = {};
@@ -1100,7 +1100,7 @@ function userlogout(pk){
 }
 function updatemyusersprofile(pk){
   xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -1150,7 +1150,7 @@ function changebanner()
   data["args"]["columns"] = ["id","username","email","password","dob"];
   var query = JSON.stringify(data);
   xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -1171,7 +1171,7 @@ function changebanner()
     for(but of allbuts){
       but.style.cursor = "pointer";
       but.disabled = false;
-    }    
+    }
   }
   xhr.send(query);
 
@@ -1213,7 +1213,7 @@ function changefbanner()
   data["args"]["where"] = {"user_id" : parseInt(getCookie("friendid"))};
   var query = JSON.stringify(data);
   xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -1243,7 +1243,7 @@ function changefbanner()
 }
 function updatemyusers(pk,pasw){
   xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -1296,7 +1296,7 @@ function checklogin(pk,pasw)
   loginbutton.innerHTML = "Logging In";
   loginbutton.style.disabled = "true";
   loginbutton.style.cursor = "not-allowed";
-  var url  = "https://auth.unwound15.hasura-app.io/login";
+  var url  = "https://auth.animation75.hasura-app.io/login";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -1338,7 +1338,7 @@ function jslogin(){
   loginbutton.innerHTML = "Logging In";
   loginbutton.style.disabled = "true";
   loginbutton.style.curson = "not-allowed";
-  var url  = "https://auth.unwound15.hasura-app.io/login";
+  var url  = "https://auth.animation75.hasura-app.io/login";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -1375,15 +1375,15 @@ function jslogin(){
   xhr.send(jsondata);
 }
 function gohome(){
-  window.location = "https://sunshine.unwound15.hasura-app.io/";
+  window.location = "https://sunshine.animation75.hasura-app.io/";
 }
 function gopro(){
   deleteCookie("friendid");
   deleteCookie("friendname");
-  window.location = "https://sunshine.unwound15.hasura-app.io/home.php";
+  window.location = "https://sunshine.animation75.hasura-app.io/home.php";
 }
 function goleads(){
-  window.location = 'https://sunshine.unwound15.hasura-app.io/leaderboard.php';
+  window.location = 'https://sunshine.animation75.hasura-app.io/leaderboard.php';
 }
 function getuser()
 {
@@ -1394,7 +1394,7 @@ function getuser()
   data["args"]["columns"] = ["id","username","email","password","dob"];
   var query = JSON.stringify(data);
   xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -1471,7 +1471,7 @@ function clearCookies(){
   loginbutton.innerHTML = "Logging In <img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   loginbutton.style.disabled = true;
   loginbutton.style.cursor = "not-allowed";
-  var url  = "https://auth.unwound15.hasura-app.io/login";
+  var url  = "https://auth.animation75.hasura-app.io/login";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -1514,7 +1514,7 @@ function clearCookies(){
 }
 function addfriend(id,name){
   var xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   var data = {};
   data["type"] = "insert";
   data["args"] = {};
@@ -1620,7 +1620,7 @@ function otpverify(){
   otpcancelbutton.style.disabled = true;
   otpbutton.innerHTML = "Verifying <img width = '30px' height = '30px' src = 'css/loaderheavy.gif'>";
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.unwound15.hasura-app.io/mobile/confirm";
+  var url  = "https://auth.animation75.hasura-app.io/mobile/confirm";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.onreadystatechange = function(){
@@ -1759,7 +1759,7 @@ function otpresend() {
   resendotpbutton.style.disabled = true;
   otpcancelbutton.style.disabled = true;
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.unwound15.hasura-app.io/mobile/resend-otp";
+  var url  = "https://auth.animation75.hasura-app.io/mobile/resend-otp";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.onreadystatechange = function(){
@@ -1837,7 +1837,7 @@ function popalert() {
     var dob = year.concat("-",month,"-",day);
     var uname = fname.concat(" ",lname);
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.unwound15.hasura-app.io/signup";
+  var url  = "https://auth.animation75.hasura-app.io/signup";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -1996,7 +1996,7 @@ function pushpost(){
   data["args"].objects = [{"post":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":parseInt(earth),"charityshine":parseInt(charity),"socialshine":parseInt(social),"healthshine":parseInt(health)}];
   query = JSON.stringify(data);
   xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -2048,7 +2048,7 @@ function deletepostlogin(id){
     each.style.cursor = "not-allowed";
   }
   xhr = new XMLHttpRequest();
-  var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
+  var url  = "https://auth.animation75.hasura-app.io/user/account/info";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -2098,7 +2098,7 @@ var dlikes = {"type":"delete","args":{
 };
 var lquery = JSON.stringify(dlikes);
 var query = JSON.stringify(data);
-var url = "https://data.unwound15.hasura-app.io/v1/query";
+var url = "https://data.animation75.hasura-app.io/v1/query";
 xhr = new XMLHttpRequest();
 xhr.open("POST",url,true);
 xhr.setRequestHeader("Content-type","application/json");
@@ -2304,7 +2304,7 @@ function like(id,liker_id){
   data["args"].objects = [{"post_id":id,"liker_id":liker_id}];
   query = JSON.stringify(data);
   var xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -2342,7 +2342,7 @@ function flike(id,liker_id){
   data["args"].objects = [{"post_id":id,"liker_id":liker_id}];
   query = JSON.stringify(data);
   var xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -2382,7 +2382,7 @@ function funlike(id,liker_id){
   data["args"]["where"]["liker_id"] = liker_id;
   query = JSON.stringify(data);
   var xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -2422,7 +2422,7 @@ function unlike(id,liker_id){
   data["args"]["where"]["liker_id"] = liker_id;
   query = JSON.stringify(data);
   var xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
@@ -2454,7 +2454,7 @@ var loadflag = 0;
 function tablelogin(){
   if(loadflag == 0){
     xhr = new XMLHttpRequest();
-    var url  = "https://auth.unwound15.hasura-app.io/user/account/info";
+    var url  = "https://auth.animation75.hasura-app.io/user/account/info";
     xhr.open("POST",url,true);
     xhr.setRequestHeader("Content-type","application/json");
     xhr.withCredentials = "true";
@@ -2508,7 +2508,7 @@ function addscore(e,s,c,h,t){
     };
 var query = JSON.stringify(data);
 xhr = new XMLHttpRequest();
-var url  = "https://data.unwound15.hasura-app.io/v1/query";
+var url  = "https://data.animation75.hasura-app.io/v1/query";
 xhr.open("POST",url,true);
 xhr.setRequestHeader("Content-type","application/json");
 xhr.withCredentials = "true";
@@ -2539,7 +2539,7 @@ xhr.onreadystatechange = function(){
     };
     var addscorequery = JSON.stringify(addscoredata);
     txhr = new XMLHttpRequest();
-    var url  = "https://data.unwound15.hasura-app.io/v1/query";
+    var url  = "https://data.animation75.hasura-app.io/v1/query";
     txhr.open("POST",url,true);
     txhr.setRequestHeader("Content-type","application/json");
     txhr.withCredentials = "true";
@@ -2617,7 +2617,7 @@ function refreshscore(){
 };
 var query = JSON.stringify(data);
 xhr = new XMLHttpRequest();
-var url  = "https://data.unwound15.hasura-app.io/v1/query";
+var url  = "https://data.animation75.hasura-app.io/v1/query";
 xhr.open("POST",url,true);
 xhr.setRequestHeader("Content-type","application/json");
 xhr.withCredentials = "true";
@@ -2683,7 +2683,7 @@ function loadtable(id){
     data["args"]["where"] = {"user_id" : id};
     var query = JSON.stringify(data);
     xhr = new XMLHttpRequest();
-    var url  = "https://data.unwound15.hasura-app.io/v1/query";
+    var url  = "https://data.animation75.hasura-app.io/v1/query";
     xhr.open("POST",url,true);
     xhr.setRequestHeader("Content-type","application/json");
     xhr.withCredentials = "true";
@@ -2766,7 +2766,7 @@ function pullfposts(id){
 }
   };
   var query = JSON.stringify(data);
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr = new XMLHttpRequest();
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
@@ -2923,7 +2923,7 @@ function pullposts(id){
 }
   };
   var query = JSON.stringify(data);
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr = new XMLHttpRequest();
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
@@ -3064,7 +3064,7 @@ function selectsuggests(){
   var data = { "type": "select", "args": { "table": "profile", "columns": [ "fname","user_id","proimage", { "name": "youfriend", "columns": [ "friend_id"],"where": { "user_id": hasura_id } } ] } };
   var query = JSON.stringify(data);
   xhr = new XMLHttpRequest();
-  var url = "https://data.unwound15.hasura-app.io/v1/query";
+  var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","application/json");
   xhr.withCredentials = "true";
