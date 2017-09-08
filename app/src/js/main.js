@@ -3145,7 +3145,7 @@ function fileup(id){
       filedown(id);
     }
     else if(xhr.readyState == 4){
-      alert(JSON.stringify(json));
+      alert(JSON.stringify(json.message));
     }
   }
   xhr.send(file);
