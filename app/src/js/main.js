@@ -1494,6 +1494,7 @@ function clearCookies(){
       var json = JSON.parse(xhr.responseText);
       console.log(JSON.stringify(json));
       alert(JSON.stringify(json));
+      document.getElementById('shinelay').classList.remove("showshine");
     }
     console.log("userlog function over");
   }
