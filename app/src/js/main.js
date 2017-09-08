@@ -2783,7 +2783,7 @@ function pullfposts(id){
         if(postimg == null || postimg == ""){
           postimg = "/css/post.jpg";
         }
-        var post = each["post"];
+        var post = each["posttext"];
         var title = each["title"];
         var cshine = each["charityshine"];
         var eshine = each["earthshine"];
@@ -2941,7 +2941,7 @@ function pullposts(id){
         if(postimg == null || postimg == ""){
           postimg = "/css/post.jpg";
         }
-        var post = each["post"];
+        var post = each["posttext"];
         var title = each["title"];
         var postid = each["id"];
         var cshine = each["charityshine"];
