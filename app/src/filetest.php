@@ -3,8 +3,10 @@
 <head>
     <?php include 'headprereqs.php';?>
   </head>
-<body>
-
+<body class = "outer-container">
+  <?php
+    include 'header.php';
+  ?>
     <input type="file" name="fileToUpload" id="ftu">
     <button onclick = "fileup(getCookie('hasura_id'))" type="button" value="Upload Image">Upload Image</button>
 
