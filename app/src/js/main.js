@@ -3136,7 +3136,7 @@ function fileup(){
   url = "https://filestore.animation75.hasura-app.io/v1/file/12345678910abcde";
   xhr = new XMLHttpRequest();
   xhr.open("POST",url,true);
-  xhr.setRequestHeader("Content-type","image/jpeg");
+  xhr.setRequestHeader("Content-type","image/jpg");
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
