@@ -1994,7 +1994,7 @@ function pushpost(){
   data["type"] = "insert";
   data["args"] = {};
   data["args"]["table"] = "posts";
-  data["args"].objects = [{"post":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":parseInt(earth),"charityshine":parseInt(charity),"socialshine":parseInt(social),"healthshine":parseInt(health)}];
+  data["args"].objects = [{"posttext":posttext,"postimg":postimg,"title":title,"user_id":hasura_id,"earthshine":parseInt(earth),"charityshine":parseInt(charity),"socialshine":parseInt(social),"healthshine":parseInt(health)}];
   query = JSON.stringify(data);
   xhr = new XMLHttpRequest();
   var url = "https://data.animation75.hasura-app.io/v1/query";
