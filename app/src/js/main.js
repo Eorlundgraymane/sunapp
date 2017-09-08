@@ -3165,7 +3165,7 @@ function filedown(){
   }
   xhr.send();
 }
-function fildel(){
+function filedel(){
   url = "https://filestore.animation75.hasura-app.io/v1/file/12345678910abcde";
   xhr = new XMLHttpRequest();
   xhr.open("DELETE",url,true);
