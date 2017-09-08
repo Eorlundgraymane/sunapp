@@ -3133,7 +3133,7 @@ function selectsuggests(){
 }
 function fileup(){
   var file = document.getElementById("ftu");
-  url = "https://sunshine.animation75.hasura-app.io/v1/file/12345678910abcde";
+  url = "https://filestore.animation75.hasura-app.io/v1/file/12345678910abcde";
   xhr = new XMLHttpRequest();
   xhr.open("POST",url,true);
   xhr.setRequestHeader("Content-type","image/jpeg");
