@@ -7,6 +7,9 @@
   <?php
     include 'header.php';
   ?>
+    <script>
+    filedown();
+    </script>
     <input type="file" name="fileToUpload" id="ftu">
     <button onclick = "fileup(getCookie('hasura_id'))" type="button" value="Upload Image">Upload Image</button><br><br>
 
