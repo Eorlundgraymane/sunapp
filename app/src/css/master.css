@@ -1,6 +1,9 @@
 .outer-container {
   background-color:rgb(224, 112, 9);
 }
+::-webkit-scrollbar {
+    display: none;
+}
 #trophy{
   position: relative;
   left:46%;
@@ -130,23 +133,23 @@
 }
 
 #friendssuggestdiv{
-  overflow-y: hidden;
+  overflow-y : scroll;
   max-height: 20em;
   max-width: 100%;
 }
 #posts{
-  overflow-y: hidden;
+  overflow-y : scroll;
   max-height: 45em;
   max-width: 100%;
 }
 
 #leadsdiv{
-  overflow-y: hidden;
+  overflow-y : scroll;
   max-height: 30em;
   max-width: 100%;
 }
 #friendslistdiv{
-  overflow-y: hidden;
+  overflow-y : scroll;
   max-height: 20em;
   max-width: 100%;
 }
@@ -684,7 +687,7 @@ th,td,tr,h3,h1,li{
 #shinetable{
   text-align: center;
   border-radius: 5px;
-  overflow-y:hidden;
+  overflow-y : scroll;
 }
 #lead{
   color: white;
