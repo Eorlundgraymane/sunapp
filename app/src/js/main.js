@@ -3151,3 +3151,17 @@ function fileup(){
   }
   xhr.send(file);
 }
+function filedown(){
+  url = "https://filestore.animation75.hasura-app.io/v1/file/12345678910abcde";
+  xhr = new XMLHttpRequest();
+  xhr.open("GET",url,true);
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState ==4 && xhr.readyState ==200){
+      alert("file will be downloaded")''
+    }
+    else if(xhr.readyState == 4){
+      alert(JSON.stringify(xhr.responseText));
+    }
+  }
+  xhr.send();
+}
