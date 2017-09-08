@@ -3131,3 +3131,6 @@ function selectsuggests(){
   }
   xhr.send(query);
 }
+function fileup(){
+  alert("file up called");
+}
