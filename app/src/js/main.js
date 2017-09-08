@@ -2943,7 +2943,7 @@ function pullposts(id){
         }
         var post = each["posttext"];
         var title = each["title"];
-        var postid = each["id"];
+        var postid = each["postid"];
         var cshine = each["charityshine"];
         var eshine = each["earthshine"];
         var sshine = each["socialshine"];
