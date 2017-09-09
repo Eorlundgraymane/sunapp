@@ -2089,7 +2089,7 @@ function deletepost(id,userid){
   var data = {"type":"delete","args":{
     "table":"posts",
     "where":{
-      "id":id,
+      "post_id":id,
       "user_id":userid
   }}
 };
@@ -2904,6 +2904,7 @@ function pullfposts(id){
 
 
 function pullposts(id){
+  console.log("pulling posts. hasura id is "+hasura_id+" called id is "+id);
   var data = {"type":"select","args":{
     "table":"posts",
     "columns":["*",
