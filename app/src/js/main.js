@@ -806,6 +806,7 @@ function getpiclink(){
       "columns":["proimage"],
       "where":{
         "user_id":hid
+      }
     }]
   };
   var query = JSON.stringify(data);
