@@ -781,6 +781,10 @@ function getfpiclink(id){
   console.log('hasura call sent' );
 }
 function getpiclink(){
+  var hid ;
+  if(checkCookie("hasura_id") == 1){
+    hid = getCookie("hasura_id");
+  }
   if(checkCookie("sunrise") == 0){
     document.getElementById('shinelay').classList.add("showshine");
     setTimeout(function(){},5000);
@@ -799,7 +803,9 @@ function getpiclink(){
     "table" : "users",
     "columns":["email",{
       "name":"profile",
-      "columns":["proimage"]
+      "columns":["proimage"],
+      "where":{
+        "user_id":hid,
     }]
   };
   var query = JSON.stringify(data);
