@@ -44,7 +44,7 @@
                  <h3 title = "Share a photo of your dedication to being more human and get likes!!!" id = "uploadpane">Upload New Post</h3>
                    <form id  = "postform" method = "POST" action = "#">
                      <div id = "uploadform" class = "form-group">
-                      <button onclick = "addimg();" type = "button" class = "btn" title = "Add Image to your Post"><img src = "/css/imgpost.jpg"></button><button onclick = "addvid();" type = "button" class = "btn" title = "Add Video to your Post"><img src = "/css/vidpost.jpg"></button>                       
+                      <button onclick = "addimg();" type = "button" class = "btn" title = "Add Image to your Post"><img width = "30px" height = "30px" src = "/css/imgpost.jpg"></button><button onclick = "addvid();" type = "button" class = "btn" title = "Add Video to your Post"><img width = "30px" height = "30px" src = "/css/vidpost.jpg"></button>                       
                      </div><br>
                        <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
                        <input  type = "text" id = "newpostimg" placeholder = "Image URL"><br>
