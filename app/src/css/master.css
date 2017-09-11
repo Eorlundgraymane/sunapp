@@ -140,6 +140,7 @@
 #posts{
   overflow-y : scroll;
   max-height: 45em;
+  padding-left: 3%;
   max-width: 100%;
 }
 
