@@ -44,11 +44,11 @@
                  <h3 title = "Share a photo of your dedication to being more human and get likes!!!" id = "uploadpane">Upload New Post</h3>
                    <form id  = "postform" method = "POST" action = "#">
                      <div id = "uploadform" class = "form-group">
-                       <label class = "radio-inline">
-                         <input type = "radio" id = "imgradio"><button onclick = "addimg();" type = "button" class = "btn" title = "Add Image to your Post"><img src = "/css/imgpost.jpg"></button></input>
+                       <label class="radio-inline">
+                         <input type="radio" name="optradio">Option 1
                        </label>
-                       <label class = "radio-inline">
-                         <input type = "radio" id = "vidradio"><button onclick = "addvid();" type = "button" class = "btn" title = "Add Video to your Post"><img src = "/css/vidpost.jpg"></button></input>
+                       <label class="radio-inline">
+                         <input type="radio" name="optradio">Option 2
                        </label>
                        <br>
                        <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
