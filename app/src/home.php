@@ -49,6 +49,7 @@
                       <div id = "imageuploader" class = "hidden">
                         <label for = "imgup">Add Image</label>
                        <input type = "file" id = "imgup" style = "visibility: hidden;">
+                       <input  type = "text" id = "newpostimg" hidden placeholder = "Image URL">
                        <img width = "200px" height = "150px" id = "imgloader">
                      </div>
                      <div id = "videouploader" class = "hidden">
@@ -57,7 +58,6 @@
                       <vid id = "vidloader">
                     </div>
                        <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
-                       <input  type = "text" id = "newpostimg" hidden placeholder = "Image URL"><br>
                        <textarea rows = "5" maxlength = "200" id = "newposttext" placeholder="Post here..."></textarea><br>
                        <div id = "allsmileys"></div>
                        <script>getallsmileys();</script>
