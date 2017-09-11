@@ -2190,9 +2190,21 @@ function deleteimg(id){
     }
   }};
   xhr = new XMLHttpRequest();
-
+  url = "https://data.animation75.hasura-app.io/v1/query";
+  xhr.withCredentials = "true";
+  xhr.open("POST",url,true);
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      filedelete(JSON.stringify((xhr.responseText).postimg));
+    }
+    else if(xhr.readyState == 4){
+      alert("Couldnt delete file, deleting post anyway");
+    }
+  }
+  xhr.send(data);
 }
 function deletepost(id,userid){
+  deleteimg(id);
   var data = {"type":"delete","args":{
     "table":"posts",
     "where":{
@@ -2200,7 +2212,6 @@ function deletepost(id,userid){
       "user_id":userid
   }}
 };
-filedelete(id);
 var dlikes = {"type":"delete","args":{
   "table":"likes",
   "where":{
