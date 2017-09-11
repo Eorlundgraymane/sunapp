@@ -57,7 +57,7 @@
                       <vid id = "vidloader">
                     </div>
                        <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
-                       <input  type = "text" id = "newpostimg" placeholder = "Image URL"><br>
+                       <input  type = "text" id = "newpostimg" hidden placeholder = "Image URL"><br>
                        <textarea rows = "5" maxlength = "200" id = "newposttext" placeholder="Post here..."></textarea><br>
                        <div id = "allsmileys"></div>
                        <script>getallsmileys();</script>

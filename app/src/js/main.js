@@ -639,6 +639,7 @@ function imgup(id){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       alert("File Uploaded");
+      document.getElementById("imgpostid").value = id;
       imgdown(id);
     }
     else if(xhr.readyState == 4){
@@ -650,6 +651,8 @@ function imgup(id){
 function imgdown(id){
   url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
   document.getElementById("imgloader").src = url;
+  document.getElementById("newpostimg").value = url;
+
 }
 function vidup(id){
   var file = document.getElementById("vidup").files[0];
@@ -674,7 +677,7 @@ function addimg(){
   document.getElementById("videouploader").classList.add("hidden");
   var imgupwait = document.getElementById("imgup");
   imgupwait.onchange = function(){
-    imgupwait.onchange = imgup(hasura_id+"_"+hasura_id*Date.now());
+    imgupwait.onchange = imgup("img_"+hasura_id+"_"+hasura_id*Date.now());
   };
 }
 function addvid(){
