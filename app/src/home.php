@@ -47,7 +47,7 @@
                       <button onclick = "addimg();" type = "button" class = "btn" title = "Add Image to your Post"><img width = "30px" height = "30px" src = "/css/imgpost.jpg"></button><button onclick = "addvid();" type = "button" class = "btn" title = "Add Video to your Post"><img width = "30px" height = "30px" src = "/css/vidpost.jpg"></button>
                      </div><br>
                       <div id = "imageuploader" class = "hidden">
-                        <label onclick = "waitforimg();" for = "imgup">Add Image</label>
+                        <label for = "imgup">Add Image</label>
                        <input type = "file" id = "imgup" style = "visibility: hidden;">
                        <img width = "200px" height = "150px" id = "imgloader">
                      </div>
