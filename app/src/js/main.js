@@ -1486,7 +1486,7 @@ function clearCookies(){
             getpiclink();
         }
         else if (xhr.readyState == 4){
-          console.log(JSON.stringify((xhr.responseText).message));
+          console.log(JSON.stringify(xhr.responseText));
           alert("Couldn't log back in , clearing your cookies and loggin you out.");
           clearCookies();
           window.location = "https://sunshine.animation75.hasura-app.io/";
