@@ -865,7 +865,7 @@ function getpiclink(){
           document.getElementById('profileimage').classList.add('profileimageappeared');
         }
     else if(xhr.readyState ==4) {
-      var json = xhr.responseText();
+      var json = xhr.responseText;
       alert(JSON.stringify(json));
     }
     }
