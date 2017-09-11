@@ -1488,7 +1488,7 @@ function clearCookies(){
         else if (xhr.readyState == 4){
           alert("Couldn't log back in , clearing your cookies and loggin you out.");
           clearCookies();
-          window.location == "https://sunshine.animation75.hasura-app.io/";
+          window.location = "https://sunshine.animation75.hasura-app.io/";
         }
       }
       var data = {};
