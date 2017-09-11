@@ -638,8 +638,7 @@ function imgup(id){
   xhr.withCredentials = "true";
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
-      alert("File Uploaded");
-      document.getElementById("imgpostid").value = id;
+      alert("File Uploaded");      
       imgdown(id);
     }
     else if(xhr.readyState == 4){
