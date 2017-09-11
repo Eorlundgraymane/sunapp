@@ -678,7 +678,7 @@ document.getElementById("imgup").onchange = imgup(imgid);
 function addvid(){
   document.getElementById("videouploader").classList.remove("hidden");
   document.getElementById("imageuploader").classList.add("hidden");
-  var vidid = hasura_id"_"+hasura_id*Date.now();
+  var vidid = hasura_id+"_"+hasura_id*Date.now();
   vidup(vidid);
 }
 function getfriendslist(){
