@@ -673,9 +673,8 @@ function addimg(){
   document.getElementById("imageuploader").classList.remove("hidden");
   document.getElementById("videouploader").classList.add("hidden");
   var imgid = hasura_id+"_"+hasura_id*Date.now();
-  document.getElementById("imgup").onchange = imgup(imgid);
 }
-
+document.getElementById("imgup").onchange = imgup(imgid);
 function addvid(){
   document.getElementById("videouploader").classList.remove("hidden");
   document.getElementById("imageuploader").classList.add("hidden");
