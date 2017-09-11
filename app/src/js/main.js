@@ -1481,7 +1481,7 @@ function clearCookies(){
         if(xhr.readyState == 4 && xhr.status == 200){
             alert("Welcome back your session was restored as you did'nt log out last time");
         }
-        else(if xhr.readyState == 4){
+        else if (xhr.readyState == 4){
           alert("Couldn't log back in , clearing your cookies and loggin you out.");
           clearCookies();
           window.location == "https://sunshine.animation75.hasura-app.io/";
