@@ -867,9 +867,9 @@ function getpiclink(){
     else if(xhr.readyState ==4) {
       sessionrelogin();
       var json = xhr.responseText;
-      console.log(JSON.stringify("json");
+      console.log(JSON.stringify("json"));
       console.log("Relogging in ");
-      getpiclink();      
+      getpiclink();
     }
     }
     xhr.timeout = 10000;
