@@ -48,7 +48,7 @@
                      </div><br>
                       <div id = "imageuploader" class = "hidden">
                         <label for = "imgup">Add Image</label>
-                       <input onchange = "imgup(imgid);" type = "file" id = "imgup" style = "visibility: hidden;">
+                       <input type = "file" id = "imgup" style = "visibility: hidden;">
                        <img width = "200px" height = "150px" id = "imgloader">
                      </div>
                      <div id = "videouploader" class = "hidden">
@@ -76,5 +76,8 @@
          <row>
          <?php include 'footer.php';?>
          </row>
+         <script>
+         document.getElementById('imgup').change = imgup(imgid);
+         </script>
          </body>
          </html>

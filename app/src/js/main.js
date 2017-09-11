@@ -652,7 +652,7 @@ function imgdown(id){
   document.getElementById("imgloader").src = url;
 }
 function vidup(id){
-  var file = document.getElementById("ftu").files[0];
+  var file = document.getElementById("vidup").files[0];
   url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
   xhr = new XMLHttpRequest();
   xhr.open("POST",url,true);
