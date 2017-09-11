@@ -140,7 +140,6 @@
 #posts{
   overflow-y : scroll;
   max-height: 45em;
-  padding-left: 3%;
   max-width: 100%;
 }
 
@@ -551,6 +550,7 @@
   font-weight: bolder;
 }
 #post{
+  padding-left: 3%;
   border: 1px solid black;
   font-weight: bolder;
   position: relative;
