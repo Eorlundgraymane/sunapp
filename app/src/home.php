@@ -48,11 +48,11 @@
                      </div><br>
                       <div id = "imageuploader" class = "hidden">
                         <label for = "imgup">Add Image</label>
-                       <input type = "file" id = "imgup" style = "visibility: hidden">
+                       <input type = "file" id = "imgup" style = "visibility: hidden;">
                      </div>
                      <div id = "videouploader" class = "hidden">
                        <label for = "vidup">Add Video Clip</label>
-                      <input type = "file" id = "vidup" style = "visibility: hidden">
+                      <input type = "file" id = "vidup" style = "visibility: hidden;">
                     </div>
                        <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
                        <input  type = "text" id = "newpostimg" placeholder = "Image URL"><br>
