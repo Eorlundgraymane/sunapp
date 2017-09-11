@@ -2964,7 +2964,7 @@ function pullposts(id){
       "order_by":"-created"
 }
   };
-  var commentbutstring = "<div><button type = 'button' class = 'btn' id = 'commentbutton' onclick = 'waitmessage();'><img src = '/css/comment.jpg' width = '30px' height = '30px'></button><div>";
+  var commentbutstring = "<div><button title = 'Comments Coming Soon!!!' type = 'button' class = 'btn' id = 'commentbutton' onclick = 'waitmessage();'><img src = '/css/comment.jpg' width = '30px' height = '30px'></button><div>";
   var query = JSON.stringify(data);
   var url = "https://data.animation75.hasura-app.io/v1/query";
   xhr = new XMLHttpRequest();
