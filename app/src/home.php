@@ -66,9 +66,9 @@
                        <input onfocus="showhealthhint();" onblur = "hidehealthhint();" title = "Claim your Healthshine points to go up in the leaderboards" class = "shineinput" type = "number" min = "0" max = "100" id = "health" placeholder = "Health Shine 0-100"><div id = "hinthealth">how much you took care of your body</div><br>
                        <input onfocus="showsocialhint();" onblur = "hidesocialhint();" title = "Claim your Socialshine points to go up in the leaderboards" class = "shineinput" type = "number" min = "0" max = "100" id = "social" placeholder = "Social Shine 0-100"><div id = "hintsocial">how much you fun you had with your family</div><br>
                        <button title = "Post" class = "btn" type = "button" id = "postbutton" onclick = "gethasurapushpost();"><img src = "css/post.png" width = "50px" height = "50px" id = "postbuttonimage"></button>
-                     </div>
-                   </form>
-                   <div id = "siteslogan"><font color = "white" style = "text-decoration:underlined;font-weight:bolder;">Sunshine is a website which gives you the motivation to be more human...<br>make friends...help the needy...plant a tree or feed some birds daily...<br>go to the gym...spend some time with your family...<br>Post and share your activities...claim shine points on your posts...get Likes...shine brighter on the leaderboard</font></div>
+                       </form>
+                     <div id = "siteslogan"><font color = "white" style = "text-decoration:underlined;font-weight:bolder;">Sunshine is a website which gives you the motivation to be more human...<br>make friends...help the needy...plant a tree or feed some birds daily...<br>go to the gym...spend some time with your family...<br>Post and share your activities...claim shine points on your posts...get Likes...shine brighter on the leaderboard</font></div>
+                   </div>                   
                </div>
              </row>
            </div>
