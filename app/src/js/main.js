@@ -869,7 +869,6 @@ function getpiclink(){
       var json = xhr.responseText;
       console.log(JSON.stringify("json"));
       console.log("Relogging in ");
-      getpiclink();
     }
     }
     xhr.timeout = 10000;
@@ -1484,6 +1483,7 @@ function clearCookies(){
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
             alert("Welcome back your session was restored as you did'nt log out last time");
+            getpiclink();
         }
         else if (xhr.readyState == 4){
           alert("Couldn't log back in , clearing your cookies and loggin you out.");
