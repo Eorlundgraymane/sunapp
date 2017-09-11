@@ -630,7 +630,7 @@ function getfriendsfriendlist(){
   }
 }
 function imgup(id){
-  var file = document.getElementById("ftu").files[0];
+  var file = document.getElementById("imgup").files[0];
   url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
   xhr = new XMLHttpRequest();
   xhr.open("POST",url,true);
