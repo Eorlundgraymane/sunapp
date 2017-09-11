@@ -669,10 +669,11 @@ function vidup(id){
   }
   xhr.send(file);
 }
+var imgid;
 function addimg(){
   document.getElementById("imageuploader").classList.remove("hidden");
   document.getElementById("videouploader").classList.add("hidden");
-  var imgid = hasura_id+"_"+hasura_id*Date.now();
+  imgid = hasura_id+"_"+hasura_id*Date.now();
 }
 document.getElementById("imgup").onchange = imgup(imgid);
 function addvid(){
