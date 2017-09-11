@@ -865,10 +865,10 @@ function getpiclink(){
           document.getElementById('profileimage').classList.add('profileimageappeared');
         }
     else if(xhr.readyState ==4) {
-      sessionrelogin();
       var json = xhr.responseText;
       console.log(JSON.stringify("json"));
       console.log("Relogging in ");
+      sessionrelogin();
     }
     }
     xhr.timeout = 10000;
@@ -1473,7 +1473,7 @@ function clearCookies(){
     for(cookie of cookies){
       deleteCookie(cookie.split('=')[0]);
     }
-}/*
+}
   function sessionrelogin(){
     if(checkCookie("primarykey") == 1 && checkCookie("password") == 1){
       var url = "https://auth.animation75.hasura-app.io/login";
@@ -1497,7 +1497,7 @@ function clearCookies(){
       data["password"] = SHA256(getCookie("password"));
       xhr.send();
     }
-  }*/
+}
   function userlogin(){
   setTimeout(function(){},5000);
   document.getElementById('shinelay').classList.add("showshine");
