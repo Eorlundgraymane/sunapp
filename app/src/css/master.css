@@ -584,6 +584,7 @@
 #friendssuggestbutton{
   margin-top: 10%;
   padding-left:10%;
+  object-fit: cover;
 }
 #friendslistbutton{
   margin-top: 10%;
