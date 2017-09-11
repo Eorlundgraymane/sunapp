@@ -869,6 +869,7 @@ function getpiclink(){
       var json = xhr.responseText;
       console.log(JSON.stringify("json");
       console.log("Relogging in ");
+      getpiclink();      
     }
     }
     xhr.timeout = 10000;
