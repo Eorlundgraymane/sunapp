@@ -534,7 +534,7 @@
 }
 #post_image{
   max-width : 100%;
-  height: 5%;
+  max-height: 5%;
 }
 #newposttext{
   width: 50%;
@@ -636,6 +636,7 @@
 }
 .postauthimg{
   width: 5em;
+  height: 7em;
   box-shadow: 5px 5px 10px black;
 }
 .friendimg{
