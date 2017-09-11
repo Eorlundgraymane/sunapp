@@ -670,6 +670,9 @@ function vidup(id){
   xhr.send(file);
 }
 var imgid;
+function waitforimg(){
+  document.getElementById("imgup").change = imgup(imgid);
+}
 function addimg(){
   document.getElementById("imageuploader").classList.remove("hidden");
   document.getElementById("videouploader").classList.add("hidden");
