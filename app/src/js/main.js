@@ -1496,7 +1496,7 @@ function clearCookies(){
       var data = {};
       data["mobile"] = getCookie("primarykey");
       data["password"] = SHA256(getCookie("password"));
-      xhr.send();
+      xhr.send(data);
     }
 }
   function userlogin(){
