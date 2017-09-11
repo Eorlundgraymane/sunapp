@@ -602,6 +602,9 @@
   margin-top: 0;
   padding-left: 0;
 }
+label:hover{
+  cursor: pointer;
+}
 .btn{
   background-color: rgba(0,0,0,0);
 }
