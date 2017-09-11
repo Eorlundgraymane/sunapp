@@ -631,6 +631,9 @@
   width: auto;
 }
 #friend{
+  object-fit: cover;
+  width: 5%;
+  height: 5%;
   margin-left: -40px;
 }
 .regpane
