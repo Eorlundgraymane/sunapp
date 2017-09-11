@@ -44,8 +44,14 @@
                  <h3 title = "Share a photo of your dedication to being more human and get likes!!!" id = "uploadpane">Upload New Post</h3>
                    <form id  = "postform" method = "POST" action = "#">
                      <div id = "uploadform" class = "form-group">
-                      <button onclick = "addimg();" type = "button" class = "btn" title = "Add Image to your Post"><img width = "30px" height = "30px" src = "/css/imgpost.jpg"></button><button onclick = "addvid();" type = "button" class = "btn" title = "Add Video to your Post"><img width = "30px" height = "30px" src = "/css/vidpost.jpg"></button>                       
+                      <button onclick = "addimg();" type = "button" class = "btn" title = "Add Image to your Post"><img width = "30px" height = "30px" src = "/css/imgpost.jpg"></button><button onclick = "addvid();" type = "button" class = "btn" title = "Add Video to your Post"><img width = "30px" height = "30px" src = "/css/vidpost.jpg"></button>
                      </div><br>
+                      <div id = "imageuploader" class = "hidden">
+                       <input type = "file" id = "imgup" name = "Upload Image">
+                     </div>
+                     <div id = "videouploader" class = "hidden">
+                      <input type = "file" id = "vidup" name = "Upload Image">
+                    </div>
                        <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
                        <input  type = "text" id = "newpostimg" placeholder = "Image URL"><br>
                        <textarea rows = "5" maxlength = "200" id = "newposttext" placeholder="Post here..."></textarea><br>
