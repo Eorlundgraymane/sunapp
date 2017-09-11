@@ -865,8 +865,10 @@ function getpiclink(){
           document.getElementById('profileimage').classList.add('profileimageappeared');
         }
     else if(xhr.readyState ==4) {
+      sessionrelogin();
       var json = xhr.responseText;
-      alert(JSON.stringify(json));
+      console.log(JSON.stringify("json");
+      console.log("Relogging in ");
     }
     }
     xhr.timeout = 10000;
@@ -1169,6 +1171,7 @@ function changebanner()
       refreshscore();
     }
     else if(xhr.readyState ==4) {
+      var json = xhr.responseText;
       alert(JSON.stringify(json));
     }
   }
