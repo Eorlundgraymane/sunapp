@@ -630,9 +630,13 @@ function getfriendsfriendlist(){
   }
 }
 function addimg(){
+  document.getElementById("imageuploader").classList.remove("hidden");
+  document.getElementById("videouploader").classList.add("hidden");
   waitmessage();
 }
 function addvid(){
+  document.getElementById("videouploader").classList.remove("hidden");
+  document.getElementById("imageuploader").classList.add("hidden");
   waitmessage();
 }
 function getfriendslist(){
