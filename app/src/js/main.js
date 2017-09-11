@@ -2195,6 +2195,7 @@ function deleteimg(id){
   xhr.open("POST",url,true);
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
+      console.log("Deleting "+JSON.stringify((xhr.responseText).postimg));
       filedelete(JSON.stringify((xhr.responseText).postimg));
     }
     else if(xhr.readyState == 4){
