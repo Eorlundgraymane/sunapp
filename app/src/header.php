@@ -6,7 +6,7 @@
   <button title = "Home" id = "homebuttonbutton" class  = "btn sessionbutton" type = "button" onclick = "gopro();"><img width = "30px" height = "30px" src = "css/home.png"></button>
   <button  title = "Leaderboard" class = "btn sessionbutton" onclick = "goleads();" id = "leaderboardsbutton" type = "button"><img width = "30px" height = "30px" src = "css/trophy.png"></button>
   <button title = "Test out our new Uploader" id = "uploadadvert" class = "btn sessionbutton" type = "button" onclick = "window.location = 'https://sunshine.animation75.hasura-app.io/filetest.php'"><img src = "/css/upload.jpg" width = "30px" height = "30px"></button>
-  <button title = "Notifications and Messages coming soon" id = "notifbutton" class = "btn sessionbutton" type = "button" onclick = "alert('hang on we're working on it !!');"><img width = "30px" height ="30px" src = "/css/notif.jpg"></button>
+  <button title = "Notifications and Messages coming soon" id = "notifbutton" class = "btn sessionbutton" type = "button" onclick = "alert('Hang On We\'re working on it :-)');"><img width = "30px" height ="30px" src = "/css/notif.jpg"></button>
 </div>
 </div>
 </row>
