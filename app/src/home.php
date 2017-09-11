@@ -44,13 +44,13 @@
                  <h3 title = "Share a photo of your dedication to being more human and get likes!!!" id = "uploadpane">Upload New Post</h3>
                    <form id  = "postform" method = "POST" action = "#">
                      <div id = "uploadform" class = "form-group">
-                      <button onclick = "addimg();" type = "button" class = "btn" title = "Add Image to your Post"><img width = "15px" height = "15px" src = "/css/imgpost.jpg"></button><button onclick = "addvid();" type = "button" class = "btn" title = "Add Video to your Post"><img width = "30px" height = "30px" src = "/css/vidpost.jpg"></button>
+                      <button onclick = "addimg();" type = "button" class = "btn" title = "Add Image to your Post"><img width = "30px" height = "30px" src = "/css/imgpost.jpg"></button><button onclick = "addvid();" type = "button" class = "btn" title = "Add Video to your Post"><img width = "30px" height = "30px" src = "/css/vidpost.jpg"></button>
                      </div><br>
                       <div id = "imageuploader" class = "hidden">
                         <label for = "imgup">Add Image</label>
                        <input type = "file" id = "imgup" style = "visibility: hidden;">
                        <input  type = "text" id = "newpostimg" hidden placeholder = "Image URL">
-                       <img width = "200px" height = "150px" id = "imgloader">
+                       <img width = "66px" height = "75px" id = "imgloader">
                      </div>
                      <div id = "videouploader" class = "hidden">
                        <label for = "vidup">Add Video Clip</label>
