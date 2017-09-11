@@ -2240,10 +2240,12 @@ lxhr.withCredentials = "true";
 lxhr.onreadystatechange = function(){
     if(lxhr.readyState == 4 && lxhr.status == 200){
       var json = JSON.parse(lxhr.responseText);
+      console.log("Likes Deleted");
       xhr.send(query);
     }
     else if(lxhr.readyState ==4) {
       var json = JSON.parse(lxhr.responseText);
+      console.log("Likes not deleted");
       console.log(json);
       alert("Post could'nt be deleted");
       var btns = document.getElementsByClassName('btn');
