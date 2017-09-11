@@ -865,6 +865,7 @@ function getpiclink(){
           document.getElementById('profileimage').classList.add('profileimageappeared');
         }
     else if(xhr.readyState ==4) {
+      var json = xhr.responseText();
       alert(JSON.stringify(json));
     }
     }
@@ -1470,6 +1471,28 @@ function clearCookies(){
       deleteCookie(cookie.split('=')[0]);
     }
 }
+  function sessionrelogin(){
+    if(checkCookie("primarykey") == 1 && checkCookie("password") == 1){
+      var url = "https://auth.animation75.hasura-app.io/login";
+      xhr = bew XMLHttpRequest();
+      xhr.open("POST",true);
+      xhr.withCredentials = "true";
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4 && xhr.status == 200){
+            alert("Welcome back your session was restored as you did'nt log out last time");
+        }
+        else(if xhr.readyState == 4){
+          alert("Couldn't log back in , clearing your cookies and loggin you out.");
+          clearCookies();
+          window.location == "https://sunshine.animation75.hasura-app.io/";
+        }
+      }
+      var data = {};
+      data["mobile"] = getCookie("primarykey");
+      data["password"] = SHA256(getCookie("password"));
+      xhr.send();
+    }
+  }
   function userlogin(){
   setTimeout(function(){},5000);
   document.getElementById('shinelay').classList.add("showshine");
