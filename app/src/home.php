@@ -49,10 +49,12 @@
                       <div id = "imageuploader" class = "hidden">
                         <label for = "imgup">Add Image</label>
                        <input type = "file" id = "imgup" style = "visibility: hidden;">
+                       <img width = "200px" height = "150px" id = "imgloader">
                      </div>
                      <div id = "videouploader" class = "hidden">
                        <label for = "vidup">Add Video Clip</label>
                       <input type = "file" id = "vidup" style = "visibility: hidden;">
+                      <vid id = "vidloader">
                     </div>
                        <input  type = "text" id = "newposttitle" placeholder = "Title"><br>
                        <input  type = "text" id = "newpostimg" placeholder = "Image URL"><br>

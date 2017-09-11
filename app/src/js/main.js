@@ -629,15 +629,57 @@ function getfriendsfriendlist(){
     xhr.send(query);
   }
 }
+function imgup(id){
+  var file = document.getElementById("ftu").files[0];
+  url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
+  xhr = new XMLHttpRequest();
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","image/jpg");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      alert("File Uploaded");
+      imgdown(id);
+    }
+    else if(xhr.readyState == 4){
+      alert("trouble uploading the Image");
+    }
+  }
+  xhr.send(file);
+}
+function imgdown(id){
+  url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
+  document.getElementById("imgloader").src = url;
+}
+function vidup(id){
+  var file = document.getElementById("ftu").files[0];
+  url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
+  xhr = new XMLHttpRequest();
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type","image/jpg");
+  xhr.withCredentials = "true";
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      alert("Video Uploaded");
+      viddown(id);
+    }
+    else if(xhr.readyState == 4){
+      alert("trouble uploading the Video");
+    }
+  }
+  xhr.send(file);
+}
 function addimg(){
   document.getElementById("imageuploader").classList.remove("hidden");
   document.getElementById("videouploader").classList.add("hidden");
-  waitmessage();
+  var imgid = hasura_id+"_"+hasura_id*Date.now();
 }
+document.getElementById("imgup").onchange = imgup(imgid);
 function addvid(){
   document.getElementById("videouploader").classList.remove("hidden");
   document.getElementById("imageuploader").classList.add("hidden");
-  waitmessage();
+  var vidid = hasura_id"_"+hasura_id*Date.now();
+  vidup(vidid);
 }
 function getfriendslist(){
   if(friendlistflag == 0 && droppeddown == 0){

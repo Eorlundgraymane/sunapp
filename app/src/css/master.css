@@ -602,6 +602,9 @@
   margin-top: 0;
   padding-left: 0;
 }
+label{
+ color: white;
+}
 label:hover{
   cursor: pointer;
 }
