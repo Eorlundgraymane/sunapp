@@ -3254,24 +3254,6 @@ function filedown(id){
   url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
   document.getElementById("img").src = url;
 }
-
-function filedelete(id){
-  url = id;
-  xhr = new XMLHttpRequest();
-  xhr.open("DELETE",url,true);
-  xhr.withCredentials = "true";
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState == 4 && xhr.status == 200){
-      alert("File Deleted");
-      filedown(id);
-    }
-    else if(xhr.readyState == 4){
-      var json = xhr.responseText;
-      alert(JSON.stringify(json));
-    }
-  }
-  xhr.send();
-}
 function filedel(id){
   url = "https://filestore.animation75.hasura-app.io/v1/file/"+id;
   xhr = new XMLHttpRequest();
