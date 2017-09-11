@@ -2107,6 +2107,7 @@ function pushpost(){
       document.getElementById('postbutton').innerHTML = "<img src = \"css/post.png\" width =\"50px\" height = \"50px\" id = \"postbuttonimage\">";
       document.getElementById('postform').reset();
       document.getElementById('imageuploader').classList.add = "hidden";
+      document.getElementById('imageuploader').src = "";
       pullposts(hasura_id);
       }
     else if (xhr.readyState == 4) {
