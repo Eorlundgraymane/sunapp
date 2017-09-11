@@ -631,9 +631,6 @@
   width: auto;
 }
 #friend{
-  object-fit: cover;
-  width: 5%;
-  height: 5%;
   margin-left: -40px;
 }
 .regpane
@@ -648,9 +645,8 @@
   box-shadow: 5px 5px 10px black;
 }
 .friendimg{
-  object-fit: cover;
-  width: 5%;
-  height: 5%;
+  width: 50px;
+  height: auto;
   box-shadow: 5px 5px 10px black;
 }
 #sunlink,#sunlink:hover,#sunlink:visited,#sunlink:active{
