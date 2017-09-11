@@ -635,8 +635,9 @@
   top: 25%;
 }
 .postauthimg{
-  max-width: 10em;
-  max-height: 10em;
+  max-width: 5em;
+  max-height: 5em;
+  object-fit: cover;
   box-shadow: 5px 5px 10px black;
 }
 .friendimg{
