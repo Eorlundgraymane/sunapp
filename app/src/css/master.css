@@ -551,6 +551,7 @@
 }
 #post{
   padding-left: 3%;
+  padding-top: 3%;
   border: 1px solid black;
   font-weight: bolder;
   position: relative;
