@@ -1478,7 +1478,7 @@ function clearCookies(){
     if(checkCookie("primarykey") == 1 && checkCookie("password") == 1){
       var url = "https://auth.animation75.hasura-app.io/login";
       xhr = new XMLHttpRequest();
-      xhr.open("POST",true);
+      xhr.open("POST",url,true);
       xhr.withCredentials = "true";
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
