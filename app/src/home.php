@@ -44,7 +44,7 @@
                  <h3 title = "Share a photo of your dedication to being more human and get likes!!!" id = "uploadpane">Upload New Post</h3>
                    <form id  = "postform" method = "POST" action = "#">
                      <div id = "uploadform" class = "form-group">
-                      <button onclick = "addimg();" type = "button" class = "btn" title = "Add Image to your Post"><img width = "30px" height = "30px" src = "/css/imgpost.jpg"></button><button onclick = "addvid();" type = "button" class = "btn" title = "Add Video to your Post"><img width = "30px" height = "30px" src = "/css/vidpost.jpg"></button>
+                      <button onclick = "addimg();" type = "button" class = "btn" title = "Add Image to your Post"><img width = "15px" height = "15px" src = "/css/imgpost.jpg"></button><button onclick = "addvid();" type = "button" class = "btn" title = "Add Video to your Post"><img width = "30px" height = "30px" src = "/css/vidpost.jpg"></button>
                      </div><br>
                       <div id = "imageuploader" class = "hidden">
                         <label for = "imgup">Add Image</label>
@@ -68,7 +68,7 @@
                        <button title = "Post" class = "btn" type = "button" id = "postbutton" onclick = "gethasurapushpost();"><img src = "css/post.png" width = "50px" height = "50px" id = "postbuttonimage"></button>
                        </form>
                      <div id = "siteslogan"><font color = "white" style = "text-decoration:underlined;font-weight:bolder;">Sunshine is a website which gives you the motivation to be more human...<br>make friends...help the needy...plant a tree or feed some birds daily...<br>go to the gym...spend some time with your family...<br>Post and share your activities...claim shine points on your posts...get Likes...shine brighter on the leaderboard</font></div>
-                   </div>                   
+                   </div>
                </div>
              </row>
            </div>
