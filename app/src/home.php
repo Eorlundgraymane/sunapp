@@ -45,7 +45,7 @@
                    <form id  = "postform" method = "POST" action = "#">
                      <div id = "uploadform" class = "form-group">
                       <button onclick = "addimg();" type = "button" class = "btn" title = "Add Image to your Post"><img width = "30px" height = "30px" src = "/css/imgpost.jpg"></button><button onclick = "addvid();" type = "button" class = "btn" title = "Add Video to your Post"><img width = "30px" height = "30px" src = "/css/vidpost.jpg"></button>
-                     </div><br>
+                     </div>
                       <div id = "imageuploader" class = "hidden">
                         <label for = "imgup">Add Image</label>
                        <input type = "file" id = "imgup" style = "visibility: hidden;">
