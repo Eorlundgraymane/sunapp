@@ -2938,7 +2938,7 @@ function pullfposts(id){
   xhr.send(query);
 }
 
-function waitmessage();{
+function waitmessage(){
   alert("hang on we're working on it ;-)");
 }
 function pullposts(id){
