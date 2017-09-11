@@ -673,7 +673,9 @@ function addimg(){
   document.getElementById("imageuploader").classList.remove("hidden");
   document.getElementById("videouploader").classList.add("hidden");
   var imgupwait = document.getElementById("imgup");
-  imgupwait.onchange = imgup(hasura_id+"_"+hasura_id*Date.now());  
+  imgupwait.onchange = function(){
+    imgupwait.onchange = imgup(hasura_id+"_"+hasura_id*Date.now());
+  };
 }
 function addvid(){
   document.getElementById("videouploader").classList.remove("hidden");
