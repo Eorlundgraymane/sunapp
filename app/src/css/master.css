@@ -648,6 +648,7 @@
   box-shadow: 5px 5px 10px black;
 }
 .friendimg{
+  object-fit: cover;
   width: 50px;
   height: auto;
   box-shadow: 5px 5px 10px black;
