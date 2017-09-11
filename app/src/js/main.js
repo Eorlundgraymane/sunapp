@@ -2938,7 +2938,9 @@ function pullfposts(id){
   xhr.send(query);
 }
 
-
+function waitmessage();{
+  alert("hang on we're working on it ;-)");
+}
 function pullposts(id){
   console.log("pulling posts. hasura id is "+hasura_id+" called id is "+id);
   var data = {"type":"select","args":{
