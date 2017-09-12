@@ -1,5 +1,5 @@
 .outer-container {
-  background-color:rgb(212, 226, 228);
+  background-color: rgb(69, 225, 241);
 }
 ::-webkit-scrollbar {
     display: none;
@@ -899,9 +899,6 @@ select{
   animation-duration:2s;
   position: absolute;
   right: 0;
-}
-#siteheader{
-  background-color: rgb(69, 225, 241);
 }
 .siteheader{
   margin: -1em;
