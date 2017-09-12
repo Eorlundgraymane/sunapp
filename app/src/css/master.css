@@ -184,7 +184,7 @@
 
 #shineheading{
   color: black;
-  background-color: rgb(222, 247, 148);
+  background-color: rgb(209, 246, 246);
   border-radius: 5px;
   text-align: center;
   font-weight: bolder;
@@ -713,7 +713,7 @@ th,td,tr,h3,h1,li{
 table{
   border: 1px solid black;
   text-align: center;
-  background-color: rgb(193, 230, 228);
+  background-color: rgb(209, 246, 246);
   border-radius: 5px;
 }
 caption{
