@@ -898,6 +898,7 @@ input,select,textarea {
 #siteslogan{
   animation-name: fadeIn;
   animation-duration: 3s;
+  text-shadow: 2px 1px 1px black;
   animation-timing-function: ease();
   animation-iteration-count: 1;
 }
