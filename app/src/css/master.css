@@ -901,6 +901,7 @@ select{
   right: 0;
 }
 .siteheader{
+  background-color: rgb(69, 225, 241);
   margin: -1em;
   padding: 0;
 }
@@ -908,7 +909,6 @@ select{
   font-weight: 900;
 }
 #sitename {
-  background-color: rgb(69, 225, 241);
   font-size: 30px;
   color: white;
   margin-bottom: 1em;
