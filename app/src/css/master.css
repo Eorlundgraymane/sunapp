@@ -803,31 +803,31 @@ th{
   }
 }
 ::-webkit-textarea-placeholder{
-  color: rgba(255,255,255,0.5);
+  color: white;
 }
 ::-webkit-input-placeholder{
-  color: rgba(255,255,255,0.5);
+  color: white;
 }
 ::-moz-input-placeholder{
-  color: rgba(255,255,255,0.5);
+  color: white;
 }
 ::-moz-textarea-placeholder{
-  color: rgba(255,255,255,0.5);
+  color: white;
 }
 ::-moz-input-placeholder{
-  color: rgba(255,255,255,0.5);
+  color: white;
 }
 :-ms-textarea-placeholder{
-  color: rgba(255,255,255,0.5);
+  color: white;
 }
 :-ms-input-placeholder{
-  color: rgba(255,255,255,0.5);
+  color: white;
 }
 :-ms-textarea-placeholder{
-  color: rgba(255,255,255,0.5);
+  color: white;
 }
 :-ms-input-placeholder{
-  color: rgba(255,255,255,0.5);
+  color: white
 }
 textarea:-webkit-autofil{
   -webkit-box-shadow: 0 0 0 30px rgb(69, 225, 241) inset;
