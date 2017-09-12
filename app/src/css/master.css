@@ -574,6 +574,7 @@
   text-decoration: underline;
 }
 #profilename{
+  text-shadow: 3px 3px solid black;
   cursor: default;
   color: white;
   margin-top: 5px;
