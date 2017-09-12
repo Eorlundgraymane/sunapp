@@ -920,6 +920,7 @@ select{
   font-weight: 900;
 }
 #sitename {
+  text-shadow: 2px 2px 1px black;
   font-size: 30px;
   color: white;
   margin-bottom: 1em;
