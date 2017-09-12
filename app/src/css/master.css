@@ -900,8 +900,10 @@ select{
   position: absolute;
   right: 0;
 }
-.siteheader{
+#siteheader{
   background-color: rgb(69, 225, 241);
+}
+.siteheader{
   margin: -1em;
   padding: 0;
 }
