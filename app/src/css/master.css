@@ -525,7 +525,7 @@
 }
 #postpane{
   background-color:rgb(69, 225, 241);
-  border-right: 1px solid black;
+  border-left: 1px solid black;
   width: 35%;
   height: 50em;
   margin-top: 0;
