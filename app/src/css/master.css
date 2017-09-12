@@ -906,6 +906,7 @@ select{
   padding: 0;
 }
 #siteh1{
+  text-shadow: 2px 2px 1px black;
   font-weight: 900;
 }
 #sitename {
