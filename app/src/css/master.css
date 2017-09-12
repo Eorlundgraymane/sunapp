@@ -525,7 +525,7 @@
 }
 #postpane{
   background-color:rgb(69, 225, 241);
-  border-right: 1px rgb(154, 154, 154);
+  border-right: 1px solid black;
   width: 35%;
   height: 50em;
   margin-top: 0;
@@ -596,7 +596,7 @@
 }
 #friendspane{
   background-color:rgb(69, 225, 241);
-  border-right: 1px rgb(154, 154, 154);
+  border-right: 1px solid black;
   height: 50em;
   width:15%;
   margin-left: 0;
