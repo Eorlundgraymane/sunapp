@@ -28,6 +28,7 @@
                <?php include 'shinetable.php';?>
              </div>
          </row>
+       </div>
          <row>
            <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" id = "contentarea">
              <row>
@@ -69,9 +70,8 @@
                        </form>
                      <div id = "siteslogan"><font color = "white" style = "text-decoration:underlined;font-weight:bolder;">Sunshine is a website which gives you the motivation to be more human...<br>make friends...help the needy...plant a tree or feed some birds daily...<br>go to the gym...spend some time with your family...<br>Post and share your activities...claim shine points on your posts...get Likes...shine brighter on the leaderboard</font></div>
                    </div>
+                  </row>
                </div>
-             </row>
-           </div>
          </row>
          <row>
          <?php include 'footer.php';?>
