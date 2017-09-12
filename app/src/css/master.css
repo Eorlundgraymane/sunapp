@@ -804,39 +804,39 @@ th{
 }
 ::-webkit-textarea-placeholder{
   color: white;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 2px 1px 1px black;
 }
 ::-webkit-input-placeholder{
   color: white;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 2px 1px 1px black;
 }
 ::-moz-input-placeholder{
   color: white;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 2px 1px 1px black;
 }
 ::-moz-textarea-placeholder{
   color: white;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 2px 1px 1px black;
 }
 ::-moz-input-placeholder{
   color: white;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 2px 1px 1px black;
 }
 :-ms-textarea-placeholder{
   color: white;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 2px 1px 1px black;
 }
 :-ms-input-placeholder{
   color: white;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 2px 1px 1px black;
 }
 :-ms-textarea-placeholder{
   color: white;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 2px 1px 1px black;
 }
 :-ms-input-placeholder{
   color: white;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 2px 1px 1px black;
 }
 textarea:-webkit-autofil{
   -webkit-box-shadow: 0 0 0 30px rgb(69, 225, 241) inset;
