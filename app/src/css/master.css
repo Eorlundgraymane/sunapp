@@ -524,7 +524,7 @@
   transition-timing-function: ease;
 }
 #postpane{
-  background-color:rgba(128, 235, 235, 0.6);
+  background-color:rgb(69, 225, 241);
   border-right: 1px rgb(154, 154, 154);
   width: 35%;
   height: 50em;
@@ -595,7 +595,7 @@
   padding: 0;
 }
 #friendspane{
-  background-color:rgba(128, 235, 235, 0.6);
+  background-color:rgb(69, 225, 241);
   border-right: 1px rgb(154, 154, 154);
   height: 50em;
   width:15%;
