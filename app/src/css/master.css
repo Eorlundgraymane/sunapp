@@ -605,7 +605,8 @@
   padding-left: 0;
 }
 label{
- color: white;
+  text-shadow: 2px 1px 1px black;
+  color: white;
 }
 label:hover{
   cursor: pointer;
