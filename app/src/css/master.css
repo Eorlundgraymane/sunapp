@@ -805,47 +805,47 @@ th{
   }
 }
 ::-webkit-textarea-placeholder{
-  color: white;
+  color: rgb(69, 225, 241);
   text-shadow: 2px 1px 1px black;
 }
 ::-webkit-input-placeholder{
-  color: white;
+  color: rgb(69, 225, 241);
   text-shadow: 2px 1px 1px black;
 }
 ::-moz-input-placeholder{
-  color: white;
+  color: rgb(69, 225, 241);
   text-shadow: 2px 1px 1px black;
 }
 ::-moz-textarea-placeholder{
-  color: white;
+  color: rgb(69, 225, 241);
   text-shadow: 2px 1px 1px black;
 }
 ::-moz-input-placeholder{
-  color: white;
+  color: rgb(69, 225, 241);
   text-shadow: 2px 1px 1px black;
 }
 :-ms-textarea-placeholder{
-  color: white;
+  color: rgb(69, 225, 241);
   text-shadow: 2px 1px 1px black;
 }
 :-ms-input-placeholder{
-  color: white;
+  color: rgb(69, 225, 241);
   text-shadow: 2px 1px 1px black;
 }
 :-ms-textarea-placeholder{
-  color: white;
+  color: rgb(69, 225, 241);
   text-shadow: 2px 1px 1px black;
 }
 :-ms-input-placeholder{
-  color: white;
+  color: rgb(69, 225, 241);
   text-shadow: 2px 1px 1px black;
 }
 textarea:-webkit-autofil{
-  -webkit-box-shadow: 0 0 0 30px rgb(69, 225, 241) inset;
+  -webkit-box-shadow: 0 0 0 30px white inset;
   -webkit-text-fill-color: rgba(255,255,255,1);
 }
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px rgb(69, 225, 241) inset;
+    -webkit-box-shadow: 0 0 0 30px white inset;
     -webkit-text-fill-color: rgba(255,255,255,1);
 }
 input,select,textarea {
