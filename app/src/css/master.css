@@ -806,39 +806,39 @@ th{
 }
 ::-webkit-textarea-placeholder{
   color: rgb(69, 225, 241);
-  text-shadow: 2px 1px black;
+  text-shadow: 1px 1px black;
 }
 ::-webkit-input-placeholder{
   color: rgb(69, 225, 241);
-  text-shadow: 2px 1px black;
+  text-shadow: 1px 1px black;
 }
 ::-moz-input-placeholder{
   color: rgb(69, 225, 241);
-  text-shadow: 2px 1px black;
+  text-shadow: 1px 1px black;
 }
 ::-moz-textarea-placeholder{
   color: rgb(69, 225, 241);
-  text-shadow: 2px 1px black;
+  text-shadow: 1px 1px black;
 }
 ::-moz-input-placeholder{
   color: rgb(69, 225, 241);
-  text-shadow: 2px 1px black;
+  text-shadow: 1px 1px black;
 }
 :-ms-textarea-placeholder{
   color: rgb(69, 225, 241);
-  text-shadow: 2px 1px black;
+  text-shadow: 1px 1px black;
 }
 :-ms-input-placeholder{
   color: rgb(69, 225, 241);
-  text-shadow: 2px 1px black;
+  text-shadow: 1px 1px black;
 }
 :-ms-textarea-placeholder{
   color: rgb(69, 225, 241);
-  text-shadow: 2px 1px black;
+  text-shadow: 1px 1px black;
 }
 :-ms-input-placeholder{
   color: rgb(69, 225, 241);
-  text-shadow: 2px 1px black;
+  text-shadow: 1px 1px black;
 }
 textarea:-webkit-autofil{
   -webkit-box-shadow: 0 0 0 30px white inset;
@@ -849,7 +849,7 @@ input:-webkit-autofill {
     -webkit-text-fill-color: rgba(255,255,255,1);
 }
 input,select,textarea {
-  text-shadow: 2px 1px black;
+  text-shadow: 1px 1px black;
   outline: none;
   max-width: 100%;
   text-indent: 10px;
